@@ -586,9 +586,9 @@ SWEP.Attachments = {
         PrintName = "Underbarrel",
         DefaultName = "None",
         Bone = "j_gun",
-        Pos = Vector(10, 0, 0.9),
+        Pos = Vector(11, 0, 1.65),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_ubgls"}
+        Category = {"bo1_ubgls", "bo1_grips"}
     },
     [7] = {
         PrintName = "Handguard",
