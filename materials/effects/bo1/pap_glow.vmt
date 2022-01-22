@@ -1,0 +1,8 @@
+"SpriteCard"
+{
+	$basetexture "effects/bo1/pap_glow"
+	$vertexcolor 1
+	$vertexalpha 1
+	$translucent 1
+	$Additive 1
+}

@@ -1,0 +1,15 @@
+VertexlitGeneric
+{
+	$basetexture	"models\weapons\arc9\bo1\bo1_ak47\ak47_c"
+	//$color2 "[0.85 0.85 0.85]"
+	$bumpmap	"models\weapons\arc9\bo1\bo1_ak47\ak47_n"
+	$detail "models\weapons\arc9\bo1\od_green"
+	$detailblendmode 3
+	$detailblendfactor 0.5
+
+	$phong                      		1
+	$phongexponent                      "20"
+	$phongboost                         "0.5"
+	$phongfresnelranges         "[0 .1 0.5]"
+	$phongalbedotint             "1"
+}

@@ -1,0 +1,17 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/weapons/arc9/bo2/bo2_lasers/wlp"
+	$blendtintbybasealpha  "1"
+	"$bumpmap" "models/weapons/arc9/bo2/bo2_lasers/wlp_n"
+	$phong                      		1
+//	$phongexponent                      "20"
+	$phongboost                         "0.5"
+	$phongfresnelranges         "[0.1 0.5 0.5]"
+	$phongalbedotint             "1"
+	$normalmapalphaphongmask    	1
+
+	$envmap 	env_cubemap
+	$envmaptint   "[0.01 0.01 0.01]"
+	$envmapfresnel "1"
+	"$nocull" "1"
+}

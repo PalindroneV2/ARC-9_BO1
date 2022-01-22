@@ -1,0 +1,21 @@
+VertexlitGeneric
+{
+	$basetexture	"models\weapons\arc9\pap\pap_bo1"
+	$bumpmap	"models\weapons\arc9\pap\pap_bo1_n"
+
+	$phong                      		1
+	$phongexponent                      "20"
+	$phongboost                         "1"
+	$phongfresnelranges         "[0.1 0.75 1.25]"
+	$phongalbedotint             "1"
+	$normalmapalphaphongmask    	1
+
+	$envmap                    		 env_cubemap
+	$envmaptint                 		"[.01 .01 .01]"
+	$normalmapalphaenvmapmask   	1
+
+	"$envmap" "env_cubemap"					
+	"$envmaptint" "[ .05 .05 .05 ]"					
+	"$envmapFresnel" "1"
+	"$nocull" "1"
+}

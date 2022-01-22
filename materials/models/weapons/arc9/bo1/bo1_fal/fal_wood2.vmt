@@ -1,0 +1,20 @@
+VertexlitGeneric
+{
+	$basetexture	"models\weapons\arc9\bo1\bo1_fal\fal_c"
+	$bumpmap	"models\weapons\arc9\bo1\bo1_fal\fal_n"
+	$detail	"models\weapons\arc9\bo1\ak_wood"
+	$detailblendmode 4
+	$detailblendfactor 1
+    "$detailscale" "5"
+
+	$phong                      		1
+//	$phongexponent                      "20"
+	$phongboost                         "0.5"
+	$phongfresnelranges         "[0.1 0.5 0.5]"
+	$phongalbedotint             "1"
+	$normalmapalphaphongmask    	1
+
+	$envmap 	env_cubemap
+	$envmaptint   "[0.01 0.01 0.01]"
+	$envmapfresnel "1"
+}

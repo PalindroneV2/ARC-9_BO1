@@ -1,0 +1,20 @@
+"VertexLitGeneric"
+{
+	$basetexture	"models\weapons\arc9\bo1\bo1_acogs\nsp3a"
+	//$color2 "[0.85 0.85 0.85]"
+	$bumpmap	"models\weapons\arc9\bo1\bo1_acogs\nsp3a_n"
+	$detail "models/weapons/arc9/bo1/black_detail"
+	$detailblendmode 0
+	$detailblendfactor 1
+	
+	$phong                      		1
+	// $phongexponent                      "20"
+	$phongboost                         "0.5"
+	$phongfresnelranges         "[0.1 0.5 0.5]"
+	$phongalbedotint             "1"
+	$normalmapalphaphongmask    	1
+	
+	$envmap 	env_cubemap
+	$envmaptint   "[0.01 0.01 0.01]"
+	$envmapfresnel "1"
+}

@@ -1,0 +1,7 @@
+VertexlitGeneric
+{
+	$basetexture	"models\weapons\arc9\bo2\bo2_storm\scope\charge_on"
+	"$selfillum" "1"
+	"$selfillummask" "models\weapons\arc9\bo2\bo2_storm\scope\charge_on_t"
+
+}

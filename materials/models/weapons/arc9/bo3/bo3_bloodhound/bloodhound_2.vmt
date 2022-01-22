@@ -1,0 +1,18 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/weapons/arc9/bo3/bo3_bloodhound/bloodhound"
+	"$bumpmap" "models/weapons/arc9/bo3/bo3_bloodhound/bloodhound_n"
+	
+	$phong                      		1
+//	$phongexponent                      "20"
+	$phongboost                         "0.5"
+	$phongfresnelranges         "[0.1 0.5 0.5]"
+	$phongalbedotint             "1"
+	$normalmapalphaphongmask    	1
+
+	$envmap 	env_cubemap
+	$envmaptint   "[0.01 0.01 0.01]"
+	$envmapfresnel "1"
+
+	"$nocull" "1"
+}

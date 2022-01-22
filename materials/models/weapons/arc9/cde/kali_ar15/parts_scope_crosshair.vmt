@@ -1,0 +1,7 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" 	"models/weapons/arc9/cde/kali_ar15/Parts_Scope_Crosshair_C"
+	"$alphatest" 1
+	"$nocull" 1
+
+}

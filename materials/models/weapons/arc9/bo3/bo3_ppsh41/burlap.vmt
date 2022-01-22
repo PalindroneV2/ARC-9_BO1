@@ -1,0 +1,20 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/weapons/arc9/bo1/ak_wood"
+	"$bumpmap" "models/weapons/arc9/bo3/bo3_ppsh41/sling/burlap_n"
+
+	"$detail" "models/weapons/arc9/bo3/bo3_ppsh41/sling/burlap"
+	"$detailblendfactor" "1"
+	$detailblendmode 0
+	
+	$phong                      		1
+//	$phongexponent                      "20"
+	$phongboost                         "0.5"
+	$phongfresnelranges         "[0.1 0.5 0.5]"
+	$phongalbedotint             "1"
+	$normalmapalphaphongmask    	1
+
+	$envmap 	env_cubemap
+	$envmaptint   "[0.01 0.01 0.01]"
+	$envmapfresnel "1"
+}

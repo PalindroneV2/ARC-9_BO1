@@ -1,0 +1,23 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/weapons/arc9/bo2/bo2_qbb/drum"
+	$blendtintbybasealpha  "1"
+	"$bumpmap" "models/weapons/arc9/bo2/bo2_qbb/drum_n"
+
+	"$detail" "models/weapons/arc9/bo1/gunmetal"
+	$detailblendmode 0
+	"$detailscale" "10"
+
+	$phong                      		1
+//	$phongexponent                      "20"
+	$phongboost                         "0.5"
+	$phongfresnelranges         "[0.1 0.5 0.5]"
+	$phongalbedotint             "1"
+	$normalmapalphaphongmask    	1
+
+	$envmap 	env_cubemap
+	$envmaptint   "[0.01 0.01 0.01]"
+	$envmapfresnel "1"
+
+	"$nocull" "1"
+}

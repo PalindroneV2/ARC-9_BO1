@@ -1,0 +1,7 @@
+VertexlitGeneric
+{
+	"$basetexture" "models/weapons/arc9/bo3/bo3_rk5/tritium"
+	$color2 "[255 0 0]"
+	$selfillum 1
+	$selfillummask "models/weapons/arc9/bo3/bo3_rk5/tritium"
+}

@@ -1,0 +1,22 @@
+VertexlitGeneric
+{
+	$basetexture	"models\weapons\arc9\bo1\bo1_g11\g11_c"
+	//$color2 "[0.5 0.5 0.5]"
+	$bumpmap	"models\weapons\arc9\bo1\bo1_g11\g11_n"
+
+	$phong                      		1
+//	$phongexponent                      "20"
+	$phongboost                         "0.5"
+	$phongfresnelranges         "[0.1 0.5 0.5]"
+	$phongalbedotint             "1"
+	$normalmapalphaphongmask    	1
+
+	$envmap 	env_cubemap
+	$envmaptint   "[0.01 0.01 0.01]"
+	$envmapfresnel "1"
+
+	$detail "models/weapons/arc9/bo1/od_green"
+	$detailblendmode 4
+	"$detailblendfactor" "1"
+	$detailscale	10
+}

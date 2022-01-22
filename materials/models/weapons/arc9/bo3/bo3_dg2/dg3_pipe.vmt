@@ -1,0 +1,24 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/weapons/arc9/bo3/bo3_dg2/dg2_pipe"
+	"$bumpmap" "models/weapons/arc9/bo3/bo3_dg2/dg2_pipe_n"
+	
+	$detail		"models\weapons\arc9\bo1\gold_c"
+	$detailblendmode		3
+	$detailblendfactor 1
+	
+	$phong "1"
+//	$phongexponent	"15"
+	$phongboost "2.5"
+	$phongfresnelranges "[0.5 2.5 2.5]"
+	$phongtint "[1 .65 .2]"
+	$phongalbedotint "1"
+	$blendtintbybasealpha  "1"
+	$normalmapalphaenvmapmask "1"
+	
+	$envmap "env_cubemap"
+	$envmaptint "[1 .75 .25]"
+	$envmapfresnel "[1 1 1]"
+	$envmapmask	"models\weapons\arc9\bo1\gold_s"
+}
+

@@ -1,0 +1,11 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/weapons/arc9/bo2/bo2_trit/tritium_white"
+	"$bumpmap" "models/weapons/arc9/bo2/bo2_trit/tritium_n"
+	
+	"$detail" "models/weapons/arc9/bo2/bo2_trit/tritium_white"
+	"$detailblendmode" "5"
+	"$detailscale" "1"
+	"$detailblendfactor" "1"
+	"$translucent" "1"
+}
