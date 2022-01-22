@@ -30,7 +30,6 @@ ATT.Sights = {
         IgnoreExtra = true
     },
 }
-ATT.HoloSightColor = Color(255, 0, 0)
 
 ATT.RTScope = true
 ATT.RTScopeSubmatIndex = 4
@@ -40,3 +39,4 @@ ATT.RTScopeSurface = Material("models/weapons/arc9/bo2/bo2_acogs/acog_lens")
 ATT.RTScopeReticle = Material("hud/arc9_bo1/scopes/bo2_acog.png", "mips smooth")
 ATT.RTScopeShadowIntensity = 0.1
 ATT.RTScopeNoPP = false
+ATT.RTScopeColor = Color(255, 0, 0)
