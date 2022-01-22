@@ -40,6 +40,14 @@ ATT.Attachments = {
         ExcludeElements = {"nosling"},
         InstallSound = "weapons/arc9/bo1_m16/bo_spawn.wav",
     },
+    {
+        PrintName = "Underbarrel",
+        DefaultName = "None",
+        Bone = "j_gun",
+        Pos = Vector(2, 0, -0.1),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_ubgls", "bo1_grips"}
+    },
 }
 ATT.MuzzleEffectQCA = 1
 ATT.SpreadMult = 1.35
