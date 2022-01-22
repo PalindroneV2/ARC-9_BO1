@@ -37,6 +37,6 @@ ATT.RTScopeSubmatIndex = 4
 ATT.RTScopeFOV = 6
 ATT.RTScopeRes = 1024
 ATT.RTScopeSurface = Material("models/weapons/arc9/bo2/bo2_acogs/acog_lens")
-ATT.RTScopeReticle = Material("hud/scopes/bo2_acog.png", "mips smooth")
+ATT.RTScopeReticle = Material("hud/arc9_bo1/scopes/bo2_acog.png", "mips smooth")
 ATT.RTScopeShadowIntensity = 0.1
 ATT.RTScopeNoPP = false
