@@ -15,7 +15,7 @@ ATT.Free = false
 
 ATT.Category = {"bo1_grips"}
 
-ATT.Model = "models/weapons/arccw/atts/bo1_ub_foregrip.mdl"
+ATT.Model = "models/weapons/arc9/atts/bo1_ub_foregrip.mdl"
 ATT.Scale = 1
 ATT.ModelOffset = Vector(-17, -2.5, 4.25)
 
