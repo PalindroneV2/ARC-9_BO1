@@ -17,7 +17,7 @@ ATT.Category = {"bo1_grips"}
 
 ATT.Model = "models/weapons/arc9/atts/bo1_ub_foregrip.mdl"
 ATT.Scale = 1
-ATT.ModelOffset = Vector(0,0,-0.25)
+ATT.ModelOffset = Vector(0, 0, -0.25)
 
 ATT.RecoilMult = 0.85
 ATT.LHIK = true
