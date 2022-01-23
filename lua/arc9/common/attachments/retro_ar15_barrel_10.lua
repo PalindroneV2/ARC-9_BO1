@@ -49,7 +49,10 @@ ATT.Attachments = {
         Category = {"bo1_ubgls", "bo1_grips"}
     },
 }
+
 ATT.MuzzleEffectQCA = 1
+
+--[[]
 ATT.SpreadMult = 1.5
 ATT.RecoilMult = 1.15
 ATT.SpeedMult = 1.125
@@ -60,3 +63,22 @@ ATT.SpreadMultMove = 0.825
 ATT.RangeMaxMult = 10.5 / 20
 ATT.RangeMinMult = 10.5 / 20
 ATT.PhysBulletMuzzleVelocityMult = 10.5 / 20
+]]
+
+
+ATT.SpreadMult = 1.5
+ATT.RecoilMult = 1.25
+ATT.SpreadMultHipFire = 0.7
+ATT.SpreadMultMove = 0.7
+
+ATT.SpeedMult = 1.025
+ATT.SpeedMultSightsMult = 1.125
+
+ATT.AimDownSightsTimeMult = 0.75
+ATT.SprintToFireTimeMult = 0.8
+
+ATT.RangeMaxMult = 0.6
+ATT.RangeMinMult = 0.6
+ATT.PhysBulletMuzzleVelocityMult = 0.6
+
+ATT.RPMMult = 900 / 800

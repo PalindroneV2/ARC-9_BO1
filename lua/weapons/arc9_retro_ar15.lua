@@ -42,14 +42,14 @@ SWEP.DefaultBodygroups = "00000000000000"
 
 SWEP.DamageMax = 30
 SWEP.DamageMin = 20 -- damage done at maximum range
-SWEP.RangeMax = 2000 * 3
+SWEP.RangeMax = 8000
 SWEP.RangeMin = 2000
 SWEP.Penetration = 8
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
 SWEP.EntityMuzzleVelocity = 10000
 
-SWEP.PhysBulletMuzzleVelocity = 900 * 39.37 -- IN HU (INCHES)
+SWEP.PhysBulletMuzzleVelocity = 960 * 39.37
 
 SWEP.BodyDamageMults = {
     [HITGROUP_HEAD] = 1.4,
@@ -71,20 +71,25 @@ SWEP.ReloadTime = 1
 
 SWEP.DrawCrosshair = true
 
-SWEP.Recoil = 0.3
-SWEP.RecoilSide = 0.6
-SWEP.RecoilUp = 0.6
+SWEP.Recoil = 1
+SWEP.RecoilSide = 0.7
+SWEP.RecoilUp = 1
 
-SWEP.UseVisualRecoil = false
+SWEP.RecoilRandomUp = 0.2
+SWEP.RecoilRandomSide = 0.6
 
-SWEP.Spread = 0.000775 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.RecoilDissipationRate = 40 -- How much recoil dissipates per second.
+SWEP.RecoilResetTime = 0.01 -- How long the gun must go before the recoil pattern starts to reset.
 
-SWEP.SpreadAddMove = 0.025 -- Applied when speed is equal to walking speed.
-SWEP.SpreadAddMidAir = 0.025 -- Applied when not touching the ground.
-SWEP.SpreadAddHipFire = 0.025 -- Applied when not sighted.
-SWEP.SpreadAddSighted = 0 -- Applied when sighted. Can be negative.
-SWEP.SpreadAddBlindFire = 0.05 -- Applied when blind firing.
-SWEP.SpreadAddCrouch = 0 -- Applied when crouching.
+SWEP.RecoilAutoControl = 0.5
+SWEP.RecoilKick = 2
+
+SWEP.Spread = 0.0009
+SWEP.SpreadAddRecoil = 0.015
+
+SWEP.SpreadAddHipFire = 0.03
+SWEP.SpreadAddMove = 0.015
+SWEP.SpreadAddMidAir = 0.1
 
 SWEP.VisualRecoilUp = 0.05 -- Vertical tilt for visual recoil.
 SWEP.VisualRecoilSide = 0.05 -- Horizontal tilt for visual recoil.
@@ -95,16 +100,16 @@ SWEP.VisualRecoilMultSights = 0.1 -- Visual recoil multiplier while in sights.
 
 SWEP.Speed = 0.95
 
-SWEP.SpeedMultSights = 0.55
-SWEP.SpeedMultShooting = 0.85
+SWEP.SpeedMultSights = 0.8
+SWEP.SpeedMultShooting = 0.75
 SWEP.SpeedMultMelee = 1
 SWEP.SpeedMultCrouch = 1
 SWEP.SpeedMultBlindFire = 1
 
-SWEP.AimDownSightsTime = 0.3 -- How long it takes to go from hip fire to aiming down sights.
-SWEP.SprintToFireTime = 0.3 -- How long it takes to go from sprinting to being able to fire.
+SWEP.AimDownSightsTime = 0.11
+SWEP.SprintToFireTime = 0.14
 
-SWEP.RPM = 900
+SWEP.RPM = 800
 SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
@@ -541,16 +546,16 @@ end
 SWEP.Attachments = {
     [1] = {
         PrintName = "Upper",
-        DefaultName = "A2 Upper",
+        DefaultCompactName = "A1 Top",
         Bone = "j_gun",
-        Pos = Vector(2.5, 0, 2.5),
+        Pos = Vector(2.5, 0, 3),
         Ang = Angle(0, 0, 0),
         Category = {"retro_ar15_upper"},
         ExcludeElements = {"handguard_famas"},
     },
     [2] = {
         PrintName = "Magazine",
-        DefaultName = "30RND",
+        DefaultCompactName = "30RND",
         Bone = "tag_clip",
         Pos = Vector(0, 0, -2),
         Ang = Angle(0, 0, 0),
@@ -558,7 +563,7 @@ SWEP.Attachments = {
     },
     [3] = {
         PrintName = "Barrel",
-        DefaultName = "A1 Barrel",
+        DefaultCompactName = "20\"",
         Bone = "j_gun",
         Pos = Vector(7, 0, 1.75),
         Ang = Angle(0, 0, 0),
@@ -566,7 +571,6 @@ SWEP.Attachments = {
     },
     [4] = {
         PrintName = "Stock",
-        DefaultName = "Buffer Tube",
         Bone = "j_gun",
         Pos = Vector(-3, 0, 2.65),
         Ang = Angle(0, 0, 0),
@@ -575,7 +579,6 @@ SWEP.Attachments = {
     },
     [5] = {
         PrintName = "Muzzle",
-        DefaultName = "Default",
         Bone = "j_gun",
         Pos = Vector(24, 0, 2.25),
         Ang = Angle(0, 0, 0),
@@ -584,7 +587,6 @@ SWEP.Attachments = {
     },
     [6] = {
         PrintName = "Underbarrel",
-        DefaultName = "None",
         Bone = "j_gun",
         Pos = Vector(11, 0, 1.65),
         Ang = Angle(0, 0, 0),
@@ -593,7 +595,7 @@ SWEP.Attachments = {
     },
     [7] = {
         PrintName = "Handguard",
-        DefaultName = "A1 Barrel",
+        DefaultCompactName = "A1",
         Bone = "j_gun",
         Pos = Vector(7, 0, 3.75),
         Ang = Angle(0, 0, 0),
@@ -601,16 +603,15 @@ SWEP.Attachments = {
         ExcludeElements = {"carbine"}
     },
     [8] = {
-        PrintName = "Lower",
-        DefaultName = "Full-Auto",
+        PrintName = "Firing Group",
+        DefaultCompactName = "AUTO",
         Bone = "j_gun",
-        Pos = Vector(0, 0, 0),
+        Pos = Vector(0.15, 0, 1.1),
         Ang = Angle(0, 0, 0),
         Category = {"retro_ar15_lower"},
     },
     [9] = {
         PrintName = "Optic",
-        DefaultName = "Irons",
         Bone = "j_gun",
         Pos = Vector(3.5, 0, 5.025),
         Ang = Angle(0, 0, 0),
@@ -620,7 +621,6 @@ SWEP.Attachments = {
     },
     [10] = {
         PrintName = "Cosmetic",
-        DefaultName = "Default",
         Bone = "j_gun",
         Pos = Vector(-6, 0, 2.65),
         Ang = Angle(0, 0, 0),

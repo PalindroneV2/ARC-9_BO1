@@ -1,11 +1,9 @@
-ATT.PrintName = "Carry Handle rear sight"
+ATT.PrintName = "Carry Handle Rear Sight"
 ATT.CompactName = "Carry"
 ATT.Icon = Material("materials/entities/acwatt_optic_bo1_irons.png")
-ATT.Description = [[
-    Standard Carry Handle iron sights.
-]]
-ATT.Pros = {}
-ATT.Cons = {}
+ATT.Description = [[M16A4 carry handle iron sight.
+
+Functions identically to other iron sights.]]
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = true

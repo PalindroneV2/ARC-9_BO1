@@ -1,10 +1,9 @@
 ATT.PrintName = "Wire Stock"
 ATT.CompactName = "WIRE"
 ATT.Icon = Material("materials/entities/acwatt_bo1_stock_icon.png")
-ATT.Description = [[
-    Wire stock produced for M16 carbines in SMG roles. Made to be specially lightweight.
-    While it provies better control in movement it offers far less recoil control than its counterparts
-]]
+ATT.Description = [[Wire stock produced for M16 carbines in SMG roles. Made to be specially lightweight.
+
+Very lightweight and reduces hip fire spread, but barely provides any recoil control.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 4
@@ -25,10 +24,15 @@ ATT.ToggleStats = {
 }
 */
 
-ATT.SpeedMult = 1.05
-ATT.SprintToFireTimeMult = 0.8
-ATT.SpeedMultSightsMult = 1.2
-ATT.SpreadMultHipFire = 1.15
-ATT.SpreadMultMove = 1.15
-ATT.SpeedMultShootingMult = 1.1
-ATT.ShootWhileSprint = true
+ATT.RecoilMult = 0.95
+ATT.RecoilUpMult = 0.9
+ATT.RecoilRandomSideMult = 0.75
+ATT.RecoilAutoControlMult = 1.5
+
+ATT.SpreadMultHipFire = 0.8
+ATT.SpreadMultMove = 0.8
+
+ATT.SpeedMult = 0.995
+ATT.AimDownSightsTimeAdd = 0.05
+ATT.SprintToFireTimeAdd = 0.08
+ATT.SpeedAddSights = -0.08

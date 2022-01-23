@@ -1,9 +1,9 @@
 ATT.PrintName = "USGI Flip-Up Rear Sight"
 ATT.CompactName = "USGI"
 ATT.Icon = Material("materials/entities/acwatt_optic_bo1_irons.png")
-ATT.Description = [[
-    United States General Issue Flip-Up rear sight replaces carryhandle.
-]]
+ATT.Description = [[United States General Issue rear sight.
+
+Functions identically to other iron sights.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0

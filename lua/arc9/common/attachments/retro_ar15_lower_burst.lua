@@ -1,14 +1,11 @@
 ATT.PrintName = "M645 S-1-3 FCG"
 ATT.CompactName = "BURST"
-ATT.Icon = Material("materials/entities/acwatt_optic_bo1_irons.png")
-ATT.Description = [[
-    Standard US military 3-round burst fire control group used since 1983 for the M16.
+ATT.Icon = Material("materials/entities/acwatt_fcg_s13.png")
+ATT.Description = [[Standard 3-round burst fire control group used since 1983 for the M16 in all branches of the US military. Except for the Navy, of course.
 
-    Except for the Navy of course.
-]]
+Greatly improves recoil control and reduces spread.]]
 ATT.Pros = {}
 ATT.Cons = {
-    "Full-Auto replaced with Burst Fire",
 }
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
@@ -25,9 +22,10 @@ ATT.FiremodesOverride = {
         Mode = 1,
     },
 }
-ATT.RunAwayBurst = true
-ATT.PostBurstDelay = 0.2
-ATT.DamageMaxMult = 35 / 30
-ATT.DamageMinMult = 25 / 20
+ATT.RunAwayBurstOverride = true
+ATT.PostBurstDelayOverride = 0.1
+ATT.RPMOverride = 900
+
 ATT.SpreadMult = 0.9
-ATT.RecoilMult = 0.85
+ATT.SpreadMultRecoil = 0.8
+ATT.RecoilMult = 0.8
