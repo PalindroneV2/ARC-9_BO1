@@ -1,6 +1,6 @@
 ATT.PrintName = "A2 Upper Receiver"
 ATT.CompactName = "A2"
-ATT.Icon = Material("materials/entities/acwatt_fcg_s13.png")
+ATT.Icon = Material("entities/bo1_atts/other/select_fire.png")
 ATT.Description = [[
     A2-Type AR-15 upper reciever. No tangible difference to the A1 upper.
 ]]

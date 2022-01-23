@@ -1,6 +1,6 @@
 ATT.PrintName = "R6000 Sporting FCG"
 ATT.CompactName = "SEMI"
-ATT.Icon = Material("materials/entities/acwatt_optic_bo1_irons.png")
+ATT.Icon = Material("entities/bo1_atts/other/select_fire.png")
 ATT.Description = [[
     Civilian fire control group allows only for Semi-Automatic fire made for shooting competition.
     Its high quality, finely machined parts make this the best option for marksmanship.

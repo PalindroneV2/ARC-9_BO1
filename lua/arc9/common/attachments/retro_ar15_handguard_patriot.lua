@@ -1,6 +1,6 @@
 ATT.PrintName = [[M231 Firing Port Weapon]]
 ATT.CompactName = [[FPW]]
-ATT.Icon = Material("materials/entities/acwatt_bo2_longbarrel.png")
+ATT.Icon = Material("entities/bo1_atts/barrel/barrel.png")
 ATT.Description = [[
     Rare Vietnam-era parts for an M231 that fit an 11.5" Barrel.
     The M321 FPW was a special made M16 variant, which as the name implies, was used for the firing ports of armored vehicles. as such it lacks a front sight.

@@ -1,6 +1,6 @@
 ATT.PrintName = [[A4 Handguard]]
 ATT.CompactName = [[A4]]
-ATT.Icon = Material("materials/entities/acwatt_bo2_longbarrel.png")
+ATT.Icon = Material("entities/bo1_atts/barrel/barrel.png")
 ATT.Description = [[
     RIS Quad-Rail Handguard that usually fits 20" barrels, coult fit a 14.5" barrel if the gasblock was low profile.
     Handles exactly the same as the A2 handguard.

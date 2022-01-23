@@ -1,8 +1,8 @@
-ATT.PrintName = [[10.5" Commando Barrel]]
-ATT.CompactName = [[10.5"]]
+ATT.PrintName = [[8.1" Krinkov Barrel]]
+ATT.CompactName = [[KRINK]]
 ATT.Icon = Material("entities/bo1_atts/barrel/barrel.png")
 ATT.Description = [[
-    Even shorter Carbine-length 10.5" Barrel. It's use mainly by special forces groups earned it the nickname "Commando". Attached by default with a standard round, ribbed handguard.
+    Carbine length barrel for AK-74. Made for tank crews and helicopter pilots. Became a prized colelctible for middle-eastern insurgents.
 ]]
 ATT.Pros = {}
 ATT.Cons = {}
@@ -15,14 +15,6 @@ ATT.ActivateElements = {"carbine","barrel_10"}
 
 ATT.Attachments = {
     {
-        PrintName = "Handguard",
-        DefaultIcon = Material("materials/entities/acwatt_bo2_longbarrel.png"),
-        Category = "retro_ar15_handguard_10",
-        Bone = "j_gun",
-        Pos = Vector(0, 0, 2),
-        Ang = Angle(0, 0, 0),
-    },
-    {
         PrintName = "Muzzle",
         DefaultName = "Default",
         Bone = "j_gun",
@@ -31,22 +23,12 @@ ATT.Attachments = {
         Category = {"bo1_muzzle"},
     },
     {
-        PrintName = "Cosmetic II",
-        DefaultName = "Default",
-        Bone = "j_gun",
-        Pos = Vector(-10, 0, 3.5),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_cosmetic_ar15"},
-        ExcludeElements = {"nosling"},
-        InstallSound = "weapons/arc9/bo1_m16/bo_spawn.wav",
-    },
-    {
         PrintName = "Underbarrel",
         DefaultName = "None",
         Bone = "j_gun",
         Pos = Vector(2, 0, -0.1),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_m203", "bo1_grips"}
+        Category = {"bo1_gp25", "bo1_grips"}
     },
 }
 ATT.MuzzleEffectQCA = 1

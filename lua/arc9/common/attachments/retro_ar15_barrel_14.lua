@@ -1,6 +1,6 @@
 ATT.PrintName = [[14.5" Carbine Barrel]]
 ATT.CompactName = [[14.5"]]
-ATT.Icon = Material("materials/entities/acwatt_bo2_longbarrel.png")
+ATT.Icon = Material("entities/bo1_atts/barrel/barrel.png")
 ATT.Description = [[
     Carbine-length 14.5" Barrel standard for M4s. Attached by default with a standard round, ribbed handguard.
 ]]
@@ -46,7 +46,7 @@ ATT.Attachments = {
         Bone = "j_gun",
         Pos = Vector(2, 0, -0.1),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_ubgls", "bo1_grips"}
+        Category = {"bo1_m203", "bo1_grips"}
     },
 }
 

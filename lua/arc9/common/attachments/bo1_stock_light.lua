@@ -10,8 +10,8 @@ ATT.SortOrder = 2
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 
-ATT.Category = {"retro_ar15_stock"}
-ATT.ActivateElements = {"gen2_extended", "yessling"}
+ATT.Category = {"bo1_stocks", "bo1_stock_l", "bo1_stock_lm", "bo1_stock_lh"}
+ATT.ActivateElements = {"stock_light", "light_stock", "stock_l"}
 
 /*
 ATT.ToggleStats = {

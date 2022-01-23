@@ -1,6 +1,6 @@
 ATT.PrintName = "Wire Stock"
 ATT.CompactName = "WIRE"
-ATT.Icon = Material("materials/entities/acwatt_bo1_stock_icon.png")
+ATT.Icon = Material("entities/bo1_atts/other/stock.png")
 ATT.Description = [[
     Wire stock produced for M16 carbines in SMG roles. Made to be specially lightweight.
     While it provies better control in movement it offers far less recoil control than its counterparts

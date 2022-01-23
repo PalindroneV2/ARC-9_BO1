@@ -9,8 +9,8 @@ SWEP.Description = [[
     The AK-47 is one of the first modern assault rifles. There is little new to say about the most common weapons platform in the planet. Everyone knows what an AK is.
 ]]
 SWEP.Trivia = {
-    Manufacturer = "Colt",
-    Calibre = "7.62x39mm R",
+    Manufacturer = "Izhmash",
+    Calibre = "7.62x39mm M43",
     Mechanism = "Gas Piston",
     Country = "USSR",
     Year = 1947,
@@ -209,6 +209,10 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
         suffix = "_tishina"
     elseif attached["bo1_ubgl_mkey"] then
         suffix = "_mk"
+    elseif attached["ultimate_ak_receiver_rpk"] then
+        suffix = "_rpk"
+    elseif attached["ultimate_ak_receiver_ak74u"] then
+        suffix = "_74u"
     else
         suffix = ""
     end
@@ -218,13 +222,12 @@ end
 
 SWEP.Attachments = {
     [1] = {
-        PrintName = "Upper",
-        DefaultName = "A2 Upper",
+        PrintName = "Receiver",
+        DefaultName = "AK-47",
         Bone = "j_gun",
         Pos = Vector(2.5, 0, 2.5),
         Ang = Angle(0, 0, 0),
-        Category = {"retro_ar15_upper"},
-        ExcludeElements = {"handguard_famas"},
+        Category = {"ultimate_ak_receiver"},
     },
     [2] = {
         PrintName = "Magazine",
@@ -232,24 +235,16 @@ SWEP.Attachments = {
         Bone = "tag_clip",
         Pos = Vector(0, 0, -2),
         Ang = Angle(0, 0, 0),
-        Category = {"retro_ar15_mag"},
+        Category = {"ultimate_ak_mag"},
     },
     [3] = {
-        PrintName = "Barrel",
-        DefaultName = "A1 Barrel",
-        Bone = "j_gun",
-        Pos = Vector(7, 0, 1.75),
-        Ang = Angle(0, 0, 0),
-        Category = {"retro_ar15_barrel"},
-    },
-    [4] = {
         PrintName = "Stock",
         DefaultName = "Buffer Tube",
         Bone = "j_gun",
         Pos = Vector(-3, 0, 2.65),
         Ang = Angle(0, 0, 0),
-        Category = {"retro_ar15_stock"},
-        Installed = "retro_ar15_stock_full",
+        Category = {"bo1_stocks"},
+        Installed = "bo1_stock_medium",
     },
     [5] = {
         PrintName = "Muzzle",
@@ -258,7 +253,7 @@ SWEP.Attachments = {
         Pos = Vector(24, 0, 2.25),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_muzzle"},
-        ExcludeElements = {"carbine"}
+        ExcludeElements = {"74u", "rpk"},
     },
     [6] = {
         PrintName = "Underbarrel",
@@ -266,8 +261,8 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(11, 0, 1.65),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_ubgls", "bo1_grips"},
-        ExcludeElements = {"carbine"},
+        Category = {"bo1_gp25", "bo1_grips"},
+        ExcludeElements = {"74u", "rpk"},
     },
     [7] = {
         PrintName = "Handguard",
@@ -279,14 +274,6 @@ SWEP.Attachments = {
         ExcludeElements = {"carbine"}
     },
     [8] = {
-        PrintName = "Lower",
-        DefaultName = "Full-Auto",
-        Bone = "j_gun",
-        Pos = Vector(0, 0, 0),
-        Ang = Angle(0, 0, 0),
-        Category = {"retro_ar15_lower"},
-    },
-    [9] = {
         PrintName = "Optic",
         DefaultName = "Irons",
         Bone = "j_gun",
@@ -296,7 +283,7 @@ SWEP.Attachments = {
         InstalledElements = {"classicrail"},
         ExcludeElements = {"a4_top", "handguard_famas"},
     },
-    [10] = {
+    [9] = {
         PrintName = "Cosmetic",
         DefaultName = "Default",
         Bone = "j_gun",

@@ -1,8 +1,8 @@
-ATT.PrintName = "Generation 1 Collapsible Stock"
-ATT.CompactName = "GEN1"
+ATT.PrintName = "Medium Stock"
+ATT.CompactName = "MED"
 ATT.Icon = Material("entities/bo1_atts/other/stock.png")
 ATT.Description = [[
-    Retractible two-position stock similar to the fixed M16 stock.
+    Middle ground in mobility and recoil control.
 ]]
 ATT.Pros = {}
 ATT.Cons = {}
@@ -10,8 +10,8 @@ ATT.SortOrder = 1
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 
-ATT.Category = {"retro_ar15_stock"}
-ATT.ActivateElements = {"gen1_extended", "nosling"}
+ATT.Category = {"bo1_stocks", "bo1_stock_m", "bo1_stock_lm", "bo1_stock_mh"}
+ATT.ActivateElements = {"medium_stock", "stock_m"}
 
 /*
 ATT.ToggleStats = {

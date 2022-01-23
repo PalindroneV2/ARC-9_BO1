@@ -1,6 +1,6 @@
 ATT.PrintName = [[M635 32 round 9mm Mag]]
 ATT.CompactName = [[9MM]]
-ATT.Icon = Material("materials/entities/acwatt_bo1_ext_mag.png")
+ATT.Icon = Material("entities/bo1_atts/ammo/ext_mag.png")
 ATT.Description = [[
     9x19mm conversion for the AR-15 along with a 32 round magainze.
     Marginally increases handling while worsening precision and range.

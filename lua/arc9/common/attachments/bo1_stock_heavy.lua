@@ -1,8 +1,8 @@
-ATT.PrintName = "M16 Fixed Rifle Stock"
-ATT.CompactName = "FULL"
+ATT.PrintName = "Heavy Stock"
+ATT.CompactName = "HEAVY"
 ATT.Icon = Material("entities/bo1_atts/other/stock.png")
 ATT.Description = [[
-    Standard M16 fixed stock.
+    Offers best possible recoil control but handling and mobility are hindered.
 ]]
 ATT.Pros = {}
 ATT.Cons = {}
@@ -10,8 +10,8 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 
-ATT.Category = {"retro_ar15_stock"}
-ATT.ActivateElements = {"full_stock", "nosling"}
+ATT.Category = {"bo1_stocks", "bo1_stock_h", "bo1_stock_lh", "bo1_stock_mh"}
+ATT.ActivateElements = {"stock_h", "full_stock"}
 
 ATT.RecoilMult = 0.5
 ATT.SpeedMult = 0.95

@@ -1,6 +1,6 @@
 ATT.PrintName = "Millimeter scanner"
 ATT.CompactName = [[MMS]]
-ATT.Icon = Material("entities/acwatt_optic_bo2_mms.png", "mips smooth")
+ATT.Icon = Material("entities/bo1_atts/optics/bo2_mms.png", "mips smooth")
 ATT.Description = [[
     Black Ops 2 Electronic Sight. Provides an electronic crosshair for the user as well as highlighting targets in red.
 ]]

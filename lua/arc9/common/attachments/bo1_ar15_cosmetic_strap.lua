@@ -1,6 +1,6 @@
 ATT.PrintName = "Wrapped Sling"
 ATT.CompactName = "SLING"
-ATT.Icon = Material("materials/entities/acwatt_optic_bo1_irons.png")
+ATT.Icon = Material("materials/entities/bo1_atts/cosmetic/commando_sling.png")
 ATT.Description = [[
     Give your weapon a stylish look by attaching a strap to the weapon.
 ]]

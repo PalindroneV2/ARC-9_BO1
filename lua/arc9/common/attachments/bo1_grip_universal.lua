@@ -1,6 +1,6 @@
 ATT.PrintName = "Ergonomic Foregrip"
 ATT.CompactName = [[ERGO]]
-ATT.Icon = Material("entities/acwatt_bo1_foregrip.png", "mips smooth")
+ATT.Icon = Material("entities/bo1_atts/ubs/bo1_foregrip.png", "mips smooth")
 ATT.Description = [[
     Vertical foregrip that goes under the weapon's handguard.
 

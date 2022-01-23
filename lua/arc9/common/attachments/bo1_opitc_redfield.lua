@@ -1,6 +1,6 @@
 ATT.PrintName = "Redfield Variable Zoom Scope"
 ATT.CompactName = [[VZOOM]]
-ATT.Icon = Material("entities/acwatt_optic_bo1_l96.png", "mips smooth")
+ATT.Icon = Material("entities/bo1_atts/optics/bo1_vzoom.png", "mips smooth")
 ATT.Description = [[
     Long range combat scope with variable zoom.
 

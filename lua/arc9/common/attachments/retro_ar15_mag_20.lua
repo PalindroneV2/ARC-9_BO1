@@ -1,6 +1,6 @@
 ATT.PrintName = [[AR-15 20 round STANAG]]
 ATT.CompactName = [[20RND]]
-ATT.Icon = Material("materials/entities/acwatt_bo1_ext_mag.png")
+ATT.Icon = Material("entities/bo1_atts/ammo/ext_mag.png")
 ATT.Description = [[
     Original aluminum STANAG magazine that only holds 20 rounds.
     Marginally increases handling.
