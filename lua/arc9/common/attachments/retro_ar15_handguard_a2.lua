@@ -1,6 +1,6 @@
 ATT.PrintName = [[A2 Handguard]]
 ATT.CompactName = [[A2]]
-ATT.Icon = Material("materials/entities/acwatt_bo2_longbarrel.png")
+ATT.Icon = Material("entities/bo1_atts/barrel/barrel.png")
 ATT.Description = [[
     Round, ribbed handguard standard for the M16A2. Heavier and ergonomically better than the A1 triangular handguard.
 ]]

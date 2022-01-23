@@ -1,6 +1,6 @@
 ATT.PrintName = "Fixed FAMAS F1 Rear Assembly"
 ATT.CompactName = "FAMAS"
-ATT.Icon = Material("materials/entities/acwatt_bo1_stock_icon.png")
+ATT.Icon = Material("entities/bo1_atts/other/stock.png")
 ATT.Description = [[Hollowed out FAMAS F1 rear end that works much like an M16 fixed stock.]]
 ATT.Pros = {}
 ATT.Cons = {}

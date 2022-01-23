@@ -1,6 +1,6 @@
 ATT.PrintName = [[FAMAS F1 Front Assembly]]
 ATT.CompactName = [[F1]]
-ATT.Icon = Material("materials/entities/acwatt_bo2_longbarrel.png")
+ATT.Icon = Material("entities/bo1_atts/barrel/barrel.png")
 ATT.Description = [[
     Hollowed out front end of a FAMAS F1 makes up the weapon's handguard and sights now. The weight reduces recoil but slows down sight time.
     It also blocks upper receivers.

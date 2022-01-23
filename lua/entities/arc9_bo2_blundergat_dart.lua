@@ -100,6 +100,8 @@ if SERVER then
         self.Stuck = true
 
         local tgt = data.HitEntity
+
+        --[[]
         if tgt:IsNPC() or tgt:IsNextBot() or IsValid(tgt:GetPhysicsObject()) or (tgt:IsPlayer() and tgt ~= self:GetOwner()) then
             self.StuckAngle = self:GetAngles()
             timer.Simple(0, function()
@@ -110,6 +112,52 @@ if SERVER then
                 end
                 self:SetAngles(self.StuckAngle)
             end)
+        end
+        ]]
+
+        local angles = self:GetAngles()
+        if tgt:IsWorld() or (IsValid(tgt) and tgt:GetPhysicsObject():IsValid()) then
+            timer.Simple(0, function()
+                self:SetAngles(angles)
+                self:SetPos(data.HitPos)
+                self:GetPhysicsObject():Sleep()
+
+                if tgt:IsWorld() or IsValid(tgt) then
+                    self:SetSolid(SOLID_NONE)
+                    self:SetMoveType(MOVETYPE_NONE)
+                    self:SetCollisionGroup(COLLISION_GROUP_DEBRIS)
+
+                    local f = {self}
+                    table.Add(f, tgt:GetChildren())
+
+                    local tr = util.TraceLine({
+                        start = data.HitPos - data.OurOldVelocity * 0.5,
+                        endpos = data.HitPos + data.OurOldVelocity,
+                        filter = f,
+                        mask = MASK_SHOT
+                    })
+
+                    local bone = tr.Entity:TranslatePhysBoneToBone(tr.PhysicsBone) or tr.Entity:GetHitBoxBone(tr.HitBox, tr.Entity:GetHitboxSet())
+                    local matrix = tgt:GetBoneMatrix(bone or 0)
+                    if tr.Entity == tgt and bone and matrix then
+                        local pos = matrix:GetTranslation()
+                        local ang = matrix:GetAngles()
+                        self:FollowBone(tgt, bone)
+                        local n_pos, n_ang = WorldToLocal(tr.HitPos, tr.Normal:Angle(), pos, ang)
+                        self:SetLocalPos(n_pos)
+                        self:SetLocalAngles(n_ang)
+                        debugoverlay.Cross(pos, 8, 5, Color(255, 0, 255), true)
+                    elseif not tgt:IsWorld() then
+                        self:SetParent(tgt)
+                        self:GetParent():DontDeleteOnRemove(self)
+                    else
+                        self.AttachToWorld = true
+                    end
+                end
+            end)
+
+            self:SetTrigger(true)
+            self:UseTriggerBounds(true, 16)
         end
 
         self.DetonateTime = CurTime() + 1

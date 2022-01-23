@@ -1,6 +1,6 @@
 ATT.PrintName = [[M635 32 round 9mm Mag]]
 ATT.CompactName = [[9MM]]
-ATT.Icon = Material("materials/entities/acwatt_bo1_ext_mag.png")
+ATT.Icon = Material("entities/bo1_atts/ammo/ext_mag.png")
 ATT.Description = [[9x19mm conversion for the AR-15 using 32-round box magazines.
 
 The pistol cartridge reduces long range stopping power significantly, but has less recoil and can be fired much faster.]]

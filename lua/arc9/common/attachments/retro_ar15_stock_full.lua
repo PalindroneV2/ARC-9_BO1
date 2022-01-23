@@ -1,6 +1,6 @@
 ATT.PrintName = "M16 Fixed Rifle Stock"
 ATT.CompactName = "FULL"
-ATT.Icon = Material("materials/entities/acwatt_bo1_stock_icon.png")
+ATT.Icon = Material("entities/bo1_atts/other/stock.png")
 ATT.Description = [[Standard M16 fixed stock.
 
 Provides very good recoil reduction compared to other stock options.]]

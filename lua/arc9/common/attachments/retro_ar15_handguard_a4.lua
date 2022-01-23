@@ -1,6 +1,6 @@
 ATT.PrintName = [[A4 Handguard]]
 ATT.CompactName = [[A4]]
-ATT.Icon = Material("materials/entities/acwatt_bo2_longbarrel.png")
+ATT.Icon = Material("entities/bo1_atts/barrel/barrel.png")
 ATT.Description = [[A long handguard with quad-rail RIS mounts. While usually used for 20" barrels, it can fit a 14.5" barrel with a low profile gas block.
 
 Allows for the attachment of alternative front sights, but is otherwise identical to a regular handguard.]]

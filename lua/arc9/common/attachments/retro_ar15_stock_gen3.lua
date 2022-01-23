@@ -1,6 +1,6 @@
 ATT.PrintName = "Generation 3 Collapsible Stock"
 ATT.CompactName = "GEN3"
-ATT.Icon = Material("materials/entities/acwatt_bo1_stock_icon.png")
+ATT.Icon = Material("entities/bo1_atts/other/stock.png")
 ATT.Description = [[Modern retractible six-position stock made for with improved ergonomics and surface area.
 
 Has excellent handling, but provides weaker recoil control compared to a full stock.]]

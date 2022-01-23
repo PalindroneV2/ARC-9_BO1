@@ -1,6 +1,6 @@
 ATT.PrintName = "M645 S-1-3 FCG"
 ATT.CompactName = "BURST"
-ATT.Icon = Material("materials/entities/acwatt_fcg_s13.png")
+ATT.Icon = Material("entities/bo1_atts/other/select_fire.png")
 ATT.Description = [[Standard 3-round burst fire control group used since 1983 for the M16 in all branches of the US military. Except for the Navy, of course.
 
 Greatly improves recoil control and reduces spread.]]

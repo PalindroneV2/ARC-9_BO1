@@ -1,11 +1,10 @@
 ATT.PrintName = [[11.5" XM177E2 Barrel]]
 ATT.CompactName = [[11.5"]]
-ATT.Icon = Material("materials/entities/acwatt_bo2_longbarrel.png")
+ATT.Icon = Material("entities/bo1_atts/barrel/barrel.png")
 ATT.Description = [[Short carbine-length barrel that belonged to the XM177E2, an early M16 carbine made for the MACV-SOG.
 
 Comes attached with a muzzle devices that reduces both recoil and audible rapport, but cannot fit other muzzle attachments as a result.]]
-ATT.Pros = {}
-ATT.Cons = {}
+
 ATT.SortOrder = 1
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
@@ -38,7 +37,7 @@ ATT.Attachments = {
         Bone = "j_gun",
         Pos = Vector(2, 0, -0.1),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_ubgls", "bo1_grips"}
+        Category = {"bo1_m203", "bo1_grips"}
     },
 }
 

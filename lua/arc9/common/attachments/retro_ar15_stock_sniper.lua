@@ -1,6 +1,6 @@
 ATT.PrintName = "Magpul PSR Marksman Stock"
 ATT.CompactName = "SNIPER"
-ATT.Icon = Material("materials/entities/acwatt_bo1_stock_icon.png")
+ATT.Icon = Material("entities/bo1_atts/other/stock.png")
 ATT.Description = [[Slightly adjustable marksman stock for DMRs produced by Magpul.
 
 Provides very good recoil control, but is heavy and hard to use when not still and aiming.]]

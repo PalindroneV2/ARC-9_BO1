@@ -1,6 +1,6 @@
 ATT.PrintName = "Trijicon ACOG 6x48 (6x)"
 ATT.CompactName = [[ACOG 6x]]
-ATT.Icon = Material("entities/acwatt_optic_bo2_acog.png", "mips smooth")
+ATT.Icon = Material("entities/bo1_atts/optics/bo2_acog.png", "mips smooth")
 ATT.Description = [[
     Medium range combat scope for improved precision at longer ranges.
 

@@ -1,6 +1,6 @@
 ATT.PrintName = "Generation 2 Collapsible Stock"
 ATT.CompactName = "GEN2"
-ATT.Icon = Material("materials/entities/acwatt_bo1_stock_icon.png")
+ATT.Icon = Material("entities/bo1_atts/other/stock.png")
 ATT.Description = [[Retractible four-position stock made for Vietnam-era M16 Carbines such as the XM177E2, kept in use until the mid 2000s.
 
 Reduces spread from moving and recoil accumulation, but doesn't reduce recoil as much as a full stock.]]

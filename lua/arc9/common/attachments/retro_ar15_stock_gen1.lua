@@ -1,6 +1,6 @@
 ATT.PrintName = "Generation 1 Collapsible Stock"
 ATT.CompactName = "GEN1"
-ATT.Icon = Material("materials/entities/acwatt_bo1_stock_icon.png")
+ATT.Icon = Material("entities/bo1_atts/other/stock.png")
 ATT.Description = [[Early production retractible two-position stock.
 
 Provides slightly better handling than a fixed stock, but with slightly less recoil control.]]

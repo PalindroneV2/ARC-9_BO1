@@ -1,6 +1,6 @@
 ATT.PrintName = "Leupold Mk 4 HAMR (3.5x)"
 ATT.CompactName = [[HAMR 3.5x]]
-ATT.Icon = Material("entities/acwatt_optic_bo2_hamr.png", "mips smooth")
+ATT.Icon = Material("entities/bo1_atts/optics/bo2_hamr.png", "mips smooth")
 ATT.Description = [[
     Medium range combat scope for improved precision at longer ranges. Combined with a no maginification red dot sight on top.
 

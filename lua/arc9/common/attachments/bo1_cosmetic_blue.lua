@@ -1,6 +1,6 @@
 ATT.PrintName = "Polizei Blau"
 ATT.CompactName = "BLUE"
-ATT.Icon = Material("materials/entities/acwatt_optic_bo1_irons.png")
+ATT.Icon = Material("materials/entities/bo1_generic.png")
 ATT.Description = [[
     Blue look for weapon's furniture.
 ]]

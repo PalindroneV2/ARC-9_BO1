@@ -1,6 +1,6 @@
 ATT.PrintName = [[M607a Barrel Assembly]]
 ATT.CompactName = [[M607a]]
-ATT.Icon = Material("materials/entities/acwatt_bo2_longbarrel.png")
+ATT.Icon = Material("entities/bo1_atts/barrel/barrel.png")
 ATT.Description = [[
     Rare M607a parts that fit an 11.5 barrel.
     The M607a was a very early carbine version of the M16 marketed as an SMG, not for its caliber, but instead for its role as a compact weapon for rear echelon troops, vehicle drives and tank crews.

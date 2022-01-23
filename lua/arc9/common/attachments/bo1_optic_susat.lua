@@ -1,6 +1,6 @@
 ATT.PrintName = "SUSAT Scope (2-4x)"
 ATT.CompactName = [[SUSAT 4x]]
-ATT.Icon = Material("entities/acwatt_optic_bo1_acog.png", "mips smooth")
+ATT.Icon = Material("entities/bo1_atts/optics/bo1_coltscope.png", "mips smooth")
 ATT.Description = [[
     Medium range combat scope for improved precision at longer ranges.
 

@@ -1,6 +1,6 @@
 ATT.PrintName = [[AR-15 100 round C-Mag]]
 ATT.CompactName = [[DRUM]]
-ATT.Icon = Material("materials/entities/acwatt_bo1_ext_mag.png")
+ATT.Icon = Material("entities/bo1_atts/ammo/drum.png")
 ATT.Description = [[
     Rare 100 round drum magazine.
     Greatly reduces handling.

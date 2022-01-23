@@ -1,6 +1,6 @@
 ATT.PrintName = "Carry Handle Rear Sight"
 ATT.CompactName = "Carry"
-ATT.Icon = Material("materials/entities/acwatt_optic_bo1_irons.png")
+ATT.Icon = Material("entities/bo1_atts/optics/bo2_irons.png")
 ATT.Description = [[M16A4 carry handle iron sight.
 
 Functions identically to other iron sights.]]

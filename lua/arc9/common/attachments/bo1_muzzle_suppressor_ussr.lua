@@ -1,6 +1,6 @@
 ATT.PrintName = [[AR Suppressor (USSR)]]
 ATT.CompactName = [[SUPP USSR]]
-ATT.Icon = Material("materials/entities/acwatt_supp_bo1_supp.png")
+ATT.Icon = Material("materials/entities/bo1_atts/barrel/bo1_suppressor.png")
 ATT.Description = [[
     Lightweight can cools and disperses gases leaving the barrel, muffling the firearm's audible report.
 ]]

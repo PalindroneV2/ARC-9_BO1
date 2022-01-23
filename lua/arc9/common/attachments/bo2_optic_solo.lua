@@ -1,6 +1,6 @@
 ATT.PrintName = "ADCO SOLO"
 ATT.CompactName = [[RDS II]]
-ATT.Icon = Material("entities/acwatt_optic_bo2_docter.png", "mips smooth")
+ATT.Icon = Material("entities/bo1_atts/optics/bo2_rds.png", "mips smooth")
 ATT.Description = [[
     Typical red dot sight which uses a holographic reticle for faster sight aqusition.
 
