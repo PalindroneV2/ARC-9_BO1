@@ -6,11 +6,9 @@ ENT.Spawnable                 = false
 ENT.Model                     = "models/weapons/arc9/item/bo1_scavenger_pack.mdl"
 
 function ENT:Initialize()
-    /*
-    if engine.ActiveGamemode() == "terrortown" and ArcCW.TTTReplaceTable then
-        self.AmmoType = ArcCW.TTTReplaceTable[self.AmmoType] or self.AmmoType
+    if engine.ActiveGamemode() == "terrortown" and ARC9.TTTReplaceTable then
+        self.AmmoType = ARC9.TTTReplaceTable[self.AmmoType] or self.AmmoType
     end
-    */
 
     if SERVER then
         self:SetModel(self.Model)
