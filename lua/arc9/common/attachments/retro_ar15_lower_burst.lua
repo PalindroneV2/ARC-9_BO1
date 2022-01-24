@@ -24,7 +24,6 @@ ATT.FiremodesOverride = {
 }
 ATT.RunAwayBurstOverride = true
 ATT.PostBurstDelayOverride = 0.1
-ATT.RPMOverride = 900
 
 ATT.SpreadMult = 0.9
 ATT.SpreadMultRecoil = 0.8

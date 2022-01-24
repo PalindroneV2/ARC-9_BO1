@@ -11,7 +11,7 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 
-ATT.Category = {"bo1_ubgls"}
+ATT.Category = {"bo1_mk"}
 ATT.ActivateElements = {"bo1_mk"}
 ATT.ExcludeElements = {"handguard_patriot", "100_mag", "handguard_607"}
 ATT.AimDownSightsTimeMult = 1.1

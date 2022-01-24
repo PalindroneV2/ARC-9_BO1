@@ -109,7 +109,7 @@ SWEP.SpeedMultBlindFire = 1
 SWEP.AimDownSightsTime = 0.11
 SWEP.SprintToFireTime = 0.14
 
-SWEP.RPM = 800
+SWEP.RPM = 900
 SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
@@ -590,7 +590,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(11, 0, 1.65),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_m203", "bo1_grips"},
+        Category = {"bo1_m203", "bo1_mk", "bo1_grips"},
         ExcludeElements = {"carbine"},
     },
     [7] = {

@@ -1,8 +1,8 @@
-ATT.PrintName = "Generation 2 Collapsible Stock"
-ATT.CompactName = "GEN2"
+ATT.PrintName = "Light Stock"
+ATT.CompactName = "LIGHT"
 ATT.Icon = Material("entities/bo1_atts/other/stock.png")
 ATT.Description = [[
-    Retractible four-position stock made for Vietnam-era M16 Carbines such as the XM177E2 that were kept in use until the mid 2000s.
+    Lightweight stock that doesn't provide as much recoil control but helps mobility.
 ]]
 ATT.Pros = {}
 ATT.Cons = {}

@@ -80,5 +80,3 @@ ATT.SprintToFireTimeMult = 0.8
 ATT.RangeMaxMult = 0.6
 ATT.RangeMinMult = 0.6
 ATT.PhysBulletMuzzleVelocityMult = 0.6
-
-ATT.RPMMult = 900 / 800

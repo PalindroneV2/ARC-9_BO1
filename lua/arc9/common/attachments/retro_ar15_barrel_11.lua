@@ -77,5 +77,3 @@ ATT.PhysBulletMuzzleVelocityMult = 0.75
 ATT.ShootVolumeMult = 0.85
 ATT.ShootPitchMult = 1.1
 ATT.ShootPitchVariation = 0.1
-
-ATT.RPMMult = 875 / 800
