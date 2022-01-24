@@ -670,6 +670,28 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = 0.2,
         LHIKOut = 0.35,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.95,
+                lhik = 1,
+                rhik = 1
+            },
+        },
         EventTable = {
             {s = "^weapons/arc9/cde_m16/raise.ogg", t = 0},
             {s = "^weapons/arc9/cde_m16/magout.ogg", t = 0.25},
@@ -687,9 +709,28 @@ SWEP.Animations = {
     ["reload_empty"] = {
         Source = "reload_empty",
         Time = 2.5,
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.95,
+                lhik = 1,
+                rhik = 1
+            },
+        },
         EventTable = {
             {s = "^weapons/arc9/cde_m16/raise.ogg", t = 0},
             {s = "^weapons/arc9/cde_m16/magout.ogg", t = 0.25},
@@ -708,15 +749,15 @@ SWEP.Animations = {
     },
     ["enter_sprint"] = {
         Source = "sprint_in",
-        Time = 1
+        Time = 1,
     },
     ["idle_sprint"] = {
         Source = "sprint_loop",
-        Time = 30 / 40
+        Time = 30 / 40,
     },
     ["exit_sprint"] = {
         Source = "sprint_out",
-        Time = 1
+        Time = 1,
     },
 
 -- UBGL OUT ANIMS ---------------------------------------------------------------

@@ -41,8 +41,8 @@ SWEP.DefaultBodygroups = "00000000000000"
 
 SWEP.DamageMax = 40
 SWEP.DamageMin = 30 -- damage done at maximum range
-SWEP.RangeMax = 2000 * 3
-SWEP.RangeMin = 2000
+SWEP.RangeMax = 1800 * 3
+SWEP.RangeMin = 1800
 SWEP.Penetration = 8
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
@@ -70,13 +70,13 @@ SWEP.ReloadTime = 1
 
 SWEP.DrawCrosshair = true
 
-SWEP.Recoil = 0.3
+SWEP.Recoil = 0.5
 SWEP.RecoilSide = 0.6
-SWEP.RecoilUp = 0.6
+SWEP.RecoilUp = 0.4
 
 SWEP.UseVisualRecoil = false
 
-SWEP.Spread = 0.000775 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.Spread = 0.00085 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
 
 SWEP.SpreadAddMove = 0.025 -- Applied when speed is equal to walking speed.
 SWEP.SpreadAddMidAir = 0.025 -- Applied when not touching the ground.
@@ -190,7 +190,7 @@ SWEP.ExtraSightDist = 5
 SWEP.AttachmentElements = {
     ["rail"] = {
         Bodygroups = {
-            {6,2}
+            {2,2}
         },
     },
     ["stock_l"] = {
@@ -273,6 +273,9 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     if attached["ultimate_ak_mag_45_dual"] then
         vm:SetBodygroup(1, 4)
     end
+    if attached["ultimate_ak_mag_drum"] then
+        vm:SetBodygroup(1, 5)
+    end
 
     if attached["ak74"] and barrel == 0 then
         vm:SetBodygroup(7, 1)
@@ -301,24 +304,25 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
         suffix = "_mk"
     elseif attached["ultimate_ak_receiver_rpk"] then
         suffix = "_rpk"
-        if anim == "reload" then
-            if attached["ultimate_ak_mag_drum"] then
-                anim = "drum"
-            end
-            if attached["ultimate_ak_mag_45_dual"] then
-                anim = "fast"
-            end
-        end
-        if anim == "reload_empty" then
-            if attached["ultimate_ak_mag_drum"] then
-                anim = "drum_empty"
-            end
-            if attached["ultimate_ak_mag_45_dual"] then
-                anim = "fast_empty_rpk"
-            end
-        end
     else
         suffix = ""
+    end
+
+    if anim == "reload" then
+        if attached["ultimate_ak_mag_drum"] then
+            return "drum"
+        end
+        if attached["ultimate_ak_mag_45_dual"] then
+            return "fast_rpk"
+        end
+    end
+    if anim == "reload_empty" then
+        if attached["ultimate_ak_mag_drum"] then
+            return "drum_empty"
+        end
+        if attached["ultimate_ak_mag_45_dual"] then
+            return "fast_empty_rpk"
+        end
     end
 
     return anim .. suffix
@@ -432,19 +436,24 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         IKTimeLine = {
             {
-                t = 0.01,
+                t = 0,
+                lhik = 1,
+                rhik = 1
+            },
+            {
+                t = 0.2,
                 lhik = 0,
                 rhik = 0
             },
             {
-                t = 63 / 35,
-                lhik = 1,
+                t = 0.85,
+                lhik = 0,
                 rhik = 0
             },
             {
-                t = 83 / 35,
+                t = 0.95,
                 lhik = 1,
-                rhik = 0
+                rhik = 1
             },
         },
         EventTable = {
@@ -459,13 +468,23 @@ SWEP.Animations = {
         IKTimeLine = {
             {
                 t = 0,
+                lhik = 1,
+                rhik = 1
+            },
+            {
+                t = 0.2,
                 lhik = 0,
                 rhik = 0
             },
             {
-                t = 1.25,
-                lhik = 1,
+                t = 0.6,
+                lhik = 0,
                 rhik = 0
+            },
+            {
+                t = 0.65,
+                lhik = 1,
+                rhik = 1
             },
         },
         EventTable = {
@@ -817,9 +836,28 @@ SWEP.Animations = {
         Source = "reload_rpk",
         Time = 4.76 / 1.25,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.2,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.9,
+                lhik = 1,
+                rhik = 1
+            },
+        },
         EventTable = {
             {s = "ARC9_BO1.RPK_Futz", t = 0.6 / 1.25},
             {s = "ARC9_BO1.RPK_MagOut", t = 0.75 / 1.25},
@@ -831,9 +869,28 @@ SWEP.Animations = {
         Source = "reload_empty_rpk",
         Time = 6.16 / 1.25,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.2,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1
+            },
+            {
+                t = 0.1,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.65,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.71,
+                lhik = 1,
+                rhik = 1
+            },
+        },
         EventTable = {
             {s = "ARC9_BO1.RPK_Futz", t = 0.6 / 1.25},
             {s = "ARC9_BO1.RPK_MagOut", t = 0.75 / 1.25},
@@ -847,9 +904,28 @@ SWEP.Animations = {
         Source = "fast_rpk",
         Time = 3.10,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.2,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.825,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.83,
+                lhik = 1,
+                rhik = 1
+            },
+        },
         EventTable = {
             {s = "ARC9_BO1.RPK_Futz", t = 0.6},
             {s = "ARC9_BO1.RPK_MagOut", t = 0.75},
@@ -861,9 +937,28 @@ SWEP.Animations = {
         Source = "fast_empty_rpk",
         Time = 4.49,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.2,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.55,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.59,
+                lhik = 1,
+                rhik = 1
+            },
+        },
         EventTable = {
             {s = "ARC9_BO1.RPK_Futz", t = 0.6},
             {s = "ARC9_BO1.RPK_MagOut", t = 0.75},
@@ -877,9 +972,28 @@ SWEP.Animations = {
         Source = "drum",
         Time = 4.66,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.2,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1
+            },
+            {
+                t = 0.1,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.9,
+                lhik = 1,
+                rhik = 1
+            },
+        },
         EventTable = {
             {s = "ARC9_BO1.RPK_Futz", t = 0.6},
             {s = "ARC9_BO1.RPK_MagOut", t = 0.75},
@@ -891,9 +1005,28 @@ SWEP.Animations = {
         Source = "drum_empty",
         Time = 5.99,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.2,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1
+            },
+            {
+                t = 0.1,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.65,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.69,
+                lhik = 1,
+                rhik = 1
+            },
+        },
         EventTable = {
             {s = "ARC9_BO1.RPK_Futz", t = 0.6},
             {s = "ARC9_BO1.RPK_MagOut", t = 0.75},

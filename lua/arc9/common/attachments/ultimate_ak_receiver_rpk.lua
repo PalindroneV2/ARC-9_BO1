@@ -4,7 +4,7 @@ ATT.Icon = Material("entities/bo1_atts/barrel/barrel.png")
 ATT.Description = [[
 Updated RPK receiver firing 5.45x39mm rounds.
 
-It's ability to mantain sustain fire more efficiently lets it get an effective cyclic rate of 750 rounds per minute.
+Its ability for more efficient sustained fire lets it get an effective cyclic rate of 750 rounds per minute.
 ]]
 ATT.Pros = {}
 ATT.Cons = {}
