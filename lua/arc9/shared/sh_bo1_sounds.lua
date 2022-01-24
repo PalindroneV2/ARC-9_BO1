@@ -2308,6 +2308,17 @@ sound.Add( {
     }
 } )
 
+sound.Add( {
+    name = "ARC9_BO1.LAW_Drop",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arc9/bo1_rpg/at4_drop.wav",
+    }
+} )
+
 -- Crossbow --
 
 sound.Add( {
