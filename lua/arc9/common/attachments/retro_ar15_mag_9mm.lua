@@ -18,7 +18,7 @@ ATT.ClipSize = 32
 ATT.DamageMax = 25
 ATT.DamageMin = 12
 
-ATT.SpreadMult = 1.25
+ATT.SpreadMult = 1.5
 ATT.RangeMaxMult = 0.7
 ATT.RangeMinMult = 0.7
 
@@ -26,7 +26,7 @@ ATT.RecoilUpMult = 0.5
 ATT.RecoilSideMult = 0.8
 
 ATT.PenetrationMult = 0.5
-ATT.PhysBulletMuzzleVelocity = 25000
+ATT.PhysBulletMuzzleVelocity = 360 * 39.37
 ATT.RPM = 1000
 
 ATT.Ammo = "pistol"
