@@ -35,7 +35,7 @@ SWEP.WorldModelOffset = {
     bone    =    "ValveBiped.Bip01_R_Hand",
     scale = 1.1,
 }
-SWEP.DesiredViewModelFOV = 60
+SWEP.DesiredViewModelFOV = 54
 
 SWEP.DefaultBodygroups = "00000000000000"
 
@@ -155,12 +155,10 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(-2.765, -2, 0.25),
-    Ang = Angle(0, 0.0125, 0),
+    Pos = Vector(-2.425, -2, 0.65),
+    Ang = Angle(0.025, 0.5, 0),
     Magnification = 1.1,
-    AssociatedSlot = 9,
-    CrosshairInSights = false,
-    SwitchToSound = "", -- sound that plays when switching to this sight
+    CrosshairInSights = true,
 }
 
 SWEP.HoldtypeHolstered = "passive"
@@ -208,21 +206,36 @@ SWEP.AttachmentElements = {
             {6,3}
         },
     },
+    ["stock_tac"] = {
+        Bodygroups = {
+            {6,4}
+        },
+    },
+    ["stock_underfolder"] = {
+        Bodygroups = {
+            {6,5}
+        },
+    },
     ["ak74"] = {
         Bodygroups = {
             {0,1},
-            {1,1}
+            {1,2}
         },
     },
     ["rpk"] = {
         Bodygroups = {
             {0,2},
-            {1,3},
+            {1,4},
+        },
+    },
+    ["ext_mag"] = {
+        Bodygroups = {
+            {1,1},
         },
     },
     ["drum_mag"] = {
         Bodygroups = {
-            {1,5},
+            {1,6},
         },
     },
     ["bo1_gp25"] = {
@@ -255,6 +268,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local barrel = 0
     local irons = 0
     local hand = 0
+    local skin = 0
     if attached["ultimate_ak_barrel_short"] then
         barrel = 1
         irons = 4
@@ -262,7 +276,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     elseif attached["ultimate_ak_barrel_rpk"] then
         barrel = 2
         irons = 8
-        hand = 2
+        hand = 3
     end
     if attached["bo1_alternate_irons"] then
         irons = irons + 1
@@ -271,10 +285,10 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         irons = irons + 2
     end
     if attached["ultimate_ak_mag_45_dual"] then
-        vm:SetBodygroup(1, 4)
+        vm:SetBodygroup(1, 5)
     end
     if attached["ultimate_ak_mag_drum"] then
-        vm:SetBodygroup(1, 5)
+        vm:SetBodygroup(1, 6)
     end
 
     if attached["ak74"] and barrel == 0 then
@@ -284,10 +298,64 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         end
     end
 
+    if attached["ultimate_ak_furniture_bakelite"] then
+        skin = 4
+    elseif attached["ultimate_ak_furniture_bakelite_black"] then
+        skin = 2
+    elseif attached["ultimate_ak_furniture_gold"] then
+        skin = 8
+    elseif attached["ultimate_ak_furniture_bakelite_worn"] then
+        hand = hand + 1
+    elseif attached["ultimate_ak_furniture_modern"] then
+        hand = hand + 2
+        if barrel == 2 then hand = 5 end
+    end
+
     vm:SetBodygroup(3, barrel)
     vm:SetBodygroup(2, irons)
     vm:SetBodygroup(4, hand)
 
+    vm:SetSkin(skin)
+
+    local newpos = Vector(-2.425, -2, 0.65)
+    local newang = Angle(0.025, 0.5, 0)
+
+
+    if attached["bo1_alternate_irons"] then
+        newpos = Vector(-2.425, -2, 0.835)
+        newang = Angle(0.025, 0, 0)
+    end
+    if barrel == 1 then
+        newpos = Vector(-2.425, -2, 1.15)
+        newang = Angle(0.025, -0.35, 0)
+        if attached["bo1_alternate_irons"] then
+            newpos = Vector(-2.425, -2, 0.8)
+            newang = Angle(0.025, 0.5, 0)
+        end
+    end
+    if attached["rpk"] then
+        newpos = Vector(-2.065, -2, 0.65)
+        newang = Angle(0.025, 0, 0)
+        if barrel == 1 then
+            newpos = Vector(-2.065, -2, 1)
+            newang = Angle(0.025, -0.45, 0)
+            if attached["bo1_alternate_irons"] then
+                newpos = Vector(-2.065, -2, 0.625)
+                newang = Angle(0.025, 0.5, 0)
+            end
+        end
+        if attached["bo1_alternate_irons"] then
+            newpos = Vector(-2.065, -2, 0.665)
+            newang = Angle(0.025, 0, 0)
+        end
+    end
+
+    self.IronSights = {
+        Pos = newpos,
+        Ang = newang,
+        Magnification = 1.1,
+        CrosshairInSights = true,
+    }
 end
 
 
@@ -351,8 +419,8 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(-5, 0, 1),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_stocks"},
-        Installed = "bo1_stock_medium",
+        Category = {"ultimate_ak_stock"},
+        Installed = "ultimate_ak_stock_type2",
     },
     [4] = {
         PrintName = "Muzzle",
@@ -380,6 +448,7 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"bo1_optic"},
         InstalledElements = {"rail"},
+        ExcludeElements = {"nobacksight"},
         MergeSlots = {7}
     },
     [7] = {
@@ -388,6 +457,23 @@ SWEP.Attachments = {
         Pos = Vector(3.5, 0, 5.025),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_alt_irons"}
+    },
+    [8] = {
+        PrintName = "Furniture",
+        DefaultName = "Irons",
+        Bone = "j_gun",
+        Pos = Vector(-5, 0, 4),
+        Ang = Angle(0, 0, 0),
+        Category = {"ultimate_ak_furniture"},
+    },
+    [9] = {
+        PrintName = "Magazine",
+        DefaultName = "30 RND",
+        Bone = "tag_clip",
+        Pos = Vector(0, 0, -2),
+        Ang = Angle(0, 0, 0),
+        Category = {"ultimate_ak_mag"},
+        ExcludeElements = {"ultimate_ak_receiver"}
     },
 }
 
