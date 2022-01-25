@@ -129,7 +129,7 @@ SWEP.ShootVolume = 125
 SWEP.ShootPitch = 100
 SWEP.ShootPitchVariation = 0
 
-SWEP.ShootSoundFirst = "ARC9_BO1.AK47_Fire"
+SWEP.FirstShootSound = "ARC9_BO1.AK47_Fire"
 SWEP.ShootSound = "ARC9_BO1.AK47_Fire"
 SWEP.ShootSoundSilenced = "ARC9_BO1.M16_Sil"
 SWEP.DistantShootSound = "ARC9_BO1.AK47_Ringoff"

@@ -135,7 +135,7 @@ SWEP.ShootVolume = 125
 SWEP.ShootPitch = 100
 SWEP.ShootPitchVariation = 0
 
-SWEP.ShootSoundFirst = "ARC9_CDE.M16_First"
+SWEP.FirstShootSound = "ARC9_CDE.M16_First"
 SWEP.ShootSound = "ARC9_CDE.M16_Auto"
 SWEP.ShootSoundSilenced = "ARC9_CDE.M16_Sil"
 SWEP.DistantShootSound = "ARC9_CDE.M16_Dist"

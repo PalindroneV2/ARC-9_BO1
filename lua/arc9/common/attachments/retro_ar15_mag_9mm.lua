@@ -30,7 +30,7 @@ ATT.PhysBulletMuzzleVelocity = 25000
 ATT.RPM = 1000
 
 ATT.Ammo = "pistol"
-ATT.ShootSoundFirst = "ARC9_CDE.M16_9mm"
+ATT.FirstShootSound = "ARC9_CDE.M16_9mm"
 ATT.ShootSound = "ARC9_CDE.M16_9mm"
 ATT.ShootSoundSilenced = "ARC9_CDE.M16_9mmSil"
 ATT.DistantShootSound = "ARC9_CDE.M16_9mmDist"
