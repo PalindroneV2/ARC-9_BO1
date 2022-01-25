@@ -67,9 +67,9 @@ SWEP.ReloadTime = 1
 
 SWEP.DrawCrosshair = true
 
-SWEP.Recoil = 1
+SWEP.Recoil = 0.5
 SWEP.RecoilSide = 0.7
-SWEP.RecoilUp = 1.15
+SWEP.RecoilUp = 1
 
 SWEP.UseVisualRecoil = false
 
