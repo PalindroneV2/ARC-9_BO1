@@ -15,9 +15,7 @@ SWEP.Trivia = {
     Mechanism = "Direct Impingement",
     Country = "USA",
     Year = 1959,
-    Games = [[
-        COD4, MW2, BO1, MW3, BO2, AW, BO3, MW19, BOCW
-    ]]
+    Games = [[COD4, MW2, BO1, MW3, BO2, AW, BO3, MW19, BOCW]]
 }
 SWEP.Credits = {
     Author = "Palindrone"
@@ -52,7 +50,7 @@ SWEP.EntityMuzzleVelocity = 10000
 SWEP.PhysBulletMuzzleVelocity = 960 * 39.37
 
 SWEP.BodyDamageMults = {
-    [HITGROUP_HEAD] = 1.4,
+    [HITGROUP_HEAD] = 2,
     [HITGROUP_CHEST] = 1,
     [HITGROUP_LEFTARM] = 1,
     [HITGROUP_RIGHTARM] = 1,
@@ -93,12 +91,12 @@ SWEP.SpreadAddMidAir = 0.05
 
 SWEP.RecoilPatternDrift = 20
 
-SWEP.VisualRecoilUp = 0.1 -- Vertical tilt for visual recoil.
-SWEP.VisualRecoilSide = 0.075 -- Horizontal tilt for visual recoil.
-SWEP.VisualRecoilRoll = 1 -- Roll tilt for visual recoil.
-SWEP.VisualRecoilCenter = Vector(0, 2, 2) -- The "axis" of visual recoil. Where your hand is.
-SWEP.VisualRecoilPunch = 0.1 -- How far back visual recoil moves the gun.
-SWEP.VisualRecoilMultSights = 0.1 -- Visual recoil multiplier while in sights.
+SWEP.VisualRecoilUp = 0.1
+SWEP.VisualRecoilSide = 0.075
+SWEP.VisualRecoilRoll = 1
+SWEP.VisualRecoilCenter = Vector(0, 2, 2)
+SWEP.VisualRecoilPunch = 0.1
+SWEP.VisualRecoilMultSights = 0.1
 
 SWEP.Speed = 0.95
 

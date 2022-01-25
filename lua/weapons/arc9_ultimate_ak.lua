@@ -5,18 +5,14 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "AK-47"
 SWEP.Class = "Assault Rifle"
-SWEP.Description = [[
-    The AK-47 is one of the first modern assault rifles. There is little new to say about the most common weapons platform in the planet. Everyone knows what an AK is.
-]]
+SWEP.Description = [[The AK-47 is one of the first modern assault rifles. There is little new to say about the most common weapons platform in the planet. Everyone knows what an AK is.]]
 SWEP.Trivia = {
     Manufacturer = "Izhmash",
     Calibre = "7.62x39mm M43",
     Mechanism = "Gas Piston",
     Country = "USSR",
     Year = 1947,
-    Games = [[
-        COD4, MW2, BO1, MW3, BO2, AW, BO3, MW19, BOCW
-    ]]
+    Games = [[COD4, MW2, BO1, MW3, BO2, AW, BO3, MW19, BOCW]]
 }
 SWEP.Credits = {
     Author = "Palindrone"
@@ -41,7 +37,7 @@ SWEP.DefaultBodygroups = "00000000000000"
 
 SWEP.DamageMax = 40
 SWEP.DamageMin = 30 -- damage done at maximum range
-SWEP.RangeMax = 1800 * 3
+SWEP.RangeMax = 7200
 SWEP.RangeMin = 1800
 SWEP.Penetration = 8
 SWEP.DamageType = DMG_BULLET
@@ -51,7 +47,7 @@ SWEP.EntityMuzzleVelocity = 10000
 SWEP.PhysBulletMuzzleVelocity = 900 * 39.37 -- IN HU (INCHES)
 
 SWEP.BodyDamageMults = {
-    [HITGROUP_HEAD] = 1.4,
+    [HITGROUP_HEAD] = 2,
     [HITGROUP_CHEST] = 1,
     [HITGROUP_LEFTARM] = 1,
     [HITGROUP_RIGHTARM] = 1,
@@ -70,9 +66,9 @@ SWEP.ReloadTime = 1
 
 SWEP.DrawCrosshair = true
 
-SWEP.Recoil = 0.5
-SWEP.RecoilSide = 0.6
-SWEP.RecoilUp = 0.4
+SWEP.Recoil = 1
+SWEP.RecoilSide = 0.7
+SWEP.RecoilUp = 1.15
 
 SWEP.UseVisualRecoil = false
 
@@ -94,14 +90,14 @@ SWEP.VisualRecoilMultSights = 0.1 -- Visual recoil multiplier while in sights.
 
 SWEP.Speed = 0.95
 
-SWEP.SpeedMultSights = 0.55
-SWEP.SpeedMultShooting = 0.85
+SWEP.SpeedMultSights = 0.8
+SWEP.SpeedMultShooting = 0.75
 SWEP.SpeedMultMelee = 1
 SWEP.SpeedMultCrouch = 1
 SWEP.SpeedMultBlindFire = 1
 
-SWEP.AimDownSightsTime = 0.3 -- How long it takes to go from hip fire to aiming down sights.
-SWEP.SprintToFireTime = 0.3 -- How long it takes to go from sprinting to being able to fire.
+SWEP.AimDownSightsTime = 0.12
+SWEP.SprintToFireTime = 0.15
 
 SWEP.RPM = 600
 SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
@@ -155,12 +151,13 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(-2.765, -2, 0.25),
-    Ang = Angle(0, 0.0125, 0),
+    Pos = Vector(-2.427, -2, 0.835),
+    Ang = Angle(0, 0, 0),
+    Midpoint = { -- Where the gun should be at the middle of it's irons
+        Pos = Vector(0, 15, -4),
+        Ang = Angle(0, 0, -45),
+    },
     Magnification = 1.1,
-    AssociatedSlot = 9,
-    CrosshairInSights = false,
-    SwitchToSound = "", -- sound that plays when switching to this sight
 }
 
 SWEP.HoldtypeHolstered = "passive"
@@ -172,7 +169,7 @@ SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_AR2
 SWEP.AnimDraw = ACT_HL2MP_GESTURE_RANGE_ATTACK_KNIFE
 
 SWEP.ActivePos = Vector(0, 0, -1)
-SWEP.ActiveAng = Angle(0, 0, -5)
+SWEP.ActiveAng = Angle(-2, 1, -3)
 
 SWEP.SprintPos = Vector(0, 0, 0)
 SWEP.SprintAng = Angle(0, 0, 0)
