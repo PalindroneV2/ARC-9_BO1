@@ -18,12 +18,13 @@ ATT.AimDownSightsTimeMult = 0.9
 
 ATT.Attachments = {
     {
-        PrintName = "Optic LP",
-        DefaultCompactName = "LPO",
+        PrintName = "Optic",
+        DefaultCompactName = "Optic",
         Category = "bo1_optic",
         Bone = "j_gun",
         InstalledElements = {"nobacksight"},
         Pos = Vector(16.5, 0, -0.75),
         Ang = Angle(0, 0, 0),
+        ExtraSightDistance = 10,
     },
 }
