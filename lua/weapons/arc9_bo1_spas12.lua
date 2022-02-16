@@ -358,7 +358,7 @@ SWEP.Animations = {
     --         {s = "ArcCW_BO1.SPAS_Fwd", t = 65 / 30},
     --     },
     -- },
-    ["sgreload_start"] = {
+    ["reload_start"] = {
         Source = "reload_in",
         Time = 54 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
@@ -371,7 +371,7 @@ SWEP.Animations = {
             {s = "ArcCW_BO1.MK_Shell", t = 40 / 30},
         },
     },
-    ["sgreload_insert"] = {
+    ["reload_insert"] = {
         Source = "reload_loop",
         Time = 26 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
@@ -384,7 +384,7 @@ SWEP.Animations = {
         },
         MinProgress = 15 / 30,
     },
-    ["sgreload_insert_pap"] = {
+    ["reload_insert_pap"] = {
         Source = "reload_loop",
         Time = 26 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
@@ -397,7 +397,7 @@ SWEP.Animations = {
         },
         MinProgress = 15 / 30,
     },
-    ["sgreload_finish"] = {
+    ["reload_finish"] = {
         Source = "reload_out",
         Time = 26 / 30,
         LHIK = true,
