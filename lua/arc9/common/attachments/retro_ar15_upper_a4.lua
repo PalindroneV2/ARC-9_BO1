@@ -14,7 +14,7 @@ ATT.Attachments = {
         PrintName = "Optic",
         Category = {"retro_ar15_iron", "bo1_optic"},
         Bone = "j_gun",
-        Pos = Vector(-0.5, 0, 0.6),
+        Pos = Vector(1, 0, 0.6),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(1.5, 0, 0),
     }

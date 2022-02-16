@@ -83,7 +83,7 @@ SWEP.RecoilResetTime = 0.01 -- How long the gun must go before the recoil patter
 SWEP.RecoilAutoControl = 0.5
 SWEP.RecoilKick = 2
 
-SWEP.Spread = 0.0009
+SWEP.Spread = 0.03
 SWEP.SpreadAddRecoil = 0.0015
 
 SWEP.UsePelletSpread = true -- Multiple bullets fired at once clump up, like for a shotgun. Spread affects which direction they get fired, not their spread relative to one another.
@@ -153,7 +153,7 @@ SWEP.ShellScale = 1.5
 
 SWEP.MuzzleEffectQCA = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectQCA = 2 -- which attachment to put the case effect on
-SWEP.ProceduralViewQCA = 4
+SWEP.ProceduralViewQCA = nil
 SWEP.CamQCA = 4
 
 SWEP.BulletBones = {
@@ -231,18 +231,18 @@ SWEP.AttachmentElements = {
 
 SWEP.Hook_ModifyBodygroups = function(self, data)
 
-    local vm = data.model
-    local attached = data.elements
+    -- local vm = data.model
+    -- local attached = data.elements
 
 end
 
 
 SWEP.Hook_TranslateAnimation = function (self, anim)
-    local attached = self:GetElements()
+    -- local attached = self:GetElements()
 
-    local suffix = ""
+    -- local suffix = ""
 
-    return anim .. suffix
+    -- return anim .. suffix
 end
 
 SWEP.Attachments = {
@@ -358,54 +358,120 @@ SWEP.Animations = {
     --         {s = "ArcCW_BO1.SPAS_Fwd", t = 65 / 30},
     --     },
     -- },
-    ["sgreload_start"] = {
+    ["reload_start"] = {
         Source = "reload_in",
         Time = 54 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0,
         RestoreAmmo = 1,
         MinProgress = 40 / 30,
         EventTable = {
             {s = "ArcCW_BO1.MK_Shell", t = 40 / 30},
         },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.95,
+                lhik = 0,
+                rhik = 1
+            },
+        },
     },
-    ["sgreload_insert"] = {
+    ["reload_insert"] = {
         Source = "reload_loop",
         Time = 26 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         TPAnimStartTime = 0.3,
-        LHIK = true,
-        LHIKIn = 0,
-        LHIKOut = 0,
         EventTable = {
             {s = "ArcCW_BO1.MK_Shell", t = 10 / 30},
         },
         MinProgress = 15 / 30,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.95,
+                lhik = 0,
+                rhik = 1
+            },
+        },
     },
-    ["sgreload_insert_pap"] = {
+    ["reload_insert_pap"] = {
         Source = "reload_loop",
         Time = 26 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         TPAnimStartTime = 0.3,
-        LHIK = true,
-        LHIKIn = 0,
-        LHIKOut = 0,
         EventTable = {
             {s = "ArcCW_BO1.MK_Shell", t = 10 / 30},
         },
         MinProgress = 15 / 30,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.95,
+                lhik = 0,
+                rhik = 1
+            },
+        },
     },
-    ["sgreload_finish"] = {
+    ["reload_finish"] = {
         Source = "reload_out",
         Time = 26 / 30,
-        LHIK = true,
-        LHIKIn = 0,
-        LHIKOut = 1,
         EventTable = {
             {s = "ArcCW_BO1.SPAS_Back", t = 8 / 30},
             {s = "ArcCW_BO1.SPAS_Fwd", t = 12 / 30},
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.5,
+                lhik = 1,
+                rhik = 1
+            },
         },
     },
     ["enter_sprint"] = {
