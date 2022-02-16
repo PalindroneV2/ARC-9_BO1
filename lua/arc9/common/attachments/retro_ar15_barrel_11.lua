@@ -1,5 +1,5 @@
 ATT.PrintName = [[11.5" XM177E2 Barrel]]
-ATT.CompactName = [[11.5"]]
+ATT.CompactName = [[11.5" SOG]]
 ATT.Icon = Material("entities/bo1_atts/barrel/barrel.png")
 ATT.Description = [[Short carbine-length barrel that belonged to the XM177E2, an early M16 carbine made for the MACV-SOG.
 
@@ -15,6 +15,7 @@ ATT.ActivateElements = {"carbine"}
 ATT.Attachments = {
     {
         PrintName = "Handguard",
+        DefaultCompactName = "M4",
         DefaultIcon = Material("materials/entities/acwatt_bo2_longbarrel.png"),
         Category = "retro_ar15_handguard_11",
         Bone = "j_gun",

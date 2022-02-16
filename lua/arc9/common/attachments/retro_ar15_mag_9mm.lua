@@ -34,6 +34,7 @@ ATT.FirstShootSound = "ARC9_CDE.M16_9mm"
 ATT.ShootSound = "ARC9_CDE.M16_9mm"
 ATT.ShootSoundSilenced = "ARC9_CDE.M16_9mmSil"
 ATT.DistantShootSound = "ARC9_CDE.M16_9mmDist"
+ATT.MuzzleParticle = "muzzleflash_smg"
 
 ATT.Trivia = {
     Manufacturer = "Colt",

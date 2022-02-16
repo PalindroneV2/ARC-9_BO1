@@ -91,14 +91,17 @@ SWEP.SpreadAddMidAir = 0.05
 
 SWEP.RecoilPatternDrift = 20
 
-SWEP.VisualRecoilUp = 0.1
-SWEP.VisualRecoilSide = 0.075
-SWEP.VisualRecoilRoll = 1
-SWEP.VisualRecoilCenter = Vector(0, 2, 2)
-SWEP.VisualRecoilPunch = 0.1
-SWEP.VisualRecoilMultSights = 0.1
+SWEP.VisualRecoilUp = 0
+SWEP.VisualRecoilSide = 0
+SWEP.VisualRecoilRoll = 0
+SWEP.VisualRecoilCenter = Vector(0, 0, 0)
+SWEP.VisualRecoilPunch = 0
+SWEP.VisualRecoilMultSights = 0
 
 SWEP.Speed = 0.95
+
+SWEP.ShootWhileSprint = true
+SWEP.ReloadInSights = false
 
 SWEP.SpeedMultSights = 0.8
 SWEP.SpeedMultShooting = 0.75
@@ -186,8 +189,8 @@ SWEP.SprintAng = Angle(0, 0, 0)
 SWEP.CustomizePos = Vector(12.5, 40, 4)
 SWEP.CustomizeAng = Angle(90, 0, 0)
 
-SWEP.HolsterPos = Vector(3, 0, 0)
-SWEP.HolsterAng = Angle(-7.036, 30.016, 0)
+SWEP.HolsterPos = Vector(0, 0, 0)
+SWEP.HolsterAng = Angle(0, 0, 0)
 
 SWEP.BarrelLength = 25
 
@@ -563,7 +566,8 @@ SWEP.Attachments = {
     },
     [3] = {
         PrintName = "Barrel",
-        DefaultCompactName = "20\"",
+        DefaultCompactName = "20\" OG",
+        DefaultIcon = Material("materials/entities/acwatt_bo2_longbarrel.png"),
         Bone = "j_gun",
         Pos = Vector(7, 0, 1.75),
         Ang = Angle(0, 0, 0),
@@ -596,6 +600,7 @@ SWEP.Attachments = {
     [7] = {
         PrintName = "Handguard",
         DefaultCompactName = "A1",
+        DefaultIcon = Material("materials/entities/acwatt_bo2_longbarrel.png"),
         Bone = "j_gun",
         Pos = Vector(7, 0, 3.75),
         Ang = Angle(0, 0, 0),

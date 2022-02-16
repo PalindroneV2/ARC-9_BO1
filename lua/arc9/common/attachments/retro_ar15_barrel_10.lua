@@ -1,5 +1,5 @@
 ATT.PrintName = [[10.5" Commando Barrel]]
-ATT.CompactName = [[10.5"]]
+ATT.CompactName = [[10.5" CAR-15]]
 ATT.Icon = Material("entities/bo1_atts/barrel/barrel.png")
 ATT.Description = [[
     Even shorter Carbine-length 10.5" Barrel. It's use mainly by special forces groups earned it the nickname "Commando". Attached by default with a standard round, ribbed handguard.
@@ -16,6 +16,7 @@ ATT.ActivateElements = {"carbine","barrel_10"}
 ATT.Attachments = {
     {
         PrintName = "Handguard",
+        DefaultCompactName = "M4",
         DefaultIcon = Material("materials/entities/acwatt_bo2_longbarrel.png"),
         Category = "retro_ar15_handguard_10",
         Bone = "j_gun",

@@ -1,5 +1,5 @@
 ATT.PrintName = "A4 Flat Top Upper Receiver"
-ATT.CompactName = "A4 Top"
+ATT.CompactName = "A4 TOP"
 ATT.Icon = Material("entities/bo1_atts/other/select_fire.png")
 ATT.Description = [[A4-Type AR-15 flat-top upper reciever with a detachable carry handle.
 Allows for attachment of many kinds of optics and alternate iron sights.]]
