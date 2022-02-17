@@ -140,8 +140,8 @@ SWEP.ShootVolume = 125
 SWEP.ShootPitch = 100
 SWEP.ShootPitchVariation = 0
 
-SWEP.ShootSound = "ArcCW_BO1.Ithaca_Fire"
-SWEP.ShootSoundSilenced = "ArcCW_BO1.SPAS_Sil"
+SWEP.ShootSound = "ARC9_BO1.Ithaca_Fire"
+SWEP.ShootSoundSilenced = "ARC9_BO1.SPAS_Sil"
 SWEP.DistantShootSound = {"weapons/arccw/bo1_generic_shotgun/ringoff_f.wav", "weapons/arccw/bo1_generic_shotgun/ringoff_r.wav"}
 
 --SWEP.MuzzleEffect = "muzzleflash_4"
@@ -208,12 +208,12 @@ SWEP.AttachmentElements = {
     },
     ["stock_h"] = {
         Bodygroups = {
-            {1,3}
+            {2,3}
         },
     },
     ["mount"] = {
         Bodygroups = {
-            {ind = 1, bg = 1},
+            {1,1},
         },
         Elements = {
             {
@@ -314,8 +314,8 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKOut = 0.2,
         EventTable = {
-            {s = "ArcCW_BO1.SPAS_Back", t = 17 / 30},
-            {s = "ArcCW_BO1.SPAS_Fwd", t = 23 / 30}
+            {s = "ARC9_BO1.SPAS_Back", t = 17 / 30},
+            {s = "ARC9_BO1.SPAS_Fwd", t = 23 / 30}
         },
     },
     ["fire"] = {
@@ -340,9 +340,9 @@ SWEP.Animations = {
     --     LHIKIn = 0,
     --     LHIKOut = 0.4,
     --     EventTable = {
-    --         {s = "ArcCW_BO1.MK_Shell", t = 40 / 30},
-    --         {s = "ArcCW_BO1.SPAS_Back", t = 61 / 30},
-    --         {s = "ArcCW_BO1.SPAS_Fwd", t = 65 / 30},
+    --         {s = "ARC9_BO1.MK_Shell", t = 40 / 30},
+    --         {s = "ARC9_BO1.SPAS_Back", t = 61 / 30},
+    --         {s = "ARC9_BO1.SPAS_Fwd", t = 65 / 30},
     --     },
     -- },
     -- ["reload_empty"] = {
@@ -353,9 +353,9 @@ SWEP.Animations = {
     --     LHIKIn = 0,
     --     LHIKOut = 0.4,
     --     EventTable = {
-    --         {s = "ArcCW_BO1.MK_Shell", t = 40 / 30},
-    --         {s = "ArcCW_BO1.SPAS_Back", t = 61 / 30},
-    --         {s = "ArcCW_BO1.SPAS_Fwd", t = 65 / 30},
+    --         {s = "ARC9_BO1.MK_Shell", t = 40 / 30},
+    --         {s = "ARC9_BO1.SPAS_Back", t = 61 / 30},
+    --         {s = "ARC9_BO1.SPAS_Fwd", t = 65 / 30},
     --     },
     -- },
     ["reload_start"] = {
@@ -365,7 +365,7 @@ SWEP.Animations = {
         RestoreAmmo = 1,
         MinProgress = 40 / 30,
         EventTable = {
-            {s = "ArcCW_BO1.MK_Shell", t = 40 / 30},
+            {s = "ARC9_BO1.MK_Shell", t = 40 / 30},
         },
         IKTimeLine = {
             {
@@ -396,7 +396,7 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         TPAnimStartTime = 0.3,
         EventTable = {
-            {s = "ArcCW_BO1.MK_Shell", t = 10 / 30},
+            {s = "ARC9_BO1.MK_Shell", t = 10 / 30},
         },
         MinProgress = 15 / 30,
         IKTimeLine = {
@@ -428,7 +428,7 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         TPAnimStartTime = 0.3,
         EventTable = {
-            {s = "ArcCW_BO1.MK_Shell", t = 10 / 30},
+            {s = "ARC9_BO1.MK_Shell", t = 10 / 30},
         },
         MinProgress = 15 / 30,
         IKTimeLine = {
@@ -458,8 +458,8 @@ SWEP.Animations = {
         Source = "reload_out",
         Time = 26 / 30,
         EventTable = {
-            {s = "ArcCW_BO1.SPAS_Back", t = 8 / 30},
-            {s = "ArcCW_BO1.SPAS_Fwd", t = 12 / 30},
+            {s = "ARC9_BO1.SPAS_Back", t = 8 / 30},
+            {s = "ARC9_BO1.SPAS_Fwd", t = 12 / 30},
         },
         IKTimeLine = {
             {
@@ -476,7 +476,7 @@ SWEP.Animations = {
     },
     ["enter_sprint"] = {
         Source = "sprint_in",
-        Time = 10 / 30
+        Time = 1
     },
     ["idle_sprint"] = {
         Source = "sprint_loop",
@@ -484,6 +484,6 @@ SWEP.Animations = {
     },
     ["exit_sprint"] = {
         Source = "sprint_out",
-        Time = 10 / 30
+        Time = 1
     },
 }
