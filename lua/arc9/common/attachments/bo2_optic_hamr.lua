@@ -30,10 +30,11 @@ ATT.Sights = {
         IgnoreExtra = true
     },
     {
-        Pos = Vector(0, 8, -2.125),
+        Pos = Vector(0, 8, -2.175),
         Ang = Angle(0, 0, 0),
         Magnification = 1,
-        IgnoreExtra = true
+        IgnoreExtra = true,
+        Disassociate = true
     },
 }
 
