@@ -71,6 +71,12 @@ SWEP.Recoil = 0.5
 SWEP.RecoilSide = 0.7
 SWEP.RecoilUp = 1
 
+SWEP.RecoilRandomUp = 0.6
+SWEP.RecoilRandomSide = 0.3
+
+SWEP.RecoilDissipationRate = 40 -- How much recoil dissipates per second.
+SWEP.RecoilResetTime = 0.01 -- How long the gun must go before the recoil pattern starts to reset.
+
 SWEP.UseVisualRecoil = false
 
 SWEP.Spread = 0.00085 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.

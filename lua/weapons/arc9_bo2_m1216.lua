@@ -71,11 +71,11 @@ SWEP.ReloadTime = 1
 SWEP.DrawCrosshair = true
 
 SWEP.Recoil = 1
-SWEP.RecoilSide = 0.7
-SWEP.RecoilUp = 1
+SWEP.RecoilSide = 0.75
+SWEP.RecoilUp = 2
 
-SWEP.RecoilRandomUp = 0.2
-SWEP.RecoilRandomSide = 0.6
+SWEP.RecoilRandomUp = 0.6
+SWEP.RecoilRandomSide = 0.4
 
 SWEP.RecoilDissipationRate = 40 -- How much recoil dissipates per second.
 SWEP.RecoilResetTime = 0.01 -- How long the gun must go before the recoil pattern starts to reset.

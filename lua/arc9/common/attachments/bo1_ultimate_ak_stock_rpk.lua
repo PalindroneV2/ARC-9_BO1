@@ -13,7 +13,10 @@ ATT.Free = false
 ATT.Category = {"bo1_ultimate_ak_stock"}
 ATT.ActivateElements = {"stock_h", "stock_rpk"}
 
-ATT.RecoilMult = 0.5
+ATT.RecoilMult = 0.4
+ATT.RecoilUpMult = 0.5
+ATT.RecoilRandomSideMult = 0.5
+ATT.RecoilAutoControlMult = 2
 ATT.SpeedMult = 0.95
 ATT.AimDownSightsTimeMult = 1.2
 ATT.SprintToFireTimeMult = 1.2

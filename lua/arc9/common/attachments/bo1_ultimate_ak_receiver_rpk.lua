@@ -25,6 +25,7 @@ ATT.RangeMinMult = 0.9
 ATT.AimDownSightsTimeMult = 1.1
 ATT.SprintToFireTimeMult = 1.1
 ATT.RecoilMult = 0.75
+ATT.RecoilUpMult = 0.75
 ATT.PenetrationMult = 0.8
 ATT.FirstShootSound = "ARC9_BO1.RPK_Fire"
 ATT.ShootSound = "ARC9_BO1.RPK_Fire"

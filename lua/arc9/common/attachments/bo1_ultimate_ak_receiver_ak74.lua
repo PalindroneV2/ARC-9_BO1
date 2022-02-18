@@ -22,6 +22,7 @@ ATT.RangeMinMult = 0.9
 ATT.AimDownSightsTimeMult = 0.975
 ATT.SprintToFireTimeMult = 0.975
 ATT.RecoilMult = 0.8
+ATT.RecoilUpMult = 0.8
 ATT.PenetrationMult = 0.8
 ATT.FirstShootSound = "ARC9_BO1.AK74u_Fire"
 ATT.ShootSound = "ARC9_BO1.AK74u_Fire"

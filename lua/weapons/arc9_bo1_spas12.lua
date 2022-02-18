@@ -71,11 +71,11 @@ SWEP.ReloadTime = 1
 SWEP.DrawCrosshair = true
 
 SWEP.Recoil = 1
-SWEP.RecoilSide = 0.7
-SWEP.RecoilUp = 1
+SWEP.RecoilSide = 0.75
+SWEP.RecoilUp = 2
 
-SWEP.RecoilRandomUp = 0.2
-SWEP.RecoilRandomSide = 0.6
+SWEP.RecoilRandomUp = 0.5
+SWEP.RecoilRandomSide = 0.5
 
 SWEP.RecoilDissipationRate = 40 -- How much recoil dissipates per second.
 SWEP.RecoilResetTime = 0.01 -- How long the gun must go before the recoil pattern starts to reset.
@@ -258,7 +258,7 @@ SWEP.Attachments = {
     [2] = {
         PrintName = "Stock",
         Bone = "j_gun",
-        Pos = Vector(-3, 0, 2.65),
+        Pos = Vector(-7.5, 0, 0),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_stock_lm"},
         --Installed = "bo1_stock_light",
@@ -282,9 +282,17 @@ SWEP.Attachments = {
         PrintName = "Firing Group",
         DefaultCompactName = "SEMI",
         Bone = "j_gun",
-        Pos = Vector(0.15, 0, 1.1),
+        Pos = Vector(-3.5, 0, -2),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_fcg"},
+    },
+    [6] = {
+        PrintName = "Perk-a-Cola",
+        DefaultCompactName = "PERK",
+        Bone = "j_gun",
+        Pos = Vector(-10, 0, -10),
+        Ang = Angle(0, 0, 0),
+        Category = "bo1_perkacola",
     },
 }
 
@@ -296,26 +304,49 @@ SWEP.Animations = {
     ["draw"] = {
         Source = "draw",
         Time = 1,
-        LHIK = true,
-        LHIKIn = 0.25,
-        LHIKOut = 0.25,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.8,
+                lhik = 1,
+                rhik = 1
+            },
+        },
     },
     ["holster"] = {
         Source = "holster",
         Time = 1,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.25,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1
+            },
+            {
+                t = 0.6,
+                lhik = 0,
+                rhik = 1
+            },
+        },
     },
     ["ready"] = {
         Source = "first_draw",
-        Time = 45 / 30,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.2,
-        EventTable = {
-            {s = "ARC9_BO1.SPAS_Back", t = 17 / 30},
-            {s = "ARC9_BO1.SPAS_Fwd", t = 23 / 30}
+        Time = 1.28,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.5,
+                lhik = 1,
+                rhik = 1
+            },
         },
     },
     ["fire"] = {

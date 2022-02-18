@@ -25,6 +25,9 @@ ATT.ToggleStats = {
 */
 
 ATT.RecoilMult = 0.75
+ATT.RecoilUpMult = 0.8
+ATT.RecoilRandomSideMult = 0.8
+ATT.RecoilAutoControlMult = 1.25
 ATT.AimDownSightsTimeMult = 0.97
 ATT.SprintToFireTimeMult = 0.97
 ATT.SpeedMultSightsMult = 1.025
