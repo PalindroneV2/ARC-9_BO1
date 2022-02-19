@@ -334,6 +334,8 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
     return anim .. final
 end
 
+--TEST
+
 SWEP.Attachments = {
     [1] = {
         PrintName = "Optic",
