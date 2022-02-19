@@ -17,7 +17,7 @@ ATT.Category = {"bo1_muzzle_pistol"}
 ATT.MuzzleDevice = true
 ATT.Silencer = true
 ATT.MuzzleParticle = "muzzleflash_suppressed"
---ATT.DistantShootSound = ""
+ATT.DistantShootSoundOverride = ""
 
 ATT.ShootVolumeMult = 4 / 5
 ATT.ShootPitchMult = 1.1

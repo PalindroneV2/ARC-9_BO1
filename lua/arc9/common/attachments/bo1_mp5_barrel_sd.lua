@@ -18,4 +18,12 @@ ATT.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"bo1_muzzle", "bo1_mp5_sd"},
     },
+    {
+        PrintName = "Underbarrel",
+        Bone = "j_gun",
+        Scale = Vector(1,1,1),
+        Pos = Vector(0, 0.1, -3),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_rail_underbarrel"},
+    },
 }

@@ -1,6 +1,6 @@
 SWEP.Base = "arc9_base"
 SWEP.Spawnable = true -- this obviously has to be set to true
-SWEP.Category = "ARC-9 - COD Extras" -- edit this if you like
+SWEP.Category = "ARC-9 - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "HK MP5A3"
@@ -67,6 +67,7 @@ SWEP.ClipSize = 30 -- DefaultClip is automatically set.
 SWEP.ReloadTime = 1
 
 SWEP.DrawCrosshair = true
+SWEP.CanBlindFire = false
 
 SWEP.Recoil = 0.4
 SWEP.RecoilSide = 0.7
@@ -197,6 +198,11 @@ SWEP.BarrelLength = 25
 SWEP.ExtraSightDist = 5
 
 SWEP.AttachmentElements = {
+    ["bo1_fastmag"] = {
+        Bodygroups = {
+            {1,1}
+        },
+    },
     ["stock_l"] = {
         Bodygroups = {
             {4,1}
@@ -257,6 +263,12 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local newpos = Vector(-3.19, 2, 1)
     local newang = Angle(0.025, 0, 0)
 
+    if attached["25rnd"] then
+        vm:SetBodygroup(1,2)
+    elseif attached["45rnd"] then
+        vm:SetBodygroup(1,3)
+    end
+
     if attached["bo1_mp5_barrel_kurz"] then
         if attached["bo1_optic"] then
             vm:SetBodygroup(3,3)
@@ -280,7 +292,7 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
     local attached = self:GetElements()
 
     local stock = attached["bo1_stock_medium"]
-    local dual = attached["bo1_mag_fast"]
+    local dual = attached["bo1_fastmag"]
 
     local hand = 0
     if attached["bo1_mp5_barrel_sd"] or attached["bo1_mp5_barrel_sdhand"] or attached["bo1_mp5_barrel_ris"] then hand = 1
@@ -356,6 +368,15 @@ SWEP.Attachments = {
         Category = {"bo1_mp5_barrel"},
     },
     [5] = {
+        PrintName = "Underbarrel",
+        Bone = "j_gun",
+        Scale = Vector(1,1,1),
+        Pos = Vector(6, 0.1, 0.5),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_rail_underbarrel"},
+        ExcludeElements = {"mp5k", "mp5_ris", "mp5sd"},
+    },
+    [6] = {
         PrintName = "Firing Group",
         DefaultCompactName = "S-1-3-F",
         Bone = "j_gun",
@@ -363,13 +384,31 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"bo1_fcg"},
     },
-    [6] = {
+    [7] = {
         PrintName = "Perk-a-Cola",
         DefaultCompactName = "PERK",
         Bone = "j_gun",
         Pos = Vector(-10, 0, -10),
         Ang = Angle(0, 0, 0),
         Category = "bo1_perkacola",
+    },
+    [8] = {
+        PrintName = "Magazine",
+        DefaultCompactName = "30 RND",
+        Bone = "tag_clip",
+        Pos = Vector(0, 0, 0),
+        Ang = Angle(0, 0, 0),
+        Category = "bo1_fastmag",
+        MergeSlots = {9},
+        ExcludeElements = {"mp5k"},
+    },
+    [9] = {
+        Hidden = true,
+        Bone = "tag_clip",
+        Pos = Vector(0, 0, 0),
+        Ang = Angle(0, 0, 0),
+        Category = "bo1_mp5_mag",
+        ExcludeElements = {"mp5k"},
     },
 }
 
@@ -381,25 +420,35 @@ SWEP.Animations = {
     ["draw"] = {
         Source = "draw",
         Time = 30 / 30,
-        LHIK = true,
-        LHIKIn = 0.25,
-        LHIKOut = 0.25,
     },
     ["holster"] = {
         Source = "holster",
         Time = 30 / 30,
-        LHIK = true,
-        LHIKIn = 0.25,
-        LHIKOut = 0.25,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1
+            },
+            {
+                t = 0.5,
+                lhik = 0,
+                rhik = 1
+            },
+        },
     },
     ["draw_stock"] = {
         Source = "first_draw_stock",
         Time = 15 / 30,
-        LHIK = true,
-        LHIKIn = 0,
-        LHIKOut = 0.25,
         EventTable = {
             {s = "ARC9_BO1.MP5_BoltFwd", t = 15 / 30},
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1
+            },
         },
     },
     ["ready"] = {
@@ -436,30 +485,64 @@ SWEP.Animations = {
         Source = "reload",
         Time = 77 / 35,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Framerate = 30,
-        Checkpoints = {28, 38, 69},
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
         EventTable = {
             {s = "ARC9_BO1.MP5_MagOut", t = 16 / 35},
             {s = "ARC9_BO1.MP5_MagIn", t = 47 / 35}
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1
+            },
+            {
+                t = 0.15,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.95,
+                lhik = 1,
+                rhik = 1
+            },
         },
     },
     ["reload_empty"] = {
         Source = "reload_empty",
         Time = 93 / 35,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Framerate = 30,
-        Checkpoints = {28, 38, 69},
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
         EventTable = {
             {s = "ARC9_BO1.MP5_MagOut", t = 16 / 35},
             {s = "ARC9_BO1.MP5_MagIn", t = 47 / 35},
             {s = "ARC9_BO1.MP5_BoltBack", t = 67 / 35},
             {s = "ARC9_BO1.MP5_BoltFwd", t = 73 / 35},
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1
+            },
+            {
+                t = 0.15,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.95,
+                lhik = 1,
+                rhik = 1
+            },
         },
     },
     ["enter_sprint"] = {
@@ -519,30 +602,64 @@ SWEP.Animations = {
         Source = "reload_sil",
         Time = 77 / 35,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Framerate = 30,
-        Checkpoints = {28, 38, 69},
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
         EventTable = {
             {s = "ARC9_BO1.MP5_MagOut", t = 16 / 35},
             {s = "ARC9_BO1.MP5_MagIn", t = 47 / 35}
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1
+            },
+            {
+                t = 0.15,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.95,
+                lhik = 1,
+                rhik = 1
+            },
         },
     },
     ["reload_empty_sil"] = {
         Source = "reload_empty_sil",
         Time = 93 / 35,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Framerate = 30,
-        Checkpoints = {28, 38, 69},
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
         EventTable = {
             {s = "ARC9_BO1.MP5_MagOut", t = 16 / 35},
             {s = "ARC9_BO1.MP5_MagIn", t = 47 / 35},
             {s = "ARC9_BO1.MP5_BoltBack", t = 67 / 35},
             {s = "ARC9_BO1.MP5_BoltFwd", t = 73 / 35},
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1
+            },
+            {
+                t = 0.15,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.95,
+                lhik = 1,
+                rhik = 1
+            },
         },
     },
     ["enter_sprint_sil"] = {
@@ -603,30 +720,64 @@ SWEP.Animations = {
         Source = "reload_sil",
         Time = 77 / 35,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Framerate = 30,
-        Checkpoints = {28, 38, 69},
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
         EventTable = {
             {s = "ARC9_BO1.MP5_MagOut", t = 16 / 35},
             {s = "ARC9_BO1.MP5_MagIn", t = 47 / 35}
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1
+            },
+            {
+                t = 0.15,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.95,
+                lhik = 1,
+                rhik = 1
+            },
         },
     },
     ["reload_empty_stock_sil"] = {
         Source = "reload_empty_sil",
         Time = 93 / 35,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Framerate = 30,
-        Checkpoints = {28, 38, 69},
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
         EventTable = {
             {s = "ARC9_BO1.MP5_MagOut", t = 16 / 35},
             {s = "ARC9_BO1.MP5_MagIn", t = 47 / 35},
             {s = "ARC9_BO1.MP5_BoltBack", t = 67 / 35},
             {s = "ARC9_BO1.MP5_BoltFwd", t = 73 / 35},
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1
+            },
+            {
+                t = 0.15,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.95,
+                lhik = 1,
+                rhik = 1
+            },
         },
     },
     ["enter_sprint_stock_sil"] = {
@@ -648,30 +799,64 @@ SWEP.Animations = {
         Source = "reload_fast",
         Time = 70 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Framerate = 30,
-        Checkpoints = {28, 38, 69},
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
         EventTable = {
             {s = "ARC9_BO1.MP5_MagOut", t = 16 / 30},
             {s = "ARC9_BO1.MP5_MagIn", t = 36 / 30}
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1
+            },
+            {
+                t = 0.15,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.7,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.8,
+                lhik = 1,
+                rhik = 1
+            },
         },
     },
     ["reload_empty_quick"] = {
         Source = "reload_empty_fast",
         Time = 91 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Framerate = 30,
-        Checkpoints = {28, 38, 69},
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
         EventTable = {
             {s = "ARC9_BO1.MP5_MagOut", t = 16 / 35},
             {s = "ARC9_BO1.MP5_MagIn", t = 36 / 35},
             {s = "ARC9_BO1.MP5_BoltBack", t = 60 / 35},
             {s = "ARC9_BO1.MP5_BoltFwd", t = 69 / 35},
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1
+            },
+            {
+                t = 0.15,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.95,
+                lhik = 1,
+                rhik = 1
+            },
         },
     },
 
@@ -703,30 +888,64 @@ SWEP.Animations = {
         Source = "reload_fast",
         Time = 70 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Framerate = 30,
-        Checkpoints = {28, 38, 69},
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
         EventTable = {
             {s = "ARC9_BO1.MP5_MagOut", t = 16 / 30},
             {s = "ARC9_BO1.MP5_MagIn", t = 36 / 30}
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1
+            },
+            {
+                t = 0.15,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.7,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.8,
+                lhik = 1,
+                rhik = 1
+            },
         },
     },
     ["reload_empty_stock_quick"] = {
         Source = "reload_empty_fast",
         Time = 91 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Framerate = 30,
-        Checkpoints = {28, 38, 69},
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
         EventTable = {
             {s = "ARC9_BO1.MP5_MagOut", t = 16 / 35},
             {s = "ARC9_BO1.MP5_MagIn", t = 36 / 35},
             {s = "ARC9_BO1.MP5_BoltBack", t = 60 / 35},
             {s = "ARC9_BO1.MP5_BoltFwd", t = 69 / 35},
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1
+            },
+            {
+                t = 0.15,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.95,
+                lhik = 1,
+                rhik = 1
+            },
         },
     },
 
@@ -777,30 +996,64 @@ SWEP.Animations = {
         Source = "reload_sil_fast",
         Time = 70 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Framerate = 30,
-        Checkpoints = {28, 38, 69},
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
         EventTable = {
             {s = "ARC9_BO1.MP5_MagOut", t = 16 / 35},
             {s = "ARC9_BO1.MP5_MagIn", t = 36 / 35},
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1
+            },
+            {
+                t = 0.15,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.95,
+                lhik = 1,
+                rhik = 1
+            },
         },
     },
     ["reload_empty_sil_quick"] = {
         Source = "reload_empty_sil_fast",
         Time = 91 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Framerate = 30,
-        Checkpoints = {28, 38, 69},
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
         EventTable = {
             {s = "ARC9_BO1.MP5_MagOut", t = 16 / 35},
             {s = "ARC9_BO1.MP5_MagIn", t = 36 / 35},
             {s = "ARC9_BO1.MP5_BoltBack", t = 60 / 35},
             {s = "ARC9_BO1.MP5_BoltFwd", t = 69 / 35},
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1
+            },
+            {
+                t = 0.15,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.95,
+                lhik = 1,
+                rhik = 1
+            },
         },
     },
     ["enter_sprint_sil_quick"] = {
@@ -844,9 +1097,6 @@ SWEP.Animations = {
     ["ready_stock_sil_quick"] = {
         Source = "first_draw_sil_stock",
         Time = 1.5,
-        LHIK = true,
-        LHIKIn = 0.25,
-        LHIKOut = 0.25,
         EventTable = {
             {s = "ARC9_BO1.MP5_BoltFwd", t = 19 / 30}
         },
@@ -865,30 +1115,64 @@ SWEP.Animations = {
         Source = "reload_sil_fast",
         Time = 70 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Framerate = 30,
-        Checkpoints = {28, 38, 69},
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
         EventTable = {
             {s = "ARC9_BO1.MP5_MagOut", t = 16 / 35},
             {s = "ARC9_BO1.MP5_MagIn", t = 36 / 35},
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1
+            },
+            {
+                t = 0.15,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.7,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.8,
+                lhik = 1,
+                rhik = 1
+            },
         },
     },
     ["reload_empty_stock_sil_quick"] = {
         Source = "reload_empty_sil_fast",
         Time = 91 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Framerate = 30,
-        Checkpoints = {28, 38, 69},
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
         EventTable = {
             {s = "ARC9_BO1.MP5_MagOut", t = 16 / 35},
             {s = "ARC9_BO1.MP5_MagIn", t = 36 / 35},
             {s = "ARC9_BO1.MP5_BoltBack", t = 60 / 35},
             {s = "ARC9_BO1.MP5_BoltFwd", t = 69 / 35},
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1
+            },
+            {
+                t = 0.15,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.95,
+                lhik = 1,
+                rhik = 1
+            },
         },
     },
     ["enter_sprint_stock_sil_quick"] = {
@@ -967,21 +1251,61 @@ SWEP.Animations = {
             {s = "ARC9_BO1.MP5_MagOut", t = 16 / 35},
             {s = "ARC9_BO1.MP5_MagIn", t = 47 / 35}
         },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1
+            },
+            {
+                t = 0.15,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.95,
+                lhik = 1,
+                rhik = 1
+            },
+        },
     },
     ["reload_empty_grip"] = {
         Source = "reload_empty_grip",
         Time = 93 / 35,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Framerate = 30,
-        Checkpoints = {28, 38, 69},
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
         EventTable = {
             {s = "ARC9_BO1.MP5_BoltBack", t = 8 / 35},
             {s = "ARC9_BO1.MP5_MagOut", t = 28 / 35},
             {s = "ARC9_BO1.MP5_MagIn", t = 61 / 35},
             {s = "ARC9_BO1.MP5_BoltFwd", t = 72 / 35},
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1
+            },
+            {
+                t = 0.15,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.95,
+                lhik = 1,
+                rhik = 1
+            },
         },
     },
     ["enter_sprint_grip"] = {
@@ -1041,11 +1365,6 @@ SWEP.Animations = {
         Source = "reload_gl",
         Time = 77 / 35,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Framerate = 30,
-        Checkpoints = {28, 38, 69},
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
         EventTable = {
             {s = "ARC9_BO1.MP5_MagOut", t = 16 / 35},
             {s = "ARC9_BO1.MP5_MagIn", t = 47 / 35}
@@ -1055,11 +1374,6 @@ SWEP.Animations = {
         Source = "reload_empty_gl",
         Time = 93 / 35,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Framerate = 30,
-        Checkpoints = {28, 38, 69},
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
         EventTable = {
             {s = "ARC9_BO1.MP5_MagOut", t = 16 / 35},
             {s = "ARC9_BO1.MP5_MagIn", t = 47 / 35},
@@ -1087,9 +1401,6 @@ SWEP.Animations = {
     ["draw_stock_gl"] = {
         Source = "first_draw_gl_stock",
         Time = 30 / 30,
-        LHIK = true,
-        LHIKIn = 0.25,
-        LHIKOut = 0.25,
         EventTable = {
             {s = "ARC9_BO1.MP5_BoltFwd", t = 12 / 30}
         },
@@ -1097,16 +1408,10 @@ SWEP.Animations = {
     ["holster_stock_gl"] = {
         Source = "holster_gl",
         Time = 30 / 30,
-        LHIK = true,
-        LHIKIn = 0.25,
-        LHIKOut = 0.25,
     },
     ["ready_stock_gl"] = {
         Source = "first_draw_gl_stock",
         Time = 1.5,
-        LHIK = true,
-        LHIKIn = 0.25,
-        LHIKOut = 0.25,
         EventTable = {
             {s = "ARC9_BO1.MP5_BoltFwd", t = 19 / 30}
         },
@@ -1125,11 +1430,6 @@ SWEP.Animations = {
         Source = "reload_gl",
         Time = 77 / 35,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Framerate = 30,
-        Checkpoints = {28, 38, 69},
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
         EventTable = {
             {s = "ARC9_BO1.MP5_MagOut", t = 16 / 35},
             {s = "ARC9_BO1.MP5_MagIn", t = 47 / 35}
@@ -1139,11 +1439,6 @@ SWEP.Animations = {
         Source = "reload_empty_gl",
         Time = 93 / 35,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Framerate = 30,
-        Checkpoints = {28, 38, 69},
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
         EventTable = {
             {s = "ARC9_BO1.MP5_MagOut", t = 16 / 35},
             {s = "ARC9_BO1.MP5_MagIn", t = 47 / 35},

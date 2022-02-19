@@ -68,6 +68,7 @@ SWEP.ClipSize = 30 -- DefaultClip is automatically set.
 SWEP.ReloadTime = 1
 
 SWEP.DrawCrosshair = true
+SWEP.CanBlindFire = false
 
 SWEP.Recoil = 0.5
 SWEP.RecoilSide = 0.7
@@ -224,7 +225,7 @@ SWEP.AttachmentElements = {
     },
     ["bo1_mk"] = {
         Bodygroups = {
-            {4,3}
+            {4,4}
         },
     },
     ["mwc_bipod"] = {
@@ -427,15 +428,18 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     if length == 3 and attached["bo1_ubgl_m203"] then -- SHORTEN M203 ON 10.5 BARREL
         vm:SetBodygroup(4, 2)
     end
+    if length > 0 and attached["bo1_ubgl_mkey"] then
+        vm:SetBodygroup(4, 3)
+    end
     if hand == 8 then -- FAMAS
         vm:SetBodygroup(0, 2) --FORCES UPPER TO FLAT
         vm:SetBodygroup(2, 6) -- BARREL CHANGES TO FAMAS SPECIFIC
     end
 
-    if hand == 3 and barrel == 0 and attached["bo1_optic_alt"] then
+    if hand == 3 and barrel == 0 and attached["bo1_optic"] then
         vm:SetBodygroup(8, 2)
     end
-    if hand == 5 and attached["bo1_optic_alt"] then
+    if hand == 5 and attached["bo1_optic"] then
         vm:SetBodygroup(8, 3)
     end
 
@@ -592,10 +596,10 @@ SWEP.Attachments = {
     [6] = {
         PrintName = "Underbarrel",
         Bone = "j_gun",
-        Pos = Vector(11, 0, 1.65),
+        Pos = Vector(11, 0, 1.35),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_m203", "bo1_mk", "bo1_grips"},
-        ExcludeElements = {"carbine"},
+        Category = {"bo1_m203", "bo1_mk", "bo1_rail_underbarrel"},
+        ExcludeElements = {"carbine", "no_ub_rail"},
     },
     [7] = {
         PrintName = "Handguard",

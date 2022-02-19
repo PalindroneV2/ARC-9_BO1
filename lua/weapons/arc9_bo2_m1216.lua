@@ -1,6 +1,6 @@
 SWEP.Base = "arc9_base"
 SWEP.Spawnable = true -- this obviously has to be set to true
-SWEP.Category = "ARC-9 - COD Extras" -- edit this if you like
+SWEP.Category = "ARC-9 - Black Ops II" -- edit this if you like
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "SRM 1216"
@@ -69,10 +69,11 @@ SWEP.ShotgunReload = false
 SWEP.ReloadTime = 1
 
 SWEP.DrawCrosshair = true
+SWEP.CanBlindFire = false
 
 SWEP.Recoil = 1
 SWEP.RecoilSide = 0.75
-SWEP.RecoilUp = 2
+SWEP.RecoilUp = 1.6
 
 SWEP.RecoilRandomUp = 0.6
 SWEP.RecoilRandomSide = 0.4
@@ -146,7 +147,7 @@ SWEP.ShootPitchVariation = 0
 
 SWEP.ShootSound = "ARC9_BO2.1216_Fire"
 SWEP.ShootSoundSilenced = "ARC9_BO2.S12_Sil"
-SWEP.DistantShootSound = {"^weapons/arccw/bo2_generic_shotgun/dist/0.wav", "^weapons/arccw/bo2_generic_shotgun/dist/1.wav"}
+SWEP.DistantShootSound = {"^weapons/arc9/bo2_generic_shotgun/dist/0.wav", "^weapons/arc9/bo2_generic_shotgun/dist/1.wav"}
 
 --SWEP.MuzzleEffect = "muzzleflash_4"
 SWEP.MuzzleParticle = "muzzleflash_shotgun" -- Used for some muzzle effects.
@@ -269,6 +270,14 @@ SWEP.Attachments = {
         Pos = Vector(6, 0, 0),
         Ang = Angle(0, 0, 0),
         Category = {"bo2_fastmag"},
+    },
+    [5] = {
+        PrintName = "Perk-a-Cola",
+        DefaultCompactName = "PERK",
+        Bone = "j_gun",
+        Pos = Vector(-10, 0, -10),
+        Ang = Angle(0, 0, 0),
+        Category = "bo1_perkacola",
     },
 }
 

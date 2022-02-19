@@ -66,6 +66,7 @@ SWEP.ClipSize = 30 -- DefaultClip is automatically set.
 SWEP.ReloadTime = 1
 
 SWEP.DrawCrosshair = true
+SWEP.CanBlindFire = false
 
 SWEP.Recoil = 0.5
 SWEP.RecoilSide = 0.7

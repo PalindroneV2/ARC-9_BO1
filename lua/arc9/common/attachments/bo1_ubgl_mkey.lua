@@ -13,6 +13,6 @@ ATT.Free = false
 
 ATT.Category = {"bo1_mk"}
 ATT.ActivateElements = {"bo1_mk"}
-ATT.ExcludeElements = {"handguard_patriot", "100_mag", "handguard_607"}
+ATT.ExcludeElements = {"barrel_10", "100_mag"}
 ATT.AimDownSightsTimeMult = 1.1
 ATT.SprintToFireTimeMult = 1.1

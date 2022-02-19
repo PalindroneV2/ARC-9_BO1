@@ -12,4 +12,5 @@ ATT.Free = false
 
 ATT.Category = {"bo1_fastmag", "bo2_fastmag", "bo3_fastmag"}
 ATT.ActivateElements = {"bo1_fastmag", "bo2_fastmag", "bo3_fastmag", "fastmag"}
+ATT.ExcludeElements = {"mp5k"}
 ATT.ReloadTime = 0.75

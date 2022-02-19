@@ -20,7 +20,7 @@ ATT.Free = false
 
 ATT.Category = {"retro_ar15_handguard_10"}
 ATT.ActivateElements = {"handguard_patriot", "no_gasblock", "nosling"}
-ATT.ExcludeElements = {"bo1_m203"}
+ATT.ExcludeElements = {"bo1_m203", "bo1_mk"}
 
 
 ATT.RecoilMult = 1.15

@@ -15,6 +15,7 @@ ATT.ActivateElements = {"mp5sd_suppressor"}
 ATT.MuzzleDevice = true
 ATT.Silencer = true
 ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.DistantShootSoundOverride = ""
 
 ATT.ShootVolumeMult = 4 / 5
 ATT.ShootPitchMult = 1.1

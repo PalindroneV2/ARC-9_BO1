@@ -9,7 +9,7 @@ ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Category = {"retro_ar15_handguard_20", "retro_ar15_handguard_14"}
-ATT.ActivateElements = {"handguard_a4", "nosling"}
+ATT.ActivateElements = {"handguard_a4", "nosling", "no_ub_rail", "ar15_ris", "no_tac_rail"}
 
 ATT.Attachments = {
     {
@@ -20,5 +20,12 @@ ATT.Attachments = {
         Bone = "j_gun",
         Pos = Vector(10, 0, 1),
         Ang = Angle(0, 0, 0),
-    }
+    },
+    {
+        PrintName = "Underbarrel",
+        Bone = "j_gun",
+        Pos = Vector(4, 0, -2.05),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_m203", "bo1_mk", "bo1_grips"},
+    },
 }

@@ -1,6 +1,6 @@
 SWEP.Base = "arc9_base"
 SWEP.Spawnable = true -- this obviously has to be set to true
-SWEP.Category = "ARC-9 - COD Extras" -- edit this if you like
+SWEP.Category = "ARC-9 - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "SPAS-12"
@@ -69,6 +69,7 @@ SWEP.ShotgunReload = true
 SWEP.ReloadTime = 1
 
 SWEP.DrawCrosshair = true
+SWEP.CanBlindFire = false
 
 SWEP.Recoil = 1
 SWEP.RecoilSide = 0.75
@@ -142,7 +143,7 @@ SWEP.ShootPitchVariation = 0
 
 SWEP.ShootSound = "ARC9_BO1.Ithaca_Fire"
 SWEP.ShootSoundSilenced = "ARC9_BO1.SPAS_Sil"
-SWEP.DistantShootSound = {"weapons/arccw/bo1_generic_shotgun/ringoff_f.wav", "weapons/arccw/bo1_generic_shotgun/ringoff_r.wav"}
+SWEP.DistantShootSound = {"weapons/arc9/bo1_generic_shotgun/ringoff_f.wav", "weapons/arc9/bo1_generic_shotgun/ringoff_r.wav"}
 
 --SWEP.MuzzleEffect = "muzzleflash_4"
 SWEP.MuzzleParticle = "muzzleflash_shotgun" -- Used for some muzzle effects.
@@ -247,12 +248,11 @@ end
 
 SWEP.Attachments = {
     [1] = {
-        PrintName = "Optic",
+        PrintName = "Optic Rail",
         Bone = "j_gun",
-        Pos = Vector(3, 0.1, 1.25),
+        Pos = Vector(0-1, 0.1, 0.85),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic"},
-        InstalledElements = {"mount"},
+        Category = {"bo1_rail_optic"},
         ExcludeElements = {"stock_l"},
     },
     [2] = {

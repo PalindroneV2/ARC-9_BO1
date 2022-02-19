@@ -25,6 +25,14 @@ ATT.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"bo1_muzzle"},
     },
+    {
+        PrintName = "Magazine",
+        DefaultCompactName = "25rnd",
+        Bone = "tag_clip",
+        Pos = Vector(-6.25, 0, -4),
+        Ang = Angle(0, 0, 0),
+        Category = "bo1_mp5k_mag",
+    },
 }
 
 ATT.RecoilMult = 0.9

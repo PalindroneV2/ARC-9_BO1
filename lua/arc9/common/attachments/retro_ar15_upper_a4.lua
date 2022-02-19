@@ -16,6 +16,6 @@ ATT.Attachments = {
         Bone = "j_gun",
         Pos = Vector(1, 0, 0.6),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(1.5, 0, 0),
+        Icon_Offset = Vector(1.5, 1.5, 0),
     }
 }
