@@ -334,7 +334,7 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
     return anim .. final
 end
 
---TEST
+--TEST 2
 
 SWEP.Attachments = {
     [1] = {
