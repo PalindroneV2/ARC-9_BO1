@@ -233,11 +233,6 @@ SWEP.AttachmentElements = {
             {4,5},
         },
     },
-    ["mount"] = {
-        Bodygroups = {
-            {6,1}
-        },
-    },
     ["usgi_iron"] = {
         Bodygroups = {
             {6,3},
@@ -624,7 +619,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(3.5, 0, 5.025),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic"},
+        Category = {"bo1_optic", "bo1_rail_riser"},
         InstalledElements = {"classicrail"},
         ExcludeElements = {"a4_top", "handguard_famas"},
     },
@@ -634,6 +629,14 @@ SWEP.Attachments = {
         Pos = Vector(-6, 0, 2.65),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_cosmetic"},
+    },
+    [11] = {
+        PrintName = "Perk-a-Cola",
+        DefaultCompactName = "PERK",
+        Bone = "j_gun",
+        Pos = Vector(-10, 0, -10),
+        Ang = Angle(0, 0, 0),
+        Category = "bo1_perkacola",
     },
 }
 

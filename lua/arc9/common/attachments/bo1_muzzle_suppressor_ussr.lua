@@ -24,6 +24,7 @@ ATT.ShootPitchMult = 1.1
 
 ATT.SpreadMult = 0.99
 ATT.RecoilMult = 0.975
+ATT.RecoilUpMult = 0.975
 ATT.AimDownSightsTimeMult = 1.025
 ATT.SprintToFireTimeMult = 1.05
 ATT.SpreadMultHipFire = 1.05

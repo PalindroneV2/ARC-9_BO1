@@ -455,7 +455,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(2.25, 0, 3.2),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic"},
+        Category = {"bo1_optic", "bo1_rail_riser"},
         InstalledElements = {"rail"},
         ExcludeElements = {"nobacksight"},
         MergeSlots = {7}
@@ -483,6 +483,14 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ultimate_ak_mag"},
         ExcludeElements = {"bo1_ultimate_ak_receiver"}
+    },
+    [10] = {
+        PrintName = "Perk-a-Cola",
+        DefaultCompactName = "PERK",
+        Bone = "j_gun",
+        Pos = Vector(-10, 0, -10),
+        Ang = Angle(0, 0, 0),
+        Category = "bo1_perkacola",
     },
 }
 

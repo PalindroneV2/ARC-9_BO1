@@ -248,7 +248,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local vm = data.model
     local attached = data.elements
 
-    if attached["bo1_optic"] then
+    if attached["mount"] or attached["bo1_optic"] then
         vm:SetBodygroup(3,1)
     end
 
@@ -270,7 +270,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     end
 
     if attached["bo1_mp5_barrel_kurz"] then
-        if attached["bo1_optic"] then
+        if attached["mount"] or attached["bo1_optic"] then
             vm:SetBodygroup(3,3)
         end
         vm:SetBodygroup(4,stock + 4)
@@ -340,7 +340,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(-3.5, 0.1, 3.35),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic"},
+        Category = {"bo1_optic", "bo1_rail_riser"},
         InstalledElements = {"mount"},
         ExcludeElements = {"mp5k"},
     },
@@ -419,11 +419,28 @@ SWEP.Animations = {
     },
     ["draw"] = {
         Source = "draw",
-        Time = 30 / 30,
+        Time = 1,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.35,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.7,
+                lhik = 1,
+                rhik = 1
+            },
+        },
     },
     ["holster"] = {
         Source = "holster",
-        Time = 30 / 30,
+        Time = 1,
         IKTimeLine = {
             {
                 t = 0,
@@ -439,7 +456,7 @@ SWEP.Animations = {
     },
     ["draw_stock"] = {
         Source = "first_draw_stock",
-        Time = 15 / 30,
+        Time = 1,
         EventTable = {
             {s = "ARC9_BO1.MP5_BoltFwd", t = 15 / 30},
         },
@@ -453,22 +470,40 @@ SWEP.Animations = {
     },
     ["ready"] = {
         Source = "first_draw",
-        Time = 40 / 30,
-        LHIK = true,
-        LHIKIn = 0.25,
-        LHIKOut = 0.25,
+        Time = 1.5,
         EventTable = {
             {s = "ARC9_BO1.MP5_BoltFwd", t = 15 / 30},
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.35,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.7,
+                lhik = 1,
+                rhik = 1
+            },
         },
     },
     ["ready_stock"] = {
         Source = "first_draw_stock",
         Time = 45 / 30,
-        LHIK = true,
-        LHIKIn = 0,
-        LHIKOut = 0.25,
         EventTable = {
             {s = "ARC9_BO1.MP5_BoltFwd", t = 15 / 30},
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1
+            },
         },
     },
     ["fire"] = {
@@ -566,26 +601,63 @@ SWEP.Animations = {
     },
     ["draw_sil"] = {
         Source = "draw_sil",
-        Time = 15 / 30,
-        LHIK = true,
-        LHIKIn = 0.25,
-        LHIKOut = 0.25,
+        Time = 1,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.75,
+                lhik = 1,
+                rhik = 1
+            },
+        },
     },
     ["holster_sil"] = {
         Source = "holster_sil",
-        Time = 15 / 30,
-        LHIK = true,
-        LHIKIn = 0.25,
-        LHIKOut = 0.25,
+        Time = 1,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1
+            },
+            {
+                t = 0.5,
+                lhik = 0,
+                rhik = 1
+            },
+        },
     },
     ["ready_sil"] = {
         Source = "first_draw_sil",
         Time = 1,
-        LHIK = true,
-        LHIKIn = 0.25,
-        LHIKOut = 0.25,
-        EventTable = {
+        /* EventTable = {
             {s = "ARC9_BO1.MP5_BoltFwd", t = 19 / 30}
+        }, */
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1
+            },
+            {
+                t = 0.15,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.95,
+                lhik = 1,
+                rhik = 1
+            },
         },
     },
     ["fire_sil"] = {
@@ -682,28 +754,45 @@ SWEP.Animations = {
     ["draw_stock_sil"] = {
         Source = "first_draw_sil_stock",
         Time = 30 / 30,
-        LHIK = true,
-        LHIKIn = 0.25,
-        LHIKOut = 0.25,
         EventTable = {
             {s = "ARC9_BO1.MP5_BoltFwd", t = 12 / 30}
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1
+            },
         },
     },
     ["holster_stock_sil"] = {
         Source = "holster_sil",
         Time = 30 / 30,
-        LHIK = true,
-        LHIKIn = 0.25,
-        LHIKOut = 0.25,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1
+            },
+            {
+                t = 0.5,
+                lhik = 0,
+                rhik = 1
+            },
+        },
     },
     ["ready_stock_sil"] = {
         Source = "first_draw_sil_stock",
         Time = 1.5,
-        LHIK = true,
-        LHIKIn = 0.25,
-        LHIKOut = 0.25,
         EventTable = {
             {s = "ARC9_BO1.MP5_BoltFwd", t = 19 / 30}
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1
+            },
         },
     },
     ["fire_stock_sil"] = {
@@ -865,22 +954,30 @@ SWEP.Animations = {
     ["draw_stock_quick"] = {
         Source = "first_draw_stock",
         Time = 30 / 30,
-        LHIK = true,
-        LHIKIn = 0.25,
-        LHIKOut = 0.25,
         EventTable = {
             {s = "ARC9_BO1.MP5_BoltFwd", t = 15 / 30},
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1
+            },
         },
     },
 
     ["ready_stock_quick"] = {
         Source = "first_draw_stock",
         Time = 45 / 30,
-        LHIK = true,
-        LHIKIn = 0.25,
-        LHIKOut = 0.25,
         EventTable = {
             {s = "ARC9_BO1.MP5_BoltFwd", t = 15 / 30},
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1
+            },
         },
     },
 
@@ -957,29 +1054,56 @@ SWEP.Animations = {
     },
     ["draw_sil_quick"] = {
         Source = "draw_sil",
-        Time = 15 / 30,
-        LHIK = true,
-        LHIKIn = 0,
-        LHIKOut = 0.25,
+        Time = 1,
         EventTable = {
             {s = "ARC9_BO1.MP5_BoltFwd", t = 15 / 30}
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.75,
+                lhik = 1,
+                rhik = 1
+            },
         },
     },
     ["holster_sil_quick"] = {
         Source = "holster_sil",
-        Time = 15 / 30,
-        LHIK = true,
-        LHIKIn = 0.25,
-        LHIKOut = 0.25,
+        Time = 1,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1
+            },
+            {
+                t = 0.5,
+                lhik = 0,
+                rhik = 1
+            },
+        },
     },
     ["ready_sil_quick"] = {
         Source = "first_draw_sil",
         Time = 1.5,
-        LHIK = true,
-        LHIKIn = 0,
-        LHIKOut = 0.25,
         EventTable = {
             {s = "ARC9_BO1.MP5_BoltFwd", t = 19 / 30}
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.75,
+                lhik = 1,
+                rhik = 1
+            },
         },
     },
     ["fire_sil_quick"] = {
@@ -1077,21 +1201,34 @@ SWEP.Animations = {
     ["draw_stock_sil_quick"] = {
         Source = "first_draw_sil_stock",
         Time = 1,
-        LHIK = true,
-        LHIKIn = 0.25,
-        LHIKOut = 0.25,
         EventTable = {
             {s = "ARC9_BO1.MP5_BoltFwd", t = 15 / 30},
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1
+            },
         },
     },
     ["holster_stock_sil_quick"] = {
         Source = "holster_sil",
         Time = 1,
-        LHIK = true,
-        LHIKIn = 0.25,
-        LHIKOut = 0.25,
         EventTable = {
             {s = "ARC9_BO1.MP5_BoltFwd", t = 15 / 30},
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1
+            },
+            {
+                t = 0.5,
+                lhik = 0,
+                rhik = 1
+            },
         },
     },
     ["ready_stock_sil_quick"] = {
@@ -1099,6 +1236,18 @@ SWEP.Animations = {
         Time = 1.5,
         EventTable = {
             {s = "ARC9_BO1.MP5_BoltFwd", t = 19 / 30}
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.75,
+                lhik = 1,
+                rhik = 1
+            },
         },
     },
     ["fire_stock_sil_quick"] = {
@@ -1196,34 +1345,44 @@ SWEP.Animations = {
     },
     ["draw_grip"] = {
         Source = "draw_grip",
-        Time = 15 / 30,
-        LHIK = true,
-        LHIKIn = 0.25,
-        LHIKOut = 0.25,
+        Time = 1,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.35,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.7,
+                lhik = 1,
+                rhik = 1
+            },
+        },
     },
     ["holster_grip"] = {
         Source = "holster_grip",
         Time = 15 / 30,
-        LHIK = true,
-        LHIKIn = 0.25,
-        LHIKOut = 0.25,
-    },
-    ["draw_stock"] = {
-        Source = "first_draw_stock",
-        Time = 30 / 30,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.25,
-        EventTable = {
-            {s = "ARC9_BO1.MP5_BoltFwd", t = 15 / 30},
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1
+            },
+            {
+                t = 0.5,
+                lhik = 0,
+                rhik = 1
+            },
         },
     },
     ["ready_grip"] = {
         Source = "first_draw_grip",
         Time = 40 / 30,
-        LHIK = true,
-        LHIKIn = 0.25,
-        LHIKOut = 0.25,
         EventTable = {
             {s = "ARC9_BO1.MP5_BoltFwd", t = 15 / 30},
         },
@@ -1242,11 +1401,6 @@ SWEP.Animations = {
         Source = "reload_grip",
         Time = 77 / 35,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Framerate = 30,
-        Checkpoints = {28, 38, 69},
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
         EventTable = {
             {s = "ARC9_BO1.MP5_MagOut", t = 16 / 35},
             {s = "ARC9_BO1.MP5_MagIn", t = 47 / 35}
@@ -1278,7 +1432,6 @@ SWEP.Animations = {
         Source = "reload_empty_grip",
         Time = 93 / 35,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Framerate = 30,
         EventTable = {
             {s = "ARC9_BO1.MP5_BoltBack", t = 8 / 35},
             {s = "ARC9_BO1.MP5_MagOut", t = 28 / 35},
@@ -1318,144 +1471,6 @@ SWEP.Animations = {
     },
     ["exit_sprint_grip"] = {
         Source = "sprint_out_grip",
-        Time = 1
-    },
-
-    --MP5 GL--
-
-    ["idle_gl"] = {
-        Source = "idle_gl",
-        Time = 1 / 30,
-    },
-    ["draw_gl"] = {
-        Source = "draw_gl",
-        Time = 15 / 30,
-        LHIK = true,
-        LHIKIn = 0.25,
-        LHIKOut = 0.25,
-    },
-    ["holster_gl"] = {
-        Source = "holster_gl",
-        Time = 15 / 30,
-        LHIK = true,
-        LHIKIn = 0.25,
-        LHIKOut = 0.25,
-    },
-    ["ready_gl"] = {
-        Source = "first_draw_gl",
-        Time = 1,
-        LHIK = true,
-        LHIKIn = 0.25,
-        LHIKOut = 0.25,
-        EventTable = {
-            {s = "ARC9_BO1.MP5_BoltFwd", t = 19 / 30}
-        },
-    },
-    ["fire_gl"] = {
-        Source = {"fire_gl"},
-        Time = 7 / 30,
-        ShellEjectAt = 0,
-    },
-    ["fire_iron_gl"] = {
-        Source = {"fire_ads_gl"},
-        Time = 7 / 30,
-        ShellEjectAt = 0,
-    },
-    ["reload_gl"] = {
-        Source = "reload_gl",
-        Time = 77 / 35,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        EventTable = {
-            {s = "ARC9_BO1.MP5_MagOut", t = 16 / 35},
-            {s = "ARC9_BO1.MP5_MagIn", t = 47 / 35}
-        },
-    },
-    ["reload_empty_gl"] = {
-        Source = "reload_empty_gl",
-        Time = 93 / 35,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        EventTable = {
-            {s = "ARC9_BO1.MP5_MagOut", t = 16 / 35},
-            {s = "ARC9_BO1.MP5_MagIn", t = 47 / 35},
-            {s = "ARC9_BO1.MP5_BoltBack", t = 67 / 35},
-            {s = "ARC9_BO1.MP5_BoltFwd", t = 73 / 35},
-        },
-    },
-    ["enter_sprint_gl"] = {
-        Source = "sprint_in_gl",
-        Time = 1
-    },
-    ["idle_sprint_gl"] = {
-        Source = "sprint_loop_gl",
-        Time = 30 / 40
-    },
-    ["exit_sprint_gl"] = {
-        Source = "sprint_out_gl",
-        Time = 1
-    },
-    --MP5 STOCK GL--
-    ["idle_stock_gl"] = {
-        Source = "idle_gl",
-        Time = 1 / 30,
-    },
-    ["draw_stock_gl"] = {
-        Source = "first_draw_gl_stock",
-        Time = 30 / 30,
-        EventTable = {
-            {s = "ARC9_BO1.MP5_BoltFwd", t = 12 / 30}
-        },
-    },
-    ["holster_stock_gl"] = {
-        Source = "holster_gl",
-        Time = 30 / 30,
-    },
-    ["ready_stock_gl"] = {
-        Source = "first_draw_gl_stock",
-        Time = 1.5,
-        EventTable = {
-            {s = "ARC9_BO1.MP5_BoltFwd", t = 19 / 30}
-        },
-    },
-    ["fire_stock_gl"] = {
-        Source = {"fire_gl"},
-        Time = 7 / 30,
-        ShellEjectAt = 0,
-    },
-    ["fire_iron_stock_gl"] = {
-        Source = {"fire_ads_gl"},
-        Time = 7 / 30,
-        ShellEjectAt = 0,
-    },
-    ["reload_stock_gl"] = {
-        Source = "reload_gl",
-        Time = 77 / 35,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        EventTable = {
-            {s = "ARC9_BO1.MP5_MagOut", t = 16 / 35},
-            {s = "ARC9_BO1.MP5_MagIn", t = 47 / 35}
-        },
-    },
-    ["reload_empty_stock_gl"] = {
-        Source = "reload_empty_gl",
-        Time = 93 / 35,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        EventTable = {
-            {s = "ARC9_BO1.MP5_MagOut", t = 16 / 35},
-            {s = "ARC9_BO1.MP5_MagIn", t = 47 / 35},
-            {s = "ARC9_BO1.MP5_BoltBack", t = 67 / 35},
-            {s = "ARC9_BO1.MP5_BoltFwd", t = 73 / 35},
-        },
-    },
-    ["enter_sprint_stock_gl"] = {
-        Source = "sprint_in_gl",
-        Time = 1
-    },
-    ["idle_sprint_stock_gl"] = {
-        Source = "sprint_loop_gl",
-        Time = 30 / 40
-    },
-    ["exit_sprint_stock_gl"] = {
-        Source = "sprint_out_gl",
         Time = 1
     },
 }

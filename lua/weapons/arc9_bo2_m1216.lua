@@ -128,6 +128,7 @@ SWEP.Firemodes = {
 SWEP.ManualActionChamber = 4 -- How many shots we go between needing to cycle again.
 SWEP.ManualAction = true -- Pump/bolt action. Play the "cycle" animation after firing, when the trigger is released.
 SWEP.ManualActionNoLastCycle = true -- Do not cycle on the last shot.
+SWEP.CycleTime = 0.75
 
 SWEP.NPCWeaponType = {"weapon_shotgun"}
 SWEP.NPCWeight = 100
@@ -243,7 +244,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(2, 0, 3.75),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic"},
+        Category = {"bo1_optic", "bo1_rail_riser"},
         InstalledElements = {"mount"},
         ExcludeElements = {"stock_l"},
     },

@@ -17,5 +17,5 @@
 
 	$detail "models\weapons\arc9\bo1\black_detail"
 	$detailblendmode 0
-	$detailblendfactor 0.75
+	$detailblendfactor 1
 }

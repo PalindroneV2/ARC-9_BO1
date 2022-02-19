@@ -11,7 +11,7 @@ ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 ATT.Folder = "HOLO"
 
-ATT.Category = {"bo1_optic", "bo1_optic_alt"}
+ATT.Category = {"bo1_optic", "bo1_optic_alt", "bo1_optic_rds"}
 
 ATT.Model = "models/weapons/arc9/atts/bo2_rangefinder.mdl"
 ATT.Scale = 1

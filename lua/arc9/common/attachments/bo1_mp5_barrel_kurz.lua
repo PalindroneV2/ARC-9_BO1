@@ -15,7 +15,8 @@ ATT.Attachments = {
         Bone = "j_gun",
         Pos = Vector(-9.25, 0.1, 0),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic"},
+        Category = {"bo1_optic", "bo1_rail_riser"},
+        InstalledElements = {"mount"}
     },
     {
         PrintName = "Muzzle",
