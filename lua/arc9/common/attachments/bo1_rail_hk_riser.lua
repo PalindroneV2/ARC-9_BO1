@@ -6,8 +6,8 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 
-ATT.Category = {"bo1_rail_riser"}
-ATT.ActivateElements = {"bo1_rail_riser"}
+ATT.Category = {"bo1_rail_riser", "hk_rail_riser"}
+ATT.ActivateElements = {"bo1_rail_riser", "hk_rail_riser"}
 ATT.Model = "models/weapons/arc9/item/bo1_hk_riser.mdl"
 ATT.Scale = 1
 ATT.ModelOffset = Vector(-0.1, 0, 0)
