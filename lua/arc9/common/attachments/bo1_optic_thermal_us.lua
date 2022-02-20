@@ -23,7 +23,7 @@ ATT.ModelOffset = Vector(-0.5, 0, 0)
 
 ATT.Sights = {
     {
-        Pos = Vector(0, 7, -1.4),
+        Pos = Vector(0, 7, -1.42),
         Ang = Angle(0, 0, 0),
         Magnification = 1.25,
         IgnoreExtra = true
@@ -47,8 +47,8 @@ ATT.RTScopeFLIRNoPP = false
 ATT.RTScopeFLIRBlend = 0.1
 ATT.RTScopeFLIRCCHot = { -- Color correction drawn only on FLIR targets
     ["$pp_colour_addr"] = 0,
-    ["$pp_colour_addg"] = -255,
-    ["$pp_colour_addb"] = -255,
+    ["$pp_colour_addg"] = 0,
+    ["$pp_colour_addb"] = 0,
     ["$pp_colour_brightness"] = 0,
     ["$pp_colour_contrast"] = 1,
     ["$pp_colour_colour"] = 1,
