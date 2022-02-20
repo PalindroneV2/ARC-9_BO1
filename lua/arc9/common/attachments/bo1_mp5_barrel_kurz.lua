@@ -38,8 +38,9 @@ ATT.Attachments = {
 
 ATT.RecoilMult = 0.9
 ATT.RecoilUpMult = 0.85
+ATT.RPMOverride = 900
 
-ATT.SpreadMult = 1.15
+ATT.SpreadMult = 1.25
 ATT.SpreadMultHipFire = 0.9
 ATT.SpreadMultMove = 0.9
 
@@ -49,6 +50,6 @@ ATT.SpeedMultSightsMult = 1.05
 ATT.AimDownSightsTimeMult = 0.9
 ATT.SprintToFireTimeMult = 0.95
 
-ATT.RangeMaxMult = 0.9
-ATT.RangeMinMult = 0.9
-ATT.PhysBulletMuzzleVelocityMult = 0.9
+ATT.RangeMaxMult = 0.75
+ATT.RangeMinMult = 0.75
+ATT.PhysBulletMuzzleVelocityMult = 0.75

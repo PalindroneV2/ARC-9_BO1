@@ -9,7 +9,7 @@ ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Category = {"retro_ar15_handguard_14", "retro_ar15_handguard_11", "retro_ar15_handguard_10"}
-ATT.ActivateElements = {"nosling", "ar15_ris", "no_ub_rail"}
+ATT.ActivateElements = {"nosling", "ar15_ris", "no_ub_rail", "ris_carbine"}
 
 ATT.Attachments = {
     {
@@ -17,7 +17,7 @@ ATT.Attachments = {
         Category = "retro_ar15_front_iron_m4",
         UnInstalledElements = {"gasblock_carbine"},
         InstalledElements = {"gasblock_carbine_cut"},
-        ExcludeElements = {"bo1_optic"},
+        ExcludeElements = {"bo1_optic", "bo1_rail_riser"},
         Bone = "j_gun",
         Pos = Vector(4, 0, 1),
         Ang = Angle(0, 0, 0),

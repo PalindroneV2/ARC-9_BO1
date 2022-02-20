@@ -12,7 +12,7 @@ ATT.ActivateElements = {"a4_top"}
 ATT.Attachments = {
     {
         PrintName = "Optic",
-        Category = {"retro_ar15_iron", "bo1_optic", "bo1_rail_riser"},
+        Category = {"retro_ar15_iron", "bo1_optic", "bo1_rail_riser", "ar15_rail_riser"},
         Bone = "j_gun",
         Pos = Vector(1, 0, 0.6),
         Ang = Angle(0, 0, 0),

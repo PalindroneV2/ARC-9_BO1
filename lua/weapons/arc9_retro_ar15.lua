@@ -303,7 +303,7 @@ SWEP.AttachmentElements = {
             {5,7}
         },
     },
-    ["gen3_collapsed"] = {
+    ["stock_mw2"] = {
         Bodygroups = {
             {5,8}
         },
@@ -436,6 +436,10 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     end
     if hand == 5 and attached["bo1_optic"] then
         vm:SetBodygroup(8, 3)
+    end
+
+    if attached["mw2_m4_irons"] then
+        vm:SetBodygroup(8,4)
     end
 
     -- IRON SIGHT POSITION CHANGES
@@ -579,6 +583,7 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"retro_ar15_stock"},
         Installed = "retro_ar15_stock_full",
+        MergeSlots = {12}
     },
     [5] = {
         PrintName = "Muzzle",
@@ -637,6 +642,13 @@ SWEP.Attachments = {
         Pos = Vector(-10, 0, -10),
         Ang = Angle(0, 0, 0),
         Category = "bo1_perkacola",
+    },
+    [12] = {
+        Hidden = true,
+        Bone = "j_gun",
+        Pos = Vector(0, 0, 0),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_tube_stocks"},
     },
 }
 
