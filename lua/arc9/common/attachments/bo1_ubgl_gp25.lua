@@ -13,7 +13,7 @@ ATT.Free = false
 
 ATT.Category = {"bo1_gp25"}
 ATT.ActivateElements = {"bo1_gp25"}
---ATT.ExcludeElements = {"bo1_gp25"}
+ATT.ExcludeElements = {"no_ubgl"}
 
 ATT.AimDownSightsTimeMult = 1.1
 ATT.SprintToFireTimeMult = 1.1

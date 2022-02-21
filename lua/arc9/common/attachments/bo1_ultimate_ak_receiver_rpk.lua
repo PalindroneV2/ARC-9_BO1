@@ -13,7 +13,7 @@ ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Category = {"bo1_ultimate_ak_receiver"}
-ATT.ActivateElements = {"rpk"}
+ATT.ActivateElements = {"rpk", "no_ubgl"}
 
 ATT.ClipSize = 45
 ATT.ReloadTime = 1

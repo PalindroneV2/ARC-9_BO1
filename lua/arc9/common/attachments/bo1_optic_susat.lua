@@ -15,7 +15,7 @@ ATT.Category = {"bo1_optic", "bo1_optic_alt", "bo1_susat"}
 
 ATT.Model = "models/weapons/arc9/atts/bo1_susat.mdl"
 ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelOffset = Vector(1.35, 0, 0)
 
 ATT.Sights = {
     {

@@ -6,6 +6,8 @@ ATT.Description = [[
 
     Belongs to Black Ops II.
 ]]
+
+ATT.Folder = "BO2"
 ATT.Pros = {
 }
 ATT.Cons = {}

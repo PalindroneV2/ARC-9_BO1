@@ -6,6 +6,8 @@ ATT.Description = [[
 
     Belongs to Black Ops II.
 ]]
+
+ATT.Folder = "BO2"
 ATT.Pros = {
 }
 ATT.Cons = {}
@@ -23,3 +25,5 @@ ATT.RecoilMult = 0.85
 ATT.RecoilUpMult = 0.85
 ATT.LHIK = true
 ATT.LHIK_Priority = 5
+
+ATT.Folder = "BO2"
