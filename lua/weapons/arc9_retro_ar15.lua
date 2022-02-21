@@ -228,7 +228,7 @@ SWEP.AttachmentElements = {
             {4,4}
         },
     },
-    ["mwc_bipod"] = {
+    ["bo1_bipod"] = {
         Bodygroups = {
             {4,5},
         },

@@ -33,7 +33,7 @@ ATT.PhysBulletMuzzleVelocityMult = 1.15
 ATT.Attachments = {
     {
         PrintName = "Muzzle",
-        DefaultName = "Default",
+        DefaultCompactName = "Default",
         Bone = "j_gun",
         Scale = Vector(1.5, 1.5, 1.5),
         Pos = Vector(22, 0, -1.2),
@@ -41,11 +41,19 @@ ATT.Attachments = {
         Category = {"bo1_muzzle"},
     },
     {
+        PrintName = "Bipod",
+        DefaultCompactName = "None",
+        Bone = "j_gun",
+        Pos = Vector(17.5, 0, -1.2),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_bipod"},
+    },
+    {
         PrintName = "Underbarrel",
-        DefaultName = "None",
+        DefaultCompactName = "None",
         Bone = "j_gun",
         Pos = Vector(0, 0, -2),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_grips", "bo1_bipod"},
+        Category = {"bo1_grips"},
     },
 }

@@ -109,8 +109,8 @@ SWEP.SpeedMultMelee = 1
 SWEP.SpeedMultCrouch = 1
 SWEP.SpeedMultBlindFire = 1
 
-SWEP.AimDownSightsTime = 0.11
-SWEP.SprintToFireTime = 0.14
+SWEP.AimDownSightsTime = 0.2
+SWEP.SprintToFireTime = 0.2
 
 SWEP.RPM = 800
 SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
@@ -218,6 +218,11 @@ SWEP.AttachmentElements = {
             {4,3}
         },
     },
+    ["stock_pdw"] = {
+        Bodygroups = {
+            {4,4}
+        },
+    },
     ["mp5sd"] = {
         Bodygroups = {
             {2,1}
@@ -236,9 +241,10 @@ SWEP.AttachmentElements = {
     ["mp5k"] = {
         Bodygroups = {
             {0,1},
-            {1,2},
+            {1,3},
             {2,3},
             {3,2},
+            {6,1},
         },
     },
 }
@@ -256,6 +262,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     if attached["bo1_stock_light"] then stock = 1
     elseif attached["bo1_stock_medium"] then stock = 2
     elseif attached["bo1_stock_heavy"] then stock = 3
+    elseif attached["bo1_mp5_stock_pdw"] then stock = 4
     end
     vm:SetBodygroup(4,stock)
 
@@ -264,18 +271,22 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local newang = Angle(0.025, 0, 0)
 
     if attached["25rnd"] then
-        vm:SetBodygroup(1,2)
-    elseif attached["45rnd"] then
         vm:SetBodygroup(1,3)
+    elseif attached["45rnd"] then
+        vm:SetBodygroup(1,4)
     end
 
     if attached["bo1_mp5_barrel_kurz"] then
         if attached["mount"] or attached["bo1_optic"] then
             vm:SetBodygroup(3,3)
         end
-        vm:SetBodygroup(4,stock + 4)
+        vm:SetBodygroup(4,stock + 5)
         newpos = Vector(-3.175, 2, 0.85)
         newang = Angle(0.025, 0.1, 0)
+    end
+
+    if attached["mp5k_nogrip"] then
+        vm:SetBodygroup(6,0)
     end
 
     self.IronSights = {
@@ -344,14 +355,14 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"bo1_optic", "bo1_rail_riser"},
         InstalledElements = {"mount"},
-        ExcludeElements = {"mp5k"},
+        ExcludeElements = {"mp5k", "mp5k_mw2_ris"},
     },
     [2] = {
         PrintName = "Stock",
         Bone = "j_gun",
         Pos = Vector(-7.5, 0, 0),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_stocks"},
+        Category = {"bo1_stocks","bo1_mp5_stock"},
     },
     [3] = {
         PrintName = "Muzzle",
@@ -1419,12 +1430,12 @@ SWEP.Animations = {
                 rhik = 1
             },
             {
-                t = 0.85,
+                t = 0.8,
                 lhik = 0,
                 rhik = 1
             },
             {
-                t = 0.95,
+                t = 0.875,
                 lhik = 1,
                 rhik = 1
             },
@@ -1452,12 +1463,12 @@ SWEP.Animations = {
                 rhik = 1
             },
             {
-                t = 0.85,
+                t = 0.8,
                 lhik = 0,
                 rhik = 1
             },
             {
-                t = 0.95,
+                t = 0.875,
                 lhik = 1,
                 rhik = 1
             },

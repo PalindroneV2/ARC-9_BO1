@@ -22,3 +22,4 @@ ATT.ModelOffset = Vector(0, 0, -0.15)
 ATT.RecoilMult = 0.85
 ATT.RecoilUpMult = 0.85
 ATT.LHIK = true
+ATT.LHIK_Priority = 5

@@ -20,6 +20,6 @@ ATT.ModelAngleOffset = Angle(0,0,0)
 ATT.Sights = {
     {
         Pos = Vector(0, 10, -1.6),
-        Ang = Angle(0, -0.1, 0)
+        Ang = Angle(0, 0.1, 0)
     }
 }

@@ -16,7 +16,8 @@ ATT.Attachments = {
         Pos = Vector(-9.25, 0.1, 0),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_optic", "bo1_rail_riser"},
-        InstalledElements = {"mount"}
+        InstalledElements = {"mount"},
+        ExcludeElements = {"mp5k_mw2_ris"},
     },
     {
         PrintName = "Muzzle",
@@ -34,8 +35,25 @@ ATT.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = "bo1_mp5k_mag",
     },
+    {
+        PrintName = "Underbarrel",
+        Bone = "j_gun",
+        Pos = Vector(0, 0, 0),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(-3, -2.9, 0),
+        Category = {"bo1_mp5k_nogrip"},
+        InstalledElements = {"mp5k_nogrip"},
+        MergeSlots = {5}
+    },
+    {
+        Hidden = true,
+        Bone = "j_gun",
+        Pos = Vector(0, 0, 0),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_mp5k_mw2_rail"},
+        InstalledElements = {"mp5k_nogrip", "mp5k_mw2_ris"},
+    },
 }
-
 ATT.RecoilMult = 0.9
 ATT.RecoilUpMult = 0.85
 ATT.RPMOverride = 900

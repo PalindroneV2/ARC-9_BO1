@@ -23,9 +23,18 @@ ATT.Attachments = {
     },
     {
         PrintName = "Underbarrel",
+        DefaultCompactName = "UB",
         Bone = "j_gun",
         Pos = Vector(4, 0, -2.4),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_m203", "bo1_mk", "bo1_grips"},
+    },
+    {
+        PrintName = "Bipod",
+        DefaultCompactName = "Bipod",
+        Bone = "j_gun",
+        Pos = Vector(9.5, 0, -2.4),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_bipod"},
     },
 }
