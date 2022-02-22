@@ -17,5 +17,13 @@ ATT.Attachments = {
         Pos = Vector(1, 0, 0.6),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(1.5, 1.5, 0),
-    }
+        MergeSlots = {2}
+    },
+    {
+        Hidden = true,
+        Category = {"bo1_addon_irons_2"},
+        Bone = "j_gun",
+        Pos = Vector(0, 0, 0),
+        Ang = Angle(0, 0, 0),
+    },
 }

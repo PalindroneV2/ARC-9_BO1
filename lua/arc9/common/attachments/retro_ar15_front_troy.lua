@@ -10,4 +10,4 @@ ATT.Free = true
 
 ATT.Category = {"retro_ar15_front_iron_m16"}
 ATT.ActivateElements = {"troy_front"}
-ATT.ExcludeElements = {"bo1_rail_riser"}
+ATT.ExcludeElements = {"bo1_rail_riser", "mw2_m4_irons"}

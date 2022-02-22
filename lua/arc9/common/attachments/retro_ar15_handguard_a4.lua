@@ -4,7 +4,7 @@ ATT.Icon = Material("entities/bo1_atts/barrel/barrel.png")
 ATT.Description = [[A long handguard with quad-rail RIS mounts. While usually used for 20" barrels, it can fit a 14.5" barrel with a low profile gas block.
 
 Allows for the attachment of alternative front sights, but is otherwise identical to a regular handguard.]]
-ATT.SortOrder = 0
+ATT.SortOrder = 2
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 
@@ -16,7 +16,7 @@ ATT.Attachments = {
         PrintName = "Front",
         Category = "retro_ar15_front_iron_m16",
         InstalledElements = {"gasblock_cut"},
-        ExcludeElements = {"bo1_optic", "bo1_rail_riser"},
+        ExcludeElements = {"bo1_optic", "bo1_rail_riser", "mw2_m4_irons"},
         Bone = "j_gun",
         Pos = Vector(10, 0, 1),
         Ang = Angle(0, 0, 0),

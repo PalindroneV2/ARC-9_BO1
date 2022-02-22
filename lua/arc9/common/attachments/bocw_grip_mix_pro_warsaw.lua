@@ -19,9 +19,12 @@ ATT.Category = {"bo1_grips"}
 
 ATT.Model = "models/weapons/arc9/atts/bocw_mixgrip_warsaw_pro.mdl"
 ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, -0.15)
+ATT.ModelOffset = Vector(0, 0, -0.1)
 
-ATT.RecoilMult = 0.85
-ATT.RecoilUpMult = 0.85
+ATT.RecoilMult = 0.95
+ATT.RecoilSideMult = 0.85
+ATT.SpeedAdd = 5 / 100
+ATT.SpeedShootingAdd = -6 / 100
+ATT.SpeedSightsAdd = -6 / 100
 ATT.LHIK = true
 ATT.LHIK_Priority = 5
