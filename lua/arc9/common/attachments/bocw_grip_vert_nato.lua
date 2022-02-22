@@ -7,7 +7,7 @@ ATT.Description = [[
     Belongs to Black Ops Cold War.
 ]]
 
-ATT.Folder = "BOCW"
+ATT.Folder = "BOCW/NATO"
 ATT.Pros = {
 }
 ATT.Cons = {}
@@ -19,7 +19,7 @@ ATT.Category = {"bo1_grips"}
 
 ATT.Model = "models/weapons/arc9/atts/bocw_foregrip_nato.mdl"
 ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, -0.25)
+ATT.ModelOffset = Vector(0, 0, -0.125)
 
 ATT.RecoilMult = 0.95
 ATT.RecoilSideMult = 0.85

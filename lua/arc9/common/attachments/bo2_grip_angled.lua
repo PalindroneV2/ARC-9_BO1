@@ -21,7 +21,8 @@ ATT.Model = "models/weapons/arc9/atts/bo2_angledgrip.mdl"
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 
-ATT.RecoilMult = 0.85
-ATT.RecoilUpMult = 0.85
+ATT.RecoilMult = 0.95
+ATT.RecoilUpMult = 0.975
+ATT.RecoilSideMult = 0.85
 ATT.LHIK = true
 ATT.LHIK_Priority = 5

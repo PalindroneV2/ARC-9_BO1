@@ -21,7 +21,10 @@ ATT.Model = "models/weapons/arc9/atts/bo2_heavygrip.mdl"
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, -0.3)
 
-ATT.RecoilMult = 0.85
+ATT.RecoilMult = 0.9
 ATT.RecoilUpMult = 0.85
+ATT.RecoilSideMult = 0.8
+ATT.SpeedAddShooting = -0.30
+ATT.SpeedAdd = - 5 / 100
 ATT.LHIK = true
 ATT.LHIK_Priority = 5

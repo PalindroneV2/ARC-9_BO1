@@ -2,7 +2,7 @@ ATT.PrintName = "Stub Foregrip"
 ATT.CompactName = [[STUB]]
 ATT.Icon = Material("entities/bo1_atts/ubs/bo2_foregrip.png", "mips smooth")
 ATT.Description = [[
-    Vertical foregrip that goes under the weapon's handguard.
+    Short foregrip that provides better mobility.
 
     Belongs to Black Ops II.
 ]]
@@ -21,8 +21,10 @@ ATT.Model = "models/weapons/arc9/atts/bo2_grip.mdl"
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 
-ATT.RecoilMult = 0.85
-ATT.RecoilUpMult = 0.85
+ATT.RecoilMult = 0.95
+ATT.SpeedAddShooting = 5 / 100
+ATT.SpeedAdd = 5 / 100
+ATT.SpeedAddSights = 5 / 100
 ATT.LHIK = true
 ATT.LHIK_Priority = 5
 
