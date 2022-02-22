@@ -24,6 +24,6 @@ ATT.ModelOffset = Vector(0, 0, -0.25)
 ATT.RecoilMult = 0.95
 ATT.RecoilUpMult = 0.95
 ATT.RecoilSideMult = 0.80
-ATT.SpeedShootingAdd = - 0.26
+ATT.SpeedAddShooting = - 0.26
 ATT.LHIK = true
 ATT.LHIK_Priority = 5

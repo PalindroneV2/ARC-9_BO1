@@ -67,7 +67,7 @@ ATT.SpreadMultHipFire = 0.8
 ATT.SpreadMultMove = 0.8
 
 ATT.SpeedMult = 1.015
-ATT.SpeedMultSightsMult = 1.075
+ATT.SpeedMultSights = 1.075
 
 ATT.AimDownSightsTimeMult = 0.8
 ATT.SprintToFireTimeMult = 0.85

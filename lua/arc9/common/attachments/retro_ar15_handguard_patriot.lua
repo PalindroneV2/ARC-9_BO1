@@ -24,6 +24,6 @@ ATT.ExcludeElements = {"bo1_m203", "bo1_mk"}
 
 
 ATT.RecoilMult = 1.15
-ATT.SpeedMultSightsMult = 1.2
+ATT.SpeedMultSights = 1.2
 ATT.AimDownSightsTimeMult = 0.85
-ATT.SpeedMultShootingMult = 1.1
+ATT.SpeedMultShooting = 1.1

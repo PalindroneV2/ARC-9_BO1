@@ -12,4 +12,4 @@ ATT.Free = false
 
 ATT.Category = {"bo1_perkacola"}
 ATT.ActivateElements = {"speedcola"}
-ATT.ReloadTimeMult = 0.5
+ATT.ReloadTimeMultMult = 0.5

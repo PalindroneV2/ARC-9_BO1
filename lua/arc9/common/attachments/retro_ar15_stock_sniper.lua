@@ -18,10 +18,10 @@ ATT.RecoilMult = 0.375
 ATT.SpeedMult = 0.9
 ATT.AimDownSightsTimeMult = 1.5
 ATT.SprintToFireTimeMult = 1.5
-ATT.SpeedMultSightsMult = 0.5
+ATT.SpeedMultSights = 0.5
 ATT.SpreadMultHipFire = 1.4
 ATT.SpreadMultMove = 1.4
-ATT.SpeedMultShootingMult = 0.9
+ATT.SpeedMultShooting = 0.9
 ]]
 
 ATT.RecoilMult = 0.65

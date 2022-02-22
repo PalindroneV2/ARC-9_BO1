@@ -16,7 +16,7 @@ ATT.Category = {"bo1_ultimate_ak_receiver"}
 ATT.ActivateElements = {"rpk", "no_ubgl"}
 
 ATT.ClipSize = 45
-ATT.ReloadTime = 1
+ATT.ReloadTimeMult = 1
 ATT.DamageMax = 32
 ATT.DamageMin = 22
 ATT.SpreadMult = 1.1

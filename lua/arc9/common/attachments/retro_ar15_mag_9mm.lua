@@ -12,7 +12,7 @@ ATT.Free = false
 
 ATT.Category = {"retro_ar15_mag"}
 ATT.ActivateElements = {"9mm_mag"}
-ATT.ReloadTime = 0.9
+ATT.ReloadTimeMult = 0.9
 ATT.ClipSize = 32
 
 ATT.DamageMax = 25

@@ -13,7 +13,7 @@ ATT.Free = false
 ATT.Category = {"bo1_ultimate_ak_receiver"}
 ATT.ActivateElements = {"ak74"}
 
-ATT.ReloadTime = 0.95
+ATT.ReloadTimeMult = 0.95
 ATT.DamageMax = 30
 ATT.DamageMin = 20
 ATT.SpreadMult = 1.1

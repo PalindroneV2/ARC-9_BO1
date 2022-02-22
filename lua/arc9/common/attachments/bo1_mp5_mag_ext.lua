@@ -11,4 +11,4 @@ ATT.Free = false
 ATT.Category = {"bo1_mp5_mag", "bo1_mp5k_mag"}
 ATT.ActivateElements = {"45rnd"}
 ATT.ClipSize = 40
-ATT.ReloadTime = 1.15
+ATT.ReloadTimeMult = 1.15

@@ -13,6 +13,6 @@ ATT.Free = false
 
 ATT.Category = {"bo1_ultimate_ak_mag_74"}
 ATT.ActivateElements = {"45_mag_dual"}
-ATT.ReloadTime = 0.75
+ATT.ReloadTimeMult = 0.75
 ATT.AimDownSightsTimeMult = 1.15
 ATT.SprintToFireTimeMult = 1.15

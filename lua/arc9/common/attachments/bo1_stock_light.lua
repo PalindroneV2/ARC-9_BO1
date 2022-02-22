@@ -15,10 +15,10 @@ ATT.ActivateElements = {"stock_light", "light_stock", "stock_l"}
 ATT.RecoilMult = 0.75
 ATT.AimDownSightsTimeMult = 0.97
 ATT.SprintToFireTimeMult = 0.97
-ATT.SpeedMultSightsMult = 1.025
+ATT.SpeedMultSights = 1.025
 ATT.SpreadMultHipFire = 0.9
 ATT.SpreadMultMove = 0.9
-ATT.SpeedMultShootingMult = 1.1
+ATT.SpeedMultShooting = 1.1
 ]]
 
 ATT.RecoilMult = 0.8
