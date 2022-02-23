@@ -36,5 +36,6 @@ ATT.Attachments = {
         Pos = Vector(-9.5, 0, 2.4),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_bipod"},
+        ExcludeElements = {"bo1_m203", "bo1_mk"}
     },
 }

@@ -13,6 +13,7 @@ ATT.Attachments = {
     {
         PrintName = "Optic",
         Category = {"retro_ar15_iron", "bo1_optic", "bo1_rail_riser", "ar15_rail_riser"},
+        ExcludeElements = {"handguard_famas"},
         Bone = "j_gun",
         Pos = Vector(-1, 0, -0.6),
         Ang = Angle(0, 0, 0),
@@ -22,6 +23,7 @@ ATT.Attachments = {
     {
         Hidden = true,
         Category = {"bo1_addon_irons_2"},
+        ExcludeElements = {"handguard_famas"},
         Bone = "j_gun",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),

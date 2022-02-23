@@ -326,6 +326,10 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
 
     vm:SetSkin(skin)
 
+    if attached["bo1_optic_ak"] then
+        vm:SetBodygroup(2,irons + 3)
+    end
+
     local newpos = Vector(-2.425, -2, 0.65)
     local newang = Angle(0.05, 0.4, 0)
 
@@ -458,7 +462,7 @@ SWEP.Attachments = {
         Category = {"bo1_optic", "bo1_rail_riser"},
         InstalledElements = {"rail"},
         ExcludeElements = {"nobacksight"},
-        MergeSlots = {7}
+        MergeSlots = {7,8}
     },
     [7] = {
         Hidden = true,
@@ -468,23 +472,30 @@ SWEP.Attachments = {
         Category = {"bo1_alt_irons"}
     },
     [8] = {
+        Hidden = true,
+        Bone = "j_gun",
+        Pos = Vector(1.5, 0, 2.6),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_optic_ak"}
+    },
+    [9] = {
         PrintName = "Furniture",
-        DefaultName = "Irons",
+        DefaultName = "WOOD",
         Bone = "j_gun",
         Pos = Vector(-5, 0, 4),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ultimate_ak_furniture"},
     },
-    [9] = {
+    [10] = {
         PrintName = "Magazine",
-        DefaultName = "30 RND",
+        DefaultName = "7.62mm 30",
         Bone = "tag_clip",
         Pos = Vector(0, 0, -2),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ultimate_ak_mag"},
         ExcludeElements = {"bo1_ultimate_ak_receiver"}
     },
-    [10] = {
+    [11] = {
         PrintName = "Perk-a-Cola",
         DefaultCompactName = "PERK",
         Bone = "j_gun",

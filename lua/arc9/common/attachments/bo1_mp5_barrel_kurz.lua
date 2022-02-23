@@ -36,11 +36,11 @@ ATT.Attachments = {
         Category = "bo1_mp5k_mag",
     },
     {
-        PrintName = "Underbarrel",
+        PrintName = "Handguard",
         Bone = "j_gun",
-        Pos = Vector(0, 0, 0),
+        Pos = Vector(2, 0, 1.5),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(0, -2.9, 0),
+        Icon_Offset = Vector(0, -0.5, 0),
         Category = {"bo1_mp5k_nogrip"},
         InstalledElements = {"mp5k_nogrip"},
         MergeSlots = {5}
@@ -48,7 +48,7 @@ ATT.Attachments = {
     {
         Hidden = true,
         Bone = "j_gun",
-        Pos = Vector(0, 0, 0),
+        Pos = Vector(3.1, 0.1, 2),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_mp5k_mw2_rail"},
         InstalledElements = {"mp5k_nogrip", "mp5k_mw2_ris"},
@@ -61,6 +61,9 @@ ATT.RPMOverride = 900
 ATT.SpreadMult = 1.25
 ATT.SpreadMultHipFire = 0.9
 ATT.SpreadMultMove = 0.9
+
+ATT.ClipSize = 25
+ATT.ReloadTimeMult = 0.9
 
 ATT.SpeedMult = 1.01
 ATT.SpeedMultSights = 1.05

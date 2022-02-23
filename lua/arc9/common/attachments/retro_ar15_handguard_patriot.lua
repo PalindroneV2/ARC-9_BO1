@@ -18,6 +18,14 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 
+ATT.Model = "models/weapons/arc9/atts/cde_mp5k_nogrip.mdl"
+ATT.Scale = 0.375
+ATT.ModelOffset = Vector(3, 0, -1.5)
+ATT.IconOffset = Vector(-3, 1.5, 0)
+
+ATT.LHIK = true
+ATT.LHIK_Priority = 0
+
 ATT.Category = {"retro_ar15_handguard_10"}
 ATT.ActivateElements = {"handguard_patriot", "no_gasblock", "nosling"}
 ATT.ExcludeElements = {"bo1_m203", "bo1_mk"}

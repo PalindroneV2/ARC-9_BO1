@@ -19,7 +19,7 @@ ATT.Attachments = {
         InstalledElements = {"gasblock_carbine_cut"},
         ExcludeElements = {"bo1_optic", "bo1_rail_riser", "mw2_m4_irons"},
         Bone = "j_gun",
-        Pos = Vector(4, 0, 1),
+        Pos = Vector(-4, 0, -1),
         Ang = Angle(0, 0, 0),
     },
     {
