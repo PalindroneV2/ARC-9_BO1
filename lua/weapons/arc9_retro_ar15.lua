@@ -203,19 +203,34 @@ SWEP.AttachmentElements = {
             {1,1}
         },
     },
-    ["20_mag"] = {
+    ["60_mag"] = {
         Bodygroups = {
             {1,2}
         },
     },
-    ["9mm_mag"] = {
+    ["pul_mag"] = {
         Bodygroups = {
             {1,3}
         },
     },
-    ["100_mag"] = {
+    ["pul_40_mag"] = {
         Bodygroups = {
             {1,4}
+        },
+    },
+    ["20_mag"] = {
+        Bodygroups = {
+            {1,5}
+        },
+    },
+    ["9mm_mag"] = {
+        Bodygroups = {
+            {1,6}
+        },
+    },
+    ["100_mag"] = {
+        Bodygroups = {
+            {1,7}
         },
     },
     ["bo1_m203"] = {

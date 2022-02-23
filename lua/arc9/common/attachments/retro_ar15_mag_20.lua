@@ -13,7 +13,7 @@ ATT.Free = true
 
 ATT.Category = {"retro_ar15_mag"}
 ATT.ActivateElements = {"20_mag"}
-ATT.ReloadTimeMult = 0.9
+ATT.ReloadTimeMult = 0.8
 ATT.ClipSize = 20
 ATT.AimDownSightsTimeMult = 0.975
 ATT.SprintToFireTimeMult = 0.975
