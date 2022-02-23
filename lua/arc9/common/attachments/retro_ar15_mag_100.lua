@@ -7,7 +7,7 @@ ATT.Description = [[
 ]]
 ATT.Pros = {}
 ATT.Cons = {}
-ATT.SortOrder = 0
+ATT.SortOrder = 6
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 

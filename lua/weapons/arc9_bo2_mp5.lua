@@ -279,6 +279,9 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     if attached["bo1_mp5_barrel_kurz"] then
         if attached["mount"] or attached["bo1_optic"] then
             vm:SetBodygroup(3,3)
+            if attached["mp5k_mw2"] then
+                vm:SetBodygroup(3,0)
+            end
         end
         vm:SetBodygroup(4,stock + 5)
         newpos = Vector(-3.175, 2, 0.85)
@@ -368,7 +371,7 @@ SWEP.Attachments = {
         PrintName = "Muzzle",
         Bone = "j_gun",
         Scale = Vector(1,1,1),
-        Pos = Vector(10, 0.1, 1),
+        Pos = Vector(10, 0.2, 1),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_muzzle"},
         ExcludeElements = {"mp5k", "mp5sd"},
@@ -384,7 +387,7 @@ SWEP.Attachments = {
         PrintName = "Underbarrel",
         Bone = "j_gun",
         Scale = Vector(1,1,1),
-        Pos = Vector(6, 0.1, 0.5),
+        Pos = Vector(6, 0.2, 0.5),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_rail_underbarrel"},
         ExcludeElements = {"mp5k", "mp5_ris", "mp5sd"},

@@ -327,7 +327,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     vm:SetSkin(skin)
 
     local newpos = Vector(-2.425, -2, 0.65)
-    local newang = Angle(0.025, 0.5, 0)
+    local newang = Angle(0.05, 0.4, 0)
 
 
     if attached["bo1_alternate_irons"] then
@@ -336,26 +336,26 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     end
     if barrel == 1 then
         newpos = Vector(-2.425, -2, 1.15)
-        newang = Angle(0.025, -0.35, 0)
+        newang = Angle(0.05, -0.35, 0)
         if attached["bo1_alternate_irons"] then
             newpos = Vector(-2.425, -2, 0.8)
-            newang = Angle(0.025, 0.5, 0)
+            newang = Angle(0.05, 0.5, 0)
         end
     end
     if attached["rpk"] then
         newpos = Vector(-2.065, -2, 0.65)
-        newang = Angle(0.025, 0, 0)
+        newang = Angle(0.05, 0, 0)
         if barrel == 1 then
             newpos = Vector(-2.065, -2, 1)
             newang = Angle(0.025, -0.45, 0)
             if attached["bo1_alternate_irons"] then
                 newpos = Vector(-2.065, -2, 0.625)
-                newang = Angle(0.025, 0.5, 0)
+                newang = Angle(0.05, 0.5, 0)
             end
         end
         if attached["bo1_alternate_irons"] then
             newpos = Vector(-2.065, -2, 0.665)
-            newang = Angle(0.025, 0, 0)
+            newang = Angle(0.05, 0, 0)
         end
     end
 

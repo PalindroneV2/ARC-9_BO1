@@ -567,7 +567,7 @@ end
 SWEP.Attachments = {
     [1] = {
         PrintName = "Upper",
-        DefaultCompactName = "A1 Top",
+        DefaultCompactName = "A1 TOP",
         Bone = "j_gun",
         Pos = Vector(2.5, 0, 3),
         Ang = Angle(0, 0, 0),
@@ -576,7 +576,7 @@ SWEP.Attachments = {
     },
     [2] = {
         PrintName = "Magazine",
-        DefaultCompactName = "30RND",
+        DefaultCompactName = "STANAG 30",
         Bone = "tag_clip",
         Pos = Vector(0, 0, -2),
         Ang = Angle(0, 0, 0),

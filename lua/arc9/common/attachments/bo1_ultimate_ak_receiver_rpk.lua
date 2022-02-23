@@ -40,7 +40,7 @@ ATT.Attachments = {
         DefaultCompactName = "45 RND",
         Category = "bo1_ultimate_ak_mag_74",
         Bone = "tag_rpk_clip",
-        Pos = Vector(5, 0, -2),
+        Pos = Vector(-5, 0, 2),
         Ang = Angle(0, 0, 0),
     },
 }

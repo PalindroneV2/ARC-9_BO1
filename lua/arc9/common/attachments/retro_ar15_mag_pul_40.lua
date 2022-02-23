@@ -1,5 +1,5 @@
 ATT.PrintName = [[AR-15 40 round P-Mag]]
-ATT.CompactName = [[40RND]]
+ATT.CompactName = [[P-MAG 40]]
 ATT.Icon = Material("entities/bo1_atts/ammo/ext_mag.png")
 ATT.Description = [[
     Modern polymer PMAG that holds 4 rounds.
@@ -7,7 +7,7 @@ ATT.Description = [[
 ]]
 ATT.Pros = {}
 ATT.Cons = {}
-ATT.SortOrder = 0
+ATT.SortOrder = 3
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 
