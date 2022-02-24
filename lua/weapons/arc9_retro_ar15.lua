@@ -67,7 +67,7 @@ SWEP.ChamberSize = 0 -- dont fucking change this again.
 SWEP.ClipSize = 30 -- DefaultClip is automatically set.
 SWEP.ReloadTime = 1
 
-SWEP.DrawCrosshair = true
+SWEP.Crosshair = true
 SWEP.CanBlindFire = false
 
 SWEP.Recoil = 0.5
@@ -676,37 +676,70 @@ SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
         Time = 1 / 30,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+        },
     },
     ["draw"] = {
         Source = "draw",
         Time = 1,
-        LHIK = false,
-        LHIKIn = nil,
-        LHIKOut = 1,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+        },
     },
     ["holster"] = {
         Source = "holster",
         Time = 0.75,
-        LHIK = false,
-        LHIKIn = 0.25,
-        LHIKOut = 0.25,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+        },
     },
     ["ready"] = {
         Source = "first_draw",
         Time = 1,
-        LHIK = false,
-        LHIKIn = nil,
-        LHIKOut = 0.6,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+        },
     },
     ["fire"] = {
         Source = {"fire"},
         Time = 9 / 30,
         ShellEjectAt = 0,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+        },
     },
     ["fire_iron"] = {
         Source = {"fire_ads"},
         Time = 9 / 30,
         ShellEjectAt = 0,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+        },
     },
     ["reload"] = {
         Source = "reload",
@@ -791,14 +824,35 @@ SWEP.Animations = {
     ["enter_sprint"] = {
         Source = "sprint_in",
         Time = 1,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+        },
     },
     ["idle_sprint"] = {
         Source = "sprint_loop",
         Time = 30 / 40,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+        },
     },
     ["exit_sprint"] = {
         Source = "sprint_out",
         Time = 1,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+        },
     },
 
 -- UBGL OUT ANIMS ---------------------------------------------------------------
