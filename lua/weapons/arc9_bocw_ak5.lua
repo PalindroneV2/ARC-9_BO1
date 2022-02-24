@@ -24,9 +24,9 @@ SWEP.Slot = 2
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/arc9/c_cde_ak5.mdl"
-SWEP.WorldModel = "models/weapons/arc9/w_cde_ak5.mdl"
-SWEP.WorldModelMirror = "models/weapons/arc9/w_cde_ak5.mdl"
+SWEP.ViewModel = "models/weapons/arc9/c_bocw_ak5.mdl"
+SWEP.WorldModel = "models/weapons/arc9/w_bocw_ak5.mdl"
+SWEP.WorldModelMirror = "models/weapons/arc9/w_bocw_ak5.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
     Pos        =    Vector(-4.5, 3.5, -5.1),
@@ -67,7 +67,7 @@ SWEP.ChamberSize = 0 -- dont fucking change this again.
 SWEP.ClipSize = 30 -- DefaultClip is automatically set.
 SWEP.ReloadTime = 1
 
-SWEP.DrawCrosshair = true
+SWEP.Crosshair = true
 SWEP.CanBlindFire = false
 
 SWEP.Recoil = 0.5
@@ -151,10 +151,10 @@ SWEP.ShellModel = "models/shells/shell_556.mdl"
 SWEP.ShellPitch = 90
 SWEP.ShellScale = 1.4
 
-SWEP.MuzzleEffectQCA = 3 -- which attachment to put the muzzle on
+SWEP.MuzzleEffectQCA = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectQCA = 2 -- which attachment to put the case effect on
-SWEP.ProceduralViewQCA = 4
-SWEP.CamQCA = 4
+SWEP.ProceduralViewQCA = 1
+SWEP.CamQCA = 3
 
 SWEP.BulletBones = {
 }
@@ -165,7 +165,7 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(-3, 0, 0.4),
+    Pos = Vector(-3.025, 0, 0.65),
     Ang = Angle(0.025, 0, 0),
     Magnification = 1.1,
     AssociatedSlot = 9,
@@ -198,9 +198,14 @@ SWEP.BarrelLength = 25
 SWEP.ExtraSightDist = 5
 
 SWEP.AttachmentElements = {
+    ["bo2_fastmag"] = {
+        Bodygroups = {
+            {1,1}
+        },
+    },
     ["mount"] = {
         Bodygroups = {
-            {4,1}
+            {2,1}
         },
     },
     ["bo1_m320"] = {
@@ -210,7 +215,37 @@ SWEP.AttachmentElements = {
     },
     ["stock_l"] = {
         Bodygroups = {
-            {5,1}
+            {3,1}
+        },
+    },
+    ["stock_m"] = {
+        Bodygroups = {
+            {3,2}
+        },
+    },
+    ["stock_h"] = {
+        Bodygroups = {
+            {3,3}
+        },
+    },
+    ["stock_pro"] = {
+        Bodygroups = {
+            {3,4}
+        },
+    },
+    ["barrel_short"] = {
+        Bodygroups = {
+            {4,1}
+        },
+    },
+    ["barrel_mid"] = {
+        Bodygroups = {
+            {4,2}
+        },
+    },
+    ["barrel_long"] = {
+        Bodygroups = {
+            {4,3}
         },
     },
 }
@@ -241,13 +276,16 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
         empty = "_empty"
     end
 
-    if attached["bo2_ubgl_m320"] then
-        suffix = "_m203"
+    if attached["bo2_fastmag"] then
+        if anim == "reload" then
+            return "fast"
+        end
+        if anim == "reload_empty" then
+            return "fast_empty"
+        end
     else
-        suffix = ""
+        return anim .. suffix .. empty
     end
-
-    return anim .. suffix .. empty
 end
 
 SWEP.Attachments = {
@@ -264,32 +302,48 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(-3, 0, 2.65),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_stock_l"},
+        Category = {"bo1_stocks", "bo1_stock_pro"},
         Installed = "bo1_stock_light",
     },
     [3] = {
         PrintName = "Muzzle",
         DefaultCompactName = "Birdcage",
         Bone = "j_gun",
-        Pos = Vector(24, 0, 2.25),
+        Pos = Vector(24, 0, 2.5),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_muzzle"},
+        ExcludeElements = {"newbarrel"},
     },
     [4] = {
         PrintName = "Underbarrel",
         Bone = "j_gun",
         Pos = Vector(13, 0, 1.6),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_m320", "bo1_rail_underbarrel"},
+        Category = {"bo1_rail_underbarrel"},
     },
     [5] = {
         PrintName = "Optic",
         Bone = "j_gun",
         Scale = Vector(1, 1, 1),
-        Pos = Vector(3.5, -0.025, 4.65),
+        Pos = Vector(3.5, -0.01, 4.375),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_optic", "bo1_rail_riser"},
         InstalledElements = {"mount"},
+    },
+    [6] = {
+        PrintName = "Barrel",
+        Bone = "j_gun",
+        Pos = Vector(13, 0, 4),
+        Ang = Angle(0, 0, 0),
+        Category = {"bocw_ak5_barrels"},
+    },
+    [7] = {
+        PrintName = "Magazine",
+        DefaultCompactName = "Standard",
+        Bone = "tag_clip",
+        Pos = Vector(0, 0, 0),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo2_fastmag"},
     },
 }
 
@@ -515,8 +569,8 @@ SWEP.Animations = {
         },
         MinProgress = 2.0,
     },
-    ["reload_fast"] = {
-        Source = "reload_fast",
+    ["fast"] = {
+        Source = "fast",
         Time = 1.79,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         IKTimeLine = {
@@ -532,8 +586,8 @@ SWEP.Animations = {
         },
         MinProgress = 1.4
     },
-    ["reload_empty_fast"] = {
-        Source = "reload_empty_fast",
+    ["fast_empty"] = {
+        Source = "fast_empty",
         Time = 2.3,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         IKTimeLine = {
