@@ -2626,12 +2626,20 @@ sound.Add( {
 -- MINGUN --
 
 sound.Add({
-    name = "ARC9_BO1.Minigun_Loop",
+    name = "ARC9_BO1.Minigun_ShootLoop",
     channel = CHAN_USER_BASE,
     volume = 1.0,
     level = 100,
     --pitch = {95, 110},
     sound = "^weapons/arc9/bo1_minigun/ring_loop.wav"
+})
+sound.Add({
+    name = "ARC9_BO1.Minigun_Loop",
+    channel = CHAN_USER_BASE,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = "^weapons/arc9/bo1_minigun/looping.wav"
 })
 sound.Add({
     name = "ARC9_BO1.Minigun_Ring",

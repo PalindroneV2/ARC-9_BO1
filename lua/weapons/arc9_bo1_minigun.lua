@@ -69,19 +69,19 @@ SWEP.ReloadTime = 1
 SWEP.Crosshair = true
 SWEP.CanBlindFire = false
 
-SWEP.Recoil = 0.5
-SWEP.RecoilSide = 0.7
-SWEP.RecoilUp = 1
+SWEP.Recoil = 0.35
+SWEP.RecoilSide = 0.5
+SWEP.RecoilUp = 0.5
 
-SWEP.RecoilRandomUp = 0.6
-SWEP.RecoilRandomSide = 0.3
+SWEP.RecoilRandomUp = 0.2
+SWEP.RecoilRandomSide = 0.2
 
 SWEP.RecoilDissipationRate = 40 -- How much recoil dissipates per second.
 SWEP.RecoilResetTime = 0.1 -- How long the gun must go before the recoil pattern starts to reset.
 
 SWEP.UseVisualRecoil = false
 
-SWEP.Spread = 0.00125 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.Spread = 0.0125 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
 
 SWEP.SpreadAddMove = 0.075 -- Applied when speed is equal to walking speed.
 SWEP.SpreadAddMidAir = 0.075 -- Applied when not touching the ground.
@@ -137,7 +137,7 @@ SWEP.ShootPitch = 100
 SWEP.ShootPitchVariation = 0
 
 SWEP.FirstShootSound = "ARC9_BO1.Minigun_Start"
-SWEP.ShootSoundLooping = "ARC9_BO1.Minigun_Loop"
+SWEP.ShootSoundLooping = "ARC9_BO1.Minigun_ShootLoop"
 SWEP.DistantShootSound = "ARC9_BO1.Minigun_Ring"
 SWEP.ShootSoundWindDown = "ARC9_BO1.Minigun_End"
 
@@ -170,6 +170,7 @@ SWEP.IronSights = {
     },
     Magnification = 1.1,
 }
+SWEP.HasSights = false
 
 SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "crossbow"

@@ -1,24 +1,15 @@
 "VertexlitGeneric"
 {
-	"$basetexture" "models\weapons\arc9\cde\bocw_krig6\mag"
-	"$bumpmap" "models\weapons\arc9\cde\bocw_krig6\mag_n"
+	"$basetexture" "models\weapons\arc9\bo1\kaki_02"
+	"$bumpmap" "models\weapons\arc9\waw\normalmap"
 
-	"$phong" "1"
-	"$phongboost" "3.5"
+	"$phong" "0"
+	"$phongboost" "0.5"
 	"$phongexponent" "10"
 	"$phongalbedotint" "1"
 	"$normalmapalphaenvmapmask" "1"
 
-	"$detail" "models\weapons\arc9\cde\bocw_krig6\mag_s"
-	"$detailscale" "1"        
-	"$detailblendfactor" "0.15"     
-	"$detailblendmode" "1"
-
 	"$color2" "[.7 .7 .7]"
-
-	"$phongexponenttexture" "models\weapons\arc9\cde\bocw_krig6\exponent"
-	"$cloakPassEnabled" 		"1"						
-	"$phongfresnelranges"	"[ .2 1.2 8]"	
 
 
 	"$nocull" "1"

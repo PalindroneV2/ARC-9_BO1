@@ -200,7 +200,7 @@ SWEP.ExtraSightDist = 5
 SWEP.AttachmentElements = {
     ["bo2_fastmag"] = {
         Bodygroups = {
-            {1,1}
+            {1,1},
         },
     },
     ["mount"] = {
@@ -250,19 +250,23 @@ SWEP.AttachmentElements = {
     },
 }
 
---[[ SWEP.Hook_ModifyBodygroups = function(self, data)
+SWEP.Hook_ModifyBodygroups = function(self, data)
 
     local vm = data.model
     local CUSTSTATE = self:GetCustomize()
-    -- local attached = data.elements
+    local attached = data.elements
 
     if CUSTSTATE then
-        vm:SetBodygroup(2, 1)
+        vm:SetBodygroup(5, 1)
     else
-        vm:SetBodygroup(2, 0)
+        vm:SetBodygroup(5, 0)
     end
 
-end ]]
+    if attached["bo2_fastmag"] then
+        vm:SetBodygroup(5, 1)
+    end
+
+end
 
 
 SWEP.Hook_TranslateAnimation = function (self, anim)
@@ -340,8 +344,8 @@ SWEP.Attachments = {
     [7] = {
         PrintName = "Magazine",
         DefaultCompactName = "Standard",
-        Bone = "tag_clip",
-        Pos = Vector(0, 0, 0),
+        Bone = "j_gun",
+        Pos = Vector(5.75, 0, -1),
         Ang = Angle(0, 0, 0),
         Category = {"bo2_fastmag"},
     },
@@ -384,9 +388,6 @@ SWEP.Animations = {
     ["draw"] = {
         Source = "draw",
         Time = 1,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.25,
         IKTimeLine = {
             {
                 t = 0,
@@ -579,6 +580,21 @@ SWEP.Animations = {
                 lhik = 1,
                 rhik = 0
             },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.7,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.9,
+                lhik = 1,
+                rhik = 0
+            },
         },
         EventTable = {
             {s = "ARC9_BO2.AR_MagOut", t = 0.6},
@@ -593,6 +609,21 @@ SWEP.Animations = {
         IKTimeLine = {
             {
                 t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.7,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.9,
                 lhik = 1,
                 rhik = 0
             },
