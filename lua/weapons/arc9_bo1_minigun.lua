@@ -230,6 +230,9 @@ SWEP.Animations = {
     ["draw"] = {
         Source = "draw",
         Time = 30 / 30,
+        EventTable = {
+            {s = "ARC9_BO1.Minigun_Deploy", t = 0.01}
+        },
     },
     ["holster"] = {
         Source = "holster",
@@ -238,6 +241,9 @@ SWEP.Animations = {
     ["ready"] = {
         Source = "first_draw",
         Time = 30 / 30,
+        EventTable = {
+            {s = "ARC9_BO1.Minigun_Deploy", t = 0.01}
+        },
     },
     ["fire"] = {
         Source = {"fire"},

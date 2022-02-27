@@ -2627,7 +2627,7 @@ sound.Add( {
 
 sound.Add({
     name = "ARC9_BO1.Minigun_ShootLoop",
-    channel = CHAN_USER_BASE,
+    channel = CHAN_STATIC,
     volume = 1.0,
     level = 100,
     --pitch = {95, 110},
@@ -2635,7 +2635,7 @@ sound.Add({
 })
 sound.Add({
     name = "ARC9_BO1.Minigun_Loop",
-    channel = CHAN_USER_BASE,
+    channel = CHAN_STATIC,
     volume = 1.0,
     level = 100,
     --pitch = {95, 110},
@@ -2649,19 +2649,19 @@ sound.Add({
 })
 sound.Add({
     name = "ARC9_BO1.Minigun_Start",
-    channel = CHAN_WEAPON,
+    channel = CHAN_USER_BASE,
     level = 70,
     sound = "^weapons/arc9/bo1_minigun/start.wav"
 })
 sound.Add({
     name = "ARC9_BO1.Minigun_Stop",
-    channel = CHAN_WEAPON,
+    channel = CHAN_USER_BASE,
     level = 70,
     sound = "^weapons/arc9/bo1_minigun/stop.wav"
 })
 sound.Add({
     name = "ARC9_BO1.Minigun_Deploy",
-    channel = CHAN_WEAPON,
+    channel = CHAN_ITEM,
     level = 70,
     sound = "^weapons/arc9/bo1_minigun/deploy.wav"
 })
