@@ -25,6 +25,6 @@ ATT.Attachments = {
         InstalledElements = {"nobacksight"},
         Pos = Vector(-16.5, 0, 0.75),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(0, 2, 0),
+        Icon_Offset = Vector(0, 0, 1),
     },
 }

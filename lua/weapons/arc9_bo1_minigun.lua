@@ -24,13 +24,14 @@ SWEP.Slot = 4
 SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arc9/c_bo1_minigun.mdl"
-SWEP.WorldModel = "models/weapons/arc9/c_bo1_minigun.mdl"
-SWEP.MirrorVMWM = false
+SWEP.WorldModel = "models/weapons/arc9/w_bo1_minigun.mdl"
+SWEP.MirrorVMWM = true
+SWEP.WorldModelMirror = "models/weapons/arc9/w_bo1_minigun.mdl"
 SWEP.WorldModelOffset = {
-    pos        =    Vector(8, 10, -6.75),
-    ang        =    Angle(-5, 5, 180),
-    bone    =    "ValveBiped.Bip01_R_Hand",
-    scale   =   0.75
+    Pos        =    Vector(-3, 5, 3),
+    Ang        =    Angle(-5, 5, 180),
+    Bone    =    "ValveBiped.Bip01_R_Hand",
+    Scale   =   0.75
 }
 SWEP.DesiredViewModelFOV = 54
 
@@ -227,6 +228,13 @@ SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
         Time = 1 / 30,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1,
+            },
+        },
     },
     ["draw"] = {
         Source = "draw",
@@ -234,10 +242,24 @@ SWEP.Animations = {
         EventTable = {
             {s = "ARC9_BO1.Minigun_Deploy", t = 0.01}
         },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1,
+            },
+        },
     },
     ["holster"] = {
         Source = "holster",
         Time = 41 / 30,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1,
+            },
+        },
     },
     ["ready"] = {
         Source = "first_draw",
@@ -245,20 +267,48 @@ SWEP.Animations = {
         EventTable = {
             {s = "ARC9_BO1.Minigun_Deploy", t = 0.01}
         },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1,
+            },
+        },
     },
     ["fire"] = {
         Source = {"fire"},
         Time = 4 / 60,
         ShellEjectAt = 0,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1,
+            },
+        },
     },
     ["idle_iron"] = {
         Source = "spinup",
         Time = 4 / 60,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1,
+            },
+        },
     },
     ["fire_iron"] = {
         Source = {"fire"},
         Time = 4 / 60,
         ShellEjectAt = 0,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1,
+            },
+        },
     },
     ["reload"] = {
         Source = "reload",
@@ -270,6 +320,13 @@ SWEP.Animations = {
             {s = "ArcCW_BO1.M60_Close", t = 70 / 35},
             {s = "ArcCW_BO1.M60_LidClose", t = 75 / 35},
             {s = "ArcCW_BO1.M60_Bonk", t = 80 / 35},
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1,
+            },
         },
     },
     /*

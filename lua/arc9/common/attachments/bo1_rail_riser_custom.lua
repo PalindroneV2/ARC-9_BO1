@@ -20,7 +20,7 @@ ATT.Attachments = {
         Bone = "j_gun",
         Pos = Vector(-0.15, 0, -0.625),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(0, 2, 0),
+        Icon_Offset = Vector(0, 0, 1.5),
         Category = {"bo1_optic", "bo1_rail_riser"},
         InstalledElements = {"mount"},
     }
