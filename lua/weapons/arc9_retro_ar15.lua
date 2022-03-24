@@ -670,6 +670,14 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"bo1_tube_stocks"},
     },
+    [13] = {
+        PrintName = "Tactical",
+        Bone = "j_gun",
+        Pos = Vector(15, 0.6, 2),
+        Ang = Angle(0, 0, -90),
+        Category = {"bo1_rail_tactical"},
+        ExcludeElements = {"no_tac_rail"},
+    },
 }
 
 SWEP.Animations = {

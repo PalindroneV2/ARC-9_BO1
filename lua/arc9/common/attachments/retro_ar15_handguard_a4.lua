@@ -30,12 +30,37 @@ ATT.Attachments = {
         Category = {"bo1_m203", "bo1_mk", "bo1_grips"},
     },
     {
-        PrintName = "Bipod",
-        DefaultCompactName = "Bipod",
+        PrintName = "Tactical Left",
+        DefaultCompactName = "TAC L",
         Bone = "j_gun",
-        Pos = Vector(-9.5, 0, 2.4),
+        Pos = Vector(-8, 0.7, 1.5),
+        Ang = Angle(0, 0, -90),
+        Category =  {"bo1_tactical"}
+    },
+    {
+        PrintName = "Tactical Right",
+        DefaultCompactName = "TAC R",
+        Bone = "j_gun",
+        Pos = Vector(-8, -0.7, 1.5),
+        Ang = Angle(0, 0, 90),
+        Category =  {"bo1_tactical"}
+    },
+    {
+        PrintName = "Tactical Top",
+        DefaultCompactName = "TAC TOP",
+        Bone = "j_gun",
+        Pos = Vector(-6, 0, 0.5),
+        Ang = Angle(0, 0, 180),
+        Category =  {"bo1_tactical"},
+        ExcludeElements = {"mw2_m4_irons"}
+    },
+    {
+        PrintName = "Tactical Bottom",
+        DefaultCompactName = "TAC BOT",
+        Bone = "j_gun",
+        Pos = Vector(-8, 0, 2.3),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_bipod"},
+        Category = {"bo1_tactical", "bo1_bipod"},
         ExcludeElements = {"bo1_m203", "bo1_mk"}
     },
 }

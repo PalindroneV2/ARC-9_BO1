@@ -138,8 +138,9 @@ SWEP.ShootVolume = 125
 SWEP.ShootPitch = 100
 SWEP.ShootPitchVariation = 0
 
-SWEP.ShootSound = "ARC9_BO1.MP5_Fire"
-SWEP.ShootSoundSilenced = "ARC9_BO1.MP5_Sil"
+SWEP.ShootSound = "ARC9_BO1.M1911_Fire"
+SWEP.ShootSoundSilenced = "ARC9_BO2.Pistol_Sil"
+SWEP.DistantShootSound = "ARC9_BO1.M1911_RingOff"
 
 --SWEP.MuzzleEffect = "muzzleflash_4"
 SWEP.MuzzleParticle = "muzzleflash_pistol" -- Used for some muzzle effects.
@@ -190,9 +191,9 @@ SWEP.SprintAng = Angle(0, 0, 0)
 SWEP.CustomizePos = Vector(15, 15, 4)
 SWEP.CustomizeAng = Angle(90, 0, 0)
 
-SWEP.BarrelLength = 25
+SWEP.BarrelLength = 9
 
-SWEP.ExtraSightDist = 5
+SWEP.ExtraSightDist = 15
 
 SWEP.AttachmentElements = {
 }

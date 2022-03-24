@@ -67,6 +67,8 @@ SWEP.ChamberSize = 0 -- dont fucking change this again.
 SWEP.ClipSize = 500 -- DefaultClip is automatically set.
 SWEP.ReloadTime = 1
 
+SWEP.BottomlessClip = true
+
 SWEP.Crosshair = true
 SWEP.CanBlindFire = false
 
@@ -187,7 +189,7 @@ SWEP.ActiveAng = Angle(0, 0, 0)
 SWEP.SprintPos = Vector(0, -2, -1)
 SWEP.SprintAng = Angle(0, 0, 0)
 
-SWEP.CustomizePos = Vector(12.5, 40, 4)
+SWEP.CustomizePos = Vector(20, 60, 7.5)
 SWEP.CustomizeAng = Angle(90, 0, 0)
 
 SWEP.HolsterPos = Vector(0, 0, 0)

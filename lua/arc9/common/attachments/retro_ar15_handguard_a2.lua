@@ -11,7 +11,17 @@ ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Category = {"retro_ar15_handguard_20"}
-ATT.ActivateElements = {"handguard_a2"}
+ATT.ActivateElements = {"handguard_a2" , "no_tac_rail"}
 ATT.RecoilMult = 0.9
 ATT.AimDownSightsTimeMult = 1.1
 ATT.SprintToFireTimeMult = 1.1
+
+ATT.Attachments = {
+    {
+        PrintName = "Tactical",
+        Bone = "j_gun",
+        Pos = Vector(-8, 0.7, 1.5),
+        Ang = Angle(0, 0, -90),
+        Category =  {"bo1_rail_tactical"}
+    },
+}
