@@ -3,7 +3,8 @@ ATT.CompactName = [[RIS]]
 ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m4.png", "mips smooth")
 ATT.Description = [[RIS Quad-Rail Handguard fitting a carbine barrel, common in modern AR-15s.
 
-Allows for the attachment of alternative front sights, but is otherwise identical to a regular handguard.]]
+Allows for the attachment of alternative front sights and a low profile laser pointer on top, but is otherwise identical to a regular handguard.
+]]
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
@@ -24,28 +25,28 @@ ATT.Attachments = {
     },
     {
         PrintName = "Underbarrel",
-        DefaultCompactName = "None",
+        DefaultCompactName = "UB",
         Bone = "j_gun",
         Pos = Vector(-3, 0, 2.45),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_m203", "bo1_mk", "bo1_grips"},
     },
-    {
-        PrintName = "Tactical Left",
-        DefaultCompactName = "TAC L",
-        Bone = "j_gun",
-        Pos = Vector(-3.5, 0.7, 1.5),
-        Ang = Angle(0, 0, -90),
-        Category =  {"bo1_tactical"}
-    },
-    {
-        PrintName = "Tactical Right",
-        DefaultCompactName = "TAC R",
-        Bone = "j_gun",
-        Pos = Vector(-3.5, -0.7, 1.5),
-        Ang = Angle(0, 0, 90),
-        Category =  {"bo1_tactical"}
-    },
+    -- {
+    --     PrintName = "Tactical Left",
+    --     DefaultCompactName = "TAC L",
+    --     Bone = "j_gun",
+    --     Pos = Vector(-3.5, 0.7, 1.5),
+    --     Ang = Angle(0, 0, -90),
+    --     Category =  {"bo1_tactical"}
+    -- },
+    -- {
+    --     PrintName = "Tactical Right",
+    --     DefaultCompactName = "TAC R",
+    --     Bone = "j_gun",
+    --     Pos = Vector(-3.5, -0.7, 1.5),
+    --     Ang = Angle(0, 0, 90),
+    --     Category =  {"bo1_tactical"}
+    -- },
     {
         PrintName = "Tactical Top",
         DefaultCompactName = "TAC TOP",
