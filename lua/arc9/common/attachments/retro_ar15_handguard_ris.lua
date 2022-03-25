@@ -1,6 +1,6 @@
 ATT.PrintName = [[Carbine RIS Handguard]]
 ATT.CompactName = [[RIS]]
-ATT.Icon = Material("entities/bo1_atts/barrel/barrel.png")
+ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m4.png", "mips smooth")
 ATT.Description = [[RIS Quad-Rail Handguard fitting a carbine barrel, common in modern AR-15s.
 
 Allows for the attachment of alternative front sights, but is otherwise identical to a regular handguard.]]

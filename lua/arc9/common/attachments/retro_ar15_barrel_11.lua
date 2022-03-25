@@ -1,6 +1,6 @@
 ATT.PrintName = [[11.5" XM177E2 Barrel]]
 ATT.CompactName = [[11.5" SOG]]
-ATT.Icon = Material("entities/bo1_atts/barrel/barrel.png")
+ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m4.png", "mips smooth")
 ATT.Description = [[Short carbine-length barrel that belonged to the XM177E2, an early M16 carbine made for the MACV-SOG.
 
 Comes attached with a muzzle devices that reduces both recoil and audible rapport, but cannot fit other muzzle attachments as a result.]]
@@ -16,7 +16,7 @@ ATT.Attachments = {
     {
         PrintName = "Handguard",
         DefaultCompactName = "M4",
-        DefaultIcon = Material("materials/entities/acwatt_bo2_longbarrel.png"),
+        DefaultIcon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m4.png", "mips smooth"),
         Category = "retro_ar15_handguard_11",
         Bone = "j_gun",
         Pos = Vector(0, 0, -2),

@@ -1,6 +1,6 @@
 ATT.PrintName = [[14.5" Carbine Barrel]]
 ATT.CompactName = [[14.5" GOV'T]]
-ATT.Icon = Material("entities/bo1_atts/barrel/barrel.png")
+ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m4.png", "mips smooth")
 ATT.Description = [[Carbine-length 14.5" barrel, standard for M4 rifles.
 
 The shorter barrel length reduces muzzle velocity and effective range. Despite this, its compact form made it overshadow the 20 inch barrel in the modern day.]]
@@ -16,7 +16,7 @@ ATT.Attachments = {
     {
         PrintName = "Handguard",
         DefaultCompactName = "M4",
-        DefaultIcon = Material("materials/entities/acwatt_bo2_longbarrel.png"),
+        DefaultIcon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m4.png", "mips smooth"),
         Category = "retro_ar15_handguard_14",
         Bone = "j_gun",
         Pos = Vector(0, 0, -2),

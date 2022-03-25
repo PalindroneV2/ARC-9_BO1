@@ -1,6 +1,6 @@
 ATT.PrintName = [[M203 Heatshield Handguard]]
 ATT.CompactName = [[HEAT]]
-ATT.Icon = Material("entities/bo1_atts/barrel/barrel.png")
+ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m16.png", "mips smooth")
 ATT.Description = [[
     Heatshield for an M16 barrel, you're not actually supposed to grab it and it is meant to have an M203 attached.
 ]]
