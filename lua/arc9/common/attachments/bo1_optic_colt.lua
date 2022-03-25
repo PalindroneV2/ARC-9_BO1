@@ -32,7 +32,7 @@ ATT.Sights = {
 }
 
 ATT.RTScope = true
-ATT.RTScopeSubmatIndex = 4
+ATT.RTScopeSubmatIndex = 2
 ATT.RTScopeFOV = 10
 ATT.RTScopeRes = 512
 ATT.RTScopeSurface = Material("models/weapons/arc9/bo1/bo1_acogs/acog_lens")
