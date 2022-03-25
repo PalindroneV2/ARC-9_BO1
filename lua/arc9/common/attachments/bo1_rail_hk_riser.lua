@@ -1,7 +1,7 @@
 ATT.PrintName = [[HK Optic Riser]]
 ATT.CompactName = [[HK RISER]]
 ATT.Icon = Material("entities/bo1_atts/barrel/barrel.png")
-ATT.Description = [[Three-Rail RIS Handguard allows for attachment of underbarrels.]]
+ATT.Description = [[Heckler & Koch produced optic riser and attachment point standard for G3-pattern weapons.]]
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false

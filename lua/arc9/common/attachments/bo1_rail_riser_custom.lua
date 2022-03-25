@@ -1,7 +1,7 @@
 ATT.PrintName = [[Custom Optic Riser]]
 ATT.CompactName = [[RISER]]
 ATT.Icon = Material("entities/bo1_atts/barrel/barrel.png")
-ATT.Description = [[Three-Rail RIS Handguard allows for attachment of underbarrels.]]
+ATT.Description = [[Optic Riser with standard rail system that allows attachment of optics.]]
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false

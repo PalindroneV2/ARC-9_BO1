@@ -3,7 +3,9 @@ ATT.CompactName = [[A4]]
 ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m16.png", "mips smooth")
 ATT.Description = [[A long handguard with quad-rail RIS mounts. While usually used for 20" barrels, it can fit a 14.5" barrel with a low profile gas block.
 
-Allows for the attachment of alternative front sights, but is otherwise identical to a regular handguard.]]
+Allows for the attachment of alternative front sights and tactical attachments on all of the 4 rails.
+
+Stats identical to other handguards.]]
 ATT.SortOrder = 2
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
