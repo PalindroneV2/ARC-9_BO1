@@ -17,7 +17,7 @@ ATT.Attachments = {
         Category = "retro_ar15_front_iron_m4",
         UnInstalledElements = {"gasblock_carbine"},
         InstalledElements = {"gasblock_carbine_cut"},
-        ExcludeElements = {"bo1_optic", "bo1_rail_riser", "mw2_m4_irons"},
+        ExcludeElements = {"bo1_optic", "bo1_rail_riser", "mw2_m4_irons", "bo1_tactical"},
         Bone = "j_gun",
         Pos = Vector(-4, 0, -1),
         Ang = Angle(0, 0, 0),
@@ -29,5 +29,30 @@ ATT.Attachments = {
         Pos = Vector(-3, 0, 2.45),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_m203", "bo1_mk", "bo1_grips"},
+    },
+    {
+        PrintName = "Tactical Left",
+        DefaultCompactName = "TAC L",
+        Bone = "j_gun",
+        Pos = Vector(-3.5, 0.7, 1.5),
+        Ang = Angle(0, 0, -90),
+        Category =  {"bo1_tactical"}
+    },
+    {
+        PrintName = "Tactical Right",
+        DefaultCompactName = "TAC R",
+        Bone = "j_gun",
+        Pos = Vector(-3.5, -0.7, 1.5),
+        Ang = Angle(0, 0, 90),
+        Category =  {"bo1_tactical"}
+    },
+    {
+        PrintName = "Tactical Top",
+        DefaultCompactName = "TAC TOP",
+        Bone = "j_gun",
+        Pos = Vector(-3, 0, 0.5),
+        Ang = Angle(0, 0, 180),
+        Category =  {"bo1_tactical_top"},
+        ExcludeElements = {"mw2_m4_top"}
     },
 }

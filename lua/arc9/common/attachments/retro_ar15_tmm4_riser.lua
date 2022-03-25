@@ -32,5 +32,13 @@ ATT.Attachments = {
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 1.5, 0),
         Category = {"bo1_addon_irons"},
-    }
+    },
+    {
+        PrintName = "Tactical Top",
+        DefaultCompactName = "TAC TOP",
+        Bone = "j_gun",
+        Pos = Vector(-7, 0, -0),
+        Ang = Angle(0, 0, 180),
+        Category =  {"bo1_tactical_top"},
+    },
 }

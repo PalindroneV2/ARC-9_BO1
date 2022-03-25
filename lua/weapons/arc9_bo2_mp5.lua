@@ -190,8 +190,8 @@ SWEP.SprintAng = Angle(0, 0, 0)
 SWEP.CustomizePos = Vector(12.5, 40, 4)
 SWEP.CustomizeAng = Angle(90, 0, 0)
 
-SWEP.HolsterPos = Vector(0, 0, 0)
-SWEP.HolsterAng = Angle(0, 0, 0)
+SWEP.RestPos = Vector(0, 0, 0)
+SWEP.RestAng = Angle(0, 0, 0)
 
 SWEP.BarrelLength = 25
 

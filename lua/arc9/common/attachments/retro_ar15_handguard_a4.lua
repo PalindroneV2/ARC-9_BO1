@@ -51,7 +51,7 @@ ATT.Attachments = {
         Bone = "j_gun",
         Pos = Vector(-6, 0, 0.5),
         Ang = Angle(0, 0, 180),
-        Category =  {"bo1_tactical"},
+        Category =  {"bo1_tactical_top"},
         ExcludeElements = {"mw2_m4_irons"}
     },
     {
