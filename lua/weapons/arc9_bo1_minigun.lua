@@ -281,8 +281,8 @@ SWEP.Animations = {
         },
     },
     ["fire"] = {
-        Source = {"fire"},
-        Time = 4 / 60,
+        Source = {"fire_spin"},
+        Time = 60 / 60,
         ShellEjectAt = 0,
         IKTimeLine = {
             {
@@ -305,7 +305,7 @@ SWEP.Animations = {
     },
     ["fire_iron"] = {
         Source = {"fire"},
-        Time = 4 / 60,
+        Time = 60 / 60,
         ShellEjectAt = 0,
         IKTimeLine = {
             {
@@ -316,16 +316,8 @@ SWEP.Animations = {
         },
     },
     ["reload"] = {
-        Source = "reload",
-        Time = 130 / 30,
-        EventTable = {
-            {s = "ArcCW_BO1.M60_Open", t = 20 / 35},
-            {s = "ArcCW_BO1.M60_BoxOff", t = 30 / 35},
-            {s = "ArcCW_BO1.M60_BoxOn", t = 50 / 35},
-            {s = "ArcCW_BO1.M60_Close", t = 70 / 35},
-            {s = "ArcCW_BO1.M60_LidClose", t = 75 / 35},
-            {s = "ArcCW_BO1.M60_Bonk", t = 80 / 35},
-        },
+        Source = "spinup",
+        Time = 70 / 60,
         IKTimeLine = {
             {
                 t = 0,
@@ -333,6 +325,23 @@ SWEP.Animations = {
                 rhik = 1,
             },
         },
+        -- Source = "reload",
+        -- Time = 130 / 30,
+        -- EventTable = {
+        --     {s = "ArcCW_BO1.M60_Open", t = 20 / 35},
+        --     {s = "ArcCW_BO1.M60_BoxOff", t = 30 / 35},
+        --     {s = "ArcCW_BO1.M60_BoxOn", t = 50 / 35},
+        --     {s = "ArcCW_BO1.M60_Close", t = 70 / 35},
+        --     {s = "ArcCW_BO1.M60_LidClose", t = 75 / 35},
+        --     {s = "ArcCW_BO1.M60_Bonk", t = 80 / 35},
+        -- },
+        -- IKTimeLine = {
+        --     {
+        --         t = 0,
+        --         lhik = 1,
+        --         rhik = 1,
+        --     },
+        -- },
     },
     /*
     ["enter_sprint"] = {

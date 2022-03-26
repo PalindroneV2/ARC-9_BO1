@@ -42,7 +42,7 @@ ATT.Attachments = {
     },
     {
         PrintName = "Underbarrel",
-        DefaultName = "None",
+        DefaultCompactName = "UB",
         Bone = "j_gun",
         Pos = Vector(-2, 0, 0.35),
         Ang = Angle(0, 0, 0),

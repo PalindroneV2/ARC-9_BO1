@@ -2,7 +2,7 @@ ATT.PrintName = [[Pistol Suppressor (NATO)]]
 ATT.CompactName = [[SUPP US]]
 ATT.Icon = Material("materials/entities/bo1_atts/barrel/bo1_suppressor.png")
 ATT.Description = [[
-    Carbine-length 14.5" Barrel standard for M4s. Attached by default with a standard round, ribbed handguard.
+    Lightweight can cools and disperses gases leaving the barrel, muffling the firearm's audible report.
 ]]
 ATT.Pros = {}
 ATT.Cons = {}

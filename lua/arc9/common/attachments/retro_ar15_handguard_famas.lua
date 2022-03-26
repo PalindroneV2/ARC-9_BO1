@@ -24,7 +24,6 @@ ATT.IronSights = {
 ATT.Attachments = {
     {
         PrintName = "Optic",
-        DefaultIcon = Material("materials/entities/acwatt_fcg_s13.png"),
         Category = {"bo1_optic_alt"},
         Bone = "j_gun",
         InstalledElements = {"famas_rail"},

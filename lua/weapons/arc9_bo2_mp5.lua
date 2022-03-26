@@ -187,7 +187,7 @@ SWEP.ActiveAng = Angle(0, 0, -5)
 SWEP.SprintPos = Vector(0, 0, 0)
 SWEP.SprintAng = Angle(0, 0, 0)
 
-SWEP.CustomizePos = Vector(12.5, 40, 4)
+SWEP.CustomizePos = Vector(12.5, 25, 6)
 SWEP.CustomizeAng = Angle(90, 0, 0)
 
 SWEP.RestPos = Vector(0, 0, 0)
@@ -371,9 +371,9 @@ SWEP.Attachments = {
         PrintName = "Muzzle",
         Bone = "j_gun",
         Scale = Vector(1,1,1),
-        Pos = Vector(10, 0.2, 1),
+        Pos = Vector(10, 0.15, 0.95),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_muzzle"},
+        Category = {"bo1_muzzle_smg", "bo1_muzzle_pistol"},
         ExcludeElements = {"mp5k", "mp5sd"},
     },
     [4] = {
