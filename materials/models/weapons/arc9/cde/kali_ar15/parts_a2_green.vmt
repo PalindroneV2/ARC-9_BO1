@@ -17,11 +17,10 @@
 	"$envmapfresnel" "0.01"
 	"$envmaptint" "[ .01 .01 .01 ]"
 
-    $detail "models/weapons/arc9/bo1/od_green"
+    $detail "models/weapons/arc9/bo1/cq"
     $detailblendmode 2
     "$detailblendfactor" "0.25"
 	"$detailscale" "10"
-
 }
 
 

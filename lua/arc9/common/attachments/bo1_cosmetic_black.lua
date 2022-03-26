@@ -1,8 +1,8 @@
-ATT.PrintName = "Blood Red"
-ATT.CompactName = "RED"
+ATT.PrintName = "Black Furniture"
+ATT.CompactName = "BLACK"
 ATT.Icon = Material("materials/entities/bo1_generic.png")
 ATT.Description = [[
-    Red look for weapon's furniture.
+    Black look for weapon's furniture.
 ]]
 ATT.Pros = {}
 ATT.Cons = {}

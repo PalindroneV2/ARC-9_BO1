@@ -10,4 +10,7 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = true
 
-ATT.Category = {"bo1_cosmetic"}
+ATT.Category = {
+    "bo1_cosmetic",
+    "bo1_cosmetic_fal"
+}

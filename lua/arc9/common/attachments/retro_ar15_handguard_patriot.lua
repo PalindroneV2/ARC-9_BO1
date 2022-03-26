@@ -21,7 +21,7 @@ ATT.Free = false
 ATT.Model = "models/weapons/arc9/atts/cde_mp5k_nogrip.mdl"
 ATT.Scale = 0.375
 ATT.ModelOffset = Vector(3, 0, -1.5)
-ATT.IconOffset = Vector(-3, 1.5, 0)
+ATT.IconOffset = Vector(0, 0, 0)
 
 ATT.LHIK = true
 ATT.LHIK_Priority = 0

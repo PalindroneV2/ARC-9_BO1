@@ -2,7 +2,7 @@ VertexlitGeneric
 {
 	$basetexture	"models\weapons\arc9\bo1\bo1_fal\fal_c"
 	$bumpmap	"models\weapons\arc9\bo1\bo1_fal\fal_n"
-	$detail	"models\weapons\arc9\bo1\od_green"
+	$detail	"models\weapons\arc9\bo1\true_od"
 	$detailblendmode 4
 	$detailblendfactor 1
     "$detailscale" "5"

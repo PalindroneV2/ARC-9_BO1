@@ -27,7 +27,7 @@ ATT.Attachments = {
         Category = {"bo1_optic_alt"},
         Bone = "j_gun",
         InstalledElements = {"famas_rail"},
-        Pos = Vector(3, 0, -1.9),
+        Pos = Vector(-3, 0, 1.9),
         Ang = Angle(0, 0, 0),
     }
 }

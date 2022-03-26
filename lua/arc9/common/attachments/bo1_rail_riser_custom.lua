@@ -18,7 +18,7 @@ ATT.Attachments = {
     {
         PrintName = "Optic",
         Bone = "j_gun",
-        Pos = Vector(-0.15, 0, -0.625),
+        Pos = Vector(0.3, 0, 0.625),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 1.5),
         Category = {"bo1_optic", "bo1_rail_riser"},
