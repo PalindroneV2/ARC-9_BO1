@@ -1,7 +1,7 @@
 "VertexlitGeneric"
 {
 	"$basetexture" "models/weapons/arc9/bo2/bo2_scarh/scarh_c"
-	$blendtintbybasealpha  "1"
+	
 	"$bumpmap" "models/weapons/arc9/bo2/bo2_scarh/scarh_n"
 
 	$detail "models/weapons/arc9/bo1/tan"
@@ -9,15 +9,13 @@
 	$detailblendmode 4
 	$detailscale 1
 	"$nocull" "1"
-
-	$phong                      		1
-//	$phongexponent                      "20"
-	$phongboost                         "0.5"
-	$phongfresnelranges         "[0.1 0.5 0.5]"
-	$phongalbedotint             "1"
-	$normalmapalphaphongmask    	1
-
-	$envmap 	env_cubemap
-	$envmaptint   "[0.01 0.01 0.01]"
-	$envmapfresnel "1"
+	"$blendtintbybasealpha" "1"
+	"$phong" "1"
+	"$phongboost" "1"
+	"$phongalbedotint" "2"
+	"$PhongFresnelRanges" "[ 2 5 4 ]"
+	"$envmap" "env_cubemap"
+	"$basemapalphaenvmapmask" "1"
+	"$envmapfresnel" "0.01"
+	"$envmaptint" "[ .01 .01 .01 ]"
 }

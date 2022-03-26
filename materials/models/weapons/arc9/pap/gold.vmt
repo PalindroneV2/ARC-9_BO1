@@ -1,7 +1,7 @@
 "VertexlitGeneric"
 {
 	"$basetexture" "models/weapons/arc9/bo1/plastic"
-	$blendtintbybasealpha  "1"
+	
 	"$bumpmap" "models/weapons/arc9/bo1/plastic"
 	
 	$detail		"models\weapons\arc9\bo1\gold_c"
@@ -15,7 +15,7 @@
 	$phongfresnelranges "[0.5 2.5 2.5]"
 	$phongtint "[1 .65 .2]"
 	$phongalbedotint "1"
-	$blendtintbybasealpha  "1"
+	
 	$normalmapalphaenvmapmask "1"
 	
 	$envmap "env_cubemap"

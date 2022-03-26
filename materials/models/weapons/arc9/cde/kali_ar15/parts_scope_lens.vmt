@@ -5,19 +5,17 @@
 	"$bumpmap" "models/weapons/arc9/cde/kali_ar15/Parts_Scope_Lens_N"
 			
 	"$nocull" 1
-	"$translucent" 1	
-
-	"$normalmapalphaenvmapmask" 1				
-	"$envmap" "env_cubemap"					
-	"$envmaptint" "[ .2 .2 .2 ]"					
- 	"$envmapFresnel" "0.5"					
-
-	"$phong" "1"						
-	"$phongexponent" 10
-	"$phongboost" "1"					
-	"$phongfresnelranges"	"[ .2 1.2 8]"	
-
-	"$PhongAlbedoTint" "1"		
+	"$translucent" 1
+	
+	"$blendtintbybasealpha" "1"
+	"$phong" "1"
+	"$phongboost" "1"
+	"$phongalbedotint" "2"
+	"$PhongFresnelRanges" "[ 2 5 4 ]"
+	"$envmap" "env_cubemap"
+	"$basemapalphaenvmapmask" "1"
+	"$envmapfresnel" "0.01"
+	"$envmaptint" "[ .01 .01 .01 ]"
 
 }
 

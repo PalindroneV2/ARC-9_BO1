@@ -1,7 +1,7 @@
 "VertexlitGeneric"
 {
 	"$basetexture" "models/weapons/arc9/bo3/bo3_dg2/dg2_pipe"
-	$blendtintbybasealpha  "1"
+	
 	"$bumpmap" "models/weapons/arc9/bo3/bo3_dg2/dg2_pipe_n"
 	
 	$phong                      		1

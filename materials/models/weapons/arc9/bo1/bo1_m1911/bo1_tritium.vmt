@@ -2,7 +2,7 @@
 {
 	"$basetexture" "models/weapons/arc9/bo1/bo1_m1911/tritium"
 	"$bumpmap" "models/weapons/arc9/bo1/bo1_m1911/tritium_n"
-	$blendtintbybasealpha  "1"
+	
 	$selfillum 1
 	$translucent 1
 }
