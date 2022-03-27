@@ -9,4 +9,4 @@ ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = true
 
 ATT.Category = {"bo1_alt_irons"}
-ATT.ActivateElements = {"bo1_alt_irons"}
+ATT.ActivateElements = {"bo1_irons_alt"}

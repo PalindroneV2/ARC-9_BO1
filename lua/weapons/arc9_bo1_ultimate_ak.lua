@@ -198,6 +198,11 @@ SWEP.BarrelLength = 25
 SWEP.ExtraSightDist = 5
 
 SWEP.AttachmentElements = {
+    ["bo1_irons_alt"] = {
+        Bodygroups = {
+            {2,1}
+        },
+    },
     ["rail"] = {
         Bodygroups = {
             {2,2}
@@ -280,7 +285,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local barrel = 0
     local irons = 0
     local hand = 0
-    local skin = 0
+    local camo = 0
     if attached["bo1_ultimate_ak_barrel_short"] then
         barrel = 1
         irons = 4
@@ -290,11 +295,14 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         irons = 8
         hand = 3
     end
-    if attached["bo1_alternate_irons"] then
+    if attached["bo1_irons_alt"] then
         irons = irons + 1
     end
     if attached["rail"] then
         irons = irons + 2
+    end
+    if attached["bo1_optic_ak"] then
+        irons = irons + 3
     end
     if attached["bo1_ultimate_ak_mag_45_dual"] then
         vm:SetBodygroup(1, 5)
@@ -311,15 +319,16 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     end
 
     if attached["bo1_ultimate_ak_furniture_bakelite"] then
-        skin = 4
+        camo = 4
     elseif attached["bo1_ultimate_ak_furniture_bakelite_black"] then
-        skin = 2
+        camo = 2
     elseif attached["bo1_ultimate_ak_furniture_gold"] then
-        skin = 8
+        camo = 8
     elseif attached["bo1_ultimate_ak_furniture_bakelite_worn"] then
         hand = hand + 1
     elseif attached["bo1_ultimate_ak_furniture_modern"] then
         hand = hand + 2
+        camo = 2
         if barrel == 2 then hand = 5 end
     end
 
@@ -327,15 +336,10 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     vm:SetBodygroup(2, irons)
     vm:SetBodygroup(4, hand)
 
-    vm:SetSkin(skin)
-
-    if attached["bo1_optic_ak"] then
-        vm:SetBodygroup(2,irons + 3)
-    end
+    vm:SetSkin(camo)
 
     local newpos = Vector(-2.425, -2, 0.65)
     local newang = Angle(0.05, 0.4, 0)
-
 
     if attached["bo1_alternate_irons"] then
         newpos = Vector(-2.425, -2, 0.835)
@@ -465,23 +469,16 @@ SWEP.Attachments = {
         Category = {"bo1_optic", "bo1_rail_riser"},
         InstalledElements = {"rail"},
         ExcludeElements = {"nobacksight"},
-        MergeSlots = {7,8}
+        MergeSlots = {7},
     },
     [7] = {
         Hidden = true,
         Bone = "j_gun",
-        Pos = Vector(3.5, 0, 5.025),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_alt_irons"}
-    },
-    [8] = {
-        Hidden = true,
-        Bone = "j_gun",
         Pos = Vector(1.5, 0, 2.6),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic_ak"}
+        Category = {"bo1_optic_ak", "bo1_alt_irons"}
     },
-    [9] = {
+    [8] = {
         PrintName = "Furniture",
         DefaultName = "WOOD",
         Bone = "j_gun",
@@ -489,7 +486,7 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ultimate_ak_furniture"},
     },
-    [10] = {
+    [9] = {
         PrintName = "Magazine",
         DefaultName = "7.62mm 30",
         Bone = "tag_clip",
@@ -498,7 +495,7 @@ SWEP.Attachments = {
         Category = {"bo1_ultimate_ak_mag"},
         ExcludeElements = {"bo1_ultimate_ak_receiver"}
     },
-    [11] = {
+    [10] = {
         PrintName = "Perk-a-Cola",
         DefaultCompactName = "PERK",
         Bone = "j_gun",
