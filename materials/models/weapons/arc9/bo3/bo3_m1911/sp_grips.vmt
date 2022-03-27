@@ -3,9 +3,9 @@
 	"$basetexture" "models/weapons/arc9/bo3/bo3_m1911/base/base_c"
 	"$bumpmap" "models/weapons/arc9/bo3/bo3_m1911/base/base_n"
 
-	"$detail" "models/weapons/arc9/bo1/tan"
+	"$detail" "models/weapons/arc9/bo1/m14_wood"
 	$detailblendmode "1"
-	$detailblendfactor 0.05
+	$detailblendfactor 0.3
 	"$detailscale" "1"
 	
 	

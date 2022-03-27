@@ -19,7 +19,7 @@ ATT.Attachments = {
         PrintName = "Muzzle",
         DefaultCompactName = "Birdcage",
         Bone = "j_gun",
-        Pos = Vector(12, 0, -1.5),
+        Pos = Vector(-12, 0, 1.5),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_muzzle"},
     },

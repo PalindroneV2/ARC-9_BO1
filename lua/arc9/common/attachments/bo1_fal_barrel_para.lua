@@ -12,28 +12,6 @@ ATT.Free = false
 ATT.Category = {"bo1_fal_barrel"}
 ATT.ActivateElements = {"barrel_para"}
 
--- ATT.Attachments = {
---     {
---         PrintName = "Muzzle",
---         DefaultCompactName = "Birdcage",
---         Bone = "j_gun",
---         Pos = Vector(11, 0, -0.45),
---         Ang = Angle(0, 0, 0),
---         Category = {"bo1_muzzle"},
---     },
---     {
---         PrintName = "Underbarrel",
---         DefaultCompactName = "UB",
---         Bone = "j_gun",
---         Pos = Vector(-2, 0, 0.35),
---         Ang = Angle(0, 0, 0),
---         Category = {"bo1_m203", "bo1_mk", "bo1_rail_underbarrel"},
---         ExcludeElements = {"ar15_ris"}
---     },
--- }
-
--- ATT.MuzzleEffectQCA = 1
-
 ATT.SpreadMult = 1.15
 ATT.RecoilMult = 1.1
 ATT.SpreadMultHipFire = 0.9

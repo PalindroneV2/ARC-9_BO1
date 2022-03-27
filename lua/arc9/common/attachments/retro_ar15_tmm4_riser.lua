@@ -13,12 +13,13 @@ ATT.Model = "models/weapons/arc9/item/mw2_m4_top.mdl"
 ATT.Scale = Vector(0.375, 0.375, 0.375)
 ATT.ModelOffset = Vector(1.5 , 0, -0.35)
 ATT.ModelAngleOffset = Angle(0,0,0)
+ATT.RequireElements = {"ris_carbine"}
 
 ATT.Attachments = {
     {
         PrintName = "Optic",
         Bone = "j_gun",
-        Pos = Vector(0, 0, 0.35),
+        Pos = Vector(0, 0, -0.35),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 1),
         Category = {"bo1_optic", "bo1_rail_riser", "mw3e_deagle_tactical"},
@@ -37,7 +38,7 @@ ATT.Attachments = {
         PrintName = "Tactical Top",
         DefaultCompactName = "TAC TOP",
         Bone = "j_gun",
-        Pos = Vector(7, 0, 0),
+        Pos = Vector(-7, 0, 0),
         Ang = Angle(0, 0, 180),
         Icon_Offset = Vector(0, 0, -1),
         Category =  {"bo1_tactical_top"},

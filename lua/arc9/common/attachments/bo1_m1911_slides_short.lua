@@ -11,4 +11,4 @@ ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = true
 
 ATT.Category = {"bo1_m1911_slides"}
-ATT.ActivateElements = {"1911_slide_short", "muzzlechange"}
+ATT.ActivateElements = {"1911_slide_short", "shortbarrel"}

@@ -11,16 +11,4 @@ ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = true
 
 ATT.Category = {"bo1_m1911_slides"}
-ATT.ActivateElements = {"1911_slide_baller", "muzzlechange"}
-
-ATT.Attachments = {
-    {
-        PrintName = "Muzzle",
-        DefaultCompactName = "Muzz",
-        Bone = "j_gun",
-        Scale = Vector(1,1,1),
-        Pos = Vector(-9.7, 0.2, 0.6),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_muzzle_pistol"},
-    },
-}
+ATT.ActivateElements = {"1911_slide_baller", "longbarrel"}

@@ -199,6 +199,20 @@ SWEP.BarrelLength = 9
 SWEP.ExtraSightDist = 15
 
 SWEP.AttachmentElements = {
+    ["longbarrel"] = {
+        AttPosMods = {
+            [2] = {
+                Pos = Vector(7.875, 0.165, 1.05)
+            },
+        },
+    },
+    ["shortbarrel"] = {
+        AttPosMods = {
+            [2] = {
+                Pos = Vector(4.65, 0.165, 1.05)
+            },
+        },
+    },
 }
 
 SWEP.Hook_ModifyBodygroups = function(self, data)
@@ -263,7 +277,7 @@ SWEP.Attachments = {
         PrintName = "Perk-a-Cola",
         DefaultCompactName = "PERK",
         Bone = "j_gun",
-        Pos = Vector(-10, 0, -10),
+        Pos = Vector(-5, 0, -5),
         Ang = Angle(0, 0, 0),
         Category = "bo1_perkacola",
     },
@@ -272,10 +286,9 @@ SWEP.Attachments = {
         DefaultCompactName = "Muzz",
         Bone = "j_gun",
         Scale = Vector(1,1,1),
-        Pos = Vector(5.6, 0.185, 1.05),
+        Pos = Vector(5.66, 0.165, 1.05),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_muzzle_pistol"},
-        ExcludeElements = {"muzzlechange"}
     },
     {
         PrintName = "Slide",
