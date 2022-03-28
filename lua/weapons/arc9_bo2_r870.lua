@@ -3,18 +3,18 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ARC-9 - Black Ops II" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "SRM 1216"
-SWEP.Class = "Combat Shotgun"
+SWEP.PrintName = "Remington 870"
+SWEP.Class = "Shotgun"
 SWEP.Description = [[
-12 gauge automatic combat shotgun with a detachable cylindrical magazine containing four tubes that hold 4 shells each. Manual operation is needed to switch from one tube to another.
+    12 gauge pump-action shotgun widely used by civilians, law enforcement and even militaries. It's incredibly reliable operation makes it incredibly popular.
 ]]
 SWEP.Trivia = {
-    Manufacturer = "SRM Arms",
+    Manufacturer = "Remington",
     Calibre = "12 Gauge",
-    Mechanism = "Delayed Blowback",
-    Country = "Russia",
-    Year = 2011,
-    Games = [[Black Ops II]]
+    Mechanism = "Pump-Action",
+    Country = "USA",
+    Year = 1950,
+    Games = [[BO2]]
 }
 SWEP.Credits = {
     Author = "Palindrone"
@@ -24,9 +24,8 @@ SWEP.Slot = 2
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/arc9/c_bo2_m1216.mdl"
-SWEP.WorldModel = "models/weapons/arc9/w_bo2_m1216.mdl"
-SWEP.WorldModelMirror = "models/weapons/arc9/w_bo2_m1216.mdl"
+SWEP.ViewModel = "models/weapons/arc9/c_bo2_r870.mdl"
+SWEP.WorldModel = "models/weapons/arc9/c_bo2_r870.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
     Pos        =    Vector(-3.3, 4, -5.8),
@@ -38,8 +37,8 @@ SWEP.DesiredViewModelFOV = 50
 
 SWEP.DefaultBodygroups = "000000000"
 
-SWEP.DamageMax = 12
-SWEP.DamageMin = 6 -- damage done at maximum range
+SWEP.DamageMax = 16
+SWEP.DamageMin = 8 -- damage done at maximum range
 SWEP.RangeMax = 3000
 SWEP.RangeMin = 750
 SWEP.Penetration = 2
@@ -64,8 +63,8 @@ SWEP.TracerEffect = "ARC9_tracer" -- The effect to use for hitscan tracers
 SWEP.TracerColor = Color(255, 255, 255) -- Color of tracers. Only works if tracer effect supports it. For physical bullets, this is compressed down to 9-bit color.
 
 SWEP.ChamberSize = 0 -- dont fucking change this again.
-SWEP.ClipSize = 16 -- DefaultClip is automatically set.
-SWEP.ShotgunReload = false
+SWEP.ClipSize = 6 -- DefaultClip is automatically set.
+SWEP.ShotgunReload = true
 SWEP.ReloadTime = 1
 
 SWEP.Crosshair = true
@@ -117,18 +116,18 @@ SWEP.SpeedMultBlindFire = 1
 SWEP.AimDownSightsTime = 0.11
 SWEP.SprintToFireTime = 0.14
 
-SWEP.RPM = 468
+SWEP.RPM = 312
 SWEP.Num = 8
 SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
-        Mode = -1,
+        Mode = 1,
     },
 }
-SWEP.ManualActionChamber = 4 -- How many shots we go between needing to cycle again.
+SWEP.ManualActionChamber = 1 -- How many shots we go between needing to cycle again.
 SWEP.ManualAction = true -- Pump/bolt action. Play the "cycle" animation after firing, when the trigger is released.
-SWEP.ManualActionNoLastCycle = true -- Do not cycle on the last shot.
-SWEP.CycleTime = 0.75
+SWEP.ManualActionNoLastCycle = false -- Do not cycle on the last shot.
+SWEP.CycleTime = 1
 
 SWEP.NPCWeaponType = {"weapon_shotgun"}
 SWEP.NPCWeight = 100
@@ -146,7 +145,7 @@ SWEP.ShootVolume = 125
 SWEP.ShootPitch = 100
 SWEP.ShootPitchVariation = 0
 
-SWEP.ShootSound = "ARC9_BO2.1216_Fire"
+SWEP.ShootSound = "ARC9_BO2.870_Fire"
 SWEP.ShootSoundSilenced = "ARC9_BO2.S12_Sil"
 SWEP.DistantShootSound = {"^weapons/arc9/bo2_generic_shotgun/dist/0.wav", "^weapons/arc9/bo2_generic_shotgun/dist/1.wav"}
 
@@ -160,7 +159,7 @@ SWEP.ShellScale = 1.5
 SWEP.MuzzleEffectQCA = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectQCA = 2 -- which attachment to put the case effect on
 SWEP.ProceduralViewQCA = nil
-SWEP.CamQCA = 3
+SWEP.CamQCA = 4
 
 SWEP.BulletBones = {
 }
@@ -171,8 +170,8 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(-2.9, 0, 1),
-    Ang = Angle(-.02, 0.03, 0),
+    Pos = Vector(-2.5, 0, 0.6),
+    Ang = Angle(0.1, -0.25, 0),
     Magnification = 1.1,
     SwitchToSound = "", -- sound that plays when switching to this sight
 }
@@ -201,10 +200,31 @@ SWEP.BarrelLength = 25
 
 SWEP.ExtraSightDist = 5
 
+SWEP.HideBones = {
+    "j_ammo",
+    "tag_fast_mag",
+    "tag_brass",
+}
+SWEP.ReloadHideBoneTables = {
+    [1] = {"j_ammo"},
+    [2] = {"tag_fast_mag"},
+    [3] = {"tag_brass"},
+}
+
 SWEP.AttachmentElements = {
-    ["mount"] = {
+    ["stock_l"] = {
         Bodygroups = {
-            {1,2},
+            {2,1}
+        },
+    },
+    ["stock_m"] = {
+        Bodygroups = {
+            {2,2}
+        },
+    },
+    ["r870_mcs"] = {
+        Bodygroups = {
+            {1,2}
         },
     },
 }
@@ -212,73 +232,65 @@ SWEP.AttachmentElements = {
 SWEP.Hook_ModifyBodygroups = function(self, data)
 
     local vm = data.model
-    --local attached = data.elements
-    local CUSTSTATE = self:GetCustomize()
+    local attached = data.elements
 
-    if CUSTSTATE then
-        vm:SetBodygroup(0,1)
-    else
-        vm:SetBodygroup(0,0)
+    if attached["bo1_irons_alt"] then
+        vm:SetBodygroup(1,1)
+    end
+    if attached["r870_mcs"] and attached["bo2_fastmag"] then
+        vm:SetBodygroup(3,1)
     end
 
-
 end
-
 
 SWEP.Hook_TranslateAnimation = function (self, anim)
     local attached = self:GetElements()
 
-    if attached["bo1_fastmag"] then
-        if anim == "reload" then
-            return "fast"
+    if attached["bo2_fastmag"] then
+        if anim == "reload_start" then
+            return "reload_start_fast"
         end
-        if anim == "reload_empty" then
-            return "fast_empty"
+        if anim == "reload_insert" then
+            return "reload_insert_fast"
+        end
+        if anim == "reload_end" then
+            return "reload_end_fast"
         end
     end
 end
 
 SWEP.Attachments = {
-    [1] = {
-        PrintName = "Optic",
+    {
+        PrintName = "Optic Rail",
         Bone = "j_gun",
-        Pos = Vector(2, 0, 3.75),
+        Pos = Vector(5, 0.075, 3),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic", "bo1_rail_riser"},
-        InstalledElements = {"mount"},
-        ExcludeElements = {"stock_l"},
+        Category = {"bo1_rail_optic", "bo2_r870_rail"},
     },
-    [2] = {
-        PrintName = "Muzzle",
-        Bone = "j_gun",
-        Scale = Vector(1,1,1),
-        Pos = Vector(21, 0, 2.6),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_muzzle_shotty"},
-    },
-    [3] = {
-        PrintName = "Firing Group",
-        DefaultCompactName = "AUTO",
-        Bone = "j_gun",
-        Pos = Vector(0.15, 0, 1.1),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_fcg"},
-    },
-    [4] = {
-        PrintName = "Magazine",
-        DefaultCompactName = "Standard",
-        Bone = "tag_clip",
-        Pos = Vector(6, 0, 0),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo2_fastmag"},
-    },
-    [5] = {
+    {
         PrintName = "Perk-a-Cola",
         DefaultCompactName = "PERK",
         Bone = "j_gun",
-        Pos = Vector(-10, 0, -10),
+        Pos = Vector(-5, 0, -5),
         Ang = Angle(0, 0, 0),
         Category = "bo1_perkacola",
+    },
+    {
+        PrintName = "Stock",
+        Bone = "j_gun",
+        Pos = Vector(-7.5, 0, 0),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_stock_lm"},
+        Installed = "bo1_stock_light",
+    },
+    {
+        PrintName = "Ammo Type",
+        DefaultCompactName = "00 BUCK",
+        Bone = "j_gun",
+        Pos = Vector(6, 0, 1),
+        Ang = Angle(0, 0, 0),
+        Category = "bo2_fastmag",
+        ExcludeElements = {"r870_mcs"},
     },
 }
 
@@ -290,114 +302,141 @@ SWEP.Animations = {
     ["draw"] = {
         Source = "draw",
         Time = 1,
-        LHIK = true,
-        LHIKIn = 0.25,
-        LHIKOut = 0.25,
     },
     ["holster"] = {
         Source = "holster",
-        Time = 1,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.25,
+        Time = 0.75,
     },
     ["ready"] = {
         Source = "first_draw",
-        Time = 59 / 30,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.2,
+        Time = 2,
         EventTable = {
-            {s = "ARC9_BO2.1216_Twist", t = 0.5 / 1.15},
+            {s = "ARC9_BO2.Shotgun_Back", t = 14 / 30},
+            {s = "ARC9_BO2.Shotgun_Fwd", t = 21 / 30}
         },
     },
     ["fire"] = {
         Source = {
             "fire",
         },
-        Time = 9 / 30,
-        ShellEjectAt = 0,
+        Time = 3 / 10,
+        ShellEjectAt = 0.15,
     },
     ["fire_iron"] = {
         Source = {
             "fire_ads",
         },
-        Time = 9 / 30,
-        ShellEjectAt = 0,
+        Time = 3 / 10,
     },
     ["cycle"] = {
         Source = {
-            "cycle",
+            "pump",
         },
-        Time = 0.83,
+        Time = 20 / 35,
+        ShellEjectAt = 0.3,
         EventTable = {
-            {s = "ARC9_BO2.1216_Twist", t = 0.25},
+            {s = "ARC9_BO2.Shotgun_Back", t = 2 / 30},
+            {s = "ARC9_BO2.Shotgun_Fwd", t = 7 / 30},
         },
     },
     ["cycle_iron"] = {
         Source = {
-            "cycle_ads",
+            "pump_ads",
         },
-        Time = 0.83,
+        Time = 20 / 35,
+        --ShellEjectAt = 0.3,
         EventTable = {
-            {s = "ARC9_BO2.1216_Twist", t = 0.5 / 1.15},
+            {s = "ARC9_BO2.Shotgun_Back", t = 2 / 30},
+            {s = "ARC9_BO2.Shotgun_Fwd", t = 7 / 30},
         },
     },
-    ["reload"] = {
-        Source = "reload",
-        Time = 3.2,
-        LHIK = true,
-        LHIKIn = 0,
-        LHIKOut = 0.4,
-        EventTable = {
-            {s = "ARC9_BO2.1216_Out", t = 0.5 / 1.15},
-            {s = "ARC9_BO2.1216_In", t = 2.4 / 1.15},
-        },
-    },
-    ["reload_empty"] = {
-        Source = "reload_empty",
-        Time = 3.83,
-        LHIK = true,
-        LHIKIn = 0,
-        LHIKOut = 0.4,
-        EventTable = {
-            {s = "ARC9_BO2.Shotgun_Back", t = 0.25},
-            {s = "ARC9_BO2.1216_Out", t = 0.9},
-            {s = "ARC9_BO2.1216_In", t = 2},
-            {s = "ARC9_BO2.Shotgun_Back", t = 2.7},
-            {s = "ARC9_BO2.Shotgun_Fwd", t = 2.9},
-        },
-    },
-    ["fast"] = {
-        Source = "fast",
-        Time = 2.5,
-        LHIK = true,
-        LHIKIn = 0,
-        LHIKOut = 0.4,
-        EventTable = {
-            {s = "ARC9_BO2.1216_Out", t = 0.1},
-            {s = "ARC9_BO2.1216_In", t = 1.2},
-        },
+    -- ["reload_start"] = {
+    --     Source = "reload_in",
+    --     Time = 40 / 30,
+    --     RestoreAmmo = 1, -- loads a shell since the first reload has a shell in animation
+    --     MinProgress = 1,
+    --     EventTable = {
+    --         {s = "ARC9_BO2.Shotgun_Shell", t = 21 / 30},
+    --     },
+    -- },
+    -- ["reload_insert"] = {
+    --     Source = "reload_loop",
+    --     Time = 26 / 30,
+    --     MinProgress = 15 / 30,
+    --     EventTable = {
+    --         {s = "ARC9_BO2.Shotgun_Shell", t = 10 / 30},
+    --     },
+    -- },
+    -- ["reload_finish"] = {
+    --     Source = "reload_out",
+    --     Time = 30 / 30,
+    --     EventTable = {
+    --         {s = "ARC9_BO2.Shotgun_Back", t = 8 / 30},
+    --         {s = "ARC9_BO2.Shotgun_Fwd", t = 12 / 30},
+    --     },
+    -- },
+
+    --RELOADS
+
+    ["reload_start"] = {
+        Source = "reload_in",
+        Time = 40 / 30,
+        RestoreAmmo = 1, -- loads a shell since the first reload has a shell in animation
         MinProgress = 1,
-    },
-    ["fast_empty"] = {
-        Source = "fast_empty",
-        Time = 3,
-        LHIK = true,
-        LHIKIn = 0,
-        LHIKOut = 0.4,
-        MinProgress = 1.8,
-        Mult = 0.75,
         EventTable = {
-            {s = "ARC9_BO2.1216_Out", t = 0.1},
-            {s = "ARC9_BO2.1216_In", t = 1.2},
-            {s = "ARC9_BO2.Shotgun_Back", t = 1.6},
-            {s = "ARC9_BO2.Shotgun_Fwd", t = 1.7},
+            {s = "ARC9_BO2.Shotgun_Shell", t = 21 / 30},
         },
     },
+    ["reload_insert"] = {
+        Source = "reload_loop",
+        Time = 26 / 30,
+        MinProgress = 15 / 30,
+        EventTable = {
+            {s = "ARC9_BO2.Shotgun_Shell", t = 10 / 30},
+        },
+    },
+    ["reload_finish"] = {
+        Source = "reload_out",
+        Time = 30 / 30,
+        EventTable = {
+            {s = "ARC9_BO2.Shotgun_Back", t = 8 / 30},
+            {s = "ARC9_BO2.Shotgun_Fwd", t = 12 / 30},
+        },
+    },
+
+    --FAST
+
+    ["reload_start_fast"] = {
+        Source = "reload_in_fast",
+        Time = 40 / 30,
+        RestoreAmmo = 2, -- loads a shell since the first reload has a shell in animation
+        MinProgress = 1,
+        EventTable = {
+            {s = "ARC9_BO2.Shotgun_Shell", t = 21 / 30},
+        },
+    },
+    ["reload_insert_fast"] = {
+        Source = "reload_loop_fast",
+        Time = 26 / 30,
+        MinProgress = 15 / 30,
+        EventTable = {
+            {s = "ARC9_BO2.Shotgun_Shell", t = 10 / 30},
+        },
+    },
+    ["reload_finish_fast"] = {
+        Source = "reload_out_fast",
+        Time = 30 / 30,
+        EventTable = {
+            {s = "ARC9_BO2.Shotgun_Back", t = 8 / 30},
+            {s = "ARC9_BO2.Shotgun_Fwd", t = 12 / 30},
+        },
+    },
+
+    -- SPRINT
+
     ["enter_sprint"] = {
         Source = "sprint_in",
-        Time = 1
+        Time = 1,
     },
     ["idle_sprint"] = {
         Source = "sprint_loop",
@@ -405,6 +444,6 @@ SWEP.Animations = {
     },
     ["exit_sprint"] = {
         Source = "sprint_out",
-        Time = 1
+        Time = 1,
     },
 }

@@ -17,7 +17,7 @@
 
 	"$envmap" "env_cubemap"					
 	"$envmaptint" "[ .05 .05 .05 ]"					
-	"$envmapFresnel" "1"
+	"$envmapfresnel" "0.01"
 	"$selfillum" "1"
 	"$translucent" "1"
 }

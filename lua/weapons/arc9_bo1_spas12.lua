@@ -135,7 +135,7 @@ SWEP.FreeAimRadiusMultSights = 0
 
 SWEP.SwayMultSights = 0
 
-SWEP.Ammo = "smg1" -- what ammo type the gun uses
+SWEP.Ammo = "buckshot" -- what ammo type the gun uses
 
 SWEP.ShootVolume = 125
 SWEP.ShootPitch = 100
@@ -218,17 +218,6 @@ SWEP.AttachmentElements = {
     ["mount"] = {
         Bodygroups = {
             {1,1},
-        },
-        Elements = {
-            {
-                Model = "models/weapons/arc9/item/bo2_rail.mdl",
-                Bone = "tag_weapon",
-                Scale = Vector(0.375, 0.375, 0.375),
-                Offset = {
-                    pos = Vector(-1, 0.3, 0.1),
-                    ang = Angle(0, 0, 0),
-                }
-            }
         },
     },
 }

@@ -315,6 +315,16 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"bo1_m1911_cosmetics"},
     },
+    {
+        PrintName = "Tactical",
+        DefaultCompactName = "TAC",
+        Bone = "j_gun",
+        Scale = Vector(0.75,0.75,0.75),
+        Pos = Vector(2.75, 0.175, 0.175),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_tactical", "bo1_pistol_rail"},
+        CorrectiveAng = Angle(0.05, 0.2, 0),
+    },
 }
 
 SWEP.Animations = {
