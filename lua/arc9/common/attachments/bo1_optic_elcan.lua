@@ -25,7 +25,7 @@ ATT.ModelOffset = Vector(-0.25, 0, -0.1)
 ATT.Sights = {
     {
         Pos = Vector(-0, 6.5, -1.295),
-        Ang = Angle(0, 0, 0),
+        Ang = Angle(0, 0.1, 0),
         Magnification = 1,
         IgnoreExtra = true
     },
@@ -37,5 +37,6 @@ ATT.RTScopeFOV = 10
 ATT.RTScopeRes = 512
 ATT.RTScopeSurface = Material("models/weapons/arc9/bocw/bocw_elcan/lens")
 ATT.RTScopeReticle = Material("hud/arc9_bo1/scopes/bocw_elcan_cross.png", "mips smooth")
+ATT.RTScopeReticleScale = 0.95
 ATT.RTScopeShadowIntensity = 0.1
 ATT.RTScopeNoPP = false

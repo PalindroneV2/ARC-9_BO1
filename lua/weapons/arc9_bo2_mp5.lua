@@ -369,6 +369,7 @@ SWEP.Attachments = {
         Pos = Vector(-7.5, 0, 0),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_stocks","bo1_mp5_stock"},
+        Installed = "bo1_stock_light",
     },
     [3] = {
         PrintName = "Muzzle",

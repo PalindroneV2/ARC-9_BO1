@@ -24,7 +24,7 @@ ATT.ModelOffset = Vector(-0.5, 0, 0)
 ATT.Sights = {
     {
         Pos = Vector(0, 7, -1.42),
-        Ang = Angle(0, 0, 0),
+        Ang = Angle(0, 0.1, 0),
         Magnification = 1.25,
         IgnoreExtra = true
     },
@@ -36,6 +36,7 @@ ATT.RTScopeFOV = 12
 ATT.RTScopeRes = 1024
 ATT.RTScopeReticle = Material("hud/arc9_bo1/scopes/bo1_thermal_us.png", "mips smooth")
 ATT.RTScopeShadowIntensity = 1
+ATT.RTScopeReticleScale = 0.8
 ATT.RTScopeNoPP = false
 ATT.RTScopeNoShadow = true
 

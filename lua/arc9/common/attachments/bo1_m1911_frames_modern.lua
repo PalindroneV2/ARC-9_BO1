@@ -2,7 +2,7 @@ ATT.PrintName = "Springfield Armory Modern Frame"
 ATT.CompactName = "Modern"
 ATT.Icon = Material("materials/entities/bo1_atts/cosmetic/bo3_1911.png")
 ATT.Description = [[
-    Modern M1911 platform Frame with improved safety and hammer.
+    Modern M1911 platform Frame with improved ambidextrous safety and a dove-tail to protect the shooter from hammer bite.
 ]]
 ATT.Pros = {}
 ATT.Cons = {}

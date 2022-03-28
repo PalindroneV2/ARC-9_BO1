@@ -202,15 +202,25 @@ SWEP.AttachmentElements = {
     ["longbarrel"] = {
         AttPosMods = {
             [2] = {
-                Pos = Vector(7.875, 0.165, 1.05)
+                Pos = Vector(7.875, 0.175, 1.05)
             },
         },
     },
     ["shortbarrel"] = {
         AttPosMods = {
             [2] = {
-                Pos = Vector(4.65, 0.165, 1.05)
+                Pos = Vector(4.65, 0.175, 1.05)
             },
+        },
+    },
+    ["newhammer"] = {
+        Bodygroups = {
+            {3,1},
+        },
+    },
+    ["newtrigger"] = {
+        Bodygroups = {
+            {4,1},
         },
     },
 }
@@ -223,10 +233,14 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local newang = Angle(-0.15, 0.1, 0)
     local slide = 0
     local finish = 0
+    local comp = 0
+
+    if attached["m1911_comp"] then
+        comp = 1
+    end
 
     if attached["1911_frame_modern"] then
         vm:SetBodygroup(0,1)
-        vm:SetBodygroup(3,1)
     end
     if attached["1911_slide_modern"] then
         slide = 1
@@ -235,14 +249,31 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     end
     if attached["1911_slide_short"] then
         slide = 2
+        if attached["m1911_comp"] then
+            comp = 2
+        end
     end
     if attached["1911_slide_short_modern"] then
         slide = 3
         newpos = Vector(-2.53, 3, 0.925)
         newang = Angle(-0.1, 0, 0)
+        if attached["m1911_comp"] then
+            comp = 2
+        end
     end
     if attached["1911_slide_baller"] then
         slide = 4
+        if attached["m1911_comp"] then
+            comp = 3
+        end
+    end
+    if attached["1911_slide_baller_modern"] then
+        slide = 5
+        newpos = Vector(-2.53, 3, 0.925)
+        newang = Angle(-0.1, 0, 0)
+        if attached["m1911_comp"] then
+            comp = 3
+        end
     end
 
     if attached["nickel"] then
@@ -255,6 +286,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
 
     vm:SetBodygroup(1,slide)
     vm:SetBodygroup(2,slide)
+    vm:SetBodygroup(5, comp)
     vm:SetSkin(finish)
 
     self.IronSights = {
@@ -286,16 +318,16 @@ SWEP.Attachments = {
         DefaultCompactName = "Muzz",
         Bone = "j_gun",
         Scale = Vector(1,1,1),
-        Pos = Vector(5.66, 0.165, 1.05),
+        Pos = Vector(5.66, 0.175, 1.05),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_muzzle_pistol"},
+        Category = {"bo1_muzzle_pistol", "bo1_m1911_compensator"},
     },
     {
         PrintName = "Slide",
         DefaultCompactName = "G.I. Slide",
         Bone = "j_bolt",
         Scale = Vector(1,1,1),
-        Pos = Vector(0, 0, 0),
+        Pos = Vector(2, 0, 0),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_m1911_slides"},
     },
@@ -303,9 +335,25 @@ SWEP.Attachments = {
         PrintName = "Frame",
         DefaultCompactName = "G.I. Frame",
         Bone = "j_gun",
-        Pos = Vector(0, 0, 0),
+        Pos = Vector(-1, 0, -1),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_m1911_frames"},
+    },
+    {
+        PrintName = "Trigger",
+        DefaultCompactName = "G.I. Trigger",
+        Bone = "j_gun",
+        Pos = Vector(1, 0, -0.1),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_m1911_trigger"},
+    },
+    {
+        PrintName = "Hammer",
+        DefaultCompactName = "G.I. Hammer",
+        Bone = "j_press_rear",
+        Pos = Vector(0, 0, 1),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_m1911_hammer"},
     },
     {
         PrintName = "Finish",

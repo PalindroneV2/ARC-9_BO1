@@ -23,7 +23,7 @@ ATT.ModelOffset = Vector(0, 0, 0)
 
 ATT.Sights = {
     {
-        Pos = Vector(0, 7, -1.4),
+        Pos = Vector(-0.005, 7, -1.41),
         Ang = Angle(0, 0, 0),
         Magnification = 1.25,
         IgnoreExtra = false
@@ -35,6 +35,7 @@ ATT.RTScopeSubmatIndex = 2
 ATT.RTScopeFOV = 11
 ATT.RTScopeRes = 1024
 ATT.RTScopeReticle = Material("hud/arc9_bo1/reticles/bo2_mms.png", "mips smooth")
+ATT.RTScopeReticleScale = 1.25
 ATT.RTScopeShadowIntensity = 1
 ATT.RTScopeNoPP = false
 ATT.RTScopeNoShadow = true
