@@ -11,6 +11,7 @@ ATT.Free = true
 ATT.Category = {"bo1_addon_irons_2"}
 ATT.ActivateElements = {"mw2_m4_irons"}
 ATT.RequireElements = {"carbine"}
+ATT.ExcludeElements = {"handguard_a4"}
 
 ATT.Model = "models/weapons/arc9/item/mw3_m4_irons.mdl"
 ATT.Scale = Vector(1, 1, 1)
