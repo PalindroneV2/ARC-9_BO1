@@ -252,7 +252,7 @@ SWEP.AttachmentElements = {
                 Pos = Vector(21, 0.2, 2.3),
             },
             [4] = {
-                Pos = Vector(0.5, 0.125, 3.85),
+                Pos = Vector(2.5, 0.125, 3.85),
             },
         },
     },

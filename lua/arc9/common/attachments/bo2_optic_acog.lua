@@ -40,4 +40,4 @@ ATT.RTScopeReticle = Material("hud/arc9_bo1/scopes/bo2_acog.png", "mips smooth")
 ATT.RTScopeReticleScale = 0.7
 ATT.RTScopeShadowIntensity = 1.5
 ATT.RTScopeNoPP = false
-ATT.RTScopeColor = Color(255, 0, 0)
+ATT.RTScopeColorable = true
