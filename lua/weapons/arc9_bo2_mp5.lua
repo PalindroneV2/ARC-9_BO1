@@ -299,7 +299,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         Pos = newpos,
         Ang = newang,
         Magnification = 1.1,
-        CrosshairInSights = true,
+        CrosshairInSights = false,
     }
 
 end

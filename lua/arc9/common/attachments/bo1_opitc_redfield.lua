@@ -33,7 +33,11 @@ ATT.Sights = {
 
 ATT.RTScope = true
 ATT.RTScopeSubmatIndex = 5
-ATT.RTScopeFOV = 3
+ATT.RTScopeFOV = 2
+ATT.RTScopeFOVMax = 2
+ATT.RTScopeFOVMin = 8
+ATT.RTScopeAdjustable = true
+ATT.RTScopeAdjustmentLevels = 4
 ATT.RTScopeRes = 1024
 ATT.RTScopeSurface = Material("models/weapons/arc9/bo1/bo1_acogs/longscope_lens")
 ATT.RTScopeReticle = Material("hud/arc9_bo1/scopes/bo1_l96.png", "mips smooth")

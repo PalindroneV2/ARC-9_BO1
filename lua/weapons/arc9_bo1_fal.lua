@@ -363,7 +363,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(10.5, 0.1, 1.65),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_rail_underbarrel"},
+        Category = {"bo1_rail_underbarrel", "bo1_m203", "bo1_mk"},
         ExcludeElements = {"barrel_osw"},
     },
     {

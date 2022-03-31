@@ -352,6 +352,26 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"bo2_fastmag"},
     },
+    [8] = {
+        Hidden = true,
+        Bone = "j_gun",
+        Pos = Vector(10, 0, 3.6),
+        Ang = Angle(0, 0, 0),
+        Category = {"bocw_ak5_intgrip"},
+        Installed = "bocw_ak5_grip",
+        -- Integral = true,
+    },
+}
+
+SWEP.HideBones = {
+    -- "tag_clip",
+    "tag_fast_mag",
+    "tag_clip_full",
+}
+SWEP.ReloadHideBoneTables = {
+    [1] = {"tag_clip"},
+    [2] = {"tag_fast_mag"},
+    [3] = {"tag_clip_full"},
 }
 
 SWEP.Animations = {
@@ -535,7 +555,7 @@ SWEP.Animations = {
         },
         EventTable = {
             {s = "ARC9_BO2.AR_MagOut", t = 0.8},
-            {s = "ARC9_BO2.AR_MagIn", t = 1.25}
+            {s = "ARC9_BO2.AR_MagIn", t = 1.25},
         },
         MinProgress = 1.4,
     },

@@ -218,9 +218,19 @@ SWEP.AttachmentElements = {
             {3,1},
         },
     },
+    ["hdhammer"] = {
+        Bodygroups = {
+            {3,2},
+        },
+    },
     ["newtrigger"] = {
         Bodygroups = {
             {4,1},
+        },
+    },
+    ["hdtrigger"] = {
+        Bodygroups = {
+            {4,2},
         },
     },
 }
@@ -242,6 +252,16 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     if attached["1911_frame_modern"] then
         vm:SetBodygroup(0,1)
     end
+    if attached["1911_frame_hd"] then
+        vm:SetBodygroup(0,2)
+        if !attached["newhammer"] then
+            vm:SetBodygroup(3,2)
+        end
+        if !attached["newtrigger"] then
+            vm:SetBodygroup(4,2)
+        end
+        slide = 6
+    end
     if attached["1911_slide_modern"] then
         slide = 1
         newpos = Vector(-2.53, 3, 0.925)
@@ -251,6 +271,9 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         slide = 2
         if attached["m1911_comp"] then
             comp = 2
+        end
+        if attached["1911_frame_hd"] then
+            slide = 7
         end
     end
     if attached["1911_slide_short_modern"] then
@@ -265,6 +288,9 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         slide = 4
         if attached["m1911_comp"] then
             comp = 3
+        end
+        if attached["1911_frame_hd"] then
+            slide = 8
         end
     end
     if attached["1911_slide_baller_modern"] then

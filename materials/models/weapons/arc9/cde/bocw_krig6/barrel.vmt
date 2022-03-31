@@ -1,27 +1,16 @@
-"VertexlitGeneric"
+"VertexLitGeneric"
 {
-	"$basetexture" "models\weapons\arc9\cde\bocw_krig6\barrel"
+	"$basetexture" "models\weapons\arc9\cde\bocw_krig6\barrel_c"
 	"$bumpmap" "models\weapons\arc9\cde\bocw_krig6\barrel_n"
-
-	"$detail" "models\weapons\arc9\cde\bocw_krig6\barrel_s"
-	"$detailscale" "1"        
-	"$detailblendfactor" "0.15"     
-	"$detailblendmode" "1"
-
+	"$phongexponenttexture" "models\weapons\arc9\cde\bocw_krig6\barrel_m"
 	"$color2" "[.7 .7 .7]"
 	"$blendtintbybasealpha" "1"
 	"$phong" "1"
-	"$phongboost" "1"
+	"$phongboost" "4"
 	"$phongalbedotint" "2"
 	"$PhongFresnelRanges" "[ 2 5 4 ]"
 	"$envmap" "env_cubemap"
 	"$basemapalphaenvmapmask" "1"
 	"$envmapfresnel" "0.01"
 	"$envmaptint" "[ .01 .01 .01 ]"
-
-	"$phongexponenttexture" "models\weapons\arc9\cde\bocw_krig6\exponent"
-	"$cloakPassEnabled" 		"1"
-
-	"$nocull" "1"
-
 }
