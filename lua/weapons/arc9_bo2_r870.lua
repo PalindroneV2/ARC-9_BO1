@@ -190,6 +190,9 @@ SWEP.ActiveAng = Angle(0, 0, 0)
 SWEP.SprintPos = Vector(0, -1.5, 0)
 SWEP.SprintAng = Angle(0, 0, 0)
 
+SWEP.CrouchPos = Vector(0, 0, -1)
+SWEP.CrouchAng = Angle(0, 0, -5)
+
 SWEP.CustomizePos = Vector(12.5, 40, 4)
 SWEP.CustomizeAng = Angle(90, 0, 0)
 
@@ -222,23 +225,25 @@ SWEP.AttachmentElements = {
             {2,2}
         },
     },
-    ["r870_mcs"] = {
-        Bodygroups = {
-            {1,2}
-        },
-    },
+    -- ["r870_mcs"] = {
+    --     Bodygroups = {
+    --         {1,2}
+    --     },
+    -- },
 }
 
 SWEP.Hook_ModifyBodygroups = function(self, data)
 
     local vm = data.model
     local attached = data.elements
-
+    if attached["r870_mcs"] then
+        vm:SetBodygroup(1,2)
+        if attached["bo2_fastmag"] then
+            vm:SetBodygroup(3,1)
+        end
+    end
     if attached["bo1_irons_alt"] then
         vm:SetBodygroup(1,1)
-    end
-    if attached["r870_mcs"] and attached["bo2_fastmag"] then
-        vm:SetBodygroup(3,1)
     end
 
 end
@@ -290,7 +295,6 @@ SWEP.Attachments = {
         Pos = Vector(6, 0, 1),
         Ang = Angle(0, 0, 0),
         Category = "bo2_fastmag",
-        ExcludeElements = {"r870_mcs"},
     },
 }
 

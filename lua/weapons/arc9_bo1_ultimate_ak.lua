@@ -388,7 +388,7 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
         suffix = "_gp25"
     elseif attached["bo1_ubgl_tishina"] then
         suffix = "_tishina"
-    elseif attached["bo1_ubgl_mkey"] then
+    elseif attached["bo1_ubgl_mk"] then
         suffix = "_mk"
     elseif attached["bo1_ultimate_ak_receiver_rpk"] then
         suffix = "_rpk"

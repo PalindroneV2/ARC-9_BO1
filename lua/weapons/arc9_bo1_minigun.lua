@@ -119,9 +119,6 @@ SWEP.Firemodes = {
     {
         Mode = -1,
     },
-    {
-        Mode = 1,
-    },
 }
 SWEP.NPCWeaponType = {"weapon_ar2"}
 SWEP.NPCWeight = 1
@@ -142,7 +139,7 @@ SWEP.ShootPitchVariation = 0
 SWEP.FirstShootSound = "ARC9_BO1.Minigun_Start"
 SWEP.ShootSoundLooping = "ARC9_BO1.Minigun_ShootLoop"
 SWEP.DistantShootSound = "ARC9_BO1.Minigun_Ring"
-SWEP.ShootSoundWindDown = "ARC9_BO1.Minigun_End"
+SWEP.ShootSoundTail = "ARC9_BO1.Minigun_End"
 
 --SWEP.MuzzleEffect = "muzzleflash_4"
 SWEP.MuzzleParticle = "muzzleflash_ak47" -- Used for some muzzle effects.
@@ -192,7 +189,7 @@ SWEP.CrouchAng = Angle(0, 0, 0)
 SWEP.SprintPos = Vector(0, -2, -1)
 SWEP.SprintAng = Angle(0, 0, 0)
 
-SWEP.CustomizePos = Vector(20, 60, 7.5)
+SWEP.CustomizePos = Vector(20, 40, 7.5)
 SWEP.CustomizeAng = Angle(90, 0, 0)
 
 SWEP.RestPos = Vector(0, 0, 0)
@@ -209,12 +206,16 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
 
     local vm = data.model
     local CUSTSTATE = self:GetCustomize()
-    -- local attached = data.elements
+    local attached = data.elements
 
     if CUSTSTATE then
         vm:SetBodygroup(0,0)
     else
         vm:SetBodygroup(0,1)
+    end
+
+    if attached["bo1_pap"] then
+        vm:SetSkin(2)
     end
 end
 
@@ -226,6 +227,14 @@ SWEP.Attachments = {
         Pos = Vector(-5, 0, -5),
         Ang = Angle(0, 0, 0),
         Category = "bo1_perkacola",
+    },
+    [2] = {
+        PrintName = "Ammunition",
+        DefaultCompactName = "AMMO",
+        Bone = "j_gun",
+        Pos = Vector(-5, 0, 0),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_ammo", "bo1_pap"},
     },
 }
 

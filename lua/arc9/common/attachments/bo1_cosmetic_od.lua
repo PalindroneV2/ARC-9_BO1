@@ -12,5 +12,6 @@ ATT.Free = true
 
 ATT.Category = {
     "bo1_cosmetic",
-    "bo1_cosmetic_fal"
+    "bo1_cosmetic_fal",
+    "bo1_cosmetic_g3",
 }

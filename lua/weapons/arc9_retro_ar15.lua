@@ -444,7 +444,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     if length == 3 and attached["bo1_ubgl_m203"] then -- SHORTEN M203 ON 10.5 BARREL
         vm:SetBodygroup(4, 2)
     end
-    if length > 0 and attached["bo1_ubgl_mkey"] then
+    if length > 0 and attached["bo1_ubgl_mk"] then
         vm:SetBodygroup(4, 3)
     end
     if hand == 8 then -- FAMAS
@@ -565,7 +565,7 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
 
     if attached["bo1_ubgl_m203"] then
         suffix = "_m203"
-    elseif attached["bo1_ubgl_mkey"] then
+    elseif attached["bo1_ubgl_mk"] then
         suffix = "_mk"
     else
         suffix = ""

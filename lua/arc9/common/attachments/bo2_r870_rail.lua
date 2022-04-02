@@ -13,18 +13,10 @@ ATT.Attachments = {
     {
         PrintName = "Optic",
         Bone = "j_gun",
-        Pos = Vector(-0.3, 0, -0.625),
+        Pos = Vector(-1.05, 0, -0.4),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 1.5),
         Category = {"bo1_optic", "bo1_rail_riser", "bo1_alt_irons"},
-    },
-    {
-        PrintName = "Ammo Type",
-        DefaultCompactName = "00 BUCK",
-        Bone = "j_gun",
-        Pos = Vector(-1, 0, 3),
-        Ang = Angle(0, 0, 0),
-        Category = "bo2_fastmag",
     },
     {
         PrintName = "Tactical Right",
