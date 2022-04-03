@@ -215,7 +215,7 @@ SWEP.AttachmentElements = {
 SWEP.Hook_ModifyBodygroups = function(self, data)
 
     local vm = data.model
-    --local attached = data.elements
+    local attached = data.elements
     local CUSTSTATE = self:GetCustomize()
 
     if CUSTSTATE then
@@ -224,6 +224,9 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         vm:SetBodygroup(0,0)
     end
 
+    if attached["bo1_pap"] then
+        vm:SetSkin(3)
+    end
 
 end
 
@@ -271,7 +274,7 @@ SWEP.Attachments = {
         PrintName = "Magazine",
         DefaultCompactName = "Standard",
         Bone = "tag_clip",
-        Pos = Vector(6, 0, 0),
+        Pos = Vector(10, 0, 0),
         Ang = Angle(0, 0, 0),
         Category = {"bo2_fastmag"},
     },
@@ -282,6 +285,14 @@ SWEP.Attachments = {
         Pos = Vector(-10, 0, -10),
         Ang = Angle(0, 0, 0),
         Category = "bo1_perkacola",
+    },
+    [6] = {
+        PrintName = "Ammunition",
+        DefaultCompactName = "AMMO",
+        Bone = "tag_clip",
+        Pos = Vector(4, 0, 0),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_ammo", "bo1_pap"},
     },
 }
 

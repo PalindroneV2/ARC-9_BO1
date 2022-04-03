@@ -268,6 +268,9 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     if attached["bo2_fastmag"] then
         vm:SetBodygroup(5, 1)
     end
+    if attached["bo1_pap"] then
+        vm:SetSkin(2)
+    end
 
 end
 
@@ -361,11 +364,19 @@ SWEP.Attachments = {
         Installed = "bocw_ak5_grip",
         -- Integral = true,
     },
+    [9] = {
+        PrintName = "Ammunition",
+        DefaultCompactName = "AMMO",
+        Bone = "j_gun",
+        Pos = Vector(6, 0, -3),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_ammo", "bo1_pap"},
+    },
 }
 
 SWEP.HideBones = {
     -- "tag_clip",
-    "tag_fast_mag",
+    -- "tag_fast_mag",
     "tag_clip_full",
 }
 SWEP.ReloadHideBoneTables = {

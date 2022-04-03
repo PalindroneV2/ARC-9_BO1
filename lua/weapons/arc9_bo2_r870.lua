@@ -246,6 +246,16 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         vm:SetBodygroup(1,1)
     end
 
+    local camo = 0
+    if attached["bo1_cosmetic_wood"] then
+        camo = 1
+    end
+    if attached["bo1_pap"] then
+        camo = camo + 2
+    end
+
+    vm:SetSkin(camo)
+
 end
 
 SWEP.Hook_TranslateAnimation = function (self, anim)
@@ -295,6 +305,14 @@ SWEP.Attachments = {
         Pos = Vector(6, 0, 1),
         Ang = Angle(0, 0, 0),
         Category = "bo2_fastmag",
+    },
+    {
+        PrintName = "Ammunition",
+        DefaultCompactName = "AMMO",
+        Bone = "j_gun",
+        Pos = Vector(6, 0, -1.25),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_ammo", "bo1_pap"},
     },
 }
 

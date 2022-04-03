@@ -442,7 +442,6 @@ SWEP.Attachments = {
         Pos = Vector(16, 0, 3),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_bipod"},
-
     }
 }
 

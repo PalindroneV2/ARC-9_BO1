@@ -21,7 +21,7 @@ ATT.RangeMaxMult = 1.5
 ATT.RangeMinMult = 1.5
 ATT.PhysBulletMuzzleVelocityMult = 1.55
 
-ATT.MuzzleParticle = "pap_heavy_flame"
+ATT.MuzzleParticle = "rgmk2_pap_flash"
 
 ATT.TracerNum = 1
 ATT.TracerFinalMag = 5

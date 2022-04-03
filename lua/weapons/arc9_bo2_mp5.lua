@@ -295,6 +295,10 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         vm:SetBodygroup(6,0)
     end
 
+    if attached["bo1_pap"] then
+        vm:SetSkin(3)
+    end
+
     self.IronSights = {
         Pos = newpos,
         Ang = newang,
@@ -416,19 +420,19 @@ SWEP.Attachments = {
         PrintName = "Magazine",
         DefaultCompactName = "30 RND",
         Bone = "tag_clip",
-        Pos = Vector(0, 0, 0),
+        Pos = Vector(1, 0, -2),
         Ang = Angle(0, 0, 0),
-        Category = "bo1_fastmag",
-        MergeSlots = {9},
+        Category = {"bo1_fastmag", "bo1_mp5_mag"},
+        -- MergeSlots = {9},
         ExcludeElements = {"mp5k"},
     },
     [9] = {
-        Hidden = true,
+        PrintName = "Ammunition",
+        DefaultCompactName = "AMMO",
         Bone = "tag_clip",
-        Pos = Vector(0, 0, 0),
+        Pos = Vector(2, 0, -4),
         Ang = Angle(0, 0, 0),
-        Category = "bo1_mp5_mag",
-        ExcludeElements = {"mp5k"},
+        Category = {"bo1_ammo", "bo1_pap"},
     },
 }
 
@@ -957,12 +961,12 @@ SWEP.Animations = {
                 rhik = 1
             },
             {
-                t = 0.85,
+                t = 0.8,
                 lhik = 0,
                 rhik = 1
             },
             {
-                t = 0.95,
+                t = 0.9,
                 lhik = 1,
                 rhik = 1
             },
@@ -1026,7 +1030,7 @@ SWEP.Animations = {
                 rhik = 1
             },
             {
-                t = 0.8,
+                t = 0.85,
                 lhik = 1,
                 rhik = 1
             },
@@ -1156,12 +1160,12 @@ SWEP.Animations = {
                 rhik = 1
             },
             {
-                t = 0.85,
+                t = 0.7,
                 lhik = 0,
                 rhik = 1
             },
             {
-                t = 0.95,
+                t = 0.85,
                 lhik = 1,
                 rhik = 1
             },
@@ -1189,12 +1193,12 @@ SWEP.Animations = {
                 rhik = 1
             },
             {
-                t = 0.85,
+                t = 0.8,
                 lhik = 0,
                 rhik = 1
             },
             {
-                t = 0.95,
+                t = 0.9,
                 lhik = 1,
                 rhik = 1
             },

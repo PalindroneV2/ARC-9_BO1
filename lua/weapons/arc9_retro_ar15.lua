@@ -544,6 +544,10 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         camo = 10
     end
 
+    if attached["bo1_pap"] then
+        camo = camo + 1
+    end
+
     vm:SetSkin(camo)
 
     --SLING
@@ -582,7 +586,7 @@ SWEP.Attachments = {
         Pos = Vector(2.5, 0, 3),
         Ang = Angle(0, 0, 0),
         Category = {"retro_ar15_upper"},
-        ExcludeElements = {"handguard_famas"},
+        ExcludeElements = {"handguard_famas", "is_patriot"},
     },
     [2] = {
         PrintName = "Magazine",
@@ -608,7 +612,8 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"retro_ar15_stock"},
         Installed = "retro_ar15_stock_full",
-        MergeSlots = {12}
+        MergeSlots = {12},
+        ExcludeElements = {"is_patriot"},
     },
     [5] = {
         PrintName = "Muzzle",
@@ -617,7 +622,7 @@ SWEP.Attachments = {
         Pos = Vector(24, 0, 2.25),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_muzzle"},
-        ExcludeElements = {"carbine"}
+        ExcludeElements = {"carbine", "is_patriot"}
     },
     [6] = {
         PrintName = "Underbarrel",
@@ -625,7 +630,7 @@ SWEP.Attachments = {
         Pos = Vector(11, 0, 1.35),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_m203", "bo1_mk", "bo1_rail_underbarrel"},
-        ExcludeElements = {"carbine", "no_ub_rail"},
+        ExcludeElements = {"carbine", "no_ub_rail", "is_patriot"},
     },
     [7] = {
         PrintName = "Handguard",
@@ -644,6 +649,7 @@ SWEP.Attachments = {
         Pos = Vector(0.15, 0, 1.1),
         Ang = Angle(0, 0, 0),
         Category = {"retro_ar15_lower"},
+        ExcludeElements = {"is_patriot"},
     },
     [9] = {
         PrintName = "Optic",
@@ -652,7 +658,7 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"bo1_optic", "bo1_rail_riser"},
         InstalledElements = {"classicrail"},
-        ExcludeElements = {"a4_top", "handguard_famas"},
+        ExcludeElements = {"a4_top", "handguard_famas", "is_patriot"},
     },
     [10] = {
         PrintName = "Cosmetic",
@@ -682,7 +688,15 @@ SWEP.Attachments = {
         Pos = Vector(15, 0.6, 2),
         Ang = Angle(0, 0, -90),
         Category = {"bo1_rail_tactical"},
-        ExcludeElements = {"no_tac_rail", "carbine"},
+        ExcludeElements = {"no_tac_rail", "carbine", "is_patriot"},
+    },
+    [14] = {
+        PrintName = "Ammunition",
+        DefaultCompactName = "AMMO",
+        Bone = "tag_clip",
+        Pos = Vector(1, 0, -4.25),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_ammo", "bo1_pap"},
     },
 }
 

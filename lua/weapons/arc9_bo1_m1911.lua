@@ -313,6 +313,19 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     vm:SetBodygroup(1,slide)
     vm:SetBodygroup(2,slide)
     vm:SetBodygroup(5, comp)
+
+    if attached["bo1_pap"] then
+        finish = finish + 4
+        if finish == 5 then
+            finish = finish - 1
+        end
+        if finish == 6 then
+            finish = finish - 2
+        end
+        if finish == 9 then
+            finish = finish - 5
+        end
+    end
     vm:SetSkin(finish)
 
     self.IronSights = {
@@ -398,6 +411,14 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"bo1_tactical", "bo1_pistol_rail"},
         CorrectiveAng = Angle(0.05, 0.2, 0),
+    },
+    {
+        PrintName = "Ammunition",
+        DefaultCompactName = "AMMO",
+        Bone = "j_gun",
+        Pos = Vector(-1.25, 0, -3),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_ammo", "bo1_pap", "bo1_pap_1911"},
     },
 }
 

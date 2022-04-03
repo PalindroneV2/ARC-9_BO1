@@ -336,6 +336,10 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     vm:SetBodygroup(2, irons)
     vm:SetBodygroup(4, hand)
 
+    if attached["bo1_pap"] then
+        camo = camo + 1
+    end
+
     vm:SetSkin(camo)
 
     local newpos = Vector(-2.425, -2, 0.65)
@@ -496,6 +500,14 @@ SWEP.Attachments = {
         ExcludeElements = {"bo1_ultimate_ak_receiver"}
     },
     [10] = {
+        PrintName = "Ammunition",
+        DefaultCompactName = "AMMO",
+        Bone = "tag_clip",
+        Pos = Vector(2, 0, -4),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_ammo", "bo1_pap", "bo1_pap_1911"},
+    },
+    [11] = {
         PrintName = "Perk-a-Cola",
         DefaultCompactName = "PERK",
         Bone = "j_gun",

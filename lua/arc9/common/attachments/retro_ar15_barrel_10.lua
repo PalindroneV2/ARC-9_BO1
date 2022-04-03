@@ -30,6 +30,7 @@ ATT.Attachments = {
         Pos = Vector(-7.5, 0, -0.5),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_muzzle"},
+        ExcludeElements = {"is_patriot"},
     },
     {
         PrintName = "Cosmetic II",
@@ -47,7 +48,7 @@ ATT.Attachments = {
         Pos = Vector(-2, 0, 0.35),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_m203", "bo1_rail_underbarrel"},
-        ExcludeElements = {"ar15_ris"}
+        ExcludeElements = {"ar15_ris", "is_patriot"}
     },
 }
 
