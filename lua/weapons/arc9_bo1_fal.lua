@@ -313,8 +313,14 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
 
     if attached["bo1_ubgl_m203"] then
         suffix = "_m203"
-    elseif attached["bo1_ubgl_mkey"] then
+        if self:GetUBGL() then
+            suffix = "_glsetup"
+        end
+    elseif attached["bo1_ubgl_mk"] then
         suffix = "_mk"
+        if self:GetUBGL() then
+            suffix = "_mksetup"
+        end
     else
         suffix = ""
     end
@@ -776,7 +782,7 @@ SWEP.Animations = {
             },
         },
     },
-    ["reload_glsetup"] = {
+    ["reload_ubgl_glsetup"] = {
         Source = "reload_glsetup",
         Time = 3,
         EventTable = {
@@ -793,7 +799,7 @@ SWEP.Animations = {
             },
         },
     },
-    ["reload_glsetup_soh"] = {
+    ["reload_ubgl_glsetup_soh"] = {
         Source = "reload_glsetup",
         Time = 3 / 2,
         EventTable = {
@@ -1029,7 +1035,7 @@ SWEP.Animations = {
             },
         },
     },
-    ["pump_mksetup"] = {
+    ["cycle_mksetup"] = {
         Source = "pump_mksetup",
         Time = 0.75,
         IKTimeLine = {
@@ -1044,7 +1050,7 @@ SWEP.Animations = {
             {s = "ARC9_BO1.MK_Fwd", t = 10 / 30 },
         }
     },
-    ["reload_start_mksetup"] = {
+    ["reload_ubgl_start_mksetup"] = {
         Source = "reload_in_mksetup",
         Time = 35 / 30,
         IKTimeLine = {
@@ -1058,7 +1064,7 @@ SWEP.Animations = {
             --{s = "ARC9_BO1.M203_Open", t = 0.125},
         }
     },
-    ["reload_loop_mksetup"] = {
+    ["reload_ubgl_insert_mksetup"] = {
         Source = "reload_loop_mksetup",
         Time = 33 / 30,
         EventTable = {
@@ -1072,9 +1078,10 @@ SWEP.Animations = {
             },
         },
     },
-    ["reload_finish_mksetup"] = {
+    ["reload_ubgl_finish_mksetup"] = {
         Source = "reload_out_mksetup",
         Time = 50 / 30,
+        RestoreAmmo = 1,
         EventTable = {
             {s = "ARC9_BO1.MK_Back", t = 20 / 30 },
             {s = "ARC9_BO1.MK_Fwd", t = 25 / 30 },
