@@ -330,6 +330,13 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
         suffix = ""
     end
 
+    if anim == "enter_ubgl" and attached["bo1_ubgl_mk"] then
+        return "enter_ubgl_mksetup"
+    end
+    if anim == "exit_ubgl" and attached["bo1_ubgl_mk"] then
+        return "exit_ubgl_mksetup"
+    end
+
     return anim .. suffix
 end
 
@@ -398,6 +405,13 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ammo", "bo1_pap"},
     },
+}
+
+SWEP.HideBones = {
+    "tag_ammo2",
+}
+SWEP.ReloadHideBoneTables = {
+    [1] = {"tag_ammo2"},
 }
 
 SWEP.Animations = {
@@ -971,7 +985,7 @@ SWEP.Animations = {
             },
         },
     },
-    ["in_mksetup"] = {
+    ["enter_ubgl_mksetup"] = {
         Source = "mksetup_in",
         Time = 0.5,
         IKTimeLine = {
@@ -982,7 +996,7 @@ SWEP.Animations = {
             },
         },
     },
-    ["out_mksetup"] = {
+    ["exit_ubgl_mksetup"] = {
         Source = "mksetup_out",
         Time = 0.5,
         IKTimeLine = {

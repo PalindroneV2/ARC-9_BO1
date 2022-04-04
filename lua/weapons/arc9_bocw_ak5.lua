@@ -925,7 +925,7 @@ SWEP.Animations = {
             },
         },
     },
-    ["reload_glsetup"] = {
+    ["reload_ubgl_glsetup"] = {
         Source = "reload_glsetup",
         Time = 3,
         IKTimeLine = {

@@ -29,6 +29,9 @@ ATT.ShootSoundUBGL = "ARC9_BO1.MK_Fire"
 ATT.DistantShootSoundUBGL = false
 ATT.HasSightsUBGL = false
 
+ATT.EnterUBGLSound = "ARC9_BO1.MK_Back"
+ATT.ExitUBGLSound = "ARC9_BO1.MK_Fwd"
+
 ATT.MuzzleParticleUBGL = "muzzleflash_m3"
 
 ATT.SpreadUBGL = 0.05

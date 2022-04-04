@@ -414,6 +414,29 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
         suffix = ""
     end
 
+    if anim == "enter_ubgl" then
+        if attached["bo1_gp25"] then
+            return "enter_ubgl_gp25"
+        end
+        if attached["bo1_tishina"] then
+            return "enter_ubgl_tishina"
+        end
+        if attached["bo1_mk"] then
+            return "enter_ubgl_mk"
+        end
+    end
+    if anim == "exit_ubgl" then
+        if attached["bo1_gp25"] then
+            return "exit_ubgl_gp25"
+        end
+        if attached["bo1_tishina"] then
+            return "exit_ubgl_tishina"
+        end
+        if attached["bo1_mk"] then
+            return "exit_ubgl_mk"
+        end
+    end
+
     if anim == "reload" then
         if attached["bo1_ultimate_ak_mag_drum"] then
             return "drum"
@@ -529,6 +552,13 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = "bo1_perkacola",
     },
+}
+
+SWEP.HideBones = {
+    "tag_ammo2",
+}
+SWEP.ReloadHideBoneTables = {
+    [1] = {"tag_ammo2"},
 }
 
 SWEP.Animations = {
@@ -722,25 +752,17 @@ SWEP.Animations = {
 
 -- UBGL IN ANIMS -----------------------------------------------------------------
 
-    ["enter_ubgl"] = {
+    ["enter_ubgl_gp25"] = {
         Source = "gp25setup_in",
         Time = 0.5,
     },
-    ["exit_ubgl"] = {
+    ["exit_ubgl_gp25"] = {
         Source = "gp25setup_out",
         Time = 0.5
     },
     ["idle_gp25setup"] = {
         Source = "idle_gp25setup",
         Time = 1 / 30,
-    },
-    ["in_gp25setup"] = {
-        Source = "gp25setup_in",
-        Time = 0.5,
-    },
-    ["out_gp25setup"] = {
-        Source = "gp25setup_out",
-        Time = 0.5,
     },
     ["fire_gp25setup"] = {
         Source = "fire_gp25setup",
@@ -780,6 +802,134 @@ SWEP.Animations = {
     },
     ["exit_sprint_gp25setup"] = {
         Source = "sprint_out_gp25setup",
+        Time = 10 / 30
+    },
+
+    -- TISHINA
+
+    ["idle_tishina"] = {
+        Source = "idle_tishina",
+        Time = 1 / 30,
+    },
+    ["draw_tishina"] = {
+        Source = "draw_tishina",
+        Time = 1,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0.25,
+    },
+    ["holster_tishina"] = {
+        Source = "holster_tishina",
+        Time = 0.75,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0.25,
+    },
+    ["ready_tishina"] = {
+        Source = "first_draw_tishina",
+        Time = 1,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKOut = 0.25,
+        EventTable = {
+            {s = "ARC9_BO1.AK_Charge", t = 22 / 35}
+        },
+    },
+    ["fire_tishina"] = {
+        Source = {"fire_tishina"},
+        Time = 0.5,
+        ShellEjectAt = 0,
+    },
+    ["fire_iron_tishina"] = {
+        Source = {"fire_ads_tishina"},
+        Time = 0.5,
+        ShellEjectAt = 0,
+    },
+    ["reload_tishina"] = {
+        Source = "reload_tishina",
+        Time = 90 / 35,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        EventTable = {
+            {s = "ARC9_BO1.AK_MagOut", t = 21 / 35},
+            {s = "ARC9_BO1.AK_MagIn", t = 63 / 35}
+        },
+    },
+    ["reload_empty_tishina"] = {
+        Source = "reload_empty_tishina",
+        Time = 120 / 35,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        EventTable = {
+            {s = "ARC9_BO1.AK_MagOut", t = 21 / 35},
+            {s = "ARC9_BO1.AK_MagIn", t = 63 / 35},
+            {s = "ARC9_BO1.AK_BoltBack", t = 85 / 35},
+            {s = "ARC9_BO1.AK_BoltFwd", t = 95 / 35},
+        },
+    },
+    ["enter_sprint_tishina"] = {
+        Source = "sprint_in_tishina",
+        Time = 10 / 30
+    },
+    ["idle_sprint_tishina"] = {
+        Source = "sprint_loop_tishina",
+        Time = 30 / 40
+    },
+    ["exit_sprint_tishina"] = {
+        Source = "sprint_out_tishina",
+        Time = 10 / 30
+    },
+
+-- UBGL IN ANIMS -----------------------------------------------------------------
+
+    ["enter_ubgl_tishina"] = {
+        Source = "tishinasetup_in",
+        Time = 0.5,
+    },
+    ["exit_ubgl_tishina"] = {
+        Source = "tishinasetup_out",
+        Time = 0.5
+    },
+    ["idle_tishinasetup"] = {
+        Source = "idle_tishinasetup",
+        Time = 1 / 30,
+    },
+    ["fire_tishinasetup"] = {
+        Source = "fire_tishinasetup",
+        Time = 0.7,
+        TPAnim = ACT_HL2MP_GESTURE_RANGE_ATTACK_REVOLVER,
+        TPAnimStartTime = 0,
+    },
+    ["reload_ubgl_tishinasetup"] = {
+        Source = "reload_tishinasetup",
+        Time = 3,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
+        TPAnimStartTime = 0.1,
+        EventTable = {
+            {s = "ARC9_BO1.M203_40mmOut", t = 18 / 30},
+            {s = "ARC9_BO1.M203_40mmIn", t = 60 / 30},
+            {s = "ARC9_BO1.M203_Close", t = 70 / 30},
+        }
+    },
+    ["reload_ubgl_tishinasetup_soh"] = {
+        Source = "reload_tishinasetup",
+        Time = 3 / 2,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
+        TPAnimStartTime = 0.1,
+        EventTable = {
+            {s = "ARC9_BO1.M203_40mmOut", t = 18 / 60},
+            {s = "ARC9_BO1.M203_40mmIn", t = 60 / 60},
+            {s = "ARC9_BO1.M203_Close", t = 70 / 60},
+        }
+    },
+    ["enter_sprint_tishinasetup"] = {
+        Source = "sprint_in_tishinasetup",
+        Time = 10 / 30
+    },
+    ["idle_sprint_tishinasetup"] = {
+        Source = "sprint_loop_tishinasetup",
+        Time = 30 / 40
+    },
+    ["exit_sprint_tishinasetup"] = {
+        Source = "sprint_out_tishinasetup",
         Time = 10 / 30
     },
 
@@ -868,17 +1018,17 @@ SWEP.Animations = {
 
     -- MK IN ANIMS --
 
-    ["idle_mksetup"] = {
-        Source = "idle_mksetup",
-        Time = 1 / 30,
-    },
-    ["in_mksetup"] = {
+    ["enter_ubgl_mk"] = {
         Source = "mksetup_in",
         Time = 0.5,
     },
-    ["out_mksetup"] = {
+    ["exit_ubgl_mk"] = {
         Source = "mksetup_out",
         Time = 0.5,
+    },
+    ["idle_mksetup"] = {
+        Source = "idle_mksetup",
+        Time = 1 / 30,
     },
     ["fire_mksetup"] = {
         Source = "fire_mksetup",
