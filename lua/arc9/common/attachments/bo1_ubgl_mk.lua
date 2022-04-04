@@ -33,11 +33,18 @@ ATT.MuzzleParticleUBGL = "muzzleflash_m3"
 
 ATT.SpreadUBGL = 0.05
 ATT.NumUBGL = 8
+
 ATT.RecoilUBGL = 2
 ATT.RecoilKickUBGL = 1
+
 ATT.DamageMaxUBGL = 15
 ATT.DamageMinUBGL = 4
 ATT.RangeUBGL = 500
+ATT.PenetrationUBGL = 2
+ATT.DamageTypeUBGL = DMG_BUCKSHOT
+ATT.PhysBulletMuzzleVelocityUBGL = 9000
+ATT.RPMUBGL = 600
+ATT.ShootVolumeUBGL = 110
 
 ATT.ManualActionUBGL = true
 ATT.ShotgunReloadUBGL = true

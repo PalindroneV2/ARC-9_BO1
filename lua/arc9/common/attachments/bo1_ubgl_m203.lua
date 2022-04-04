@@ -24,6 +24,7 @@ ATT.UBGLClipSize = 1
 ATT.UBGLFiremode = 1
 ATT.UBGLFiremodeName = "M203"
 ATT.UBGLChamberSize = 0
+ATT.ShootVolumeUBGL = 110
 
 ATT.FirstShootSoundUBGL = false
 ATT.ShootSoundUBGL = "weapons/arc9/bo1_m16/40mm_fire.wav"
