@@ -378,6 +378,14 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
             newang = Angle(0.05, 0, 0)
         end
     end
+    if attached["bo1_tishina"] then
+        newpos = Vector(-2.425, -2, 1.35)
+        newang = Angle(0.025, -0.35, 0)
+        if attached["bo1_alternate_irons"] then
+            newpos = Vector(-2.415, -2, 1.05)
+            newang = Angle(0.05, 0.5, 0)
+        end
+    end
 
     self.IronSights = {
         Pos = newpos,

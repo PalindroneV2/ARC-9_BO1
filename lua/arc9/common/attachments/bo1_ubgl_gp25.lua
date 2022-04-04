@@ -31,6 +31,9 @@ ATT.ShootSoundUBGL = "ARC9_BO1.M203_Fire"
 ATT.DistantShootSoundUBGL = false
 ATT.HasSightsUBGL = false
 
+ATT.EnterUBGLSound = "ARC9_BO1.M203_Open"
+ATT.ExitUBGLSound = "ARC9_BO1.M203_Close"
+
 ATT.ShootEntUBGL = "arc9_bo1_gp25_he"
 ATT.ShootEntForceUBGL = 15000
 
