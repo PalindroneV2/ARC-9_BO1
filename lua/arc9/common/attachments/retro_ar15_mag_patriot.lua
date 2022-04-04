@@ -13,7 +13,7 @@ ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Category = {"retro_ar15_mag"}
-ATT.ActivateElements = {"100_mag", "is_patriot"}
+ATT.ActivateElements = {"100_mag", "is_patriot", "no_ubgl"}
 ATT.InfiniteAmmo = true
 ATT.BottomlessClip = true
 ATT.RequireElements = {"bo1_pap" and "handguard_patriot"}

@@ -1,8 +1,8 @@
-ATT.PrintName = [[M203 Grenade Launcher]]
-ATT.CompactName = [[M203]]
+ATT.PrintName = [[M320 Grenade Launcher]]
+ATT.CompactName = [[M320]]
 ATT.Icon = Material("materials/entities/bo1_atts/ubs/m203.png")
 ATT.Description = [[
-    Underbarrel grenade launcher that fires 40mm High Explosive rounds.
+    Modern modular underbarrel grenade launcher that fires 40mm High Explosive rounds.
     Reduced handling.
 ]]
 ATT.Pros = {}
@@ -11,8 +11,8 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 
-ATT.Category = {"bo1_m203"}
-ATT.ActivateElements = {"bo1_m203"}
+ATT.Category = {"bo1_m320"}
+ATT.ActivateElements = {"bo1_m320"}
 ATT.ExcludeElements = {"no_ubgl"}
 
 ATT.AimDownSightsTimeMult = 1.1
@@ -22,7 +22,7 @@ ATT.UBGL = true
 ATT.UBGLAmmo = "smg1_grenade"
 ATT.UBGLClipSize = 1
 ATT.UBGLFiremode = 1
-ATT.UBGLFiremodeName = "M203"
+ATT.UBGLFiremodeName = "M320"
 ATT.UBGLChamberSize = 0
 ATT.ShootVolumeUBGL = 110
 

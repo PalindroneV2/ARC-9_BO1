@@ -13,7 +13,7 @@ ATT.Free = false
 
 ATT.Category = {"bo1_mk"}
 ATT.ActivateElements = {"bo1_mk"}
-ATT.ExcludeElements = {"barrel_10", "100_mag", "no_ubgl"}
+ATT.ExcludeElements = {"no_ubgl"}
 ATT.AimDownSightsTimeMult = 1.1
 ATT.SprintToFireTimeMult = 1.1
 
@@ -25,7 +25,7 @@ ATT.UBGLFiremodeName = "MKEY"
 ATT.UBGLChamberSize = 1
 
 ATT.FirstShootSoundUBGL = false
-ATT.ShootSoundUBGL = "weapons/arc9/bo1_generic_shotgun/fire_ithaca.wav"
+ATT.ShootSoundUBGL = "ARC9_BO1.MK_Fire"
 ATT.DistantShootSoundUBGL = false
 ATT.HasSightsUBGL = false
 

@@ -27,11 +27,11 @@ ATT.UBGLChamberSize = 0
 ATT.ShootVolumeUBGL = 110
 
 ATT.FirstShootSoundUBGL = false
-ATT.ShootSoundUBGL = "weapons/arc9/bo1_m16/40mm_fire.wav"
+ATT.ShootSoundUBGL = "ARC9_BO1.M203_Fire"
 ATT.DistantShootSoundUBGL = false
 ATT.HasSightsUBGL = false
 
 ATT.ShootEntUBGL = "arc9_bo1_gp25_he"
-ATT.ShootEntForceUBGL = 5000
+ATT.ShootEntForceUBGL = 15000
 
 ATT.MuzzleParticleUBGL = "muzzleflash_m79"

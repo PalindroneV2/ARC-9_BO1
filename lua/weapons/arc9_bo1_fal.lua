@@ -722,52 +722,16 @@ SWEP.Animations = {
 -- UBGL IN ANIMS -----------------------------------------------------------------
 
     ["enter_ubgl"] = {
-        Source = "idle_glsetup",
-        Time = 0,
-        IKTimeLine = {
-            {
-                t = 0,
-                lhik = 0,
-                rhik = 0
-            },
-        },
+        Source = "glsetup_in",
+        Time = 0.5,
     },
     ["exit_ubgl"] = {
-        Source = "idle_glsetup",
-        Time = 0,
-        IKTimeLine = {
-            {
-                t = 0,
-                lhik = 0,
-                rhik = 0
-            },
-        },
+        Source = "glsetup_out",
+        Time = 0.5,
     },
     ["idle_glsetup"] = {
         Source = "idle_glsetup",
         Time = 1 / 30,
-        IKTimeLine = {
-            {
-                t = 0,
-                lhik = 0,
-                rhik = 0
-            },
-        },
-    },
-    ["in_glsetup"] = {
-        Source = "glsetup_in",
-        Time = 0.5,
-        IKTimeLine = {
-            {
-                t = 0,
-                lhik = 0,
-                rhik = 0
-            },
-        },
-    },
-    ["out_glsetup"] = {
-        Source = "glsetup_out",
-        Time = 0.5,
         IKTimeLine = {
             {
                 t = 0,

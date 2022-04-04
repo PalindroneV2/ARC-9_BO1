@@ -15,6 +15,6 @@ ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Category = {"retro_ar15_handguard_10", "retro_ar15_handguard_11", "retro_ar15_handguard_14"}
-ATT.ActivateElements = {"handguard_607"}
+ATT.ActivateElements = {"handguard_607", "no_ubgl"}
 ATT.RecoilMult = 1.1
 ATT.AimDownSightsTimeMult = 0.9
