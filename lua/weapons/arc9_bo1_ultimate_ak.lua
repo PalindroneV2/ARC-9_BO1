@@ -903,7 +903,7 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         TPAnimStartTime = 0.1,
         EventTable = {
-            --{s = "ARC9_BO1.M203_Open", t = 0.125},
+            {s = "ARC9_BO1.MK_Shell", t = 22 / 30},
         }
     },
     ["reload_ubgl_insert_mksetup"] = {

@@ -144,6 +144,11 @@ SWEP.ShootSound = "ARC9_BO1.FAMAS_Fire"
 SWEP.ShootSoundSilenced = "ARC9_BO1.AUG_Sil"
 SWEP.DistantShootSound = {"weapons/ARC9/bo1_aug/ringoff_f.wav", "weapons/ARC9/bo1_aug/ringoff_r.wav"}
 
+SWEP.UBGLIntegralReload = true -- The UBGL uses reload animations that are baked into the gun.
+SWEP.DoFireAnimationUBGL = true
+SWEP.NoShellEjectUBGL = true
+SWEP.MuzzleEffectQCAUBGL = 1
+
 --SWEP.MuzzleEffect = "muzzleflash_4"
 SWEP.MuzzleParticle = "muzzleflash_4" -- Used for some muzzle effects.
 
@@ -668,8 +673,9 @@ SWEP.Animations = {
     ["reload_ubgl_start_mksetup"] = {
         Source = "reload_in_mksetup",
         Time = 35 / 30,
+        RestoreAmmo = 1,
         EventTable = {
-            --{s = "ARC9_BO1.M203_Open", t = 0.125},
+            {s = "ARC9_BO1.MK_Shell", t = 22 / 30},
         }
     },
     ["reload_ubgl_insert_mksetup"] = {
@@ -682,7 +688,6 @@ SWEP.Animations = {
     ["reload_ubgl_finish_mksetup"] = {
         Source = "reload_out_mksetup",
         Time = 50 / 30,
-        RestoreAmmo = 1,
         EventTable = {
             {s = "ARC9_BO1.MK_Back", t = 20 / 30 },
             {s = "ARC9_BO1.MK_Fwd", t = 25 / 30 },

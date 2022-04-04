@@ -144,6 +144,11 @@ SWEP.ShootSound = "ARC9_BO1.Galil_Fire"
 SWEP.ShootSoundSilenced = "ARC9_BO1.M16_Sil"
 -- SWEP.DistantShootSound = {"weapons/ARC9/bo1_aug/ringoff_f.wav", "weapons/ARC9/bo1_aug/ringoff_r.wav"}
 
+SWEP.UBGLIntegralReload = true -- The UBGL uses reload animations that are baked into the gun.
+SWEP.DoFireAnimationUBGL = true
+SWEP.NoShellEjectUBGL = true
+SWEP.MuzzleEffectQCAUBGL = 1
+
 --SWEP.MuzzleEffect = "muzzleflash_4"
 SWEP.MuzzleParticle = "muzzleflash_4" -- Used for some muzzle effects.
 
@@ -305,8 +310,14 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
 
     if attached["bo1_ubgl_gp25"] then
         suffix = "_m203"
+        if self:GetUBGL() then
+            suffix = "_glsetup"
+        end
     elseif attached["bo1_ubgl_mk"] then
         suffix = "_mk"
+        if self:GetUBGL() then
+            suffix = "_mksetup"
+        end
     else
         suffix = ""
     end
@@ -600,13 +611,13 @@ SWEP.Animations = {
         Source = "fire_glsetup",
         Time = 0.7,
     },
-    ["reload_glsetup_soh"] = {
+    ["reload_ubgl_glsetup"] = {
         Source = "reload_glsetup",
-        Time = 3 / 2,
+        Time = 3,
         EventTable = {
-            {s = "ARC9_BO1.M203_40mmOut", t = 18 / 60},
-            {s = "ARC9_BO1.M203_40mmIn", t = 60 / 60},
-            {s = "ARC9_BO1.M203_Close", t = 70 / 60},
+            {s = "ARC9_BO1.M203_40mmOut", t = 18 / 30},
+            {s = "ARC9_BO1.M203_40mmIn", t = 60 / 30},
+            {s = "ARC9_BO1.M203_Close", t = 70 / 30},
         }
     },
     ["enter_sprint_glsetup"] = {
@@ -689,44 +700,101 @@ SWEP.Animations = {
     ["idle_mksetup"] = {
         Source = "idle_mksetup",
         Time = 1 / 30,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0,
+            },
+        },
     },
     ["in_mksetup"] = {
         Source = "mksetup_in",
         Time = 0.5,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0,
+            },
+        },
     },
     ["out_mksetup"] = {
         Source = "mksetup_out",
         Time = 0.5,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0,
+            },
+        },
     },
     ["fire_mksetup"] = {
         Source = "fire_mksetup",
         Time = 0.7,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0,
+            },
+        },
     },
-    ["pump_mksetup"] = {
+    ["cycle_mksetup"] = {
         Source = "pump_mksetup",
         Time = 0.75,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0,
+            },
+        },
         EventTable = {
             {s = "ARC9_BO1.MK_Back", t = 5 / 30 },
             {s = "ARC9_BO1.MK_Fwd", t = 10 / 30 },
         }
     },
-    ["reload_start_mksetup"] = {
+    ["reload_ubgl_start_mksetup"] = {
         Source = "reload_in_mksetup",
         Time = 35 / 30,
+        RestoreAmmo = 1,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0,
+            },
+        },
         EventTable = {
-            --{s = "ARC9_BO1.M203_Open", t = 0.125},
+            {s = "ARC9_BO1.MK_Shell", t = 22 / 30},
         }
     },
-    ["reload_loop_mksetup"] = {
+    ["reload_ubgl_insert_mksetup"] = {
         Source = "reload_loop_mksetup",
         Time = 33 / 30,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0,
+            },
+        },
         EventTable = {
             {s = "ARC9_BO1.MK_Shell", t = 0 / 30},
         }
     },
-    ["reload_finish_mksetup"] = {
+    ["reload_ubgl_finish_mksetup"] = {
         Source = "reload_out_mksetup",
         Time = 50 / 30,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0,
+            },
+        },
         EventTable = {
             {s = "ARC9_BO1.MK_Back", t = 20 / 30 },
             {s = "ARC9_BO1.MK_Fwd", t = 25 / 30 },
@@ -734,14 +802,35 @@ SWEP.Animations = {
     },
     ["enter_sprint_mksetup"] = {
         Source = "sprint_in_mksetup",
-        Time = 10 / 30
+        Time = 1,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0,
+            },
+        },
     },
     ["idle_sprint_mksetup"] = {
         Source = "sprint_loop_mksetup",
-        Time = 30 / 40
+        Time = 30 / 40,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0,
+            },
+        },
     },
     ["exit_sprint_mksetup"] = {
         Source = "sprint_out_mksetup",
-        Time = 10 / 30
+        Time = 1,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0,
+            },
+        },
     },
 }
