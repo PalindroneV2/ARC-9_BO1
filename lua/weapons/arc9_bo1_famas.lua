@@ -544,7 +544,7 @@ SWEP.Animations = {
         Source = "fire_glsetup",
         Time = 0.7,
     },
-    ["reload_glsetup"] = {
+    ["reload_ubgl_glsetup"] = {
         Source = "reload_glsetup",
         Time = 3,
         EventTable = {
@@ -554,7 +554,7 @@ SWEP.Animations = {
             {s = "ARC9_BO1.M203_Close", t = 2.25},
         }
     },
-    ["reload_glsetup_soh"] = {
+    ["reload_ubgl_glsetup_soh"] = {
         Source = "reload_glsetup",
         Time = 3 / 2,
         EventTable = {
@@ -657,7 +657,7 @@ SWEP.Animations = {
         Source = "fire_mksetup",
         Time = 7 / 30,
     },
-    ["pump_mksetup"] = {
+    ["cycle_mksetup"] = {
         Source = "pump_mksetup",
         Time = 0.75,
         EventTable = {
@@ -665,23 +665,24 @@ SWEP.Animations = {
             {s = "ARC9_BO1.MK_Fwd", t = 10 / 30 },
         }
     },
-    ["reload_start_mksetup"] = {
+    ["reload_ubgl_start_mksetup"] = {
         Source = "reload_in_mksetup",
         Time = 35 / 30,
         EventTable = {
             --{s = "ARC9_BO1.M203_Open", t = 0.125},
         }
     },
-    ["reload_loop_mksetup"] = {
+    ["reload_ubgl_insert_mksetup"] = {
         Source = "reload_loop_mksetup",
         Time = 33 / 30,
         EventTable = {
             {s = "ARC9_BO1.MK_Shell", t = 0 / 30},
         }
     },
-    ["reload_finish_mksetup"] = {
+    ["reload_ubgl_finish_mksetup"] = {
         Source = "reload_out_mksetup",
         Time = 50 / 30,
+        RestoreAmmo = 1,
         EventTable = {
             {s = "ARC9_BO1.MK_Back", t = 20 / 30 },
             {s = "ARC9_BO1.MK_Fwd", t = 25 / 30 },
