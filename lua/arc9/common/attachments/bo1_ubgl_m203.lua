@@ -17,3 +17,14 @@ ATT.ExcludeElements = {"handguard_patriot", "100_mag", "handguard_607", "no_ubgl
 
 ATT.AimDownSightsTimeMult = 1.1
 ATT.SprintToFireTimeMult = 1.1
+
+ATT.UBGL = true
+ATT.FirstShootSoundUBGL = false
+ATT.ShootSoundUBGL = "weapons/arc9/bo1_m16/40mm_fire.wav"
+ATT.DistantShootSoundUBGL = false
+ATT.HasSightsUBGL = false
+
+ATT.ShootEntUBGL = "arc9_bo1_m203_he"
+ATT.ShootEntForceUBGL = 5000
+
+ATT.MuzzleParticleUBGL = "muzzleflash_m79"

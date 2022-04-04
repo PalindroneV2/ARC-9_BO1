@@ -144,6 +144,13 @@ SWEP.ShootSound = "ARC9_CDE.M16_Auto"
 SWEP.ShootSoundSilenced = "ARC9_CDE.M16_Sil"
 SWEP.DistantShootSound = "ARC9_CDE.M16_Dist"
 
+SWEP.UBGLIntegralReload = true -- The UBGL uses reload animations that are baked into the gun.
+
+SWEP.DoFireAnimationUBGL = true
+SWEP.NoShellEjectUBGL = true
+
+SWEP.MuzzleEffectQCAUBGL = 1
+
 --SWEP.MuzzleEffect = "muzzleflash_4"
 SWEP.MuzzleParticle = "muzzleflash_4" -- Used for some muzzle effects.
 
@@ -569,8 +576,14 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
 
     if attached["bo1_ubgl_m203"] then
         suffix = "_m203"
+        if self:GetUBGL() then
+            suffix = "_glsetup"
+        end
     elseif attached["bo1_ubgl_mk"] then
         suffix = "_mk"
+        if self:GetUBGL() then
+            suffix = "_mksetup"
+        end
     else
         suffix = ""
     end
@@ -1101,7 +1114,7 @@ SWEP.Animations = {
             },
         },
     },
-    ["reload_glsetup"] = {
+    ["reload_ubgl_glsetup"] = {
         Source = "reload_glsetup",
         Time = 3,
         IKTimeLine = {
@@ -1118,7 +1131,7 @@ SWEP.Animations = {
             {s = "ARC9_BO1.M203_Close", t = 2.25},
         }
     },
-    ["reload_glsetup_soh"] = {
+    ["reload_ubgl_glsetup_soh"] = {
         Source = "reload_glsetup",
         Time = 3 / 2,
         IKTimeLine = {
