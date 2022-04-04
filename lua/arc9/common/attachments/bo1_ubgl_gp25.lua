@@ -17,3 +17,20 @@ ATT.ExcludeElements = {"no_ubgl"}
 
 ATT.AimDownSightsTimeMult = 1.1
 ATT.SprintToFireTimeMult = 1.1
+
+ATT.UBGL = true
+ATT.UBGLAmmo = "smg1_grenade"
+ATT.UBGLClipSize = 1
+ATT.UBGLFiremode = 1
+ATT.UBGLFiremodeName = "GP25"
+ATT.UBGLChamberSize = 0
+
+ATT.FirstShootSoundUBGL = false
+ATT.ShootSoundUBGL = "weapons/arc9/bo1_m16/40mm_fire.wav"
+ATT.DistantShootSoundUBGL = false
+ATT.HasSightsUBGL = false
+
+ATT.ShootEntUBGL = "arc9_bo1_gp25_he"
+ATT.ShootEntForceUBGL = 5000
+
+ATT.MuzzleParticleUBGL = "muzzleflash_m79"

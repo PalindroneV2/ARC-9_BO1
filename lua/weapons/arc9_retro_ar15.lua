@@ -145,10 +145,8 @@ SWEP.ShootSoundSilenced = "ARC9_CDE.M16_Sil"
 SWEP.DistantShootSound = "ARC9_CDE.M16_Dist"
 
 SWEP.UBGLIntegralReload = true -- The UBGL uses reload animations that are baked into the gun.
-
 SWEP.DoFireAnimationUBGL = true
 SWEP.NoShellEjectUBGL = true
-
 SWEP.MuzzleEffectQCAUBGL = 1
 
 --SWEP.MuzzleEffect = "muzzleflash_4"
@@ -1377,7 +1375,7 @@ SWEP.Animations = {
             },
         },
     },
-    ["pump_mksetup"] = {
+    ["cycle_mksetup"] = {
         Source = "pump_mksetup",
         Time = 0.75,
         IKTimeLine = {
@@ -1392,9 +1390,10 @@ SWEP.Animations = {
             {s = "ARC9_BO1.MK_Fwd", t = 10 / 30 },
         }
     },
-    ["reload_start_mksetup"] = {
+    ["reload_ubgl_start_mksetup"] = {
         Source = "reload_in_mksetup",
         Time = 35 / 30,
+        RestoreAmmo = 1,
         IKTimeLine = {
             {
                 t = 0,
@@ -1406,7 +1405,7 @@ SWEP.Animations = {
             --{s = "ARC9_BO1.M203_Open", t = 0.125},
         }
     },
-    ["reload_loop_mksetup"] = {
+    ["reload_ubgl_insert_mksetup"] = {
         Source = "reload_loop_mksetup",
         Time = 33 / 30,
         IKTimeLine = {
@@ -1420,7 +1419,7 @@ SWEP.Animations = {
             {s = "ARC9_BO1.MK_Shell", t = 0 / 30},
         }
     },
-    ["reload_finish_mksetup"] = {
+    ["reload_ubgl_finish_mksetup"] = {
         Source = "reload_out_mksetup",
         Time = 50 / 30,
         IKTimeLine = {

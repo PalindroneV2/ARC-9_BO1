@@ -19,6 +19,12 @@ ATT.AimDownSightsTimeMult = 1.1
 ATT.SprintToFireTimeMult = 1.1
 
 ATT.UBGL = true
+ATT.UBGLAmmo = "smg1_grenade"
+ATT.UBGLClipSize = 1
+ATT.UBGLFiremode = 1
+ATT.UBGLFiremodeName = "M203"
+ATT.UBGLChamberSize = 0
+
 ATT.FirstShootSoundUBGL = false
 ATT.ShootSoundUBGL = "weapons/arc9/bo1_m16/40mm_fire.wav"
 ATT.DistantShootSoundUBGL = false

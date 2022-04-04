@@ -140,6 +140,11 @@ SWEP.ShootSound = "ARC9_BO1.AK47_Fire"
 SWEP.ShootSoundSilenced = "ARC9_BO1.M16_Sil"
 SWEP.DistantShootSound = "ARC9_BO1.AK47_Ringoff"
 
+SWEP.UBGLIntegralReload = true -- The UBGL uses reload animations that are baked into the gun.
+SWEP.DoFireAnimationUBGL = true
+SWEP.NoShellEjectUBGL = true
+SWEP.MuzzleEffectQCAUBGL = 1
+
 --SWEP.MuzzleEffect = "muzzleflash_4"
 SWEP.MuzzleParticle = "muzzleflash_ak47" -- Used for some muzzle effects.
 
@@ -390,10 +395,19 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
 
     if attached["bo1_ubgl_gp25"] then
         suffix = "_gp25"
+        if self:GetUBGL() then
+            suffix = "_gp25setup"
+        end
     elseif attached["bo1_ubgl_tishina"] then
         suffix = "_tishina"
+        if self:GetUBGL() then
+            suffix = "_tishinasetup"
+        end
     elseif attached["bo1_ubgl_mk"] then
         suffix = "_mk"
+        if self:GetUBGL() then
+            suffix = "_mksetup"
+        end
     elseif attached["bo1_ultimate_ak_receiver_rpk"] then
         suffix = "_rpk"
     else
@@ -709,33 +723,33 @@ SWEP.Animations = {
 -- UBGL IN ANIMS -----------------------------------------------------------------
 
     ["enter_ubgl"] = {
-        Source = "idle_gp25etup",
-        Time = 0 / 30,
+        Source = "gp25setup_in",
+        Time = 0.5,
     },
     ["exit_ubgl"] = {
-        Source = "idle_gp25etup",
-        Time = 0 / 30
+        Source = "gp25setup_out",
+        Time = 0.5
     },
-    ["idle_gp25etup"] = {
-        Source = "idle_gp25etup",
+    ["idle_gp25setup"] = {
+        Source = "idle_gp25setup",
         Time = 1 / 30,
     },
-    ["in_gp25etup"] = {
-        Source = "gp25etup_in",
+    ["in_gp25setup"] = {
+        Source = "gp25setup_in",
         Time = 0.5,
     },
-    ["out_gp25etup"] = {
-        Source = "gp25etup_out",
+    ["out_gp25setup"] = {
+        Source = "gp25setup_out",
         Time = 0.5,
     },
-    ["fire_gp25etup"] = {
-        Source = "fire_gp25etup",
+    ["fire_gp25setup"] = {
+        Source = "fire_gp25setup",
         Time = 0.7,
         TPAnim = ACT_HL2MP_GESTURE_RANGE_ATTACK_REVOLVER,
         TPAnimStartTime = 0,
     },
-    ["reload_gp25etup"] = {
-        Source = "reload_gp25etup",
+    ["reload_ubgl_gp25setup"] = {
+        Source = "reload_gp25setup",
         Time = 3,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         TPAnimStartTime = 0.1,
@@ -745,8 +759,8 @@ SWEP.Animations = {
             {s = "ARC9_BO1.M203_Close", t = 70 / 30},
         }
     },
-    ["reload_gp25etup_soh"] = {
-        Source = "reload_gp25etup",
+    ["reload_ubgl_gp25setup_soh"] = {
+        Source = "reload_gp25setup",
         Time = 3 / 2,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         TPAnimStartTime = 0.1,
@@ -756,16 +770,16 @@ SWEP.Animations = {
             {s = "ARC9_BO1.M203_Close", t = 70 / 60},
         }
     },
-    ["enter_sprint_gp25etup"] = {
-        Source = "sprint_in_gp25etup",
+    ["enter_sprint_gp25setup"] = {
+        Source = "sprint_in_gp25setup",
         Time = 10 / 30
     },
-    ["idle_sprint_gp25etup"] = {
-        Source = "sprint_loop_gp25etup",
+    ["idle_sprint_gp25setup"] = {
+        Source = "sprint_loop_gp25setup",
         Time = 30 / 40
     },
-    ["exit_sprint_gp25etup"] = {
-        Source = "sprint_out_gp25etup",
+    ["exit_sprint_gp25setup"] = {
+        Source = "sprint_out_gp25setup",
         Time = 10 / 30
     },
 
@@ -882,7 +896,7 @@ SWEP.Animations = {
             {s = "ARC9_BO1.MK_Fwd", t = 10 / 30 },
         }
     },
-    ["reload_start_mksetup"] = {
+    ["reload_ubgl_start_mksetup"] = {
         Source = "reload_in_mksetup",
         Time = 35 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
@@ -891,7 +905,7 @@ SWEP.Animations = {
             --{s = "ARC9_BO1.M203_Open", t = 0.125},
         }
     },
-    ["reload_loop_mksetup"] = {
+    ["reload_ubgl_insert_mksetup"] = {
         Source = "reload_loop_mksetup",
         Time = 33 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
@@ -900,7 +914,7 @@ SWEP.Animations = {
             {s = "ARC9_BO1.MK_Shell", t = 0 / 30},
         }
     },
-    ["reload_finish_mksetup"] = {
+    ["reload_ubgl_finish_mksetup"] = {
         Source = "reload_out_mksetup",
         Time = 50 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
