@@ -28,8 +28,9 @@ SWEP.Slot = 1
 SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arc9/c_bo1_python.mdl"
-SWEP.WorldModel = "models/weapons/arc9/c_bo1_python.mdl"
+SWEP.WorldModel = "models/weapons/arc9/w_bo1_python.mdl"
 SWEP.MirrorVMWM = true
+SWEP.WorldModelMirror = "models/weapons/arc9/w_bo1_python.mdl"
 SWEP.WorldModelOffset = {
     Pos        =    Vector(-9.75, 3, -3.75),
     Ang        =    Angle(-6, 0, 180),
@@ -148,9 +149,11 @@ SWEP.DistantShootSound = "ARC9_BO1.Python_RingOff"
 --SWEP.MuzzleEffect = "muzzleflash_4"
 SWEP.MuzzleParticle = "muzzleflash_pistol" -- Used for some muzzle effects.
 
-SWEP.ShellModel = "models/shells/shell_9mm.mdl"
-SWEP.ShellScale = 1.25
-SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556_steel"
+
+SWEP.NoShellEject = true
+-- SWEP.ShellModel = "models/shells/shell_9mm.mdl"
+-- SWEP.ShellScale = 1.25
+-- SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556_steel"
 
 SWEP.MuzzleEffectQCA = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectQCA = 1 -- which attachment to put the case effect on
@@ -210,16 +213,13 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local attached = data.elements
     local finish = 0
 
+    -- if attached["snubnose"] then
+    --     vm:SetBodygroup(1,1)
+    -- end
     if attached["bo1_pap"] then
-        finish = finish + 1
+        finish = finish + 2
     end
     vm:SetSkin(finish)
-
-    -- self.IronSights = {
-    --     Pos = newpos,
-    --     Ang = newang,
-    --     Magnification = 1.1,
-    -- }
 
 end
 
@@ -242,43 +242,45 @@ SWEP.Attachments = {
     {
         PrintName = "Barrel",
         DefaultCompactName = "Factory",
-        Bone = "j_bolt",
+        Bone = "j_gun",
         Scale = Vector(1,1,1),
-        Pos = Vector(2, 0, 0),
+        Pos = Vector(5, 0, 2.5),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_python_barrel"},
     },
     {
-        PrintName = "Finish",
-        DefaultCompactName = "Factory",
-        Bone = "j_gun",
-        Pos = Vector(-5, 0, 2),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_m1911_cosmetics"},
-    },
-    {
         PrintName = "Tactical",
         DefaultCompactName = "TAC",
         Bone = "j_gun",
-        Scale = Vector(0.75,0.75,0.75),
-        Pos = Vector(2.75, 0.175, 0.175),
+        Scale = Vector(1, 1, 1),
+        Pos = Vector(10, 0.075, 1.5),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_tactical"},
+        ExcludeElements = {"snubnose"}
     },
     {
-        PrintName = "Tactical",
-        DefaultCompactName = "TAC",
+        PrintName = "Optics",
+        DefaultCompactName = "Irons",
         Bone = "j_gun",
-        Pos = Vector(3, 0, 3),
+        Pos = Vector(3, 0.075, 3),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_optics"},
+        Category = {"bo1_optic"},
+        Icon_Offset = Vector(0, 0, 1),
         -- CorrectiveAng = Angle(0.05, 0.2, 0),
+    },
+    {
+        PrintName = "Cylinder",
+        DefaultCompactName = "None",
+        Bone = "j_gun",
+        Pos = Vector(2, 0, 2),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_cylinder"},
     },
     {
         PrintName = "Ammunition",
         DefaultCompactName = "AMMO",
         Bone = "j_gun",
-        Pos = Vector(-1.25, 0, -3),
+        Pos = Vector(4, 0, 0),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ammo", "bo1_pap", "bo1_pap_1911"},
     },

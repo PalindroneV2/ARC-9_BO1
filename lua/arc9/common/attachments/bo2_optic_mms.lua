@@ -36,7 +36,7 @@ ATT.RTScopeFOV = 11
 ATT.RTScopeRes = 1024
 ATT.RTScopeReticle = Material("hud/arc9_bo1/reticles/bo2_mms.png", "mips smooth")
 ATT.RTScopeReticleScale = 1.25
-ATT.RTScopeShadowIntensity = 1
+ATT.RTScopeShadowIntensity = 5
 ATT.RTScopeNoPP = false
 ATT.RTScopeNoShadow = true
 

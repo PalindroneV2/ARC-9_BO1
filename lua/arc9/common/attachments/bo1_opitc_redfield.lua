@@ -42,5 +42,5 @@ ATT.RTScopeAdjustmentLevels = 4
 ATT.RTScopeRes = 1024
 ATT.RTScopeSurface = Material("models/weapons/arc9/bo1/bo1_acogs/longscope_lens")
 ATT.RTScopeReticle = Material("hud/arc9_bo1/scopes/bo1_l96.png", "mips smooth")
-ATT.RTScopeShadowIntensity = 0.1
+ATT.RTScopeShadowIntensity = 5
 ATT.RTScopeNoPP = false

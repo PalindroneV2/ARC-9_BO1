@@ -9,6 +9,7 @@ ATT.Cons = {}
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = true
+ATT.Ignore = true
 
 ATT.Category = {"bo1_m1911_frames"}
 ATT.ActivateElements = {"1911_frame_hd"}
