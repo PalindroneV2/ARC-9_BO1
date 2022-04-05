@@ -68,7 +68,8 @@ SWEP.TracerColor = Color(255, 255, 255) -- Color of tracers. Only works if trace
 SWEP.ChamberSize = 0 -- dont fucking change this again.
 SWEP.ClipSize = 6 -- DefaultClip is automatically set.
 SWEP.ReloadTime = 1
-SWEP.ShotgunReload = true
+SWEP.HybridReload = true
+SWEP.ShotgunReload = false
 
 SWEP.Crosshair = true
 SWEP.CanBlindFire = false
@@ -213,11 +214,11 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     end
     vm:SetSkin(finish)
 
-    self.IronSights = {
-        Pos = newpos,
-        Ang = newang,
-        Magnification = 1.1,
-    }
+    -- self.IronSights = {
+    --     Pos = newpos,
+    --     Ang = newang,
+    --     Magnification = 1.1,
+    -- }
 
 end
 
