@@ -21,3 +21,6 @@ ATT.PenetrationMult = 1.25
 ATT.PhysBulletMuzzleVelocityMult = 1.25
 ATT.SpreadMult = 0.3
 ATT.SpreadMultHipFire = 2
+
+ATT.DamageMaxAdd = 5
+ATT.DamageMinAdd = 5

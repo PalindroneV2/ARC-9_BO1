@@ -26,6 +26,9 @@ ATT.RecoilSideMult = 0.9
 ATT.SpreadMult = 0.3
 ATT.SpreadMultHipFire = 2
 
+ATT.DamageMaxAdd = 5
+ATT.DamageMinAdd = 5
+
 ATT.AimDownSightsTimeMult = 1.1
 ATT.RangeMaxMult = 1.25
 ATT.RangeMinMult = 1.25
