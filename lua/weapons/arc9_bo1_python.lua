@@ -147,7 +147,7 @@ SWEP.ShootSoundSilenced = "ARC9_BO2.Pistol_Sil"
 SWEP.DistantShootSound = "ARC9_BO1.Python_RingOff"
 
 --SWEP.MuzzleEffect = "muzzleflash_4"
-SWEP.MuzzleParticle = "muzzleflash_pistol" -- Used for some muzzle effects.
+SWEP.MuzzleParticle = "muzzleflash_minimi" -- Used for some muzzle effects.
 
 
 SWEP.NoShellEject = true
