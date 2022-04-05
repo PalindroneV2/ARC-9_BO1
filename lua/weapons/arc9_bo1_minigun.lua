@@ -42,10 +42,12 @@ SWEP.DamageMax = 40
 SWEP.DamageMin = 30 -- damage done at maximum range
 SWEP.RangeMax = 7200
 SWEP.RangeMin = 1800
-SWEP.Penetration = 8
+SWEP.Penetration = 0
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
 SWEP.EntityMuzzleVelocity = 10000
+SWEP.Num = 1
+SWEP.AmmoPerShot = 1
 
 SWEP.PhysBulletMuzzleVelocity = 1200 * 39.37 -- IN HU (INCHES)
 
@@ -85,6 +87,7 @@ SWEP.RecoilResetTime = 0.1 -- How long the gun must go before the recoil pattern
 SWEP.UseVisualRecoil = false
 
 SWEP.Spread = 0.0125 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.SpreadAddRecoil = 0
 
 SWEP.SpreadAddMove = 0.075 -- Applied when speed is equal to walking speed.
 SWEP.SpreadAddMidAir = 0.075 -- Applied when not touching the ground.
@@ -113,8 +116,8 @@ SWEP.SpeedMultBlindFire = 1
 SWEP.AimDownSightsTime = 1
 SWEP.SprintToFireTime = 0.75
 
-SWEP.RPM = 2400
-SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
+SWEP.RPM = 1200
+-- SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
         Mode = -1,
@@ -137,7 +140,7 @@ SWEP.ShootPitch = 100
 SWEP.ShootPitchVariation = 0
 
 SWEP.FirstShootSound = "ARC9_BO1.Minigun_Start"
-SWEP.ShootSoundLooping = "ARC9_BO1.Minigun_ShootLoop"
+SWEP.ShootSoundLooping = "weapons/arc9/bo1_minigun/looping.wav"
 SWEP.DistantShootSound = "ARC9_BO1.Minigun_Ring"
 SWEP.ShootSoundTail = "ARC9_BO1.Minigun_End"
 
@@ -291,7 +294,7 @@ SWEP.Animations = {
     },
     ["fire"] = {
         Source = {"fire_spin"},
-        Time = 60 / 60,
+        Time = 1,
         ShellEjectAt = 0,
         IKTimeLine = {
             {
