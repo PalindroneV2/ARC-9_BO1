@@ -26,6 +26,9 @@ ENT.Damage = 150
 ENT.Radius = 300
 ENT.ImpactDamage = nil
 
+ENT.Dead = false
+ENT.DieTime = 0
+
 if SERVER then
     local gunship = {["npc_combinegunship"] = true, ["npc_combinedropship"] = true}
 
@@ -103,7 +106,12 @@ if SERVER then
             })
         end
         self.Defused = true
-        self:Remove()
+        -- self:Remove()
+
+        SafeRemoveEntityDelayed(self, 0.5)
+        self:SetRenderMode(RENDERMODE_NONE)
+        self:SetMoveType(MOVETYPE_NONE)
+        self:SetCollisionGroup(COLLISION_GROUP_DEBRIS)
     end
 
     function ENT:PhysicsCollide(colData, physobj)
