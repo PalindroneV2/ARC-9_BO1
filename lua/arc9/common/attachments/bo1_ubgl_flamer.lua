@@ -19,22 +19,25 @@ ATT.AimDownSightsTimeMult = 1.1
 ATT.SprintToFireTimeMult = 1.1
 
 ATT.UBGL = true
-ATT.UBGLAmmo = "smg1_grenade"
-ATT.UBGLClipSize = 1
-ATT.UBGLFiremode = 1
+ATT.UBGLAmmo = "Uranium"
+ATT.UBGLClipSize = 100
+ATT.UBGLFiremode = -1
 ATT.UBGLFiremodeName = "FLAMER"
 ATT.UBGLChamberSize = 0
 ATT.ShootVolumeUBGL = 110
+ATT.RPMUBGL = 1000
 
-ATT.FirstShootSoundUBGL = "ARC9_BO1.Flamer_StartLoop"
-ATT.ShootSoundUBGL = "ARC9_BO1.Flamer_Loop"
+ATT.FirstShootSoundUBGL = false
+ATT.ShootSoundUBGL = false
+ATT.ShootSoundLoopingUBGL = "ARC9_BO1.Flamer_StartLoop"
+ATT.ShootSoundTailUBGL = "weapons/arc9/bo1_flamer/stop.wav"
 ATT.DistantShootSoundUBGL = false
 ATT.HasSightsUBGL = false
 
 ATT.EnterUBGLSound = "ARC9_BO1.Flamer_Start"
 ATT.ExitUBGLSound = "ARC9_BO1.Flamer_Stop"
 
-ATT.ShootEntUBGL = "arc9_bo1_gp25_he"
-ATT.ShootEntForceUBGL = 15000
+ATT.ShootEntUBGL = "arc9_bo1_flames"
+ATT.ShootEntForceUBGL = 25000
 
-ATT.MuzzleParticleUBGL = "muzzleflash_m79"
+ATT.MuzzleParticleUBGL = "muzzleflash_minimi"

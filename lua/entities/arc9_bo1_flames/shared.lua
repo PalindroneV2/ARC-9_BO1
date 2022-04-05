@@ -39,7 +39,6 @@ function ENT:Initialize()
         self:DrawShadow( false )
         self:GetPhysicsObject():EnableGravity(false)
 
-
         local phys = self:GetPhysicsObject()
         if phys:IsValid() then
             phys:Wake()
@@ -47,30 +46,26 @@ function ENT:Initialize()
         end
 
         self.SpawnTime = CurTime()
-        timer.Simple(0.1, function()
-            if !IsValid(self) then return end
-            self:SetCollisionGroup(COLLISION_GROUP_PROJECTILE)
-        end)
-
+        self:SetCollisionGroup(COLLISION_GROUP_PROJECTILE)
     end
 end
 
 function ENT:PhysicsCollide(data, collider)
-    local ent = data.HitEntity
+    -- local ent = data.HitEntity
 
-    if !ent:IsWorld() and IsValid(ent) then
+    -- if !ent:IsWorld() and IsValid(ent) then
 
-        local dmginfo = DamageInfo()
+    --     local dmginfo = DamageInfo()
 
-        dmginfo:SetDamage(5)
-        dmginfo:SetDamageForce(data.OurOldVelocity / 5)
-        dmginfo:SetDamageType(DMG_BURN)
-        dmginfo:SetInflictor(self)
-        dmginfo:SetAttacker(self.Owner or self)
-        ent:TakeDamageInfo(dmginfo)
-        ent:Ignite(10, 100)
+    --     dmginfo:SetDamage(5)
+    --     dmginfo:SetDamageForce(data.OurOldVelocity / 5)
+    --     dmginfo:SetDamageType(DMG_BURN)
+    --     dmginfo:SetInflictor(self)
+    --     dmginfo:SetAttacker(self.Owner or self)
+    --     ent:TakeDamageInfo(dmginfo)
+    --     ent:Ignite(10, 100)
 
-    end
+    -- end
     self:Remove()
 end
 
@@ -78,8 +73,8 @@ function ENT:Think()
     if !self.SpawnTime then self.SpawnTime = CurTime() end
 
     if SERVER and CurTime() - self.SpawnTime >= self.FuseTime and !self.Armed then
-        self:Detonate()
-        self:SetArmed(true)
+        -- self:SetArmed(true)
+        self:Remove()
     end
     if SERVER then
         local phys = self:GetPhysicsObject()
@@ -91,10 +86,10 @@ function ENT:Think()
             local dmg = DamageInfo()
             dmg:SetDamageType(DMG_BURN)
             dmg:SetDamage(5)
-            dmg:SetInflictor(self)
-            dmg:SetAttacker(self.Owner)
-            util.BlastDamageInfo(dmg, self:GetPos(), 15)
-            
+            dmg:SetInflictor(self:GetOwner())
+            dmg:SetAttacker(self:GetOwner())
+            util.BlastDamageInfo(dmg, self:GetPos(), 16)
+
             self.NextDamageTick = CurTime() + 0.01
 
             self.ARC9_Killable = false
@@ -125,10 +120,10 @@ function ENT:Think()
                 local fire = emitter:Add("sprites/physg_glow1", self:GetPos())
                 fire:SetVelocity( VectorRand() * 100 )
                 fire:SetGravity( Vector(math.Rand(-1, 1), math.Rand(-1, 1), -10) )
-                fire:SetDieTime( math.Rand(1, 1) )
+                fire:SetDieTime( math.Rand(0.25, 0.5) )
                 fire:SetStartAlpha( 100 )
                 fire:SetEndAlpha( 0 )
-                fire:SetStartSize( 50 )
+                fire:SetStartSize( 5 )
                 fire:SetEndSize( 100 )
                 fire:SetRoll( math.Rand(-180, 180) )
                 fire:SetRollDelta( math.Rand(-0.2,0.2) )
@@ -154,18 +149,6 @@ function ENT:OnRemove()
 
     if !self.FireSound then return end
     self.FireSound:Stop()
-end
-
-function ENT:Detonate()
-    if !self:IsValid() then return end
-
-    self.Armed = true
-
-    timer.Simple(self.FireTime, function()
-        if !IsValid(self) then return end
-
-        self:Remove()
-    end)
 end
 
 function ENT:Draw()
