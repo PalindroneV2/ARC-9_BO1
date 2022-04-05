@@ -48,6 +48,7 @@ SWEP.ShootEntity = nil -- entity to fire, if any
 SWEP.EntityMuzzleVelocity = 10000
 SWEP.Num = 1
 SWEP.AmmoPerShot = 1
+SWEP.PushBackForce = 20
 
 SWEP.PhysBulletMuzzleVelocity = 1200 * 39.37 -- IN HU (INCHES)
 
