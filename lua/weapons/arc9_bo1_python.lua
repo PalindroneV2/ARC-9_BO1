@@ -117,11 +117,12 @@ SWEP.SpeedMultBlindFire = 1
 SWEP.AimDownSightsTime = 0.2
 SWEP.SprintToFireTime = 0.2
 
-SWEP.RPM = 500
+SWEP.RPM = 300
 SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
         Mode = 1,
+        PrintName = "SINGLE"
     },
 }
 SWEP.NPCWeaponType = {"weapon_pistol"}
