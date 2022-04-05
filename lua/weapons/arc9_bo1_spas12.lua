@@ -124,6 +124,14 @@ SWEP.Firemodes = {
     {
         Mode = 1,
     },
+    {
+        Mode = 1,
+        ManualAction = true,
+        PrintName = "PUMP",
+        EjectDelay = 0.2,
+        SpreadMult = 0.8,
+        PhysBulletMuzzleVelocityMult = 1.15
+    }
 }
 SWEP.NPCWeaponType = {"weapon_shotgun"}
 SWEP.NPCWeight = 100
@@ -371,6 +379,20 @@ SWEP.Animations = {
         },
         Time = 9 / 35,
         ShellEjectAt = 0.1,
+    },
+    ["cycle"] = {
+        Source = "pump",
+        EventTable = {
+            {s = "ARC9_BO1.SPAS_Back", t = 0.15},
+            {s = "ARC9_BO1.SPAS_Fwd", t = 0.4}
+        }
+    },
+    ["cycle_iron"] = {
+        Source = "pump_ads",
+        EventTable = {
+            {s = "ARC9_BO1.SPAS_Back", t = 0.15},
+            {s = "ARC9_BO1.SPAS_Fwd", t = 0.4}
+        }
     },
     -- ["reload"] = {
     --     Source = "reload_pap",
