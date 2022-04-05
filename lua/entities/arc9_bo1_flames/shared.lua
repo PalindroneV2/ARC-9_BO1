@@ -51,21 +51,11 @@ function ENT:Initialize()
 end
 
 function ENT:PhysicsCollide(data, collider)
-    -- local ent = data.HitEntity
+    local ent = data.HitEntity
 
-    -- if !ent:IsWorld() and IsValid(ent) then
-
-    --     local dmginfo = DamageInfo()
-
-    --     dmginfo:SetDamage(5)
-    --     dmginfo:SetDamageForce(data.OurOldVelocity / 5)
-    --     dmginfo:SetDamageType(DMG_BURN)
-    --     dmginfo:SetInflictor(self)
-    --     dmginfo:SetAttacker(self.Owner or self)
-    --     ent:TakeDamageInfo(dmginfo)
-    --     ent:Ignite(10, 100)
-
-    -- end
+    if !ent:IsWorld() and IsValid(ent) then
+        ent:Ignite(10, 100)
+    end
     self:Remove()
 end
 
