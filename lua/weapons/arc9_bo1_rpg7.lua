@@ -196,11 +196,11 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_RPG
 SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_RPG
 SWEP.AnimDraw = ACT_HL2MP_GESTURE_RANGE_ATTACK_KNIFE
 
-SWEP.ActivePos = Vector(2, 0, -3)
-SWEP.ActiveAng = Angle(0, 15, 0)
+SWEP.ActivePos = Vector(3, 4, -1)
+SWEP.ActiveAng = Angle(0, 0, 0)
 
-SWEP.CrouchPos = Vector(2, 0, -3)
-SWEP.CrouchAng = Angle(0, 15, 0)
+SWEP.CrouchPos = Vector(3, 4, -1)
+SWEP.CrouchAng = Angle(0, 0, 0)
 
 SWEP.SprintPos = Vector(0, 0, -1)
 SWEP.SprintAng = Angle(0, 0, -5)
@@ -248,11 +248,11 @@ SWEP.Attachments = {
 
 SWEP.Animations = {
     ["idle"] = {
-        Source = "idle",
+        Source = "idle_ads",
         Time = 1 / 35,
     },
     ["idle_empty"] = {
-        Source = "idle",
+        Source = "idle_ads",
         Time = 1 / 35,
     },
 
