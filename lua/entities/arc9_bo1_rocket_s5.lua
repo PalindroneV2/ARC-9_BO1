@@ -16,7 +16,6 @@ ENT.Gravity = false
 ENT.Boost = 2500
 ENT.Lift = 0
 
-ENT.FuseTime = 0.05
 ENT.Damage = 200
 ENT.Radius = 200
 ENT.ImpactDamage = 3000

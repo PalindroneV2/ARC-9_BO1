@@ -9,7 +9,7 @@ ENT.CollisionGroup = COLLISION_GROUP_PROJECTILE
 
 ENT.Model = "models/weapons/arc9/item/bo1_40mm.mdl"
 ENT.Ticks = 0
-ENT.FuseTime = 0.05
+ENT.FuseTime = 0
 ENT.Defused = false
 ENT.BoxSize = Vector(2, 2, 2)
 ENT.SmokeTrail = true
