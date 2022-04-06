@@ -72,19 +72,19 @@ SWEP.Hook_Think = function(self)
 
         if self.NextBeepTime > CurTime() then return end
 
-        local tracktime = math.Clamp((CurTime() - self.StartTrackTime) / self.LockTime, 0, 1)
+        local tracktime = math.Clamp((CurTime() - self.StartTrackTime) / self.LockTime, 0, 2)
 
         -- if CLIENT then
         if tracktime >= 1 and self.TargetEntity then
             if CLIENT then
-                self:EmitSound("weapons/arc9/bo1_rpg/lockon.wav", 75, 100, 1, CHAN_ITEM)
+                self:EmitSound("ARC9_BO1.Rocket_LockOn", 75, 125)
             end
-            self.NextBeepTime = CurTime() + 0.25
+            self.NextBeepTime = CurTime() + 0.1
         else
             if CLIENT then
-                self:EmitSound("weapons/arc9/bo1_rpg/lockon_start.wav", 75, 100, 1, CHAN_ITEM)
+                self:EmitSound("ARC9_BO1.Rocket_LockOn_Start", 75, 100)
             end
-            self.NextBeepTime = CurTime() + 0.5
+            self.NextBeepTime = CurTime() + 1
         end
         -- end
 
@@ -265,13 +265,13 @@ SWEP.FreeAimRadiusMultSights = 0
 
 SWEP.SwayMultSights = 0
 
-SWEP.Ammo = "SMG1_Grenade" -- what ammo type the gun uses
+SWEP.Ammo = "RPG_Round" -- what ammo type the gun uses
 
 SWEP.ShootVolume = 125
 SWEP.ShootPitch = 100
 SWEP.ShootPitchVariation = 0
 
-SWEP.ShootSound = "weapons/arc9/bo1_rpg/strela_fire.wav"
+SWEP.ShootSound = "ARC9_BO1.Strela_Fire"
 SWEP.ShootSoundSilenced = "ARC9_BO1.MP5_Sil"
 
 SWEP.MuzzleParticle = "muzzleflash_m79" -- Used for some muzzle effects.

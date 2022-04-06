@@ -251,7 +251,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         newang = Angle(0.0125, 0.25, 0)
     end
 
-    if wep:GetBipod() then
+    if self:GetBipod() then
         vm:SetBodygroup(4, 1)
         if attached["famas_f1"] then
             vm:SetBodygroup(4, 3)

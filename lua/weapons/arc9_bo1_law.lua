@@ -3,19 +3,18 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ARC-9 - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "RPG-7"
+SWEP.PrintName = "M72 LAW"
 SWEP.Class = "Rocket Launcher"
 SWEP.Description = [[
-    A Russian portable, reusable, unguided, shoulder-launched, anti-tank rocket-propelled grenade launcher.
-    The ruggedness, simplicity, low cost, and effectiveness of the RPG-7 has made it the most widely used anti-armor weapon in the world.
+    American 1-use rocket launcher that shoots unguided 66mm anti-tank payloads.
 ]]
 SWEP.Trivia = {
-    Manufacturer = "Bazalt",
-    Calibre = "85x40mm RPG",
+    Manufacturer = "NAMMO",
+    Calibre = "66mm",
     Mechanism = "Rocket Propelled Grenade",
-    Country = "USSR",
-    Year = 1958,
-    Games = [[COD4, MW2, BO1, MW3, BO1, AW, ]]
+    Country = "USA",
+    Year = 1963,
+    Games = [[BO1]]
 }
 SWEP.Credits = {
     Author = "Palindrone"
@@ -25,8 +24,8 @@ SWEP.Slot = 4
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/arc9/c_bo1_rpg7.mdl"
-SWEP.WorldModel = "models/weapons/arc9/c_bo1_rpg7.mdl"
+SWEP.ViewModel = "models/weapons/arc9/c_bo1_law.mdl"
+SWEP.WorldModel = "models/weapons/arc9/c_bo1_law.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
     Pos        =    Vector(-3, 5, -7.5),
@@ -44,8 +43,8 @@ SWEP.RangeMax = 6000
 SWEP.RangeMin = 1000
 SWEP.Penetration = 0
 SWEP.DamageType = nil
-SWEP.ShootEnt = "arc9_bo1_rocket_rpg" -- Set to an entity to launch it out of this weapon.
-SWEP.ShootEntForce = 10000
+SWEP.ShootEnt = "arc9_waw_rocket_bazooka" -- Set to an entity to launch it out of this weapon.
+SWEP.ShootEntForce = 12500
 SWEP.ShootEntityData = {}
 
 -- SWEP.PhysBulletMuzzleVelocity = 960 * 39.37
@@ -156,7 +155,7 @@ SWEP.ShootVolume = 125
 SWEP.ShootPitch = 100
 SWEP.ShootPitchVariation = 0
 
-SWEP.ShootSound = "ARC9_BO1.RPG_Fire"
+SWEP.ShootSound = "ARC9_BO1.LAW_Fire"
 SWEP.ShootSoundSilenced = "ARC9_BO1.MP5_Sil"
 
 SWEP.MuzzleParticle = "muzzleflash_m79" -- Used for some muzzle effects.
@@ -225,8 +224,6 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     if attached["bo1_pap"] then
         vm:SetSkin(2)
     end
-
-    if self:Clip1() == 0 then vm:SetBodygroup(1,1) end
 end
 
 SWEP.Attachments = {
@@ -250,35 +247,32 @@ SWEP.Attachments = {
 
 SWEP.Animations = {
     ["idle"] = {
-        Source = "idle_ads",
+        Source = "idle",
         Time = 1 / 35,
-    },
-    ["idle_empty"] = {
-        Source = "idle_ads",
-        Time = 1 / 35,
-    },
-
-    ["idle_doom"] = {
-        Source = "idle_ads",
-        Time = 1 / 35,
-    },
-    ["fire_doom"] = {
-        Source = {
-            "fire",
-        },
-        Time = 15 / 35,
     },
     ["draw"] = {
         Source = "draw",
-        Time = 25 / 35,
+        Time = 2,
+        EventTable = {
+            {s = "ARC9_BO1.RPG_Slide", t = 15 / 30},
+            {s = "ARC9_BO1.RPG_Futz", t = 25 / 30},
+        },
     },
     ["holster"] = {
         Source = "holster",
-        Time = 25 / 35,
+        Time = 2,
+        EventTable = {
+            {s = "ARC9_BO1.RPG_Futz", t = 15 / 30},
+            {s = "ARC9_BO1.RPG_Slide", t = 25 / 30},
+        },
     },
     ["ready"] = {
         Source = "draw",
-        Time = 25 / 35,
+        Time = 2,
+        EventTable = {
+            {s = "ARC9_BO1.RPG_Slide", t = 15 / 30},
+            {s = "ARC9_BO1.RPG_Futz", t = 25 / 30},
+        },
     },
     ["fire"] = {
         Source = {
@@ -292,18 +286,18 @@ SWEP.Animations = {
     },
     ["fire_iron"] = {
         Source = {
-            "fire",
+            "fire_ads",
         },
         Time = 15 / 35,
     },
     ["reload"] = {
-        Source = "reload",
-        Time = 93 / 30,
-        MinProgress = 0.1,
+        Source = "reload_real",
+        Time = 4.666,
         EventTable = {
-            {s = "weapons/arc9/bo1_rpg/slide.wav", t = 25 / 30},
-            {s = "weapons/arc9/bo1_rpg/futz.wav", t = 33 / 30},
-            {s = "weapons/arc9/bo1_rpg/latch.wav", t = 40 / 30},
+            {s = "ARC9_BO1.LAW_Drop", t = 1},
+            {s = "ARC9_BO1.RPG_Futz", t = 1.6},
+            {s = "ARC9_BO1.RPG_Futz", t = 2.35},
+            {s = "ARC9_BO1.RPG_Slide", t = 3.1},
         },
     },
     -- ["reload_iron"] = {
@@ -311,9 +305,9 @@ SWEP.Animations = {
     --     Time = 93 / 30,
     --     MinProgress = 0.1,
     --     EventTable = {
-    --         {s = "ArcCW_BO1.RPG_Slide", t = 25 / 30},
-    --         {s = "ArcCW_BO1.RPG_Futz", t = 33 / 30},
-    --         {s = "ArcCW_BO1.RPG_Latch", t = 40 / 30},
+    --         {s = "ARC9_BO1.RPG_Slide", t = 25 / 30},
+    --         {s = "ARC9_BO1.RPG_Futz", t = 33 / 30},
+    --         {s = "ARC9_BO1.RPG_Latch", t = 40 / 30},
     --     },
     -- },
     ["enter_sprint"] = {

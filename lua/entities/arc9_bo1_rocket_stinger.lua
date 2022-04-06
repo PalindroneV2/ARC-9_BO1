@@ -22,7 +22,7 @@ ENT.ImpactDamage = 1000
 
 ENT.SeekerAngle = math.cos(math.rad(30))
 ENT.SteerSpeed = 2500
-ENT.FuseTime = 0.1
+ENT.FuseTime = 0
 ENT.Boost = 5000
 ENT.Lift = 80
 ENT.DragCoefficient = 0.1
