@@ -7,6 +7,8 @@ SWEP.PrintName = "FIM-92 Stinger"
 SWEP.Class = "Missile Launcher"
 SWEP.Description = [[
     American MANPADS that fires infrared homing surface-to-air missiles.
+
+    A lock does not need to be kept after firing. For use mainly with slow targets, such as helicopters. The ideal angle for shooting is from directly behind the target. It is unreliable against jets. The infrared seeker can get confused if the target is surrounded by clutter - fire towards targets in the sky.
 ]]
 SWEP.Trivia = {
     Manufacturer = "Raytheon Missile Systems",
@@ -119,18 +121,37 @@ SWEP.Hook_Think = function(self)
 
         local aa, bb = best:WorldSpaceAABB()
         local vol = math.abs(bb.x - aa.x) * math.abs(bb.y - aa.y) * math.abs(bb.z - aa.z)
+        -- local dimx = (bb.x - aa.x) / 2
+        -- local dimy = (bb.y - aa.y) / 2
+        -- local dimz = (bb.z - aa.z) / 2
 
         clutter = math.max(1000 - (vol / 1000), 0)
 
-        local tr2 = util.TraceLine({
+        local dimx = clutter / 50
+        local dimy = clutter / 50
+        local dimz = clutter / 100
+
+        local tr2 = util.TraceHull({
             start = self:GetShootPos(),
             endpos = best:GetPos() + (self:GetShootDir():Forward() * clutter),
             filter = self:GetOwner(),
-            mask = MASK_NPCWORLDSTATIC
+            mask = MASK_NPCWORLDSTATIC,
+            maxs = Vector(-dimx, -dimy, -dimz),
+            mins = Vector(dimx, dimy, dimz),
+        })
+
+        local tr3 = util.TraceHull({
+            start = self:GetShootPos(),
+            endpos = best:GetPos() + Vector(0, 0, -clutter),
+            filter = self:GetOwner(),
+            mask = MASK_NPCWORLDSTATIC,
+            maxs = Vector(-dimx, -dimy, -dimz),
+            mins = Vector(dimx, dimy, dimz),
         })
 
         -- -- Too much ground clutter
-        if tr2.HitWorld then return end
+        if tr2.HitWorld and !tr2.HitSky then return end
+        if tr3.HitWorld and !tr3.HitSky then return end
 
         if !self.TargetEntity then
             self.StartTrackTime = CurTime()

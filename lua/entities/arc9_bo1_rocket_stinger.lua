@@ -12,9 +12,9 @@ ENT.AdminSpawnable = false
 ENT.Model = "models/weapons/arc9/item/bo1_rpgrocket.mdl"
 ENT.BoxSize = Vector(8, 4, 1)
 
-ENT.SmokeTrailSize = 15
-ENT.SmokeTrailTime = 1
-ENT.Flare = true
+ENT.SmokeTrailSize = 32
+ENT.SmokeTrailTime = 5
+ENT.Flare = false
 
 ENT.Damage = 75
 ENT.Radius = 300

@@ -88,7 +88,7 @@ if SERVER then
                 local dot = dir:Dot(self:GetAngles():Forward())
                 local ang = dir:Angle()
 
-                if dot > self.SeekerAngle then
+                if dot >= self.SeekerAngle then
                     local p = self:GetAngles().p
                     local y = self:GetAngles().y
 
@@ -232,7 +232,7 @@ end
 
 local flaremat = Material("effects/arc9_lensflare")
 function ENT:Draw()
-    if self.Flare then
+    if self.Flare and !self.Defused then
         render.SetMaterial(flaremat)
         render.DrawSprite(self:GetPos(), math.Rand(90, 110), math.Rand(90, 110), Color(255, 250, 240))
     else
