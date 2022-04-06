@@ -43,9 +43,8 @@ SWEP.RangeMax = 6000
 SWEP.RangeMin = 1000
 SWEP.Penetration = 0
 SWEP.DamageType = nil
-SWEP.ShootEntity = "arc9_bo1_rocket_s5" -- Set to an entity to launch it out of this weapon.
-SWEP.EntityMuzzleVelocity = 10000
-SWEP.ShootEntityData = {}
+SWEP.ShootEnt = "arc9_bo1_rocket_rpg" -- Set to an entity to launch it out of this weapon.
+SWEP.ShootEntForce = 10000
 
 -- SWEP.PhysBulletMuzzleVelocity = 960 * 39.37
 
@@ -194,11 +193,11 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_RPG
 SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_RPG
 SWEP.AnimDraw = ACT_HL2MP_GESTURE_RANGE_ATTACK_KNIFE
 
-SWEP.ActivePos = Vector(0, 0, -1)
-SWEP.ActiveAng = Angle(0, 0, -5)
+SWEP.ActivePos = Vector(2, 0, -3)
+SWEP.ActiveAng = Angle(-20, 15, 0)
 
-SWEP.CrouchPos = Vector(0, 0, -1)
-SWEP.CrouchAng = Angle(0, 0, -5)
+SWEP.CrouchPos = Vector(2, 0, -3)
+SWEP.CrouchAng = Angle(-20, 15, 0)
 
 SWEP.SprintPos = Vector(0, 0, -1)
 SWEP.SprintAng = Angle(0, 0, -5)
@@ -283,7 +282,9 @@ SWEP.Animations = {
         Source = "reload",
         Time = 3.33,
         EventTable = {
-            -- {s = "ARC9_MW2E.M79_Open", t = 5 / 35},
+            {s = "weapons/arc9/bo1_rpg/futz.wav", t = 20 / 30},
+            {s = "weapons/arc9/bo1_rpg/slide.wav", t = 35 / 30},
+            {s = "weapons/arc9/bo1_rpg/latch.wav", t = 50 / 30},
         },
     },
     ["enter_sprint"] = {

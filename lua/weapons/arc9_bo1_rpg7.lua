@@ -44,8 +44,8 @@ SWEP.RangeMax = 6000
 SWEP.RangeMin = 1000
 SWEP.Penetration = 0
 SWEP.DamageType = nil
-SWEP.ShootEntity = "arc9_bo1_rocket_rpg7" -- Set to an entity to launch it out of this weapon.
-SWEP.EntityMuzzleVelocity = 10000
+SWEP.ShootEnt = "arc9_bo1_rocket_rpg" -- Set to an entity to launch it out of this weapon.
+SWEP.ShootEntForce = 10000
 SWEP.ShootEntityData = {}
 
 -- SWEP.PhysBulletMuzzleVelocity = 960 * 39.37
@@ -172,6 +172,7 @@ SWEP.ProceduralViewQCA = 1
 SWEP.CamQCA = 2
 
 SWEP.BulletBones = {
+    [1] = "tag_clip"
 }
 
 SWEP.ProceduralRegularFire = false
@@ -195,11 +196,11 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_RPG
 SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_RPG
 SWEP.AnimDraw = ACT_HL2MP_GESTURE_RANGE_ATTACK_KNIFE
 
-SWEP.ActivePos = Vector(0, 0, -1)
-SWEP.ActiveAng = Angle(0, 0, -5)
+SWEP.ActivePos = Vector(2, 0, -3)
+SWEP.ActiveAng = Angle(0, 15, 0)
 
-SWEP.CrouchPos = Vector(0, 0, -1)
-SWEP.CrouchAng = Angle(0, 0, -5)
+SWEP.CrouchPos = Vector(2, 0, -3)
+SWEP.CrouchAng = Angle(0, 15, 0)
 
 SWEP.SprintPos = Vector(0, 0, -1)
 SWEP.SprintAng = Angle(0, 0, -5)
@@ -250,6 +251,10 @@ SWEP.Animations = {
         Source = "idle",
         Time = 1 / 35,
     },
+    ["idle_empty"] = {
+        Source = "idle",
+        Time = 1 / 35,
+    },
 
     ["idle_doom"] = {
         Source = "idle_ads",
@@ -279,11 +284,11 @@ SWEP.Animations = {
         },
         Time = 15 / 35,
     },
-    ["idle_sight"] = {
+    ["idle_iron"] = {
         Source = {"idle_ads"},
         Time = 1 / 35,
     },
-    ["fire_sight"] = {
+    ["fire_iron"] = {
         Source = {
             "fire",
         },
@@ -294,21 +299,21 @@ SWEP.Animations = {
         Time = 93 / 30,
         MinProgress = 0.1,
         EventTable = {
-            {s = "ArcCW_BO1.RPG_Slide", t = 25 / 30},
-            {s = "ArcCW_BO1.RPG_Futz", t = 33 / 30},
-            {s = "ArcCW_BO1.RPG_Latch", t = 40 / 30},
+            {s = "weapons/arc9/bo1_rpg/slide.wav", t = 25 / 30},
+            {s = "weapons/arc9/bo1_rpg/futz.wav", t = 33 / 30},
+            {s = "weapons/arc9/bo1_rpg/latch.wav", t = 40 / 30},
         },
     },
-    ["reload_sight"] = {
-        Source = "reload",
-        Time = 93 / 30,
-        MinProgress = 0.1,
-        EventTable = {
-            {s = "ArcCW_BO1.RPG_Slide", t = 25 / 30},
-            {s = "ArcCW_BO1.RPG_Futz", t = 33 / 30},
-            {s = "ArcCW_BO1.RPG_Latch", t = 40 / 30},
-        },
-    },
+    -- ["reload_iron"] = {
+    --     Source = "reload",
+    --     Time = 93 / 30,
+    --     MinProgress = 0.1,
+    --     EventTable = {
+    --         {s = "ArcCW_BO1.RPG_Slide", t = 25 / 30},
+    --         {s = "ArcCW_BO1.RPG_Futz", t = 33 / 30},
+    --         {s = "ArcCW_BO1.RPG_Latch", t = 40 / 30},
+    --     },
+    -- },
     ["enter_sprint"] = {
         Source = "sprint_in",
         Time = 1,

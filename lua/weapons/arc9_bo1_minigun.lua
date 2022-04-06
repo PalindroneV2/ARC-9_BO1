@@ -146,7 +146,7 @@ SWEP.DistantShootSound = "ARC9_BO1.Minigun_Ring"
 SWEP.ShootSoundTail = "ARC9_BO1.Minigun_End"
 
 --SWEP.MuzzleEffect = "muzzleflash_4"
-SWEP.MuzzleParticle = "muzzleflash_ak47" -- Used for some muzzle effects.
+SWEP.MuzzleParticle = "muzzleflash_minimi" -- Used for some muzzle effects.
 
 SWEP.ShellModel = "models/shells/shell_556.mdl"
 SWEP.ShellPitch = 90
