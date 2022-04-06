@@ -267,15 +267,15 @@ SWEP.Animations = {
         Time = 15 / 35,
     },
     ["draw"] = {
-        Source = "draw_out",
+        Source = "draw",
         Time = 25 / 35,
     },
     ["holster"] = {
-        Source = "holster_out",
+        Source = "holster",
         Time = 25 / 35,
     },
     ["ready"] = {
-        Source = "draw_out",
+        Source = "draw",
         Time = 25 / 35,
     },
     ["fire"] = {
