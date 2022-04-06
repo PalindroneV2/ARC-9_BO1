@@ -280,7 +280,7 @@ SWEP.Animations = {
     },
     ["fire"] = {
         Source = {
-            "fire_out",
+            "fire",
         },
         Time = 15 / 35,
     },
@@ -295,7 +295,7 @@ SWEP.Animations = {
         Time = 15 / 35,
     },
     ["reload"] = {
-        Source = "reload_out",
+        Source = "reload",
         Time = 93 / 30,
         MinProgress = 0.1,
         EventTable = {
