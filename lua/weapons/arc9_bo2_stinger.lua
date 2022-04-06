@@ -86,13 +86,16 @@ SWEP.Hook_Think = function(self)
         end
         -- end
 
-        local targets = ents.FindInCone(self:GetShootPos(), self:GetShootDir():Forward(), 15000, 0.28366218546)
+        local targets = ents.FindInCone(self:GetShootPos() + (self:GetShootDir():Forward() * 32), self:GetShootDir():Forward(), 30000, math.cos(math.rad(5)))
 
         local best = nil
         local bestang = -1000
 
         for _, ent in ipairs(targets) do
-            if ent:Health() <= 0 then continue end
+            -- if ent:Health() <= 0 then continue end
+            -- if !(ent:IsPlayer() or ent:IsNPC() or ent:GetOwner():IsValid()) then continue end
+            if ent:IsWorld() then continue end
+            if ent == self:GetOwner() then continue end
             local dot = (ent:GetPos() - self:GetShootPos()):GetNormalized():Dot(self:GetShootDir():Forward())
 
             if dot > bestang then
@@ -112,6 +115,10 @@ SWEP.Hook_Think = function(self)
             end
         end
 
+        print(best)
+
+        if !best then self.TargetEntity = nil return end
+
         local aa, bb = best:WorldSpaceAABB()
         local vol = math.abs(bb.x - aa.x) * math.abs(bb.y - aa.y) * math.abs(bb.z - aa.z)
 
@@ -127,7 +134,7 @@ SWEP.Hook_Think = function(self)
         -- -- Too much ground clutter
         if tr2.HitWorld then return end
 
-        if self.TargetEntity != best then
+        if !self.TargetEntity then
             self.StartTrackTime = CurTime()
         end
 
