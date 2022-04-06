@@ -2319,6 +2319,28 @@ sound.Add( {
     }
 } )
 
+sound.Add( {
+    name = "ARC9_BO1.Rocket_LockOn_Start",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arc9/bo1_rpg/lockon_start.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ARC9_BO1.Rocket_LockOn",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arc9/bo1_rpg/lockon.wav",
+    }
+} )
+
 -- Crossbow --
 
 sound.Add( {
