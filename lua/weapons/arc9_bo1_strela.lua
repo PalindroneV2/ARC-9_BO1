@@ -77,12 +77,12 @@ SWEP.Hook_Think = function(self)
         -- if CLIENT then
         if tracktime >= 1 and self.TargetEntity then
             if CLIENT then
-                self:EmitSound("tools/ifm/beep.wav", 75, 125)
+                self:EmitSound("weapons/arc9/bo1_rpg/lockon.wav", 75, 100, 1, CHAN_ITEM)
             end
             self.NextBeepTime = CurTime() + 0.25
         else
             if CLIENT then
-                self:EmitSound("tools/ifm/beep.wav", 75, 100)
+                self:EmitSound("weapons/arc9/bo1_rpg/lockon_start.wav", 75, 100, 1, CHAN_ITEM)
             end
             self.NextBeepTime = CurTime() + 0.5
         end
@@ -271,7 +271,7 @@ SWEP.ShootVolume = 125
 SWEP.ShootPitch = 100
 SWEP.ShootPitchVariation = 0
 
-SWEP.ShootSound = "ARC9_BO1.RPG_Fire"
+SWEP.ShootSound = "weapons/arc9/bo1_rpg/strela_fire.wav"
 SWEP.ShootSoundSilenced = "ARC9_BO1.MP5_Sil"
 
 SWEP.MuzzleParticle = "muzzleflash_m79" -- Used for some muzzle effects.

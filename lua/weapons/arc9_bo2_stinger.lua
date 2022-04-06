@@ -77,12 +77,12 @@ SWEP.Hook_Think = function(self)
         -- if CLIENT then
         if tracktime >= 1 and self.TargetEntity then
             if CLIENT then
-                self:EmitSound("tools/ifm/beep.wav", 75, 125)
+                self:EmitSound("weapons/arc9/bo1_rpg/lockon.wav", 75, 105, 1, CHAN_ITEM)
             end
-            self.NextBeepTime = CurTime() + 0.1
+            self.NextBeepTime = CurTime() + 0.25
         else
             if CLIENT then
-                self:EmitSound("tools/ifm/beep.wav", 75, 100)
+                self:EmitSound("weapons/arc9/bo1_rpg/lockon_start.wav", 75, 95, 1, CHAN_ITEM)
             end
             self.NextBeepTime = CurTime() + 0.5
         end
