@@ -72,19 +72,19 @@ SWEP.Hook_Think = function(self)
 
         if self.NextBeepTime > CurTime() then return end
 
-        local tracktime = math.Clamp((CurTime() - self.StartTrackTime) / self.LockTime, 0, 1)
+        local tracktime = math.Clamp((CurTime() - self.StartTrackTime) / self.LockTime, 0, 2)
 
         -- if CLIENT then
         if tracktime >= 1 and self.TargetEntity then
             if CLIENT then
-                self:EmitSound("tools/ifm/beep.wav", 75, 125)
+                self:EmitSound("ARC9_BO1.Rocket_LockOn", 75, 125)
             end
-            self.NextBeepTime = CurTime() + 0.25
+            self.NextBeepTime = CurTime() + 0.1
         else
             if CLIENT then
-                self:EmitSound("tools/ifm/beep.wav", 75, 100)
+                self:EmitSound("ARC9_BO1.Rocket_LockOn_Start", 75, 100)
             end
-            self.NextBeepTime = CurTime() + 0.5
+            self.NextBeepTime = CurTime() + 1
         end
         -- end
 

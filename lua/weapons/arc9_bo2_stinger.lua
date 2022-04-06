@@ -72,19 +72,19 @@ SWEP.Hook_Think = function(self)
 
         if self.NextBeepTime > CurTime() then return end
 
-        local tracktime = math.Clamp((CurTime() - self.StartTrackTime) / self.LockTime, 0, 1)
+        local tracktime = math.Clamp((CurTime() - self.StartTrackTime) / self.LockTime, 0, 2)
 
         -- if CLIENT then
         if tracktime >= 1 and self.TargetEntity then
             if CLIENT then
-                self:EmitSound("tools/ifm/beep.wav", 75, 125)
+                self:EmitSound("ARC9_BO1.Rocket_LockOn", 75, 125)
             end
             self.NextBeepTime = CurTime() + 0.1
         else
             if CLIENT then
-                self:EmitSound("tools/ifm/beep.wav", 75, 100)
+                self:EmitSound("ARC9_BO1.Rocket_LockOn_Start", 75, 100)
             end
-            self.NextBeepTime = CurTime() + 0.5
+            self.NextBeepTime = CurTime() + 1
         end
         -- end
 
@@ -330,13 +330,22 @@ SWEP.BarrelLength = 25
 SWEP.ExtraSightDist = 5
 
 SWEP.AttachmentElements = {
+    -- ["bo1_alt_irons"] = {
+    --     Bonemods = {
+    --         ["j_aim"] = {
+    --             Pos = Vector(0, 0, 0),
+    --             Ang = Angle(0, 180, 0),
+    --             Scale = 1,
+    --         }
+    --     },
+    -- }, idk if bonemods works
 }
 
 SWEP.Hook_ModifyBodygroups = function(self, data)
     local vm = data.model
     local attached = data.elements
 
-    if attached["bo1_pap"] then
+    if attached["bo1_pap_launcher"] then
         vm:SetSkin(2)
     end
 end
@@ -358,6 +367,14 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"bo1_pap_launcher"},
     },
+    [3] = {
+        PrintName = "Sight",
+        Bone = "j_gun",
+        Pos = Vector(3, 0, 4),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_alt_irons"},
+    },
+    --Adding or removing slots doesn't take effect until map restart when it used to just work if you reloaded the weapon by dying or dropping it.
 }
 
 SWEP.Animations = {
