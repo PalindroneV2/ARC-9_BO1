@@ -79,7 +79,7 @@ SWEP.Hook_Think = function(self)
             if CLIENT then
                 self:EmitSound("ARC9_BO1.Rocket_LockOn", 75, 125)
             end
-            self.NextBeepTime = CurTime() + 0.1
+            self.NextBeepTime = CurTime() + 0.25
         else
             if CLIENT then
                 self:EmitSound("ARC9_BO1.Rocket_LockOn_Start", 75, 100)
