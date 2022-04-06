@@ -15,6 +15,8 @@ ENT.BoxSize = Vector(8, 4, 1)
 ENT.Damage = 250
 ENT.Radius = 300
 ENT.ImpactDamage = 3000
+ENT.SmokeTrailSize = 12
+ENT.SmokeTrailTime = 1
 
 ENT.Boost = 600
 ENT.Lift = 80

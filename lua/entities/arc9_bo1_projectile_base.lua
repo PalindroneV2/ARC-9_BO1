@@ -62,7 +62,7 @@ if SERVER then
         self.SpawnTime = CurTime()
 
         if self.SmokeTrail then
-            util.SpriteTrail(self, 0, Color( 255 , 255 , 255 ), false, 6, self.SmokeTrailSize, 0, self.SmokeTrailTime, "particle/particle_smokegrenade")
+            util.SpriteTrail(self, 0, Color( 255 , 255 , 255 ), false, self.SmokeTrailSize, 0, self.SmokeTrailTime, 1 / self.SmokeTrailSize * 0.5, "particle/particle_smokegrenade")
         end
     end
 
@@ -73,11 +73,11 @@ if SERVER then
             if self.ShootEntData.Target and IsValid(self.ShootEntData.Target) then
                 local target = self.ShootEntData.Target
 
-                local dir = (target:WorldSpaceCenter() - self:GetPos()):GetNormalized()
+                local dir = (target:GetPos() - self:GetPos()):GetNormalized()
                 local dot = dir:Dot(self:GetAngles():Forward())
                 local ang = dir:Angle()
 
-                if dot <= self.SeekerAngle then
+                if dot > self.SeekerAngle then
                     local p = self:GetAngles().p
                     local y = self:GetAngles().y
 

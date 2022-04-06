@@ -53,6 +53,10 @@ SWEP.TargetEntity = nil
 SWEP.StartTrackTime = 0
 SWEP.LockTime = 1
 
+SWEP.HookP_BlockFire = function(self)
+    return self:GetSightAmount() < 1
+end
+
 SWEP.Hook_GetShootEntData = function(self, data)
     local tracktime = math.Clamp((CurTime() - self.StartTrackTime) / self.LockTime, 0, 1)
 
@@ -278,11 +282,11 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_RPG
 SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_RPG
 SWEP.AnimDraw = ACT_HL2MP_GESTURE_RANGE_ATTACK_KNIFE
 
-SWEP.ActivePos = Vector(2, 0, -3)
-SWEP.ActiveAng = Angle(-20, 15, 0)
+SWEP.ActivePos = Vector(0, 0, -1)
+SWEP.ActiveAng = Angle(0, 0, -5)
 
-SWEP.CrouchPos = Vector(2, 0, -3)
-SWEP.CrouchAng = Angle(-20, 15, 0)
+SWEP.CrouchPos = Vector(0, 0, -1)
+SWEP.CrouchAng = Angle(0, 0, -5)
 
 SWEP.SprintPos = Vector(0, 0, -1)
 SWEP.SprintAng = Angle(0, 0, -5)
