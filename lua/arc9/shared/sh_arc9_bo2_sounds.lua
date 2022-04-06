@@ -832,6 +832,53 @@ sound.Add({
     sound = "^weapons/arc9/bo2_m32/turn.wav"
 })
 
+-- BO2 Vulcan --
+
+sound.Add({
+    name = "ARC9_BO2.Vulcan_FireStart",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = "^weapons/arc9/bo2_vulcan/fire_start.wav"
+})
+sound.Add({
+    name = "ARC9_BO2.Vulcan_FireLoop",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = "^weapons/arc9/bo2_vulcan/fire_loop.wav"
+})
+sound.Add({
+    name = "ARC9_BO2.Vulcan_FireStop",
+    channel = CHAN_WEAPON,
+    level = 70,
+    sound = "^weapons/arc9/bo2_vulcan/fire_stop.wav"
+})
+sound.Add({
+    name = "ARC9_BO2.Vulcan_SpoolStart",
+    channel = CHAN_USER_BASE,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = "^weapons/arc9/bo2_vulcan/fire_start.wav"
+})
+sound.Add({
+    name = "ARC9_BO2.Vulcan_SpoolLoop",
+    channel = CHAN_USER_BASE,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = "^weapons/arc9/bo2_vulcan/fire_loop.wav"
+})
+sound.Add({
+    name = "ARC9_BO2.Vulcan_SpoolStop",
+    channel = CHAN_USER_BASE,
+    level = 70,
+    sound = "^weapons/arc9/bo2_vulcan/fire_stop.wav"
+})
+
 -- Raygun MK2 --
 
 sound.Add({
