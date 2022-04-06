@@ -106,6 +106,8 @@ if SERVER then
 
                     self:SetAngles(Angle(p, y, 0))
                     -- self:SetVelocity(dir * 15000)
+                else
+                    self.ShootEntData.Target = nil
                 end
             else
                 self:SetAngles(self:GetAngles() + (AngleRand() * FrameTime() * 1000 / 360))
