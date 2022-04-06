@@ -3,31 +3,29 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ARC-9 - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "9K34 Strela-3"
-SWEP.Class = "Missile Launcher"
+SWEP.PrintName = "M72 LAW"
+SWEP.Class = "Rocket Launcher"
 SWEP.Description = [[
-    Man-portable air defense system developed in the Soviet Union.
-
-    After firing, a lock must be maintained while the missile is in flight. More powerful missiles than the Stinger, but harder to use. Due to ground clutter confusing the sensor, it will not reliably track ground targets.
+    American 1-use rocket launcher that shoots unguided 66mm anti-tank payloads.
 ]]
 SWEP.Trivia = {
-    Manufacturer = "KBM Kolomna",
-    Calibre = "72mm Missiles",
-    Mechanism = "Missile",
-    Country = "USSR",
-    Year = 1974,
+    Manufacturer = "NAMMO",
+    Calibre = "66mm",
+    Mechanism = "Rocket Propelled Grenade",
+    Country = "USA",
+    Year = 1963,
     Games = [[BO1]]
 }
 SWEP.Credits = {
-    Author = "Palindrone, Arctic"
+    Author = "Palindrone"
 }
 
 SWEP.Slot = 4
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/arc9/c_bo1_strela3.mdl"
-SWEP.WorldModel = "models/weapons/arc9/c_bo1_strela3.mdl"
+SWEP.ViewModel = "models/weapons/arc9/c_bo1_law.mdl"
+SWEP.WorldModel = "models/weapons/arc9/c_bo1_law.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
     Pos        =    Vector(-3, 5, -7.5),
@@ -41,129 +39,15 @@ SWEP.DefaultBodygroups = "00000000000000"
 
 SWEP.DamageMax = 25
 SWEP.DamageMin = 15 -- damage done at maximum range
-SWEP.RangeMax = 15000
-SWEP.RangeMin = 0
+SWEP.RangeMax = 6000
+SWEP.RangeMin = 1000
 SWEP.Penetration = 0
 SWEP.DamageType = nil
-SWEP.ShootEnt = "arc9_bo1_rocket_strela" -- Set to an entity to launch it out of this weapon.
-SWEP.ShootEntForce = 10000
+SWEP.ShootEnt = "arc9_waw_rocket_bazooka" -- Set to an entity to launch it out of this weapon.
+SWEP.ShootEntForce = 12500
+SWEP.ShootEntityData = {}
 
 -- SWEP.PhysBulletMuzzleVelocity = 960 * 39.37
-
-SWEP.NextBeepTime = 0
-SWEP.TargetEntity = nil
-SWEP.StartTrackTime = 0
-SWEP.LockTime = 1
-
-SWEP.HookP_BlockFire = function(self)
-    return self:GetSightAmount() < 1
-end
-
-SWEP.Hook_GetShootEntData = function(self, data)
-    local tracktime = math.Clamp((CurTime() - self.StartTrackTime) / self.LockTime, 0, 1)
-
-    if tracktime >= 1 and self.TargetEntity and IsValid(self.TargetEntity) then
-        data.Target = self.TargetEntity
-    end
-end
-
-SWEP.Hook_Think = function(self)
-    if self:GetSightAmount() >= 1 then
-
-        if self.NextBeepTime > CurTime() then return end
-
-        local tracktime = math.Clamp((CurTime() - self.StartTrackTime) / self.LockTime, 0, 1)
-
-        -- if CLIENT then
-        if tracktime >= 1 and self.TargetEntity then
-            if CLIENT then
-                self:EmitSound("tools/ifm/beep.wav", 75, 125)
-            end
-            self.NextBeepTime = CurTime() + 0.25
-        else
-            if CLIENT then
-                self:EmitSound("tools/ifm/beep.wav", 75, 100)
-            end
-            self.NextBeepTime = CurTime() + 0.5
-        end
-        -- end
-
-        local targets = ents.FindInCone(self:GetShootPos() + (self:GetShootDir():Forward() * 32), self:GetShootDir():Forward(), 30000, math.cos(math.rad(10)))
-
-        local best = nil
-        local bestang = -1000
-
-        for _, ent in ipairs(targets) do
-            -- if ent:Health() <= 0 then continue end
-            -- if !(ent:IsPlayer() or ent:IsNPC() or ent:GetOwner():IsValid()) then continue end
-            if ent:IsWorld() then continue end
-            if ent == self:GetOwner() then continue end
-            if ent.IsProjectile then continue end
-            if ent.UnTrackable then continue end
-            local dot = (ent:GetPos() - self:GetShootPos()):GetNormalized():Dot(self:GetShootDir():Forward())
-
-            if dot > bestang then
-                -- local tr = util.TraceLine({
-                --     start = self:GetShootPos(),
-                --     endpos = ent:GetPos(),
-                --     filter = self:GetOwner(),
-                --     mask = MASK_VISIBLE_AND_NPCS
-                -- })
-
-                -- PrintTable(tr)
-
-                -- if tr.Entity == ent then
-                best = ent
-                bestang = dot
-                -- end
-            end
-        end
-
-        if !best then self.TargetEntity = nil return end
-
-        local aa, bb = best:WorldSpaceAABB()
-        local vol = math.abs(bb.x - aa.x) * math.abs(bb.y - aa.y) * math.abs(bb.z - aa.z)
-        -- local dimx = (bb.x - aa.x) / 2
-        -- local dimy = (bb.y - aa.y) / 2
-        -- local dimz = (bb.z - aa.z) / 2
-
-        clutter = math.max(1000 - (vol / 1000), 0)
-
-        local dimx = clutter / 50
-        local dimy = clutter / 50
-        local dimz = clutter / 100
-
-        local tr2 = util.TraceHull({
-            start = self:GetShootPos(),
-            endpos = best:GetPos() + (self:GetShootDir():Forward() * clutter),
-            filter = self:GetOwner(),
-            mask = MASK_NPCWORLDSTATIC,
-            maxs = Vector(-dimx, -dimy, -dimz),
-            mins = Vector(dimx, dimy, dimz),
-        })
-
-        local tr3 = util.TraceHull({
-            start = self:GetShootPos(),
-            endpos = best:GetPos() + Vector(0, 0, -clutter * 0.25),
-            filter = self:GetOwner(),
-            mask = MASK_NPCWORLDSTATIC,
-            maxs = Vector(-dimx, -dimy, -dimz),
-            mins = Vector(dimx, dimy, dimz),
-        })
-
-        -- -- Too much ground clutter
-        if tr2.HitWorld and !tr2.HitSky then return end
-        if tr3.HitWorld and !tr3.HitSky then return end
-
-        if !self.TargetEntity then
-            self.StartTrackTime = CurTime()
-        end
-
-        self.TargetEntity = best
-    else
-        self.TargetEntity = nil
-    end
-end
 
 SWEP.BodyDamageMults = {
     [HITGROUP_HEAD] = 2,
@@ -212,7 +96,7 @@ SWEP.RecoilResetTime = 0.1 -- How long the gun must go before the recoil pattern
 SWEP.RecoilAutoControl = 0.5
 SWEP.RecoilKick = 0
 
-SWEP.Spread = 0.01
+SWEP.Spread = 0.0015
 SWEP.SpreadAddRecoil = 0.0015
 
 SWEP.SpreadAddHipFire = 0.03
@@ -239,8 +123,8 @@ SWEP.SpeedMultMelee = 1
 SWEP.SpeedMultCrouch = 1
 SWEP.SpeedMultBlindFire = 1
 
-SWEP.AimDownSightsTime = 0.2
-SWEP.SprintToFireTime = 0.2
+SWEP.AimDownSightsTime = 0.4
+SWEP.SprintToFireTime = 0.4
 
 SWEP.RPM = 150
 SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
@@ -271,7 +155,7 @@ SWEP.ShootVolume = 125
 SWEP.ShootPitch = 100
 SWEP.ShootPitchVariation = 0
 
-SWEP.ShootSound = "ARC9_BO1.Strela_Fire"
+SWEP.ShootSound = "ARC9_BO1.LAW_Fire"
 SWEP.ShootSoundSilenced = "ARC9_BO1.MP5_Sil"
 
 SWEP.MuzzleParticle = "muzzleflash_m79" -- Used for some muzzle effects.
@@ -286,8 +170,9 @@ SWEP.CaseEffectQCA = 2 -- which attachment to put the case effect on
 SWEP.ProceduralViewQCA = 1
 SWEP.CamQCA = 2
 
-SWEP.BulletBones = {
-}
+-- SWEP.BulletBones = {
+--     [1] = "tag_clip"
+-- }
 
 SWEP.ProceduralRegularFire = false
 SWEP.ProceduralIronFire = false
@@ -295,8 +180,8 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(-3.25, -12, -3.57),
-    Ang = Angle(-5, 15, 0),
+    Pos = Vector(0, 0, 0),
+    Ang = Angle(0, 0, 0),
     Magnification = 1.25,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
@@ -310,11 +195,11 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_RPG
 SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_RPG
 SWEP.AnimDraw = ACT_HL2MP_GESTURE_RANGE_ATTACK_KNIFE
 
-SWEP.ActivePos = Vector(0, 0, -1)
-SWEP.ActiveAng = Angle(0, 0, -5)
+SWEP.ActivePos = Vector(3, 4, -1)
+SWEP.ActiveAng = Angle(0, 0, 0)
 
-SWEP.CrouchPos = Vector(0, 0, -1)
-SWEP.CrouchAng = Angle(0, 0, -5)
+SWEP.CrouchPos = Vector(3, 4, -1)
+SWEP.CrouchAng = Angle(0, 0, 0)
 
 SWEP.SprintPos = Vector(0, 0, -1)
 SWEP.SprintAng = Angle(0, 0, -5)
@@ -363,43 +248,75 @@ SWEP.Attachments = {
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
+        Time = 1 / 35,
     },
     ["draw"] = {
         Source = "draw",
+        Time = 2,
         EventTable = {
-            {s = "ARC9_MW2E.M79_Draw", t = 1 / 35},
-        }
+            {s = "ARC9_BO1.RPG_Slide", t = 15 / 30},
+            {s = "ARC9_BO1.RPG_Futz", t = 25 / 30},
+        },
     },
     ["holster"] = {
         Source = "holster",
+        Time = 2,
         EventTable = {
-            {s = "ARC9_MW2E.M79_Holster", t = 1 / 35},
-        }
+            {s = "ARC9_BO1.RPG_Futz", t = 15 / 30},
+            {s = "ARC9_BO1.RPG_Slide", t = 25 / 30},
+        },
+    },
+    ["ready"] = {
+        Source = "draw",
+        Time = 2,
+        EventTable = {
+            {s = "ARC9_BO1.RPG_Slide", t = 15 / 30},
+            {s = "ARC9_BO1.RPG_Futz", t = 25 / 30},
+        },
     },
     ["fire"] = {
         Source = {
             "fire",
         },
+        Time = 15 / 35,
+    },
+    ["idle_iron"] = {
+        Source = {"idle_ads"},
+        Time = 1 / 35,
     },
     ["fire_iron"] = {
         Source = {
             "fire_ads",
         },
+        Time = 15 / 35,
     },
     ["reload"] = {
-        Source = "reload",
+        Source = "reload_real",
+        Time = 4.666,
         EventTable = {
-            {s = "weapons/arc9/bo1_rpg/futz.wav", t = 20 / 30},
-            {s = "weapons/arc9/bo1_rpg/slide.wav", t = 35 / 30},
-            {s = "weapons/arc9/bo1_rpg/latch.wav", t = 50 / 30},
+            {s = "ARC9_BO1.LAW_Drop", t = 1},
+            {s = "ARC9_BO1.RPG_Futz", t = 1.6},
+            {s = "ARC9_BO1.RPG_Futz", t = 2.35},
+            {s = "ARC9_BO1.RPG_Slide", t = 3.1},
         },
     },
+    -- ["reload_iron"] = {
+    --     Source = "reload",
+    --     Time = 93 / 30,
+    --     MinProgress = 0.1,
+    --     EventTable = {
+    --         {s = "ARC9_BO1.RPG_Slide", t = 25 / 30},
+    --         {s = "ARC9_BO1.RPG_Futz", t = 33 / 30},
+    --         {s = "ARC9_BO1.RPG_Latch", t = 40 / 30},
+    --     },
+    -- },
     ["enter_sprint"] = {
         Source = "sprint_in",
         Time = 1,
     },
     ["idle_sprint"] = {
         Source = "sprint_loop",
+        Time = 30 / 30
     },
     ["exit_sprint"] = {
         Source = "sprint_out",

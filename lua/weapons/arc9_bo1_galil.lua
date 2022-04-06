@@ -287,7 +287,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     end
     if attached["bo1_bipod"] then
         vm:SetBodygroup(5,1)
-        if wep:GetBipod() then
+        if self:GetBipod() then
             vm:SetBodygroup(5,2)
         end
     end

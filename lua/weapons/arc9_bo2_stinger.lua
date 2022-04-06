@@ -265,7 +265,7 @@ SWEP.FreeAimRadiusMultSights = 0
 
 SWEP.SwayMultSights = 0
 
-SWEP.Ammo = "SMG1_Grenade" -- what ammo type the gun uses
+SWEP.Ammo = "RPG_Round" -- what ammo type the gun uses
 
 SWEP.ShootVolume = 125
 SWEP.ShootPitch = 100

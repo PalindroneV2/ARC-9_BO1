@@ -150,7 +150,7 @@ SWEP.FreeAimRadiusMultSights = 0
 
 SWEP.SwayMultSights = 0
 
-SWEP.Ammo = "SMG1_Grenade" -- what ammo type the gun uses
+SWEP.Ammo = "RPG_Round" -- what ammo type the gun uses
 
 SWEP.ShootVolume = 125
 SWEP.ShootPitch = 100
@@ -171,9 +171,9 @@ SWEP.CaseEffectQCA = 2 -- which attachment to put the case effect on
 SWEP.ProceduralViewQCA = 1
 SWEP.CamQCA = 2
 
-SWEP.BulletBones = {
-    [1] = "tag_clip"
-}
+-- SWEP.BulletBones = {
+--     [1] = "tag_clip"
+-- }
 
 SWEP.ProceduralRegularFire = false
 SWEP.ProceduralIronFire = false
@@ -225,6 +225,8 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     if attached["bo1_pap"] then
         vm:SetSkin(2)
     end
+
+    if wep:Clip1() == 0 then vm:SetBodygroup(1,1) end
 end
 
 SWEP.Attachments = {

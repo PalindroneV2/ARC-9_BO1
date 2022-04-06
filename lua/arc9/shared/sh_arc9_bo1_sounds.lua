@@ -2308,6 +2308,31 @@ sound.Add( {
     }
 } )
 
+-- Strela-3
+
+sound.Add( {
+    name = "ARC9_BO1.Strela_Fire",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arc9/bo1_rpg/strela_fire.wav",
+    }
+} )
+
+-- M72 LAW --
+sound.Add( {
+    name = "ARC9_BO1.LAW_Fire",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arc9/bo1_law/fire.wav",
+    }
+} )
+
 sound.Add( {
     name = "ARC9_BO1.LAW_Drop",
     channel = CHAN_ITEM,
@@ -2318,6 +2343,8 @@ sound.Add( {
         "^weapons/arc9/bo1_rpg/at4_drop.wav",
     }
 } )
+
+--
 
 sound.Add( {
     name = "ARC9_BO1.Rocket_LockOn_Start",
@@ -2512,18 +2539,6 @@ sound.Add( {
     --pitch = {95, 110},
     sound = {
         "^weapons/arc9/bo1_knife/whoosh/0.wav",
-    }
-} )
-
--- M72 LAW --
-sound.Add( {
-    name = "ARC9_BO1.LAW_Fire",
-    channel = CHAN_STATIC,
-    volume = 1.0,
-    level = 100,
-    --pitch = {95, 110},
-    sound = {
-        "^weapons/arc9/bo1_law/fire.wav",
     }
 } )
 
