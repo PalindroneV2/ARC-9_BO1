@@ -8,7 +8,7 @@ SWEP.Class = "Missile Launcher"
 SWEP.Description = [[
     Man-portable air defense system developed in the Soviet Union.
 
-    After firing, a lock must be maintained while the missile is in flight. A fast missile gives this launcher the capability to destroy faster-moving targets than the Stinger, though it requires more skill to use. Due to ground clutter confusing the sensor, it will not reliably track ground targets.
+    After firing, a lock must be maintained while the missile is in flight. More powerful missiles than the Stinger, but harder to use. Due to ground clutter confusing the sensor, it will not reliably track ground targets.
 ]]
 SWEP.Trivia = {
     Manufacturer = "KBM Kolomna",
@@ -88,7 +88,7 @@ SWEP.Hook_Think = function(self)
         end
         -- end
 
-        local targets = ents.FindInCone(self:GetShootPos() + (self:GetShootDir():Forward() * 32), self:GetShootDir():Forward(), 30000, math.cos(math.rad(10)))
+        local targets = ents.FindInCone(self:GetShootPos() + (self:GetShootDir():Forward() * 32), self:GetShootDir():Forward(), 30000, math.cos(math.rad(5)))
 
         local best = nil
         local bestang = -1000
