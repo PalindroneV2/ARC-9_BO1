@@ -80,7 +80,13 @@ if SERVER then
             return
         end
 
-        if self.FireAndForget then
+        if self.FireAndForget or self.SemiActive then
+            if self.SemiActive then
+                if IsValid(self.Weapon) then
+                    self.ShootEntData = self.Weapon:RunHook("Hook_GetShootEntData", {})
+                end
+            end
+
             if self.ShootEntData.Target and IsValid(self.ShootEntData.Target) then
                 local target = self.ShootEntData.Target
 

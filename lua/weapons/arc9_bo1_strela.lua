@@ -3,31 +3,31 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ARC-9 - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "FIM-92 Stinger"
+SWEP.PrintName = "9K34 Strela-3"
 SWEP.Class = "Missile Launcher"
 SWEP.Description = [[
-    American MANPADS that fires infrared homing surface-to-air missiles.
+    Man-portable air defense system developed in the Soviet Union.
 
-    A lock does not need to be kept after firing. For use mainly with slow targets, such as helicopters. The ideal angle for shooting is from directly behind the target. It is unreliable against jets. The infrared seeker can get confused if the target is surrounded by clutter - fire towards targets in the sky.
+    After firing, a lock must be maintained while the missile is in flight. A fast missile gives this launcher the capability to destroy faster-moving targets than the Stinger, though it requires more skill to use. Due to ground clutter confusing the sensor, it will not reliably track ground targets.
 ]]
 SWEP.Trivia = {
-    Manufacturer = "Raytheon Missile Systems",
-    Calibre = "40x46mm HE",
+    Manufacturer = "KBM Kolomna",
+    Calibre = "72mm Missiles",
     Mechanism = "Missile",
-    Country = "USA",
-    Year = 1981,
-    Games = [[MW2, BOCW]]
+    Country = "USSR",
+    Year = 1974,
+    Games = [[BO1]]
 }
 SWEP.Credits = {
-    Author = "Palindrone"
+    Author = "Palindrone, Arctic"
 }
 
 SWEP.Slot = 4
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/arc9/c_bo2_stinger.mdl"
-SWEP.WorldModel = "models/weapons/arc9/c_bo2_stinger.mdl"
+SWEP.ViewModel = "models/weapons/arc9/c_bo1_strela3.mdl"
+SWEP.WorldModel = "models/weapons/arc9/c_bo1_strela3.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
     Pos        =    Vector(-3, 5, -7.5),
@@ -45,7 +45,7 @@ SWEP.RangeMax = 15000
 SWEP.RangeMin = 0
 SWEP.Penetration = 0
 SWEP.DamageType = nil
-SWEP.ShootEnt = "arc9_bo1_rocket_stinger" -- Set to an entity to launch it out of this weapon.
+SWEP.ShootEnt = "arc9_bo1_rocket_strela" -- Set to an entity to launch it out of this weapon.
 SWEP.ShootEntForce = 10000
 
 -- SWEP.PhysBulletMuzzleVelocity = 960 * 39.37
@@ -68,7 +68,7 @@ SWEP.Hook_GetShootEntData = function(self, data)
 end
 
 SWEP.Hook_Think = function(self)
-    if self:GetSightAmount() >= 1 and self:Clip1() > 0 then
+    if self:GetSightAmount() >= 1 then
 
         if self.NextBeepTime > CurTime() then return end
 
@@ -79,7 +79,7 @@ SWEP.Hook_Think = function(self)
             if CLIENT then
                 self:EmitSound("tools/ifm/beep.wav", 75, 125)
             end
-            self.NextBeepTime = CurTime() + 0.1
+            self.NextBeepTime = CurTime() + 0.25
         else
             if CLIENT then
                 self:EmitSound("tools/ifm/beep.wav", 75, 100)
@@ -88,7 +88,7 @@ SWEP.Hook_Think = function(self)
         end
         -- end
 
-        local targets = ents.FindInCone(self:GetShootPos() + (self:GetShootDir():Forward() * 32), self:GetShootDir():Forward(), 30000, math.cos(math.rad(5)))
+        local targets = ents.FindInCone(self:GetShootPos() + (self:GetShootDir():Forward() * 32), self:GetShootDir():Forward(), 30000, math.cos(math.rad(10)))
 
         local best = nil
         local bestang = -1000
@@ -293,8 +293,8 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(0, 0, 0),
-    Ang = Angle(0, 0, 0),
+    Pos = Vector(-3.25, -12, -3.57),
+    Ang = Angle(-5, 15, 0),
     Magnification = 1.25,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
@@ -361,22 +361,15 @@ SWEP.Attachments = {
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
-        Time = 1 / 35,
-    },
-    ["idle_iron"] = {
-        Source = "idle_ads",
-        Time = 1 / 35,
     },
     ["draw"] = {
         Source = "draw",
-        Time = 1,
         EventTable = {
             {s = "ARC9_MW2E.M79_Draw", t = 1 / 35},
         }
     },
     ["holster"] = {
         Source = "holster",
-        Time = 1,
         EventTable = {
             {s = "ARC9_MW2E.M79_Holster", t = 1 / 35},
         }
@@ -385,17 +378,14 @@ SWEP.Animations = {
         Source = {
             "fire",
         },
-        Time = 15 / 35,
     },
     ["fire_iron"] = {
         Source = {
             "fire_ads",
         },
-        Time = 15 / 35,
     },
     ["reload"] = {
         Source = "reload",
-        Time = 3.33,
         EventTable = {
             {s = "weapons/arc9/bo1_rpg/futz.wav", t = 20 / 30},
             {s = "weapons/arc9/bo1_rpg/slide.wav", t = 35 / 30},
@@ -408,7 +398,6 @@ SWEP.Animations = {
     },
     ["idle_sprint"] = {
         Source = "sprint_loop",
-        Time = 30 / 30
     },
     ["exit_sprint"] = {
         Source = "sprint_out",

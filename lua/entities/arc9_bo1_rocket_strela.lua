@@ -2,7 +2,7 @@ AddCSLuaFile()
 
 ENT.Type 				= "anim"
 ENT.Base 				= "arc9_bo1_projectile_base"
-ENT.PrintName 			= "Stinger Rocket (BO1)"
+ENT.PrintName 			= "Strela Rocket (BO1)"
 ENT.Author 				= ""
 ENT.Information 		= ""
 
@@ -18,16 +18,16 @@ ENT.Flare = false
 
 ENT.Damage = 75
 ENT.Radius = 300
-ENT.ImpactDamage = 2000
+ENT.ImpactDamage = 2500
 
-ENT.SeekerAngle = math.cos(math.rad(20))
-ENT.SteerSpeed = 1000
+ENT.SeekerAngle = math.cos(math.rad(35))
+ENT.SteerSpeed = 2500
 ENT.FuseTime = 0.1
-ENT.Boost = 2000
+ENT.Boost = 5000
 ENT.Lift = 80
 ENT.DragCoefficient = 0.1
 
-ENT.FireAndForget = true
+ENT.SemiActive = true
 
 if CLIENT then
     killicon.Add( "arc9_bo1_rocket_stinger", "arc9/weaponicons/arc9_bo1_rpg7", Color( 255, 255, 255, 255 ) )
