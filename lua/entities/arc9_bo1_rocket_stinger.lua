@@ -16,8 +16,8 @@ ENT.SmokeTrailSize = 64
 ENT.SmokeTrailTime = 5
 ENT.Flare = false
 
-ENT.Damage = 75
-ENT.Radius = 300
+ENT.Damage = 100
+ENT.Radius = 200
 ENT.ImpactDamage = 1000
 
 ENT.SeekerAngle = math.cos(math.rad(30))
