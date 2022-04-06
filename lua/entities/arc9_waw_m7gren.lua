@@ -10,6 +10,7 @@ ENT.DragCoefficient = 0.75
 
 ENT.Radius = 300
 ENT.DamageOverride = 120
+ENT.FuseTime = 0.05
 
 if CLIENT then
     killicon.Add( "arc9_waw_he_rifgren", "arc9/weaponicons/ubs/rifgren", Color( 255, 255, 255, 255 ) )

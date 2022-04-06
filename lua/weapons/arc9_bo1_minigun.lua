@@ -117,7 +117,7 @@ SWEP.SpeedMultBlindFire = 1
 SWEP.AimDownSightsTime = 1
 SWEP.SprintToFireTime = 0.75
 
-SWEP.RPM = 1200
+SWEP.RPM = 2400
 -- SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
@@ -280,7 +280,7 @@ SWEP.Animations = {
         },
     },
     ["ready"] = {
-        Source = "first_draw",
+        Source = "draw",
         Time = 30 / 30,
         EventTable = {
             {s = "ARC9_BO1.Minigun_Deploy", t = 0.01}
@@ -318,7 +318,7 @@ SWEP.Animations = {
     },
     ["fire_iron"] = {
         Source = {"fire"},
-        Time = 60 / 60,
+        Time = 1,
         ShellEjectAt = 0,
         IKTimeLine = {
             {
@@ -329,25 +329,18 @@ SWEP.Animations = {
         },
     },
     ["reload"] = {
-        Source = "spinup",
-        Time = 70 / 60,
-        IKTimeLine = {
-            {
-                t = 0,
-                lhik = 1,
-                rhik = 1,
-            },
+        Source = "reload",
+        Time = 130 / 30,
+        EventTable = {
+            {s = "ArcCW_BO1.M60_Open", t = 20 / 35},
+            {s = "ArcCW_BO1.M60_BoxOff", t = 30 / 35},
+            {s = "ArcCW_BO1.M60_BoxOn", t = 50 / 35},
+            {s = "ArcCW_BO1.M60_Close", t = 70 / 35},
+            {s = "ArcCW_BO1.M60_LidClose", t = 75 / 35},
+            {s = "ArcCW_BO1.M60_Bonk", t = 80 / 35},
         },
-        -- Source = "reload",
-        -- Time = 130 / 30,
-        -- EventTable = {
-        --     {s = "ArcCW_BO1.M60_Open", t = 20 / 35},
-        --     {s = "ArcCW_BO1.M60_BoxOff", t = 30 / 35},
-        --     {s = "ArcCW_BO1.M60_BoxOn", t = 50 / 35},
-        --     {s = "ArcCW_BO1.M60_Close", t = 70 / 35},
-        --     {s = "ArcCW_BO1.M60_LidClose", t = 75 / 35},
-        --     {s = "ArcCW_BO1.M60_Bonk", t = 80 / 35},
-        -- },
+        -- Source = "spinup",
+        -- Time = -70 / 60,
         -- IKTimeLine = {
         --     {
         --         t = 0,
@@ -356,18 +349,4 @@ SWEP.Animations = {
         --     },
         -- },
     },
-    /*
-    ["enter_sprint"] = {
-        Source = "sprint_in",
-        Time = 10 / 30
-    },
-    ["idle_sprint"] = {
-        Source = "sprint_loop",
-        Time = 30 / 40
-    },
-    ["exit_sprint"] = {
-        Source = "sprint_out",
-        Time = 10 / 30
-    },
-    */
 }
