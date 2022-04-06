@@ -39,14 +39,99 @@ SWEP.DefaultBodygroups = "00000000000000"
 
 SWEP.DamageMax = 25
 SWEP.DamageMin = 15 -- damage done at maximum range
-SWEP.RangeMax = 6000
-SWEP.RangeMin = 1000
+SWEP.RangeMax = 15000
+SWEP.RangeMin = 0
 SWEP.Penetration = 0
 SWEP.DamageType = nil
-SWEP.ShootEnt = "arc9_bo1_rocket_rpg" -- Set to an entity to launch it out of this weapon.
+SWEP.ShootEnt = "arc9_bo1_rocket_stinger" -- Set to an entity to launch it out of this weapon.
 SWEP.ShootEntForce = 10000
 
 -- SWEP.PhysBulletMuzzleVelocity = 960 * 39.37
+
+SWEP.NextBeepTime = 0
+SWEP.TargetEntity = nil
+SWEP.StartTrackTime = 0
+SWEP.LockTime = 1
+
+SWEP.Hook_GetShootEntData = function(self, data)
+    local tracktime = math.Clamp((CurTime() - self.StartTrackTime) / self.LockTime, 0, 1)
+
+    if tracktime >= 1 and self.TargetEntity and IsValid(self.TargetEntity) then
+        data.Target = self.TargetEntity
+    end
+end
+
+SWEP.Hook_Think = function(self)
+    if self:GetSightAmount() >= 1 and self:Clip1() > 0 then
+
+        if self.NextBeepTime > CurTime() then return end
+
+        local tracktime = math.Clamp((CurTime() - self.StartTrackTime) / self.LockTime, 0, 1)
+
+        -- if CLIENT then
+        if tracktime >= 1 and self.TargetEntity then
+            if CLIENT then
+                self:EmitSound("tools/ifm/beep.wav", 75, 125)
+            end
+            self.NextBeepTime = CurTime() + 0.1
+        else
+            if CLIENT then
+                self:EmitSound("tools/ifm/beep.wav", 75, 100)
+            end
+            self.NextBeepTime = CurTime() + 0.5
+        end
+        -- end
+
+        local targets = ents.FindInCone(self:GetShootPos(), self:GetShootDir():Forward(), 15000, 0.28366218546)
+
+        local best = nil
+        local bestang = -1000
+
+        for _, ent in ipairs(targets) do
+            if ent:Health() <= 0 then continue end
+            local dot = (ent:GetPos() - self:GetShootPos()):GetNormalized():Dot(self:GetShootDir():Forward())
+
+            if dot > bestang then
+                -- local tr = util.TraceLine({
+                --     start = self:GetShootPos(),
+                --     endpos = ent:GetPos(),
+                --     filter = self:GetOwner(),
+                --     mask = MASK_VISIBLE_AND_NPCS
+                -- })
+
+                -- PrintTable(tr)
+
+                -- if tr.Entity == ent then
+                best = ent
+                bestang = dot
+                -- end
+            end
+        end
+
+        local aa, bb = best:WorldSpaceAABB()
+        local vol = math.abs(bb.x - aa.x) * math.abs(bb.y - aa.y) * math.abs(bb.z - aa.z)
+
+        clutter = math.max(1000 - (vol / 1000), 0)
+
+        local tr2 = util.TraceLine({
+            start = self:GetShootPos(),
+            endpos = best:GetPos() + (self:GetShootDir():Forward() * clutter),
+            filter = self:GetOwner(),
+            mask = MASK_NPCWORLDSTATIC
+        })
+
+        -- -- Too much ground clutter
+        if tr2.HitWorld then return end
+
+        if self.TargetEntity != best then
+            self.StartTrackTime = CurTime()
+        end
+
+        self.TargetEntity = best
+    else
+        self.TargetEntity = nil
+    end
+end
 
 SWEP.BodyDamageMults = {
     [HITGROUP_HEAD] = 2,
