@@ -16,6 +16,7 @@ ENT.SmokeTrail = true
 ENT.SmokeTrailSize = 6
 ENT.SmokeTrailTime = 0.5
 ENT.Flare = false
+ENT.LifeTime = 10
 
 ENT.Drag = true
 ENT.Gravity = true
@@ -67,7 +68,17 @@ if SERVER then
     end
 
     function ENT:Think()
-        if self.Defused or self:WaterLevel() > 0 then return end
+        if self.Defused then return end
+
+        if self.SpawnTime + self.LifeTime < CurTime() then
+            self:Detonate()
+            return
+        end
+
+        if self:WaterLevel() > 0 then
+            self:Detonate()
+            return
+        end
 
         if self.FireAndForget then
             if self.ShootEntData.Target and IsValid(self.ShootEntData.Target) then

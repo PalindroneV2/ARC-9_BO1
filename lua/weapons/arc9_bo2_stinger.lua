@@ -115,8 +115,6 @@ SWEP.Hook_Think = function(self)
             end
         end
 
-        print(best)
-
         if !best then self.TargetEntity = nil return end
 
         local aa, bb = best:WorldSpaceAABB()
