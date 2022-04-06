@@ -226,7 +226,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         vm:SetSkin(2)
     end
 
-    if wep:Clip1() == 0 then vm:SetBodygroup(1,1) end
+    if self:Clip1() == 0 then vm:SetBodygroup(1,1) end
 end
 
 SWEP.Attachments = {
