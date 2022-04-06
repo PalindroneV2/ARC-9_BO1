@@ -41,6 +41,8 @@ ENT.FireAndForget = false -- This missile automatically tracks its target.
 
 ENT.ShootEntData = {}
 
+ENT.IsProjectile = true
+
 if SERVER then
     local gunship = {["npc_combinegunship"] = true, ["npc_combinedropship"] = true}
 
@@ -89,6 +91,7 @@ if SERVER then
 
             if self.ShootEntData.Target and IsValid(self.ShootEntData.Target) then
                 local target = self.ShootEntData.Target
+                if target.UnTrackable then self.ShootEntData.Target = nil end
 
                 local dir = (target:GetPos() - self:GetPos()):GetNormalized()
                 local dot = dir:Dot(self:GetAngles():Forward())
@@ -104,6 +107,8 @@ if SERVER then
                     self:SetAngles(Angle(p, y, 0))
                     -- self:SetVelocity(dir * 15000)
                 end
+            else
+                self:SetAngles(self:GetAngles() + (AngleRand() * FrameTime() * 1000 / 360))
             end
         end
 
@@ -114,7 +119,7 @@ if SERVER then
             self.GunshipCheck = CurTime() + 0.33
             local tr = util.TraceLine({
                 start = self:GetPos(),
-                endpos = self:GetPos() + (self:GetVelocity() * 3 * engine.TickInterval()),
+                endpos = self:GetPos() + (self:GetVelocity() * 4 * engine.TickInterval()),
                 filter = self,
                 mask = MASK_SHOT
             })
