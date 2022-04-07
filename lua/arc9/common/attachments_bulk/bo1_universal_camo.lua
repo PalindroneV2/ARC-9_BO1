@@ -8,4 +8,4 @@ ATT.Description = [[Universal red color.]]
 ATT.MenuCategory = "ARC-9 - Camos"
 ATT.CustomCamoTexture = "models/weapons/arc9/bo1/red"
 
-Arc9.LoadAttachment(ATT, "camo_red")
+ARC9.LoadAttachment(ATT, "camo_red")
