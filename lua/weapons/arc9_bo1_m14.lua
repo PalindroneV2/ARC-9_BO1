@@ -221,22 +221,27 @@ SWEP.AttachmentElements = {
     ["bo1_m203"] = {
         Bodygroups = {
             {3,1},
-            {4,4},
+            {4,3},
         },
     },
     ["bo1_mk"] = {
         Bodygroups = {
-            {4,5}
+            {4,4}
+        },
+    },
+    ["bo1_bipod"] = {
+        Bodygroups = {
+            {5,1}
         },
     },
     ["stock_m"] = {
         Bodygroups = {
-            {5,3}
+            {6,3}
         },
     },
     ["stock_h"] = {
         Bodygroups = {
-            {5,2}
+            {6,2}
         },
     },
     ["mw3_magnifier"] = {
@@ -277,6 +282,13 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         camo = camo + 2
         if camo == 18 then
             camo = camo - 1
+        end
+    end
+
+    if attached["bo1_bipod"] then
+        vm:SetBodygroup(5,1)
+        if self:GetBipod() then
+            vm:SetBodygroup(5,2)
         end
     end
 
@@ -363,6 +375,7 @@ SWEP.Attachments = {
         Pos = Vector(-7, 0, 2),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_cosmetic_fal"},
+        Installed = "bo1_cosmetic_wood"
     },
     {
         PrintName = "Ammunition",
@@ -387,6 +400,16 @@ SWEP.Attachments = {
         Pos = Vector(15, 0.5, 0.25),
         Ang = Angle(0, 0, -90),
         Category = "bo1_rail_tactical",
+    },
+    {
+        PrintName = "Bipod",
+        DefaultCompactName = "None",
+        Bone = "j_gun",
+        Pos = Vector(21, 0, -0.25),
+        Ang = Angle(0, 0, 0),
+        Category = "bo1_bipod",
+        ExcludeElements = {"bo1_m203", "bo1_mk"},
+        Installed = "bo1_bipod_integrated"
     },
 }
 
