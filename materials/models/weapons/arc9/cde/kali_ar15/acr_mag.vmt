@@ -1,6 +1,6 @@
 VertexlitGeneric
 {
-	$basetexture	"models\weapons\arc9\bo1\tan"
+	$basetexture	"models\weapons\arc9\bo2\bo2_m27\acr"
 	//$color2 "[0.5 0.5 0.5]"
 	$bumpmap	"models\weapons\arc9\bo2\bo2_m27\acr_n"
 
@@ -16,8 +16,15 @@ VertexlitGeneric
 	"$envmapfresnel" "0.01"
 	"$envmaptint" "[ .01 .01 .01 ]"
 
-	$detail "models\weapons\arc9\bo2\bo2_m27\acr"
+	$detail "models\weapons\arc9\bo1\black_detail"
 	$detailblendmode 2
-	"$detailblendfactor" "0.8"
-	"$detailscale" "1"
+	"$detailblendfactor" "0.4"
+
+	Proxies {
+		CustomCamo {
+			camoTexture $detail
+			camoScale $detailscale
+            blend $detailblendfactor
+		}
+	}
 }

@@ -59,11 +59,11 @@ ATT = {}
 ATT.PrintName = "Mustard"
 ATT.FullColorIcon = true
 ATT.CompactName = "MSTRD"
-ATT.Icon = Material("models/weapons/arc9/bo1/camos/normalmap.png")
+ATT.Icon = Material("models/weapons/arc9/bo1/camos/tan_mustard.png")
 ATT.Category = "universal_camo"
 ATT.Description = [[Condiment.]]
 ATT.MenuCategory = "ARC-9 - Camos"
-ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/normalmap"
+ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/tan_mustard"
 ATT.Folder = "BO1 CAMOS/FLAT"
 ATT.CustomCamoScale = 1
 
@@ -139,14 +139,13 @@ ATT.Description = [[Universal red color.]]
 ATT.MenuCategory = "ARC-9 - Camos"
 ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/true_od"
 ATT.CustomCamoScale = 20
--- ATT.CustomBlendFactor = 1
 ATT.Folder = "BO1 CAMOS/FLAT"
 
 ARC9.LoadAttachment(ATT, "camo_true_od")
 
 ATT = {}
 
-ATT.PrintName = "Red"
+ATT.PrintName = "Blood Red"
 ATT.FullColorIcon = true
 ATT.CompactName = "RED"
 ATT.Icon = Material("models/weapons/arc9/bo1/camos/red.png")
