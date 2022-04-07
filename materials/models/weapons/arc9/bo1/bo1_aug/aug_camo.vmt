@@ -1,8 +1,8 @@
-"VertexLitGeneric"
+VertexlitGeneric
 {
-	$basetexture	"models\weapons\arc9\bo1\bo1_acogs\acog_lens_c"
-	"$translucent" "1"
-	$bumpmap	"models\weapons\arc9\bo1\bo1_acogs\acog_lens_n"
+	$basetexture	"models\weapons\arc9\bo1\bo1_aug\aug_c"
+	$bumpmap	"models\weapons\arc9\bo1\bo1_aug\aug_n"
+
 	
 	//"$color2" "[ .4 .4 .4 ]"
 	"$blendtintbybasealpha" "1"
@@ -18,4 +18,14 @@
 	$envmap 	env_cubemap
 	$envmaptint   "0.01"
 	$envmapfresnel "1"
+
+    $detailblendmode 2
+    $detailblendfactor 0.65
+	Proxies {
+		CustomCamo {
+			camoTexture $detail
+			camoScale $detailscale
+            blend $detailblendfactor
+		}
+	}
 }

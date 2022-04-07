@@ -280,23 +280,14 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     end
     -- COSMETICS
     -- CAMO
+
     local camo = 0
-    if attached["bo1_cosmetic_wood"] then
-        camo = 4
-    elseif attached["bo1_cosmetic_black"] then
-        camo = 8
-    elseif attached["bo1_cosmetic_od"] then
-        camo = 12
-    elseif attached["bo1_cosmetic_red"] then
-        camo = 16
+    if attached["universal_camo"] then
+        camo = 1
     end
     if attached["bo1_pap"] then
-        camo = camo + 2
-        if camo == 18 then
-            camo = camo - 1
-        end
+        camo = camo + 1
     end
-
     vm:SetSkin(camo)
 
     self.IronSights = {
@@ -395,7 +386,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(-7, 0, 2),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_cosmetic_fal"},
+        Category = {"universal_camo"},
     },
     {
         PrintName = "Ammunition",

@@ -318,17 +318,11 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
 
     local color = 0
     if attached["bo1_cosmetic_wood"] then
-        color = 4
-    elseif attached["bo1_cosmetic_tan"] then
-        color = 8
-    elseif attached["bo1_cosmetic_od"] then
-        color = 12
-    elseif attached["bo1_cosmetic_red"] then
-        color = 16
+        color = 1
     end
     vm:SetSkin(color)
     if attached["bo1_pap"] then
-        vm:SetSkin(color + 2)
+        vm:SetSkin(color + 1)
     end
 end
 
