@@ -181,8 +181,8 @@ SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "ar2"
 SWEP.HoldtypeSights = "rpg"
 
-SWEP.CustomCamoTexture = Material("model_color"):GetTexture("$basetexture")
-SWEP.CustomCamoScale = 15
+SWEP.CustomCamoTexture = Material("materials/models/weapons/arc9/bo1/ak_wood"):GetTexture("$basetexture")
+SWEP.CustomCamoScale = 1
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_AR2
