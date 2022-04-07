@@ -374,7 +374,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(-7, 0, 2),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_cosmetic_fal"},
+        Category = {"bo1_cosmetic_fal", "universal_camo"},
         Installed = "bo1_cosmetic_wood"
     },
     {
