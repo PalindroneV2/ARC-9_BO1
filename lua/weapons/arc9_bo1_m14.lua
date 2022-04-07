@@ -218,27 +218,27 @@ SWEP.AttachmentElements = {
     ["bo1_m203"] = {
         Bodygroups = {
             {3,1},
-            {4,4},
+            {4,3},
         },
     },
     ["bo1_mk"] = {
         Bodygroups = {
-            {4,5}
+            {4,4}
         },
     },
     ["bo1_bipod"] = {
         Bodygroups = {
-            {4,6}
+            {5,1}
         },
     },
     ["stock_m"] = {
         Bodygroups = {
-            {5,3}
+            {6,3}
         },
     },
     ["stock_h"] = {
         Bodygroups = {
-            {5,2}
+            {6,2}
         },
     },
     ["mw3_magnifier"] = {
@@ -282,6 +282,13 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         end
     end
 
+    if attached["bo1_bipod"] then
+        vm:SetBodygroup(5,1)
+        if self:GetBipod() then
+            vm:SetBodygroup(5,2)
+        end
+    end
+
     vm:SetSkin(camo)
 
 end
@@ -302,7 +309,7 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
         if self:GetUBGL() then
             suffix = "_mksetup"
         end
-    elseif attached["bo1_igrip"] or attached["bo1_bipod"] then
+    elseif attached["bo1_igrip"] then
         suffix = "_grip"
     else
         suffix = ""
@@ -357,7 +364,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(11, 0.1, -0.5),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_rail_underbarrel", "bo1_m203", "bo1_mk", "bo1_igrip", "bo1_bipod"},
+        Category = {"bo1_rail_underbarrel", "bo1_m203", "bo1_mk", "bo1_igrip"},
     },
     {
         PrintName = "Cosmetic",
@@ -365,6 +372,7 @@ SWEP.Attachments = {
         Pos = Vector(-7, 0, 2),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_cosmetic_fal"},
+        Installed = "bo1_cosmetic_wood"
     },
     {
         PrintName = "Ammunition",
@@ -389,6 +397,16 @@ SWEP.Attachments = {
         Pos = Vector(15, 0.5, 0.25),
         Ang = Angle(0, 0, -90),
         Category = "bo1_rail_tactical",
+    },
+    {
+        PrintName = "Bipod",
+        DefaultCompactName = "None",
+        Bone = "j_gun",
+        Pos = Vector(21, 0, -0.25),
+        Ang = Angle(0, 0, 0),
+        Category = "bo1_bipod",
+        ExcludeElements = {"bo1_m203", "bo1_mk"},
+        Installed = "bo1_bipod_integrated"
     },
 }
 
