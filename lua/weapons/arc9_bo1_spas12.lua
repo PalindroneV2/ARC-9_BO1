@@ -385,14 +385,16 @@ SWEP.Animations = {
         EventTable = {
             {s = "ARC9_BO1.SPAS_Back", t = 0.15},
             {s = "ARC9_BO1.SPAS_Fwd", t = 0.4}
-        }
+        },
+        MinProgress = 0.5
     },
     ["cycle_iron"] = {
         Source = "pump_ads",
         EventTable = {
             {s = "ARC9_BO1.SPAS_Back", t = 0.15},
             {s = "ARC9_BO1.SPAS_Fwd", t = 0.4}
-        }
+        },
+        MinProgress = 0.5
     },
     -- ["reload"] = {
     --     Source = "reload_pap",
