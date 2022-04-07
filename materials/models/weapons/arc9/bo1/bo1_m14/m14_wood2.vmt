@@ -19,10 +19,11 @@ VertexlitGeneric
 	"$envmapfresnel" "0.01"
 	"$envmaptint" "[ .01 .01 .01 ]"
 
-	Proxies {
-		CustomCamo {
-			camoTexture $detail
-			camoScale $detailscale
-		}
-	}
+	// Proxies {
+	// 	CustomCamo {
+	// 		camoTexture $detail
+	// 		camoScale $detailscale
+	// 	}
+	// }
+	// this wood is different
 }
