@@ -226,6 +226,11 @@ SWEP.AttachmentElements = {
             {4,5}
         },
     },
+    ["bo1_bipod"] = {
+        Bodygroups = {
+            {4,6}
+        },
+    },
     ["stock_m"] = {
         Bodygroups = {
             {5,3}
@@ -297,7 +302,7 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
         if self:GetUBGL() then
             suffix = "_mksetup"
         end
-    elseif attached["bo1_igrip"] then
+    elseif attached["bo1_igrip"] or attached["bo1_bipod"] then
         suffix = "_grip"
     else
         suffix = ""
@@ -352,7 +357,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(11, 0.1, -0.5),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_rail_underbarrel", "bo1_m203", "bo1_mk", "bo1_igrip"},
+        Category = {"bo1_rail_underbarrel", "bo1_m203", "bo1_mk", "bo1_igrip", "bo1_bipod"},
     },
     {
         PrintName = "Cosmetic",
