@@ -23,6 +23,7 @@ VertexlitGeneric
 		CustomCamo {
 			camoTexture $detail
 			camoScale $detailscale
+            blend $detailblendfactor
 		}
 	}
 }

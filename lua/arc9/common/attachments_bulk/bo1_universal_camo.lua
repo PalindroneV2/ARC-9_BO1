@@ -28,6 +28,139 @@ ARC9.LoadAttachment(ATT, "camo_darkbake")
 
 ATT = {}
 
+ATT.PrintName = "HK Tan"
+ATT.FullColorIcon = true
+ATT.CompactName = "TAN"
+ATT.Icon = Material("models/weapons/arc9/bo1/camos/tan.png")
+ATT.Category = "universal_camo"
+ATT.Description = [[Universal red color.]]
+ATT.MenuCategory = "ARC-9 - Camos"
+ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/tan"
+ATT.Folder = "BO1 CAMOS/FLAT"
+
+ARC9.LoadAttachment(ATT, "camo_hk21_tan")
+
+ATT = {}
+
+ATT.PrintName = "Dark Tan"
+ATT.FullColorIcon = true
+ATT.CompactName = "DARK TAN"
+ATT.Icon = Material("models/weapons/arc9/bo1/camos/tan_dark.png")
+ATT.Category = "universal_camo"
+ATT.Description = [[Universal red color.]]
+ATT.MenuCategory = "ARC-9 - Camos"
+ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/tan_dark"
+ATT.Folder = "BO1 CAMOS/FLAT"
+
+ARC9.LoadAttachment(ATT, "camo_darktan")
+
+ATT = {}
+
+ATT.PrintName = "Mustard"
+ATT.FullColorIcon = true
+ATT.CompactName = "MSTRD"
+ATT.Icon = Material("models/weapons/arc9/bo1/camos/normalmap.png")
+ATT.Category = "universal_camo"
+ATT.Description = [[Condiment.]]
+ATT.MenuCategory = "ARC-9 - Camos"
+ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/normalmap"
+ATT.Folder = "BO1 CAMOS/FLAT"
+ATT.CustomCamoScale = 1
+
+ARC9.LoadAttachment(ATT, "camo_mustard")
+
+ATT = {}
+
+ATT.PrintName = "Blue Shift"
+ATT.FullColorIcon = true
+ATT.CompactName = "BLUE"
+ATT.Icon = Material("models/weapons/arc9/bo1/camos/blueshift.png")
+ATT.Category = "universal_camo"
+ATT.Description = [[Universal red color.]]
+ATT.MenuCategory = "ARC-9 - Camos"
+ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/blueshift"
+ATT.Folder = "BO1 CAMOS/FLAT"
+
+ARC9.LoadAttachment(ATT, "camo_blueshift")
+
+ATT = {}
+
+ATT.PrintName = "Steyr Green"
+ATT.FullColorIcon = true
+ATT.CompactName = "STYR GRN"
+ATT.Icon = Material("models/weapons/arc9/bo1/camos/od_green.png")
+ATT.Category = "universal_camo"
+ATT.Description = [[Universal red color.]]
+ATT.MenuCategory = "ARC-9 - Camos"
+ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/od_green"
+ATT.CustomCamoScale = 20
+ATT.Folder = "BO1 CAMOS/FLAT"
+
+ARC9.LoadAttachment(ATT, "camo_aug_green")
+
+ATT = {}
+
+ATT.PrintName = "Kaki 1"
+ATT.FullColorIcon = true
+ATT.CompactName = "KAKI 1"
+ATT.Icon = Material("models/weapons/arc9/bo1/camos/kaki_01.png")
+ATT.Category = "universal_camo"
+ATT.Description = [[Universal red color.]]
+ATT.MenuCategory = "ARC-9 - Camos"
+ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/kaki_01"
+ATT.CustomCamoScale = 20
+ATT.Folder = "BO1 CAMOS/FLAT"
+
+ARC9.LoadAttachment(ATT, "camo_kaki_01")
+
+ATT = {}
+
+ATT.PrintName = "Kaki 2"
+ATT.FullColorIcon = true
+ATT.CompactName = "KAKI 2"
+ATT.Icon = Material("models/weapons/arc9/bo1/camos/kaki_02.png")
+ATT.Category = "universal_camo"
+ATT.Description = [[Universal red color.]]
+ATT.MenuCategory = "ARC-9 - Camos"
+ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/kaki_02"
+ATT.CustomCamoScale = 20
+ATT.Folder = "BO1 CAMOS/FLAT"
+
+ARC9.LoadAttachment(ATT, "camo_kaki_02")
+
+ATT = {}
+
+ATT.PrintName = "Deep Green"
+ATT.FullColorIcon = true
+ATT.CompactName = "GREEN"
+ATT.Icon = Material("models/weapons/arc9/bo1/camos/true_od.png")
+ATT.Category = "universal_camo"
+ATT.Description = [[Universal red color.]]
+ATT.MenuCategory = "ARC-9 - Camos"
+ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/true_od"
+ATT.CustomCamoScale = 20
+-- ATT.CustomBlendFactor = 1
+ATT.Folder = "BO1 CAMOS/FLAT"
+
+ARC9.LoadAttachment(ATT, "camo_true_od")
+
+ATT = {}
+
+ATT.PrintName = "Red"
+ATT.FullColorIcon = true
+ATT.CompactName = "RED"
+ATT.Icon = Material("models/weapons/arc9/bo1/camos/red.png")
+ATT.Category = "universal_camo"
+ATT.Description = [[Universal red color.]]
+ATT.MenuCategory = "ARC-9 - Camos"
+ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/red"
+ATT.CustomCamoScale = 20
+ATT.Folder = "BO1 CAMOS/FLAT"
+
+ARC9.LoadAttachment(ATT, "camo_redone")
+
+ATT = {}
+
 ATT.PrintName = "Digital Tan"
 ATT.FullColorIcon = true
 ATT.CompactName = "DIGITAN"
@@ -50,7 +183,7 @@ ATT.Category = "universal_camo"
 ATT.Description = [[Universal red color.]]
 ATT.MenuCategory = "ARC-9 - Camos"
 ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/desert_nevada"
-ATT.Folder = "BO1 CAMOS/Desert"
+ATT.Folder = "BO1 CAMOS/DESERT"
 
 ARC9.LoadAttachment(ATT, "camo_nevada")
 
@@ -64,7 +197,7 @@ ATT.Category = "universal_camo"
 ATT.Description = [[Universal red color.]]
 ATT.MenuCategory = "ARC-9 - Camos"
 ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/desert_rus"
-ATT.Folder = "BO1 CAMOS/Desert"
+ATT.Folder = "BO1 CAMOS/DESERT"
 
 ARC9.LoadAttachment(ATT, "camo_desert_rus")
 
@@ -78,7 +211,7 @@ ATT.Category = "universal_camo"
 ATT.Description = [[Universal red color.]]
 ATT.MenuCategory = "ARC-9 - Camos"
 ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/desert_sahara"
-ATT.Folder = "BO1 CAMOS/Desert"
+ATT.Folder = "BO1 CAMOS/DESERT"
 
 ARC9.LoadAttachment(ATT, "camo_sahara")
 
@@ -250,3 +383,18 @@ ATT.Folder = "BO1 CAMOS/GAMER"
 ATT.CustomCamoScale = 1
 
 ARC9.LoadAttachment(ATT, "camo_weed")
+
+ATT = {}
+
+ATT.PrintName = "Normal"
+ATT.FullColorIcon = true
+ATT.CompactName = "BUMP"
+ATT.Icon = Material("models/weapons/arc9/bo1/camos/normalmap.png")
+ATT.Category = "universal_camo"
+ATT.Description = [[MOM GET THE CAMERA!.]]
+ATT.MenuCategory = "ARC-9 - Camos"
+ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/normalmap"
+ATT.Folder = "BO1 CAMOS/GAMER"
+ATT.CustomCamoScale = 1
+
+ARC9.LoadAttachment(ATT, "camo_bumpmap")

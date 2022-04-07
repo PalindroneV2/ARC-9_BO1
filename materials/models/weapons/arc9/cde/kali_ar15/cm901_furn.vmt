@@ -5,8 +5,8 @@ VertexlitGeneric
 	$bumpmap	"models\weapons\arc9\cde\kali_ar15\cm901_n"
 
 	"$detail" "models\weapons\arc9\bo1\black_detail"
-	"$detailblendfactor" "1.2"
-	$detailblendmode 0
+	$detailblendmode 2
+	$detailblendfactor 0.5
 
 	
 	//"$color2" "[ .4 .4 .4 ]"
@@ -19,4 +19,12 @@ VertexlitGeneric
 	"$basemapalphaenvmapmask" "1"
 	"$envmapfresnel" "0.01"
 	"$envmaptint" "[ .01 .01 .01 ]"
+
+	Proxies {
+		CustomCamo {
+			camoTexture $detail
+			camoScale $detailscale
+            blend $detailblendfactor
+		}
+	}
 }
