@@ -8,11 +8,7 @@ ATT.Category = "universal_camo"
 ATT.Description = [[Universal red color.]]
 ATT.MenuCategory = "ARC-9 - Camos"
 ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/bakelite"
-<<<<<<< Updated upstream
-ATT.Folder = "FLAT"
-=======
 ATT.Folder = "BO1 CAMOS/FLAT"
->>>>>>> Stashed changes
 
 ARC9.LoadAttachment(ATT, "camo_bakelite")
 
@@ -26,11 +22,7 @@ ATT.Category = "universal_camo"
 ATT.Description = [[Universal red color.]]
 ATT.MenuCategory = "ARC-9 - Camos"
 ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/darkbake"
-<<<<<<< Updated upstream
-ATT.Folder = "FLAT"
-=======
 ATT.Folder = "BO1 CAMOS/FLAT"
->>>>>>> Stashed changes
 
 ARC9.LoadAttachment(ATT, "camo_darkbake")
 
@@ -44,11 +36,7 @@ ATT.Category = "universal_camo"
 ATT.Description = [[Universal red color.]]
 ATT.MenuCategory = "ARC-9 - Camos"
 ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/digital_tan"
-<<<<<<< Updated upstream
-ATT.Folder = "DESERT"
-=======
 ATT.Folder = "BO1 CAMOS/FOREST"
->>>>>>> Stashed changes
 
 ARC9.LoadAttachment(ATT, "camo_digital_tan")
 
@@ -62,11 +50,7 @@ ATT.Category = "universal_camo"
 ATT.Description = [[Universal red color.]]
 ATT.MenuCategory = "ARC-9 - Camos"
 ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/desert_nevada"
-<<<<<<< Updated upstream
-ATT.Folder = "DESERT"
-=======
 ATT.Folder = "BO1 CAMOS/Desert"
->>>>>>> Stashed changes
 
 ARC9.LoadAttachment(ATT, "camo_nevada")
 
@@ -80,11 +64,7 @@ ATT.Category = "universal_camo"
 ATT.Description = [[Universal red color.]]
 ATT.MenuCategory = "ARC-9 - Camos"
 ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/desert_rus"
-<<<<<<< Updated upstream
-ATT.Folder = "DESERT"
-=======
 ATT.Folder = "BO1 CAMOS/Desert"
->>>>>>> Stashed changes
 
 ARC9.LoadAttachment(ATT, "camo_desert_rus")
 
@@ -98,11 +78,7 @@ ATT.Category = "universal_camo"
 ATT.Description = [[Universal red color.]]
 ATT.MenuCategory = "ARC-9 - Camos"
 ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/desert_sahara"
-<<<<<<< Updated upstream
-ATT.Folder = "DESERT"
-=======
 ATT.Folder = "BO1 CAMOS/Desert"
->>>>>>> Stashed changes
 
 ARC9.LoadAttachment(ATT, "camo_sahara")
 
@@ -116,11 +92,7 @@ ATT.Category = "universal_camo"
 ATT.Description = [[Universal red color.]]
 ATT.MenuCategory = "ARC-9 - Camos"
 ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/woodland"
-<<<<<<< Updated upstream
-ATT.Folder = "FOREST"
-=======
 ATT.Folder = "BO1 CAMOS/FOREST"
->>>>>>> Stashed changes
 
 ARC9.LoadAttachment(ATT, "camo_woodland")
 
@@ -134,11 +106,7 @@ ATT.Category = "universal_camo"
 ATT.Description = [[Universal red color.]]
 ATT.MenuCategory = "ARC-9 - Camos"
 ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/woodland_flora"
-<<<<<<< Updated upstream
-ATT.Folder = "FOREST"
-=======
 ATT.Folder = "BO1 CAMOS/FOREST"
->>>>>>> Stashed changes
 
 ARC9.LoadAttachment(ATT, "camo_flora")
 
@@ -152,11 +120,7 @@ ATT.Category = "universal_camo"
 ATT.Description = [[Universal red color.]]
 ATT.MenuCategory = "ARC-9 - Camos"
 ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/german"
-<<<<<<< Updated upstream
-ATT.Folder = "FOREST"
-=======
 ATT.Folder = "BO1 CAMOS/FOREST"
->>>>>>> Stashed changes
 
 ARC9.LoadAttachment(ATT, "camo_flecktarn")
 
@@ -170,11 +134,7 @@ ATT.Category = "universal_camo"
 ATT.Description = [[Universal red color.]]
 ATT.MenuCategory = "ARC-9 - Camos"
 ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/winter_siberia"
-<<<<<<< Updated upstream
-ATT.Folder = "SNOW"
-=======
 ATT.Folder = "BO1 CAMOS/WINTER"
->>>>>>> Stashed changes
 
 ARC9.LoadAttachment(ATT, "camo_siberia")
 
@@ -188,12 +148,7 @@ ATT.Category = "universal_camo"
 ATT.Description = [[Universal red color.]]
 ATT.MenuCategory = "ARC-9 - Camos"
 ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/winter_yukon"
-<<<<<<< Updated upstream
-ATT.Folder = "SNOW"
-
-=======
 ATT.Folder = "BO1 CAMOS/WINTER"
->>>>>>> Stashed changes
 
 ARC9.LoadAttachment(ATT, "camo_yukon")
 
@@ -207,11 +162,7 @@ ATT.Category = "universal_camo"
 ATT.Description = [[Universal red color.]]
 ATT.MenuCategory = "ARC-9 - Camos"
 ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/jungle_us"
-<<<<<<< Updated upstream
-ATT.Folder = "JUNGLE"
-=======
 ATT.Folder = "BO1 CAMOS/JUNGLE"
->>>>>>> Stashed changes
 
 ARC9.LoadAttachment(ATT, "camo_jungle_us")
 
@@ -225,11 +176,7 @@ ATT.Category = "universal_camo"
 ATT.Description = [[Universal red color.]]
 ATT.MenuCategory = "ARC-9 - Camos"
 ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/jungle_rus"
-<<<<<<< Updated upstream
-ATT.Folder = "JUNGLE"
-=======
 ATT.Folder = "BO1 CAMOS/JUNGLE"
->>>>>>> Stashed changes
 
 ARC9.LoadAttachment(ATT, "camo_jungle_rus")
 
@@ -243,11 +190,7 @@ ATT.Category = "universal_camo"
 ATT.Description = [[Universal red color.]]
 ATT.MenuCategory = "ARC-9 - Camos"
 ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/jungle_tiger"
-<<<<<<< Updated upstream
-ATT.Folder = "JUNGLE"
-=======
 ATT.Folder = "BO1 CAMOS/JUNGLE"
->>>>>>> Stashed changes
 
 ARC9.LoadAttachment(ATT, "camo_tiger")
 
@@ -261,11 +204,7 @@ ATT.Category = "universal_camo"
 ATT.Description = [[Universal red color.]]
 ATT.MenuCategory = "ARC-9 - Camos"
 ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/urban_warsaw"
-<<<<<<< Updated upstream
-ATT.Folder = "URBAN"
-=======
 ATT.Folder = "BO1 CAMOS/URBAN"
->>>>>>> Stashed changes
 
 ARC9.LoadAttachment(ATT, "camo_urban_warsaw")
 
@@ -279,11 +218,7 @@ ATT.Category = "universal_camo"
 ATT.Description = [[Universal red color.]]
 ATT.MenuCategory = "ARC-9 - Camos"
 ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/urban_german"
-<<<<<<< Updated upstream
-ATT.Folder = "URBAN"
-=======
 ATT.Folder = "BO1 CAMOS/URBAN"
->>>>>>> Stashed changes
 
 ARC9.LoadAttachment(ATT, "camo_urban_german")
 
@@ -297,11 +232,7 @@ ATT.Category = "universal_camo"
 ATT.Description = [[Universal red color.]]
 ATT.MenuCategory = "ARC-9 - Camos"
 ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/urban_rus"
-<<<<<<< Updated upstream
-ATT.Folder = "URBAN"
-=======
 ATT.Folder = "BO1 CAMOS/URBAN"
->>>>>>> Stashed changes
 
 ARC9.LoadAttachment(ATT, "camo_urban_rus")
 
@@ -315,11 +246,7 @@ ATT.Category = "universal_camo"
 ATT.Description = [[MOM GET THE CAMERA!.]]
 ATT.MenuCategory = "ARC-9 - Camos"
 ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/weed_detail"
-<<<<<<< Updated upstream
-ATT.Folder = "GAMER"
-=======
 ATT.Folder = "BO1 CAMOS/GAMER"
 ATT.CustomCamoScale = 1
->>>>>>> Stashed changes
 
 ARC9.LoadAttachment(ATT, "camo_weed")
