@@ -28,6 +28,6 @@ ATT.RecoilRandomSideMult = 0.625
 ATT.RecoilAutoControlMult = 1.875
 
 ATT.SpeedMult = 0.97
-ATT.AimDownSightsTimeAdd = 0.18
+ATT.AimDownSightsTimeMult = 1.25
 ATT.SprintToFireTimeAdd = 0.2
 ATT.SpeedAddSights = -0.16
