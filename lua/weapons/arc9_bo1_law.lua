@@ -123,8 +123,8 @@ SWEP.SpeedMultMelee = 1
 SWEP.SpeedMultCrouch = 1
 SWEP.SpeedMultBlindFire = 1
 
-SWEP.AimDownSightsTime = 0.4
-SWEP.SprintToFireTime = 0.4
+SWEP.AimDownSightsTime = 0.3
+SWEP.SprintToFireTime = 0.3
 
 SWEP.RPM = 150
 SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
@@ -190,10 +190,10 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_RPG
 SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_RPG
 SWEP.AnimDraw = ACT_HL2MP_GESTURE_RANGE_ATTACK_KNIFE
 
-SWEP.ActivePos = Vector(3, 4, -5)
+SWEP.ActivePos = Vector(3, 3, -6)
 SWEP.ActiveAng = Angle(0, 15, 0)
 
-SWEP.CrouchPos = Vector(3, 4, -5)
+SWEP.CrouchPos = Vector(3, 3, -6)
 SWEP.CrouchAng = Angle(0, 15, 0)
 
 SWEP.SprintPos = Vector(0, 0, -1)
@@ -286,13 +286,14 @@ SWEP.Animations = {
         Time = 15 / 35,
     },
     ["reload"] = {
-        Source = "reload",
-        Time = 3,
+        Source = "reload_real_fast",
+        Time = 4,
         EventTable = {
             {s = "ARC9_BO1.LAW_Drop", t = 1},
-            {s = "ARC9_BO1.RPG_Futz", t = 1.6},
-            {s = "ARC9_BO1.RPG_Futz", t = 2.35},
-            -- {s = "ARC9_BO1.RPG_Slide", t = 3.1},
+            {s = "weapons/arc9/bo1_rpg/slide.wav", t = 0.7, p = 95},
+            {s = "ARC9_BO1.RPG_Futz", t = 1.1},
+            {s = "ARC9_BO1.RPG_Futz", t = 2.1},
+            {s = "ARC9_BO1.RPG_Slide", t = 2.9},
         },
     },
     -- ["reload_iron"] = {

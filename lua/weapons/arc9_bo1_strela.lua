@@ -79,7 +79,7 @@ SWEP.Hook_Think = function(self)
             if CLIENT then
                 self:EmitSound("ARC9_BO1.Rocket_LockOn", 75, 100)
             end
-            self.NextBeepTime = CurTime() + 0.2
+            self.NextBeepTime = CurTime() + 0.25
         else
             if CLIENT then
                 self:EmitSound("ARC9_BO1.Rocket_LockOn_Start", 75, 100)
@@ -88,10 +88,11 @@ SWEP.Hook_Think = function(self)
         end
         -- end
 
-        local targets = ents.FindInCone(self:GetShootPos() + (self:GetShootDir():Forward() * 32), self:GetShootDir():Forward(), 30000, math.cos(math.rad(10)))
+        local targets = ents.FindInCone(self:GetShootPos() + (self:GetShootDir():Forward() * 32), self:GetShootDir():Forward(), 30000, math.cos(math.rad(5)))
 
         local best = nil
         local bestang = -1000
+        local targetscore = 0
 
         for _, ent in ipairs(targets) do
             -- if ent:Health() <= 0 then continue end
@@ -102,7 +103,18 @@ SWEP.Hook_Think = function(self)
             if ent.UnTrackable then continue end
             local dot = (ent:GetPos() - self:GetShootPos()):GetNormalized():Dot(self:GetShootDir():Forward())
 
-            if dot > bestang then
+            local entscore = 1
+
+            if ent:IsPlayer() then entscore = entscore + 5 end
+            if ent:IsNPC() then entscore = entscore + 2 end
+            if ent:IsVehicle() then entscore = entscore + 10 end
+            if ent:Health() > 0 then entscore = entscore + 5 end
+
+            entscore = entscore + dot * 5
+
+            entscore = entscore + (ent.ARC9TrackingScore or 0)
+
+            if dot > bestang and entscore > targetscore then
                 -- local tr = util.TraceLine({
                 --     start = self:GetShootPos(),
                 --     endpos = ent:GetPos(),
@@ -115,6 +127,7 @@ SWEP.Hook_Think = function(self)
                 -- if tr.Entity == ent then
                 best = ent
                 bestang = dot
+                targetscore = entscore
                 -- end
             end
         end
@@ -127,7 +140,7 @@ SWEP.Hook_Think = function(self)
         -- local dimy = (bb.y - aa.y) / 2
         -- local dimz = (bb.z - aa.z) / 2
 
-        clutter = math.max(1000 - (vol / 1000), 0)
+        clutter = math.max(1000 - (vol / 1000), 128)
 
         -- local dimx = clutter / 50
         -- local dimy = clutter / 50
@@ -152,8 +165,8 @@ SWEP.Hook_Think = function(self)
         })
 
         -- -- Too much ground clutter
-        if tr2.HitWorld and !tr2.HitSky then return end
-        if tr3.HitWorld and !tr3.HitSky then return end
+        if tr2.Hit and !tr2.HitSky then return end
+        if tr3.Hit and !tr3.HitSky then return end
 
         if !self.TargetEntity then
             self.StartTrackTime = CurTime()
