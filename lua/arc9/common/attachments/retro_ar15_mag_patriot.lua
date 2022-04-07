@@ -26,6 +26,5 @@ ATT.ExcludeElements = {
     "bo1_optic",
     "retro_ar15_lower",
 }
-ATT.ClipSize = 100
 ATT.AimDownSightsTimeAdd = 0.1
 ATT.SprintToFireTimeAdd = 0.1

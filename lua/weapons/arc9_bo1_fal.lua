@@ -14,9 +14,9 @@ SWEP.Trivia = {
     Manufacturer = "FN Herstal",
     Calibre = "5.56x45mm NATO",
     Mechanism = "Gas-Operated",
-    Country = "Sweden",
-    Year = 1982,
-    Games = [[BOCW]]
+    Country = "Belgium",
+    Year = 1953,
+    Games = [[MW2, BO1, BO2]]
 }
 SWEP.Credits = {
     Author = "Palindrone"
