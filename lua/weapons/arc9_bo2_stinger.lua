@@ -77,7 +77,7 @@ SWEP.Hook_Think = function(self)
         -- if CLIENT then
         if tracktime >= 1 and self.TargetEntity then
             if CLIENT then
-                self:EmitSound("ARC9_BO1.Rocket_LockOn", 75, 125)
+                self:EmitSound("ARC9_BO1.Rocket_LockOn", 75, 100)
             end
             self.NextBeepTime = CurTime() + 0.25
         else
@@ -127,33 +127,33 @@ SWEP.Hook_Think = function(self)
         -- local dimy = (bb.y - aa.y) / 2
         -- local dimz = (bb.z - aa.z) / 2
 
-        clutter = math.max(1000 - (vol / 1000), 0)
+        clutter = math.max(1000 - (vol / 1000), 128)
 
-        local dimx = clutter / 50
-        local dimy = clutter / 50
-        local dimz = clutter / 100
+        -- local dimx = clutter / 50
+        -- local dimy = clutter / 50
+        -- local dimz = clutter / 100
 
-        local tr2 = util.TraceHull({
+        local tr2 = util.TraceLine({
             start = self:GetShootPos(),
             endpos = best:GetPos() + (self:GetShootDir():Forward() * clutter),
             filter = self:GetOwner(),
             mask = MASK_NPCWORLDSTATIC,
-            maxs = Vector(-dimx, -dimy, -dimz),
-            mins = Vector(dimx, dimy, dimz),
+            -- maxs = Vector(-dimx, -dimy, -dimz),
+            -- mins = Vector(dimx, dimy, dimz),
         })
 
-        local tr3 = util.TraceHull({
+        local tr3 = util.TraceLine({
             start = self:GetShootPos(),
-            endpos = best:GetPos() + Vector(0, 0, -clutter * 0.25),
+            endpos = best:GetPos() + Vector(0, 0, -clutter),
             filter = self:GetOwner(),
             mask = MASK_NPCWORLDSTATIC,
-            maxs = Vector(-dimx, -dimy, -dimz),
-            mins = Vector(dimx, dimy, dimz),
+            -- maxs = Vector(-dimx, -dimy, -dimz),
+            -- mins = Vector(dimx, dimy, dimz),
         })
 
         -- -- Too much ground clutter
-        if tr2.HitWorld and !tr2.HitSky then return end
-        if tr3.HitWorld and !tr3.HitSky then return end
+        if tr2.Hit and !tr2.HitSky then return end
+        if tr3.Hit and !tr3.HitSky then return end
 
         if !self.TargetEntity then
             self.StartTrackTime = CurTime()
@@ -247,12 +247,7 @@ SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
         Mode = -1,
-    },
-    {
-        Mode = 3,
-    },
-    {
-        Mode = 1,
+        PrintName = "SINGLE"
     },
 }
 SWEP.NPCWeaponType = {"weapon_shotgun"}

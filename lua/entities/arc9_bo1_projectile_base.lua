@@ -35,9 +35,12 @@ ENT.DieTime = 0
 
 ENT.SteerSpeed = 60 -- The maximum amount of degrees per second the missile can steer.
 ENT.SeekerAngle = math.cos(35) -- The missile will lose tracking outside of this angle.
+ENT.SuperSeeker = false
 ENT.SACLOS = false -- This missile is manually guided by its shooter.
 ENT.SemiActive = false -- This missile needs to be locked on to the target at all times.
 ENT.FireAndForget = false -- This missile automatically tracks its target.
+ENT.TopAttack = false -- This missile flies up above its target before going down in a top-attack trajectory.
+ENT.TopAttackTime = 2.5
 
 ENT.ShootEntData = {}
 
@@ -93,11 +96,14 @@ if SERVER then
                 local target = self.ShootEntData.Target
                 if target.UnTrackable then self.ShootEntData.Target = nil end
 
-                local dir = (target:GetPos() - self:GetPos()):GetNormalized()
-                local dot = dir:Dot(self:GetAngles():Forward())
-                local ang = dir:Angle()
+                if self.TopAttack and self.SpawnTime + self.TopAttackTime > CurTime() then
+                    local tpos = target:GetPos() + Vector(0, 0, 5000)
+                    if self.SpawnTime + self.TopAttackTime - 1 < CurTime() then
+                        tpos = target:GetPos()
+                    end
+                    local dir = (tpos - self:GetPos()):GetNormalized()
+                    local ang = dir:Angle()
 
-                if dot >= self.SeekerAngle then
                     local p = self:GetAngles().p
                     local y = self:GetAngles().y
 
@@ -105,9 +111,23 @@ if SERVER then
                     y = math.ApproachAngle(y, ang.y, FrameTime() * self.SteerSpeed)
 
                     self:SetAngles(Angle(p, y, 0))
-                    -- self:SetVelocity(dir * 15000)
                 else
-                    self.ShootEntData.Target = nil
+                    local dir = (target:GetPos() - self:GetPos()):GetNormalized()
+                    local dot = dir:Dot(self:GetAngles():Forward())
+                    local ang = dir:Angle()
+
+                    if self.SuperSeeker or dot >= self.SeekerAngle then
+                        local p = self:GetAngles().p
+                        local y = self:GetAngles().y
+
+                        p = math.ApproachAngle(p, ang.p, FrameTime() * self.SteerSpeed)
+                        y = math.ApproachAngle(y, ang.y, FrameTime() * self.SteerSpeed)
+
+                        self:SetAngles(Angle(p, y, 0))
+                        -- self:SetVelocity(dir * 15000)
+                    else
+                        self.ShootEntData.Target = nil
+                    end
                 end
             else
                 self:SetAngles(self:GetAngles() + (AngleRand() * FrameTime() * 1000 / 360))
