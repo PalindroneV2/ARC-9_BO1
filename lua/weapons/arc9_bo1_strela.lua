@@ -88,10 +88,9 @@ SWEP.Hook_Think = function(self)
         end
         -- end
 
-        local targets = ents.FindInCone(self:GetShootPos() + (self:GetShootDir():Forward() * 32), self:GetShootDir():Forward(), 30000, math.cos(math.rad(5)))
+        local targets = ents.FindInCone(self:GetShootPos() + (self:GetShootDir():Forward() * 32), self:GetShootDir():Forward(), 30000, math.cos(math.rad(10)))
 
         local best = nil
-        local bestang = -1000
         local targetscore = 0
 
         for _, ent in ipairs(targets) do
@@ -105,16 +104,16 @@ SWEP.Hook_Think = function(self)
 
             local entscore = 1
 
-            if ent:IsPlayer() then entscore = entscore + 5 end
-            if ent:IsNPC() then entscore = entscore + 2 end
-            if ent:IsVehicle() then entscore = entscore + 10 end
+            if ent:IsPlayer() then entscore = entscore + 15 end
+            if ent:IsNPC() then entscore = entscore + 10 end
+            if ent:IsVehicle() then entscore = entscore + 25 end
             if ent:Health() > 0 then entscore = entscore + 5 end
 
-            entscore = entscore + dot * 5
+            entscore = entscore + (dot * 2.5)
 
             entscore = entscore + (ent.ARC9TrackingScore or 0)
 
-            if dot > bestang and entscore > targetscore then
+            if entscore > targetscore then
                 -- local tr = util.TraceLine({
                 --     start = self:GetShootPos(),
                 --     endpos = ent:GetPos(),

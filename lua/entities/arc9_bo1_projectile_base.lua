@@ -187,7 +187,7 @@ if SERVER then
             self.GunshipCheck = CurTime() + 0.33
             local tr = util.TraceLine({
                 start = self:GetPos(),
-                endpos = self:GetPos() + (self:GetVelocity() * 4 * engine.TickInterval()),
+                endpos = self:GetPos() + (self:GetVelocity() * 6 * engine.TickInterval()),
                 filter = self,
                 mask = MASK_SHOT
             })
