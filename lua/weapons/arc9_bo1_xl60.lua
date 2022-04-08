@@ -36,6 +36,10 @@ SWEP.WorldModelOffset = {
 }
 SWEP.DesiredViewModelFOV = 60
 
+SWEP.CustomCamoTexture = "models/weapons/arc9/bo1/black_detail"
+SWEP.CustomCamoScale = 1
+SWEP.CustomBlendFactor = 1
+
 SWEP.DefaultBodygroups = "00000000000000"
 
 SWEP.DamageMax = 28
@@ -346,6 +350,14 @@ SWEP.Attachments = {
         Pos = Vector(-1, 0, -1.25),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ammo", "bo1_pap"},
+    },
+    {
+        PrintName = "Cosmetic",
+        DefaultCompactName = "Black",
+        Bone = "j_gun",
+        Pos = Vector(-5, 0, 4),
+        Ang = Angle(0, 0, 0),
+        Category = "universal_camo",
     },
 }
 

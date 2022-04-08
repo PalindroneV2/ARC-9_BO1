@@ -1,5 +1,59 @@
 local ATT = {}
 
+ATT = {}
+
+ATT.PrintName = "Redwood"
+ATT.FullColorIcon = true
+ATT.CompactName = "REDWOOD"
+ATT.Icon = Material("models/weapons/arc9/bo1/camos/ak_redwood.png")
+ATT.Category = "universal_camo"
+ATT.Description = [[Universal red color.]]
+ATT.MenuCategory = "ARC-9 - Camos"
+ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/ak_redwood"
+ATT.Folder = "BO1 CAMOS/WOODS"
+
+ARC9.LoadAttachment(ATT, "camo_redwood")
+
+ATT = {}
+
+ATT.PrintName = "Bright Wood"
+ATT.FullColorIcon = true
+ATT.CompactName = "AK Wood"
+ATT.Icon = Material("models/weapons/arc9/bo1/camos/m14_wood.png")
+ATT.Category = "universal_camo"
+ATT.Description = [[Universal red color.]]
+ATT.MenuCategory = "ARC-9 - Camos"
+ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/m14_wood"
+ATT.Folder = "BO1 CAMOS/WOODS"
+
+ARC9.LoadAttachment(ATT, "camo_m14wood")
+
+ATT.PrintName = "Olympian Wood"
+ATT.FullColorIcon = true
+ATT.CompactName = "AK Wood"
+ATT.Icon = Material("models/weapons/arc9/bo1/camos/olyimpia_wood.png")
+ATT.Category = "universal_camo"
+ATT.Description = [[Universal red color.]]
+ATT.MenuCategory = "ARC-9 - Camos"
+ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/olyimpia_wood"
+ATT.Folder = "BO1 CAMOS/WOODS"
+
+ARC9.LoadAttachment(ATT, "camo_olyimpiawood")
+
+ATT = {}
+
+ATT.PrintName = "AK Wood"
+ATT.FullColorIcon = true
+ATT.CompactName = "AK Wood"
+ATT.Icon = Material("models/weapons/arc9/bo1/camos/ak_redwood.png")
+ATT.Category = "universal_camo"
+ATT.Description = [[Universal red color.]]
+ATT.MenuCategory = "ARC-9 - Camos"
+ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/ak_redwood"
+ATT.Folder = "BO1 CAMOS/WOODS"
+
+ARC9.LoadAttachment(ATT, "camo_akwood")
+
 ATT.PrintName = "Bakelite"
 ATT.FullColorIcon = true
 ATT.CompactName = "BAKE"
@@ -189,20 +243,6 @@ ATT.CustomCamoScale = 20
 ATT.Folder = "BO1 CAMOS/FLAT"
 
 ARC9.LoadAttachment(ATT, "camo_redone")
-
-ATT = {}
-
-ATT.PrintName = "Digital Tan"
-ATT.FullColorIcon = true
-ATT.CompactName = "DIGITAN"
-ATT.Icon = Material("models/weapons/arc9/bo1/camos/digital_tan.png")
-ATT.Category = "universal_camo"
-ATT.Description = [[Universal red color.]]
-ATT.MenuCategory = "ARC-9 - Camos"
-ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/digital_tan"
-ATT.Folder = "BO1 CAMOS/FOREST"
-
-ARC9.LoadAttachment(ATT, "camo_digital_tan")
 
 ATT = {}
 

@@ -35,6 +35,10 @@ SWEP.WorldModelOffset = {
 }
 SWEP.DesiredViewModelFOV = 60
 
+SWEP.CustomCamoTexture = "models/weapons/arc9/bo1/tan"
+SWEP.CustomCamoScale = 1
+SWEP.CustomBlendFactor = 1
+
 SWEP.DefaultBodygroups = "00000000000000"
 
 SWEP.DamageMax = 30
@@ -227,7 +231,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         camo = 1
     end
     if attached["bo1_pap"] then
-        camo = camo + 1
+        camo = camo + 3
     end
     vm:SetSkin(camo)
 

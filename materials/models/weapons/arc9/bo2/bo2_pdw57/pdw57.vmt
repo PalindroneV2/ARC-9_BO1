@@ -5,7 +5,7 @@
 	"$bumpmap" "models/weapons/arc9/bo2/bo2_pdw57/pdw57_n"
 
 	"$detail" "models/weapons/arc9/bo1/tan"
-	$detailblendmode 4
+	$detailblendmode 0
 
 	
 	//"$color2" "[ .4 .4 .4 ]"

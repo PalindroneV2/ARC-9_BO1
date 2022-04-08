@@ -1,13 +1,7 @@
 "VertexlitGeneric"
 {
 	"$basetexture" "models/weapons/arc9/bo2/bo2_r870/r870_c"
-	
 	"$bumpmap" "models/weapons/arc9/bo2/bo2_r870/r870_n"
-	
-	$detail "models\weapons\arc9\bo1\bo1_ak47\ak_wood"
-	$detailblendmode 2
-	$detailblendfactor 0.4
-	
 	
 	//"$color2" "[ .4 .4 .4 ]"
 	"$blendtintbybasealpha" "1"
@@ -19,4 +13,14 @@
 	"$basemapalphaenvmapmask" "1"
 	"$envmapfresnel" "0.01"
 	"$envmaptint" "[ .01 .01 .01 ]"
+
+    $detailblendmode 4
+    $detailblendfactor 1
+	Proxies {
+		CustomCamo {
+			camoTexture $detail
+			camoScale $detailscale
+            blend $detailblendfactor
+		}
+	}
 }
