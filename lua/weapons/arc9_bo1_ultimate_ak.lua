@@ -34,6 +34,10 @@ SWEP.WorldModelOffset = {
 }
 SWEP.DesiredViewModelFOV = 54
 
+SWEP.CustomCamoTexture = "models/weapons/arc9/bo1/ak_redwood"
+SWEP.CustomCamoScale = 1
+SWEP.CustomBlendFactor = 1
+
 SWEP.DefaultBodygroups = "00000000000000"
 
 SWEP.DamageMax = 40
@@ -290,7 +294,6 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local barrel = 0
     local irons = 0
     local hand = 0
-    local camo = 0
     if attached["bo1_ultimate_ak_barrel_short"] then
         barrel = 1
         irons = 4
@@ -323,29 +326,28 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         end
     end
 
-    if attached["bo1_ultimate_ak_furniture_bakelite"] then
-        camo = 4
-    elseif attached["bo1_ultimate_ak_furniture_bakelite_black"] then
-        camo = 2
-    elseif attached["bo1_ultimate_ak_furniture_gold"] then
-        camo = 8
-    elseif attached["bo1_ultimate_ak_furniture_bakelite_worn"] then
+    if attached["bo1_ultimate_ak_furniture_bakelite_worn"] then
         hand = hand + 1
     elseif attached["bo1_ultimate_ak_furniture_modern"] then
         hand = hand + 2
-        camo = 2
         if barrel == 2 then hand = 5 end
     end
+
+    local camo = 0
+    if attached["bo1_ultimate_ak_gold"] then
+        camo = 4
+    end
+    if attached["universal_camo"] then
+        camo = camo + 1
+    end
+    if attached["bo1_pap"] then
+        camo = camo + 2
+    end
+    vm:SetSkin(camo)
 
     vm:SetBodygroup(3, barrel)
     vm:SetBodygroup(2, irons)
     vm:SetBodygroup(4, hand)
-
-    if attached["bo1_pap"] then
-        camo = camo + 1
-    end
-
-    vm:SetSkin(camo)
 
     local newpos = Vector(-2.425, -2, 0.65)
     local newang = Angle(0.05, 0.4, 0)
@@ -466,7 +468,7 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
 end
 
 SWEP.Attachments = {
-    [1] = {
+    {
         PrintName = "Receiver",
         DefaultName = "AK-47",
         Bone = "j_gun",
@@ -474,15 +476,15 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ultimate_ak_receiver"},
     },
-    [2] = {
+    {
         PrintName = "Barrel",
         DefaultName = "AK-47 Barrel",
         Bone = "j_gun",
-        Pos = Vector(11, 0, 2.2),
+        Pos = Vector(13, 0, 2.2),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ultimate_ak_barrel"},
     },
-    [3] = {
+    {
         PrintName = "Stock",
         DefaultName = "Buffer Tube",
         Bone = "j_gun",
@@ -491,7 +493,7 @@ SWEP.Attachments = {
         Category = {"bo1_ultimate_ak_stock"},
         Installed = "bo1_ultimate_ak_stock_type2",
     },
-    [4] = {
+    {
         PrintName = "Muzzle",
         DefaultName = "Default",
         Bone = "j_gun",
@@ -500,7 +502,7 @@ SWEP.Attachments = {
         Category = {"bo1_muzzle"},
         ExcludeElements = {"barrel_krinkov", "barrel_rpk"},
     },
-    [5] = {
+    {
         PrintName = "Underbarrel",
         DefaultName = "None",
         Bone = "j_gun",
@@ -509,7 +511,7 @@ SWEP.Attachments = {
         Category = {"bo1_gp25", "bo1_mk","bo1_grips"},
         ExcludeElements = {"barrel_krinkov", "barrel_rpk"},
     },
-    [6] = {
+    {
         PrintName = "Optic",
         DefaultName = "Irons",
         Bone = "j_gun",
@@ -520,22 +522,38 @@ SWEP.Attachments = {
         ExcludeElements = {"nobacksight"},
         MergeSlots = {7},
     },
-    [7] = {
+    {
         Hidden = true,
         Bone = "j_gun",
         Pos = Vector(1.5, 0, 2.6),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_optic_ak", "bo1_alt_irons"}
     },
-    [8] = {
+    {
+        PrintName = "Handguard",
+        DefaultName = "Standard",
+        Bone = "j_gun",
+        Pos = Vector(8, 0, 1.5),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_ultimate_ak_handg"},
+    },
+    {
+        PrintName = "Plating",
+        DefaultName = "Standard",
+        Bone = "j_gun",
+        Pos = Vector(-10, 0, -5),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_ultimate_ak_gold"},
+    },
+    {
         PrintName = "Furniture",
         DefaultName = "WOOD",
         Bone = "j_gun",
         Pos = Vector(-5, 0, 4),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_ultimate_ak_furniture"},
+        Category = {"universal_camo"},
     },
-    [9] = {
+    {
         PrintName = "Magazine",
         DefaultName = "7.62mm 30",
         Bone = "tag_clip",
@@ -544,7 +562,7 @@ SWEP.Attachments = {
         Category = {"bo1_ultimate_ak_mag"},
         ExcludeElements = {"bo1_ultimate_ak_receiver"}
     },
-    [10] = {
+    {
         PrintName = "Ammunition",
         DefaultCompactName = "AMMO",
         Bone = "tag_clip",
@@ -552,7 +570,7 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ammo", "bo1_pap", "bo1_pap_1911"},
     },
-    [11] = {
+    {
         PrintName = "Perk-a-Cola",
         DefaultCompactName = "PERK",
         Bone = "j_gun",

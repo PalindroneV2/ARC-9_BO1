@@ -39,6 +39,10 @@ SWEP.DesiredViewModelFOV = 60
 
 SWEP.DefaultBodygroups = "00000000000000"
 
+SWEP.CustomCamoTexture = "models/weapons/arc9/bo1/bo1_fal/fal_wood"
+SWEP.CustomCamoScale = 1
+SWEP.CustomBlendFactor = 1
+
 SWEP.DamageMax = 42
 SWEP.DamageMin = 25 -- damage done at maximum range
 SWEP.RangeMax = 8000

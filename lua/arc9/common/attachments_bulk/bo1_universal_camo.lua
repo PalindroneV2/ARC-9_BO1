@@ -145,6 +145,38 @@ ARC9.LoadAttachment(ATT, "camo_true_od")
 
 ATT = {}
 
+ATT.PrintName = "Black"
+ATT.FullColorIcon = true
+ATT.CompactName = "BLACK"
+ATT.Icon = Material("models/weapons/arc9/bo1/camos/black_detail.png")
+ATT.Category = "universal_camo"
+ATT.Description = [[Universal red color.]]
+ATT.MenuCategory = "ARC-9 - Camos"
+ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/black_detail"
+ATT.CustomCamoScale = 20
+ATT.CustomCamoBlend = 3
+ATT.Folder = "BO1 CAMOS/FLAT"
+
+ARC9.LoadAttachment(ATT, "camo_black_detail")
+
+ATT = {}
+
+ATT.PrintName = "Vantablack"
+ATT.FullColorIcon = true
+ATT.CompactName = "VANTAB"
+ATT.Icon = Material("models/weapons/arc9/bo1/camos/black.png")
+ATT.Category = "universal_camo"
+ATT.Description = [[Universal red color.]]
+ATT.MenuCategory = "ARC-9 - Camos"
+ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/black"
+ATT.CustomCamoScale = 20
+ATT.CustomCamoBlend = 3
+ATT.Folder = "BO1 CAMOS/FLAT"
+
+ARC9.LoadAttachment(ATT, "camo_deepblack")
+
+ATT = {}
+
 ATT.PrintName = "Blood Red"
 ATT.FullColorIcon = true
 ATT.CompactName = "RED"
@@ -397,3 +429,18 @@ ATT.Folder = "BO1 CAMOS/GAMER"
 ATT.CustomCamoScale = 1
 
 ARC9.LoadAttachment(ATT, "camo_bumpmap")
+
+ATT = {}
+
+ATT.PrintName = "Circuits"
+ATT.FullColorIcon = true
+ATT.CompactName = "PAP I"
+ATT.Icon = Material("models/weapons/arc9/bo1/camos/circuit.png")
+ATT.Category = "universal_camo"
+ATT.Description = [[Discount BO1 PAP camo.]]
+ATT.MenuCategory = "ARC-9 - Camos"
+ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/circuit"
+ATT.Folder = "BO1 CAMOS/GAMER"
+ATT.CustomCamoScale = 1
+
+ARC9.LoadAttachment(ATT, "camo_pap1")

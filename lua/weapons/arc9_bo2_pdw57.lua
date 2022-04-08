@@ -221,9 +221,15 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     else
         vm:SetBodygroup(0,0)
     end
-    if attached["bo1_pap"] then
-        vm:SetSkin(3)
+
+    local camo = 0
+    if attached["universal_camo"] then
+        camo = 1
     end
+    if attached["bo1_pap"] then
+        camo = camo + 1
+    end
+    vm:SetSkin(camo)
 
 end
 
@@ -305,6 +311,13 @@ SWEP.Attachments = {
         Pos = Vector(-7, 0, 0),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ammo", "bo1_pap"},
+    },
+    {
+        PrintName = "Cosmetic",
+        Bone = "j_gun",
+        Pos = Vector(-12.5, 0, 2.65),
+        Ang = Angle(0, 0, 0),
+        Category = {"universal_camo"},
     },
 }
 

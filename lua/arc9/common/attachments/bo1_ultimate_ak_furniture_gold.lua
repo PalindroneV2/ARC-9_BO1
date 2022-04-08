@@ -11,4 +11,4 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 --ATT.Free = true
 
-ATT.Category = {"bo1_ultimate_ak_furniture"}
+ATT.Category = {"bo1_ultimate_ak_gold"}

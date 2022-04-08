@@ -316,14 +316,14 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     vm:SetBodygroup(5, barrel)
     vm:SetBodygroup(6, bipod)
 
-    local color = 0
-    if attached["bo1_cosmetic_wood"] then
-        color = 1
+    local camo = 0
+    if attached["universal_camo"] then
+        camo = 1
     end
-    vm:SetSkin(color)
     if attached["bo1_pap"] then
-        vm:SetSkin(color + 1)
+        camo = camo + 1
     end
+    vm:SetSkin(camo)
 end
 
 SWEP.Hook_TranslateAnimation = function (self, anim)
@@ -398,7 +398,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(-12.5, 0, 2.65),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_cosmetic_g3"},
+        Category = {"universal_camo"},
     },
     {
         Hidden = true,
