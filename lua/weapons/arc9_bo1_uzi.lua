@@ -36,7 +36,7 @@ SWEP.WorldModelOffset = {
 SWEP.DesiredViewModelFOV = 60
 
 SWEP.CustomCamoTexture = "models/weapons/arc9/bo1/plastic"
-SWEP.CustomCamoScale = 1
+SWEP.CustomCamoScale = 2.5
 SWEP.CustomBlendFactor = 1
 
 SWEP.DefaultBodygroups = "00000000000000"

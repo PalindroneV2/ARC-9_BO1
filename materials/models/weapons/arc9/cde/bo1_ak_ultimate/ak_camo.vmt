@@ -4,7 +4,7 @@ VertexlitGeneric
 	$bumpmap	"models\weapons\arc9\bo1\bo1_ak47\ak47_n"
 	$detailblendmode	3
 	$detailblendfactor 0.75
-    "$detailtexturetransform" "center 0 0 scale 1 1 rotate 0 translate 0 0"
+    // "$detailtexturetransform" "center 0 0 scale 1 1 rotate 0 translate 0 0"
 
 	"$blendtintbybasealpha" "1"
 	"$phong" "1"
