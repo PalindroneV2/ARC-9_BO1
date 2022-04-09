@@ -18,7 +18,7 @@
     // "$detail" "models/weapons/arc9/bo1/camos/woodland"
     // $detailscale 2
     $detailblendmode 4
-    $detailblendfactor 1
+    $detailblendfactor 0.5
 	Proxies {
 		CustomCamo {
 			camoTexture $detail

@@ -204,12 +204,17 @@ SWEP.ExtraSightDist = 5
 SWEP.AttachmentElements = {
     ["stock_l"] = {
         Bodygroups = {
-            {3,2}
+            {3,1}
         },
     },
     ["stock_m"] = {
         Bodygroups = {
-            {3,1}
+            {3,2}
+        },
+    },
+    ["ext_mag"] = {
+        Bodygroups = {
+            {1,1}
         },
     },
     ["mount"] = {
@@ -237,9 +242,22 @@ end
 SWEP.Hook_TranslateAnimation = function (self, anim)
     local attached = self:GetElements()
 
+    local suffix = ""
+
     if attached["stock_m"] then
-        return anim .. "_grip"
+        suffix = "_stock"
     end
+
+    if attached["bo1_mag_ext"] then
+        if anim == "reload" then
+            return "ext"
+        end
+        if anim == "reload_empty" then
+            return "ext_empty"
+        end
+    end
+
+    return anim .. suffix
 end
 
 --TEST 3
@@ -313,6 +331,14 @@ SWEP.Attachments = {
         Category = "bo1_rail_underbarrel",
     },
     {
+        PrintName = "Magazine",
+        DefaultCompactName = "MAG",
+        Bone = "tag_clip",
+        Pos = Vector(.5, 0, -3),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_mag_ext"},
+    },
+    {
         PrintName = "Ammunition",
         DefaultCompactName = "AMMO",
         Bone = "tag_clip",
@@ -343,8 +369,8 @@ SWEP.Animations = {
         Source = "holster",
         Time = 0.5,
     },
-    ["draw_grip"] = {
-        Source = "first_draw_grip",
+    ["draw_stock"] = {
+        Source = "first_draw_stock",
         Time = 1,
         EventTable = {
             {s = "ARC9_BO1.Uzi_Futz", t = 6 / 30},
@@ -360,7 +386,7 @@ SWEP.Animations = {
         },
     },
     ["ready_grip"] = {
-        Source = "first_draw_grip",
+        Source = "first_draw_stock",
         Time = 1.5,
         EventTable = {
             {s = "ARC9_BO1.Uzi_Futz", t = 12 / 30},
@@ -409,6 +435,68 @@ SWEP.Animations = {
     },
     ["reload_empty"] = {
         Source = "reload_empty",
+        Time = 120 / 35,
+        EventTable = {
+            {s = "ARC9_BO1.Uzi_MagOut", t = 16 / 35},
+            {s = "ARC9_BO1.Uzi_MagIn", t = 56 / 35},
+            {s = "ARC9_BO1.Uzi_BoltBack", t = 75 / 35},
+            {s = "ARC9_BO1.Uzi_BoltFwd", t = 81 / 35},
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.7,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.95,
+                lhik = 1,
+                rhik = 1
+            },
+        },
+    },
+    ["ext"] = {
+        Source = "ext",
+        Time = 90 / 35,
+        EventTable = {
+            {s = "ARC9_BO1.Uzi_MagOut", t = 15 / 35},
+            {s = "ARC9_BO1.Uzi_MagIn", t = 56 / 35}
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.7,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.95,
+                lhik = 1,
+                rhik = 1
+            },
+        },
+    },
+    ["ext_empty"] = {
+        Source = "ext_empty",
         Time = 120 / 35,
         EventTable = {
             {s = "ARC9_BO1.Uzi_MagOut", t = 16 / 35},
