@@ -35,6 +35,10 @@ SWEP.WorldModelOffset = {
 }
 SWEP.DesiredViewModelFOV = 60
 
+SWEP.CustomCamoTexture = "models/weapons/arc9/bo1/camos/gunmetal"
+SWEP.CustomCamoScale = 1
+SWEP.CustomBlendFactor = 1
+
 SWEP.DefaultBodygroups = "00000000000000"
 
 SWEP.DamageMax = 33
@@ -296,8 +300,11 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     vm:SetBodygroup(3, iron)
 
     local camo = 0
+    if attached["universal_camo"] then
+        camo = 1
+    end
     if attached["bo1_pap"] then
-        camo = camo + 1
+        camo = camo + 2
     end
     vm:SetSkin(camo)
 
@@ -422,6 +429,14 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"bo1_stocks", "bo1_stock_ul"},
         Installed = "bo1_stock_light",
+    },
+    {
+        PrintName = "Cosmetic",
+        DefaultCompactName = "Gunmetal",
+        Bone = "j_gun",
+        Pos = Vector(-7, 0, 0),
+        Ang = Angle(0, 0, 0),
+        Category = "universal_camo",
     },
 }
 

@@ -11,6 +11,7 @@ ATT.Description = [[Universal red color.]]
 ATT.MenuCategory = "ARC-9 - Camos"
 ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/ak_redwood"
 ATT.Folder = "BO1 CAMOS/WOODS"
+ATT.CustomCamoScale = 2
 
 ARC9.LoadAttachment(ATT, "camo_redwood")
 
@@ -18,25 +19,29 @@ ATT = {}
 
 ATT.PrintName = "Bright Wood"
 ATT.FullColorIcon = true
-ATT.CompactName = "AK Wood"
+ATT.CompactName = "M14"
 ATT.Icon = Material("models/weapons/arc9/bo1/camos/m14_wood.png")
 ATT.Category = "universal_camo"
 ATT.Description = [[Universal red color.]]
 ATT.MenuCategory = "ARC-9 - Camos"
 ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/m14_wood"
 ATT.Folder = "BO1 CAMOS/WOODS"
+ATT.CustomCamoScale = 2
 
 ARC9.LoadAttachment(ATT, "camo_m14wood")
 
+ATT = {}
+
 ATT.PrintName = "Olympian Wood"
 ATT.FullColorIcon = true
-ATT.CompactName = "AK Wood"
-ATT.Icon = Material("models/weapons/arc9/bo1/camos/olyimpia_wood.png")
+ATT.CompactName = "Olympia"
+ATT.Icon = Material("models/weapons/arc9/bo1/camos/olympia_wood.png")
 ATT.Category = "universal_camo"
 ATT.Description = [[Universal red color.]]
 ATT.MenuCategory = "ARC-9 - Camos"
-ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/olyimpia_wood"
+ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/olympia_wood"
 ATT.Folder = "BO1 CAMOS/WOODS"
+ATT.CustomCamoScale = 2
 
 ARC9.LoadAttachment(ATT, "camo_olyimpiawood")
 
@@ -51,8 +56,11 @@ ATT.Description = [[Universal red color.]]
 ATT.MenuCategory = "ARC-9 - Camos"
 ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/ak_redwood"
 ATT.Folder = "BO1 CAMOS/WOODS"
+ATT.CustomCamoScale = 2
 
 ARC9.LoadAttachment(ATT, "camo_akwood")
+
+ATT = {}
 
 ATT.PrintName = "Bakelite"
 ATT.FullColorIcon = true
