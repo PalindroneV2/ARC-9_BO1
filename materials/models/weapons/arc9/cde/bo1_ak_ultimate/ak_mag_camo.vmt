@@ -1,10 +1,8 @@
 VertexlitGeneric
 {
-	$basetexture	"models\weapons\arc9\bo1\bo1_fal\fal_c"
-	$bumpmap	"models\weapons\arc9\bo1\bo1_fal\fal_n"
-	$phongexponenttexture "models\weapons\arc9\bo1\bo1_fal\fal_s"
-	
-	//"$color2" "[ .4 .4 .4 ]"
+	$basetexture	"models\weapons\arc9\bo1\bo1_ak47\ak_mag_c"
+	//$color2 "[0.5 0.5 0.5]"
+	$bumpmap	"models\weapons\arc9\bo1\bo1_ak47\ak_mag_n"
 	"$blendtintbybasealpha" "1"
 	"$phong" "1"
 	"$phongboost" "1"
@@ -15,8 +13,8 @@ VertexlitGeneric
 	"$envmapfresnel" "0.01"
 	"$envmaptint" "[ .01 .01 .01 ]"
 
-    $detailblendmode 4
-    $detailblendfactor 0.5
+	$detailblendmode 4
+	$detailblendfactor 1
 	Proxies {
 		CustomCamo {
 			camoTexture $detail

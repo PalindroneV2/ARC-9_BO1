@@ -3,7 +3,9 @@ VertexlitGeneric
 	$basetexture	"models\weapons\arc9\bo1\bo1_aug\aug_c"
 	// $color2 "[0.5 0.5 0.5]"
 	$bumpmap	"models\weapons\arc9\bo1\bo1_aug\aug_n"
+	$phongexponenttexture	"models\weapons\arc9\bo1\bo1_aug\aug_s"
 	"$detail" "models\weapons\arc9\bo1\camos\black_detail"
+	"$detailblendfactor" "0.4"
 
 	//"$color2" "[ .4 .4 .4 ]"
 	"$blendtintbybasealpha" "1"

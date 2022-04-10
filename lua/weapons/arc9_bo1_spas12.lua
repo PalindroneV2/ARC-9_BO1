@@ -36,8 +36,8 @@ SWEP.WorldModelOffset = {
 }
 SWEP.DesiredViewModelFOV = 60
 
-SWEP.CustomCamoTexture = "models/weapons/arc9/bo1/black_detail"
-SWEP.CustomCamoScale = 1
+SWEP.CustomCamoTexture = "models/weapons/arc9/bo1/camos/black_detail"
+SWEP.CustomCamoScale = 2
 SWEP.CustomBlendFactor = 1
 
 SWEP.DefaultBodygroups = "002000000"
@@ -245,9 +245,9 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     end
     if attached["bo1_pap"] then
         camo = camo + 6
-    end
-    if attached["stock_l"] then
-        camo = camo - 2
+        if attached["stock_l"] then
+            camo = camo - 2
+        end
     end
     vm:SetSkin(camo)
 
