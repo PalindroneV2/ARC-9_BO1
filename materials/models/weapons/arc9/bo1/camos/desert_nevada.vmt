@@ -1,6 +1,6 @@
 "UnlitGeneric"
 {
-    "$basetexture" "desert_nevada"
+    "$basetexture" "models/weapons/arc9/bo1/camos/desert_nevada"
     "$nolod" "1"
     "$ignorez" "1"
     "$vertexalpha" "1"

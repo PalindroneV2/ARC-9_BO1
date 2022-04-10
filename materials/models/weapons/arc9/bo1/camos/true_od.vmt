@@ -1,6 +1,6 @@
 "UnlitGeneric"
 {
-    "$basetexture" "true_od"
+    "$basetexture" "models/weapons/arc9/bo1/camos/true_od"
     "$nolod" "1"
     "$ignorez" "1"
     "$vertexalpha" "1"

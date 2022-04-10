@@ -1,6 +1,6 @@
 "UnlitGeneric"
 {
-    "$basetexture" "tan_mustard"
+    "$basetexture" "models/weapons/arc9/bo1/camos/tan_mustard"
     "$nolod" "1"
     "$ignorez" "1"
     "$vertexalpha" "1"

@@ -1,6 +1,6 @@
 "UnlitGeneric"
 {
-    "$basetexture" "olympia_wood"
+    "$basetexture" "models/weapons/arc9/bo1/camos/olympia_wood"
     "$nolod" "1"
     "$ignorez" "1"
     "$vertexalpha" "1"

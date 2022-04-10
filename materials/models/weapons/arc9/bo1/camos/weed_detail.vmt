@@ -1,6 +1,6 @@
 "UnlitGeneric"
 {
-    "$basetexture" "weed_detail"
+    "$basetexture" "models/weapons/arc9/bo1/camos/weed_detail"
     "$nolod" "1"
     "$ignorez" "1"
     "$vertexalpha" "1"

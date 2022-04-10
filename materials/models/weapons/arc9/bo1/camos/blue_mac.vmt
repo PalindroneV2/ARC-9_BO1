@@ -1,6 +1,6 @@
 "UnlitGeneric"
 {
-    "$basetexture" "blue_mac"
+    "$basetexture" "models/weapons/arc9/bo1/camos/blue_mac"
     "$nolod" "1"
     "$ignorez" "1"
     "$vertexalpha" "1"

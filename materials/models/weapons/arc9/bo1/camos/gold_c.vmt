@@ -1,6 +1,6 @@
 "UnlitGeneric"
 {
-    "$basetexture" "gold_c"
+    "$basetexture" "models/weapons/arc9/bo1/camos/gold_c"
     "$nolod" "1"
     "$ignorez" "1"
     "$vertexalpha" "1"

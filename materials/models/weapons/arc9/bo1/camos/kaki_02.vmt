@@ -1,6 +1,6 @@
 "UnlitGeneric"
 {
-    "$basetexture" "kaki_02"
+    "$basetexture" "models/weapons/arc9/bo1/camos/kaki_02"
     "$nolod" "1"
     "$ignorez" "1"
     "$vertexalpha" "1"
