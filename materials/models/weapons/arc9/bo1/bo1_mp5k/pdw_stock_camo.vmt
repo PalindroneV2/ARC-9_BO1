@@ -1,14 +1,8 @@
-VertexlitGeneric
+"VertexlitGeneric"
 {
-	$basetexture	"models\weapons\arc9\cde\mw3_ars\mw3_m4"
-	//$color2 "[0.5 0.5 0.5]"
-	$bumpmap	"models\weapons\arc9\cde\mw3_ars\mw3_m4_n"
-	$phongexponenttexture	"models\weapons\arc9\cde\mw3_ars\mw3_m4_s"
+	"$basetexture" "models/weapons/arc9/bocw/bocw_mp5/pdw_stock/stock"
+	"$bumpmap" "models/weapons/arc9/bocw/bocw_mp5/pdw_stock/stock_n"
 	
-	$detail "models\weapons\arc9\bo1\black_detail"
-	$detailblendmode 4
-	$detailblendfactor 0.65
-
 	
 	//"$color2" "[ .4 .4 .4 ]"
 	"$blendtintbybasealpha" "1"
@@ -21,8 +15,10 @@ VertexlitGeneric
 	"$envmapfresnel" "0.01"
 	"$envmaptint" "[ .01 .01 .01 ]"
 
-	"$nocull" "1"
+	$nocull 1
 
+	$detailblendmode "4"
+	"$detailblendfactor" "0.5"
 	Proxies {
 		CustomCamo {
 			camoTexture $detail
@@ -30,5 +26,4 @@ VertexlitGeneric
             blend $detailblendfactor
 		}
 	}
-
 }

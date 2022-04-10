@@ -21,7 +21,6 @@
 
 	$detailblendmode 2
 	$detailblendfactor 0.5
-	"$detailtexturetransform" "center .5 .5 scale 1 1 rotate 45 translate 0 0"
 	Proxies {
 		CustomCamo {
 			camoTexture $detail

@@ -5,7 +5,7 @@ VertexlitGeneric
 	$bumpmap	"models\weapons\arc9\cde\mw3_ars\rsass_n"
 
 	$detail "models\weapons\arc9\bo1\black_detail"
-	$detailblendmode 0
+	$detailblendmode 4
 	"$detailblendfactor" "1"
 
 	

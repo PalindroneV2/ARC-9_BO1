@@ -13,7 +13,7 @@ ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/ak_redwood"
 ATT.Folder = "BO1 CAMOS/WOODS"
 ATT.CustomCamoScale = 2
 
-ARC9.LoadAttachment(ATT, "camo_redwood")
+ARC9.LoadAttachment(ATT, "bo1_camo_redwood")
 
 ATT = {}
 
@@ -28,7 +28,7 @@ ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/m14_wood"
 ATT.Folder = "BO1 CAMOS/WOODS"
 ATT.CustomCamoScale = 2.5
 
-ARC9.LoadAttachment(ATT, "camo_m14wood")
+ARC9.LoadAttachment(ATT, "bo1_camo_m14wood")
 
 ATT = {}
 
@@ -43,7 +43,7 @@ ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/olympia_wood"
 ATT.Folder = "BO1 CAMOS/WOODS"
 ATT.CustomCamoScale = 2.5
 
-ARC9.LoadAttachment(ATT, "camo_olyimpiawood")
+ARC9.LoadAttachment(ATT, "bo1_camo_olyimpiawood")
 
 ATT = {}
 
@@ -58,7 +58,21 @@ ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/ak_redwood"
 ATT.Folder = "BO1 CAMOS/WOODS"
 ATT.CustomCamoScale = 2.5
 
-ARC9.LoadAttachment(ATT, "camo_akwood")
+ARC9.LoadAttachment(ATT, "bo1_camo_akwood")
+
+ATT = {}
+
+ATT.PrintName = "Plain White"
+ATT.FullColorIcon = true
+ATT.CompactName = "WHITE"
+ATT.Icon = Material("entities/bo1_camos/solid_white.png")
+ATT.Category = "universal_camo"
+ATT.Description = [[Universal red color.]]
+ATT.MenuCategory = "ARC-9 - Camos"
+ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/solid_white"
+ATT.Folder = "COD CAMOS/FLAT"
+
+ARC9.LoadAttachment(ATT, "bo1_camo_solidwhite")
 
 ATT = {}
 
@@ -70,9 +84,9 @@ ATT.Category = "universal_camo"
 ATT.Description = [[Universal red color.]]
 ATT.MenuCategory = "ARC-9 - Camos"
 ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/bakelite"
-ATT.Folder = "BO1 CAMOS/FLAT"
+ATT.Folder = "COD CAMOS/FLAT"
 
-ARC9.LoadAttachment(ATT, "camo_bakelite")
+ARC9.LoadAttachment(ATT, "bo1_camo_bakelite")
 
 ATT = {}
 
@@ -84,9 +98,9 @@ ATT.Category = "universal_camo"
 ATT.Description = [[Universal red color.]]
 ATT.MenuCategory = "ARC-9 - Camos"
 ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/darkbake"
-ATT.Folder = "BO1 CAMOS/FLAT"
+ATT.Folder = "COD CAMOS/FLAT"
 
-ARC9.LoadAttachment(ATT, "camo_darkbake")
+ARC9.LoadAttachment(ATT, "bo1_camo_darkbake")
 
 ATT = {}
 
@@ -98,9 +112,9 @@ ATT.Category = "universal_camo"
 ATT.Description = [[Universal red color.]]
 ATT.MenuCategory = "ARC-9 - Camos"
 ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/tan"
-ATT.Folder = "BO1 CAMOS/FLAT"
+ATT.Folder = "COD CAMOS/FLAT"
 
-ARC9.LoadAttachment(ATT, "camo_hk21_tan")
+ARC9.LoadAttachment(ATT, "bo1_camo_hk21_tan")
 
 ATT = {}
 
@@ -112,9 +126,9 @@ ATT.Category = "universal_camo"
 ATT.Description = [[Universal red color.]]
 ATT.MenuCategory = "ARC-9 - Camos"
 ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/tan_dark"
-ATT.Folder = "BO1 CAMOS/FLAT"
+ATT.Folder = "COD CAMOS/FLAT"
 
-ARC9.LoadAttachment(ATT, "camo_darktan")
+ARC9.LoadAttachment(ATT, "bo1_camo_darktan")
 
 ATT = {}
 
@@ -126,10 +140,10 @@ ATT.Category = "universal_camo"
 ATT.Description = [[Condiment.]]
 ATT.MenuCategory = "ARC-9 - Camos"
 ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/tan_mustard"
-ATT.Folder = "BO1 CAMOS/FLAT"
+ATT.Folder = "COD CAMOS/FLAT"
 ATT.CustomCamoScale = 1
 
-ARC9.LoadAttachment(ATT, "camo_mustard")
+ARC9.LoadAttachment(ATT, "bo1_camo_mustard")
 
 ATT = {}
 
@@ -141,9 +155,9 @@ ATT.Category = "universal_camo"
 ATT.Description = [[Universal red color.]]
 ATT.MenuCategory = "ARC-9 - Camos"
 ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/blueshift"
-ATT.Folder = "BO1 CAMOS/FLAT"
+ATT.Folder = "COD CAMOS/FLAT"
 
-ARC9.LoadAttachment(ATT, "camo_blueshift")
+ARC9.LoadAttachment(ATT, "bo1_camo_blueshift")
 
 ATT = {}
 
@@ -156,9 +170,9 @@ ATT.Description = [[Universal red color.]]
 ATT.MenuCategory = "ARC-9 - Camos"
 ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/od_green"
 ATT.CustomCamoScale = 20
-ATT.Folder = "BO1 CAMOS/FLAT"
+ATT.Folder = "COD CAMOS/FLAT"
 
-ARC9.LoadAttachment(ATT, "camo_aug_green")
+ARC9.LoadAttachment(ATT, "bo1_camo_aug_green")
 
 ATT = {}
 
@@ -171,9 +185,9 @@ ATT.Description = [[Universal red color.]]
 ATT.MenuCategory = "ARC-9 - Camos"
 ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/kaki_01"
 ATT.CustomCamoScale = 20
-ATT.Folder = "BO1 CAMOS/FLAT"
+ATT.Folder = "COD CAMOS/FLAT"
 
-ARC9.LoadAttachment(ATT, "camo_kaki_01")
+ARC9.LoadAttachment(ATT, "bo1_camo_kaki_01")
 
 ATT = {}
 
@@ -186,9 +200,9 @@ ATT.Description = [[Universal red color.]]
 ATT.MenuCategory = "ARC-9 - Camos"
 ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/kaki_02"
 ATT.CustomCamoScale = 20
-ATT.Folder = "BO1 CAMOS/FLAT"
+ATT.Folder = "COD CAMOS/FLAT"
 
-ARC9.LoadAttachment(ATT, "camo_kaki_02")
+ARC9.LoadAttachment(ATT, "bo1_camo_kaki_02")
 
 ATT = {}
 
@@ -201,9 +215,9 @@ ATT.Description = [[Universal red color.]]
 ATT.MenuCategory = "ARC-9 - Camos"
 ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/true_od"
 ATT.CustomCamoScale = 20
-ATT.Folder = "BO1 CAMOS/FLAT"
+ATT.Folder = "COD CAMOS/FLAT"
 
-ARC9.LoadAttachment(ATT, "camo_true_od")
+ARC9.LoadAttachment(ATT, "bo1_camo_true_od")
 
 ATT = {}
 
@@ -215,9 +229,9 @@ ATT.Category = "universal_camo"
 ATT.Description = [[Universal red color.]]
 ATT.MenuCategory = "ARC-9 - Camos"
 ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/black_detail"
-ATT.Folder = "BO1 CAMOS/FLAT"
+ATT.Folder = "COD CAMOS/FLAT"
 
-ARC9.LoadAttachment(ATT, "camo_black_detail")
+ARC9.LoadAttachment(ATT, "bo1_camo_black_detail")
 
 ATT = {}
 
@@ -229,9 +243,9 @@ ATT.Category = "universal_camo"
 ATT.Description = [[Universal red color.]]
 ATT.MenuCategory = "ARC-9 - Camos"
 ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/black"
-ATT.Folder = "BO1 CAMOS/FLAT"
+ATT.Folder = "COD CAMOS/FLAT"
 
-ARC9.LoadAttachment(ATT, "camo_deepblack")
+ARC9.LoadAttachment(ATT, "bo1_camo_deepblack")
 
 ATT = {}
 
@@ -243,9 +257,9 @@ ATT.Category = "universal_camo"
 ATT.Description = [[Universal red color.]]
 ATT.MenuCategory = "ARC-9 - Camos"
 ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/red"
-ATT.Folder = "BO1 CAMOS/FLAT"
+ATT.Folder = "COD CAMOS/FLAT"
 
-ARC9.LoadAttachment(ATT, "camo_redone")
+ARC9.LoadAttachment(ATT, "bo1_camo_redone")
 
 ATT = {}
 
@@ -260,7 +274,7 @@ ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/desert_nevada"
 ATT.Folder = "BO1 CAMOS/DESERT"
 ATT.CustomCamoScale = 2.5
 
-ARC9.LoadAttachment(ATT, "camo_nevada")
+ARC9.LoadAttachment(ATT, "bo1_camo_nevada")
 
 ATT = {}
 
@@ -275,7 +289,7 @@ ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/desert_rus"
 ATT.Folder = "BO1 CAMOS/DESERT"
 ATT.CustomCamoScale = 2.5
 
-ARC9.LoadAttachment(ATT, "camo_desert_rus")
+ARC9.LoadAttachment(ATT, "bo1_camo_desert_rus")
 
 ATT = {}
 
@@ -290,7 +304,7 @@ ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/desert_sahara"
 ATT.Folder = "BO1 CAMOS/DESERT"
 ATT.CustomCamoScale = 2.5
 
-ARC9.LoadAttachment(ATT, "camo_sahara")
+ARC9.LoadAttachment(ATT, "bo1_camo_sahara")
 
 ATT = {}
 
@@ -305,7 +319,7 @@ ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/woodland"
 ATT.Folder = "BO1 CAMOS/FOREST"
 ATT.CustomCamoScale = 2.5
 
-ARC9.LoadAttachment(ATT, "camo_woodland")
+ARC9.LoadAttachment(ATT, "bo1_camo_woodland")
 
 ATT = {}
 
@@ -320,7 +334,7 @@ ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/woodland_flora"
 ATT.Folder = "BO1 CAMOS/FOREST"
 ATT.CustomCamoScale = 2.5
 
-ARC9.LoadAttachment(ATT, "camo_flora")
+ARC9.LoadAttachment(ATT, "bo1_camo_flora")
 
 ATT = {}
 
@@ -335,7 +349,7 @@ ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/german"
 ATT.Folder = "BO1 CAMOS/FOREST"
 ATT.CustomCamoScale = 2.5
 
-ARC9.LoadAttachment(ATT, "camo_flecktarn")
+ARC9.LoadAttachment(ATT, "bo1_camo_flecktarn")
 
 ATT = {}
 
@@ -350,7 +364,7 @@ ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/winter_siberia"
 ATT.Folder = "BO1 CAMOS/WINTER"
 ATT.CustomCamoScale = 2.5
 
-ARC9.LoadAttachment(ATT, "camo_siberia")
+ARC9.LoadAttachment(ATT, "bo1_camo_siberia")
 
 ATT = {}
 
@@ -365,7 +379,7 @@ ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/winter_yukon"
 ATT.Folder = "BO1 CAMOS/WINTER"
 ATT.CustomCamoScale = 2.5
 
-ARC9.LoadAttachment(ATT, "camo_yukon")
+ARC9.LoadAttachment(ATT, "bo1_camo_yukon")
 
 ATT = {}
 
@@ -380,7 +394,7 @@ ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/jungle_us"
 ATT.Folder = "BO1 CAMOS/JUNGLE"
 ATT.CustomCamoScale = 2.5
 
-ARC9.LoadAttachment(ATT, "camo_jungle_us")
+ARC9.LoadAttachment(ATT, "bo1_camo_jungle_us")
 
 ATT = {}
 
@@ -395,7 +409,7 @@ ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/jungle_rus"
 ATT.Folder = "BO1 CAMOS/JUNGLE"
 ATT.CustomCamoScale = 2.5
 
-ARC9.LoadAttachment(ATT, "camo_jungle_rus")
+ARC9.LoadAttachment(ATT, "bo1_camo_jungle_rus")
 
 ATT = {}
 
@@ -410,7 +424,7 @@ ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/jungle_tiger"
 ATT.Folder = "BO1 CAMOS/JUNGLE"
 ATT.CustomCamoScale = 2.5
 
-ARC9.LoadAttachment(ATT, "camo_tiger")
+ARC9.LoadAttachment(ATT, "bo1_camo_tiger")
 
 ATT = {}
 
@@ -425,7 +439,7 @@ ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/urban_warsaw"
 ATT.Folder = "BO1 CAMOS/URBAN"
 ATT.CustomCamoScale = 2.5
 
-ARC9.LoadAttachment(ATT, "camo_urban_warsaw")
+ARC9.LoadAttachment(ATT, "bo1_camo_urban_warsaw")
 
 ATT = {}
 
@@ -440,7 +454,7 @@ ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/urban_german"
 ATT.Folder = "BO1 CAMOS/URBAN"
 ATT.CustomCamoScale = 2.5
 
-ARC9.LoadAttachment(ATT, "camo_urban_german")
+ARC9.LoadAttachment(ATT, "bo1_camo_urban_german")
 
 ATT = {}
 
@@ -455,7 +469,7 @@ ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/urban_rus"
 ATT.Folder = "BO1 CAMOS/URBAN"
 ATT.CustomCamoScale = 2.5
 
-ARC9.LoadAttachment(ATT, "camo_urban_rus")
+ARC9.LoadAttachment(ATT, "bo1_camo_urban_rus")
 
 ATT = {}
 
@@ -470,7 +484,7 @@ ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/weed_detail"
 ATT.Folder = "BO1 CAMOS/GAMER"
 ATT.CustomCamoScale = 5
 
-ARC9.LoadAttachment(ATT, "camo_weed")
+ARC9.LoadAttachment(ATT, "bo1_camo_weed")
 
 ATT = {}
 
@@ -485,7 +499,7 @@ ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/normalmap"
 ATT.Folder = "BO1 CAMOS/GAMER"
 ATT.CustomCamoScale = 1
 
-ARC9.LoadAttachment(ATT, "camo_bumpmap")
+ARC9.LoadAttachment(ATT, "bo1_camo_bumpmap")
 
 ATT = {}
 
@@ -500,4 +514,4 @@ ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/circuit"
 ATT.Folder = "BO1 CAMOS/GAMER"
 ATT.CustomCamoScale = 2.5
 
-ARC9.LoadAttachment(ATT, "camo_pap1")
+ARC9.LoadAttachment(ATT, "bo1_camo_pap1")

@@ -16,7 +16,7 @@ ATT.Free = false
 ATT.Category = {"bo1_mp5k_nogrip"}
 
 ATT.Model = "models/weapons/arc9/atts/cde_mp5k_nogrip.mdl"
-ATT.Scale = 0.375
+ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 -- ATT.IconOffset = Vector(2, 1.5, 1)
 
