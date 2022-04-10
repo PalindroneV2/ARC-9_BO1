@@ -1,0 +1,8 @@
+"UnlitGeneric"
+{
+    "$basetexture" "gunmetal_brown"
+    "$nolod" "1"
+    "$ignorez" "1"
+    "$vertexalpha" "1"
+    "$vertexcolor" "1"
+}
