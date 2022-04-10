@@ -1,11 +1,11 @@
 "VertexlitGeneric"
 {
 	"$basetexture" "models/weapons/arc9/bo2/bo2_scarh/scarh_c"
-	
 	"$bumpmap" "models/weapons/arc9/bo2/bo2_scarh/scarh_n"
+	"$phongexponenttexture" "models/weapons/arc9/bo2/bo2_scarh/scarh_s"
 
-	$detail "models/weapons/arc9/bo1/tan"
-	"$detailblendfactor" "1"
+	$detail "models/weapons/arc9/bo1/camos/tan_mustard"
+	"$detailblendfactor" "0.2"
 	$detailblendmode 4
 	$detailscale 1
 	"$nocull" "1"
