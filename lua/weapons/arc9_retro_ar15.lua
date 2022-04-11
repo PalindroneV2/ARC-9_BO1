@@ -527,6 +527,10 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         end
     end
 
+    if attached["mw2_m4_irons"] then
+        vm:SetBodygroup(10,1)
+    end
+
     if attached["bo1_bipod"] and self:GetBipod() then
         vm:SetBodygroup(4,6)
     end
@@ -559,6 +563,86 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         end
     end
 
+end
+
+SWEP.HookP_NameChange = function(self, name)
+
+    local attached = self:GetElements()
+    local brand = "Colt "
+    local model = "M16"
+    local alt = "A1"
+    -- local fullname = ""
+
+    --A1 VARIANTS
+    if attached["barrel_10"] then
+        model = "Commando"
+        alt = ""
+    end
+    if attached["barrel_11"] then
+        model = "XM"
+        alt = "117E2"
+    end
+    if attached["barrel_14"] then
+        model = "M"
+        alt = "653"
+    end
+    if attached["fcg_s13"] and attached["carbine"] then
+        model = "XM4"
+        alt = ""
+    end
+    --A2 VARIANTS
+    if attached["a2_top"] then
+        alt = "A2-E3"
+        if attached["barrel_10"] then
+            model = "M720"
+            alt = ""
+        end
+        if attached["barrel_11"] then
+            model = "XM"
+            alt = "117E3"
+        end
+        if attached["barrel_14"] then
+            model = "M"
+            alt = "727"
+        end
+        if attached["fcg_s13"] then
+            alt = "A2"
+            if attached["carbine"] then
+                model = "XM4"
+                alt = ""
+            end
+        end
+    end
+    --A4 VARIANTS
+    if attached["a4_top"] then
+        alt = "A3"
+        if attached["barrel_10"] then
+            model = "Mk. 18"
+            alt = " Mod. 0"
+        end
+        if attached["barrel_11"] then
+            model = "Mk. 18"
+            alt = " Mod. 0"
+        end
+        if attached["barrel_14"] then
+            model = "M4A1"
+            alt = " Carbine"
+        end
+        if attached["fcg_s13"] then
+            alt = "A4"
+            if attached["carbine"] then
+                model = "M4"
+                alt = " Carbine"
+            end
+        end
+    end
+
+    -- fullname = brand .. model .. alt
+    print("--- NAME THING ---")
+    print("Original name:" .. name)
+    name = brand .. model .. alt
+    print("New name:" .. name)
+    return name
 end
 
 

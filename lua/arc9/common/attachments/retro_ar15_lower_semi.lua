@@ -12,7 +12,7 @@ ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = true
 
 ATT.Category = {"retro_ar15_lower"}
---ATT.ActivateElements = {"troy_iron"}
+ATT.ActivateElements = {"fcg_semi"}
 
 ATT.FiremodesOverride = {
     {

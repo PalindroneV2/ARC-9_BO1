@@ -13,6 +13,7 @@ ATT.Free = true
 
 ATT.Category = {"retro_ar15_lower"}
 ATT.RequireElements = {"bo1_pap"}
+ATT.ActivateElements = {"fcg_skull"}
 
 ATT.FiremodesOverride = {
     {

@@ -33,7 +33,7 @@ SWEP.WorldModelOffset = {
     Bone    =    "ValveBiped.Bip01_R_Hand",
     Scale = 1.1,
 }
-SWEP.DesiredViewModelFOV = 60
+SWEP.DesiredViewModelFOV = 54
 
 SWEP.DefaultBodygroups = "00000000000000"
 
@@ -178,7 +178,7 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(0, 0, 0),
+    Pos = Vector(0, 3, 0),
     Ang = Angle(0, 0, 0),
     Magnification = 1.25,
     CrosshairInSights = false,
@@ -193,10 +193,10 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_RPG
 SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_RPG
 SWEP.AnimDraw = ACT_HL2MP_GESTURE_RANGE_ATTACK_KNIFE
 
-SWEP.ActivePos = Vector(3, 3, -6)
+SWEP.ActivePos = Vector(1.5, 3, -6)
 SWEP.ActiveAng = Angle(0, 15, 0)
 
-SWEP.CrouchPos = Vector(3, 3, -6)
+SWEP.CrouchPos = Vector(1.5, 3, -6)
 SWEP.CrouchAng = Angle(0, 15, 0)
 
 SWEP.SprintPos = Vector(0, 0, -1)
@@ -289,14 +289,14 @@ SWEP.Animations = {
         Time = 15 / 35,
     },
     ["reload"] = {
-        Source = "reload_real_fast",
+        Source = "reload_real",
         Time = 4,
         EventTable = {
-            {s = "ARC9_BO1.LAW_Drop", t = 1},
-            {s = "weapons/arc9/bo1_rpg/slide.wav", t = 0.7, p = 95},
+            {s = "ARC9_BO1.LAW_Drop", t = 0.8},
+            {s = "ARC9_BO1.RPG_Slide", t = 1, p = 95},
             {s = "ARC9_BO1.RPG_Futz", t = 1.1},
             {s = "ARC9_BO1.RPG_Futz", t = 2.1},
-            {s = "ARC9_BO1.RPG_Slide", t = 2.9},
+            {s = "ARC9_BO1.RPG_Slide", t = 2.6},
         },
     },
     -- ["reload_iron"] = {
