@@ -1158,6 +1158,28 @@ SWEP.Animations = {
             },
         },
     },
+    ["draw_glsetup"] = {
+        Source = "draw_gl",
+        Time = 1,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0,
+            },
+        },
+    },
+    ["holster_glsetup"] = {
+        Source = "holster_gl",
+        Time = 0.75,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0,
+            },
+        },
+    },
     ["fire_glsetup"] = {
         Source = "fire_glsetup",
         Time = 0.7,
