@@ -73,18 +73,18 @@ SWEP.ReloadTime = 1
 SWEP.Crosshair = true
 SWEP.CanBlindFire = false
 
-SWEP.Recoil = 1
-SWEP.RecoilSide = 0.7
-SWEP.RecoilUp = 1
+SWEP.Recoil = 0.75
+SWEP.RecoilSide = 0.55
+SWEP.RecoilUp = 0.7
 
-SWEP.RecoilRandomUp = 1
+SWEP.RecoilRandomUp = 0.6
 SWEP.RecoilRandomSide = 0.6
 
 SWEP.RecoilDissipationRate = 40 -- How much recoil dissipates per second.
 SWEP.RecoilResetTime = 0.01 -- How long the gun must go before the recoil pattern starts to reset.
 
 SWEP.RecoilAutoControl = 0.5
-SWEP.RecoilKick = 3
+SWEP.RecoilKick = 2
 
 SWEP.Spread = 0.0009
 SWEP.SpreadAddRecoil = 0.0015
@@ -102,7 +102,7 @@ SWEP.VisualRecoilCenter = Vector(0, 0, 0)
 SWEP.VisualRecoilPunch = 0
 SWEP.VisualRecoilMultSights = 0
 
-SWEP.Speed = 0.95
+SWEP.Speed = 0.75
 
 SWEP.ShootWhileSprint = true
 SWEP.ReloadInSights = false
@@ -113,10 +113,10 @@ SWEP.SpeedMultMelee = 1
 SWEP.SpeedMultCrouch = 1
 SWEP.SpeedMultBlindFire = 1
 
-SWEP.AimDownSightsTime = 0.11
-SWEP.SprintToFireTime = 0.14
+SWEP.AimDownSightsTime = 0.5
+SWEP.SprintToFireTime = 0.5
 
-SWEP.RPM = 650
+SWEP.RPM = 600
 SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
@@ -185,7 +185,7 @@ SWEP.CaseBones = {}
 
 SWEP.IronSights = {
     Pos = Vector(-3.245, -5, 0.6),
-    Ang = Angle(0.05, 0.645, 0),
+    Ang = Angle(0.05, 0.4, 0),
     Magnification = 1.1,
     -- AssociatedSlot = 9,
     CrosshairInSights = false,
@@ -200,13 +200,13 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_AR2
 SWEP.AnimDraw = ACT_HL2MP_GESTURE_RANGE_ATTACK_KNIFE
 
-SWEP.ActivePos = Vector(0, 0, -1)
+SWEP.ActivePos = Vector(0, -3, -1)
 SWEP.ActiveAng = Angle(0, 0, -5)
 
-SWEP.CrouchPos = Vector(0, 0, -1)
+SWEP.CrouchPos = Vector(0, -3, -1)
 SWEP.CrouchAng = Angle(0, 0, -5)
 
-SWEP.SprintPos = Vector(0, 0, -1)
+SWEP.SprintPos = Vector(0, -3, -1)
 SWEP.SprintAng = Angle(0, 0, -5)
 
 SWEP.CustomizePos = Vector(12.5, 40, 4)
@@ -229,15 +229,15 @@ SWEP.AttachmentElements = {
         Bodygroups = {
             {2,1}
         },
-        IronSights = {
-            Pos = Vector(-3.245, -5, 0.6),
+        IronSightsOverride = {
+            Pos = Vector(-3.245, -5, 0),
             Ang = Angle(0.645, 0.05, 0),
             Magnification = 1.1,
         }
     },
     ["bo1_bipod"] = {
         Bodygroups = {
-            {3,2}
+            {3,1}
         },
     },
 }
@@ -258,6 +258,10 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         camo = camo + 2
     end
     vm:SetSkin(camo)
+
+    if self:GetBipod() then
+        vm:SetBodygroup(3,2)
+    end
 
 end
 
@@ -280,45 +284,36 @@ SWEP.Attachments = {
         Category = "bo1_perkacola",
     },
     {
-        PrintName = "Stock",
-        Bone = "j_gun",
-        Pos = Vector(-3, 0, 2.65),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_stocks"},
-        Installed = "bo1_stock_heavy",
-    },
-    {
         PrintName = "Muzzle",
         Bone = "j_gun",
-        Pos = Vector(24, 0.2, 2.3),
+        Pos = Vector(24, 0, 2.35),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_muzzle"},
         ExcludeElements = {"newbarrel"},
     },
     {
         PrintName = "Optic",
-        Bone = "j_gun",
-        Pos = Vector(0.5, 0.1, 3.85),
+        Bone = "j_reload_cover",
+        Pos = Vector(-2.125, 0.1, 0.85),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic", "bo1_rail_riser"},
+        Category = {"bo1_optic", "bo1_rail_riser", "bo1_alt_irons"},
         InstalledElements = {"mount"},
-    },
-    {
-        PrintName = "Barrel",
-        DefaultCompactName = "533mm",
-        Bone = "j_gun",
-        Pos = Vector(8, 0.1, 3),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_fal_barrel"},
     },
     {
         PrintName = "Underbarrel",
         DefaultCompactName = "UB",
         Bone = "j_gun",
-        Pos = Vector(10.5, 0.1, 1.65),
+        Pos = Vector(7, 0, 0),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_rail_underbarrel", "bo1_m203", "bo1_mk"},
-        ExcludeElements = {"barrel_osw"},
+        Category = {"bo1_rail_underbarrel"},
+    },
+    {
+        PrintName = "Bipod",
+        DefaultCompactName = "None",
+        Bone = "j_gun",
+        Pos = Vector(15, 0, 0),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_bipod"},
     },
     {
         PrintName = "Cosmetic",
@@ -393,6 +388,28 @@ SWEP.Animations = {
             {s = "ARC9_BO1.M60_LidClose", t = 205 / 35},
             {s = "ARC9_BO1.M60_Bonk", t = 210 / 35},
         },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1
+            },
+            {
+                t = 0.5,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.95,
+                lhik = 1,
+                rhik = 1
+            },
+        },
     },
     ["reload_empty"] = {
         Source = "reload",
@@ -409,6 +426,28 @@ SWEP.Animations = {
             {s = "ARC9_BO1.M60_Close", t = 200 / 35},
             {s = "ARC9_BO1.M60_LidClose", t = 205 / 35},
             {s = "ARC9_BO1.M60_Bonk", t = 210 / 35},
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1
+            },
+            {
+                t = 0.5,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.95,
+                lhik = 1,
+                rhik = 1
+            },
         },
     },
     ["enter_sprint"] = {

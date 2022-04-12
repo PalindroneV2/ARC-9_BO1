@@ -692,7 +692,7 @@ SWEP.Animations = {
     },
     ["enter_sprint"] = {
         Source = "sprint_in",
-        Time = 10 / 30
+        Time = 1,
     },
     ["idle_sprint"] = {
         Source = "sprint_loop",
@@ -700,7 +700,7 @@ SWEP.Animations = {
     },
     ["exit_sprint"] = {
         Source = "sprint_out",
-        Time = 10 / 30
+        Time = 1,
     },
 
 -- UBGL OUT ANIMS ---------------------------------------------------------------
@@ -765,7 +765,7 @@ SWEP.Animations = {
     },
     ["enter_sprint_gp25"] = {
         Source = "sprint_in_gp25",
-        Time = 10 / 30
+        Time = 1,
     },
     ["idle_sprint_gp25"] = {
         Source = "sprint_loop_gp25",
@@ -773,7 +773,7 @@ SWEP.Animations = {
     },
     ["exit_sprint_gp25"] = {
         Source = "sprint_out_gp25",
-        Time = 10 / 30
+        Time = 1,
     },
 
 -- UBGL IN ANIMS -----------------------------------------------------------------
@@ -820,7 +820,7 @@ SWEP.Animations = {
     },
     ["enter_sprint_gp25setup"] = {
         Source = "sprint_in_gp25setup",
-        Time = 10 / 30
+        Time = 1,
     },
     ["idle_sprint_gp25setup"] = {
         Source = "sprint_loop_gp25setup",
@@ -828,7 +828,7 @@ SWEP.Animations = {
     },
     ["exit_sprint_gp25setup"] = {
         Source = "sprint_out_gp25setup",
-        Time = 10 / 30
+        Time = 1,
     },
 
     -- TISHINA
@@ -893,7 +893,7 @@ SWEP.Animations = {
     },
     ["enter_sprint_tishina"] = {
         Source = "sprint_in_tishina",
-        Time = 10 / 30
+        Time = 1,
     },
     ["idle_sprint_tishina"] = {
         Source = "sprint_loop_tishina",
@@ -901,7 +901,7 @@ SWEP.Animations = {
     },
     ["exit_sprint_tishina"] = {
         Source = "sprint_out_tishina",
-        Time = 10 / 30
+        Time = 1,
     },
 
 -- UBGL IN ANIMS -----------------------------------------------------------------
@@ -948,7 +948,7 @@ SWEP.Animations = {
     },
     ["enter_sprint_tishinasetup"] = {
         Source = "sprint_in_tishinasetup",
-        Time = 10 / 30
+        Time = 1,
     },
     ["idle_sprint_tishinasetup"] = {
         Source = "sprint_loop_tishinasetup",
@@ -956,7 +956,7 @@ SWEP.Animations = {
     },
     ["exit_sprint_tishinasetup"] = {
         Source = "sprint_out_tishinasetup",
-        Time = 10 / 30
+        Time = 1,
     },
 
     -- MK DEFAULT ANIMS --
@@ -1031,7 +1031,7 @@ SWEP.Animations = {
     },
     ["enter_sprint_mk"] = {
         Source = "sprint_in_mk",
-        Time = 10 / 30
+        Time = 1,
     },
     ["idle_sprint_mk"] = {
         Source = "sprint_loop_mk",
@@ -1039,7 +1039,7 @@ SWEP.Animations = {
     },
     ["exit_sprint_mk"] = {
         Source = "sprint_out_mk",
-        Time = 10 / 30
+        Time = 1,
     },
 
     -- MK IN ANIMS --
@@ -1103,7 +1103,7 @@ SWEP.Animations = {
     },
     ["enter_sprint_mksetup"] = {
         Source = "sprint_in_mksetup",
-        Time = 10 / 30
+        Time = 1,
     },
     ["idle_sprint_mksetup"] = {
         Source = "sprint_loop_mksetup",
@@ -1111,7 +1111,7 @@ SWEP.Animations = {
     },
     ["exit_sprint_mksetup"] = {
         Source = "sprint_out_mksetup",
-        Time = 10 / 30
+        Time = 1,
     },
 
     ["idle_rpk"] = {
@@ -1355,7 +1355,7 @@ SWEP.Animations = {
     },
     ["enter_sprint_rpk"] = {
         Source = "sprint_in_rpk",
-        Time = 10 / 30
+        Time = 1,
     },
     ["idle_sprint_rpk"] = {
         Source = "sprint_loop_rpk",
@@ -1363,6 +1363,6 @@ SWEP.Animations = {
     },
     ["exit_sprint_rpk"] = {
         Source = "sprint_out_rpk",
-        Time = 10 / 30
+        Time = 1,
     },
 }

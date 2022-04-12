@@ -526,6 +526,14 @@ SWEP.Animations = {
         Source = "glsetup_out",
         Time = 0.5,
     },
+    ["draw_glsetup"] = {
+        Source = "draw_gl",
+        Time = 0.5,
+    },
+    ["holster_glsetup"] = {
+        Source = "holster_gl",
+        Time = 0.75,
+    },
     ["fire_glsetup"] = {
         Source = "fire_glsetup",
         Time = 0.7,
@@ -620,6 +628,14 @@ SWEP.Animations = {
     ["idle_mksetup"] = {
         Source = "idle_mksetup",
         Time = 1 / 30,
+    },
+    ["draw_mksetup"] = {
+        Source = "draw_mk",
+        Time = 0.5,
+    },
+    ["holster_mksetup"] = {
+        Source = "holster_mk",
+        Time = 0.75,
     },
     ["enter_ubgl_mksetup"] = {
         Source = "mksetup_in",
