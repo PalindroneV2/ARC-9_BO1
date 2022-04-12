@@ -39,5 +39,5 @@ ATT.RTScopeRes = 512
 ATT.RTScopeSurface = Material("models/weapons/arc9/bocw/bocw_elcan/lens")
 ATT.RTScopeReticle = Material("hud/arc9_bo1/scopes/bocw_elcan_cross.png", "mips smooth")
 ATT.RTScopeReticleScale = 0.95
-ATT.RTScopeShadowIntensity = 5
+ATT.RTScopeShadowIntensity = 1.5
 ATT.RTScopeNoPP = false

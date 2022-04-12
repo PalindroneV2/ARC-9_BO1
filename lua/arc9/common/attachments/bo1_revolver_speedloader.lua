@@ -10,7 +10,7 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 
-ATT.Category = {"bo1_speedloader"}
+ATT.Category = {"bo1_cylinder"}
 ATT.ActivateElements = {"speedloader"}
 ATT.ReloadTimeMult = 0.95
 ATT.HybridReload = false

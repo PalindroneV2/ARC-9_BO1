@@ -52,5 +52,5 @@ ATT.RTScopeSurface = Material("models/weapons/arc9/bo2/bo2_optics/hamr_lens")
 ATT.RTScopeReticle = Material("hud/arc9_bo1/scopes/bo2_hamr_new.png", "mips smooth")
 ATT.RTScopeReticleScale = 0.8
 ATT.RTScopeColorable = true
-ATT.RTScopeShadowIntensity = 5
+ATT.RTScopeShadowIntensity = 1.5
 ATT.RTScopeNoPP = false

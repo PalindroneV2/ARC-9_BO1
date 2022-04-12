@@ -227,6 +227,36 @@ SWEP.AttachmentElements = {
             {6,2},
         },
     },
+    ["barrel_short"] = {
+        Bodygroups = {
+            {2,1},
+        },
+        AttPosMods = {
+            [4] = {
+                Pos = Vector(10.5, 0, 3.15),
+            }
+        }
+    },
+    ["barrel_mid"] = {
+        Bodygroups = {
+            {2,2},
+        },
+        AttPosMods = {
+            [4] = {
+                Pos = Vector(12, 0, 3.15),
+            }
+        }
+    },
+    ["barrel_long"] = {
+        Bodygroups = {
+            {2,3},
+        },
+        AttPosMods = {
+            [4] = {
+                Pos = Vector(18, 0, 3.15),
+            }
+        }
+    },
 }
 
 SWEP.Hook_ModifyBodygroups = function(self, data)
@@ -247,7 +277,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         camo = 1
     end
     if attached["bo1_pap"] then
-        camo = camo + 2
+        camo = camo + 4
     end
     vm:SetSkin(camo)
 
@@ -298,20 +328,22 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"bo1_optic", "bo1_rail_riser", "bo1_optic_aug"},
         InstalledElements = {"mount"},
+        Installed = "bo1_optic_aug"
     },
     {
         PrintName = "Barrel",
         Bone = "j_gun",
         Pos = Vector(10, 0, 2.6),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_aug_barrel"},
+        Category = {"bo1_aug_barrels"},
     },
     {
         PrintName = "Muzzle",
         Bone = "j_gun",
-        Pos = Vector(16, 0, 2.6),
+        Pos = Vector(15, 0, 3.15),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_muzzle"},
+        Icon_Offset = Vector(2, 0, 0.35)
     },
     {
         PrintName = "Underbarrel",
@@ -319,7 +351,8 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(9.5, 0, 1.25),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_m203", "bo1_mk", "bo1_rail_underbarrel"},
+        Category = {"bo1_m203", "bo1_mk"},
+        ExcludeElements = {"barrel_mid", "barrel_short"}
     },
     {
         PrintName = "Fire Control Group",
@@ -333,7 +366,7 @@ SWEP.Attachments = {
         PrintName = "Ammunition",
         DefaultCompactName = "AMMO",
         Bone = "tag_clip",
-        Pos = Vector(-1, 0, -1.25),
+        Pos = Vector(.5, 0, -2),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ammo", "bo1_pap"},
     },
@@ -497,7 +530,7 @@ SWEP.Animations = {
         Source = "fire_glsetup",
         Time = 0.7,
     },
-    ["reload_glsetup"] = {
+    ["reload_ubgl_glsetup"] = {
         Source = "reload_glsetup",
         Time = 3,
         EventTable = {
@@ -600,7 +633,7 @@ SWEP.Animations = {
         Source = "fire_mksetup",
         Time = 0.7,
     },
-    ["pump_mksetup"] = {
+    ["cycle_mksetup"] = {
         Source = "pump_mksetup",
         Time = 0.75,
         EventTable = {
@@ -608,23 +641,45 @@ SWEP.Animations = {
             {s = "ARC9_BO1.MK_Fwd", t = 10 / 30 },
         }
     },
-    ["reload_start_mksetup"] = {
+    ["reload_ubgl_start_mksetup"] = {
         Source = "reload_in_mksetup",
         Time = 35 / 30,
+        RestoreAmmo = 1,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0,
+            },
+        },
         EventTable = {
-            --{s = "ARC9_BO1.M203_Open", t = 0.125},
+            {s = "ARC9_BO1.MK_Shell", t = 22 / 30},
         }
     },
-    ["reload_loop_mksetup"] = {
+    ["reload_ubgl_insert_mksetup"] = {
         Source = "reload_loop_mksetup",
         Time = 33 / 30,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0,
+            },
+        },
         EventTable = {
-            {s = "ARC9_BO1.MK_Shell", t = 0 / 30},
+            {s = "ARC9_BO1.MK_Shell", t = 20 / 30},
         }
     },
-    ["reload_finish_mksetup"] = {
+    ["reload_ubgl_finish_mksetup"] = {
         Source = "reload_out_mksetup",
         Time = 50 / 30,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0,
+            },
+        },
         EventTable = {
             {s = "ARC9_BO1.MK_Back", t = 20 / 30 },
             {s = "ARC9_BO1.MK_Fwd", t = 25 / 30 },

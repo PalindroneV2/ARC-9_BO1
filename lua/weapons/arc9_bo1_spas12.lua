@@ -253,15 +253,6 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
 
 end
 
-
-SWEP.Hook_TranslateAnimation = function (self, anim)
-    -- local attached = self:GetElements()
-
-    -- local suffix = ""
-
-    -- return anim .. suffix
-end
-
 SWEP.Attachments = {
     [1] = {
         PrintName = "Optic Rail",
@@ -327,6 +318,17 @@ SWEP.Attachments = {
         Category = "universal_camo",
     },
 }
+
+SWEP.Hook_TranslateAnimation = function (self, anim)
+    local attached = self:GetElements()
+
+    local suffix = ""
+    if attached["bo1_pap"] then
+        suffix = "_pap"
+    end
+
+    return anim .. suffix
+end
 
 SWEP.Animations = {
     ["idle"] = {
@@ -437,11 +439,107 @@ SWEP.Animations = {
     --         {s = "ARC9_BO1.SPAS_Fwd", t = 65 / 30},
     --     },
     -- },
+    ["reload_start_empty"] = {
+        Source = "reload_in",
+        Time = 54 / 30,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
+        RestoreAmmo = 1,
+        MinProgress = 40 / 30,
+        EventTable = {
+            {s = "ARC9_BO1.MK_Shell", t = 40 / 30},
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.95,
+                lhik = 0,
+                rhik = 1
+            },
+        },
+    },
     ["reload_start"] = {
         Source = "reload_in",
         Time = 54 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         RestoreAmmo = 1,
+        MinProgress = 40 / 30,
+        EventTable = {
+            {s = "ARC9_BO1.MK_Shell", t = 40 / 30},
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.95,
+                lhik = 0,
+                rhik = 1
+            },
+        },
+    },
+    ["reload_start_empty_pap"] = {
+        Source = "reload_in",
+        Time = 54 / 30,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
+        RestoreAmmo = 12,
+        MinProgress = 40 / 30,
+        EventTable = {
+            {s = "ARC9_BO1.MK_Shell", t = 40 / 30},
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.95,
+                lhik = 0,
+                rhik = 1
+            },
+        },
+    },
+    ["reload_start_pap"] = {
+        Source = "reload_in",
+        Time = 54 / 30,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
+        RestoreAmmo = 12,
         MinProgress = 40 / 30,
         EventTable = {
             {s = "ARC9_BO1.MK_Shell", t = 40 / 30},
@@ -477,6 +575,7 @@ SWEP.Animations = {
         EventTable = {
             {s = "ARC9_BO1.MK_Shell", t = 10 / 30},
         },
+        RestoreAmmo = 1,
         MinProgress = 15 / 30,
         IKTimeLine = {
             {
@@ -510,6 +609,7 @@ SWEP.Animations = {
             {s = "ARC9_BO1.MK_Shell", t = 10 / 30},
         },
         MinProgress = 15 / 30,
+        RestoreAmmo = 12,
         IKTimeLine = {
             {
                 t = 0,

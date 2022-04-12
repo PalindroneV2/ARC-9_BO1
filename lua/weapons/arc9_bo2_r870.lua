@@ -386,7 +386,7 @@ SWEP.Animations = {
     -- ["reload_start"] = {
     --     Source = "reload_in",
     --     Time = 40 / 30,
-    --     RestoreAmmo = 1, -- loads a shell since the first reload has a shell in animation
+    --     RestoreAmmo = 1,
     --     MinProgress = 1,
     --     EventTable = {
     --         {s = "ARC9_BO2.Shotgun_Shell", t = 21 / 30},
@@ -414,7 +414,7 @@ SWEP.Animations = {
     ["reload_start"] = {
         Source = "reload_in",
         Time = 40 / 30,
-        RestoreAmmo = 1, -- loads a shell since the first reload has a shell in animation
+        RestoreAmmo = 1,
         MinProgress = 1,
         EventTable = {
             {s = "ARC9_BO2.Shotgun_Shell", t = 21 / 30},
@@ -442,8 +442,8 @@ SWEP.Animations = {
     ["reload_start_fast"] = {
         Source = "reload_in_fast",
         Time = 40 / 30,
-        RestoreAmmo = 2, -- loads a shell since the first reload has a shell in animation
         MinProgress = 1,
+        RestoreAmmo = 2,
         EventTable = {
             {s = "ARC9_BO2.Shotgun_Shell", t = 21 / 30},
         },
@@ -452,6 +452,65 @@ SWEP.Animations = {
         Source = "reload_loop_fast",
         Time = 26 / 30,
         MinProgress = 15 / 30,
+        RestoreAmmo = 1,
+        EventTable = {
+            {s = "ARC9_BO2.Shotgun_Shell", t = 10 / 30},
+        },
+    },
+    ["reload_finish_fast"] = {
+        Source = "reload_out_fast",
+        Time = 30 / 30,
+        EventTable = {
+            {s = "ARC9_BO2.Shotgun_Back", t = 8 / 30},
+            {s = "ARC9_BO2.Shotgun_Fwd", t = 12 / 30},
+        },
+    },
+
+    --RELOADS PAP
+
+    ["reload_start_pap"] = {
+        Source = "reload_in",
+        Time = 40 / 30,
+        RestoreAmmo = 6,
+        MinProgress = 1,
+        EventTable = {
+            {s = "ARC9_BO2.Shotgun_Shell", t = 21 / 30},
+        },
+    },
+    ["reload_insert_pap"] = {
+        Source = "reload_loop",
+        Time = 26 / 30,
+        RestoreAmmo = 6,
+        MinProgress = 15 / 30,
+        EventTable = {
+            {s = "ARC9_BO2.Shotgun_Shell", t = 10 / 30},
+        },
+    },
+    ["reload_finish_pap"] = {
+        Source = "reload_out",
+        Time = 30 / 30,
+        EventTable = {
+            {s = "ARC9_BO2.Shotgun_Back", t = 8 / 30},
+            {s = "ARC9_BO2.Shotgun_Fwd", t = 12 / 30},
+        },
+    },
+
+    --FAST PAP
+
+    ["reload_start_fast_pap"] = {
+        Source = "reload_in_fast",
+        Time = 40 / 30,
+        RestoreAmmo = 2,
+        MinProgress = 12,
+        EventTable = {
+            {s = "ARC9_BO2.Shotgun_Shell", t = 21 / 30},
+        },
+    },
+    ["reload_insert_fast_pap"] = {
+        Source = "reload_loop_fast",
+        Time = 26 / 30,
+        MinProgress = 15 / 30,
+        RestoreAmmo = 12,
         EventTable = {
             {s = "ARC9_BO2.Shotgun_Shell", t = 10 / 30},
         },

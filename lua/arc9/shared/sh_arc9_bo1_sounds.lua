@@ -2758,12 +2758,28 @@ sound.Add({
 -- PAP EFFECT --
 
 sound.Add( {
-    name = "PAP_Effect",
-    channel = CHAN_USER_BASE + 5,
+    name = "PAP_Fire",
+    channel = CHAN_STATIC,
     volume = 1.0,
     level = 100,
     --pitch = {95, 110},
     sound = {"^weapons/arc9/pap/pap_fire.wav"}
+} )
+sound.Add( {
+    name = "PAP_Flux_Left",
+    channel = CHAN_USER_BASE,
+    volume = 0.7,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {"^weapons/arc9/pap/pap_flux_left.wav"}
+} )
+sound.Add( {
+    name = "PAP_Flux_Right",
+    channel = CHAN_USER_BASE,
+    volume = 0.7,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {"^weapons/arc9/pap/pap_flux_right.wav"}
 } )
 
 -- BO1 EE SOUND --

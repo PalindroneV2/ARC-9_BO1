@@ -20,6 +20,12 @@ ATT.PenetrationMult = 2
 ATT.RangeMaxMult = 1.5
 ATT.RangeMinMult = 1.5
 ATT.PhysBulletMuzzleVelocityMult = 1.55
+ATT.ShootSound = "PAP_Effect"
+ATT.ShootSoundSilenced = "PAP_Effect"
+ATT.DistantShootSound = {
+    "PAP_Flux_Left",
+    "PAP_Flux_Right",
+}
 
 ATT.MuzzleParticle = "rgmk2_pap_flash"
 

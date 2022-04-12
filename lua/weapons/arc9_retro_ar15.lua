@@ -572,6 +572,8 @@ SWEP.HookP_NameChange = function(self, name)
     local model = "M16"
     local alt = "A1"
     -- local fullname = ""
+    print("--ORIGINAL--")
+    print(brand .. model .. alt)
 
     --A1 VARIANTS
     if attached["barrel_10"] then
@@ -637,12 +639,10 @@ SWEP.HookP_NameChange = function(self, name)
         end
     end
 
-    -- fullname = brand .. model .. alt
-    print("--- NAME THING ---")
-    print("Original name:" .. name)
-    name = brand .. model .. alt
-    print("New name:" .. name)
-    return name
+    print("--NEW--")
+    print(brand .. model .. alt)
+
+    return brand .. model .. alt
 end
 
 
@@ -1443,6 +1443,28 @@ SWEP.Animations = {
             },
         },
     },
+    ["draw_mksetup"] = {
+        Source = "draw_mksetup",
+        Time = 1,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0,
+            },
+        },
+    },
+    ["holster_mksetup"] = {
+        Source = "holster_mksetup",
+        Time = 0.75,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0,
+            },
+        },
+    },
     ["fire_mksetup"] = {
         Source = "fire_mksetup",
         Time = 0.7,
@@ -1495,7 +1517,7 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = "ARC9_BO1.MK_Shell", t = 0 / 30},
+            {s = "ARC9_BO1.MK_Shell", t = 20 / 30},
         }
     },
     ["reload_ubgl_finish_mksetup"] = {

@@ -39,7 +39,7 @@ SWEP.WorldModelOffset = {
 }
 SWEP.DesiredViewModelFOV = 60
 
-SWEP.DefaultBodygroups = "00000000000000"
+SWEP.DefaultBodygroups = "00010000000000"
 
 SWEP.DamageMax = 65
 SWEP.DamageMin = 35 -- damage done at maximum range
