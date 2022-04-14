@@ -571,14 +571,22 @@ SWEP.HookP_NameChange = function(self, name)
     local brand = "Colt "
     local model = "M16"
     local alt = "A1"
-    -- local fullname = ""
-    print("--ORIGINAL--")
-    print(brand .. model .. alt)
+    -- print("--ORIGINAL--")
+    -- print(name)
+    -- print(brand .. model .. alt)
 
     --A1 VARIANTS
     if attached["barrel_10"] then
         model = "Commando"
         alt = ""
+        if attached["handguard_patriot"] then
+            model = "M231"
+            alt = " FPW"
+        end
+        if attached["handguard_607"] then
+            model = "M607"
+            alt = "a"
+        end
     end
     if attached["barrel_11"] then
         model = "XM"
@@ -588,7 +596,7 @@ SWEP.HookP_NameChange = function(self, name)
         model = "M"
         alt = "653"
     end
-    if attached["fcg_s13"] and attached["carbine"] then
+    if attached["fcg_bst"] and attached["carbine"] then
         model = "XM4"
         alt = ""
     end
@@ -607,7 +615,7 @@ SWEP.HookP_NameChange = function(self, name)
             model = "M"
             alt = "727"
         end
-        if attached["fcg_s13"] then
+        if attached["fcg_bst"] then
             alt = "A2"
             if attached["carbine"] then
                 model = "XM4"
@@ -630,7 +638,7 @@ SWEP.HookP_NameChange = function(self, name)
             model = "M4A1"
             alt = " Carbine"
         end
-        if attached["fcg_s13"] then
+        if attached["fcg_bst"] then
             alt = "A4"
             if attached["carbine"] then
                 model = "M4"
@@ -639,9 +647,14 @@ SWEP.HookP_NameChange = function(self, name)
         end
     end
 
-    print("--NEW--")
-    print(brand .. model .. alt)
+    if attached["is_patriot"] then
+        brand = "The Patriot"
+        model = ""
+        alt = ""
+    end
 
+    -- print("--NEW--")
+    -- print(brand .. model .. alt)
     return brand .. model .. alt
 end
 

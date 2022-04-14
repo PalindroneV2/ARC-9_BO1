@@ -257,10 +257,11 @@ SWEP.Attachments = {
     [1] = {
         PrintName = "Optic Rail",
         Bone = "j_gun",
-        Pos = Vector(0-1, 0.1, 0.85),
+        Pos = Vector(0-1, 0.075, 0.85),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_rail_optic"},
         ExcludeElements = {"stock_l"},
+        InstalledElements = {"mount"},
     },
     [2] = {
         PrintName = "Stock",
@@ -274,7 +275,7 @@ SWEP.Attachments = {
         PrintName = "Muzzle",
         Bone = "j_gun",
         Scale = Vector(1,1,1),
-        Pos = Vector(22, 0.1, 0.36),
+        Pos = Vector(22, 0.075, 0.36),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_muzzle_shotty"},
     },
@@ -403,7 +404,7 @@ SWEP.Animations = {
             {s = "ARC9_BO1.SPAS_Back", t = 0.15},
             {s = "ARC9_BO1.SPAS_Fwd", t = 0.4}
         },
-        MinProgress = 0.5
+        MinProgress = 0.75
     },
     ["cycle_iron"] = {
         Source = "pump_ads",
@@ -411,7 +412,7 @@ SWEP.Animations = {
             {s = "ARC9_BO1.SPAS_Back", t = 0.15},
             {s = "ARC9_BO1.SPAS_Fwd", t = 0.4}
         },
-        MinProgress = 0.5
+        MinProgress = 0.6
     },
     -- ["reload"] = {
     --     Source = "reload_pap",

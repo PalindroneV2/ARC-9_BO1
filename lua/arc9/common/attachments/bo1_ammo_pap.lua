@@ -20,6 +20,7 @@ ATT.PenetrationMult = 2
 ATT.RangeMaxMult = 1.5
 ATT.RangeMinMult = 1.5
 ATT.PhysBulletMuzzleVelocityMult = 1.55
+ATT.FirstShootSound = "PAP_Effect"
 ATT.ShootSound = "PAP_Effect"
 ATT.ShootSoundSilenced = "PAP_Effect"
 ATT.DistantShootSound = {

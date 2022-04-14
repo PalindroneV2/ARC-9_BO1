@@ -10,7 +10,7 @@ ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Category = {"retro_ar15_barrel"}
-ATT.ActivateElements = {"carbine"}
+ATT.ActivateElements = {"carbine", "barrel_14"}
 
 ATT.Attachments = {
     {
