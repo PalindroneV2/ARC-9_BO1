@@ -1,23 +1,21 @@
 SWEP.Base = "arc9_base"
 SWEP.Spawnable = true -- this obviously has to be set to true
-SWEP.Category = "ARC-9 - Black Ops" -- edit this if you like
+SWEP.Category = "ARC-9 - Black Ops II" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Colt Python"
+SWEP.PrintName = "B23R"
 SWEP.Class = "Pistol"
 SWEP.Description = [[
-    This handgun is a staple of firearm design. It would come to influence many future semi-automatic handguns.
-    The M1911 has been in service with military forces, law enforcement agencies and civilians for over 100 years.
-
-    The pistol that forgot to become obsolete.
+    Burst-fire pistol based on the Beretta 92.
+    Fast rate of fire, poor range and moderate damage.
 ]]
 SWEP.Trivia = {
-    Manufacturer = "Colt",
-    Calibre = ".45 ACP",
-    Mechanism = "Blowback",
-    Country = "USA",
-    Year = 1911,
-    Games = [[BO1, BO2]]
+    Manufacturer = "Beretta",
+    Calibre = "9x19mm Parabellum",
+    Mechanism = "Short Recoil",
+    Country = "Italy",
+    Year = 2023,
+    Games = [[Call of Duty: Black Ops II]]
 }
 SWEP.Credits = {
     Author = "Palindrone"
@@ -27,10 +25,9 @@ SWEP.Slot = 1
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/arc9/c_bo1_python.mdl"
-SWEP.WorldModel = "models/weapons/arc9/w_bo1_python.mdl"
+SWEP.ViewModel = "models/weapons/arc9/c_bo2_b23r.mdl"
+SWEP.WorldModel = "models/weapons/arc9/c_bo2_b23r.mdl"
 SWEP.MirrorVMWM = true
-SWEP.WorldModelMirror = "models/weapons/arc9/w_bo1_python.mdl"
 SWEP.WorldModelOffset = {
     Pos        =    Vector(-9.75, 3, -3.75),
     Ang        =    Angle(-6, 0, 180),
@@ -39,10 +36,12 @@ SWEP.WorldModelOffset = {
 }
 SWEP.DesiredViewModelFOV = 60
 
-SWEP.DefaultBodygroups = "00010000000000"
+SWEP.DefaultBodygroups = "00000000000000"
 
-SWEP.DamageMax = 65
-SWEP.DamageMin = 35 -- damage done at maximum range
+SWEP.DefaultSkin = 6
+
+SWEP.DamageMax = 30
+SWEP.DamageMin = 10 -- damage done at maximum range
 SWEP.RangeMax = 4000
 SWEP.RangeMin = 1000
 SWEP.Penetration = 4
@@ -67,26 +66,24 @@ SWEP.TracerEffect = "ARC9_tracer" -- The effect to use for hitscan tracers
 SWEP.TracerColor = Color(255, 255, 255) -- Color of tracers. Only works if tracer effect supports it. For physical bullets, this is compressed down to 9-bit color.
 
 SWEP.ChamberSize = 0 -- dont fucking change this again.
-SWEP.ClipSize = 6 -- DefaultClip is automatically set.
+SWEP.ClipSize = 15 -- DefaultClip is automatically set.
 SWEP.ReloadTime = 1
-SWEP.HybridReload = true
-SWEP.ShotgunReload = false
 
 SWEP.Crosshair = true
 SWEP.CanBlindFire = false
 
-SWEP.Recoil = 0.4
-SWEP.RecoilSide = 0.7
-SWEP.RecoilUp = 0.7
+SWEP.Recoil = 0.3
+SWEP.RecoilSide = 0.4
+SWEP.RecoilUp = 0.4
 
-SWEP.RecoilRandomUp = 0.5
-SWEP.RecoilRandomSide = 0.35
+SWEP.RecoilRandomUp = 0.4
+SWEP.RecoilRandomSide = 0.2
 
 SWEP.RecoilDissipationRate = 40 -- How much recoil dissipates per second.
 SWEP.RecoilResetTime = 0.01 -- How long the gun must go before the recoil pattern starts to reset.
 
 SWEP.RecoilAutoControl = 0.5
-SWEP.RecoilKick = 1
+SWEP.RecoilKick = 0.5
 
 SWEP.Spread = 0.0015
 SWEP.SpreadAddRecoil = 0.0015
@@ -118,14 +115,18 @@ SWEP.SpeedMultBlindFire = 1
 SWEP.AimDownSightsTime = 0.2
 SWEP.SprintToFireTime = 0.2
 
-SWEP.RPM = 300
+SWEP.RPM = 923
 SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
+        Mode = 3,
+    },
+    {
         Mode = 1,
-        PrintName = "SINGLE"
     },
 }
+SWEP.RunawayBurst = true
+SWEP.PostBurstDelay = 0.1
 SWEP.NPCWeaponType = {"weapon_pistol"}
 SWEP.NPCWeight = 100
 
@@ -136,29 +137,27 @@ SWEP.FreeAimRadiusMultSights = 0
 
 SWEP.SwayMultSights = 0
 
-SWEP.Ammo = "357" -- what ammo type the gun uses
+SWEP.Ammo = "pistol" -- what ammo type the gun uses
 
 SWEP.ShootVolume = 125
 SWEP.ShootPitch = 100
 SWEP.ShootPitchVariation = 0
 
-SWEP.ShootSound = "ARC9_BO1.Python_Fire"
+SWEP.ShootSound = "ARC9_BO2.B23R_Fire"
 SWEP.ShootSoundSilenced = "ARC9_BO2.Pistol_Sil"
-SWEP.DistantShootSound = "ARC9_BO1.Python_RingOff"
+SWEP.DistantShootSound = "ARC9_BO2.Pistol_RingOff"
 
 --SWEP.MuzzleEffect = "muzzleflash_4"
-SWEP.MuzzleParticle = "muzzleflash_minimi" -- Used for some muzzle effects.
+SWEP.MuzzleParticle = "muzzleflash_pistol" -- Used for some muzzle effects.
 
-
-SWEP.NoShellEject = true
--- SWEP.ShellModel = "models/shells/shell_9mm.mdl"
--- SWEP.ShellScale = 1.25
--- SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556_steel"
+SWEP.ShellModel = "models/shells/shell_9mm.mdl"
+SWEP.ShellScale = 1.25
+SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556_steel"
 
 SWEP.MuzzleEffectQCA = 1 -- which attachment to put the muzzle on
-SWEP.CaseEffectQCA = 1 -- which attachment to put the case effect on
+SWEP.CaseEffectQCA = 2 -- which attachment to put the case effect on
 SWEP.ProceduralViewQCA = 1
-SWEP.CamQCA = 2
+SWEP.CamQCA = 3
 
 SWEP.BulletBones = {
 }
@@ -169,8 +168,8 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(-2.15, 4, 0.95),
-    Ang = Angle(0, -0.5, 0),
+    Pos = Vector(-2.35, 3, 0.73),
+    Ang = Angle(-0.075, 0, 0),
     Magnification = 1.1,
     --AssociatedSlot = 9,
     CrosshairInSights = false,
@@ -178,17 +177,17 @@ SWEP.IronSights = {
 }
 
 SWEP.HoldtypeHolstered = "passive"
-SWEP.HoldtypeActive = "revolver"
-SWEP.HoldtypeSights = "revolver"
+SWEP.HoldtypeActive = "pistol"
+SWEP.HoldtypeSights = "pistol"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_PISTOL
 SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_PISTOL
 SWEP.AnimDraw = ACT_HL2MP_GESTURE_RANGE_ATTACK_KNIFE
 
-SWEP.ActivePos = Vector(0, -2, -2)
+SWEP.ActivePos = Vector(0, 0, -1)
 SWEP.ActiveAng = Angle(0, 0, -5)
 
-SWEP.CrouchPos = Vector(0, -2, -2)
+SWEP.CrouchPos = Vector(0, 0, -1)
 SWEP.CrouchAng = Angle(0, 0, -5)
 
 SWEP.RestPos = Vector(0.532, -6, 0)
@@ -211,22 +210,27 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
 
     local vm = data.model
     local attached = data.elements
-    local finish = 0
+    local color = 0
 
-    -- if attached["snubnose"] then
-    --     vm:SetBodygroup(1,1)
-    -- end
-    if attached["bo1_pap"] then
-        finish = finish + 2
+    if attached["maria"] then
+        color = 1
     end
-    vm:SetSkin(finish)
 
+    if attached["bo1_pap"] then
+        if color == 1 then
+            color = 1
+        else
+            color = color + 2
+        end
+    end
+
+    vm:SetSkin(color)
 end
 
 
-SWEP.Hook_TranslateAnimation = function (self, anim)
-    -- local attached = self:GetElements()
-end
+-- SWEP.Hook_TranslateAnimation = function (self, anim)
+--     local attached = self:GetElements()
+-- end
 
 --TEST 3
 
@@ -240,49 +244,38 @@ SWEP.Attachments = {
         Category = "bo1_perkacola",
     },
     {
-        PrintName = "Barrel",
-        DefaultCompactName = "Factory",
-        Bone = "j_gun",
-        Scale = Vector(1,1,1),
-        Pos = Vector(5, 0, 2.5),
+        PrintName = "Cosmetic",
+        DefaultCompactName = "G.I.",
+        Bone = "j_bolt",
+        Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_python_barrel"},
+        Category = "bo2_bhp_cosmetic",
+    },
+    {
+        PrintName = "Muzzle",
+        DefaultCompactName = "MUZZ",
+        Bone = "j_gun",
+        Pos = Vector(6.75, 0.025, 1.15),
+        Ang = Angle(0, 0, 0),
+        Category = "bo1_muzzle_pistol",
     },
     {
         PrintName = "Tactical",
         DefaultCompactName = "TAC",
         Bone = "j_gun",
         Scale = Vector(1, 1, 1),
-        Pos = Vector(10, 0.075, 1.5),
+        Pos = Vector(3.25, 0, 0.2),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_tactical"},
-        ExcludeElements = {"snubnose"}
-    },
-    {
-        PrintName = "Optics",
-        DefaultCompactName = "Irons",
-        Bone = "j_gun",
-        Pos = Vector(3, 0.075, 3),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic"},
-        Icon_Offset = Vector(0, 0, 1),
-        -- CorrectiveAng = Angle(0.05, 0.2, 0),
-    },
-    {
-        PrintName = "Cylinder",
-        DefaultCompactName = "None",
-        Bone = "j_gun",
-        Pos = Vector(2, 0, 2),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_cylinder"},
+        Category = {"bo1_tactical", "bo1_pistol_rail"},
+        CorrectiveAng = Angle(0.05, 0.3, 0),
     },
     {
         PrintName = "Ammunition",
         DefaultCompactName = "AMMO",
         Bone = "j_gun",
-        Pos = Vector(4, 0, 0),
+        Pos = Vector(-1.25, 0, -2.5),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_ammo", "bo1_pap", "bo1_pap_1911"},
+        Category = {"bo1_ammo", "bo1_pap"},
     },
 }
 
@@ -291,91 +284,93 @@ SWEP.Animations = {
         Source = "idle",
         Time = 1 / 30,
     },
+    ["idle_empty"] = {
+        Source = "idle_empty",
+        Time = 1 / 30,
+    },
+    ["draw_empty"] = {
+        Source = "draw_empty",
+        Time = 0.5,
+    },
     ["draw"] = {
         Source = "draw",
-        Time = 30 / 30,
+        Time = 0.5,
     },
     ["holster"] = {
         Source = "holster",
-        Time = 24 / 30,
+        Time = 0.5,
+    },
+    ["holster_empty"] = {
+        Source = "holster_empty",
+        Time = 0.5,
     },
     ["ready"] = {
         Source = "first_draw",
-        Time = 60 / 30,
+        Time = 1,
         EventTable = {
-            {s = "ARC9_BO1.Python_Spin", t = 16 / 30},
-            {s = "ARC9_BO1.Python_Close", t = 40 / 30}, -- im keeping this because i think it looks cool
+            {s = "ARC9_BO2.Pistol_SlideBack", t = 0.2},
+            {s = "ARC9_BO2.Pistol_SlideFwd", t = 0.7}
         }
     },
     ["fire"] = {
         Source = {"fire"},
-        Time = 12 / 35,
+        Time = 7 / 30,
+        ShellEjectAt = 0,
+    },
+    ["fire_empty"] = {
+        Source = "fire_last",
+        Time = 7 / 30,
+        ShellEjectAt = 0,
     },
     ["fire_iron"] = {
         Source = "fire_ads",
-        Time = 12 / 35,
+        Time = 7 / 30,
+        ShellEjectAt = 0,
     },
-    ["reload_start"] = {
-        Source = "reload_in",
-        Time = 52 / 30,
-        RestoreAmmo = 1, -- loads a shell since the first reload has a shell in animation
-        MinProgress = 1.2,
-        EventTable = {
-            {s = "ARC9_BO1.Python_Open", t = 20 / 35},
-            {s = "ARC9_BO1.Python_Empty", t = 26 / 35},
-        },
-    },
-    ["reload_insert"] = {
-        Source = "reload_loop",
-        Time = 16 / 30,
-        MinProgress = 16 / 30,
-        EventTable = {
-            {s = "ARC9_BO1.Python_Bullet", t = 13 / 30},
-        },
-    },
-    ["reload_finish"] = {
-        Source = "reload_out_snap",
-        Time = 33 / 30,
-        EventTable = {
-            {s = "ARC9_BO1.Python_Close", t = 8 / 30},
-        },
+    ["fire_iron_empty"] = {
+        Source = "fire_last",
+        Time = 7 / 30,
+        ShellEjectAt = 0,
     },
     ["reload"] = {
         Source = "reload",
-        Time = 100 / 35,
+        Time = 1.5,
         EventTable = {
-            {s = "ARC9_BO1.Python_Open", t = 17 / 35},
-            {s = "ARC9_BO1.Python_Empty", t = 38 / 35},
-            {s = "ARC9_BO1.Python_Load", t = 68 / 35},
-            {s = "ARC9_BO1.Python_Close", t = 83 / 35},
+            {s = "ARC9_BO2.Pistol_MagOut", t = 0.25},
+            {s = "ARC9_BO2.Pistol_MagIn", t = 1}
         },
     },
     ["reload_empty"] = {
-        Source = "reload",
-        Time = 100 / 35,
+        Source = "reload_empty",
+        Time = 2,
         EventTable = {
-            {s = "ARC9_BO1.Python_Open", t = 17 / 35},
-            {s = "ARC9_BO1.Python_Empty", t = 38 / 35},
-            {s = "ARC9_BO1.Python_Load", t = 68 / 35},
-            {s = "ARC9_BO1.Python_Close", t = 83 / 35},
+            {s = "ARC9_BO2.Pistol_MagOut", t = 0.25},
+            {s = "ARC9_BO2.Pistol_MagIn", t = 1},
+            {s = "ARC9_BO2.Pistol_SlideFwd", t = 1.5}
         },
     },
     ["enter_sprint"] = {
-        Source = "idle",
-        Time = 3 / 30,
-        LHIK = true,
-        LHIKIn = 0.85,
-        LHIKOut = 0.25,
+        Source = "sprint_in",
+        Time = 1,
     },
     ["idle_sprint"] = {
         Source = "sprint_loop",
-        Time = 30 / 30,
-        LHIK = true,
-        LHIKIn = 1,
-        LHIKOut = 0.4,
+        Time = 30 / 40
     },
     ["exit_sprint"] = {
-        Source = "idle",
-        Time = 3 / 30
+        Source = "sprint_out",
+        Time = 1,
+    },
+    ["enter_sprint_empty"] = {
+        Source = "sprint_in_empty",
+        Time = 1,
+    },
+    ["idle_sprint_empty"] = {
+        Source = "sprint_loop_empty",
+        Time = 30 / 40
+    },
+    ["exit_sprint_empty"] = {
+        Source = "sprint_out_empty",
+        Time = 1,
     },
 }

@@ -227,7 +227,7 @@ SWEP.AttachmentElements = {
             {2,3}
         },
     },
-    ["mount"] = {
+    ["bo1_optic"] = {
         Bodygroups = {
             {1,1},
         },
