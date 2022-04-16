@@ -94,8 +94,8 @@ SWEP.SpreadAddRecoil = 0.0015
 SWEP.UsePelletSpread = true -- Multiple bullets fired at once clump up, like for a shotgun. Spread affects which direction they get fired, not their spread relative to one another.
 SWEP.PelletSpread = 0.2
 
-SWEP.SpreadAddHipFire = 0.03
-SWEP.SpreadAddMove = 0.015
+SWEP.SpreadAddHipFire = 0.065
+SWEP.SpreadAddMove = 0.04
 SWEP.SpreadAddMidAir = 0.05
 
 SWEP.RecoilPatternDrift = 20
@@ -414,64 +414,38 @@ SWEP.Animations = {
         },
         MinProgress = 0.6
     },
-    -- ["reload"] = {
-    --     Source = "reload_pap",
-    --     Time = 77 / 30,
+    -- ["reload_start_empty"] = {
+    --     Source = "reload_in",
+    --     Time = 54 / 30,
     --     TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
-    --     LHIK = true,
-    --     LHIKIn = 0,
-    --     LHIKOut = 0.4,
+    --     RestoreAmmo = 1,
+    --     MinProgress = 40 / 30,
     --     EventTable = {
     --         {s = "ARC9_BO1.MK_Shell", t = 40 / 30},
-    --         {s = "ARC9_BO1.SPAS_Back", t = 61 / 30},
-    --         {s = "ARC9_BO1.SPAS_Fwd", t = 65 / 30},
+    --     },
+    --     IKTimeLine = {
+    --         {
+    --             t = 0,
+    --             lhik = 1,
+    --             rhik = 1
+    --         },
+    --         {
+    --             t = 0.2,
+    --             lhik = 0,
+    --             rhik = 0
+    --         },
+    --         {
+    --             t = 0.85,
+    --             lhik = 0,
+    --             rhik = 0
+    --         },
+    --         {
+    --             t = 0.95,
+    --             lhik = 0,
+    --             rhik = 1
+    --         },
     --     },
     -- },
-    -- ["reload_empty"] = {
-    --     Source = "reload_pap",
-    --     Time = 77 / 30,
-    --     TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
-    --     LHIK = true,
-    --     LHIKIn = 0,
-    --     LHIKOut = 0.4,
-    --     EventTable = {
-    --         {s = "ARC9_BO1.MK_Shell", t = 40 / 30},
-    --         {s = "ARC9_BO1.SPAS_Back", t = 61 / 30},
-    --         {s = "ARC9_BO1.SPAS_Fwd", t = 65 / 30},
-    --     },
-    -- },
-    ["reload_start_empty"] = {
-        Source = "reload_in",
-        Time = 54 / 30,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
-        RestoreAmmo = 1,
-        MinProgress = 40 / 30,
-        EventTable = {
-            {s = "ARC9_BO1.MK_Shell", t = 40 / 30},
-        },
-        IKTimeLine = {
-            {
-                t = 0,
-                lhik = 1,
-                rhik = 1
-            },
-            {
-                t = 0.2,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.85,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.95,
-                lhik = 0,
-                rhik = 1
-            },
-        },
-    },
     ["reload_start"] = {
         Source = "reload_in",
         Time = 54 / 30,
@@ -504,38 +478,38 @@ SWEP.Animations = {
             },
         },
     },
-    ["reload_start_empty_pap"] = {
-        Source = "reload_in",
-        Time = 54 / 30,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
-        RestoreAmmo = 12,
-        MinProgress = 40 / 30,
-        EventTable = {
-            {s = "ARC9_BO1.MK_Shell", t = 40 / 30},
-        },
-        IKTimeLine = {
-            {
-                t = 0,
-                lhik = 1,
-                rhik = 1
-            },
-            {
-                t = 0.2,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.85,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.95,
-                lhik = 0,
-                rhik = 1
-            },
-        },
-    },
+    -- ["reload_start_empty_pap"] = {
+    --     Source = "reload_in",
+    --     Time = 54 / 30,
+    --     TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
+    --     RestoreAmmo = 12,
+    --     MinProgress = 40 / 30,
+    --     EventTable = {
+    --         {s = "ARC9_BO1.MK_Shell", t = 40 / 30},
+    --     },
+    --     IKTimeLine = {
+    --         {
+    --             t = 0,
+    --             lhik = 1,
+    --             rhik = 1
+    --         },
+    --         {
+    --             t = 0.2,
+    --             lhik = 0,
+    --             rhik = 0
+    --         },
+    --         {
+    --             t = 0.85,
+    --             lhik = 0,
+    --             rhik = 0
+    --         },
+    --         {
+    --             t = 0.95,
+    --             lhik = 0,
+    --             rhik = 1
+    --         },
+    --     },
+    -- },
     ["reload_start_pap"] = {
         Source = "reload_in",
         Time = 54 / 30,
@@ -576,7 +550,7 @@ SWEP.Animations = {
         EventTable = {
             {s = "ARC9_BO1.MK_Shell", t = 10 / 30},
         },
-        RestoreAmmo = 1,
+        -- RestoreAmmo = 1,
         MinProgress = 15 / 30,
         IKTimeLine = {
             {
