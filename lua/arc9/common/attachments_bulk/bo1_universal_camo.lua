@@ -70,7 +70,7 @@ ATT.Category = "universal_camo"
 ATT.Description = [[Universal red color.]]
 ATT.MenuCategory = "ARC-9 - Camos"
 ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/solid_white"
-ATT.Folder = "COD CAMOS/FLAT"
+ATT.Folder = "COD FLAT"
 
 ARC9.LoadAttachment(ATT, "bo1_camo_solidwhite")
 
@@ -84,7 +84,7 @@ ATT.Category = "universal_camo"
 ATT.Description = [[Universal red color.]]
 ATT.MenuCategory = "ARC-9 - Camos"
 ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/bakelite"
-ATT.Folder = "COD CAMOS/FLAT"
+ATT.Folder = "COD FLAT"
 
 ARC9.LoadAttachment(ATT, "bo1_camo_bakelite")
 
@@ -98,7 +98,7 @@ ATT.Category = "universal_camo"
 ATT.Description = [[Universal red color.]]
 ATT.MenuCategory = "ARC-9 - Camos"
 ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/darkbake"
-ATT.Folder = "COD CAMOS/FLAT"
+ATT.Folder = "COD FLAT"
 
 ARC9.LoadAttachment(ATT, "bo1_camo_darkbake")
 
@@ -112,7 +112,7 @@ ATT.Category = "universal_camo"
 ATT.Description = [[Universal red color.]]
 ATT.MenuCategory = "ARC-9 - Camos"
 ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/tan"
-ATT.Folder = "COD CAMOS/FLAT"
+ATT.Folder = "COD FLAT"
 
 ARC9.LoadAttachment(ATT, "bo1_camo_hk21_tan")
 
@@ -126,7 +126,7 @@ ATT.Category = "universal_camo"
 ATT.Description = [[Universal red color.]]
 ATT.MenuCategory = "ARC-9 - Camos"
 ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/tan_dark"
-ATT.Folder = "COD CAMOS/FLAT"
+ATT.Folder = "COD FLAT"
 
 ARC9.LoadAttachment(ATT, "bo1_camo_darktan")
 
@@ -140,7 +140,7 @@ ATT.Category = "universal_camo"
 ATT.Description = [[Condiment.]]
 ATT.MenuCategory = "ARC-9 - Camos"
 ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/tan_mustard"
-ATT.Folder = "COD CAMOS/FLAT"
+ATT.Folder = "COD FLAT"
 ATT.CustomCamoScale = 1
 
 ARC9.LoadAttachment(ATT, "bo1_camo_mustard")
@@ -155,7 +155,7 @@ ATT.Category = "universal_camo"
 ATT.Description = [[Universal red color.]]
 ATT.MenuCategory = "ARC-9 - Camos"
 ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/blueshift"
-ATT.Folder = "COD CAMOS/FLAT"
+ATT.Folder = "COD FLAT"
 
 ARC9.LoadAttachment(ATT, "bo1_camo_blueshift")
 
@@ -170,7 +170,7 @@ ATT.Description = [[Universal red color.]]
 ATT.MenuCategory = "ARC-9 - Camos"
 ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/od_green"
 ATT.CustomCamoScale = 20
-ATT.Folder = "COD CAMOS/FLAT"
+ATT.Folder = "COD FLAT"
 
 ARC9.LoadAttachment(ATT, "bo1_camo_aug_green")
 
@@ -185,7 +185,7 @@ ATT.Description = [[Universal red color.]]
 ATT.MenuCategory = "ARC-9 - Camos"
 ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/kaki_01"
 ATT.CustomCamoScale = 20
-ATT.Folder = "COD CAMOS/FLAT"
+ATT.Folder = "COD FLAT"
 
 ARC9.LoadAttachment(ATT, "bo1_camo_kaki_01")
 
@@ -200,7 +200,7 @@ ATT.Description = [[Universal red color.]]
 ATT.MenuCategory = "ARC-9 - Camos"
 ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/kaki_02"
 ATT.CustomCamoScale = 20
-ATT.Folder = "COD CAMOS/FLAT"
+ATT.Folder = "COD FLAT"
 
 ARC9.LoadAttachment(ATT, "bo1_camo_kaki_02")
 
@@ -215,7 +215,7 @@ ATT.Description = [[Universal red color.]]
 ATT.MenuCategory = "ARC-9 - Camos"
 ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/true_od"
 ATT.CustomCamoScale = 20
-ATT.Folder = "COD CAMOS/FLAT"
+ATT.Folder = "COD FLAT"
 
 ARC9.LoadAttachment(ATT, "bo1_camo_true_od")
 
@@ -229,7 +229,7 @@ ATT.Category = "universal_camo"
 ATT.Description = [[Universal red color.]]
 ATT.MenuCategory = "ARC-9 - Camos"
 ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/black_detail"
-ATT.Folder = "COD CAMOS/FLAT"
+ATT.Folder = "COD FLAT"
 
 ARC9.LoadAttachment(ATT, "bo1_camo_black_detail")
 
@@ -243,7 +243,7 @@ ATT.Category = "universal_camo"
 ATT.Description = [[Universal red color.]]
 ATT.MenuCategory = "ARC-9 - Camos"
 ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/black"
-ATT.Folder = "COD CAMOS/FLAT"
+ATT.Folder = "COD FLAT"
 
 ARC9.LoadAttachment(ATT, "bo1_camo_deepblack")
 
@@ -257,7 +257,7 @@ ATT.Category = "universal_camo"
 ATT.Description = [[Universal red color.]]
 ATT.MenuCategory = "ARC-9 - Camos"
 ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/red"
-ATT.Folder = "COD CAMOS/FLAT"
+ATT.Folder = "COD FLAT"
 
 ARC9.LoadAttachment(ATT, "bo1_camo_redone")
 
