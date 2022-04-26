@@ -33,7 +33,7 @@ SWEP.WorldModelOffset = {
     Bone    =    "ValveBiped.Bip01_R_Hand",
     Scale   =   1.1,
 }
-SWEP.DesiredViewModelFOV = 50
+SWEP.ViewModelFOVBase = 75
 
 SWEP.CustomCamoTexture = "models/weapons/arc9/bo1/black_detail"
 SWEP.CustomCamoScale = 1
@@ -125,12 +125,13 @@ SWEP.Num = 8
 SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
-        Mode = -1,
+        Mode = 1,
     },
 }
 SWEP.ManualActionChamber = 1 -- How many shots we go between needing to cycle again.
 SWEP.ManualAction = true -- Pump/bolt action. Play the "cycle" animation after firing, when the trigger is released.
 SWEP.ManualActionNoLastCycle = false -- Do not cycle on the last shot.
+SWEP.SlamFire = true
 SWEP.CycleTime = 1
 
 SWEP.NPCWeaponType = {"weapon_shotgun"}

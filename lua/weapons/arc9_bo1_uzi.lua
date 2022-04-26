@@ -33,7 +33,7 @@ SWEP.WorldModelOffset = {
     Bone    =    "ValveBiped.Bip01_R_Hand",
     Scale = 1,
 }
-SWEP.DesiredViewModelFOV = 60
+SWEP.ViewModelFOVBase = 75
 
 SWEP.CustomCamoTexture = "models/weapons/arc9/bo1/plastic"
 SWEP.CustomCamoScale = 2.5

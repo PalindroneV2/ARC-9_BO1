@@ -34,7 +34,7 @@ SWEP.WorldModelOffset = {
     Bone    =    "ValveBiped.Bip01_R_Hand",
     Scale = 1.1,
 }
-SWEP.DesiredViewModelFOV = 60
+SWEP.ViewModelFOVBase = 75
 
 SWEP.CustomCamoTexture = "models/weapons/arc9/bo1/black_detail"
 SWEP.CustomCamoScale = 1
@@ -162,7 +162,7 @@ SWEP.ShellScale = 1.4
 
 SWEP.MuzzleEffectQCA = 3 -- which attachment to put the muzzle on
 SWEP.CaseEffectQCA = 2 -- which attachment to put the case effect on
-SWEP.ProceduralViewQCA = 4
+SWEP.ProceduralViewQCA = 1
 SWEP.CamQCA = 4
 
 SWEP.BulletBones = {
