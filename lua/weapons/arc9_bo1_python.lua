@@ -157,7 +157,7 @@ SWEP.NoShellEject = true
 
 SWEP.MuzzleEffectQCA = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectQCA = 1 -- which attachment to put the case effect on
-SWEP.ProceduralViewQCA = 1
+SWEP.ProceduralViewQCA = 2
 SWEP.CamQCA = 2
 
 SWEP.BulletBones = {
@@ -194,7 +194,7 @@ SWEP.CrouchAng = Angle(0, 0, -5)
 SWEP.RestPos = Vector(0.532, -6, 0)
 SWEP.RestAng = Angle(-4.633, 36.881, 0)
 
-SWEP.SprintPos = Vector(0, 0, 0)
+SWEP.SprintPos = Vector(0, -2, -2)
 SWEP.SprintAng = Angle(0, 0, 0)
 
 SWEP.CustomizePos = Vector(15, 15, 4)

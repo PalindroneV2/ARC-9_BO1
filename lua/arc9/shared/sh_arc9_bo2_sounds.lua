@@ -14,9 +14,15 @@ sound.Add({
 })
 sound.Add({
     name = "ARC9_BO2.B23R_Fire",
-    channel = CHAN_WEAPON,
+    channel = CHAN_STATIC,
     level = 100,
     sound = "^weapons/arc9/bo2_generic_pistol/fire_b23r.wav"
+})
+sound.Add({
+    name = "ARC9_BO2.B23R_Burst",
+    channel = CHAN_WEAPON,
+    level = 100,
+    sound = "^weapons/arc9/bo2_generic_pistol/fire_b23r_bst.wav"
 })
 sound.Add({
     name = "ARC9_BO2.Kard_Fire",

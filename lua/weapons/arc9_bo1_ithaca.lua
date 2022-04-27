@@ -14,7 +14,7 @@ SWEP.Trivia = {
     Mechanism = "Pump-Action",
     Country = "USA",
     Year = 1950,
-    Games = [[BO2]]
+    Games = [[Call of Duty: Black Ops]]
 }
 SWEP.Credits = {
     Author = "Palindrone"
@@ -31,7 +31,7 @@ SWEP.WorldModelOffset = {
     Pos        =    Vector(-3.3, 4, -5.8),
     Ang        =    Angle(-7, 1, 180),
     Bone    =    "ValveBiped.Bip01_R_Hand",
-    Scale   =   1.1,
+    Scale   =   1.1
 }
 SWEP.ViewModelFOVBase = 75
 
@@ -125,7 +125,7 @@ SWEP.Num = 8
 SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
-        Mode = 1,
+        Mode = -1,
     },
 }
 SWEP.ManualActionChamber = 1 -- How many shots we go between needing to cycle again.
@@ -163,7 +163,7 @@ SWEP.ShellScale = 1.5
 
 SWEP.MuzzleEffectQCA = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectQCA = 2 -- which attachment to put the case effect on
-SWEP.ProceduralViewQCA = nil
+SWEP.ProceduralViewQCA = 4
 SWEP.CamQCA = 4
 
 SWEP.BulletBones = {
@@ -192,7 +192,7 @@ SWEP.AnimDraw = ACT_HL2MP_GESTURE_RANGE_ATTACK_KNIFE
 SWEP.ActivePos = Vector(0, -1.5, -1)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
-SWEP.SprintPos = Vector(0, -1.5, 0)
+SWEP.SprintPos = Vector(0, -1.5, -1)
 SWEP.SprintAng = Angle(0, 0, 0)
 
 SWEP.CrouchPos = Vector(0, 0, -1)

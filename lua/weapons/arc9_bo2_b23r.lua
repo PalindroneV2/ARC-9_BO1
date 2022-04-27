@@ -32,9 +32,9 @@ SWEP.WorldModelOffset = {
     Pos        =    Vector(-9.75, 3, -3.75),
     Ang        =    Angle(-6, 0, 180),
     Bone    =    "ValveBiped.Bip01_R_Hand",
-    Scale = 1.1,
+    Scale = 1.1
 }
-SWEP.ViewModelFOVBase = 75
+-- SWEP.ViewModelFOVBase = 75
 
 SWEP.DefaultBodygroups = "00000000000000"
 
@@ -143,9 +143,11 @@ SWEP.ShootVolume = 125
 SWEP.ShootPitch = 100
 SWEP.ShootPitchVariation = 0
 
-SWEP.ShootSound = "ARC9_BO2.B23R_Fire"
+SWEP.FirstShootSound = "ARC9_BO2.B23R_Fire"
+SWEP.ShootSound = "ARC9_BO2.B23R_Burst"
 SWEP.ShootSoundSilenced = "ARC9_BO2.Pistol_Sil"
-SWEP.DistantShootSound = "ARC9_BO2.Pistol_RingOff"
+SWEP.FirstDistantShootSound = "ARC9_BO2.Pistol_RingOff"
+SWEP.DistantShootSound = "ARC9_BO2.PistolBurst_RingOff"
 
 --SWEP.MuzzleEffect = "muzzleflash_4"
 SWEP.MuzzleParticle = "muzzleflash_pistol" -- Used for some muzzle effects.
@@ -168,8 +170,8 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(-2.35, 3, 0.73),
-    Ang = Angle(-0.075, 0, 0),
+    Pos = Vector(-2.4, 3, 0.4),
+    Ang = Angle(0, 0, 0),
     Magnification = 1.1,
     --AssociatedSlot = 9,
     CrosshairInSights = false,
@@ -204,27 +206,24 @@ SWEP.BarrelLength = 9
 SWEP.ExtraSightDist = 15
 
 SWEP.AttachmentElements = {
+    ["bo1_optic_lp"] = {
+        Bodygroups = {
+            {2,1}
+        },
+    },
 }
 
 SWEP.Hook_ModifyBodygroups = function(self, data)
 
     local vm = data.model
     local attached = data.elements
-    local color = 0
-
-    if attached["maria"] then
-        color = 1
-    end
+    local camo = 0
 
     if attached["bo1_pap"] then
-        if color == 1 then
-            color = 1
-        else
-            color = color + 2
-        end
+        camo = camo + 2
     end
 
-    vm:SetSkin(color)
+    vm:SetSkin(camo)
 end
 
 
@@ -244,18 +243,10 @@ SWEP.Attachments = {
         Category = "bo1_perkacola",
     },
     {
-        PrintName = "Cosmetic",
-        DefaultCompactName = "G.I.",
-        Bone = "j_bolt",
-        Pos = Vector(0, 0, 0),
-        Ang = Angle(0, 0, 0),
-        Category = "bo2_bhp_cosmetic",
-    },
-    {
         PrintName = "Muzzle",
         DefaultCompactName = "MUZZ",
         Bone = "j_gun",
-        Pos = Vector(6.75, 0.025, 1.15),
+        Pos = Vector(7.9, 0.075, 1.5),
         Ang = Angle(0, 0, 0),
         Category = "bo1_muzzle_pistol",
     },
@@ -264,10 +255,10 @@ SWEP.Attachments = {
         DefaultCompactName = "TAC",
         Bone = "j_gun",
         Scale = Vector(1, 1, 1),
-        Pos = Vector(3.25, 0, 0.2),
+        Pos = Vector(5.5, 0.075, -0.5),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_tactical", "bo1_pistol_rail"},
-        CorrectiveAng = Angle(0.05, 0.3, 0),
+        Category = {"bo1_tactical"},
+        -- CorrectiveAng = Angle(0.05, 0.1, 0),
     },
     {
         PrintName = "Ammunition",
@@ -276,6 +267,16 @@ SWEP.Attachments = {
         Pos = Vector(-1.25, 0, -2.5),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ammo", "bo1_pap"},
+    },
+    {
+        PrintName = "Optic",
+        DefaultCompactName = "IRONS",
+        Bone = "j_bolt",
+        Scale = Vector(1, 1, 1),
+        Pos = Vector(0.4, 0.075, 0.5),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_optic_pistol"},
+        -- CorrectiveAng = Angle(0.05, 0.1, 0),
     },
 }
 
