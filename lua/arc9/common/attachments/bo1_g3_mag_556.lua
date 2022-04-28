@@ -17,10 +17,11 @@ ATT.ReloadTimeMult = 0.9
 
 ATT.DamageMax = 30
 ATT.DamageMin = 20
+ATT.RPMAdd = 150
 
-ATT.RecoilMult = 0.7
-ATT.RecoilUpMult = 0.7
-ATT.RecoilSideMult = 0.7
+ATT.RecoilMult = 0.35
+ATT.RecoilUpMult = 0.35
+ATT.RecoilSideMult = 0.35
 
 ATT.RangeMaxMult = 0.75
 ATT.RangeMinMult = 0.75

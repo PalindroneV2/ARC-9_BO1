@@ -16,7 +16,7 @@ SWEP.Trivia = {
     Mechanism = "Missile",
     Country = "USA",
     Year = 1981,
-    Games = [[MW2, BOCW]]
+    Games = [[MW2, BO2, BOCW]]
 }
 SWEP.Credits = {
     Author = "Palindrone"

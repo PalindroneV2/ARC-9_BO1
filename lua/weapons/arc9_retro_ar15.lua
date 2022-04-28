@@ -177,7 +177,7 @@ SWEP.IronSights = {
     Pos = Vector(-2.765, -2, 0.25),
     Ang = Angle(0, 0.0125, 0),
     Magnification = 1.1,
-    AssociatedSlot = 9,
+    -- AssociatedSlot = 9,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
 }
@@ -651,6 +651,23 @@ SWEP.HookP_NameChange = function(self, name)
         brand = "The Patriot"
         model = ""
         alt = ""
+    end
+
+    if attached["barrel_11"] and attached["a4_top"] and attached ["retro_ar15_iron_troy"] then
+        model = "Commando"
+        alt = ""
+    end
+
+    if attached["9mm_mag"] then
+        model = "M635"
+        alt = ""
+        if attached["a2_top"] or attached["a4_top"] then
+            model = "9mm SMG"
+        end
+    end
+
+    if attached["fcg_semi"] then
+        return name
     end
 
     -- print("--NEW--")

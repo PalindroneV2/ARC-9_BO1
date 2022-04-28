@@ -30,10 +30,10 @@ SWEP.ViewModel = "models/weapons/arc9/c_bo1_aug.mdl"
 SWEP.WorldModel = "models/weapons/arc9/c_bo1_aug.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    Pos        =    Vector(-4.5, 3.5, -5.1),
-    Ang        =    Angle(-9.5, -1, 180),
+    Pos        =    Vector(-8.35, 3.5, -4.75),
+    Ang        =    Angle(-10, 0, 180),
     Bone    =    "ValveBiped.Bip01_R_Hand",
-    Scale = 1.1,
+    Scale = 1.05,
 }
 SWEP.ViewModelFOVBase = 75
 
@@ -160,7 +160,7 @@ SWEP.MuzzleParticle = "muzzleflash_famas" -- Used for some muzzle effects.
 
 SWEP.ShellModel = "models/shells/shell_556.mdl"
 SWEP.ShellPitch = 90
-SWEP.ShellScale = 1.4
+SWEP.ShellScale = 0.9
 
 SWEP.MuzzleEffectQCA = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectQCA = 2 -- which attachment to put the case effect on
@@ -432,8 +432,8 @@ SWEP.Animations = {
         EventTable = {
             {s = "ARC9_BO1.AUG_MagOut", t = 18 / 35},
             {s = "ARC9_BO1.AUG_MagIn", t = 58 / 35},
-            {s = "ARC9_BO1.AUG_Back", t = 72 / 35},
-            {s = "ARC9_BO1.AUG_Fwd", t = 80 / 35},
+            {s = "ARC9_BO1.AUG_Back", t = 77 / 35},
+            {s = "ARC9_BO1.AUG_Fwd", t = 85 / 35},
         },
     },
     ["enter_sprint"] = {
@@ -495,8 +495,8 @@ SWEP.Animations = {
         EventTable = {
             {s = "ARC9_BO1.AUG_MagOut", t = 18 / 35},
             {s = "ARC9_BO1.AUG_MagIn", t = 58 / 35},
-            {s = "ARC9_BO1.AUG_Back", t = 72 / 35},
-            {s = "ARC9_BO1.AUG_Fwd", t = 80 / 35},
+            {s = "ARC9_BO1.AUG_Back", t = 77 / 35},
+            {s = "ARC9_BO1.AUG_Fwd", t = 85 / 35},
         },
     },
     ["enter_sprint_m203"] = {
@@ -607,8 +607,8 @@ SWEP.Animations = {
         EventTable = {
             {s = "ARC9_BO1.AUG_MagOut", t = 18 / 35},
             {s = "ARC9_BO1.AUG_MagIn", t = 58 / 35},
-            {s = "ARC9_BO1.AUG_Back", t = 72 / 35},
-            {s = "ARC9_BO1.AUG_Fwd", t = 80 / 35},
+            {s = "ARC9_BO1.AUG_Back", t = 77 / 35},
+            {s = "ARC9_BO1.AUG_Fwd", t = 85 / 35},
         },
     },
     ["enter_sprint_mk"] = {

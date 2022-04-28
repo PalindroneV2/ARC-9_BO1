@@ -14,7 +14,7 @@ SWEP.Trivia = {
     Mechanism = "Pump-Action",
     Country = "USA",
     Year = 1950,
-    Games = [[BO2]]
+    Games = [[Call of Duty: Black Ops II]]
 }
 SWEP.Credits = {
     Author = "Palindrone"

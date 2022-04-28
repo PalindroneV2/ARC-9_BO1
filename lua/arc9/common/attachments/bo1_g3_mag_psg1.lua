@@ -23,4 +23,5 @@ ATT.SpreadMult = 0.3
 ATT.SpreadMultHipFire = 2
 
 ATT.DamageMaxAdd = 5
-ATT.DamageMinAdd = 5
+ATT.DamageMinAdd = 15
+ATT.RPMAdd = -100

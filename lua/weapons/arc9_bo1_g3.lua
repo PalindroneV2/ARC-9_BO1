@@ -3,7 +3,7 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ARC-9 - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "HK G3"
+SWEP.PrintName = "HK PSG1"
 SWEP.Class = "Battle Rifle"
 SWEP.Description = [[
     German Army standard issue rifle chambered in 7.62mm NATO. The power of the cardtridge makes it difficult to control in full-auto.
@@ -188,8 +188,9 @@ SWEP.CrouchAng = Angle(0, 0, -5)
 SWEP.SprintPos = Vector(0, 0, -1)
 SWEP.SprintAng = Angle(0, 0, -5)
 
-SWEP.CustomizePos = Vector(12.5, 40, 4)
+SWEP.CustomizePos = Vector(17.5, 40, 4)
 SWEP.CustomizeAng = Angle(90, 0, 0)
+SWEP.CustomizeSnapshotFOV = 100
 
 SWEP.RestPos = Vector(0, 0, -1)
 SWEP.RestAng = Angle(0, 0, -5)
@@ -342,9 +343,42 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
     return anim .. suffix
 end
 
+SWEP.HookP_NameChange = function(self, name)
+
+    local attached = self:GetElements()
+
+    local gunname = "HK G3"
+
+    if attached["bo1_pap"] then
+        gunname = "G115 Perforator"
+    end
+
+    local len = "3"
+    local cal = "1"
+    if attached["556mag"] then
+        cal = "3"
+    end
+    if attached["barrel_hk33"] then
+        len = "3"
+    end
+    if attached["barrel_hk53"] then
+        len = "5"
+    end
+    gunname = "HK" .. len .. cal
+    if len == "3" and cal == "1" then
+        gunname = "HK G3"
+    end
+
+    if attached["barrel_psg1"] then
+        gunname = "HK PSG1"
+    end
+
+    return gunname
+end
+
 SWEP.Attachments = {
     {
-        PrintName = "Perk-a-Cola",
+    PrintName = "Perk-a-Cola",
         DefaultCompactName = "PERK",
         Bone = "j_gun",
         Pos = Vector(-5, 0, -5),
@@ -375,6 +409,7 @@ SWEP.Attachments = {
         Pos = Vector(1, 0, 0),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_g3_mag"},
+        Installed = "bo1_g3_mag_psg1",
     },
     {
         PrintName = "Stock",
@@ -406,6 +441,7 @@ SWEP.Attachments = {
         Pos = Vector(-2.5, 0.125, 4),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_psg1_scope"},
+        Installed = "bo1_opitc_hensoldt",
     },
     {
         PrintName = "Barrel",
@@ -413,6 +449,7 @@ SWEP.Attachments = {
         Pos = Vector(7, 0, 3.5),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_g3_barrel"},
+        Installed = "bo1_g3_barrel_psg1",
     },
     {
         PrintName = "Handguard",
@@ -436,6 +473,7 @@ SWEP.Attachments = {
         Pos = Vector(16, 0, 3),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_bipod"},
+        Installed = "bo1_bipod_integrated",
     }
 }
 

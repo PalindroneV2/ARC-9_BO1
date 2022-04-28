@@ -397,6 +397,40 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     }
 end
 
+SWEP.HookP_NameChange = function(self, name)
+
+    local attached = self:GetElements()
+
+    local model = "AK"
+    local cal = "-47"
+    local u = ""
+    local folding = ""
+    if attached["barrel_rpk"] then
+        model = "RPK"
+        cal = ""
+    end
+    if attached["rpk"] or attached["ak74"] then
+        cal = "-74"
+    end
+    if attached["barrel_krinkov"] then
+        u = "u"
+    end
+    if attached["stock_sidefolder"] or attached["stock_underfolder"] then
+        folding = "S"
+    end
+
+    local gunname = model .. folding .. cal .. u
+    if u == "u" and cal == "-47" then
+        cal = "M"
+        gunname = model .. cal .. folding .. u
+    end
+
+    if attached["bo1_pap"] then
+        gunname = "Reznov's Revenge"
+    end
+
+    return gunname
+end
 
 SWEP.Hook_TranslateAnimation = function (self, anim)
     local attached = self:GetElements()

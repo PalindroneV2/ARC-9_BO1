@@ -14,7 +14,7 @@ SWEP.Trivia = {
     Mechanism = "Gas-Operated",
     Country = "Sweden",
     Year = 1982,
-    Games = [[BOCW]]
+    Games = [[Call of Duty: Black Ops Cold War]]
 }
 SWEP.Credits = {
     Author = "Palindrone"

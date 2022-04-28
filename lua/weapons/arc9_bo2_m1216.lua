@@ -14,7 +14,7 @@ SWEP.Trivia = {
     Mechanism = "Delayed Blowback",
     Country = "Russia",
     Year = 2011,
-    Games = [[Black Ops II]]
+    Games = [[Call of Duty: Black Ops II]]
 }
 SWEP.Credits = {
     Author = "Palindrone"

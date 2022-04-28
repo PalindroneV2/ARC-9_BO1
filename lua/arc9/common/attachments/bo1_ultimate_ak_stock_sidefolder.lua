@@ -11,7 +11,7 @@ ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Category = {"bo1_ultimate_ak_stock"}
-ATT.ActivateElements = {"stock_siddefolder", "stock_l"}
+ATT.ActivateElements = {"stock_sidefolder", "stock_l"}
 
 /*
 ATT.ToggleStats = {

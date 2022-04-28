@@ -27,7 +27,8 @@ ATT.SpreadMult = 0.3
 ATT.SpreadMultHipFire = 2
 
 ATT.DamageMaxAdd = 5
-ATT.DamageMinAdd = 5
+ATT.DamageMinAdd = 15
+ATT.RPMAdd = -200
 
 ATT.AimDownSightsTimeMult = 1.1
 ATT.RangeMaxMult = 1.25
