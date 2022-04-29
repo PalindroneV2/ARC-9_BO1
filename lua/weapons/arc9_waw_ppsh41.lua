@@ -193,7 +193,7 @@ SWEP.CrouchAng = Angle(0, 0, -5)
 SWEP.SprintPos = Vector(10, 2, -2)
 SWEP.SprintAng = Angle(45, -7, 0)
 
-SWEP.CustomizePos = Vector(20.5, 40, 6)
+SWEP.CustomizePos = Vector(10.5, 40, 6)
 SWEP.CustomizeAng = Angle(90, 0, 0)
 
 SWEP.RestPos = Vector(0, 0, 0)

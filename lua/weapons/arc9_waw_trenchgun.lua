@@ -1,20 +1,20 @@
 SWEP.Base = "arc9_base"
 SWEP.Spawnable = true -- this obviously has to be set to true
-SWEP.Category = "ARC-9 - Black Ops" -- edit this if you like
+SWEP.Category = "ARC-9 - World at War" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Ithaca M37"
+SWEP.PrintName = "M1897 Trenchgun"
 SWEP.Class = "Shotgun"
 SWEP.Description = [[
     12 gauge pump-action shotgun widely used by civilians, law enforcement and even militaries. It's incredibly reliable operation makes it incredibly popular.
 ]]
 SWEP.Trivia = {
-    Manufacturer = "Remington",
+    Manufacturer = "Winchester",
     Calibre = "12 Gauge",
     Mechanism = "Pump-Action",
     Country = "USA",
-    Year = 1950,
-    Games = [[Call of Duty: Black Ops]]
+    Year = 1897,
+    Games = [[COD2, COD3, WAW, BO1, WW2, BO4, VG]]
 }
 SWEP.Credits = {
     Author = "Palindrone"
@@ -24,8 +24,8 @@ SWEP.Slot = 2
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/arc9/c_bo1_ithaca.mdl"
-SWEP.WorldModel = "models/weapons/arc9/c_bo1_ithaca.mdl"
+SWEP.ViewModel = "models/weapons/arc9/c_waw_trenchgun.mdl"
+SWEP.WorldModel = "models/weapons/arc9/c_waw_trenchgun.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
     Pos        =    Vector(-3.3, 4, -5.8),
@@ -44,7 +44,7 @@ SWEP.DefaultBodygroups = "000000000"
 SWEP.DamageMax = 16
 SWEP.DamageMin = 8 -- damage done at maximum range
 SWEP.RangeMax = 3000
-SWEP.RangeMin = 750
+SWEP.RangeMin = 1000
 SWEP.Penetration = 2
 SWEP.DamageType = DMG_BUCKSHOT
 SWEP.ShootEntity = nil -- entity to fire, if any
@@ -67,7 +67,7 @@ SWEP.TracerEffect = "ARC9_tracer" -- The effect to use for hitscan tracers
 SWEP.TracerColor = Color(255, 255, 255) -- Color of tracers. Only works if tracer effect supports it. For physical bullets, this is compressed down to 9-bit color.
 
 SWEP.ChamberSize = 0 -- dont fucking change this again.
-SWEP.ClipSize = 6 -- DefaultClip is automatically set.
+SWEP.ClipSize = 4 -- DefaultClip is automatically set.
 SWEP.ShotgunReload = true
 SWEP.ReloadTime = 1
 
@@ -150,9 +150,9 @@ SWEP.ShootVolume = 125
 SWEP.ShootPitch = 100
 SWEP.ShootPitchVariation = 0
 
-SWEP.ShootSound = "ARC9_BO1.Ithaca_Fire"
-SWEP.ShootSoundSilenced = "ARC9_BO2.S12_Sil"
-SWEP.DistantShootSound = {"^weapons/arc9/bo2_generic_shotgun/dist/0.wav", "^weapons/arc9/bo2_generic_shotgun/dist/1.wav"}
+SWEP.ShootSound = "ARC9_WAW.TrenchGun_Fire"
+SWEP.ShootSoundSilenced = "ARC9_BO1.M16_Sil"
+SWEP.DistantShootSound = "ARC9_WAW.Rifle_RingOff"
 
 --SWEP.MuzzleEffect = "muzzleflash_4"
 SWEP.MuzzleParticle = "muzzleflash_shotgun" -- Used for some muzzle effects.
@@ -163,8 +163,8 @@ SWEP.ShellScale = 1.5
 
 SWEP.MuzzleEffectQCA = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectQCA = 2 -- which attachment to put the case effect on
-SWEP.ProceduralViewQCA = 4
-SWEP.CamQCA = 4
+SWEP.ProceduralViewQCA = 1
+SWEP.CamQCA = 3
 
 SWEP.BulletBones = {
 }
@@ -175,8 +175,8 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(-2.195, 0, 1.35),
-    Ang = Angle(0, 0.2, 0),
+    Pos = Vector(-0.5, -7.5, 0.25),
+    Ang = Angle(0, 0.5, 0),
     Magnification = 1.1,
     SwitchToSound = "", -- sound that plays when switching to this sight
 }
@@ -189,16 +189,16 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SHOTGUN
 SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN
 SWEP.AnimDraw = ACT_HL2MP_GESTURE_RANGE_ATTACK_KNIFE
 
-SWEP.ActivePos = Vector(0, -1.5, -1)
-SWEP.ActiveAng = Angle(0, 0, 0)
+SWEP.ActivePos = Vector(2, -6, -1)
+SWEP.ActiveAng = Angle(0, 0, -5)
 
-SWEP.SprintPos = Vector(0, -1.5, -1)
-SWEP.SprintAng = Angle(0, 0, 0)
-
-SWEP.CrouchPos = Vector(0, 0, -1)
+SWEP.CrouchPos = Vector(2, -6, -1)
 SWEP.CrouchAng = Angle(0, 0, -5)
 
-SWEP.CustomizePos = Vector(12.5, 40, 4)
+SWEP.SprintPos = Vector(10, -4, -2)
+SWEP.SprintAng = Angle(30, -7, 0)
+
+SWEP.CustomizePos = Vector(20.5, 40, 6)
 SWEP.CustomizeAng = Angle(90, 0, 0)
 
 SWEP.RestPos = Vector(0, 0, 0)
@@ -216,14 +216,9 @@ SWEP.ReloadHideBoneTables = {
 }
 
 SWEP.AttachmentElements = {
-    ["stock_l"] = {
+    ["waw_bayonet"] = {
         Bodygroups = {
-            {5,2}
-        },
-    },
-    ["stock_m"] = {
-        Bodygroups = {
-            {5,2}
+            {1,1},
         },
     },
 }
@@ -232,22 +227,9 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
 
     local vm = data.model
     local attached = data.elements
-    if attached["bo1_rail_optic"] then
-        vm:SetBodygroup(4,1)
-    end
-    if attached["strap"] then
-        vm:SetBodygroup(3,1)
-    end
-    if attached["cheese_grater"] then
-        vm:SetBodygroup(2,1)
-    end
-
     local camo = 0
-    if attached["universal_camo"] then
-        camo = 1
-    end
     if attached["bo1_pap"] then
-        camo = camo + 2
+        camo = camo + 1
     end
     vm:SetSkin(camo)
 
@@ -259,17 +241,13 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
     if attached["bo1_intgrip"] then
         return anim .. "_grip"
     end
+
+    if anim == "bash" and attached["waw_bayonet"] then
+        return anim .. "_bayo"
+    end
 end
 
 SWEP.Attachments = {
-    {
-        PrintName = "Optic Rail",
-        Bone = "j_gun",
-        Pos = Vector(-1.5, 0.075, 1.25),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_rail_optic"},
-        Icon_Offset = Vector(0, 0, 0)
-    },
     {
         PrintName = "Perk-a-Cola",
         DefaultCompactName = "PERK",
@@ -277,32 +255,6 @@ SWEP.Attachments = {
         Pos = Vector(-5, 0, -5),
         Ang = Angle(0, 0, 0),
         Category = "bo1_perkacola",
-    },
-    {
-        PrintName = "Stock",
-        Bone = "j_gun",
-        Pos = Vector(-7.5, 0, 0),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_stock_m"},
-        -- Installed = "bo1_stock_light",
-    },
-    {
-        PrintName = "Barrel",
-        DefaultCompactName = "Standard",
-        Bone = "j_gun",
-        Pos = Vector(10, 0, 1),
-        Ang = Angle(0, 0, 0),
-        Category = "bo1_ithaca_barrel",
-        Installed = "bo1_ithaca_barrel"
-    },
-    {
-        PrintName = "Strap",
-        DefaultCompactName = "00 BUCK",
-        Bone = "j_gun",
-        Pos = Vector(-4, 0, 0.5),
-        Ang = Angle(0, 0, 0),
-        Category = "bo1_ithaca_strap",
-        Installed = "bo1_ithaca_strap"
     },
     {
         PrintName = "Ammunition",
@@ -313,12 +265,12 @@ SWEP.Attachments = {
         Category = {"bo1_ammo", "bo1_pap"},
     },
     {
-        PrintName = "Cosmetic",
-        DefaultCompactName = "Standard Black",
+        PrintName = "Muzzle",
+        DefaultCompactName = "None",
         Bone = "j_gun",
-        Pos = Vector(-5, 0, 4),
+        Pos = Vector(25, 0, 0),
         Ang = Angle(0, 0, 0),
-        Category = "universal_camo",
+        Category = "waw_bayonet",
     },
 }
 
@@ -336,167 +288,112 @@ SWEP.Animations = {
         Time = 0.75,
     },
     ["ready"] = {
-        Source = "first_draw",
-        Time = 53 / 30,
-        EventTable = {
-            {s = "ARC9_BO1.MK_Back", t = 15 / 30},
-            {s = "ARC9_BO1.MK_Fwd", t = 21 / 30}
-        },
+        Source = "draw",
+        Time = 1,
     },
     ["fire"] = {
         Source = {
             "fire",
         },
-        Time = 9 / 10,
-        ShellEjectAt = 0.15,
+        Time = 11 / 35,
+        EventTable = {
+            {s = "ARC9_WAW.TrenchGun_Mech", t = 0 / 35},
+        },
+    },
+    ["bash"] = {
+        Source = {
+            "bash",
+        },
+        Time = 35 / 35,
+    },
+    ["bash_bayo"] = {
+        Source = {
+            "bash_2",
+        },
+        Time = 35 / 35,
     },
     ["fire_iron"] = {
         Source = {
             "fire_ads",
         },
-        Time = 9 / 10,
-        ShellEjectAt = 0.15,
+        Time = 11 / 35,
+        EventTable = {
+            {s = "ARC9_WAW.TrenchGun_Mech", t = 0 / 35},
+        },
+    },
+    ["reload"] = {
+        Source = "reload",
+        Time = 70 / 40,
+        EventTable = {
+            {s = "ARC9_WAW.Trenchgun_Shell", t = 40 / 40},
+            {s = "ARC9_WAW.TrenchGun_Pull", t = 67 / 40},
+            {s = "ARC9_WAW.TrenchGun_Push", t = 71 / 40},
+        },
+    },
+    ["reload_empty"] = {
+        Source = "reload",
+        Time = 70 / 40,
+        EventTable = {
+            {s = "ARC9_WAW.Trenchgun_Shell", t = 40 / 40},
+            {s = "ARC9_WAW.TrenchGun_Pull", t = 67 / 40},
+            {s = "ARC9_WAW.TrenchGun_Push", t = 71 / 40},
+        },
     },
     ["cycle"] = {
         Source = {
             "pump",
         },
-        Time = 30 / 35,
-        ShellEjectAt = 0.3,
-        MinProgress = 22 / 35,
+        Time = 35 / 35,
+        ShellEjectAt = 8 / 35,
+        MinProgress = 0.75,
         EventTable = {
-            {s = "ARC9_BO1.MK_Back", t = 10 / 30},
-            {s = "ARC9_BO1.MK_Fwd", t = 14 / 30},
+            {s = "ARC9_WAW.TrenchGun_Pull", t = 8 / 35},
+            {s = "ARC9_WAW.TrenchGun_Push", t = 16 / 35},
         },
     },
     ["cycle_iron"] = {
         Source = {
-            "pump_ads",
+            "pump",
         },
-        Time = 20 / 25,
-        ShellEjectAt = 0.3,
-        MinProgress = 22 / 35,
+        Time = 35 / 35,
+        ShellEjectAt = 8 / 35,
+        MinProgress = 0.75,
         EventTable = {
-            {s = "ARC9_BO1.MK_Back", t = 2 / 25},
-            {s = "ARC9_BO1.MK_Fwd", t = 9 / 25},
+            {s = "ARC9_WAW.TrenchGun_Pull", t = 8 / 35},
+            {s = "ARC9_WAW.TrenchGun_Push", t = 16 / 35},
         },
     },
     ["reload_start"] = {
-        Source = "reload_in_empty",
-        Time = 30 / 30,
-        EventTable = {
-            {s = "ARC9_BO1.MK_Shell", t = 21 / 30},
-        },
+        Source = "reload_start",
+        Time = 35 / 40,
         RestoreAmmo = 1,
+        MinProgress = 21 / 40,
+        EventTable = {
+            {s = "ARC9_WAW.Trenchgun_Shell", t = 15 / 40},
+        },
     },
     ["reload_insert"] = {
         Source = "reload_loop",
-        Time = 16 / 30,
+        Time = 25 / 40,
+        MinProgress = 21 / 40,
         EventTable = {
-            {s = "ARC9_BO1.MK_Shell", t = 10 / 30},
+            {s = "ARC9_WAW.Trenchgun_Shell", t = 10 / 40},
         },
     },
     ["reload_finish"] = {
-        Source = "reload_out",
-        Time = 22 / 30,
+        Source = "reload_end",
+        Time = 60 / 40,
         EventTable = {
-            {s = "ARC9_BO1.MK_Back", t = 8 / 30},
-            {s = "ARC9_BO1.MK_Fwd", t = 12 / 30},
+            {s = "ARC9_WAW.TrenchGun_Pull", t = 12 / 40},
+            {s = "ARC9_WAW.TrenchGun_Push", t = 16 / 40},
         },
     },
-    ["enter_sprint"] = {
-        Source = "sprint_in",
-        Time = 1,
-    },
-    ["idle_sprint"] = {
-        Source = "sprint_loop",
-        Time = 30 / 30
-    },
-    ["exit_sprint"] = {
-        Source = "sprint_out",
-        Time = 1,
-    },
-
-    --GRIP--
-
-    ["idle_grip"] = {
-        Source = "idle_grip",
-        Time = 1 / 35,
-    },
-    ["draw_grip"] = {
-        Source = "draw_grip",
-        Time = 1,
-    },
-    ["ready_grip"] = {
-        Source = "draw_grip",
-        Time = 1,
-    },
-    ["fire_grip"] = {
-        Source = {
-            "fire_grip",
-        },
-        Time = 9 / 35,
-    },
-    ["fire_iron_grip"] = {
-        Source = {
-            "fire_ads_grip",
-        },
-        Time = 9 / 35,
-    },
-    ["cycle_grip"] = {
-        Source = {
-            "pump_grip",
-        },
-        Time = 30 / 35,
-        ShellEjectAt = 10 / 35,
-        MinProgress = 22 / 35,
+    ["reload_finish_empty"] = {
+        Source = "reload_end",
+        Time = 60 / 40,
         EventTable = {
-            {s = "ARC9_BO1.MK_Back", t = 10 / 30},
-            {s = "ARC9_BO1.MK_Fwd", t = 14 / 30},
+            {s = "ARC9_WAW.TrenchGun_Pull", t = 12 / 40},
+            {s = "ARC9_WAW.TrenchGun_Push", t = 16 / 40},
         },
-    },
-    ["cycle_iron_grip"] = {
-        Source = {
-            "pump_ads_grip",
-        },
-        Time = 20 / 25,
-        ShellEjectAt = 5 / 35,
-        MinProgress = 22 / 35,
-        EventTable = {
-            {s = "ARC9_BO1.MK_Back", t = 2 / 25},
-            {s = "ARC9_BO1.MK_Fwd", t = 9 / 25},
-        },
-    },
-    ["reload_start_grip"] = {
-        Source = "reload_in_grip",
-        Time = 15 / 30,
-        RestoreAmmo = 1,
-    },
-    ["reload_insert_grip"] = {
-        Source = "reload_loop_grip",
-        Time = 16 / 30,
-        EventTable = {
-            {s = "ARC9_BO1.MK_Shell", t = 10 / 30},
-        },
-    },
-    ["reload_finish_grip"] = {
-        Source = "reload_out_grip",
-        Time = 22 / 30,
-        EventTable = {
-            {s = "ARC9_BO1.MK_Back", t = 8 / 30},
-            {s = "ARC9_BO1.MK_Fwd", t = 12 / 30},
-        },
-    },
-    ["enter_sprint_grip"] = {
-        Source = "sprint_in_grip",
-        Time = 1,
-    },
-    ["idle_sprint_grip"] = {
-        Source = "sprint_loop_grip",
-        Time = 30 / 30
-    },
-    ["exit_sprint_grip"] = {
-        Source = "sprint_out_grip",
-        Time = 1,
     },
 }
