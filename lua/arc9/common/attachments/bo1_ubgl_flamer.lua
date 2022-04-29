@@ -30,7 +30,7 @@ ATT.RPMUBGL = 1000
 ATT.FirstShootSoundUBGL = false
 ATT.ShootSoundUBGL = false
 ATT.ShootSoundLoopingUBGL = "ARC9_BO1.Flamer_StartLoop"
-ATT.ShootSoundTailUBGL = "weapons/arc9/bo1_flamer/stop.wav"
+ATT.ShootSoundTailUBGL = "^weapons/arc9/bo1_flamer/stop.wav"
 ATT.DistantShootSoundUBGL = false
 ATT.HasSightsUBGL = false
 

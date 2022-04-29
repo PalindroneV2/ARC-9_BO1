@@ -3,30 +3,30 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ARC-9 - World at War" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "PPSh-41"
-SWEP.Class = "Submachine Gun"
+SWEP.PrintName = "M2 Flamethrower"
+SWEP.Class = "Flamethrower"
 SWEP.Description = [[
-    Russian submachine gun with an obscene rate of fire and a drum magazine
+    American man-portable flamethrower seen across the Pacific Teather and finally decommissioned at the end of the 70s after the Korean and Vietnam wars.
 ]]
 SWEP.Trivia = {
-    Manufacturer = "Tula Arms Plant",
-    Calibre = "7.62x25mm Tokarev",
+    Manufacturer = "US Army Chemical Warfare Service",
+    Calibre = "Napalm/Gasoline",
     Mechanism = "Straight Blowback",
-    Country = "USSR",
-    Year = 1941,
-    Games = [[COD2, WAW, BO1, BO3, WW2, BOCW, VG]]
+    Country = "USA",
+    Year = 1940,
+    Games = [[Call of Duty: World at War]]
 }
 SWEP.Credits = {
     Author = "Palindrone"
 }
 
-SWEP.Slot = 2
+SWEP.Slot = 4
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/arc9/c_waw_ppsh41.mdl"
-SWEP.WorldModel = "models/weapons/arc9/w_waw_ppsh41.mdl"
-SWEP.WorldModelMirror = "models/weapons/arc9/w_waw_ppsh41.mdl"
+SWEP.ViewModel = "models/weapons/arc9/c_waw_flamethrower.mdl"
+SWEP.WorldModel = "models/weapons/arc9/w_waw_flamethrower.mdl"
+SWEP.WorldModelMirror = "models/weapons/arc9/w_waw_flamethrower.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
     Pos        =    Vector(-5, 4.5, -7.25),
@@ -48,8 +48,8 @@ SWEP.RangeMax = 6000
 SWEP.RangeMin = 1000
 SWEP.Penetration = 4
 SWEP.DamageType = DMG_BULLET
-SWEP.ShootEntity = nil -- entity to fire, if any
-SWEP.EntityMuzzleVelocity = 10000
+SWEP.ShootEnt = "arc9_bo1_flames"
+SWEP.ShootEntForce = 25000
 
 SWEP.PhysBulletMuzzleVelocity = 960 * 39.37
 
@@ -68,8 +68,17 @@ SWEP.TracerEffect = "ARC9_tracer" -- The effect to use for hitscan tracers
 SWEP.TracerColor = Color(255, 255, 255) -- Color of tracers. Only works if tracer effect supports it. For physical bullets, this is compressed down to 9-bit color.
 
 SWEP.ChamberSize = 0 -- dont fucking change this again.
-SWEP.ClipSize = 71 -- DefaultClip is automatically set.
+SWEP.ClipSize = 1 -- DefaultClip is automatically set.
 SWEP.ReloadTime = 1
+SWEP.InfiniteAmmo = true
+SWEP.BottomlessClip = true
+
+SWEP.Overheat = true -- Weapon will jam when it overheats, playing the "overheat" animation.
+SWEP.HeatPerShot = 1
+SWEP.HeatCapacity = 100 -- rounds that can be fired non-stop before the gun jams, playing the "fix" animation
+SWEP.HeatDissipation = 25 -- rounds' worth of heat lost per second
+SWEP.HeatLockout = true -- overheating means you cannot fire until heat has been fully depleted
+SWEP.HeatDelayTime = 0.5 -- Amount of time that passes before heat begins to dissipate.
 
 SWEP.Crosshair = true
 SWEP.CanBlindFire = false
@@ -117,14 +126,11 @@ SWEP.SpeedMultBlindFire = 1
 SWEP.AimDownSightsTime = 0.3
 SWEP.SprintToFireTime = 0.3
 
-SWEP.RPM = 1200
+SWEP.RPM = 1000
 SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
         Mode = -1,
-    },
-    {
-        Mode = 1,
     },
 }
 SWEP.NPCWeaponType = {"weapon_smg1"}
@@ -137,22 +143,24 @@ SWEP.FreeAimRadiusMultSights = 0
 
 SWEP.SwayMultSights = 0
 
-SWEP.Ammo = "pistol" -- what ammo type the gun uses
+SWEP.Ammo = "Uranium" -- what ammo type the gun uses
 
 SWEP.ShootVolume = 125
 SWEP.ShootPitch = 100
 SWEP.ShootPitchVariation = 0
 
-SWEP.ShootSound = "ARC9_WAW.PPSh_Fire"
-SWEP.ShootSoundSilenced = "ARC9_BO2.Pistol_Sil"
-SWEP.DistantShootSound = "ARC9_WAW.PPSh_Dist"
+SWEP.ShootSoundLooping = "ARC9_BO1.Flamer_StartLoop"
+SWEP.ShootSoundTailW = "^weapons/arc9/bo1_flamer/stop.wav"
+-- SWEP.ShootSoundSilenced = "ARC9_BO2.Pistol_Sil"
+-- SWEP.DistantShootSound = "ARC9_WAW.PPSh_Dist"
 
 --SWEP.MuzzleEffect = "muzzleflash_4"
-SWEP.MuzzleParticle = "muzzleflash_smg" -- Used for some muzzle effects.
+SWEP.MuzzleParticle = "muzzleflash_minimi" -- Used for some muzzle effects.
 
 SWEP.ShellModel = "models/shells/shell_9mm.mdl"
 SWEP.ShellScale = 1.25
 SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556_steel"
+SWEP.NoShellEject = true
 
 SWEP.MuzzleEffectQCA = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectQCA = 2 -- which attachment to put the case effect on
@@ -168,8 +176,8 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(-1.3125, -1, 1.35),
-    Ang = Angle(-0.185, -0.475, 0),
+    Pos = Vector(0, 2, -2),
+    Ang = Angle(0, 0, -5),
     Magnification = 1.1,
     AssociatedSlot = 9,
     CrosshairInSights = false,
@@ -184,10 +192,10 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_AR2
 SWEP.AnimDraw = ACT_HL2MP_GESTURE_RANGE_ATTACK_KNIFE
 
-SWEP.ActivePos = Vector(2, 2, -2)
+SWEP.ActivePos = Vector(0, 2, -2)
 SWEP.ActiveAng = Angle(0, 0, -5)
 
-SWEP.CrouchPos = Vector(2, 2, -2)
+SWEP.CrouchPos = Vector(0, 2, -2)
 SWEP.CrouchAng = Angle(0, 0, -5)
 
 SWEP.SprintPos = Vector(10, 2, -2)
@@ -204,11 +212,6 @@ SWEP.BarrelLength = 25
 SWEP.ExtraSightDist = 5
 
 SWEP.AttachmentElements = {
-    ["ppsh_stick"] = {
-        Bodygroups = {
-            {1,1},
-        },
-    },
 }
 
 SWEP.Hook_ModifyBodygroups = function(self, data)
@@ -217,9 +220,9 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local CUSTSTATE = self:GetCustomize()
 
     if CUSTSTATE then
-        vm:SetBodygroup(0,1)
+        vm:SetBodygroup(1,1)
     else
-        vm:SetBodygroup(0,0)
+        vm:SetBodygroup(1,0)
     end
 
     local camo = 0
@@ -229,34 +232,9 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     vm:SetSkin(camo)
 end
 
-SWEP.Hook_TranslateAnimation = function (self, anim)
-    local attached = self:GetElements()
-
-    -- local suffix = ""
-
-    if attached["ppsh_stick"] then
-        if anim == "reload" then
-            return "fast"
-        end
-        if anim == "reload_empty" then
-            return "fast_empty"
-        end
-    end
-
-    -- return anim .. suffix
-end
-
 --TEST 3
 
 SWEP.Attachments = {
-    {
-        PrintName = "Firing Group",
-        DefaultCompactName = "S-1-F",
-        Bone = "j_gun",
-        Pos = Vector(-4.5, 0, -1),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_fcg"},
-    },
     {
         PrintName = "Perk-a-Cola",
         DefaultCompactName = "PERK",
@@ -273,108 +251,22 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ammo", "bo1_pap"},
     },
-    {
-        PrintName = "Magazine",
-        DefaultCompactName = "MAG",
-        Bone = "j_gun",
-        Pos = Vector(3.25, 0, 0),
-        Ang = Angle(0, 0, 0),
-        Category = {"waw_ppsh_stick"},
-    },
-    {
-        PrintName = "Optic",
-        DefaultCompactName = "Irons",
-        Bone = "j_gun",
-        Pos = Vector(-2.2, 0, 2.2),
-        Ang = Angle(0, 0, 0),
-        Category = {"waw_aperture"},
-    },
 }
 
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
-        Time = 1 / 30,
-    },
-    ["idle_empty"] = {
-        Source = "idle_empty",
-        Time = 1 / 30,
     },
     ["draw"] = {
         Source = "draw",
-        Time = 0.75,
-    },
-    ["draw_empty"] = {
-        Source = "draw_empty",
-        Time = 0.5,
     },
     ["holster"] = {
         Source = "holster",
-        Time = 0.5,
-    },
-    ["holster_empty"] = {
-        Source = "holster_empty",
-        Time = 0.5,
     },
     ["ready"] = {
-        Source = "draw",
-        Time = 0.75,
+        Source = "first_draw",
     },
     ["fire"] = {
         Source = {"fire"},
-        Time = 7 / 30,
-        ShellEjectAt = 0,
-    },
-    ["fire_iron"] = {
-        Source = {"fire"},
-        Time = 7 / 30,
-        ShellEjectAt = 0,
-    },
-    ["fire_empty"] = {
-        Source = {"fire_last"},
-        Time = 7 / 30,
-        ShellEjectAt = 0,
-    },
-    ["fire_iron_empty"] = {
-        Source = {"fire_last"},
-        Time = 7 / 30,
-        ShellEjectAt = 0,
-    },
-    ["reload"] = {
-        Source = "reload",
-        Time = 2.5,
-        EventTable = {
-            {s = "ARC9_WAW.PPSh_MagOut", t = 16 / 30},
-            {s = "ARC9_WAW.PPSh_MagIn", t = 58 / 30}
-        },
-    },
-    ["reload_empty"] = {
-        Source = "reload_empty",
-        Time = 3.5,
-        EventTable = {
-            {s = "ARC9_WAW.PPSh_MagOut", t = 16 / 35},
-            {s = "ARC9_WAW.PPSh_MagIn", t = 53 / 35},
-            {s = "ARC9_WAW.PPSh_MagTap", t = 60 / 35},
-            {s = "ARC9_WAW.PPSh_Bolt", t = 90 / 35},
-        },
-    },
-
-    ["fast"] = {
-        Source = "fast",
-        Time = 2,
-        EventTable = {
-            {s = "ARC9_WAW.PPSh_MagOut", t = 15 / 30},
-            {s = "ARC9_WAW.PPSh_MagIn", t = 45 / 30}
-        },
-    },
-    ["fast_empty"] = {
-        Source = "fast_empty",
-        Time = 3,
-        EventTable = {
-            {s = "ARC9_WAW.PPSh_MagOut", t = 16 / 35},
-            {s = "ARC9_WAW.PPSh_MagIn", t = 47 / 35},
-            {s = "ARC9_WAW.PPSh_MagTap", t = 53 / 35},
-            {s = "ARC9_WAW.PPSh_Bolt", t = 70 / 35},
-        },
     },
 }
