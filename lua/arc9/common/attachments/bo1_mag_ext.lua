@@ -14,4 +14,4 @@ ATT.Category = {"bo1_mag_ext"}
 ATT.ClipSizeMult = 1.5
 ATT.ReloadTimeMult = 1.1
 
-ATT.ActivateElements = {"ext_mag"}
+ATT.ActivateElements = {"ext_mag", "extmag"}
