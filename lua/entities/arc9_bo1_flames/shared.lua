@@ -16,6 +16,10 @@ ENT.NextDamageTick = 0
 ENT.Ticks = 0
 AddCSLuaFile()
 
+if CLIENT then
+    killicon.Add( "arc9_bo1_flames", "arc9/weaponicons/ubs/flamer", Color( 255, 255, 255, 255 ) )
+end
+
 function ENT:SetupDataTables()
     self:NetworkVar("Bool", 0, "Armed")
 

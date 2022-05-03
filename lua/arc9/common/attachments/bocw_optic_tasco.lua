@@ -20,7 +20,7 @@ ATT.Category = {"bo1_optic", "bo1_optic_alt", "bo1_optic_lp"}
 
 ATT.Model = "models/weapons/arc9/atts/bocw_tasco.mdl"
 ATT.Scale = 1
-ATT.ModelOffset = Vector(-0.5, 0.05, -0.05)
+ATT.ModelOffset = Vector(-0.5, 0, -0.05)
 
 ATT.Sights = {
     {
