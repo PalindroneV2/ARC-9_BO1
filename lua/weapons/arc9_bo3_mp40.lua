@@ -206,6 +206,11 @@ SWEP.BarrelLength = 25
 SWEP.ExtraSightDist = 5
 
 SWEP.AttachmentElements = {
+    ["bo3_mauser_optic"] = {
+        Bodygroups = {
+            {1,1}
+        },
+    },
     ["stock_l"] = {
         Bodygroups = {
             {2,1}
@@ -252,9 +257,10 @@ SWEP.Attachments = {
         PrintName = "Optic",
         Bone = "tag_weapon",
         Scale = Vector(1, 1, 1),
-        Pos = Vector(3, 0, 3.9),
+        Pos = Vector(3, 0.025, 3.9),
         Ang = Angle(0, 0, 0),
-        Category = {"bo3_mauser_optic"},
+        Category = {"bo3_mauser_optic", "waw_aperture"},
+        InstalledElements = {"mount"},
     },
     {
         PrintName = "Muzzle",

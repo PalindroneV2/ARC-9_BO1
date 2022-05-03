@@ -318,6 +318,14 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = "universal_camo",
     },
+    [9] = {
+        PrintName = "Shells",
+        DefaultCompactName = "00 BUCK",
+        Bone = "j_gun",
+        Pos = Vector(5, 0, 0),
+        Ang = Angle(0, 0, 0),
+        Category = "bo1_shot_slug",
+    },
 }
 
 SWEP.Hook_TranslateAnimation = function (self, anim)
