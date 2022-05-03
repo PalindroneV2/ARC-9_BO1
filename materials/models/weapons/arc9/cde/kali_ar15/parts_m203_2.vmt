@@ -3,6 +3,7 @@
 
 	"$basetexture" "models/weapons/arc9/cde/kali_ar15/Parts_M203_C"
 	"$bumpmap" "models/weapons/arc9/cde/kali_ar15/Parts_M203_N"
+	"$phongexponenttexture" "models/weapons/arc9/bo1/bo1_m203/m203_s"
 	"$halflambert" "1"				
 	"$nocull" 1
 

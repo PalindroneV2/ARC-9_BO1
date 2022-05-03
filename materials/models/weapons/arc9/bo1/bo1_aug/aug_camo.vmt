@@ -20,7 +20,7 @@ VertexlitGeneric
 	$envmapfresnel "1"
 
     $detailblendmode 4
-    $detailblendfactor 0.5
+    $detailblendfactor 1
 	Proxies {
 		CustomCamo {
 			camoTexture $detail

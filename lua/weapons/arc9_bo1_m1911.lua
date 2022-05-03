@@ -163,7 +163,7 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(-2.56, 3, 1),
+    Pos = Vector(-2.56, 0, 1),
     Ang = Angle(-0.15, 0.1, 0),
     Magnification = 1.1,
     --AssociatedSlot = 9,
@@ -239,7 +239,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
 
     local vm = data.model
     local attached = data.elements
-    local newpos = Vector(-2.56, 3, 1)
+    local newpos = Vector(-2.56, 0, 1)
     local newang = Angle(-0.15, 0.1, 0)
     local slide = 0
     local finish = 0
@@ -264,7 +264,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     end
     if attached["1911_slide_modern"] then
         slide = 1
-        newpos = Vector(-2.53, 3, 0.925)
+        newpos = Vector(-2.53, 0, 0.925)
         newang = Angle(-0.1, 0, 0)
     end
     if attached["1911_slide_short"] then
@@ -278,7 +278,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     end
     if attached["1911_slide_short_modern"] then
         slide = 3
-        newpos = Vector(-2.53, 3, 0.925)
+        newpos = Vector(-2.53, 0, 0.925)
         newang = Angle(-0.1, 0, 0)
         if attached["m1911_comp"] then
             comp = 2
@@ -295,7 +295,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     end
     if attached["1911_slide_baller_modern"] then
         slide = 5
-        newpos = Vector(-2.53, 3, 0.925)
+        newpos = Vector(-2.53, 0, 0.925)
         newang = Angle(-0.1, 0, 0)
         if attached["m1911_comp"] then
             comp = 3
@@ -545,7 +545,7 @@ SWEP.Animations = {
     },
     ["enter_sprint"] = {
         Source = "sprint_in",
-        Time = 10 / 30
+        Time = 1,
     },
     ["idle_sprint"] = {
         Source = "sprint_loop",
@@ -553,11 +553,11 @@ SWEP.Animations = {
     },
     ["exit_sprint"] = {
         Source = "sprint_out",
-        Time = 10 / 30
+        Time = 1,
     },
     ["enter_sprint_empty"] = {
         Source = "sprint_in_empty",
-        Time = 10 / 30
+        Time = 1,
     },
     ["idle_sprint_empty"] = {
         Source = "sprint_loop_empty",
@@ -565,6 +565,6 @@ SWEP.Animations = {
     },
     ["exit_sprint_empty"] = {
         Source = "sprint_out_empty",
-        Time = 10 / 30
+        Time = 1,
     },
 }
