@@ -270,6 +270,11 @@ SWEP.AttachmentElements = {
     },
     ["troy_iron"] = {
         Bodygroups = {
+            {6,6},
+        },
+    },
+    ["3arc_iron"] = {
+        Bodygroups = {
             {6,2},
         },
     },
@@ -393,6 +398,9 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     elseif attached["retro_ar15_handguard_a2"] then hand = 2
     elseif attached["retro_ar15_handguard_a4"] then
         hand = 3
+        if attached["mw3_psrscope"] then
+            gasblock = 2
+        end
         if length == 1 then
             gasblock = 4
         end
@@ -468,22 +476,23 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         vm:SetBodygroup(8, 3)
     end
 
-    if attached["mw2_m4_irons"] then
-        vm:SetBodygroup(8,4)
-    end
-
     -- IRON SIGHT POSITION CHANGES
     local newpos = Vector(-2.765, -2, 0.25)
-    local newang = Angle(0.025, 0, 0)
+    local newang = Angle(0.0375, 0, 0)
     if gasblock == 1 then
-        newang = Angle(0.025, 0.015, 0)
+        newang = Angle(0.0375, 0.015, 0)
+    end
+    if attached["mw2_m4_irons"] then
+        vm:SetBodygroup(8,4)
+        newpos = Vector(-2.765, -2, 0.075)
+        newang = Angle(0.0375, 0, 0)
     end
     if attached["retro_ar15_iron_carry"] then
         newpos = Vector(-2.765, -2, -0.025)
-        newang = Angle(0.025, 0.55, 0)
+        newang = Angle(0.0375, 0.55, 0)
         if gasblock == 1 then
             newpos = Vector(-2.765, -2, -0.025)
-            newang = Angle(0.025, 0.65, 0)
+            newang = Angle(0.0375, 0.65, 0)
         end
         if frontsight == 2 then
             newpos = Vector(-2.765, -2, -0.075)
@@ -496,10 +505,10 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     end
     if attached["retro_ar15_iron_usgi"] then
         newpos = Vector(-2.765, -2, 0.275)
-        newang = Angle(0.025, -0.05, 0)
+        newang = Angle(0.0375, -0.05, 0)
         if gasblock == 1 then
             newpos = Vector(-2.765, -2, 0.275)
-            newang = Angle(0.025, -0.1, 0)
+            newang = Angle(0.0375, -0.1, 0)
         end
         if frontsight == 2 then
             newpos = Vector(-2.765, -2, 0.275)
@@ -510,20 +519,20 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
             newang = Angle(0.015, -0.1, 0)
         end
     end
-    if attached["retro_ar15_iron_troy"] then
+    if attached["troy_iron"] or attached["3arc_iron"] then
         newpos = Vector(-2.765, -2, 0.25)
-        newang = Angle(0.025, 0, 0)
+        newang = Angle(0.0375, 0, 0)
         if gasblock == 1 then
             newpos = Vector(-2.765, -2, 0.25)
-            newang = Angle(0.025, 0, 0)
+            newang = Angle(0.0375, 0, 0)
         end
         if frontsight == 2 then
             newpos = Vector(-2.765, -2, 0.275)
-            newang = Angle(0.025, -0.1, 0)
+            newang = Angle(0.0375, -0.1, 0)
         end
         if frontsight == 4 then
             newpos = Vector(-2.765, -2, 0.275)
-            newang = Angle(0.025, -0.1, 0)
+            newang = Angle(0.0375, -0.1, 0)
         end
     end
 
@@ -653,7 +662,7 @@ SWEP.HookP_NameChange = function(self, name)
         alt = ""
     end
 
-    if attached["barrel_11"] and attached["a4_top"] and attached ["retro_ar15_iron_troy"] then
+    if attached["barrel_11"] and attached["a4_top"] and attached["3arc_iron"] then
         model = "Commando"
         alt = ""
     end
@@ -667,7 +676,14 @@ SWEP.HookP_NameChange = function(self, name)
     end
 
     if attached["fcg_semi"] then
-        return name
+        brand = name
+        model = ""
+        alt = ""
+        if attached["mw3_psrscope"] and attached["a4_top"] and attached["sniper_stock"] then
+            brand = ""
+            model = "Mk. 12 "
+            alt = "SPR"
+        end
     end
 
     -- print("--NEW--")

@@ -1,6 +1,6 @@
 ATT.PrintName = "Aperture Optical Gunsight"
 ATT.CompactName = "APTR"
-ATT.Icon = Material("entities/bo1_atts/optics/bo2_irons.png")
+ATT.Icon = Material("entities/bo1_atts/optics/waw_aperture.png")
 ATT.Description = [[Simple optic with a crosshair drawn on it.]]
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC-9 - WAW Attachments"
