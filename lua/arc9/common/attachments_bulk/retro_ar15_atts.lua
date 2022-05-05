@@ -728,7 +728,8 @@ ATT.Attachments = {
 ATT.Sights = {
     {
         Pos = Vector(0, 12, -1.6),
-        Ang = Angle(0.025, 0.1, 0)
+        Ang = Angle(0.025, 0.1, 0),
+        IsIronSight = true
     }
 }
 
