@@ -131,8 +131,8 @@ ATT.Attachments = {
 
 ATT.MuzzleEffectQCA = 1
 
-ATT.SpreadMult = 1.3
 ATT.RecoilMult = 1.15
+ATT.SpreadMult = 1.3
 ATT.SpreadMultHipFire = 0.8
 ATT.SpreadMultMove = 0.8
 
@@ -725,6 +725,13 @@ ATT.Attachments = {
     },
 }
 
+ATT.Sights = {
+    {
+        Pos = Vector(0, 12, -1.6),
+        Ang = Angle(0.025, 0.1, 0)
+    }
+}
+
 ARC9.LoadAttachment(ATT, "retro_ar15_tmm4_riser")
 
 ATT = {}
@@ -1249,6 +1256,8 @@ ATT.SpeedMult = 0.95
 ATT.AimDownSightsTimeAdd = 0.22
 ATT.SprintToFireTimeAdd = 0.25
 ATT.SpeedAddSights = -0.2
+ATT.SpreadMultHipFire = 1.15
+ATT.SpreadMultMove = 1.15
 
 ARC9.LoadAttachment(ATT, "retro_ar15_stock_full")
 
