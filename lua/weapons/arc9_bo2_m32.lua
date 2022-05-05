@@ -68,9 +68,9 @@ SWEP.Crosshair = true
 SWEP.LauncherCrosshair = true
 SWEP.CanBlindFire = false
 
-SWEP.Recoil = 2
+SWEP.Recoil = 0.8
 SWEP.RecoilSide = 0.5
-SWEP.RecoilUp = 2
+SWEP.RecoilUp = 0.75
 
 SWEP.RecoilRandomUp = 0.5
 SWEP.RecoilRandomSide = 0.25
@@ -115,7 +115,7 @@ SWEP.RPM = 300
 SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
-        Mode = -1,
+        Mode = 1,
         PrintName = "SINGLE"
     },
 }
@@ -147,7 +147,7 @@ SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556_steel"
 SWEP.MuzzleEffectQCA = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectQCA = 2 -- which attachment to put the case effect on
 SWEP.ProceduralViewQCA = 1
-SWEP.CamQCA = 3
+SWEP.CamQCA = 2
 
 SWEP.BulletBones = {
 }
@@ -158,8 +158,8 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(0, 3, 0.25),
-    Ang = Angle(0, 0, 0),
+    Pos = Vector(0, 0, -1),
+    Ang = Angle(0, 0, -5),
     Magnification = 1.25,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
@@ -213,6 +213,19 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     end
 end
 
+SWEP.HookP_NameChange = function(self, name)
+
+    local attached = self:GetElements()
+
+    local gunname = "Milkor M32"
+
+    if attached["bo1_pap"] then
+        gunname = "Dystopic Demolisher 2.0"
+    end
+
+    return gunname
+end
+
 SWEP.Attachments = {
     {
         PrintName = "Perk-a-Cola",
@@ -221,6 +234,14 @@ SWEP.Attachments = {
         Pos = Vector(-3, 0, -3),
         Ang = Angle(0, 0, 0),
         Category = "bo1_perkacola",
+    },
+    {
+        PrintName = "Shell",
+        DefaultCompactName = "HE",
+        Bone = "j_gun",
+        Pos = Vector(7.5, 0, 0),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_glammo"},
     },
     {
         PrintName = "Ammunition",
@@ -232,13 +253,23 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Optic",
-        DefaultCompactName = "AMMO",
+        DefaultCompactName = "None",
         Bone = "j_gun",
         Pos = Vector(6.5, 0, 4.75),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_pap_launcher"},
+        Category = {"bo1_optic", "bo2_m32_optic"},
     },
 }
+
+SWEP.Hook_TranslateAnimation = function (self, anim)
+    local attached = self:GetElements()
+
+    local prefix = ""
+    if attached["bo1_pap"] then
+        prefix = "pap_"
+    end
+    return prefix .. anim
+end
 
 SWEP.Animations = {
     ["idle"] = {
@@ -317,6 +348,28 @@ SWEP.Animations = {
         Source = "reload_loop",
         Time = 1.006,
         MinProgress = 16 / 30,
+        EventTable = {
+            {s = "ARC9_BO2.M32_In", t = 0.5},
+        },
+    },
+    ["pap_reload_start"] = {
+        Source = "reload_in",
+        Time = 3.49,
+        RestoreAmmo = 9, -- loads a shell since the first reload has a shell in animation
+        MinProgress = 3,
+        EventTable = {
+            {s = "ARC9_BO2.M32_Open", t = 0.5},
+            {s = "ARC9_BO1.M203_40mmOut", t = 1},
+            {s = "ARC9_BO2.M32_Rotate", t = 1},
+            {s = "ARC9_BO2.M32_Turn", t = 2},
+            {s = "ARC9_BO2.M32_In", t = 3},
+        },
+    },
+    ["pap_reload_insert"] = {
+        Source = "reload_loop",
+        Time = 1.006,
+        MinProgress = 16 / 30,
+        RestoreAmmo = 8,
         EventTable = {
             {s = "ARC9_BO2.M32_In", t = 0.5},
         },

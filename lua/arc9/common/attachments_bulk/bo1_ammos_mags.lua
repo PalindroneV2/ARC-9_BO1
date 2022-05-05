@@ -235,3 +235,23 @@ ATT.TracerColor = Color(233, 34, 93)
 ATT.TracerSizeAdd = 10
 
 ARC9.LoadAttachment(ATT, "bo1_ammo_pap")
+
+ATT = {}
+
+ATT.PrintName = [[40mm NATO DUD]]
+ATT.CompactName = [[DUD]]
+ATT.Icon = Material("entities/bo1_atts/ammo/FMJ.png")
+ATT.Description = [[
+    A dud???
+]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.Free = false
+
+ATT.Category = {"bo1_glammo"}
+ATT.ActivateElements = {"bo1_gl_dud"}
+ATT.ShootEnt = "arc9_bo1_40mm_dud"
+
+ARC9.LoadAttachment(ATT, "bo1_glammo_dud")
