@@ -1,0 +1,27 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/weapons/arc9/bo2/bo2_ksg/ksg"
+	"$bumpmap" "models/weapons/arc9/bo2/bo2_ksg/ksg_n"
+
+	
+	//"$color2" "[ .4 .4 .4 ]"
+	"$blendtintbybasealpha" "1"
+	"$phong" "1"
+	"$phongboost" "1"
+	"$phongalbedotint" "2"
+	"$PhongFresnelRanges" "[ 2 5 4 ]"
+	"$envmap" "env_cubemap"
+	"$basemapalphaenvmapmask" "1"
+	"$envmapfresnel" "0.01"
+	"$envmaptint" "[ .01 .01 .01 ]"
+
+    $detailblendmode 4
+    $detailblendfactor 1
+	Proxies {
+		CustomCamo {
+			camoTexture $detail
+			camoScale $detailscale
+            blend $detailblendfactor
+		}
+	}
+}

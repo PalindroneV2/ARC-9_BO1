@@ -85,12 +85,12 @@ SWEP.RecoilResetTime = 0.01 -- How long the gun must go before the recoil patter
 SWEP.RecoilAutoControl = 0.5
 SWEP.RecoilKick = 0.5
 
-SWEP.Spread = 0.0009
-SWEP.SpreadAddRecoil = 0.0015
+SWEP.Spread = math.rad(1.935 / 37.5)
+SWEP.SpreadAddRecoil = math.rad(110 / 37.5)
 
-SWEP.SpreadAddHipFire = 0.05
-SWEP.SpreadAddMove = 0.02
-SWEP.SpreadAddMidAir = 0.05
+SWEP.SpreadAddHipFire = math.rad(195 / 37.5)
+SWEP.SpreadAddMove = math.rad(135 / 37.5)
+SWEP.SpreadAddMidAir = 0 -- = math.rad(115 / 37.5)
 
 SWEP.RecoilPatternDrift = 20
 
@@ -166,8 +166,8 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector (-1.56, -6, -0.25),
-    Ang = Angle(0.01, 0.15, 0),
+    Pos = Vector (-1.56, -9, -0.25),
+    Ang = Angle(0.025, 0.15, 0),
     Magnification = 1.1,
     AssociatedSlot = 9,
     CrosshairInSights = false,

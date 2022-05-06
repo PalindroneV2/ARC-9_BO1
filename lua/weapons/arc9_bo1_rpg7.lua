@@ -97,12 +97,12 @@ SWEP.RecoilResetTime = 0.1 -- How long the gun must go before the recoil pattern
 SWEP.RecoilAutoControl = 0.5
 SWEP.RecoilKick = 0
 
-SWEP.Spread = 0.0015
-SWEP.SpreadAddRecoil = 0.0015
+SWEP.Spread = 0
+SWEP.SpreadAddRecoil = 0
 
 SWEP.SpreadAddHipFire = 0.03
-SWEP.SpreadAddMove = 0.015
-SWEP.SpreadAddMidAir = 0.05
+SWEP.SpreadAddMove = 0
+SWEP.SpreadAddMidAir = 0
 
 SWEP.RecoilPatternDrift = 20
 
@@ -222,18 +222,39 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     end
 
     if self:Clip1() == 0 then vm:SetBodygroup(1,1) end
+
+    local newactpos = Vector(3, 4, -1)
+    local newactang = Angle(0, 0, 0)
+    if attached["doom_ee"] then
+        vm:SetBodygroup(1,0)
+        vm:SetBodygroup(2,1)
+        newactpos = Vector(0, 0, -1)
+        newactang = Angle(0, 0, 0)
+    end
+    self.ActivePos = newactpos
+    self.ActiveAng = newactang
+    self.CrouchPos = newactpos
+    self.CrouchAng = newactang
+end
+
+SWEP.Hook_TranslateAnimation = function (self, anim)
+    local attached = self:GetElements()
+
+    if attached["doom_ee"] then
+        return anim .. "_doom"
+    end
 end
 
 SWEP.Attachments = {
-    [1] = {
+    {
         PrintName = "Perk-a-Cola",
         DefaultCompactName = "PERK",
         Bone = "j_gun",
         Pos = Vector(-3, 0, -3),
         Ang = Angle(0, 0, 0),
-        Category = "bo1_perkacola",
+        Category = {"bo1_perkacola", "bo1_perk_rpg7"},
     },
-    [2] = {
+    {
         PrintName = "Ammunition",
         DefaultCompactName = "AMMO",
         Bone = "j_gun",
@@ -252,7 +273,6 @@ SWEP.Animations = {
         Source = "idle_ads",
         Time = 1 / 35,
     },
-
     ["idle_doom"] = {
         Source = "idle_ads",
         Time = 1 / 35,

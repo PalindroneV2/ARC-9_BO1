@@ -15,8 +15,8 @@ ENT.BoxSize = Vector(8, 4, 1)
 ENT.Damage = 650
 ENT.Radius = 250
 ENT.ImpactDamage = 3000
-ENT.Boost = 200
-ENT.DragCoefficient = 0.15
+ENT.Boost = 5000
+ENT.DragCoefficient = 0.05
 
 if CLIENT then
     killicon.Add( "arc9_waw_rocket_panzer", "arc9/weaponicons/arc9_waw_panzerschreck", Color( 255, 255, 255, 255 ) )

@@ -84,14 +84,14 @@ SWEP.RecoilDissipationRate = 40 -- How much recoil dissipates per second.
 SWEP.RecoilResetTime = 0.01 -- How long the gun must go before the recoil pattern starts to reset.
 
 SWEP.RecoilAutoControl = 0.5
-SWEP.RecoilKick = 2
+SWEP.RecoilKick = 1
 
-SWEP.Spread = 0.0009
-SWEP.SpreadAddRecoil = 0.0015
+SWEP.Spread = math.rad(3.6 / 37.5)
+SWEP.SpreadAddRecoil = math.rad(75 / 37.5)
 
-SWEP.SpreadAddHipFire = 0.03
-SWEP.SpreadAddMove = 0.015
-SWEP.SpreadAddMidAir = 0.05
+SWEP.SpreadAddHipFire = math.rad(250 / 37.5)
+SWEP.SpreadAddMove = math.rad(125 / 37.5)
+SWEP.SpreadAddMidAir = 0 -- = math.rad(110 / 37.5)
 
 SWEP.RecoilPatternDrift = 20
 
@@ -231,11 +231,6 @@ SWEP.AttachmentElements = {
         Bodygroups = {
             {0,1}
         },
-        IronSightsOverride = {
-            Pos = Vector(-3.55, 6, 1.4),
-            Ang = Angle(-2.45, -0.65, 0),
-            Magnification = 1.1,
-        }
     },
     ["bo1_bipod"] = {
         Bodygroups = {
@@ -262,6 +257,19 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     if self:GetBipod() then
         vm:SetBodygroup(1,2)
     end
+
+    local newpos = Vector(-3.55, 5, 1)
+    local newang = Angle(-2.4275, 0.55, 0)
+    if attached["waw_stinger"] then
+        -- vm:SetBodygroup(0,1)
+        newpos = Vector(-3.565, 5, 1.3)
+        newang = Angle(-2.45, -0.65, 0)
+    end
+    self.IronSights = {
+        Pos = newpos,
+        Ang = newang,
+        Magnification = 1.5,
+    }
 
 end
 

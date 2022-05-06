@@ -670,7 +670,7 @@ ATT.ModelAngleOffset = Angle(0,0,0)
 ATT.RequireElements = {"ar15_ris" and "a4_top"}
 
 ATT.DrawFunc = function(swep, model, wm)
-    if swep:GetElements()["ris_carbine"] then
+    if swep:GetElements()["carbine"] and !swep:GetElements()["handguard_a4"] then
         model:SetBodygroup(0,1)
         model:SetBodygroup(1,2)
         if swep:GetElements()["tmm4_mount"] then

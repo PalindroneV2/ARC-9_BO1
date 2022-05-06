@@ -38,7 +38,7 @@ SWEP.ViewModelFOVBase = 75
 SWEP.DefaultBodygroups = "10"
 SWEP.DefaultWMBodygroups = "00"
 
-SWEP.DamageMax = 40
+SWEP.DamageMax = 50
 SWEP.DamageMin = 30 -- damage done at maximum range
 SWEP.RangeMax = 7200
 SWEP.RangeMin = 1800
@@ -49,6 +49,7 @@ SWEP.EntityMuzzleVelocity = 10000
 SWEP.Num = 1
 SWEP.AmmoPerShot = 1
 SWEP.PushBackForce = 1
+SWEP.ArmorPiercing = 0.1 -- Between 0-1. A proportion of damage that is done as direct damage, ignoring protection.
 
 SWEP.PhysBulletMuzzleVelocity = 1200 * 39.37 -- IN HU (INCHES)
 
@@ -87,15 +88,13 @@ SWEP.RecoilResetTime = 0.1 -- How long the gun must go before the recoil pattern
 
 SWEP.UseVisualRecoil = false
 
-SWEP.Spread = 0.0125 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
-SWEP.SpreadAddRecoil = 0
+SWEP.Spread = math.rad(3 / 37.5)
+SWEP.SpreadAddRecoil = math.rad(10 / 37.5)
 
-SWEP.SpreadAddMove = 0.075 -- Applied when speed is equal to walking speed.
-SWEP.SpreadAddMidAir = 0.075 -- Applied when not touching the ground.
-SWEP.SpreadAddHipFire = 0.01 -- Applied when not sighted.
-SWEP.SpreadAddSighted = 0 -- Applied when sighted. Can be negative.
-SWEP.SpreadAddBlindFire = 0.05 -- Applied when blind firing.
-SWEP.SpreadAddCrouch = 0 -- Applied when crouching.
+SWEP.SpreadAddHipFire = math.rad(10 / 37.5)
+SWEP.SpreadAddMove = math.rad(10 / 37.5)
+SWEP.SpreadAddMidAir = math.rad(10 / 37.5)
+SWEP.SpreadAddCrouch = math.rad(0 / 37.5)
 
 SWEP.VisualRecoilUp = 0 -- Vertical tilt for visual recoil.
 SWEP.VisualRecoilSide = 0 -- Horizontal tilt for visual recoil.
@@ -117,7 +116,7 @@ SWEP.SpeedMultBlindFire = 1
 SWEP.AimDownSightsTime = 1
 SWEP.SprintToFireTime = 0.75
 
-SWEP.RPM = 2400
+SWEP.RPM = 1750
 -- SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {

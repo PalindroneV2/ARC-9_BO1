@@ -47,7 +47,8 @@ if SERVER then
     end
 
     function ENT:PhysicsCollide(data, physobj)
-
+        local dmg = DamageInfo()
+        dmg:SetDamageType(DMG_DISSOLVE)
         util.BlastDamage(self, self.Owner, self:GetPos(), self.Radius, self.Damage)
         EffectData():SetOrigin(self:GetPos())
         EffectData():SetNormal(data.HitNormal)

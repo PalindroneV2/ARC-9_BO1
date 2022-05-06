@@ -12,14 +12,14 @@ ATT.Category = {"bo1_rail_optic"}
 ATT.ActivateElements = {"bo1_rail_optic"}
 ATT.Model = "models/weapons/arc9/item/bo1_ak_rail.mdl"
 ATT.Scale = Vector(.375,.375,.375)
-ATT.ModelOffset = Vector(-0.285, 0.1, -0.725 )
+ATT.ModelOffset = Vector(-0.325, 0.1, -0.725 )
 ATT.ModelAngleOffset = Angle(0,90,0)
 
 ATT.Attachments = {
     {
         PrintName = "Optic",
         Bone = "j_gun",
-        Pos = Vector(0, 0.0250, -0.35),
+        Pos = Vector(0, 0.025, -0.4),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 1.5),
         Category = {"bo1_optic", "bo1_rail_riser"},

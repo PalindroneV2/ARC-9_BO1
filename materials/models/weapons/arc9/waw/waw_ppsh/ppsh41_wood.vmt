@@ -13,7 +13,6 @@ VertexlitGeneric
 	"$envmap" "env_cubemap"
 	"$basemapalphaenvmapmask" "1"
 	"$envmapfresnel" "0.01"
-	"$envmaptint" "[ .01 .01 .01 ]"
+	"$envmaptint" "0.005"
 	"$nocull" "1"
-
 }

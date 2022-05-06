@@ -208,13 +208,13 @@ SWEP.ChamberSize = 0 -- dont fucking change this again.
 SWEP.ClipSize = 1 -- DefaultClip is automatically set.
 SWEP.ReloadTime = 1
 
-SWEP.Crosshair = true
+SWEP.Crosshair = false
 SWEP.MissileCrosshair = true
 SWEP.CanBlindFire = false
 
-SWEP.Recoil = 2
-SWEP.RecoilSide = 0.5
-SWEP.RecoilUp = 2
+SWEP.Recoil = 0.1
+SWEP.RecoilSide = 0.1
+SWEP.RecoilUp = 0.1
 
 SWEP.RecoilRandomUp = 0.5
 SWEP.RecoilRandomSide = 0.25
@@ -225,16 +225,16 @@ SWEP.RecoilResetTime = 0.1 -- How long the gun must go before the recoil pattern
 SWEP.RecoilAutoControl = 0.5
 SWEP.RecoilKick = 0
 
-SWEP.Spread = 0.01
-SWEP.SpreadAddRecoil = 0.0015
+SWEP.Spread = 0
+SWEP.SpreadAddRecoil = 0
 
 SWEP.SpreadAddHipFire = 0.03
-SWEP.SpreadAddMove = 0.015
-SWEP.SpreadAddMidAir = 0.05
+SWEP.SpreadAddMove = 0
+SWEP.SpreadAddMidAir = 0 -- = 0
 
 SWEP.RecoilPatternDrift = 20
 
-SWEP.VisualRecoilUp = 1
+SWEP.VisualRecoilUp = 0
 SWEP.VisualRecoilSide = 0
 SWEP.VisualRecoilRoll = 0
 SWEP.VisualRecoilCenter = Vector(0, 0, 0)

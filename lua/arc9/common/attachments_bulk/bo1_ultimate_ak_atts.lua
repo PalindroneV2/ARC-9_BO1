@@ -182,6 +182,16 @@ ATT.Category = {"bo1_ultimate_ak_handg"}
 ATT.RecoilMult = 1.1
 ATT.AimDownSightsTimeMult = 0.9
 
+ATT.AttachmentElements = {
+    ["mw3_magnifier"] = {
+        AttPosMods = {
+            [1] = {
+                Pos = Vector(-4.25, 0, -1.75),
+            }
+        }
+    }
+}
+
 ATT.Attachments = {
     {
         PrintName = "Optic LP",
@@ -189,7 +199,7 @@ ATT.Attachments = {
         Category = {"bo1_optic", "bo1_rail_riser"},
         Bone = "j_gun",
         InstalledElements = {"nobacksight"},
-        Pos = Vector(-5, 0, -1.75),
+        Pos = Vector(-3.75, 0, -1.75),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 1),
     },

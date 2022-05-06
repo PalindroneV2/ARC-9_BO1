@@ -18,9 +18,9 @@ ENT.ImpactDamage = 3000
 ENT.SmokeTrailSize = 12
 ENT.SmokeTrailTime = 1
 
-ENT.Boost = 600
-ENT.Lift = 80
-ENT.DragCoefficient = 0.1
+ENT.Boost = 1200
+ENT.Lift = 100
+ENT.DragCoefficient = 0.05
 
 if CLIENT then
     killicon.Add( "arc9_bo1_rocket_rpg", "arc9/weaponicons/arc9_bo1_rpg7", Color( 255, 255, 255, 255 ) )

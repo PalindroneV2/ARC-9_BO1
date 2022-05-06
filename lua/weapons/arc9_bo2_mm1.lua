@@ -1,20 +1,20 @@
 SWEP.Base = "arc9_base"
 SWEP.Spawnable = true -- this obviously has to be set to true
-SWEP.Category = "ARC-9 - Black Ops II" -- edit this if you like
+SWEP.Category = "ARC-9 - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = [[War Machine II]]
+SWEP.PrintName = [[War Machine]]
 SWEP.Class = "Grenade Launcher"
 SWEP.Description = [[
-    Patterson fire a warning shot!
+    American revolver grenade launcher using 40mm High Explosive rounds developed from the Manville Machine Projector.
 ]]
 SWEP.Trivia = {
-    Manufacturer = "Milkor",
+    Manufacturer = "Hawk Engineering Company",
     Calibre = "40x46mm HE",
     Mechanism = "Spring-Loaded Revolving Chamber",
-    Country = "South Africa",
-    Year = 1982,
-    Games = [[Call of Duty: Black Ops II]]
+    Country = "USA",
+    Year = 1981,
+    Games = [[BO2, BOCW]]
 }
 SWEP.Credits = {
     Author = "Palindrone"
@@ -24,13 +24,13 @@ SWEP.Slot = 4
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/arc9/c_bo2_m32.mdl"
-SWEP.WorldModel = "models/weapons/arc9/w_bo2_m32.mdl"
-SWEP.WorldModelMirror = "models/weapons/arc9/w_bo2_m32.mdl"
+SWEP.ViewModel = "models/weapons/arc9/c_bo2_mm1.mdl"
+SWEP.WorldModel = "models/weapons/arc9/c_bo2_mm1.mdl"
+-- SWEP.WorldModelMirror = "models/weapons/arc9/c_bo2_mm1.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    Pos        =    Vector(-3, 5, -7.5),
-    Ang        =    Angle(5, 7, 180),
+    Pos        =    Vector(-5, 5, -6),
+    Ang        =    Angle(-5, 2, 180),
     Bone    =    "ValveBiped.Bip01_R_Hand",
     Scale = 1.1,
 }
@@ -60,9 +60,9 @@ SWEP.BodyDamageMults = {
 }
 
 SWEP.ChamberSize = 0 -- dont fucking change this again.
-SWEP.ClipSize = 6 -- DefaultClip is automatically set.
+SWEP.ClipSize = 12 -- DefaultClip is automatically set.
 SWEP.ReloadTime = 1
-SWEP.ShotgunReload = true
+SWEP.ShotgunReload = false
 
 SWEP.Crosshair = true
 SWEP.LauncherCrosshair = true
@@ -81,12 +81,12 @@ SWEP.RecoilResetTime = 0.1 -- How long the gun must go before the recoil pattern
 SWEP.RecoilAutoControl = 0.5
 SWEP.RecoilKick = 0
 
-SWEP.Spread = 0.0015
-SWEP.SpreadAddRecoil = 0.0015
+SWEP.Spread = 0
+SWEP.SpreadAddRecoil = 0
 
 SWEP.SpreadAddHipFire = 0.03
-SWEP.SpreadAddMove = 0.015
-SWEP.SpreadAddMidAir = 0.05
+SWEP.SpreadAddMove = 0
+SWEP.SpreadAddMidAir = 0
 
 SWEP.RecoilPatternDrift = 20
 
@@ -109,7 +109,7 @@ SWEP.SpeedMultCrouch = 1
 SWEP.SpeedMultBlindFire = 1
 
 SWEP.AimDownSightsTime = 0.2
-SWEP.SprintToFireTime = 0.2
+SWEP.SprintToFireTime = 0.5
 
 SWEP.RPM = 300
 SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
@@ -217,10 +217,10 @@ SWEP.HookP_NameChange = function(self, name)
 
     local attached = self:GetElements()
 
-    local gunname = "Milkor M32"
+    local gunname = "Hawk MM-1"
 
     if attached["bo1_pap"] then
-        gunname = "Dystopic Demolisher 2.0"
+        gunname = "Dystopic Demolisher"
     end
 
     return gunname
@@ -251,25 +251,7 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"bo1_pap_launcher"},
     },
-    {
-        PrintName = "Optic",
-        DefaultCompactName = "None",
-        Bone = "j_gun",
-        Pos = Vector(6.5, 0, 4.75),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic", "bo2_m32_optic"},
-    },
 }
-
-SWEP.Hook_TranslateAnimation = function (self, anim)
-    local attached = self:GetElements()
-
-    local prefix = ""
-    if attached["bo1_pap"] then
-        prefix = "pap_"
-    end
-    return prefix .. anim
-end
 
 SWEP.Animations = {
     ["idle"] = {
@@ -279,106 +261,36 @@ SWEP.Animations = {
     ["draw"] = {
         Source = "draw",
         Time = 25 / 35,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.2,
     },
     ["holster"] = {
         Source = "holster",
         Time = 25 / 35,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.2,
     },
     ["ready"] = {
         Source = "first_draw",
-        Time = 1.76,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.2,
-        EventTable = {
-            {s = "ARC9_BO2.M32_Raise", t = 0.5},
-        },
+        Time = 34 / 35,
     },
     ["fire"] = {
         Source = {
             "fire",
         },
-        Time = 0.366,
-        EventTable = {
-            {s = "ARC9_BO2.M32_Turn", t = 0.01},
-        },
+        Time = 15 / 35,
     },
     ["fire_iron"] = {
         Source = {
-            "fire_ads",
+            "fire",
         },
-        Time = 0.366,
-        EventTable = {
-            {s = "ARC9_BO2.M32_Turn", t = 0.01},
-        },
+        Time = 15 / 35,
     },
     ["reload"] = {
         Source = "reload",
-        Time = 174 / 30,
+        Time = 117 / 35,
         EventTable = {
-            {s = "ARC9_BO2.M32_Open", t = 0.3},
-            {s = "ARC9_BO1.M203_40mmOut", t = 0.8},
-            {s = "ARC9_BO2.M32_Rotate", t = 0.8},
-            {s = "ARC9_BO2.M32_Turn", t = 2},
-            {s = "ARC9_BO2.M32_In", t = 3},
-            {s = "ARC9_BO2.M32_In", t = 4},
-            {s = "ARC9_BO2.M32_Close", t = 4.5},
-        },
-    },
-    ["reload_start"] = {
-        Source = "reload_in",
-        Time = 3.49,
-        RestoreAmmo = 1, -- loads a shell since the first reload has a shell in animation
-        MinProgress = 3,
-        EventTable = {
-            {s = "ARC9_BO2.M32_Open", t = 0.5},
-            {s = "ARC9_BO1.M203_40mmOut", t = 1},
-            {s = "ARC9_BO2.M32_Rotate", t = 1},
-            {s = "ARC9_BO2.M32_Turn", t = 2},
-            {s = "ARC9_BO2.M32_In", t = 3},
-        },
-    },
-    ["reload_insert"] = {
-        Source = "reload_loop",
-        Time = 1.006,
-        MinProgress = 16 / 30,
-        EventTable = {
-            {s = "ARC9_BO2.M32_In", t = 0.5},
-        },
-    },
-    ["pap_reload_start"] = {
-        Source = "reload_in",
-        Time = 3.49,
-        RestoreAmmo = 9, -- loads a shell since the first reload has a shell in animation
-        MinProgress = 3,
-        EventTable = {
-            {s = "ARC9_BO2.M32_Open", t = 0.5},
-            {s = "ARC9_BO1.M203_40mmOut", t = 1},
-            {s = "ARC9_BO2.M32_Rotate", t = 1},
-            {s = "ARC9_BO2.M32_Turn", t = 2},
-            {s = "ARC9_BO2.M32_In", t = 3},
-        },
-    },
-    ["pap_reload_insert"] = {
-        Source = "reload_loop",
-        Time = 1.006,
-        MinProgress = 16 / 30,
-        RestoreAmmo = 8,
-        EventTable = {
-            {s = "ARC9_BO2.M32_In", t = 0.5},
-        },
-    },
-    ["reload_finish"] = {
-        Source = "reload_out",
-        Time = 1.6,
-        EventTable = {
-            {s = "ARC9_BO2.M32_Close", t = 0.1},
+            {s = "ARC9_BO2.M32_Open", t = 05 / 35},
+            {s = "ARC9_BO1.M203_40mmOut", t = 25 / 35},
+            {s = "ARC9_BO2.M32_Rotate", t = 25 / 35},
+            {s = "ARC9_BO2.M32_In", t = 58 / 35},
+            {s = "ARC9_BO2.M32_Close", t = 85 / 35},
         },
     },
     ["enter_sprint"] = {

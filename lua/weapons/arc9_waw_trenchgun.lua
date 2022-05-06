@@ -87,15 +87,15 @@ SWEP.RecoilResetTime = 0.01 -- How long the gun must go before the recoil patter
 SWEP.RecoilAutoControl = 0.5
 SWEP.RecoilKick = 2
 
-SWEP.Spread = 0.03
-SWEP.SpreadAddRecoil = 0.0015
+SWEP.Spread = math.rad(3.6 / 37.5)
+SWEP.SpreadAddRecoil = math.rad(110 / 37.5)
+
+SWEP.SpreadAddHipFire = math.rad(210 / 37.5)
+SWEP.SpreadAddMove = math.rad(110 / 37.5)
+SWEP.SpreadAddMidAir = 0 -- = math.rad(125 / 37.5)
 
 SWEP.UsePelletSpread = true -- Multiple bullets fired at once clump up, like for a shotgun. Spread affects which direction they get fired, not their spread relative to one another.
 SWEP.PelletSpread = 0.2
-
-SWEP.SpreadAddHipFire = 0.03
-SWEP.SpreadAddMove = 0.015
-SWEP.SpreadAddMidAir = 0.05
 
 SWEP.RecoilPatternDrift = 20
 

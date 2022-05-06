@@ -223,7 +223,7 @@ ATT.RecoilUpMult = 0.85
 ATT.LHIK = true
 ATT.LHIK_Priority = 5
 
-ARC9.LoadAttachment(ATT, "bo2_grip_stub")
+ARC9.LoadAttachment(ATT, "bo2_grip_taclight")
 
 --- BOCW GRIPS NATO
 

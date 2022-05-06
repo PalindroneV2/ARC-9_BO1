@@ -210,7 +210,7 @@ ATT.Free = false
 
 ATT.Category = {"bo1_pap"}
 ATT.ActivateElements = {"bo1_pap"}
-ATT.ClipSizeMult = 1.5
+ATT.ClipSizeMult = 2
 
 ATT.DamageMaxMult = 2.5
 ATT.DamageMinMult = 2.5
@@ -242,7 +242,7 @@ ATT.PrintName = [[40mm NATO DUD]]
 ATT.CompactName = [[DUD]]
 ATT.Icon = Material("entities/bo1_atts/ammo/FMJ.png")
 ATT.Description = [[
-    A dud???
+    A dud?!
 ]]
 ATT.Pros = {}
 ATT.Cons = {}
@@ -255,3 +255,25 @@ ATT.ActivateElements = {"bo1_gl_dud"}
 ATT.ShootEnt = "arc9_bo1_40mm_dud"
 
 ARC9.LoadAttachment(ATT, "bo1_glammo_dud")
+
+ATT = {}
+
+ATT.PrintName = [[MK3A2 Offensive Blast Grenade]]
+ATT.CompactName = [[HL2 FRAG]]
+ATT.Icon = Material("entities/bo1_atts/ammo/FMJ.png")
+ATT.Description = [[
+    Your grenade launcher now fires a powerful blast grenade.
+]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.Free = false
+ATT.Ignore = true
+
+ATT.Category = {"bo1_glammo"}
+ATT.ActivateElements = {"bo1_gl_hl2frag"}
+ATT.ShootEnt = "npc_grenade_frag"
+ATT.ShootEntityData = {}
+
+ARC9.LoadAttachment(ATT, "bo1_glammo_combineball")

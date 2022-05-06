@@ -122,6 +122,19 @@ sound.Add({
 
 -- DOOM EE --
 
+sound.Add({
+    name = "ARC9_BO1.DOOM_EE_ON",
+    channel = CHAN_USER_BASE + 1,
+    level = 100,
+    sound = "^weapons/arc9/doom_ee/doom_ee_on.wav"
+})
+sound.Add({
+    name = "ARC9_BO1.DOOM_EE_OFF",
+    channel = CHAN_USER_BASE + 1,
+    level = 100,
+    sound = "^weapons/arc9/doom_ee/doom_ee_off.wav"
+})
+
 sound.Add( {
     name = "ARC9_BO1.DOOMSG_Fire",
     channel = CHAN_STATIC,

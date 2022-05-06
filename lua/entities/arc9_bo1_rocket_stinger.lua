@@ -24,8 +24,8 @@ ENT.SeekerAngle = math.cos(math.rad(30))
 ENT.SteerSpeed = 15000
 ENT.FuseTime = 0
 ENT.Boost = 5000
-ENT.Lift = 80
-ENT.DragCoefficient = 0.1
+ENT.Lift = 100
+ENT.DragCoefficient = 0
 ENT.LifeTime = 15
 
 ENT.FireAndForget = true

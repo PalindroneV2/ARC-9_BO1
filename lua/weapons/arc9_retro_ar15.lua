@@ -85,14 +85,14 @@ SWEP.RecoilDissipationRate = 40 -- How much recoil dissipates per second.
 SWEP.RecoilResetTime = 0.01 -- How long the gun must go before the recoil pattern starts to reset.
 
 SWEP.RecoilAutoControl = 0.5
-SWEP.RecoilKick = 2
+SWEP.RecoilKick = 1
 
 SWEP.Spread = math.rad(1.5 / 37.5)
-SWEP.SpreadAddRecoil = 0.05
+SWEP.SpreadAddRecoil = math.rad(60 / 37.5)
 
-SWEP.SpreadAddHipFire = 0.1
-SWEP.SpreadAddMove = 0.05
-SWEP.SpreadAddMidAir = 0.05
+SWEP.SpreadAddHipFire = math.rad(250 / 37.5)
+SWEP.SpreadAddMove = math.rad(125 / 37.5)
+SWEP.SpreadAddMidAir = 0 -- = math.rad(110 / 37.5)
 
 SWEP.RecoilPatternDrift = 20
 
@@ -114,8 +114,8 @@ SWEP.SpeedMultMelee = 1
 SWEP.SpeedMultCrouch = 1
 SWEP.SpeedMultBlindFire = 1
 
-SWEP.AimDownSightsTime = 0.11
-SWEP.SprintToFireTime = 0.14
+SWEP.AimDownSightsTime = 0.15
+SWEP.SprintToFireTime = 0.33
 
 SWEP.RPM = 900
 SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
