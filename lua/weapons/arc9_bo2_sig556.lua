@@ -246,7 +246,6 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
 
 end
 
-
 SWEP.Hook_TranslateAnimation = function (self, anim)
     local attached = self:GetElements()
 
@@ -291,7 +290,7 @@ SWEP.Attachments = {
         PrintName = "Muzzle",
         DefaultCompactName = "Birdcage",
         Bone = "j_gun",
-        Pos = Vector(24, 0, 2.5),
+        Pos = Vector(26, 0, 2),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_muzzle"},
         ExcludeElements = {"newbarrel"},
@@ -550,7 +549,7 @@ SWEP.Animations = {
         MinProgress = 2.0,
     },
     ["fast"] = {
-        Source = "fast",
+        Source = "reload_fast",
         Time = 1.79,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         IKTimeLine = {
@@ -582,7 +581,7 @@ SWEP.Animations = {
         MinProgress = 1.4
     },
     ["fast_empty"] = {
-        Source = "fast_empty",
+        Source = "reload_empty_fast",
         Time = 2.3,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         IKTimeLine = {
