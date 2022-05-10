@@ -234,7 +234,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
 
     local vm = data.model
     local attached = data.elements
-    local newpos = Vector(-2.895, -1, 0.3)
+    local newpos = Vector(-2.895, -5, 0.3)
     local newang = Angle(0.025, -0.15, 0)
 
     if attached["mount"] then
@@ -247,8 +247,8 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         if attached["mount"] then
             vm:SetBodygroup(2,2)
         end
-        newpos = Vector(-2.895, 0, 0.3)
-        newang = Angle(0.0125, 0.25, 0)
+        newpos = Vector(-2.895, -3, 0.3)
+        newang = Angle(0.025, 0.25, 0)
     end
 
     if self:GetBipod() then

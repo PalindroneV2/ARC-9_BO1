@@ -177,7 +177,7 @@ SWEP.CaseBones = {}
 
 SWEP.IronSights = {
     Pos = Vector(-2.77, -5, 0.235),
-    Ang = Angle(-0.075, -0.075, -0.5),
+    Ang = Angle(-0.025, -0.1, -0.5),
     Magnification = 1.1,
     AssociatedSlot = 9,
     CrosshairInSights = false,

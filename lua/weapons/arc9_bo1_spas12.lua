@@ -178,8 +178,8 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(-3.2, 0, 1.675),
-    Ang = Angle(0.45, 0, 0),
+    Pos = Vector(-3.2, -2, 1.675),
+    Ang = Angle(0, 0.2, 0),
     Magnification = 1.1,
     SwitchToSound = "", -- sound that plays when switching to this sight
 }
@@ -422,44 +422,12 @@ SWEP.Animations = {
         },
         MinProgress = 0.6
     },
-    -- ["reload_start_empty"] = {
-    --     Source = "reload_in",
-    --     Time = 54 / 30,
-    --     TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
-    --     RestoreAmmo = 1,
-    --     MinProgress = 40 / 30,
-    --     EventTable = {
-    --         {s = "ARC9_BO1.MK_Shell", t = 40 / 30},
-    --     },
-    --     IKTimeLine = {
-    --         {
-    --             t = 0,
-    --             lhik = 1,
-    --             rhik = 1
-    --         },
-    --         {
-    --             t = 0.2,
-    --             lhik = 0,
-    --             rhik = 0
-    --         },
-    --         {
-    --             t = 0.85,
-    --             lhik = 0,
-    --             rhik = 0
-    --         },
-    --         {
-    --             t = 0.95,
-    --             lhik = 0,
-    --             rhik = 1
-    --         },
-    --     },
-    -- },
     ["reload_start"] = {
         Source = "reload_in",
         Time = 54 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         RestoreAmmo = 1,
-        MinProgress = 40 / 30,
+        -- MinProgress = 40 / 30,
         EventTable = {
             {s = "ARC9_BO1.MK_Shell", t = 40 / 30},
         },
@@ -486,44 +454,12 @@ SWEP.Animations = {
             },
         },
     },
-    -- ["reload_start_empty_pap"] = {
-    --     Source = "reload_in",
-    --     Time = 54 / 30,
-    --     TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
-    --     RestoreAmmo = 12,
-    --     MinProgress = 40 / 30,
-    --     EventTable = {
-    --         {s = "ARC9_BO1.MK_Shell", t = 40 / 30},
-    --     },
-    --     IKTimeLine = {
-    --         {
-    --             t = 0,
-    --             lhik = 1,
-    --             rhik = 1
-    --         },
-    --         {
-    --             t = 0.2,
-    --             lhik = 0,
-    --             rhik = 0
-    --         },
-    --         {
-    --             t = 0.85,
-    --             lhik = 0,
-    --             rhik = 0
-    --         },
-    --         {
-    --             t = 0.95,
-    --             lhik = 0,
-    --             rhik = 1
-    --         },
-    --     },
-    -- },
     ["reload_start_pap"] = {
         Source = "reload_in",
         Time = 54 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         RestoreAmmo = 12,
-        MinProgress = 40 / 30,
+        -- MinProgress = 40 / 30,
         EventTable = {
             {s = "ARC9_BO1.MK_Shell", t = 40 / 30},
         },

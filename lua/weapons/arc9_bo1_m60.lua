@@ -229,11 +229,6 @@ SWEP.AttachmentElements = {
         Bodygroups = {
             {2,1}
         },
-        IronSightsOverride = {
-            Pos = Vector(-3.245, -5, 0),
-            Ang = Angle(0.645, 0.05, 0),
-            Magnification = 1.1,
-        }
     },
     ["bo1_bipod"] = {
         Bodygroups = {
@@ -249,6 +244,20 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local attached = data.elements
     -- COSMETICS
     -- CAMO
+
+    local newpos = Vector(-3.245, -6, 0.6)
+    local newang = Angle(0.05, 0.4, 0)
+
+    if attached["bo1_irons_alt"] then
+        newpos = Vector(-3.245, -6, 0.575)
+        newang = Angle(0.05, 0.4, 0)
+    end
+
+    self.IronSights = {
+        Pos = newpos,
+        Ang = newang,
+        Magnification = 1.1
+    }
 
     local camo = 0
     if attached["universal_camo"] then

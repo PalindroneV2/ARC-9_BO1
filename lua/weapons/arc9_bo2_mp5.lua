@@ -275,7 +275,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     vm:SetBodygroup(4,stock)
 
     -- IRON SIGHT POSITION CHANGES
-    local newpos = Vector(-3.19, 2, 1)
+    local newpos = Vector(-3.19, -1, 1)
     local newang = Angle(0.025, 0, 0)
 
     if attached["25rnd"] then
@@ -292,7 +292,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
             end
         end
         vm:SetBodygroup(4,stock + 5)
-        newpos = Vector(-3.175, 2, 0.85)
+        newpos = Vector(-3.175, -1, 0.85)
         newang = Angle(0.025, 0.1, 0)
     end
 

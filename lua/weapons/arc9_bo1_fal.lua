@@ -176,7 +176,7 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(-2.205, 1.75, 0.15),
+    Pos = Vector(-2.205, 0, 0.15),
     Ang = Angle(0.05, 0, 0),
     Magnification = 1.1,
     -- AssociatedSlot = 9,
@@ -274,11 +274,11 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local vm = data.model
     -- local CUSTSTATE = self:GetCustomize()
     local attached = data.elements
-    local newpos = Vector(-2.205, 1.75, 0.15)
+    local newpos = Vector(-2.205, 0, 0.15)
     local newang = Angle(0.05, 0, 0)
 
     if attached["barrel_osw"] then
-        newpos = Vector(-2.22, 1.75, 0.25)
+        newpos = Vector(-2.22, 0, 0.25)
         newang = Angle(0.025, 0.1, 0)
         if attached["bo1_optic"] then
             vm:SetBodygroup(2,2)

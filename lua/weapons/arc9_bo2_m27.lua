@@ -275,7 +275,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local vm = data.model
     local attached = data.elements
 
-    local newpos = Vector(-2.825, 0, 0.1)
+    local newpos = Vector(-2.825, -1.5, 0.1)
     local newang = Angle(0.025, 0.8, 0)
 
     if attached["bo1_optic"] then
@@ -284,19 +284,19 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
 
     if attached["g36_iron"] then
         vm:SetBodygroup(2,1)
-        newpos = Vector(-2.825, 0, -0.1)
+        newpos = Vector(-2.825, -1.5, -0.1)
         newang = Angle(0.025, 0.1, 0)
     end
 
     if attached["usgi_iron"] then
         vm:SetBodygroup(2,2)
-        newpos = Vector(-2.825, 0, 0.4)
+        newpos = Vector(-2.825, -1.5, 0.4)
         newang = Angle(0.03, -0.9, 0)
     end
 
     if attached["acr_iron"] then
         vm:SetBodygroup(2,3)
-        newpos = Vector(-2.825, 0, 0.1)
+        newpos = Vector(-2.825, -1.5, 0.1)
         newang = Angle(0.03, 0, 0)
     end
 

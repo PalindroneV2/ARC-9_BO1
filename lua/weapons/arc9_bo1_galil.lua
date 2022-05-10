@@ -176,7 +176,7 @@ SWEP.CaseBones = {}
 SWEP.Bipod = false
 
 SWEP.IronSights = {
-    Pos = Vector(-2.72, 0, 0.425),
+    Pos = Vector(-2.72, -3, 0.425),
     Ang = Angle(0.015, -0.2, 0),
     Magnification = 1.1,
     -- AssociatedSlot = 9,
