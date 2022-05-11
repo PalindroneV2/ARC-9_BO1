@@ -74,7 +74,7 @@ ATT.RecoilKick = 0
 ATT.HasSights = false
 ATT.Crosshair = false
 ATT.BottomlessClip = true
-ATT.RPM = 56.8
+ATT.RPM = 75
 
 ATT.AimDownSightsTimeMult = 0
 ATT.SprintToFireTimeMult = 0

@@ -188,6 +188,9 @@ SWEP.AnimDraw = ACT_HL2MP_GESTURE_RANGE_ATTACK_KNIFE
 SWEP.ActivePos = Vector(0, 0, -1)
 SWEP.ActiveAng = Angle(-2, 1, -3)
 
+SWEP.BipodPos = Vector(-2.427, 0, -1.5)
+SWEP.BipodAng = Angle(0, 0, 0)
+
 SWEP.CrouchPos = Vector(0, 0, -1)
 SWEP.CrouchAng = Angle(-2, 1, -3)
 
@@ -349,6 +352,8 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
 
     local newpos = Vector(-2.425, -2, 0.65)
     local newang = Angle(0.05, 0.4, 0)
+    local NewBipodPos = Vector(-2.427, 0, -1.5)
+    local NewBipodAng = Angle(0, 0, 0)
 
     if attached["bo1_alternate_irons"] then
         newpos = Vector(-2.425, -2, 0.835)
@@ -377,6 +382,8 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
             newpos = Vector(-2.065, -2, 0.665)
             newang = Angle(0.05, 0, 0)
         end
+        NewBipodPos = Vector(-2.065, 0, -1.65)
+        NewBipodAng = Angle(0.05, 0, 0)
     end
     if attached["bo1_tishina"] then
         newpos = Vector(-2.425, -2, 1.35)
@@ -393,6 +400,8 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         Magnification = 1.1,
         CrosshairInSights = false,
     }
+    self.BipodPos = NewBipodPos
+    self.BipodAng = NewBipodAng
 end
 
 SWEP.HookP_NameChange = function(self, name)
@@ -613,10 +622,12 @@ SWEP.Attachments = {
 }
 
 SWEP.HideBones = {
+    "j_grenade_ammo",
     "tag_ammo2",
 }
 SWEP.ReloadHideBoneTables = {
-    [1] = {"tag_ammo2"},
+    [1] = {"j_grenade_ammo"},
+    [2] = {"tag_ammo2"},
 }
 
 SWEP.Animations = {
@@ -654,6 +665,11 @@ SWEP.Animations = {
         ShellEjectAt = 0,
     },
     ["fire_iron"] = {
+        Source = {"fire_ads"},
+        Time = 0.5,
+        ShellEjectAt = 0,
+    },
+    ["fire_bipod"] = {
         Source = {"fire_ads"},
         Time = 0.5,
         ShellEjectAt = 0,
@@ -771,6 +787,11 @@ SWEP.Animations = {
         ShellEjectAt = 0,
     },
     ["fire_iron_gp25"] = {
+        Source = {"fire_ads_gp25"},
+        Time = 0.5,
+        ShellEjectAt = 0,
+    },
+    ["fire_bipod_gp25"] = {
         Source = {"fire_ads_gp25"},
         Time = 0.5,
         ShellEjectAt = 0,
@@ -903,6 +924,11 @@ SWEP.Animations = {
         Time = 0.5,
         ShellEjectAt = 0,
     },
+    ["fire_bipod_tishina"] = {
+        Source = {"fire_ads_tishina"},
+        Time = 0.5,
+        ShellEjectAt = 0,
+    },
     ["reload_tishina"] = {
         Source = "reload_tishina",
         Time = 90 / 35,
@@ -1027,6 +1053,11 @@ SWEP.Animations = {
         ShellEjectAt = 0,
     },
     ["fire_iron_mk"] = {
+        Source = {"fire_ads_mk"},
+        Time = 0.5,
+        ShellEjectAt = 0,
+    },
+    ["fire_bipod_mk"] = {
         Source = {"fire_ads_mk"},
         Time = 0.5,
         ShellEjectAt = 0,
@@ -1177,6 +1208,11 @@ SWEP.Animations = {
         ShellEjectAt = 0,
     },
     ["fire_iron_rpk"] = {
+        Source = {"fire_ads_rpk"},
+        Time = 10 / 35,
+        ShellEjectAt = 0,
+    },
+    ["fire_bipod_rpk"] = {
         Source = {"fire_ads_rpk"},
         Time = 10 / 35,
         ShellEjectAt = 0,

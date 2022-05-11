@@ -201,8 +201,8 @@ SWEP.CrouchAng = Angle(0, 0, -5)
 SWEP.SprintPos = Vector(0, 0, -1)
 SWEP.SprintAng = Angle(0, 0, -5)
 
-SWEP.BipodPos = Vector(0, 10,-4)
-SWEP.BipodAng = Angle(0, 0, 10)
+SWEP.BipodPos = Vector(-2.72, 0, -1.5)
+SWEP.BipodAng = Angle(0.025, 0, 0)
 
 SWEP.CustomizePos = Vector(12.5, 40, 4)
 SWEP.CustomizeAng = Angle(90, 0, 0)
@@ -441,10 +441,12 @@ SWEP.Attachments = {
 }
 
 SWEP.HideBones = {
+    "j_grenade_ammo",
     "tag_ammo2",
 }
 SWEP.ReloadHideBoneTables = {
-    [1] = {"tag_ammo2"},
+    [1] = {"j_grenade_ammo"},
+    [2] = {"tag_ammo2"},
 }
 
 SWEP.Animations = {
@@ -473,6 +475,11 @@ SWEP.Animations = {
         ShellEjectAt = 0,
     },
     ["fire_iron"] = {
+        Source = {"fire_ads"},
+        Time = 6 / 30,
+        ShellEjectAt = 0,
+    },
+    ["fire_bipod"] = {
         Source = {"fire_ads"},
         Time = 6 / 30,
         ShellEjectAt = 0,
@@ -583,6 +590,11 @@ SWEP.Animations = {
         Time = 0.5,
         ShellEjectAt = 0,
     },
+    ["fire_bipod_m203"] = {
+        Source = {"fire_ads_gl"},
+        Time = 0.5,
+        ShellEjectAt = 0,
+    },
     ["reload_m203"] = {
         Source = "reload_gl",
         Time = 100 / 35,
@@ -689,6 +701,11 @@ SWEP.Animations = {
         ShellEjectAt = 0,
     },
     ["fire_iron_mk"] = {
+        Source = {"fire_ads_mk"},
+        Time = 0.5,
+        ShellEjectAt = 0,
+    },
+    ["fire_bipod_mk"] = {
         Source = {"fire_ads_mk"},
         Time = 0.5,
         ShellEjectAt = 0,

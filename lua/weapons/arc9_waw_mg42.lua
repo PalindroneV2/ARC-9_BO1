@@ -217,8 +217,8 @@ SWEP.ActiveAng = Angle(0, 0, -5)
 SWEP.CrouchPos = SWEP.ActivePos
 SWEP.CrouchAng = SWEP.ActiveAng
 
-SWEP.BipodPos = SWEP.ActivePos
-SWEP.BipodAng = SWEP.ActiveAng
+SWEP.BipodPos = Vector(0, -15, 2)
+SWEP.BipodAng = Angle(0.025, 0, 0)
 
 SWEP.SprintPos = Vector(13, -5, 2)
 SWEP.SprintAng = Angle(45, -7, -5)
@@ -345,6 +345,11 @@ SWEP.Animations = {
         ShellEjectAt = 0,
     },
     ["fire_iron"] = {
+        Source = {"fire_ads"},
+        Time = 7 / 30,
+        ShellEjectAt = 0,
+    },
+    ["fire_bipod"] = {
         Source = {"fire_ads"},
         Time = 7 / 30,
         ShellEjectAt = 0,

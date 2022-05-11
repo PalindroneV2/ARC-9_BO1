@@ -191,6 +191,9 @@ SWEP.AnimDraw = ACT_HL2MP_GESTURE_RANGE_ATTACK_KNIFE
 SWEP.ActivePos = Vector(0, 0, -1)
 SWEP.ActiveAng = Angle(0, 0, -5)
 
+SWEP.BipodPos = Vector(-3.73, 0, -1.5)
+SWEP.BipodAng = Angle(0, 0, 0)
+
 SWEP.CrouchPos = Vector(0, 0, -1)
 SWEP.CrouchAng = Angle(0, 0, -5)
 
@@ -405,10 +408,12 @@ SWEP.Attachments = {
 }
 
 SWEP.HideBones = {
+    "j_grenade_ammo",
     "tag_ammo2",
 }
 SWEP.ReloadHideBoneTables = {
-    [1] = {"tag_ammo2"},
+    [1] = {"j_grenade_ammo"},
+    [2] = {"tag_ammo2"},
 }
 
 SWEP.Animations = {
@@ -438,6 +443,11 @@ SWEP.Animations = {
         ShellEjectAt = 0,
     },
     ["fire_iron"] = {
+        Source = {"fire_ads"},
+        Time = 7 / 30,
+        ShellEjectAt = 0,
+    },
+    ["fire_bipod"] = {
         Source = {"fire_ads"},
         Time = 7 / 30,
         ShellEjectAt = 0,
@@ -555,6 +565,11 @@ SWEP.Animations = {
         Time = 7 / 30,
         ShellEjectAt = 0,
     },
+    ["fire_bipod_grip"] = {
+        Source = {"fire_ads_grip"},
+        Time = 7 / 30,
+        ShellEjectAt = 0,
+    },
     ["reload_grip"] = {
         Source = "reload_grip",
         Time = 2.5,
@@ -624,6 +639,11 @@ SWEP.Animations = {
         Time = 7 / 30,
         ShellEjectAt = 0,
     },
+    ["fire_bipod_gl"] = {
+        Source = {"fire_ads_gl"},
+        Time = 7 / 30,
+        ShellEjectAt = 0,
+    },
     ["reload_gl"] = {
         Source = "reload_gl",
         Time = 2.5,
@@ -689,6 +709,11 @@ SWEP.Animations = {
         ShellEjectAt = 0,
     },
     ["fire_iron_mk"] = {
+        Source = {"fire_ads_mk"},
+        Time = 7 / 30,
+        ShellEjectAt = 0,
+    },
+    ["fire_bipod_mk"] = {
         Source = {"fire_ads_mk"},
         Time = 7 / 30,
         ShellEjectAt = 0,

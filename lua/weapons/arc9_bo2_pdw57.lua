@@ -4,7 +4,7 @@ SWEP.Category = "ARC-9 - Black Ops II" -- edit this if you like
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "PDW-57"
-SWEP.Class = "Submachine Gun"
+SWEP.Class = "Personal Defense Weapon"
 SWEP.Description = [[A PDW in 5.7x28mm successor to FN's P90 with a magazine that pivots to the left instead of being pulled from the top.
 ]]
 SWEP.Trivia = {

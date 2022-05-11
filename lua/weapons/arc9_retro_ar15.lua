@@ -199,8 +199,8 @@ SWEP.CrouchAng = Angle(0, 0, -5)
 SWEP.SprintPos = Vector(0, 0, -1)
 SWEP.SprintAng = Angle(0, 0, -5)
 
-SWEP.BipodPos = Vector(0, 10,-4)
-SWEP.BipodAng = Angle(0, 0, 10)
+SWEP.BipodPos = Vector(-2.765, 0, -1.5)
+SWEP.BipodAng = Angle(0, 0, 0)
 
 SWEP.CustomizePos = Vector(12.5, 40, 4)
 SWEP.CustomizeAng = Angle(90, 0, 0)
@@ -380,6 +380,9 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local gasblock = 0 -- FRONT SIGHT/GASBLOCK
     local frontsight = 0 -- FRONT SIGHT (REMOVABLE)
 
+    local NewBipodPos = Vector(-2.765, 0, -1.5)
+    local NewBipodAng = Angle(0, 0, 0)
+
     if attached["retro_ar15_barrel_14"] then
         length = 1
         hand = 4
@@ -400,6 +403,8 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         hand = 3
         if attached["mw3_psrscope"] then
             gasblock = 2
+            NewBipodPos = Vector(-2.765, 0, -2)
+            NewBipodAng = Angle(0, 0, 0)
         end
         if length == 1 then
             gasblock = 4
@@ -441,6 +446,8 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
             gasblock = 3
         end
     end
+    self.BipodPos = NewBipodPos
+    self.BipodAng = NewBipodAng
 
     vm:SetBodygroup(2, length)
     vm:SetBodygroup(3, hand)
@@ -472,7 +479,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     if hand == 3 and barrel == 0 and attached["bo1_optic"] then
         vm:SetBodygroup(8, 2)
     end
-    if hand == 5 and attached["bo1_optic"] then
+    if !attached["a4_top"] and hand == 5 and attached["bo1_optic"] then
         vm:SetBodygroup(8, 3)
     end
 
@@ -722,10 +729,12 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
 end
 
 SWEP.HideBones = {
+    "j_grenade_ammo",
     "tag_ammo2",
 }
 SWEP.ReloadHideBoneTables = {
-    [1] = {"tag_ammo2"},
+    [1] = {"j_grenade_ammo"},
+    [2] = {"tag_ammo2"},
 }
 
 SWEP.Attachments = {
@@ -908,6 +917,18 @@ SWEP.Animations = {
         },
     },
     ["fire_iron"] = {
+        Source = {"fire_ads"},
+        Time = 9 / 30,
+        ShellEjectAt = 0,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+        },
+    },
+    ["fire_bipod"] = {
         Source = {"fire_ads"},
         Time = 9 / 30,
         ShellEjectAt = 0,

@@ -203,6 +203,9 @@ SWEP.AnimDraw = ACT_HL2MP_GESTURE_RANGE_ATTACK_KNIFE
 SWEP.ActivePos = Vector(0, -3, -1)
 SWEP.ActiveAng = Angle(0, 0, -5)
 
+SWEP.BipodPos = Vector(-3.245, 0, -1.5)
+SWEP.BipodAng = Angle(0,0,0)
+
 SWEP.CrouchPos = Vector(0, -3, -1)
 SWEP.CrouchAng = Angle(0, 0, -5)
 
@@ -374,6 +377,14 @@ SWEP.Animations = {
         }
     },
     ["fire_iron"] = {
+        Source = {"fire_ads"},
+        Time = 7 / 30,
+        ShellEjectAt = 0,
+        EventTable = {
+            { s = "ARC9_BO1.M60_Action", t = 0 },
+        }
+    },
+    ["fire_bipod"] = {
         Source = {"fire_ads"},
         Time = 7 / 30,
         ShellEjectAt = 0,

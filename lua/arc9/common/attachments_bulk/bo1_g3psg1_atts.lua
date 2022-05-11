@@ -90,7 +90,7 @@ ATT.RecoilMult = 0.9
 ATT.RecoilUpMult = 0.9
 ATT.RecoilSideMult = 0.9
 ATT.SpreadMult = 0.3
-ATT.SpreadMultHipFire = 2
+ATT.SpreadMultHipFire = 1.5
 
 ATT.DamageMaxAdd = 5
 ATT.DamageMinAdd = 15
@@ -225,7 +225,7 @@ ATT.RangeMinMult = 1.25
 ATT.PenetrationMult = 1.25
 ATT.PhysBulletMuzzleVelocityMult = 1.25
 ATT.SpreadMult = 0.3
-ATT.SpreadMultHipFire = 2
+ATT.SpreadMultHipFire = 1.25
 
 ATT.DamageMaxAdd = 5
 ATT.DamageMinAdd = 15
