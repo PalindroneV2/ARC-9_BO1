@@ -244,10 +244,6 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
 
     local suffix = ""
 
-    if attached["stock_l"] then
-        suffix = "_stock"
-    end
-
     if attached["bo1_mag_ext"] then
         if anim == "reload" then
             return "ext"
@@ -275,7 +271,7 @@ SWEP.Attachments = {
     {
         PrintName = "Stock",
         Bone = "j_gun",
-        Pos = Vector(-8, 0, 1.5),
+        Pos = Vector(-4, 0, 1.5),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_stock_l"},
     },
@@ -350,27 +346,11 @@ SWEP.Animations = {
         Source = "draw",
         Time = 1,
     },
-    ["draw_stock"] = {
-        Source = "first_draw_stock",
-        Time = 1,
-        EventTable = {
-            {s = "ARC9_BO1.MAC11_Stock", t = 6 / 30},
-            {s = "ARC9_BO1.MAC11_Stock", t = 12 / 30},
-        },
-    },
     ["ready"] = {
         Source = "draw",
         Time = 1,
     },
     ["ready_stock"] = {
-        Source = "first_draw_stock",
-        Time = 1.5,
-        EventTable = {
-            {s = "ARC9_BO1.MAC11_Stock", t = 6 / 30},
-            {s = "ARC9_BO1.MAC11_Stock", t = 12 / 30},
-        },
-    },
-    ["ready_stock_ext"] = {
         Source = "first_draw_stock",
         Time = 1.5,
         EventTable = {
