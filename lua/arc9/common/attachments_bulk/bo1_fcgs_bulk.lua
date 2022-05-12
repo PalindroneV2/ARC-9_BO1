@@ -132,6 +132,31 @@ ARC9.LoadAttachment(ATT, "bo1_fcg_semi")
 
 ATT = {}
 
+ATT.PrintName = "LC10 Receiver"
+ATT.CompactName = "LC10"
+ATT.Icon = Material("entities/bo1_atts/other/rapid_fire.png")
+ATT.Description = [[
+Heavy modification for the MPL that gives it a significantly higher rate of fire.
+]]
+ATT.Pros = {}
+ATT.Cons = {
+}
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.Free = true
+
+ATT.Category = {"bo1_mpl_fcg"}
+ATT.ActivateElements = {"lc10"}
+
+ATT.SpreadMult = 1.1
+ATT.SpreadMultRecoil = 1.05
+ATT.RecoilMult = 1.1
+ATT.RPM = 800
+
+ARC9.LoadAttachment(ATT, "bo1_mpl_fcg_lc10")
+
+ATT = {}
+
 ATT.PrintName = "AN/M2 Stinger"
 ATT.CompactName = "STINGER"
 ATT.Icon = Material("entities/bo1_atts/other/rapid_fire.png")

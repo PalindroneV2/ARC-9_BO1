@@ -5,10 +5,6 @@ VertexlitGeneric
 	$bumpmap	"models\weapons\arc9\bo1\bo1_mpl\mpl_n"
     $phongexponenttexture   "models\weapons\arc9\bo1\bo1_mpl\mpl_s"
 
-	// $detail "models/weapons/arc9/bo1/black_detail"
-	// $detailblendmode 0
-	// "$detailblendfactor" "1"
-
 	
 	//"$color2" "[ .4 .4 .4 ]"
 	"$blendtintbybasealpha" "1"
@@ -20,4 +16,14 @@ VertexlitGeneric
 	"$basemapalphaenvmapmask" "1"
 	"$envmapfresnel" "0.01"
 	"$envmaptint" "[ .01 .01 .01 ]"
+	
+	$detailblendmode 4
+	$detailblendfactor 0.75
+	Proxies {
+		CustomCamo {
+			camoTexture $detail
+			camoScale $detailscale
+            blend $detailblendfactor
+		}
+	}
 }

@@ -3,18 +3,18 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ARC-9 - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "IMI Uzi"
+SWEP.PrintName = "MPL"
 SWEP.Class = "Submachine Gun"
 SWEP.Description = [[
-    An israeli SMG chambered in 9mm designed to be compact and easy to manufacture. Made famous by it's use in Hollywood films.
+    A submachinegun adopted by West Germany during the 1960s.
 ]]
 SWEP.Trivia = {
-    Manufacturer = "IMI",
+    Manufacturer = "Walther GMBH",
     Calibre = "9x19mm Parabellum",
     Mechanism = "Blowback",
-    Country = "Israel",
+    Country = "West Germany",
     Year = 1950,
-    Games = [[BO1, BO2]]
+    Games = [[Call of Duty: Black Ops]]
 }
 SWEP.Credits = {
     Author = "Palindrone"
@@ -24,8 +24,8 @@ SWEP.Slot = 2
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/arc9/c_bo1_uzi.mdl"
-SWEP.WorldModel = "models/weapons/arc9/c_bo1_uzi.mdl"
+SWEP.ViewModel = "models/weapons/arc9/c_bo1_mpl.mdl"
+SWEP.WorldModel = "models/weapons/arc9/c_bo1_mpl.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
     Pos        =    Vector(-5, 4.5, -7.25),
@@ -41,7 +41,7 @@ SWEP.CustomBlendFactor = 1
 
 SWEP.DefaultBodygroups = "00000000000000"
 
-SWEP.DamageMax = 32
+SWEP.DamageMax = 25
 SWEP.DamageMin = 15 -- damage done at maximum range
 SWEP.RangeMax = 6000
 SWEP.RangeMin = 1000
@@ -67,7 +67,7 @@ SWEP.TracerEffect = "ARC9_tracer" -- The effect to use for hitscan tracers
 SWEP.TracerColor = Color(255, 255, 255) -- Color of tracers. Only works if tracer effect supports it. For physical bullets, this is compressed down to 9-bit color.
 
 SWEP.ChamberSize = 0 -- dont fucking change this again.
-SWEP.ClipSize = 30 -- DefaultClip is automatically set.
+SWEP.ClipSize = 32 -- DefaultClip is automatically set.
 SWEP.ReloadTime = 1
 
 SWEP.Crosshair = true
@@ -116,7 +116,7 @@ SWEP.SpeedMultBlindFire = 1
 SWEP.AimDownSightsTime = 0.2
 SWEP.SprintToFireTime = 0.2
 
-SWEP.RPM = 850
+SWEP.RPM = 550
 SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
@@ -142,7 +142,7 @@ SWEP.ShootVolume = 125
 SWEP.ShootPitch = 100
 SWEP.ShootPitchVariation = 0
 
-SWEP.ShootSound = "ARC9_BO1.Uzi_Fire"
+SWEP.ShootSound = "ARC9_BO1.MPL_Fire"
 SWEP.ShootSoundSilenced = "ARC9_BO1.MP5_Sil"
 
 --SWEP.MuzzleEffect = "muzzleflash_4"
@@ -175,8 +175,8 @@ SWEP.IronSights = {
 }
 
 SWEP.HoldtypeHolstered = "passive"
-SWEP.HoldtypeActive = "smg"
-SWEP.HoldtypeSights = "smg"
+SWEP.HoldtypeActive = "ar2"
+SWEP.HoldtypeSights = "ar2"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_AR2
@@ -191,7 +191,7 @@ SWEP.CrouchAng = Angle(0, 0, -5)
 SWEP.SprintPos = Vector(0, 0, -1)
 SWEP.SprintAng = Angle(0, 0, -5)
 
-SWEP.CustomizePos = Vector(12.5, 40, 4)
+SWEP.CustomizePos = Vector(15.5, 40, 4)
 SWEP.CustomizeAng = Angle(90, 0, 0)
 
 SWEP.RestPos = Vector(0, 0, 0)
@@ -202,6 +202,11 @@ SWEP.BarrelLength = 25
 SWEP.ExtraSightDist = 5
 
 SWEP.AttachmentElements = {
+    ["lc10"] = {
+        Bodygroups = {
+            {0,1}
+        },
+    },
     ["stock_l"] = {
         Bodygroups = {
             {3,1}
@@ -212,9 +217,14 @@ SWEP.AttachmentElements = {
             {3,2}
         },
     },
-    ["ext_mag"] = {
+    ["bo1_fastmag"] = {
         Bodygroups = {
             {1,1}
+        },
+    },
+    ["ext_mag"] = {
+        Bodygroups = {
+            {1,2}
         },
     },
     ["mount"] = {
@@ -229,8 +239,11 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local attached = data.elements
 
     local camo = 0
+    if attached["lc10"] then
+        camo = 4
+    end
     if attached["universal_camo"] then
-        camo = 1
+        camo = camo + 1
     end
     if attached["bo1_pap"] then
         camo = camo + 2
@@ -242,22 +255,38 @@ end
 SWEP.Hook_TranslateAnimation = function (self, anim)
     local attached = self:GetElements()
 
-    local suffix = ""
-
-    if attached["stock_m"] then
-        suffix = "_stock"
+    if attached["stock_l"] then
+        return anim .. "_stock"
     end
 
-    if attached["bo1_mag_ext"] then
+    if attached["bo1_fastmag"] then
         if anim == "reload" then
-            return "ext"
+            return anim .. "_quick"
         end
         if anim == "reload_empty" then
-            return "ext_empty"
+            return anim .. "_quick"
         end
     end
 
-    return anim .. suffix
+end
+
+SWEP.HookP_NameChange = function(self, name)
+
+    local attached = self:GetElements()
+
+    local gunname = "Walther MPL"
+
+    if attached["bo1_pap"] then
+        gunname = "MPL-LF"
+    end
+    if attached["lc10"] then
+        gunname = "LC10"
+        if attached["bo1_pap"] then
+            gunname = "Cnidoblaster"
+        end
+    end
+
+    return gunname
 end
 
 --TEST 3
@@ -266,25 +295,24 @@ SWEP.Attachments = {
     {
         PrintName = "Optic",
         Bone = "j_gun",
-        Pos = Vector(-4, 0.075, 3),
+        Pos = Vector(-4.75, 0.075, 2.3),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic_lp", "bo1_rail_riser"},
+        Category = {"bo1_optic", "bo1_rail_riser"},
         -- CorrectiveAng = Angle(0.025, 0.05, 0),
         InstalledElements = {"mount"},
     },
     {
         PrintName = "Stock",
         Bone = "j_gun",
-        Pos = Vector(-8, 0, 1.5),
+        Pos = Vector(-10, 0, -2),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_stock_lm"},
-        Installed = "bo1_stock_medium"
     },
     {
         PrintName = "Muzzle",
         Bone = "j_gun",
-        Scale = Vector(1.3, 1, 1),
-        Pos = Vector(7, 0.075, 1.25),
+        Scale = Vector(1.3, 1.1, 1.1),
+        Pos = Vector(10.3, 0.075, -0.15),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_muzzle_smg", "bo1_muzzle_pistol"},
     },
@@ -292,9 +320,9 @@ SWEP.Attachments = {
         PrintName = "Firing Group",
         DefaultCompactName = "S-1-F",
         Bone = "j_gun",
-        Pos = Vector(0, 0, 0),
+        Pos = Vector(-4, 0, -1.5),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_fcg"},
+        Category = {"bo1_fcg", "bo1_mpl_fcg"},
     },
     {
         PrintName = "Perk-a-Cola",
@@ -308,25 +336,23 @@ SWEP.Attachments = {
         PrintName = "Tactical Left",
         DefaultCompactName = "TAC L",
         Bone = "j_gun",
-        Pos = Vector(4.25, -0.6, 1),
+        Pos = Vector(6.75, -0.6, 1.1),
         Ang = Angle(0, 0, 90),
         Category = "bo1_rail_tactical",
-        RequireElements = {"bo1_grips"},
     },
     {
         PrintName = "Tactical Right",
         DefaultCompactName = "TAC R",
         Bone = "j_gun",
-        Pos = Vector(4.25, 0.6, 1),
+        Pos = Vector(6.75, 0.6, 1.1),
         Ang = Angle(0, 0, -90),
         Category = "bo1_rail_tactical",
-        RequireElements = {"bo1_grips"},
     },
     {
         PrintName = "Underbarrel",
         DefaultCompactName = "UB",
         Bone = "j_gun",
-        Pos = Vector(5, 0, 0.2),
+        Pos = Vector(5, 0.075, -0.6),
         Ang = Angle(0, 0, 0),
         Category = "bo1_rail_underbarrel",
     },
@@ -336,7 +362,7 @@ SWEP.Attachments = {
         Bone = "tag_clip",
         Pos = Vector(.5, 0, -3),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_mag_ext"},
+        Category = {"bo1_fastmag"},
     },
     {
         PrintName = "Ammunition",
@@ -350,7 +376,7 @@ SWEP.Attachments = {
         PrintName = "Cosmetic",
         DefaultCompactName = "Gunmetal",
         Bone = "j_gun",
-        Pos = Vector(-7, 0, 0),
+        Pos = Vector(-10, 0, 2),
         Ang = Angle(0, 0, 0),
         Category = "universal_camo",
     },
@@ -364,33 +390,122 @@ SWEP.Animations = {
     ["draw"] = {
         Source = "draw",
         Time = 0.5,
+        EventTable = {
+            {s = "ARC9_BO1.MPL_Futz", t = 1 / 30},
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1
+            },
+            {
+                t = 0.15,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.8,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.9,
+                lhik = 1,
+                rhik = 1
+            },
+        },
     },
     ["holster"] = {
         Source = "holster",
         Time = 0.5,
     },
     ["draw_stock"] = {
-        Source = "first_draw_stock",
+        Source = "first_draw_grip",
         Time = 1,
         EventTable = {
-            {s = "ARC9_BO1.Uzi_Futz", t = 6 / 30},
-            {s = "ARC9_BO1.Uzi_BoltFwd", t = 12 / 30},
+            {s = "ARC9_BO1.MPL_Futz", t = 15 / 30},
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1
+            },
+            {
+                t = 0.15,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.8,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.9,
+                lhik = 1,
+                rhik = 1
+            },
         },
     },
     ["ready"] = {
         Source = "first_draw",
-        Time = 1,
+        Time = 40 / 30,
         EventTable = {
-            {s = "ARC9_BO1.Uzi_BoltBack", t = 5 / 30},
-            {s = "ARC9_BO1.Uzi_BoltFwd", t = 18 / 30}
+            {s = "ARC9_BO1.MPL_BoltBack", t = 10 / 30},
+            {s = "ARC9_BO1.MPL_BoltFwd", t = 15 / 30},
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1
+            },
+            {
+                t = 0.15,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.8,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.9,
+                lhik = 1,
+                rhik = 1
+            },
         },
     },
-    ["ready_grip"] = {
-        Source = "first_draw_stock",
-        Time = 1.5,
+    ["ready_stock"] = {
+        Source = "first_draw_grip",
+        Time = 45 / 30,
         EventTable = {
-            {s = "ARC9_BO1.Uzi_Futz", t = 12 / 30},
-            {s = "ARC9_BO1.Uzi_BoltFwd", t = 18 / 30},
+            {s = "ARC9_BO1.MPL_Futz", t = 30 / 30},
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1
+            },
+            {
+                t = 0.15,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.8,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.9,
+                lhik = 1,
+                rhik = 1
+            },
         },
     },
     ["fire"] = {
@@ -405,10 +520,10 @@ SWEP.Animations = {
     },
     ["reload"] = {
         Source = "reload",
-        Time = 90 / 35,
+        Time = 80 / 35,
         EventTable = {
-            {s = "ARC9_BO1.Uzi_MagOut", t = 15 / 35},
-            {s = "ARC9_BO1.Uzi_MagIn", t = 56 / 35}
+            {s = "ARC9_BO1.MPL_MagOut", t = 16 / 30},
+            {s = "ARC9_BO1.MPL_MagIn", t = 51 / 30}
         },
         IKTimeLine = {
             {
@@ -417,17 +532,47 @@ SWEP.Animations = {
                 rhik = 1
             },
             {
-                t = 0.2,
+                t = 0.15,
                 lhik = 0,
-                rhik = 0
+                rhik = 1
             },
             {
-                t = 0.7,
+                t = 0.8,
                 lhik = 0,
-                rhik = 0
+                rhik = 1
             },
             {
-                t = 0.95,
+                t = 0.9,
+                lhik = 1,
+                rhik = 1
+            },
+        },
+    },
+    ["reload_quick"] = {
+        Source = "reload_quick",
+        Time = 80 / 35,
+        EventTable = {
+            {s = "ARC9_BO1.MPL_MagOut", t = 21 / 35},
+            {s = "ARC9_BO1.MPL_MagIn", t = 48 / 35}
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1
+            },
+            {
+                t = 0.15,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.8,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.9,
                 lhik = 1,
                 rhik = 1
             },
@@ -435,12 +580,12 @@ SWEP.Animations = {
     },
     ["reload_empty"] = {
         Source = "reload_empty",
-        Time = 120 / 35,
+        Time = 108 / 35,
         EventTable = {
-            {s = "ARC9_BO1.Uzi_MagOut", t = 16 / 35},
-            {s = "ARC9_BO1.Uzi_MagIn", t = 56 / 35},
-            {s = "ARC9_BO1.Uzi_BoltBack", t = 75 / 35},
-            {s = "ARC9_BO1.Uzi_BoltFwd", t = 81 / 35},
+            {s = "ARC9_BO1.MPL_MagOut", t = 16 / 35},
+            {s = "ARC9_BO1.MPL_MagIn", t = 51 / 35},
+            {s = "ARC9_BO1.MPL_BoltBack", t = 74 / 35},
+            {s = "ARC9_BO1.MPL_BoltFwd", t = 80 / 35},
         },
         IKTimeLine = {
             {
@@ -449,60 +594,30 @@ SWEP.Animations = {
                 rhik = 1
             },
             {
-                t = 0.2,
+                t = 0.15,
                 lhik = 0,
-                rhik = 0
+                rhik = 1
             },
             {
-                t = 0.7,
+                t = 0.8,
                 lhik = 0,
-                rhik = 0
+                rhik = 1
             },
             {
-                t = 0.95,
+                t = 0.9,
                 lhik = 1,
                 rhik = 1
             },
         },
     },
-    ["ext"] = {
-        Source = "ext",
-        Time = 90 / 35,
-        EventTable = {
-            {s = "ARC9_BO1.Uzi_MagOut", t = 15 / 35},
-            {s = "ARC9_BO1.Uzi_MagIn", t = 56 / 35}
-        },
-        IKTimeLine = {
-            {
-                t = 0,
-                lhik = 1,
-                rhik = 1
-            },
-            {
-                t = 0.2,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.7,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.95,
-                lhik = 1,
-                rhik = 1
-            },
-        },
-    },
-    ["ext_empty"] = {
-        Source = "ext_empty",
+    ["reload_empty_quick"] = {
+        Source = "reload_empty_quick",
         Time = 120 / 35,
         EventTable = {
-            {s = "ARC9_BO1.Uzi_MagOut", t = 16 / 35},
-            {s = "ARC9_BO1.Uzi_MagIn", t = 56 / 35},
-            {s = "ARC9_BO1.Uzi_BoltBack", t = 75 / 35},
-            {s = "ARC9_BO1.Uzi_BoltFwd", t = 81 / 35},
+            {s = "ARC9_BO1.MPL_MagOut", t = 21 / 35},
+            {s = "ARC9_BO1.MPL_MagIn", t = 48 / 35},
+            {s = "ARC9_BO1.MPL_BoltBack", t = 75 / 35},
+            {s = "ARC9_BO1.MPL_BoltFwd", t = 83 / 35},
         },
         IKTimeLine = {
             {
@@ -511,17 +626,17 @@ SWEP.Animations = {
                 rhik = 1
             },
             {
-                t = 0.2,
+                t = 0.15,
                 lhik = 0,
-                rhik = 0
+                rhik = 1
             },
             {
-                t = 0.7,
+                t = 0.8,
                 lhik = 0,
-                rhik = 0
+                rhik = 1
             },
             {
-                t = 0.95,
+                t = 0.9,
                 lhik = 1,
                 rhik = 1
             },
