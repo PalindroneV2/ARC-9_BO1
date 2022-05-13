@@ -243,7 +243,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         camo = 1
     end
     if attached["bo1_pap"] then
-        camo = camo + 3
+        camo = camo + 2
     end
     vm:SetSkin(camo)
 
@@ -268,7 +268,7 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
 
     local suf1 = ""
     local suf2 = ""
-    if attached["bo2_fastmag"] then
+    if attached["bo2_fastmag"] and anim == "reload" or anim == "reload_empty" then
         suf2 = "_fast"
     end
     if attached["bo1_igrip"] then
@@ -373,8 +373,30 @@ SWEP.Animations = {
     ["ready"] = {
         Source = "first_draw",
         Time = 40 / 30,
-        SoundTable = {
+        EventTable = {
             {s = "ARC9_BO2.AR_Charge", t = 10 / 30},
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.1,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.8,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.9,
+                lhik = 1,
+                rhik = 1
+            },
         },
     },
     ["fire"] = {
@@ -390,7 +412,7 @@ SWEP.Animations = {
     ["reload"] = {
         Source = "reload",
         Time = 2.4,
-        SoundTable = {
+        EventTable = {
             {s = "ARC9_BO2.AR_MagOut", t = 16 / 30},
             {s = "ARC9_BO2.AR_MagIn", t = 42 / 30}
         },
@@ -421,7 +443,7 @@ SWEP.Animations = {
     ["reload_empty"] = {
         Source = "reload_empty",
         Time = 2.83,
-        SoundTable = {
+        EventTable = {
             {s = "ARC9_BO2.AR_MagOut", t = 16 / 30},
             {s = "ARC9_BO2.AR_MagIn", t = 42 / 30},
             {s = "ARC9_BO2.AR_Fwd", t = 60 / 30},
@@ -454,7 +476,7 @@ SWEP.Animations = {
         Source = "reload_fast",
         Time = 1.7999,
         MinProgress = 25 / 30,
-        SoundTable = {
+        EventTable = {
             {s = "ARC9_BO2.AR_MagOut", t = 10 / 30},
             {s = "ARC9_BO2.AR_MagIn", t = 25 / 30},
         },
@@ -485,7 +507,7 @@ SWEP.Animations = {
         Source = "reload_empty_fast",
         Time = 2.3,
         MinProgress = 50 / 30,
-        SoundTable = {
+        EventTable = {
             {s = "ARC9_BO2.AR_MagOut", t = 10 / 30},
             {s = "ARC9_BO2.AR_MagIn", t = 25 / 30},
             {s = "ARC9_BO2.AR_Fwd", t = 40 / 30},
@@ -535,7 +557,7 @@ SWEP.Animations = {
     ["draw_grip"] = {
         Source = "draw_grip",
         Time = 0.83,
-        SoundTable = {
+        EventTable = {
             {s = "ARC9_BO2.AR_Grip", t = 1 / 30},
         },
     },
@@ -546,7 +568,7 @@ SWEP.Animations = {
     ["ready_grip"] = {
         Source = "first_draw_grip",
         Time = 1.333,
-        SoundTable = {
+        EventTable = {
             {s = "ARC9_BO2.AR_Grip", t = 30 / 30},
         },
     },
@@ -563,7 +585,7 @@ SWEP.Animations = {
     ["reload_grip"] = {
         Source = "reload_grip",
         Time = 2.83,
-        SoundTable = {
+        EventTable = {
             {s = "ARC9_BO2.AR_MagOut", t = 16 / 30},
             {s = "ARC9_BO2.AR_MagIn", t = 42 / 30},
         },
@@ -572,7 +594,7 @@ SWEP.Animations = {
     ["reload_empty_grip"] = {
         Source = "reload_empty_grip",
         Time = 2.83,
-        SoundTable = {
+        EventTable = {
             {s = "ARC9_BO2.AR_MagOut", t = 16 / 30},
             {s = "ARC9_BO2.AR_MagIn", t = 42 / 30},
             {s = "ARC9_BO2.AR_Fwd", t = 60 / 30},
@@ -583,7 +605,7 @@ SWEP.Animations = {
         Source = "reload_grip_fast",
         Time = 1.7999,
         MinProgress = 25 / 30,
-        SoundTable = {
+        EventTable = {
             {s = "ARC9_BO2.AR_MagOut", t = 10 / 30},
             {s = "ARC9_BO2.AR_MagIn", t = 25 / 30},
         },
@@ -592,7 +614,7 @@ SWEP.Animations = {
         Source = "reload_empty_grip_fast",
         Time = 2.3,
         MinProgress = 50 / 30,
-        SoundTable = {
+        EventTable = {
             {s = "ARC9_BO2.AR_MagOut", t = 10 / 30},
             {s = "ARC9_BO2.AR_MagIn", t = 25 / 30},
             {s = "ARC9_BO2.AR_Fwd", t = 40 / 30},

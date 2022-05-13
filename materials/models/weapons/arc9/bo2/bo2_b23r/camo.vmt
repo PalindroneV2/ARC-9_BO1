@@ -1,7 +1,9 @@
 "VertexlitGeneric"
 {
-	"$basetexture" "models/weapons/arc9/bo2/bo2_fnp45/fnp45_c"
-	"$bumpmap" "models/weapons/arc9/bo2/bo2_fnp45/fnp45_n"
+	"$basetexture" "models/weapons/arc9/bo2/bo2_b23r/b23r_c"
+	
+	"$bumpmap" "models/weapons/arc9/bo2/bo2_b23r/b23r_n"
+
 	
 	//"$color2" "[ .4 .4 .4 ]"
 	"$blendtintbybasealpha" "1"
@@ -13,4 +15,14 @@
 	"$basemapalphaenvmapmask" "1"
 	"$envmapfresnel" "0.01"
 	"$envmaptint" "[ .01 .01 .01 ]"
+
+    $detailblendmode 4
+    $detailblendfactor 1
+	Proxies {
+		CustomCamo {
+			camoTexture $detail
+			camoScale $detailscale
+            blend $detailblendfactor
+		}
+	}
 }

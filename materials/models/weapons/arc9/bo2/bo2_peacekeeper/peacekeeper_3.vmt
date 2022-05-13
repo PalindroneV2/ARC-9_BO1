@@ -1,8 +1,8 @@
 "VertexlitGeneric"
 {
 	"$basetexture" "models/weapons/arc9/bo2/bo2_peacekeeper/peacekeeper"
-	
 	"$bumpmap" "models/weapons/arc9/bo2/bo2_peacekeeper/peacekeeper_n"
+	"$phonexponenttexture" "models/weapons/arc9/bo2/bo2_peacekeeper/peacekeeper_s"
 
 	"$detail" "models/weapons/arc9/bo1/camo_off"
 	$detailblendmode 0

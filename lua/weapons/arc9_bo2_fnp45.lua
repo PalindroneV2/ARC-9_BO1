@@ -3,18 +3,17 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ARC-9 - Black Ops II" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "B23R"
+SWEP.PrintName = "FNP-45"
 SWEP.Class = "Pistol"
 SWEP.Description = [[
-    Burst-fire pistol based on the Beretta 92.
-    Fast rate of fire, poor range and moderate damage.
+.45 Caliber semi-automatic pistol produced in Belgium that currently sees service with Spanish Navy Marines and in few police forces.
 ]]
 SWEP.Trivia = {
-    Manufacturer = "Beretta",
-    Calibre = "9x19mm Parabellum",
-    Mechanism = "Short Recoil",
-    Country = "Italy",
-    Year = 2023,
+    Manufacturer = "FN Herstal",
+    Calibre = ".45 ACP",
+    Mechanism = "Short Recoil. DA/SA",
+    Country = "Belgium",
+    Year = 2006,
     Games = [[Call of Duty: Black Ops II]]
 }
 SWEP.Credits = {
@@ -25,23 +24,21 @@ SWEP.Slot = 1
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/arc9/c_bo2_b23r.mdl"
-SWEP.WorldModel = "models/weapons/arc9/c_bo2_b23r.mdl"
+SWEP.ViewModel = "models/weapons/arc9/c_bo2_fnp45.mdl"
+SWEP.WorldModel = "models/weapons/arc9/c_bo2_fnp45.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    Pos        =    Vector(-9.75, 3, -3.75),
-    Ang        =    Angle(-6, 0, 180),
+    Pos        =    Vector(-9.5, 3, -3.5),
+    Ang        =    Angle(-6, -2.5, 180),
     Bone    =    "ValveBiped.Bip01_R_Hand",
-    Scale = 1.1
+    Scale = 1.025,
 }
--- SWEP.ViewModelFOVBase = 75
+SWEP.ViewModelFOVBase = 75
 
 SWEP.DefaultBodygroups = "00000000000000"
 
-SWEP.DefaultSkin = 6
-
-SWEP.DamageMax = 30
-SWEP.DamageMin = 10 -- damage done at maximum range
+SWEP.DamageMax = 45
+SWEP.DamageMin = 20 -- damage done at maximum range
 SWEP.RangeMax = 4000
 SWEP.RangeMin = 1000
 SWEP.Penetration = 4
@@ -66,31 +63,31 @@ SWEP.TracerEffect = "ARC9_tracer" -- The effect to use for hitscan tracers
 SWEP.TracerColor = Color(255, 255, 255) -- Color of tracers. Only works if tracer effect supports it. For physical bullets, this is compressed down to 9-bit color.
 
 SWEP.ChamberSize = 0 -- dont fucking change this again.
-SWEP.ClipSize = 15 -- DefaultClip is automatically set.
+SWEP.ClipSize = 13 -- DefaultClip is automatically set.
 SWEP.ReloadTime = 1
 
 SWEP.Crosshair = true
 SWEP.CanBlindFire = false
 
-SWEP.Recoil = 0.3
-SWEP.RecoilSide = 0.4
-SWEP.RecoilUp = 0.4
+SWEP.Recoil = 0.4
+SWEP.RecoilSide = 0.7
+SWEP.RecoilUp = 0.7
 
-SWEP.RecoilRandomUp = 0.4
-SWEP.RecoilRandomSide = 0.2
+SWEP.RecoilRandomUp = 0.5
+SWEP.RecoilRandomSide = 0.35
 
 SWEP.RecoilDissipationRate = 40 -- How much recoil dissipates per second.
 SWEP.RecoilResetTime = 0.01 -- How long the gun must go before the recoil pattern starts to reset.
 
 SWEP.RecoilAutoControl = 0.5
-SWEP.RecoilKick = 0.5
+SWEP.RecoilKick = 1
 
-SWEP.Spread = math.rad(3.6 / 37.5)
-SWEP.SpreadAddRecoil = math.rad(50 / 37.5)
+SWEP.Spread = math.rad(3 / 37.5)
+SWEP.SpreadAddRecoil = math.rad(75 / 37.5)
 
-SWEP.SpreadAddHipFire = math.rad(220 / 37.5)
-SWEP.SpreadAddMove = math.rad(100 / 37.5)
-SWEP.SpreadAddMidAir = 0 -- = math.rad(105 / 37.5)
+SWEP.SpreadAddHipFire = math.rad(250 / 37.5)
+SWEP.SpreadAddMove = math.rad(125 / 37.5)
+SWEP.SpreadAddMidAir = math.rad(100 / 37.5)
 
 SWEP.RecoilPatternDrift = 20
 
@@ -115,18 +112,13 @@ SWEP.SpeedMultBlindFire = 1
 SWEP.AimDownSightsTime = 0.2
 SWEP.SprintToFireTime = 0.2
 
-SWEP.RPM = 923
+SWEP.RPM = 500
 SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
-    {
-        Mode = 3,
-    },
     {
         Mode = 1,
     },
 }
-SWEP.RunawayBurst = true
-SWEP.PostBurstDelay = 0.1
 SWEP.NPCWeaponType = {"weapon_pistol"}
 SWEP.NPCWeight = 100
 
@@ -143,11 +135,9 @@ SWEP.ShootVolume = 125
 SWEP.ShootPitch = 100
 SWEP.ShootPitchVariation = 0
 
-SWEP.FirstShootSound = "ARC9_BO2.B23R_Fire"
-SWEP.ShootSound = "ARC9_BO2.B23R_Burst"
+SWEP.ShootSound = "ARC9_BO2.M1911_Fire"
 SWEP.ShootSoundSilenced = "ARC9_BO2.Pistol_Sil"
-SWEP.FirstDistantShootSound = "ARC9_BO2.Pistol_RingOff"
-SWEP.DistantShootSound = "ARC9_BO2.PistolBurst_RingOff"
+SWEP.DistantShootSound = "ARC9_BO2.Pistol_RingOff"
 
 --SWEP.MuzzleEffect = "muzzleflash_4"
 SWEP.MuzzleParticle = "muzzleflash_pistol" -- Used for some muzzle effects.
@@ -170,8 +160,8 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(-2.4, 3, 0.4),
-    Ang = Angle(0, 0, 0),
+    Pos = Vector(-2.43, 0, 0.5),
+    Ang = Angle(-0.1, 0, 0),
     Magnification = 1.1,
     --AssociatedSlot = 9,
     CrosshairInSights = false,
@@ -206,16 +196,9 @@ SWEP.BarrelLength = 9
 SWEP.ExtraSightDist = 15
 
 SWEP.AttachmentElements = {
-    ["bo1_optic_lp"] = {
+    ["bo1_optic_pistol"] = {
         Bodygroups = {
-            {2,1}
-        },
-    },
-    ["waw_aptrs"] = {
-        AttPosMods = {
-            [5] = {
-                Pos = Vector(0.4, 0.075, 0.25),
-            },
+            {3,2},
         },
     },
 }
@@ -224,23 +207,24 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
 
     local vm = data.model
     local attached = data.elements
+
     local camo = 0
 
     if attached["universal_camo"] then
-        camo = camo + 1
+        camo = 1
     end
-
     if attached["bo1_pap"] then
         camo = camo + 2
     end
 
     vm:SetSkin(camo)
+
 end
 
 
--- SWEP.Hook_TranslateAnimation = function (self, anim)
---     local attached = self:GetElements()
--- end
+SWEP.Hook_TranslateAnimation = function (self, anim)
+    -- local attached = self:GetElements()
+end
 
 --TEST 3
 
@@ -255,39 +239,39 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Muzzle",
-        DefaultCompactName = "MUZZ",
+        DefaultCompactName = "Muzz",
         Bone = "j_gun",
-        Pos = Vector(7.9, 0.075, 1.5),
+        Scale = Vector(1,1,1),
+        Pos = Vector(5.6, 0.075, 1.2),
         Ang = Angle(0, 0, 0),
-        Category = "bo1_muzzle_pistol",
+        Category = {"bo1_muzzle_pistol"},
     },
     {
         PrintName = "Tactical",
         DefaultCompactName = "TAC",
         Bone = "j_gun",
-        Scale = Vector(1, 1, 1),
-        Pos = Vector(5.5, 0.075, -0.5),
+        Scale = 1,
+        Pos = Vector(4.25, 0.075, 0.175),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_tactical"},
-        -- CorrectiveAng = Angle(0.05, 0.1, 0),
     },
     {
         PrintName = "Ammunition",
         DefaultCompactName = "AMMO",
         Bone = "j_gun",
-        Pos = Vector(-1.25, 0, -2.5),
+        Pos = Vector(-1.25, 0, -3),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_ammo", "bo1_pap"},
+        Category = {"bo1_ammo", "bo1_pap", "bo1_pap_1911"},
     },
     {
         PrintName = "Optic",
         DefaultCompactName = "IRONS",
         Bone = "j_bolt",
         Scale = Vector(1, 1, 1),
-        Pos = Vector(0.4, 0.075, 0.5),
+        Pos = Vector(0.4, 0.075, 0.2),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_optic_pistol"},
-        -- CorrectiveAng = Angle(0.05, 0.1, 0),
+        CorrectiveAng = Angle(0.05, 0.3, 0),
     },
     {
         PrintName = "Cosmetic",
@@ -326,35 +310,39 @@ SWEP.Animations = {
     },
     ["ready"] = {
         Source = "first_draw",
-        Time = 1,
+        Time = 1.5,
         EventTable = {
-            {s = "ARC9_BO2.Pistol_SlideBack", t = 0.2},
-            {s = "ARC9_BO2.Pistol_SlideFwd", t = 0.7}
+            {s = "ARC9_BO2.Pistol_SlideBack", t = 0.3},
+            {s = "ARC9_BO2.Pistol_SlideFwd", t = 1.2}
         }
     },
     ["fire"] = {
         Source = {"fire"},
-        Time = 7 / 30,
-        ShellEjectAt = 0,
+        Time = 8 / 30,
+        ShellEjectAt = 1 / 30,
     },
     ["fire_empty"] = {
         Source = "fire_last",
-        Time = 7 / 30,
-        ShellEjectAt = 0,
+        Time = 8 / 30,
+        ShellEjectAt = 1 / 30,
     },
     ["fire_iron"] = {
         Source = "fire_ads",
-        Time = 7 / 30,
-        ShellEjectAt = 0,
+        Time = 8 / 30,
+        ShellEjectAt = 1 / 30,
     },
     ["fire_iron_empty"] = {
         Source = "fire_last",
-        Time = 7 / 30,
-        ShellEjectAt = 0,
+        Time = 8 / 30,
+        ShellEjectAt = 1 / 30,
     },
     ["reload"] = {
         Source = "reload",
         Time = 1.5,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0.2,
         EventTable = {
             {s = "ARC9_BO2.Pistol_MagOut", t = 0.25},
             {s = "ARC9_BO2.Pistol_MagIn", t = 1}
@@ -363,6 +351,10 @@ SWEP.Animations = {
     ["reload_empty"] = {
         Source = "reload_empty",
         Time = 2,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0.2,
         EventTable = {
             {s = "ARC9_BO2.Pistol_MagOut", t = 0.25},
             {s = "ARC9_BO2.Pistol_MagIn", t = 1},

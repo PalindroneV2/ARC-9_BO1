@@ -165,6 +165,7 @@ SWEP.MuzzleParticle = "muzzleflash_6" -- Used for some muzzle effects.
 SWEP.ShellModel = "models/shells/shell_556.mdl"
 SWEP.ShellPitch = 90
 SWEP.ShellScale = 1.4
+SWEP.NoShellEject = true
 
 SWEP.MuzzleEffectQCA = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectQCA = 2 -- which attachment to put the case effect on
