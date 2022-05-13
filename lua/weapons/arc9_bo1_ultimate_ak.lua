@@ -199,6 +199,8 @@ SWEP.SprintAng = Angle(-2, 1, -3)
 
 SWEP.CustomizePos = Vector(12.5, 40, 4)
 SWEP.CustomizeAng = Angle(90, 0, 0)
+SWEP.CustomizeSnapshotPos = Vector(0, 0, 0)
+SWEP.CustomizeSnapshotAng = Angle(0, 0, 0)
 
 SWEP.RestPos = Vector(0, 0, 0)
 SWEP.RestAng = Angle(0, 0, 0)
@@ -354,6 +356,8 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local newang = Angle(0.05, 0.4, 0)
     local NewBipodPos = Vector(-2.427, 0, -1.5)
     local NewBipodAng = Angle(0, 0, 0)
+    local newCustPose = Vector(0, 0, 0)
+    local newCustAng = Angle(0, 0, 0)
 
     if attached["bo1_alternate_irons"] then
         newpos = Vector(-2.425, -2, 0.835)
@@ -394,12 +398,21 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         end
     end
 
+    if attached["barrel_rpk"] then
+        newCustPose = Vector(7, 10, 0.5)
+        newCustAng = Angle(0, 0, 0)
+    end
+
     self.IronSights = {
         Pos = newpos,
         Ang = newang,
         Magnification = 1.1,
         CrosshairInSights = false,
     }
+
+    self.CustomizeSnapshotPos = newCustPose
+    self.CustomizeSnapshotAng = newCustAng
+
     self.BipodPos = NewBipodPos
     self.BipodAng = NewBipodAng
 end

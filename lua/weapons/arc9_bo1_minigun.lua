@@ -220,6 +220,26 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     if attached["bo1_pap"] then
         vm:SetSkin(2)
     end
+
+    local newActivePos = Vector(0, -2, -1)
+    local newActiveAng = Angle(0, 0, 0)
+    local newSprintPos = Vector(0, -2, -1)
+    local newSprintAng = Angle(0, -10, 0)
+
+    if attached["doom_ee"] then
+        vm:SetBodygroup(0,0)
+        newActivePos = Vector(-8.25, -17.5, 0)
+        newActiveAng = Angle(0, 5, 0)
+        newSprintPos = Vector(-8.25, -17.5, 0)
+        newSprintAng = Angle(0, 5, 0)
+    end
+
+    self.ActivePos = newActivePos
+    self.ActiveAng = newActiveAng
+    self.CrouchPos = newActivePos
+    self.CrouchAng = newActiveAng
+    self.SprintPos = newSprintPos
+    self.SprintAng = newSprintAng
 end
 
 SWEP.Attachments = {
@@ -229,7 +249,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(-5, 0, -5),
         Ang = Angle(0, 0, 0),
-        Category = "bo1_perkacola",
+        Category = {"bo1_perkacola", "bo1_minigun_doom"}
     },
     [2] = {
         PrintName = "Ammunition",

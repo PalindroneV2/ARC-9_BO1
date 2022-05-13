@@ -75,6 +75,7 @@ ATT.HasSights = false
 ATT.Crosshair = false
 ATT.BottomlessClip = true
 ATT.RPM = 75
+ATT.PushBackForce = 0
 
 ATT.AimDownSightsTimeMult = 0
 ATT.SprintToFireTimeMult = 0
@@ -87,3 +88,82 @@ ATT.ShootSoundSilenced = ""
 ATT.DistantShootSound = ""
 
 ARC9.LoadAttachment(ATT, "bo1_rpg7_perk_doom")
+
+ATT = {}
+
+ATT.PrintName = [[You got the Shotgun!]]
+ATT.CompactName = [[SHOTGUN]]
+ATT.Icon = Material("entities/bo1_atts/perks/doom_ee.png", "mips smooth")
+ATT.Description = [[
+In his ravenous hatred he found no peace...
+]]
+
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.Free = false
+
+ATT.Category = {"bo1_ks23_doom"}
+ATT.ActivateElements = {"doom_ee"}
+
+ATT.SpeedMult = 2
+
+ATT.NumOverride = 8
+ATT.SpreadMult = 0.5
+ATT.RecoilMult = 0
+ATT.RecoilUpMult = 0
+ATT.RecoilSideMult = 0
+ATT.RecoilKick = 0
+ATT.HasSights = false
+ATT.Crosshair = false
+ATT.ArmorPiercing = 0.05
+ATT.BottomlessClip = true
+
+ATT.AimDownSightsTimeMult = 0
+ATT.SprintToFireTimeMult = 0
+
+-- ATT.FirstShootSound = "PAP_Effect"
+ATT.ShootSound = "ARC9_BO1.DOOMSG_Fire"
+ATT.ShootSoundSilenced = ""
+ATT.DistantShootSound = ""
+
+ARC9.LoadAttachment(ATT, "bo1_ks23_perk_doom")
+
+ATT = {}
+
+ATT.PrintName = [[You got the Chaingun!]]
+ATT.CompactName = [[CHAINGUN]]
+ATT.Icon = Material("entities/bo1_atts/perks/doom_ee.png", "mips smooth")
+ATT.Description = [[
+...And with boiling blood he scoured the umbral plains, seeking vengeance against the dark lords who had wronged him...
+]]
+
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.Free = false
+
+ATT.Category = {"bo1_minigun_doom"}
+ATT.ActivateElements = {"doom_ee"}
+
+ATT.Speed = 2
+ATT.SpeedMultShooting = 1
+ATT.SpreadMult = 0.5
+ATT.RecoilMult = 0
+ATT.RecoilUpMult = 0
+ATT.RecoilSideMult = 0
+ATT.RecoilKick = 0
+ATT.HasSights = false
+ATT.Crosshair = false
+ATT.BottomlessClip = true
+ATT.RPM = 525
+
+ATT.AimDownSightsTimeMult = 0
+ATT.SprintToFireTimeMult = 0
+
+-- ATT.FirstShootSound = "PAP_Effect"
+ATT.ShootSound = "ARC9_BO1.Chaingun_Fire"
+ATT.FirstShootSound = "ARC9_BO1.Chaingun_Fire"
+ATT.ShootSoundLooping = ""
+ATT.DistantShootSound = ""
+ATT.ShootSoundTail = ""
+
+ARC9.LoadAttachment(ATT, "bo1_minigun_perk_doom")
