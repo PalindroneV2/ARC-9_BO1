@@ -25,7 +25,8 @@ SWEP.Slot = 1
 SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arc9/c_bo2_fnp45.mdl"
-SWEP.WorldModel = "models/weapons/arc9/c_bo2_fnp45.mdl"
+SWEP.WorldModel = "models/weapons/arc9/w_bo2_fnp45.mdl"
+SWEP.WorldModelMirror = "models/weapons/arc9/w_bo2_fnp45.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
     Pos        =    Vector(-9.5, 3, -3.5),
@@ -160,8 +161,8 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(-2.43, 0, 0.5),
-    Ang = Angle(-0.1, 0, 0),
+    Pos = Vector(-2.3375, 0, 0.5),
+    Ang = Angle(-0.05, 0, 0),
     Magnification = 1.1,
     --AssociatedSlot = 9,
     CrosshairInSights = false,
@@ -196,17 +197,25 @@ SWEP.BarrelLength = 9
 SWEP.ExtraSightDist = 15
 
 SWEP.AttachmentElements = {
-    ["bo1_optic_pistol"] = {
-        Bodygroups = {
-            {3,2},
-        },
-    },
 }
 
 SWEP.Hook_ModifyBodygroups = function(self, data)
 
     local vm = data.model
     local attached = data.elements
+    local CUSTSTATE = self:GetCustomize()
+
+    if CUSTSTATE then
+        vm:SetBodygroup(0,1)
+        vm:SetBodygroup(1,1)
+    else
+        vm:SetBodygroup(0,0)
+        vm:SetBodygroup(1,0)
+    end
+
+    if attached["bo1_optic_pistol"] then
+        vm:SetBodygroup(1,2)
+    end
 
     local camo = 0
 
@@ -242,7 +251,7 @@ SWEP.Attachments = {
         DefaultCompactName = "Muzz",
         Bone = "j_gun",
         Scale = Vector(1,1,1),
-        Pos = Vector(5.6, 0.075, 1.2),
+        Pos = Vector(5.6, -0.05, 1.2),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_muzzle_pistol"},
     },
@@ -268,7 +277,7 @@ SWEP.Attachments = {
         DefaultCompactName = "IRONS",
         Bone = "j_bolt",
         Scale = Vector(1, 1, 1),
-        Pos = Vector(0.4, 0.075, 0.2),
+        Pos = Vector(0.4, 0, 0.2),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_optic_pistol"},
         CorrectiveAng = Angle(0.05, 0.3, 0),

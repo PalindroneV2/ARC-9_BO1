@@ -170,7 +170,7 @@ SWEP.CaseBones = {}
 
 SWEP.IronSights = {
     Pos = Vector(-3.73, -3, 1.2),
-    Ang = Angle(0, -0.625, 0),
+    Ang = Angle(0.05, -0.625, 0),
     Magnification = 1.1,
     -- AssociatedSlot = 9,
     CrosshairInSights = false,
@@ -383,7 +383,7 @@ SWEP.Attachments = {
         PrintName = "Tactical Left",
         DefaultCompactName = "TAC L",
         Bone = "j_gun",
-        Pos = Vector(15, -0.5, 0.25),
+        Pos = Vector(15, -0.4, 0.25),
         Ang = Angle(0, 0, 90),
         Category = "bo1_rail_tactical",
     },
@@ -391,7 +391,7 @@ SWEP.Attachments = {
         PrintName = "Tactical Right",
         DefaultCompactName = "TAC R",
         Bone = "j_gun",
-        Pos = Vector(15, 0.5, 0.25),
+        Pos = Vector(15, 0.65, 0.25),
         Ang = Angle(0, 0, -90),
         Category = "bo1_rail_tactical",
     },
