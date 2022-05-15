@@ -1,7 +1,8 @@
 VertexlitGeneric
 {
 	$basetexture	"models\weapons\arc9\waw\waw_bar\bar"
-	$bumpmap	"models\weapons\arc9\waw\waw_bar\bar_n"
+	$bumpmap	"models\weapons\arc9\waw\normalmap"
+	$phongexponenttexture "models\weapons\arc9\waw\waw_bar\bar_s"
 	
 	//"$color2" "[ .4 .4 .4 ]"
 	"$blendtintbybasealpha" "1"
