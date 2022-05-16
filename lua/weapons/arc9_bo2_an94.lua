@@ -356,13 +356,13 @@ SWEP.Attachments = {
 }
 
 SWEP.HideBones = {
-    -- "tag_clip",
-    -- "tag_fast_mag",
+    "j_ammo",
     "tag_clip1",
 }
 SWEP.ReloadHideBoneTables = {
     [1] = {"tag_clip"},
     [2] = {"tag_clip1"},
+    [3] = {"j_ammo"},
 }
 
 SWEP.Animations = {

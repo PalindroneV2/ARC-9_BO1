@@ -341,3 +341,49 @@ ATT.ShootEntForceUBGL = 25000
 ATT.MuzzleParticleUBGL = "muzzleflash_minimi"
 
 ARC9.LoadAttachment(ATT, "bo1_ubgl_flamer")
+
+ATT = {}
+
+ATT.PrintName = [[Rifle Grenade]]
+ATT.CompactName = [[GRENADIER]]
+ATT.Icon = Material("entities/bo1_atts/ubs/rifle_grenade.png", "mips smooth")
+ATT.Description = [[
+    Grenade launching contraption affixed to the muzzle of your rifle.
+]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC-9 - WAW Attachments"
+ATT.Free = false
+
+ATT.Category = {"waw_muzz_grenade"}
+ATT.ActivateElements = {"waw_rifgrenade"}
+-- ATT.ExcludeElements = {"waw_rifgrenade"}
+
+ATT.AimDownSightsTimeMult = 1.1
+ATT.SprintToFireTimeMult = 1.1
+
+ATT.UBGL = true
+ATT.UBGLAmmo = "smg1_grenade"
+ATT.UBGLClipSize = 1
+ATT.UBGLFiremode = 1
+ATT.UBGLFiremodeName = "SMG1 GL"
+ATT.UBGLChamberSize = 0
+ATT.ShootVolumeUBGL = 110
+
+ATT.SpreadUBGL = -0.2
+
+ATT.FirstShootSoundUBGL = false
+ATT.ShootSoundUBGL = "ARC9_BO1.M203_Fire"
+ATT.DistantShootSoundUBGL = false
+ATT.HasSightsUBGL = false
+
+ATT.EnterUBGLSound = "ARC9_BO1.M203_Open"
+ATT.ExitUBGLSound = "ARC9_BO1.M203_Close"
+
+ATT.ShootEntUBGL = "arc9_bo1_25mm_he"
+ATT.ShootEntForceUBGL = 15000
+
+ATT.MuzzleParticleUBGL = "muzzleflash_m79"
+
+ARC9.LoadAttachment(ATT, "waw_muzz_grenadier")

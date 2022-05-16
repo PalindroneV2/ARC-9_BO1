@@ -12,4 +12,4 @@ ATT.Free = false
 
 ATT.Category = {"waw_bayonet"}
 ATT.ActivateElements = {"waw_bayonet"}
-ATT.ExcludeElements = {"waw_rifgrenade"}
+-- ATT.ExcludeElements = {"waw_rifgrenade"}
