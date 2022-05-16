@@ -16,7 +16,7 @@ ATT.Free = false
 
 ATT.Model = "models/weapons/arc9/atts/bo1_suppressor.mdl"
 ATT.Scale = Vector(1, 0.75, 0.75)
-ATT.ModelOffset = Vector(0.4, 0, 0)
+ATT.ModelOffset = Vector(0, 0, 0)
 
 ATT.Category = {"bo1_muzzle_pistol"}
 ATT.MuzzleDevice = true

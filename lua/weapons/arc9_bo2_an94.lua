@@ -289,13 +289,6 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
     return anim .. suffix
 end
 
-SWEP.HideBones = {
-    -- "tag_ammo2",
-}
-SWEP.ReloadHideBoneTables = {
-    -- [1] = {"tag_ammo2"},
-}
-
 SWEP.Attachments = {
     {
         Hidden = true,
