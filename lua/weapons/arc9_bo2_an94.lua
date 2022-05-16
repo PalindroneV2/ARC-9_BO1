@@ -228,6 +228,11 @@ SWEP.AttachmentElements = {
             {5,1},
         },
     },
+    ["bo1_gp25"] = {
+        Bodygroups = {
+            {4,1},
+        },
+    },
     ["mount"] = {
         Bodygroups = {
             {2,1},
@@ -293,14 +298,6 @@ SWEP.ReloadHideBoneTables = {
 
 SWEP.Attachments = {
     {
-        PrintName = "Magazine",
-        DefaultCompactName = "STD",
-        Bone = "tag_clip",
-        Pos = Vector(0.5, 0, 0),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_mag_ext"},
-    },
-    {
         Hidden = true,
         Bone = "j_gun",
         Pos = Vector(-3, 0, 2.65),
@@ -312,7 +309,7 @@ SWEP.Attachments = {
         PrintName = "Muzzle",
         DefaultCompactName = "Birdcage",
         Bone = "j_barrel",
-        Pos = Vector(9, 0, -1),
+        Pos = Vector(8, 0, -1),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_muzzle"},
     },
