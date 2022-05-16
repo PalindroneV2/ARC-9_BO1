@@ -330,13 +330,13 @@ SWEP.Animations = {
     ["draw"] = {
         Source = "draw",
         Time = 1,
-        SoundTable = {
+        EventTable = {
         },
     },
     ["ready_doom"] = {
         Source = "draw",
         Time = 1,
-        SoundTable = {
+        EventTable = {
         },
     },
     ["holster"] = {
@@ -346,9 +346,9 @@ SWEP.Animations = {
     ["ready"] = {
         Source = "first_draw",
         Time = 1,
-        SoundTable = {
-            {s = "ArcCW_BO1.MK_Back", t = 17 / 30},
-            {s = "ArcCW_BO1.MK_Fwd", t = 23 / 30}
+        EventTable = {
+            {s = "ARC9_BO1.MK_Back", t = 17 / 30},
+            {s = "ARC9_BO1.MK_Fwd", t = 23 / 30}
         },
     },
     ["fire"] = {
@@ -366,19 +366,19 @@ SWEP.Animations = {
     ["reload"] = {
         Source = "reload_pap",
         Time = 54 / 30,
-        SoundTable = {
-            {s = "ArcCW_BO1.MK_Shell", t = 21 / 30},
-            {s = "ArcCW_BO1.MK_Back", t = 40 / 30},
-            {s = "ArcCW_BO1.MK_Fwd", t = 44 / 30},
+        EventTable = {
+            {s = "ARC9_BO1.MK_Shell", t = 21 / 30},
+            {s = "ARC9_BO1.MK_Back", t = 40 / 30},
+            {s = "ARC9_BO1.MK_Fwd", t = 44 / 30},
         },
     },
     ["reload_empty"] = {
         Source = "reload_pap",
         Time = 54 / 30,
-        SoundTable = {
-            {s = "ArcCW_BO1.MK_Shell", t = 21 / 30},
-            {s = "ArcCW_BO1.MK_Back", t = 40 / 30},
-            {s = "ArcCW_BO1.MK_Fwd", t = 44 / 30},
+        EventTable = {
+            {s = "ARC9_BO1.MK_Shell", t = 21 / 30},
+            {s = "ARC9_BO1.MK_Back", t = 40 / 30},
+            {s = "ARC9_BO1.MK_Fwd", t = 44 / 30},
         },
     },
     ["cycle"] = {
@@ -387,9 +387,9 @@ SWEP.Animations = {
         },
         Time = 30 / 35,
         ShellEjectAt = 10 / 35,
-        SoundTable = {
-            {s = "ArcCW_BO1.MK_Back", t = 10 / 30},
-            {s = "ArcCW_BO1.MK_Fwd", t = 14 / 30},
+        EventTable = {
+            {s = "ARC9_BO1.MK_Back", t = 10 / 30},
+            {s = "ARC9_BO1.MK_Fwd", t = 14 / 30},
         },
     },
     ["cycle_doom"] = {
@@ -398,7 +398,7 @@ SWEP.Animations = {
         },
         Time = 30 / 35,
         ShellEjectAt = 10 / 35,
-        SoundTable = {
+        EventTable = {
         },
     },
     ["cycle_iron"] = {
@@ -407,9 +407,9 @@ SWEP.Animations = {
         },
         Time = 20 / 35,
         ShellEjectAt = 5 / 35,
-        SoundTable = {
-            {s = "ArcCW_BO1.MK_Back", t = 2 / 30},
-            {s = "ArcCW_BO1.MK_Fwd", t = 9 / 30},
+        EventTable = {
+            {s = "ARC9_BO1.MK_Back", t = 2 / 30},
+            {s = "ARC9_BO1.MK_Fwd", t = 9 / 30},
         },
     },
     ["cycle_iron_doom"] = {
@@ -418,30 +418,30 @@ SWEP.Animations = {
         },
         Time = 20 / 35,
         ShellEjectAt = 5 / 35,
-        SoundTable = {
+        EventTable = {
         },
     },
     ["reload_start"] = {
         Source = "reload_in_empty",
         Time = 30 / 30,
         RestoreAmmo = 1,
-        SoundTable = {
-            {s = "ArcCW_BO1.MK_Shell", t = 21 / 30},
+        EventTable = {
+            {s = "ARC9_BO1.MK_Shell", t = 21 / 30},
         },
     },
     ["reload_insert"] = {
         Source = "reload_loop",
         Time = 16 / 30,
-        SoundTable = {
-            {s = "ArcCW_BO1.MK_Shell", t = 10 / 30},
+        EventTable = {
+            {s = "ARC9_BO1.MK_Shell", t = 10 / 30},
         },
     },
     ["reload_finish"] = {
         Source = "reload_out",
         Time = 22 / 30,
-        SoundTable = {
-            {s = "ArcCW_BO1.MK_Back", t = 8 / 30},
-            {s = "ArcCW_BO1.MK_Fwd", t = 12 / 30},
+        EventTable = {
+            {s = "ARC9_BO1.MK_Back", t = 8 / 30},
+            {s = "ARC9_BO1.MK_Fwd", t = 12 / 30},
         },
     },
     ["enter_sprint"] = {

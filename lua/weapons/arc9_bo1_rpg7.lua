@@ -327,9 +327,9 @@ SWEP.Animations = {
     --     Time = 93 / 30,
     --     MinProgress = 0.1,
     --     EventTable = {
-    --         {s = "ArcCW_BO1.RPG_Slide", t = 25 / 30},
-    --         {s = "ArcCW_BO1.RPG_Futz", t = 33 / 30},
-    --         {s = "ArcCW_BO1.RPG_Latch", t = 40 / 30},
+    --         {s = "ARC9_BO1.RPG_Slide", t = 25 / 30},
+    --         {s = "ARC9_BO1.RPG_Futz", t = 33 / 30},
+    --         {s = "ARC9_BO1.RPG_Latch", t = 40 / 30},
     --     },
     -- },
     ["enter_sprint"] = {

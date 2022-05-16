@@ -142,12 +142,12 @@ SWEP.ShootVolume = 125
 SWEP.ShootPitch = 100
 SWEP.ShootPitchVariation = 0
 
-SWEP.ShootSound = "ArcCW_BO2.MP7_Fire"
-SWEP.ShootSoundSilenced = "ArcCW_BO2.MSMC_Sil"
+SWEP.ShootSound = "ARC9_BO2.MP7_Fire"
+SWEP.ShootSoundSilenced = "ARC9_BO2.MSMC_Sil"
 SWEP.DistantShootSound = {
-    "^weapons/arccw/bo2_generic_smg/dist1.wav",
-    "^weapons/arccw/bo2_generic_smg/dist2.wav",
-    "^weapons/arccw/bo2_generic_smg/dist3.wav"
+    "^weapons/ARC9/bo2_generic_smg/dist1.wav",
+    "^weapons/ARC9/bo2_generic_smg/dist2.wav",
+    "^weapons/ARC9/bo2_generic_smg/dist3.wav"
 }
 
 --SWEP.MuzzleEffect = "muzzleflash_4"
@@ -401,7 +401,7 @@ SWEP.Animations = {
         Source = "first_draw",
         Time = 40 / 30,
         EventTable = {
-            {s = "ArcCW_BO2.MP7_Charge", t = 10 / 30},
+            {s = "ARC9_BO2.MP7_Charge", t = 10 / 30},
         },
     },
     ["fire"] = {
@@ -418,17 +418,17 @@ SWEP.Animations = {
         Source = "reload",
         Time = 2.866,
         EventTable = {
-            {s = "ArcCW_BO2.MP7_Out", t = 16 / 30},
-            {s = "ArcCW_BO2.MP7_In", t = 51 / 30}
+            {s = "ARC9_BO2.MP7_Out", t = 16 / 30},
+            {s = "ARC9_BO2.MP7_In", t = 51 / 30}
         },
     },
     ["reload_empty"] = {
         Source = "reload_empty",
         Time = 3.70,
         EventTable = {
-            {s = "ArcCW_BO2.MP7_Out", t = 16 / 30},
-            {s = "ArcCW_BO2.MP7_In", t = 56 / 30},
-            {s = "ArcCW_BO2.MP7_Charge", t = 84 / 30},
+            {s = "ARC9_BO2.MP7_Out", t = 16 / 30},
+            {s = "ARC9_BO2.MP7_In", t = 56 / 30},
+            {s = "ARC9_BO2.MP7_Charge", t = 84 / 30},
         },
     },
     ["reload_fast"] = {
@@ -436,8 +436,8 @@ SWEP.Animations = {
         Time = 2.4333,
         MinProgress = 40 / 30,
         EventTable = {
-            {s = "ArcCW_BO2.MP7_Out", t = 10 / 30},
-            {s = "ArcCW_BO2.MP7_In", t = 40 / 30},
+            {s = "ARC9_BO2.MP7_Out", t = 10 / 30},
+            {s = "ARC9_BO2.MP7_In", t = 40 / 30},
         },
     },
     ["reload_empty_fast"] = {
@@ -445,9 +445,9 @@ SWEP.Animations = {
         Time = 2.7333,
         MinProgress = 55 / 30,
         EventTable = {
-            {s = "ArcCW_BO2.MP7_Out", t = 10 / 30},
-            {s = "ArcCW_BO2.MP7_In", t = 40 / 30},
-            {s = "ArcCW_BO1.M16_Button", t = 59 / 30},
+            {s = "ARC9_BO2.MP7_Out", t = 10 / 30},
+            {s = "ARC9_BO2.MP7_In", t = 40 / 30},
+            {s = "ARC9_BO1.M16_Button", t = 59 / 30},
         },
     },
     ["enter_sprint"] = {
@@ -473,7 +473,7 @@ SWEP.Animations = {
         Source = "first_draw_grip",
         Time = 0.83,
         EventTable = {
-            {s = "ArcCW_BO2.MP7_Grip", t = 1 / 30},
+            {s = "ARC9_BO2.MP7_Grip", t = 1 / 30},
         },
     },
     ["holster_grip"] = {
@@ -484,7 +484,7 @@ SWEP.Animations = {
         Source = "first_draw_grip",
         Time = 1.333,
         EventTable = {
-            {s = "ArcCW_BO2.MP7_Grip", t = 30 / 30},
+            {s = "ARC9_BO2.MP7_Grip", t = 30 / 30},
         },
     },
     ["fire_grip"] = {
@@ -501,17 +501,17 @@ SWEP.Animations = {
         Source = "reload_grip",
         Time = 2.866,
         EventTable = {
-            {s = "ArcCW_BO2.MP7_Out", t = 16 / 30},
-            {s = "ArcCW_BO2.MP7_In", t = 51 / 30}
+            {s = "ARC9_BO2.MP7_Out", t = 16 / 30},
+            {s = "ARC9_BO2.MP7_In", t = 51 / 30}
         },
     },
     ["reload_empty_grip"] = {
         Source = "reload_empty_grip",
         Time = 3.70,
         EventTable = {
-            {s = "ArcCW_BO2.MP7_Out", t = 16 / 30},
-            {s = "ArcCW_BO2.MP7_In", t = 56 / 30},
-            {s = "ArcCW_BO2.MP7_Charge", t = 84 / 30},
+            {s = "ARC9_BO2.MP7_Out", t = 16 / 30},
+            {s = "ARC9_BO2.MP7_In", t = 56 / 30},
+            {s = "ARC9_BO2.MP7_Charge", t = 84 / 30},
         },
     },
     ["reload_grip_fast"] = {
@@ -519,8 +519,8 @@ SWEP.Animations = {
         Time = 2.4333,
         MinProgress = 40 / 30,
         EventTable = {
-            {s = "ArcCW_BO2.MP7_Out", t = 10 / 30},
-            {s = "ArcCW_BO2.MP7_In", t = 40 / 30},
+            {s = "ARC9_BO2.MP7_Out", t = 10 / 30},
+            {s = "ARC9_BO2.MP7_In", t = 40 / 30},
         },
     },
     ["reload_empty_grip_fast"] = {
@@ -528,9 +528,9 @@ SWEP.Animations = {
         Time = 2.7333,
         MinProgress = 55 / 30,
         EventTable = {
-            {s = "ArcCW_BO2.MP7_Out", t = 10 / 30},
-            {s = "ArcCW_BO2.MP7_In", t = 40 / 30},
-            {s = "ArcCW_BO1.M16_Button", t = 59 / 30},
+            {s = "ARC9_BO2.MP7_Out", t = 10 / 30},
+            {s = "ARC9_BO2.MP7_In", t = 40 / 30},
+            {s = "ARC9_BO1.M16_Button", t = 59 / 30},
         },
     },
     ["enter_sprint_grip"] = {
@@ -553,7 +553,7 @@ SWEP.Animations = {
     ["reload_ubgl"] = {
         Source = "select_fire_grip",
         EventTable = {
-            {s = "ArcCW_BO1.M16_Button", t = 10 / 30},
+            {s = "ARC9_BO1.M16_Button", t = 10 / 30},
         },
     },
 }

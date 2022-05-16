@@ -139,7 +139,7 @@ SWEP.ShootPitch = 100
 SWEP.ShootPitchVariation = 0
 
 SWEP.ShootSound = "ARC9_BO1.Makarov_Fire"
-SWEP.ShootSoundSilenced = "ArcCW_BO2.Pistol_Sil"
+SWEP.ShootSoundSilenced = "ARC9_BO2.Pistol_Sil"
 
 --SWEP.MuzzleEffect = "muzzleflash_4"
 SWEP.MuzzleParticle = "muzzleflash_pistol" -- Used for some muzzle effects.
