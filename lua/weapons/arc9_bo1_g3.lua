@@ -372,7 +372,7 @@ SWEP.HookP_NameChange = function(self, name)
         gunname = "HK G3"
     end
 
-    if attached["barrel_psg1"] then
+    if attached["barrel_psg1"] and cal != "3" then
         gunname = "HK PSG1"
     end
 
