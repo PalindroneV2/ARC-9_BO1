@@ -43,8 +43,8 @@ SWEP.CustomCamoTexture = "models/weapons/arc9/bo1/camos/black_detail"
 SWEP.CustomCamoScale = 1
 SWEP.CustomBlendFactor = 1
 
-SWEP.DamageMax = 42
-SWEP.DamageMin = 25 -- damage done at maximum range
+SWEP.DamageMax = 60
+SWEP.DamageMin = 40 -- damage done at maximum range
 SWEP.RangeMax = 8000
 SWEP.RangeMin = 2000
 SWEP.Penetration = 8
