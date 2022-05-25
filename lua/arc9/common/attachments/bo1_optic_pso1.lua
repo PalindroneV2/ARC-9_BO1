@@ -17,7 +17,7 @@ ATT.Free = false
 -- ATT.Folder = "SCOPE"
 
 ATT.Category = {"bo1_svd_scope"}
-
+ATT.ActivateElements = {"lowsight", "svd_scope"}
 
 ATT.Model = "models/weapons/arc9/atts/bo1_pso.mdl"
 ATT.Scale = 1

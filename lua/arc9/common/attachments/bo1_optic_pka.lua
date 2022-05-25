@@ -17,7 +17,7 @@ ATT.Free = false
 ATT.Folder = "AK SIGHTS"
 
 ATT.Category = {"bo1_optic_ak"}
-ATT.ActivateElements = {"ak_optic"}
+ATT.ActivateElements = {"ak_optic", "lowsight"}
 
 ATT.Model = "models/weapons/arc9/atts/bo1_pka.mdl"
 ATT.Scale = 1

@@ -292,6 +292,13 @@ SWEP.AttachmentElements = {
             {6,5},
         },
     },
+    ["svd_scope"] = {
+        AttPosMods = {
+            [7] = {
+                Pos = Vector(1.5, -0.1, 2.6),
+            }
+        }
+    },
 }
 
 SWEP.Hook_ModifyBodygroups = function(self, data)
@@ -614,23 +621,14 @@ SWEP.Attachments = {
         Category = {"bo1_optic", "bo1_rail_riser"},
         InstalledElements = {"rail"},
         ExcludeElements = {"nobacksight"},
-        MergeSlots = {6,7},
+        MergeSlots = {7},
     },
     {
         Hidden = true,
         Bone = "j_gun",
         Pos = Vector(1.5, 0, 2.6),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic_ak", "bo1_alt_irons"},
-        InstalledElements = {"lowsight"},
-    },
-    {
-        Hidden = true,
-        Bone = "j_gun",
-        Pos = Vector(1.5, -0.1, 2.6),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_svd_scope"},
-        InstalledElements = {"lowsight"},
+        Category = {"bo1_optic_ak", "bo1_alt_irons", "bo1_svd_scope"},
     },
     {
         PrintName = "Handguard",
