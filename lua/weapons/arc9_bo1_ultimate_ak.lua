@@ -614,7 +614,7 @@ SWEP.Attachments = {
         Category = {"bo1_optic", "bo1_rail_riser"},
         InstalledElements = {"rail"},
         ExcludeElements = {"nobacksight"},
-        MergeSlots = {7,8},
+        MergeSlots = {6,7},
     },
     {
         Hidden = true,

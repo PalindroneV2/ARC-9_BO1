@@ -164,9 +164,9 @@ ATT.Attachments = {
         PrintName = "Underbarrel",
         DefaultName = "None",
         Bone = "j_gun",
-        Pos = Vector(2, 0, 2.1),
+        Pos = Vector(3.5, 0, 1.9),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_tishina","bo1_underbarrel_grips"},
+        Category = {"bo1_rail_underbarrel"},
     },
 }
 
