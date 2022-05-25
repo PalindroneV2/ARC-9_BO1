@@ -14,7 +14,7 @@ ATT.Cons = {}
 ATT.SortOrder = 4
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
-ATT.Folder = "SCOPE"
+-- ATT.Folder = "SCOPE"
 
 ATT.Category = {"bo1_awm_scope"}
 ATT.ActivateElements = {"awm_scope"}

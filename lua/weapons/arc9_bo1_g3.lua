@@ -444,7 +444,7 @@ SWEP.Attachments = {
         Pos = Vector(-2.5, 0.125, 4),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_psg1_scope"},
-        Installed = "bo1_opitc_hensoldt",
+        Installed = "bo1_optic_hensoldt",
     },
     {
         PrintName = "Barrel",
