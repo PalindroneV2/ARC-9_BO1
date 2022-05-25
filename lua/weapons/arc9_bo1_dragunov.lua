@@ -281,7 +281,7 @@ SWEP.Attachments = {
         Pos = Vector(3, 0, 3.05),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_svd_scope"},
-        -- Installed = "bo1_optic_pso1",
+        Installed = "bo1_optic_pso1",
     },
     {
         PrintName = "Muzzle",

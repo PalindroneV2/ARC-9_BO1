@@ -118,6 +118,60 @@ ATT.Attachments = {
 
 ARC9.LoadAttachment(ATT, "bo1_ultimate_ak_barrel_short")
 
+ATT = {}
+
+ATT.PrintName = [[AS Val Integrally Suppressed Barrel]]
+ATT.CompactName = [[AS Val]]
+ATT.Icon = Material("entities/bo1_atts/barrel/barrel.png")
+ATT.Description = [[Integrally suppressed barrel from the AS Val, a weapon used mostly by special forces.
+]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 2
+ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.Free = false
+
+ATT.Category = {"bo1_ultimate_ak_barrel"}
+ATT.ActivateElements = {"barrel_asval"}
+ATT.RequireElements = {"ak74"}
+ATT.RPM = 850
+
+ATT.MuzzleDevice = true
+ATT.Silencer = true
+ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.DistantShootSoundOverride = ""
+
+ATT.ShootVolumeMult = 4 / 5
+ATT.ShootPitchMult = 1.1
+
+ATT.SpreadMult = 1.5
+ATT.RecoilMult = 1.25
+ATT.SpreadMultHipFire = 0.7
+ATT.SpreadMultMove = 0.7
+
+ATT.SpeedMult = 1.025
+ATT.SpeedMultSights = 1.125
+
+ATT.AimDownSightsTimeMult = 0.75
+ATT.SprintToFireTimeMult = 0.8
+
+ATT.RangeMaxMult = 0.6
+ATT.RangeMinMult = 0.6
+ATT.PhysBulletMuzzleVelocityMult = 0.6
+
+ATT.Attachments = {
+    {
+        PrintName = "Underbarrel",
+        DefaultName = "None",
+        Bone = "j_gun",
+        Pos = Vector(2, 0, 2.1),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_tishina","bo1_underbarrel_grips"},
+    },
+}
+
+ARC9.LoadAttachment(ATT, "bo1_ultimate_ak_barrel_asval")
+
 -- GOLD
 
 ATT = {}
@@ -157,6 +211,7 @@ ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 --ATT.Free = true
 
 ATT.Category = {"bo1_ultimate_ak_handg"}
+ATT.ActivateElements = {"wornhand"}
 ATT.RecoilMult = 1.1
 ATT.AimDownSightsTimeMult = 0.9
 
@@ -179,6 +234,7 @@ ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 --ATT.Free = true
 
 ATT.Category = {"bo1_ultimate_ak_handg"}
+ATT.ActivateElements = {"modernhand"}
 ATT.RecoilMult = 1.1
 ATT.AimDownSightsTimeMult = 0.9
 
@@ -390,6 +446,37 @@ ATT.Trivia = {
 ARC9.LoadAttachment(ATT, "bo1_ultimate_ak_receiver_rpk")
 
 -- STOCKS
+
+ATT = {}
+
+ATT.PrintName = "VSS Sniper Stock"
+ATT.CompactName = "VSS"
+ATT.Icon = Material("entities/bo1_atts/other/stock.png")
+ATT.Description = [[
+    Offers best possible recoil control but handling and mobility are hindered.
+]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.Free = false
+
+ATT.Category = {"bo1_ultimate_ak_stock"}
+ATT.ActivateElements = {"stock_vss", "stock_svd"}
+
+ATT.RecoilMult = 0.4
+ATT.RecoilUpMult = 0.5
+ATT.RecoilRandomSideMult = 0.5
+ATT.RecoilAutoControlMult = 2
+ATT.SpeedMult = 0.95
+ATT.AimDownSightsTimeMult = 1.2
+ATT.SprintToFireTimeMult = 1.2
+ATT.SpeedMultSights = 0.825
+ATT.SpreadMultHipFire = 1.2
+ATT.SpreadMultMove = 1.2
+ATT.SpeedMultShooting = 0.95
+
+ARC9.LoadAttachment(ATT, "bo1_ultimate_ak_stock_vss")
 
 ATT = {}
 

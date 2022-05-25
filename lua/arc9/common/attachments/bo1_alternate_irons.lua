@@ -10,3 +10,4 @@ ATT.Free = true
 
 ATT.Category = {"bo1_alt_irons"}
 ATT.ActivateElements = {"bo1_irons_alt"}
+ATT.ExcludeElements = {"barrel_asval"}

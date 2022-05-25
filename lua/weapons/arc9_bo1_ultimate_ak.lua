@@ -222,27 +222,32 @@ SWEP.AttachmentElements = {
     },
     ["stock_l"] = {
         Bodygroups = {
-            {6,1}
+            {7,1}
         },
     },
     ["stock_m"] = {
         Bodygroups = {
-            {6,2}
+            {7,2}
         },
     },
     ["stock_h"] = {
         Bodygroups = {
-            {6,3}
+            {7,3}
         },
     },
     ["stock_tac"] = {
         Bodygroups = {
-            {6,4}
+            {7,4}
         },
     },
     ["stock_underfolder"] = {
         Bodygroups = {
-            {6,5}
+            {7,5}
+        },
+    },
+    ["stock_vss"] = {
+        Bodygroups = {
+            {7,6}
         },
     },
     ["ak74"] = {
@@ -269,22 +274,22 @@ SWEP.AttachmentElements = {
     },
     ["bo1_gp25"] = {
         Bodygroups = {
-            {5,1},
+            {6,1},
         },
     },
     ["bo1_mk"] = {
         Bodygroups = {
-            {5,2},
+            {6,2},
         },
     },
     ["bo1_tishina"] = {
         Bodygroups = {
-            {5,4},
+            {6,4},
         },
     },
     ["bo1_bipod"] = {
         Bodygroups = {
-            {5,5},
+            {6,5},
         },
     },
 }
@@ -297,6 +302,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local barrel = 0
     local irons = 0
     local hand = 0
+    local grip = 0
     if attached["bo1_ultimate_ak_barrel_short"] then
         barrel = 1
         irons = 4
@@ -305,6 +311,11 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         barrel = 2
         irons = 8
         hand = 3
+    elseif attached["barrel_asval"] then
+        vm:SetBodygroup(0,3)
+        barrel = 3
+        irons = 12
+        hand = 7
     end
     if attached["bo1_irons_alt"] then
         irons = irons + 1
@@ -312,7 +323,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     if attached["rail"] then
         irons = irons + 2
     end
-    if attached["bo1_optic_ak"] then
+    if attached["lowsight"] then
         irons = irons + 3
     end
     if attached["bo1_ultimate_ak_mag_45_dual"] then
@@ -323,17 +334,22 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     end
 
     if attached["ak74"] and barrel == 0 then
-        vm:SetBodygroup(7, 1)
+        vm:SetBodygroup(8, 1)
         if attached["bo1_muzzle"] then
-            vm:SetBodygroup(7, 0)
+            vm:SetBodygroup(8, 0)
         end
     end
 
-    if attached["bo1_ultimate_ak_furniture_bakelite_worn"] then
+    if attached["wornhand"] then
         hand = hand + 1
-    elseif attached["bo1_ultimate_ak_furniture_modern"] then
+        grip = 1
+    elseif attached["modernhand"] then
         hand = hand + 2
         if barrel == 2 then hand = 5 end
+        grip = 2
+    end
+    if attached["stock_vss"] then
+        grip = 3
     end
 
     local camo = 0
@@ -351,6 +367,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     vm:SetBodygroup(3, barrel)
     vm:SetBodygroup(2, irons)
     vm:SetBodygroup(4, hand)
+    vm:SetBodygroup(5, grip)
 
     local newpos = Vector(-2.425, -2, 0.65)
     local newang = Angle(0.05, 0.4, 0)
@@ -370,6 +387,10 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
             newpos = Vector(-2.425, -2, 0.8)
             newang = Angle(0.05, 0.5, 0)
         end
+    end
+    if barrel == 3 then
+        newpos = Vector(-2.425, -2, 1)
+        newang = Angle(0.05, 0, 0)
     end
     if attached["rpk"] then
         newpos = Vector(-2.065, -2, 0.65)
@@ -445,8 +466,27 @@ SWEP.HookP_NameChange = function(self, name)
         gunname = model .. cal .. folding .. u
     end
 
+    if attached["barrel_asval"] then
+        gunname = "AS Val"
+        if attached["stock_vss"] then
+            gunname = "VSS Vintorez"
+        end
+    end
+
     if attached["bo1_pap"] then
         gunname = "Reznov's Revenge"
+        if attached["barrel_krinkov"] then
+            gunname = "AKMfu2"
+            if attached["ak74"] then
+                gunname = "AK-74fu2"
+            end
+        end
+        if barrel["barrel_rpk"] then
+            gunname = "R115 Resonator"
+        end
+        if barrel["barrel_asval"] then
+            gunname = "Total Silence"
+        end
     end
 
     return gunname
@@ -554,7 +594,7 @@ SWEP.Attachments = {
         Pos = Vector(22.1, 0, 1),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_muzzle"},
-        ExcludeElements = {"barrel_krinkov", "barrel_rpk"},
+        ExcludeElements = {"barrel_krinkov", "barrel_rpk", "barrel_asval"},
     },
     {
         PrintName = "Underbarrel",
@@ -563,7 +603,7 @@ SWEP.Attachments = {
         Pos = Vector(11, 0, 0.2),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_gp25", "bo1_mk","bo1_grips"},
-        ExcludeElements = {"barrel_krinkov", "barrel_rpk"},
+        ExcludeElements = {"barrel_krinkov", "barrel_rpk", "barrel_asval"},
     },
     {
         PrintName = "Optic",
@@ -574,14 +614,23 @@ SWEP.Attachments = {
         Category = {"bo1_optic", "bo1_rail_riser"},
         InstalledElements = {"rail"},
         ExcludeElements = {"nobacksight"},
-        MergeSlots = {7},
+        MergeSlots = {7,8},
     },
     {
         Hidden = true,
         Bone = "j_gun",
         Pos = Vector(1.5, 0, 2.6),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic_ak", "bo1_alt_irons"}
+        Category = {"bo1_optic_ak", "bo1_alt_irons"},
+        InstalledElements = {"lowsight"},
+    },
+    {
+        Hidden = true,
+        Bone = "j_gun",
+        Pos = Vector(1.5, -0.1, 2.6),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_svd_scope"},
+        InstalledElements = {"lowsight"},
     },
     {
         PrintName = "Handguard",
@@ -590,6 +639,7 @@ SWEP.Attachments = {
         Pos = Vector(8, 0, 1.5),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ultimate_ak_handg"},
+        ExcludeElements = {"barrel_asval"},
     },
     {
         PrintName = "Plating",
