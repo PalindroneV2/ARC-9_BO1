@@ -284,7 +284,6 @@ SWEP.Attachments = {
         Pos = Vector(38.5, 0.15, 2.7),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_muzzle"},
-        ExcludeElements = {"barrel_sd"}
     },
     {
         PrintName = "Magazine",
@@ -315,7 +314,7 @@ SWEP.Attachments = {
         Pos = Vector(-0.75, 0.15, 0),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_awm_scope"},
-        Installed = "bo1_opitc_farview",
+        Installed = "bo1_optic_farview",
     },
     {
         PrintName = "Ammunition",
@@ -329,7 +328,7 @@ SWEP.Attachments = {
         PrintName = "Bipod",
         DefaultCompactName = "None",
         Bone = "j_gun",
-        Pos = Vector(16, 0, 3),
+        Pos = Vector(20, 0, 0),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_bipod"},
         Installed = "bo1_bipod_integrated",

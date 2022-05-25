@@ -2,8 +2,8 @@
 {
 	"$basetexture" "models/weapons/arc9/bo1/bo1_l96/awm_c"
     $bumpmap   "models/weapons/arc9/bo1/bo1_l96/awm_n"
-	$detail "models/weapons/arc9/bo1/l96_od"
-	$detailblendmode 0
+	$detail "models/weapons/arc9/bo1/camos/true_od"
+	$detailblendmode 4
 	$detailblendfactor 0.5
 	$detailscale 10
     
