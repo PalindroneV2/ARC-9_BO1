@@ -1,20 +1,20 @@
 SWEP.Base = "arc9_base"
 SWEP.Spawnable = true -- this obviously has to be set to true
-SWEP.Category = "ARC-9 - Black Ops II" -- edit this if you like
+SWEP.Category = "ARC-9 - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "FN Ballista"
-SWEP.Class = "Sniper Rifle"
+SWEP.PrintName = "Barrett M82"
+SWEP.Class = "Anti-Materiel Precision Rifle"
 SWEP.Description = [[
-    A belgian high-caliber sniper rifle designed as a competitor to the Remington MSR and the AWM.
+    American .50 caliber precision rifle. Very heavy, very powerful and extremely dangerous in the right hands.
 ]]
 SWEP.Trivia = {
-    Manufacturer = "FN Herstal",
-    Calibre = ".338 Lapua",
-    Mechanism = "Bolt-Action",
-    Country = "Belgium",
-    Year = 2012,
-    Games = [[Call of Duty: Black Ops II]]
+    Manufacturer = "Barrett",
+    Calibre = ".50 BMG",
+    Mechanism = "Recoil Operated, Rotating Bolt",
+    Country = "USA",
+    Year = 1980,
+    Games = [[COD4, MW2, MW3, BO2, BOCW]]
 }
 SWEP.Credits = {
     Author = "Palindrone"
@@ -24,30 +24,29 @@ SWEP.Slot = 2
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/arc9/c_bo2_ballista.mdl"
-SWEP.WorldModel = "models/weapons/arc9/w_bo2_ballista.mdl"
-SWEP.WorldModelMirror = "models/weapons/arc9/w_bo2_ballista.mdl"
+SWEP.ViewModel = "models/weapons/arc9/c_bo2_m82.mdl"
+SWEP.WorldModel = "models/weapons/arc9/c_bo2_m82.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    Pos        =    Vector(-5.75, 4.75, -6),
-    Ang        =    Angle(-5, -2.5, 180),
+    Pos        =    Vector(-4.5, 4, -7.5),
+    Ang        =    Angle(-6, 0, 180),
     Bone    =    "ValveBiped.Bip01_R_Hand",
-    Scale = 1.15,
+    Scale = 1,
 }
 SWEP.ViewModelFOVBase = 75
 
-SWEP.DefaultBodygroups = "0000000000"
+SWEP.DefaultBodygroups = "00000000000"
 
-SWEP.DamageMax = 150
-SWEP.DamageMin = 90 -- damage done at maximum range
+SWEP.DamageMax = 200
+SWEP.DamageMin = 50 -- damage done at maximum range
 SWEP.RangeMax = 10000
-SWEP.RangeMin = 4000
-SWEP.Penetration = 8
+SWEP.RangeMin = 2500
+SWEP.Penetration = 12.5
 SWEP.DamageType = DMG_BULLET
-SWEP.ShootEntity = nil -- entity to fire, if any
+SWEP.ShootEnt = nil -- entity to fire, if any
 SWEP.EntityMuzzleVelocity = 10000
 
-SWEP.PhysBulletMuzzleVelocity = 1500 * 39.37
+SWEP.PhysBulletMuzzleVelocity = 2500 * 39.37
 
 SWEP.BodyDamageMults = {
     [HITGROUP_HEAD] = 2,
@@ -80,10 +79,10 @@ SWEP.RecoilRandomSide = 0.6
 SWEP.RecoilDissipationRate = 40 -- How much recoil dissipates per second.
 SWEP.RecoilResetTime = 0.01 -- How long the gun must go before the recoil pattern starts to reset.
 
-SWEP.RecoilAutoControl = 0.5
-SWEP.RecoilKick = 1
+SWEP.RecoilAutoControl = 0.3
+SWEP.RecoilKick = 2
 
-SWEP.Spread = math.rad(1.15 / 37.5)
+SWEP.Spread = math.rad(2.3 / 37.5)
 SWEP.SpreadAddRecoil = math.rad(75 / 37.5)
 
 SWEP.SpreadAddHipFire = math.rad(250 / 37.5)
@@ -99,7 +98,7 @@ SWEP.VisualRecoilCenter = Vector(0, 0, 0)
 SWEP.VisualRecoilPunch = 0
 SWEP.VisualRecoilMultSights = 0
 
-SWEP.Speed = 0.95
+SWEP.Speed = 0.8
 
 SWEP.ShootWhileSprint = true
 SWEP.ReloadInSights = false
@@ -120,13 +119,7 @@ SWEP.Firemodes = {
         Mode = 1,
     },
 }
-SWEP.ManualActionChamber = 1 -- How many shots we go between needing to cycle again.
-SWEP.ManualAction = true -- Pump/bolt action. Play the "cycle" animation after firing, when the trigger is released.
-SWEP.ManualActionNoLastCycle = false -- Do not cycle on the last shot.
-SWEP.SlamFire = false
-SWEP.CycleTime = 1
-
-SWEP.NPCWeaponType = {"weapon_ar2", "weapon_smg1"}
+SWEP.NPCWeaponType = {"weapon_ar2", "weapon_crossbow"}
 SWEP.NPCWeight = 100
 
 SWEP.FreeAimRadius = 0 -- In degrees, how much this gun can free aim in hip fire.
@@ -138,18 +131,18 @@ SWEP.SwayMultSights = 0
 
 SWEP.Ammo = "ar2" -- what ammo type the gun uses
 
-SWEP.ShootVolume = 140
-SWEP.ShootPitch = 100
+SWEP.ShootVolume = 170
+SWEP.ShootPitch = 80
 SWEP.ShootPitchVariation = 0
 
-SWEP.ShootSound = "ARC9_BO2.Ballista_Fire"
+SWEP.ShootSound = "ARC9_BO2.DSR50_Fire"
 SWEP.ShootSoundSilenced = "ARC9_BO2.Ballista_Sil"
 SWEP.DistantShootSound = {"^weapons/ARC9/bo2_generic_sniper/dist/flux_l.wav", "^weapons/ARC9/bo2_generic_sniper/dist/flux_r.wav"}
 
 --SWEP.MuzzleEffect = "muzzleflash_4"
 SWEP.MuzzleParticle = "muzzleflash_g3" -- Used for some muzzle effects.
 
-SWEP.ShellModel = "models/shells/shell_338mag.mdl"
+SWEP.ShellModel = "models/shells/shell_556.mdl"
 SWEP.ShellPitch = 90
 SWEP.ShellScale = 1.5
 
@@ -167,8 +160,8 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(-4.115, -3, 0.75),
-    Ang = Angle(0.015, 0, 0),
+    Pos = Vector(-2.91, 0, 1),
+    Ang = Angle(0.05, 0.1, 0),
     Magnification = 1.1,
     -- AssociatedSlot = 9,
     CrosshairInSights = false,
@@ -186,8 +179,8 @@ SWEP.AnimDraw = ACT_HL2MP_GESTURE_RANGE_ATTACK_KNIFE
 SWEP.ActivePos = Vector(0, 0, -1)
 SWEP.ActiveAng = Angle(0, 0, -5)
 
-SWEP.BipodPos = Vector(-4.115, 0, -3)
-SWEP.BipodAng = Angle(0.015, 0, 0)
+SWEP.BipodPos = Vector(-2.91, 1, -2)
+SWEP.BipodAng = Angle(0.05, 0, 0)
 
 SWEP.CrouchPos = Vector(0, 0, -1)
 SWEP.CrouchAng = Angle(0, 0, -5)
@@ -207,9 +200,9 @@ SWEP.BarrelLength = 25
 SWEP.ExtraSightDist = 5
 
 SWEP.AttachmentElements = {
-    ["bo2_fastmag"] = {
+    ["extmag"] = {
         Bodygroups = {
-            {4,1}
+            {1,1}
         },
     },
     ["mount"] = {
@@ -217,18 +210,16 @@ SWEP.AttachmentElements = {
             {2,1}
         },
     },
+    ["muzzle"] = {
+        Bodygroups = {
+            {4,1}
+        },
+    },
 }
 
 SWEP.Hook_ModifyBodygroups = function(self, data)
     local vm = data.model
     local attached = data.elements
-    local CUSTSTATE = self:GetCustomize()
-
-    if CUSTSTATE then
-        vm:SetBodygroup(0,1)
-    else
-        vm:SetBodygroup(0,0)
-    end
 
     if attached["bo1_bipod"] then
         vm:SetBodygroup(3,1)
@@ -247,27 +238,14 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     vm:SetSkin(camo)
 end
 
-SWEP.Hook_TranslateAnimation = function (self, anim)
-    local attached = self:GetElements()
-
-    if attached["bo2_fastmag"] then
-        if anim == "reload" then
-            return "fast"
-        end
-        if anim == "reload_empty" then
-            return "fast_empty"
-        end
-    end
-end
-
 SWEP.HookP_NameChange = function(self, name)
 
     local attached = self:GetElements()
 
-    local gunname = "FN Ballista"
+    local gunname = "Barrett M82"
 
     if attached["bo1_pap"] then
-        gunname = "Infused Arbalest"
+        gunname = "Macro Annihilator"
     end
 
     return gunname
@@ -285,59 +263,61 @@ SWEP.Attachments = {
     {
         PrintName = "Optic",
         Bone = "j_gun",
-        Pos = Vector(5, 0, 3.225),
+        Pos = Vector(4, 0.075, 3.8),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_rail_optic"},
+        Category = {"bo1_optic","bo1_rail_riser"},
         InstalledElements = {"mount"},
-        MergeSlots = {7}
-    },
-    {
-        PrintName = "Muzzle",
-        Bone = "j_gun",
-        Scale = Vector(1.5, 1.15, 1.15),
-        Pos = Vector(29, 0, 2.1),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_muzzle"},
-    },
-    {
-        PrintName = "Magazine",
-        DefaultCompactName = "MAG",
-        Bone = "j_gun",
-        Pos = Vector(5, 0, -1),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo2_fastmag"},
-    },
-    {
-        PrintName = "Underbarrel",
-        DefaultCompactName = "UB",
-        Bone = "j_gun",
-        Pos = Vector(12, 0.15, 0.2),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_rail_underbarrel"},
-    },
-    {
-        PrintName = "Cosmetic",
-        Bone = "j_gun",
-        Pos = Vector(-12.5, 0, 2.65),
-        Ang = Angle(0, 0, 0),
-        Category = {"universal_camo"},
+        MergeSlots = {3}
     },
     {
         Hidden = true,
         Bone = "j_gun",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Category = {"bo2_ballista_scope"},
-        Installed = "bo2_optic_ballista",
+        Category = {"bo2_m82_scope"},
         InstalledElements = {"mount"},
+        Installed = "bo2_optic_m82",
+    },
+    {
+        PrintName = "Muzzle",
+        Bone = "j_recoil",
+        Scale = Vector(1.4, 1.4, 1.4),
+        Pos = Vector(13, 0, 0),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_muzzle"},
+        InstalledElements = {"muzzle"},
+    },
+    {
+        PrintName = "Underbarrel",
+        DefaultCompactName = "UB",
+        Bone = "j_gun",
+        Pos = Vector(11, 0, 1.1),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_rail_underbarrel"},
+    },
+    {
+        PrintName = "Cosmetic",
+        Bone = "j_gun",
+        Pos = Vector(0, 0, 0),
+        Ang = Angle(0, 0, 0),
+        Category = {"universal_camo"},
+        Icon_Offset = Vector(-5, 0, 2.65),
     },
     {
         PrintName = "Ammunition",
         DefaultCompactName = "AMMO",
         Bone = "j_gun",
-        Pos = Vector(5, 0, -4),
+        Pos = Vector(7, 0, -2),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ammo", "bo1_pap"},
+    },
+    {
+        Hidden = true,
+        Bone = "j_gun",
+        Pos = Vector(-3, 0, 2.65),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_stock_h"},
+        Installed = "bo1_stock_heavy",
     },
     {
         PrintName = "Bipod",
@@ -350,79 +330,40 @@ SWEP.Attachments = {
     }
 }
 
--- SWEP.RejectAttachments = {
---     ["bo1_cosmetic_black"] = true,
--- }
-
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
-        Time = 1 / 30,
+        Time = 1 / 35,
     },
     ["draw"] = {
         Source = "draw",
-        Time = 1,
+        Time = 1.86,
     },
     ["holster"] = {
         Source = "holster",
-        Time = 0.75,
+        Time = 1.45,
     },
     ["ready"] = {
         Source = "draw",
-        Time = 1,
+        Time = 1.86,
     },
     ["fire"] = {
         Source = {"fire"},
-        Time = 6 / 30,
+        Time = 13 / 35,
+        ShellEjectAt = 0,
     },
     ["fire_iron"] = {
         Source = "fire_ads",
-        Time = 7 / 30,
-    },
-    ["cycle"] = {
-        Source = "cycle",
-        Time = 35 / 30, -- 45 / 30 ; 30 / 30
-        ShellEjectAt = 0.5,
-        EventTable = {
-            {s = "ARC9_BO2.Sniper_BoltUp", t = 6 / 30}, -- 9 / 30 ; 6 / 30
-            {s = "ARC9_BO2.Sniper_BoltBack", t = 10 / 30}, -- 15 / 30 ; 10 / 30
-            {s = "ARC9_BO2.Sniper_BoltFwd", t = 20 / 30}, -- 30 / 30 ; 20 / 30
-            {s = "ARC9_BO2.Sniper_BoltDown", t = 24 / 30}, -- 36 / 30 ; 24 / 30
-        },
-        IKTimeLine = {
-            {
-                t = 0,
-                lhik = 1,
-                rhik = 1
-            },
-        },
-    },
-    ["cycle_iron"] = {
-        Source = "cycle_ads",
-        Time = 35 / 30, -- 45 / 30 ; 30 / 30
-        ShellEjectAt = 0.5,
-        EventTable = {
-            {s = "ARC9_BO2.Sniper_BoltUp", t = 6 / 30}, -- 9 / 30 ; 6 / 30
-            {s = "ARC9_BO2.Sniper_BoltBack", t = 10 / 30}, -- 15 / 30 ; 10 / 30
-            {s = "ARC9_BO2.Sniper_BoltFwd", t = 20 / 30}, -- 30 / 30 ; 20 / 30
-            {s = "ARC9_BO2.Sniper_BoltDown", t = 24 / 30}, -- 36 / 30 ; 24 / 30
-        },
-        IKTimeLine = {
-            {
-                t = 0,
-                lhik = 1,
-                rhik = 1
-            },
-        },
+        Time = 13 / 35,
+        ShellEjectAt = 0,
     },
     ["reload"] = {
         Source = "reload",
-        Time = 120 / 30,
+        Time = 114 / 35,
         EventTable = {
-            {s = "ARC9_BO2.Sniper_ClipOut", t = 27 / 30},
-            {s = "ARC9_BO2.Sniper_ClipIn", t = 80 / 30},
+            {s = "ARC9_BO2.Sniper_ClipOut", t = 0.5},
+            {s = "ARC9_BO2.Sniper_ClipIn", t = 1.9},
         },
-        MinProgress = 90 / 30,
         IKTimeLine = {
             {
                 t = 0,
@@ -448,47 +389,13 @@ SWEP.Animations = {
     },
     ["reload_empty"] = {
         Source = "reload_empty",
-        Time = 173 / 30,
+        Time = 142 / 35,
         EventTable = {
-            {s = "ARC9_BO2.Sniper_BoltUp", t = 9 / 30},
-            {s = "ARC9_BO2.Sniper_BoltBack", t = 13 / 30},
-            {s = "ARC9_BO2.Sniper_ClipOut", t = 60 / 30},
-            {s = "ARC9_BO2.Sniper_ClipIn", t = 113 / 30},
-            {s = "ARC9_BO2.Sniper_BoltFwd", t = 155 / 30},
-            {s = "ARC9_BO2.Sniper_BoltDown", t = 159 / 30},
+            {s = "ARC9_BO2.Sniper_ClipOut", t = 0.5},
+            {s = "ARC9_BO2.Sniper_ClipIn", t = 1.9},
+            {s = "ARC9_BO2.Sniper_BoltBack", t = 2.9},
+            {s = "ARC9_BO2.Sniper_BoltFwd", t = 3.1},
         },
-        MinProgress = 160 / 30,
-        IKTimeLine = {
-            {
-                t = 0,
-                lhik = 1,
-                rhik = 1
-            },
-            {
-                t = 0.5,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.75,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.85,
-                lhik = 1,
-                rhik = 1
-            },
-        },
-    },
-    ["fast"] = {
-        Source = "fast",
-        Time = 120 / 35,
-        EventTable = {
-            {s = "ARC9_BO2.Sniper_ClipOut", t = 27 / 35},
-            {s = "ARC9_BO2.Sniper_ClipIn", t = 80 / 35},
-        },
-        MinProgress = 90 / 35,
         IKTimeLine = {
             {
                 t = 0,
@@ -501,47 +408,12 @@ SWEP.Animations = {
                 rhik = 0
             },
             {
-                t = 0.77,
+                t = 0.6,
                 lhik = 0,
                 rhik = 0
             },
             {
-                t = 0.87,
-                lhik = 1,
-                rhik = 1
-            },
-        },
-    },
-    ["fast_empty"] = {
-        Source = "fast_empty",
-        Time = 173 / 35,
-        EventTable = {
-            {s = "ARC9_BO2.Sniper_BoltUp", t = 9 / 35},
-            {s = "ARC9_BO2.Sniper_BoltBack", t = 13 / 35},
-            {s = "ARC9_BO2.Sniper_ClipOut", t = 60 / 35},
-            {s = "ARC9_BO2.Sniper_ClipIn", t = 121 / 35},
-            {s = "ARC9_BO2.Sniper_BoltFwd", t = 155 / 35},
-            {s = "ARC9_BO2.Sniper_BoltDown", t = 159 / 35},
-        },
-        MinProgress = 160 / 35,
-        IKTimeLine = {
-            {
-                t = 0,
-                lhik = 1,
-                rhik = 1
-            },
-            {
-                t = 0.5,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.75,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.85,
+                t = 0.7,
                 lhik = 1,
                 rhik = 1
             },
@@ -549,14 +421,14 @@ SWEP.Animations = {
     },
     ["enter_sprint"] = {
         Source = "sprint_in",
-        Time = 10 / 30
+        Time = 1,
     },
     ["idle_sprint"] = {
         Source = "sprint_loop",
-        Time = 30 / 35
+        Time = 30 / 40
     },
     ["exit_sprint"] = {
         Source = "sprint_out",
-        Time = 10 / 30
+        Time = 1,
     },
 }
