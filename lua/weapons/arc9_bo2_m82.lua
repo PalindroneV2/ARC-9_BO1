@@ -69,9 +69,9 @@ SWEP.ReloadTime = 1
 SWEP.Crosshair = true
 SWEP.CanBlindFire = false
 
-SWEP.Recoil = 1
+SWEP.Recoil = 2
 SWEP.RecoilSide = 0.7
-SWEP.RecoilUp = 1
+SWEP.RecoilUp = 2
 
 SWEP.RecoilRandomUp = 1
 SWEP.RecoilRandomSide = 0.6
@@ -98,7 +98,7 @@ SWEP.VisualRecoilCenter = Vector(0, 0, 0)
 SWEP.VisualRecoilPunch = 0
 SWEP.VisualRecoilMultSights = 0
 
-SWEP.Speed = 0.8
+SWEP.Speed = 0.75
 
 SWEP.ShootWhileSprint = true
 SWEP.ReloadInSights = false
