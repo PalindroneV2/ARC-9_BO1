@@ -11,5 +11,5 @@ ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Category = {"bo1_ithaca_strap"}
-ATT.ActivateElements = {"strap"}
+ATT.ActivateElements = {"strap", "ammo_pouch"}
 ATT.ReloadTimeMult = 0.9
