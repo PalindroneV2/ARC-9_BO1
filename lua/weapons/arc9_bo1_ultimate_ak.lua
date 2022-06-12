@@ -481,19 +481,20 @@ SWEP.HookP_NameChange = function(self, name)
     end
 
     if attached["bo1_pap"] then
-        gunname = "Reznov's Revenge"
+        local papname = "Reznov's Revenge"
         if attached["barrel_krinkov"] then
-            gunname = "AKMfu2"
+            papname = "AKMfu2"
             if attached["ak74"] then
-                gunname = "AK-74fu2"
+                papname = "AK-74fu2"
             end
         end
         if barrel["barrel_rpk"] then
-            gunname = "R115 Resonator"
+            papname = "R115 Resonator"
         end
-        if barrel["barrel_asval"] then
-            gunname = "Total Silence"
+        if attached["barrel_asval"] then
+            papname = "Total Silence"
         end
+        return papname
     end
 
     return gunname
