@@ -15,10 +15,11 @@ VertexlitGeneric
 
 	$detailblendmode 4
 	$detailblendfactor 1
+	$detailscale 0.7
 	Proxies {
 		CustomCamo {
 			camoTexture $detail
-			camoScale $detailscale
+			// camoScale $detailscale
             blend $detailblendfactor
 		}
 	}
