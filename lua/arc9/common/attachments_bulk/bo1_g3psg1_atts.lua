@@ -232,3 +232,24 @@ ATT.DamageMinAdd = 15
 ATT.RPMAdd = -100
 
 ARC9.LoadAttachment(ATT, "bo1_g3_mag_psg1")
+
+ATT = {}
+
+ATT.PrintName = [[20 Round Standard Magazine]]
+ATT.CompactName = [[20 RND]]
+ATT.Icon = Material("entities/bo1_atts/ammo/ext_mag.png")
+ATT.Description = [[
+    Standard shorter magazine improves handling and reload times.
+]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.Free = false
+
+ATT.Category = {"bo1_hk21_mag"}
+ATT.ActivateElements = {"small_mag"}
+ATT.ClipSize = 20
+ATT.ReloadTimeMult = 0.8
+
+ARC9.LoadAttachment(ATT, "bo1_hk21_mag_20")

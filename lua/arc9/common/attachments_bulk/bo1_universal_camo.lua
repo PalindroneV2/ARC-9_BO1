@@ -278,12 +278,12 @@ ARC9.LoadAttachment(ATT, "bo1_camo_nevada")
 
 ATT = {}
 
-ATT.PrintName = "Russian Desert"
+ATT.PrintName = "Afghan Desert"
 ATT.FullColorIcon = true
-ATT.CompactName = "DESERT RUS"
+ATT.CompactName = "AFHGAN"
 ATT.Icon = Material("entities/bo1_camos/desert_rus.png")
 ATT.Category = "universal_camo"
-ATT.Description = [[You would think the russians have no need for desert camouflage but here we are.]]
+ATT.Description = [[Ready to have your ass kicked by desert people with bolt-action rifles.]]
 ATT.MenuCategory = "ARC-9 - Camos"
 ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/desert_rus"
 ATT.Folder = "BO1 CAMOS/DESERT"
