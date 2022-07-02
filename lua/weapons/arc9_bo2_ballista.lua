@@ -347,7 +347,7 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"bo1_bipod"},
         Installed = "bo1_bipod_integrated",
-    }
+    },
 }
 
 -- SWEP.RejectAttachments = {
