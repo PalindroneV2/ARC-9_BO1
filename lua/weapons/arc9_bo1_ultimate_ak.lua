@@ -449,6 +449,7 @@ SWEP.HookP_NameChange = function(self, name)
 
     local attached = self:GetElements()
 
+    local gunname = "AK-47"
     local model = "AK"
     local cal = "-47"
     local u = ""
@@ -467,7 +468,7 @@ SWEP.HookP_NameChange = function(self, name)
         folding = "S"
     end
 
-    local gunname = model .. folding .. cal .. u
+    gunname = model .. folding .. cal .. u
     if u == "u" and cal == "-47" then
         cal = "M"
         gunname = model .. cal .. folding .. u
@@ -481,20 +482,19 @@ SWEP.HookP_NameChange = function(self, name)
     end
 
     if attached["bo1_pap"] then
-        local papname = "Reznov's Revenge"
+        gunname = "Reznov's Revenge"
         if attached["barrel_krinkov"] then
-            papname = "AKMfu2"
+            gunname = "AKMfu2"
             if attached["ak74"] then
-                papname = "AK-74fu2"
+                gunname = "AK-74fu2"
             end
         end
-        if barrel["barrel_rpk"] then
-            papname = "R115 Resonator"
+        if attached["barrel_rpk"] then
+            gunname = "R115 Resonator"
         end
         if attached["barrel_asval"] then
-            papname = "Total Silence"
+            gunname = "Total Silence"
         end
-        return papname
     end
 
     return gunname
