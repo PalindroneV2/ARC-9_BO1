@@ -1,14 +1,8 @@
 "VertexlitGeneric"
 {
 	"$basetexture" "models/weapons/arc9/bo2/bo2_hamr/hamr"
-	
 	"$bumpmap" "models/weapons/arc9/bo2/bo2_hamr/hamr_n"
-
-	"$detail" "models/weapons/arc9/bo1/gunmetal"
-	$detailblendmode 0
-	"$detailscale" "10"
-	"$detailblendfactor" "1"
-
+	"$phongexponenttexture" "models/weapons/arc9/bo2/bo2_hamr/hamr_s"
 	
 	//"$color2" "[ .4 .4 .4 ]"
 	"$blendtintbybasealpha" "1"

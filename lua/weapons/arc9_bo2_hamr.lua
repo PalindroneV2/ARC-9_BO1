@@ -70,7 +70,7 @@ SWEP.TracerEffect = "ARC9_tracer" -- The effect to use for hitscan tracers
 SWEP.TracerColor = Color(255, 255, 255) -- Color of tracers. Only works if tracer effect supports it. For physical bullets, this is compressed down to 9-bit color.
 
 SWEP.ChamberSize = 0 -- dont fucking change this again.
-SWEP.ClipSize = 30 -- DefaultClip is automatically set.
+SWEP.ClipSize = 50 -- DefaultClip is automatically set.
 SWEP.ReloadTime = 1
 
 SWEP.Crosshair = true
@@ -217,11 +217,6 @@ SWEP.BarrelLength = 25
 SWEP.ExtraSightDist = 5
 
 SWEP.AttachmentElements = {
-    ["bo1_bipod"] = {
-        Bodygroups = {
-            {3,1},
-        },
-    },
     ["mount"] = {
         Bodygroups = {
             {2,1},
@@ -243,12 +238,21 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         vm:SetBodygroup(1,0)
     end
 
+    if attached["bo1_bipod"] then
+        vm:SetBodygroup(3,0)
+    else
+        vm:SetBodygroup(3,2)
+    end
+    if self:GetBipod() then
+        vm:SetBodygroup(3,1)
+    end
+
     local camo = 0
     if attached["universal_camo"] then
         camo = 1
     end
     if attached["bo1_pap"] then
-        camo = 3
+        camo = 2
     end
     vm:SetSkin(camo)
 
@@ -274,19 +278,12 @@ SWEP.ReloadHideBoneTables = {
 
 SWEP.Attachments = {
     {
-        PrintName = "Magazine",
-        DefaultCompactName = "STD",
-        Bone = "tag_clip",
-        Pos = Vector(0.5, 0, 0),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_mag_ext"},
-    },
-    {
         PrintName = "Optic",
         Bone = "j_gun",
-        Pos = Vector(2.25, 0.105, 3.75),
+        Pos = Vector(3, -0.0125, 3.15),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic", "bo1_rail_riser", "bo2_m27_irons"},
+        Category = {"bo1_optic", "bo1_rail_riser"},
+        InstalledElements = {"mount"}
     },
     {
         Hidden = true,
@@ -300,14 +297,14 @@ SWEP.Attachments = {
         PrintName = "Muzzle",
         DefaultCompactName = "Three-Prong",
         Bone = "j_gun",
-        Pos = Vector(20, 0.105, 2.3),
+        Pos = Vector(26, 0, 1.35),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_muzzle"},
     },
     {
         PrintName = "Underbarrel",
         Bone = "j_gun",
-        Pos = Vector(11, 0.105, 1.35),
+        Pos = Vector(10, 0, 0.7),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_grips"},
     },
@@ -351,6 +348,15 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"bo1_bipod"},
         Installed = "bo1_bipod_integrated",
+    },
+    {
+        PrintName = "Tactical Right",
+        DefaultCompactName = "TAC R",
+        Bone = "j_gun",
+        Pos = Vector(11.5, 0.8, 1.25),
+        Ang = Angle(0, 0, -90),
+        Icon_Offset = Vector(0, 0, 0),
+        Category = {"bo1_tactical"},
     },
 }
 
