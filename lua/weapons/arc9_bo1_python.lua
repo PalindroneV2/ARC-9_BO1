@@ -75,7 +75,7 @@ SWEP.ShotgunReload = false
 SWEP.Crosshair = true
 SWEP.CanBlindFire = false
 
-SWEP.Recoil = 0.4
+SWEP.Recoil = 1
 SWEP.RecoilSide = 0.7
 SWEP.RecoilUp = 0.7
 
@@ -86,7 +86,7 @@ SWEP.RecoilDissipationRate = 40 -- How much recoil dissipates per second.
 SWEP.RecoilResetTime = 0.01 -- How long the gun must go before the recoil pattern starts to reset.
 
 SWEP.RecoilAutoControl = 0.5
-SWEP.RecoilKick = 1
+SWEP.RecoilKick = 3
 
 SWEP.Spread = math.rad(2 / 37.5)
 SWEP.SpreadAddRecoil = math.rad(100 / 37.5)
@@ -197,7 +197,7 @@ SWEP.RestAng = Angle(-4.633, 36.881, 0)
 SWEP.SprintPos = Vector(0, -2, -2)
 SWEP.SprintAng = Angle(0, 0, 0)
 
-SWEP.CustomizePos = Vector(15, 15, 4)
+SWEP.CustomizePos = Vector(17.5, 25, 4.25)
 SWEP.CustomizeAng = Angle(90, 0, 0)
 
 SWEP.BarrelLength = 9
@@ -205,6 +205,13 @@ SWEP.BarrelLength = 9
 SWEP.ExtraSightDist = 15
 
 SWEP.AttachmentElements = {
+    ["waw_aptrs"] = {
+        AttPosMods = {
+            [4] = {
+                Pos = Vector(0.5, 0.1, 2.9),
+            },
+        },
+    },
 }
 
 SWEP.Hook_ModifyBodygroups = function(self, data)
@@ -262,11 +269,11 @@ SWEP.Attachments = {
         PrintName = "Optics",
         DefaultCompactName = "Irons",
         Bone = "j_gun",
-        Pos = Vector(3, 0.075, 3),
+        Pos = Vector(3, 0.1, 3),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_optic"},
         Icon_Offset = Vector(0, 0, 1),
-        -- CorrectiveAng = Angle(0.05, 0.2, 0),
+        CorrectiveAng = Angle(0, 0.25, 0),
     },
     {
         PrintName = "Cylinder",

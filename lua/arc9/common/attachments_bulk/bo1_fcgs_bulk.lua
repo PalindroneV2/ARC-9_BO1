@@ -16,7 +16,7 @@ ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = true
 
 ATT.Category = {"bo1_fcg_auto", "bo1_fcgs"}
---ATT.ActivateElements = {"troy_iron"}
+ATT.ActivateElements = {"auto"}
 
 ATT.FiremodesOverride = {
     {
@@ -51,7 +51,7 @@ ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = true
 
 ATT.Category = {"bo1_fcg_bst", "bo1_fcgs"}
---ATT.ActivateElements = {"troy_iron"}
+ATT.ActivateElements = {"burst"}
 
 ATT.FiremodesOverride = {
     {
@@ -88,6 +88,7 @@ ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = true
 
 ATT.Category = {"bo1_fcg"}
+ATT.ActivateElements = {"rapid"}
 
 ATT.SpreadMult = 1.1
 ATT.SpreadMultRecoil = 1.05
@@ -112,6 +113,7 @@ ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = true
 
 ATT.Category = {"bo1_fcg_semi", "bo1_fcgs"}
+ATT.ActivateElements = {"semi", "sporting"}
 
 ATT.FiremodesOverride = {
     {
@@ -171,6 +173,7 @@ ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = true
 
 ATT.Category = {"waw_stinger"}
+ATT.ActivateElements = {"stinger"}
 
 ATT.SpreadMult = 1.3
 ATT.SpreadMultRecoil = 1.3

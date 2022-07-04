@@ -3,18 +3,18 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ARC-9 - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "ASP"
+SWEP.PrintName = "CZ 75"
 SWEP.Class = "Pistol"
 SWEP.Description = [[
-    A compact american pistol in SA/DA developed after World War II, once considered to replace the M1911.
-    Variants of it ended up in use by US Navy SEALs.
+    A high capacity czech pistol inpsired by the Browning Hi-Power.
+    The most common pistol in the Czech Republic, owned by civilians, law enforcement and military alike.
 ]]
 SWEP.Trivia = {
-    Manufacturer = "Smith & Wesson",
+    Manufacturer = "CZUB",
     Calibre = "9x19mm Parabellum",
     Mechanism = "Short Recoil",
-    Country = "USA",
-    Year = 1954,
+    Country = "Czechoslovakia",
+    Year = 1975,
     Games = [[BO1]]
 }
 SWEP.Credits = {
@@ -25,9 +25,8 @@ SWEP.Slot = 1
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/arc9/c_bo1_asp.mdl"
-SWEP.WorldModel = "models/weapons/arc9/w_bo1_asp.mdl"
-SWEP.WorldModelMirror = "models/weapons/arc9/w_bo1_asp.mdl"
+SWEP.ViewModel = "models/weapons/arc9/c_bo1_cz75.mdl"
+SWEP.WorldModel = "models/weapons/arc9/c_bo1_cz75.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
     Pos        =    Vector(-9.75, 3, -3.75),
@@ -67,13 +66,13 @@ SWEP.TracerEffect = "ARC9_tracer" -- The effect to use for hitscan tracers
 SWEP.TracerColor = Color(255, 255, 255) -- Color of tracers. Only works if tracer effect supports it. For physical bullets, this is compressed down to 9-bit color.
 
 SWEP.ChamberSize = 0 -- dont fucking change this again.
-SWEP.ClipSize = 8 -- DefaultClip is automatically set.
+SWEP.ClipSize = 12 -- DefaultClip is automatically set.
 SWEP.ReloadTime = 1
 
 SWEP.Crosshair = true
 SWEP.CanBlindFire = false
 
-SWEP.Recoil = 0.4
+SWEP.Recoil = 0.3
 SWEP.RecoilSide = 0.4
 SWEP.RecoilUp = 0.4
 
@@ -116,7 +115,7 @@ SWEP.SpeedMultBlindFire = 1
 SWEP.AimDownSightsTime = 0.2
 SWEP.SprintToFireTime = 0.2
 
-SWEP.RPM = 900
+SWEP.RPM = 600
 SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
@@ -139,8 +138,9 @@ SWEP.ShootVolume = 125
 SWEP.ShootPitch = 100
 SWEP.ShootPitchVariation = 0
 
-SWEP.ShootSound = "ARC9_BO1.ASP_Fire"
+SWEP.ShootSound = "ARC9_BO1.CZ75_Fire"
 SWEP.ShootSoundSilenced = "ARC9_BO2.Pistol_Sil"
+SWEP.DistantShootSound = "ARC9_BO1.CZ75_RingOff"
 
 --SWEP.MuzzleEffect = "muzzleflash_4"
 SWEP.MuzzleParticle = "muzzleflash_pistol" -- Used for some muzzle effects.
@@ -163,8 +163,8 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(-3.045, -1, 1.5),
-    Ang = Angle(0.1, 1.35, 0),
+    Pos = Vector(-2.2, -1, 1.95),
+    Ang = Angle(-0.1, -1.25, 0),
     Magnification = 1.1,
     --AssociatedSlot = 9,
     CrosshairInSights = false,
@@ -191,7 +191,7 @@ SWEP.RestAng = Angle(-4.633, 36.881, 0)
 SWEP.SprintPos = Vector(0, 0, 0)
 SWEP.SprintAng = Angle(0, 0, 0)
 
-SWEP.CustomizePos = Vector(17.5, 25, 4)
+SWEP.CustomizePos = Vector(15, 20, 4.5)
 SWEP.CustomizeAng = Angle(90, 0, 0)
 SWEP.CustomizeSnapshotFOV = 75
 
@@ -206,24 +206,15 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
 
     local vm = data.model
     local attached = data.elements
-    local camo = 4
-    local newpos = Vector(-3.15, -1, 1.5) -- M39
-    local newang = Angle(0.05, 1.35, 0) -- M39
+    local camo = 0
+    local newpos = Vector(-2.2, -1, 1.95) -- M39
+    local newang = Angle(-0.1, -1.5, 0) -- M39
 
-    vm:SetBodygroup(1,1)
-    if attached["asp"] then
-        vm:SetBodygroup(1,0)
-        newpos = Vector(-3.15, -1, 1.825)
-        newang = Angle(0, 0, 0)
+    if attached["auto"] then
+        vm:SetBodygroup(3,1)
     end
-    if attached["hush"] then
-        vm:SetBodygroup(1,2)
-        newpos = Vector(-3.065, -1, 1.5)
-        newang = Angle(0.35, 0.9, 0)
-    end
-
-    if attached["asp_grip"] then
-        camo = 0
+    if attached["newirons"] then
+        vm:SetBodygroup(4,1)
     end
     if attached["bo1_pap"] then
         camo = camo + 2
@@ -242,21 +233,15 @@ SWEP.HookP_NameChange = function(self, name)
 
     local attached = self:GetElements()
 
-    local gunname = "S&W M39"
+    local gunname = "CZ 75"
 
     if attached["bo1_pap"] then
-        gunname = "M115 STFU"
+        gunname = "Calamity"
     end
-    if attached["asp"] then
-        gunname = "ASP Pistol"
+    if attached["auto"] then
+        gunname = "CZ 75 Auto"
         if attached["bo1_pap"] then
-            gunname = "Atom Spliting Proton"
-        end
-    end
-    if attached["hush"] then
-        gunname = "Mk 22 Mod 0"
-        if attached["bo1_pap"] then
-            gunname = "Mk 115 Snake Eater"
+            gunname = "Calamity Jane"
         end
     end
 
@@ -281,20 +266,29 @@ SWEP.Attachments = {
         Category = {"bo1_ammo", "bo1_pap"},
     },
     {
-        PrintName = "Barrel",
-        DefaultCompactName = "M39",
+        PrintName = "Fire Control Group",
+        DefaultCompactName = "SEMI",
         Bone = "j_gun",
-        Pos = Vector(0, 0.1, 0.9),
+        Pos = Vector(1, 0.1, 0),
         Ang = Angle(0, 0, 0),
-        Category = "bo1_asp_barrel",
+        Category = "bo1_fcg_auto",
     },
     {
-        PrintName = "Grip",
-        DefaultCompactName = "WOOD",
+        PrintName = "Irons",
+        DefaultCompactName = "IRONS",
         Bone = "j_gun",
-        Pos = Vector(-2, 0, -0.5),
+        Pos = Vector(-2, 0.1, 1.2),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_asp_grip"},
+        Category = {"bo1_alt_irons"},
+    },
+    {
+        PrintName = "Muzzle",
+        DefaultCompactName = "None",
+        Bone = "j_gun",
+        Scale = Vector(1, 0.8, 0.8),
+        Pos = Vector(4.85, 0.1, 0.875),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_muzzle_pistol"},
     },
 }
 
@@ -314,89 +308,96 @@ SWEP.Animations = {
         Source = "idle_empty",
         Time = 1 / 30,
     },
-    ["draw"] = {
-        Source = "draw",
-        Time = 0.5,
-    },
     ["draw_empty"] = {
         Source = "draw_empty",
-        Time = 0.5,
+        Time = 1,
     },
-    ["holster"] = {
-        Source = "holster",
-        Time = 0.5,
+    ["draw"] = {
+        Source = "draw",
+        Time = 1,
     },
     ["holster_empty"] = {
         Source = "holster_empty",
-        Time = 0.5,
+        Time = 1,
+    },
+    ["holster"] = {
+        Source = "holster",
+        Time = 1,
     },
     ["ready"] = {
         Source = "first_draw",
-        Time = 1,
+        Time = 40 / 30,
         EventTable = {
-            {s = "ARC9_BO1.ASP_Back", t = 16 / 30},
-            {s = "ARC9_BO1.ASP_Fwd", t = 21 / 30}
+            {s = "ARC9_BO1.CZ75_Back", t = 16 / 30},
+            {s = "ARC9_BO1.CZ75_Fwd", t = 21 / 30}
         }
     },
     ["fire"] = {
         Source = {"fire"},
-        Time = 7 / 35,
+        Time = 7 / 30,
         ShellEjectAt = 0,
     },
     ["fire_empty"] = {
         Source = "fire_last",
-        Time = 7 / 35,
+        Time = 7 / 30,
         ShellEjectAt = 0,
     },
     ["fire_iron"] = {
         Source = "fire_ads",
-        Time = 7 / 35,
+        Time = 7 / 30,
         ShellEjectAt = 0,
     },
     ["fire_iron_empty"] = {
         Source = "fire_last",
-        Time = 7 / 35,
+        Time = 7 / 30,
         ShellEjectAt = 0,
     },
     ["reload"] = {
         Source = "reload",
-        Time = 50 / 35,
+        Time = 47 / 30,
         EventTable = {
-            {s = "ARC9_BO1.ASP_Out", t = 8 / 30},
-            {s = "ARC9_BO1.ASP_In", t = 25 / 30}
+            {s = "ARC9_BO1.CZ75_Out", t = 9 / 35},
+            {s = "ARC9_BO1.CZ75_Futz", t = 16 / 35},
+            {s = "ARC9_BO1.CZ75_In", t = 29 / 35}
         },
     },
     ["reload_empty"] = {
         Source = "reload_empty",
-        Time = 54 / 35,
+        Time = 58 / 30,
         EventTable = {
-            {s = "ARC9_BO1.ASP_Out", t = 8 / 30},
-            {s = "ARC9_BO1.ASP_In", t = 25 / 30},
-            {s = "ARC9_BO1.ASP_Fwd", t = 36 / 30}
+            {s = "ARC9_BO1.CZ75_Out", t = 9 / 35},
+            {s = "ARC9_BO1.CZ75_Futz", t = 16 / 35},
+            {s = "ARC9_BO1.CZ75_In", t = 29 / 35},
+            {s = "ARC9_BO1.CZ75_Back", t = 42 / 35},
+            {s = "ARC9_BO1.CZ75_Fwd", t = 45 / 35}
         },
     },
-    ["enter_sprint"] = {
-        Source = "idle",
-        Time = 1,
+    ["reload_ext"] = {
+        Source = "reload_ext",
+        Time = 47 / 30,
+        EventTable = {
+            {s = "ARC9_BO1.CZ75_Out", t = 9 / 35},
+            {s = "ARC9_BO1.CZ75_Futz", t = 16 / 35},
+            {s = "ARC9_BO1.CZ75_In", t = 29 / 35}
+        },
+    },
+    ["reload_empty_ext"] = {
+        Source = "reload_empty_ext",
+        Time = 58 / 30,
+        EventTable = {
+            {s = "ARC9_BO1.CZ75_Out", t = 9 / 35},
+            {s = "ARC9_BO1.CZ75_Futz", t = 16 / 35},
+            {s = "ARC9_BO1.CZ75_In", t = 29 / 35},
+            {s = "ARC9_BO1.CZ75_Back", t = 42 / 35},
+            {s = "ARC9_BO1.CZ75_Fwd", t = 45 / 35}
+        },
     },
     ["idle_sprint"] = {
         Source = "sprint_loop",
-        Time = 30 / 40,
-    },
-    ["exit_sprint"] = {
-        Source = "idle",
-        Time = 1,
-    },
-    ["enter_sprint_empty"] = {
-        Source = "idle_empty",
-        Time = 1,
+        Time = 30 / 40
     },
     ["idle_sprint_empty"] = {
         Source = "sprint_loop_empty",
-        Time = 30 / 40,
-    },
-    ["exit_sprint_empty"] = {
-        Source = "idle_empty",
-        Time = 1,
+        Time = 30 / 40
     },
 }
