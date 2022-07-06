@@ -45,6 +45,28 @@ ARC9.LoadAttachment(ATT, "bo1_mag_fast")
 
 ATT = {}
 
+ATT.PrintName = [[32 Round Magazine]]
+ATT.CompactName = [[32 RND]]
+ATT.Icon = Material("entities/bo1_atts/ammo/ext_mag.png")
+ATT.Description = [[
+Extended magazine holds double the ammunition.
+]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 5
+ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.Free = false
+
+ATT.Category = {"bo1_mac11_mag"}
+ATT.ClipSize = 32
+ATT.ReloadTimeMult = 1.1
+
+ATT.ActivateElements = {"extmag"}
+
+ARC9.LoadAttachment(ATT, "bo1_mac11_mag_ext")
+
+ATT = {}
+
 ATT.PrintName = [[50 Round Drum Magazine]]
 ATT.CompactName = [[DRUM]]
 ATT.Icon = Material("entities/bo1_atts/ammo/ext_mag.png")
