@@ -229,14 +229,6 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     vm:SetSkin(camo)
 end
 
--- SWEP.Hook_TranslateAnimation = function (self, anim)
---     local attached = self:GetElements()
-
---     local suffix = ""
-
---     return anim .. suffix
--- end
-
 SWEP.HookP_NameChange = function(self, name)
 
     local attached = self:GetElements()

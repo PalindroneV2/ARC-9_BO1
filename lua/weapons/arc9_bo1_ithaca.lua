@@ -3,7 +3,7 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ARC-9 - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Ithaca M37"
+SWEP.PrintName = "Ithaca Stakeout"
 SWEP.Class = "Shotgun"
 SWEP.Description = [[
     12 gauge pump-action shotgun widely used by civilians, law enforcement and even militaries. It's incredibly reliable operation makes it incredibly popular.
@@ -252,6 +252,19 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     end
     vm:SetSkin(camo)
 
+end
+
+SWEP.HookP_NameChange = function(self, name)
+
+    local attached = self:GetElements()
+
+    local gunname = "Ithaca M37 \"Stakeout\""
+
+    if attached["bo1_pap"] then
+        gunname = "Raid"
+    end
+
+    return gunname
 end
 
 SWEP.Hook_TranslateAnimation = function (self, anim)

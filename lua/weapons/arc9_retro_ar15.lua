@@ -587,9 +587,6 @@ SWEP.HookP_NameChange = function(self, name)
     local brand = "Colt "
     local model = "M16"
     local alt = "A1"
-    -- print("--ORIGINAL--")
-    -- print(name)
-    -- print(brand .. model .. alt)
 
     --A1 VARIANTS
     if attached["barrel_10"] then
@@ -693,9 +690,24 @@ SWEP.HookP_NameChange = function(self, name)
         end
     end
 
-    -- print("--NEW--")
-    -- print(brand .. model .. alt)
-    return brand .. model .. alt
+    local gunname = ""
+    gunname = brand .. model .. alt
+
+    if ((model .. alt) == "M16A1") and attached["fcg_semi"] and attached["woodcamo"] then gunname = "Service Rifle"
+        if attached["beowulf"] then gunname = "Survivalist's Rifle" end
+    end
+    if ((model .. alt) == "M607a") and attached["woodcamo"] then gunname = "Service Carbine" end
+
+    if attached["bo1_pap"] then gunname = "Skullpiercer"
+        if attached["fcg_skull"] then gunname = "Skullsplitter" end
+        if attached["bo1_m203"] then gunname = "Skullcrusher" end
+        if attached["carbine"] then gunname = "Predator"
+            if attached["a2_top"] then gunname = "Xeno Matter 4000" end
+        end
+        if (model .. alt) == "Mk. 12 SPR" then gunname = "Lone Survivor" end
+    end
+
+    return gunname
 end
 
 

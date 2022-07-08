@@ -12,6 +12,7 @@ ATT.MenuCategory = "ARC-9 - Camos"
 ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/ak_redwood"
 ATT.Folder = "BO1 CAMOS/WOODS"
 ATT.CustomCamoScale = 2
+ATT.ActivateElements = {"woodcamo"}
 
 ARC9.LoadAttachment(ATT, "bo1_camo_redwood")
 
@@ -27,6 +28,7 @@ ATT.MenuCategory = "ARC-9 - Camos"
 ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/m14_wood"
 ATT.Folder = "BO1 CAMOS/WOODS"
 ATT.CustomCamoScale = 2.5
+ATT.ActivateElements = {"woodcamo"}
 
 ARC9.LoadAttachment(ATT, "bo1_camo_m14wood")
 
@@ -42,6 +44,7 @@ ATT.MenuCategory = "ARC-9 - Camos"
 ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/olympia_wood"
 ATT.Folder = "BO1 CAMOS/WOODS"
 ATT.CustomCamoScale = 2.5
+ATT.ActivateElements = {"woodcamo"}
 
 ARC9.LoadAttachment(ATT, "bo1_camo_olyimpiawood")
 
@@ -57,6 +60,7 @@ ATT.MenuCategory = "ARC-9 - Camos"
 ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/ak_redwood"
 ATT.Folder = "BO1 CAMOS/WOODS"
 ATT.CustomCamoScale = 2.5
+ATT.ActivateElements = {"woodcamo"}
 
 ARC9.LoadAttachment(ATT, "bo1_camo_akwood")
 

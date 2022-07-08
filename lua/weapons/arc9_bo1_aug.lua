@@ -3,7 +3,7 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ARC-9 - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "AUG A1"
+SWEP.PrintName = "AUG"
 SWEP.Class = "Assault Rifle"
 SWEP.Description = [[
     Austrian bullpup assault rifle with a unique integrated scope.
@@ -281,6 +281,26 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     end
     vm:SetSkin(camo)
 
+end
+
+SWEP.HookP_NameChange = function(self, name)
+
+    local attached = self:GetElements()
+
+    local gunname = "Steyr AUG A2"
+
+    if attached["swarovski"] then
+        gunname = "Steyr AUG A1"
+    end
+
+    if attached["bo1_pap"] then
+        gunname = "AUG-M3NT"
+        if attached["bo1_ubgl_mk"] then
+            gunname = "AUG-50M3"
+        end
+    end
+
+    return gunname
 end
 
 SWEP.Hook_TranslateAnimation = function (self, anim)

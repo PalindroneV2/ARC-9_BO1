@@ -241,6 +241,19 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
 
 end
 
+SWEP.HookP_NameChange = function(self, name)
+
+    local attached = self:GetElements()
+
+    local gunname = "M1918A2 BAR"
+
+    if attached["bo1_pap"] then
+        gunname = "The Widow Maker"
+    end
+
+    return gunname
+end
+
 SWEP.Attachments = {
     {
         PrintName = "Perk-a-Cola",

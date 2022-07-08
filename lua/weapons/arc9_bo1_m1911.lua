@@ -191,8 +191,10 @@ SWEP.RestAng = Angle(-4.633, 36.881, 0)
 SWEP.SprintPos = Vector(0, 0, 0)
 SWEP.SprintAng = Angle(0, 0, 0)
 
-SWEP.CustomizePos = Vector(15, 15, 4)
+SWEP.CustomizePos = Vector(15, 25, 4)
 SWEP.CustomizeAng = Angle(90, 0, 0)
+SWEP.CustomizeSnapshotPos = Vector(0, -10, 0)
+SWEP.CustomizeSnapshotAng = Angle(0, 0, 0)
 
 SWEP.BarrelLength = 9
 
@@ -241,6 +243,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local attached = data.elements
     local newpos = Vector(-2.56, 0, 1)
     local newang = Angle(-0.15, 0.1, 0)
+    local snappos = Vector(1, -10, 0)
     local slide = 0
     local finish = 0
     local comp = 0
@@ -275,6 +278,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         if attached["1911_frame_hd"] then
             slide = 7
         end
+        snappos = Vector(-1, -10, 0)
     end
     if attached["1911_slide_short_modern"] then
         slide = 3
@@ -283,6 +287,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         if attached["m1911_comp"] then
             comp = 2
         end
+        snappos = Vector(-1, -10, 0)
     end
     if attached["1911_slide_baller"] then
         slide = 4
@@ -292,6 +297,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         if attached["1911_frame_hd"] then
             slide = 8
         end
+        snappos = Vector(2.5, -10, 0)
     end
     if attached["1911_slide_baller_modern"] then
         slide = 5
@@ -300,6 +306,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         if attached["m1911_comp"] then
             comp = 3
         end
+        snappos = Vector(2.5, -10, 0)
     end
 
     if attached["nickel"] then
@@ -334,8 +341,37 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         Magnification = 1.1,
     }
 
+    self.CustomizeSnapshotPos = snappos
+
 end
 
+SWEP.HookP_NameChange = function(self, name)
+
+    local attached = self:GetElements()
+
+    local gunname = "Colt M1911A1"
+
+    if attached["shortbarrel"] then
+        gunname = "Colt Officer"
+    end
+
+    if attached["longbarrel"] then
+        gunname = "AMT Hardballer"
+    end
+
+    if attached["bo1_pap"] then
+        gunname = "Pain"
+
+        if attached["shortbarrel"] then
+            gunname = "A Light Shining in Darkness"
+        end
+        if attached["longbarrel"] then
+            gunname = "Agent XLVII"
+        end
+    end
+
+    return gunname
+end
 
 SWEP.Hook_TranslateAnimation = function (self, anim)
     -- local attached = self:GetElements()

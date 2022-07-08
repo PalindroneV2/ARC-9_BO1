@@ -242,6 +242,23 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     self.SprintAng = newSprintAng
 end
 
+SWEP.HookP_NameChange = function(self, name)
+
+    local attached = self:GetElements()
+
+    local gunname = "M134 Minigun"
+
+    if attached["bo1_pap"] then
+        gunname = "Meat Grinder"
+    end
+
+    if attached["doom_ee"] then
+        gunname = "Chaingun"
+    end
+
+    return gunname
+end
+
 SWEP.Attachments = {
     [1] = {
         PrintName = "Perk-a-Cola",

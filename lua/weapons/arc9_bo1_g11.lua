@@ -3,7 +3,7 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ARC-9 - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "HK G11 K2"
+SWEP.PrintName = "HK G11"
 SWEP.Class = "Assault Rifle"
 SWEP.Description = [[
     Experimental german assault rifle for special operations which fired caseless rounds.
@@ -246,6 +246,19 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         vm:SetBodygroup(1,2)
     end
 
+end
+
+SWEP.HookP_NameChange = function(self, name)
+
+    local attached = self:GetElements()
+
+    local gunname = "HK G11 K2"
+
+    if attached["bo1_pap"] then
+        gunname = "Uhrwerk"
+    end
+
+    return gunname
 end
 
 SWEP.Attachments = {

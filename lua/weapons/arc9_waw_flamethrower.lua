@@ -232,7 +232,18 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     vm:SetSkin(camo)
 end
 
---TEST 3
+SWEP.HookP_NameChange = function(self, name)
+
+    local attached = self:GetElements()
+
+    local gunname = "M2 Flamethrower"
+
+    if attached["bo1_pap"] then
+        gunname = "FIW Nitrogen Cooled"
+    end
+
+    return gunname
+end
 
 SWEP.Attachments = {
     {

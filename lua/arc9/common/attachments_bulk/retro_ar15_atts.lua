@@ -1001,6 +1001,43 @@ ARC9.LoadAttachment(ATT, "retro_ar15_mag_9mm")
 
 ATT = {}
 
+ATT.PrintName = [[AR-15 10 round STANAG]]
+ATT.CompactName = [[STANAG 10]]
+ATT.Icon = Material("entities/bo1_atts/ammo/ext_mag.png")
+ATT.Description = [[
+    Original aluminum STANAG magazine that only holds 10 rounds due to old Californian gun control measures.
+    Though it has worse capacity it has been loaded with special hand-loaded round that increase performance for target shooting.
+    Marginally increases handling.
+]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 1
+ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.Free = true
+
+ATT.Category = {"retro_ar15_mag"}
+ATT.ActivateElements = {"20_mag", "ar15_handload"}
+ATT.RequiresElements = {"fcg_semi"}
+ATT.ReloadTimeMult = 0.8
+ATT.ClipSize = 10
+ATT.AimDownSightsTimeMult = 0.975
+ATT.SprintToFireTimeMult = 0.975
+
+ATT.RangeMaxMult = 1.25
+ATT.RangeMinMult = 1.25
+ATT.PenetrationMult = 1.25
+ATT.PhysBulletMuzzleVelocityMult = 1.25
+ATT.SpreadMult = 0.3
+ATT.SpreadMultHipFire = 1.25
+
+ATT.DamageMaxAdd = 5
+ATT.DamageMinAdd = 15
+ATT.RPMAdd = -100
+
+ARC9.LoadAttachment(ATT, "retro_ar15_mag_10")
+
+ATT = {}
+
 ATT.PrintName = [[AR-15 20 round STANAG]]
 ATT.CompactName = [[STANAG 20]]
 ATT.Icon = Material("entities/bo1_atts/ammo/ext_mag.png")
@@ -1010,7 +1047,7 @@ ATT.Description = [[
 ]]
 ATT.Pros = {}
 ATT.Cons = {}
-ATT.SortOrder = 0
+ATT.SortOrder = 1
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = true
 
@@ -1022,6 +1059,61 @@ ATT.AimDownSightsTimeMult = 0.975
 ATT.SprintToFireTimeMult = 0.975
 
 ARC9.LoadAttachment(ATT, "retro_ar15_mag_20")
+
+ATT = {}
+
+ATT.PrintName = [[10 Round .50 Beowulf Mag]]
+ATT.CompactName = [[BEOWULF]]
+ATT.Icon = Material("entities/bo1_atts/ammo/ext_mag.png")
+ATT.Description = [[
+    10 round magazine holds powerful .50 Beowulf rounds made for stopping vehicles that try to run military checkpoints.
+]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 5
+ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.Free = true
+
+ATT.Category = {"retro_ar15_mag"}
+ATT.ActivateElements = {"20_mag", "beowulf"}
+ATT.RequiresElements = {"fcg_semi"}
+ATT.ReloadTimeMult = 0.8
+ATT.ClipSize = 10
+ATT.AimDownSightsTimeMult = 0.975
+ATT.SprintToFireTimeMult = 0.975
+
+ATT.DamageMax = 50
+ATT.DamageMin = 35
+
+ATT.SpreadMult = 1.1
+ATT.RangeMaxMult = 0.95
+ATT.RangeMinMult = 0.95
+
+ATT.RecoilUpMult = 2
+ATT.RecoilSideMult = 1.75
+
+ATT.PenetrationMult = 1.1
+ATT.PhysBulletMuzzleVelocity = 900 * 39.37
+
+ATT.Ammo = "ar2"
+ATT.FirstShootSound = "ARC9_BO1.HK21_Fire"
+ATT.ShootSound = "ARC9_BO1.HK21_Fire"
+ATT.ShootSoundSilenced = "ARC9_BO1.FAL_Sil"
+ATT.DistantShootSound = "^weapons/ARC9/bo1_m16/ringoff_f.wav"
+ATT.MuzzleParticle = "muzzleflash_smg"
+
+ATT.Trivia = {
+    Manufacturer = "Alexander Arms",
+    Calibre = ".50 Beowulf",
+    Mechanism = "Direct Impingement",
+    Country = "USA",
+    Year = 2001,
+    Games = [[
+        Fallout: New Vegas
+    ]],
+}
+
+ARC9.LoadAttachment(ATT, "retro_ar15_mag_beowulf")
 
 ATT = {}
 

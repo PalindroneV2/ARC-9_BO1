@@ -229,6 +229,19 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     vm:SetSkin(camo)
 end
 
+SWEP.HookP_NameChange = function(self, name)
+
+    local attached = self:GetElements()
+
+    local gunname = "PPSh-41"
+
+    if attached["bo1_pap"] then
+        gunname = "The Reaper"
+    end
+
+    return gunname
+end
+
 SWEP.Hook_TranslateAnimation = function (self, anim)
     local attached = self:GetElements()
 

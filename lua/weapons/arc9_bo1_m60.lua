@@ -277,14 +277,18 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
 
 end
 
+SWEP.HookP_NameChange = function(self, name)
 
--- SWEP.Hook_TranslateAnimation = function (self, anim)
---     local attached = self:GetElements()
+    local attached = self:GetElements()
 
---     local suffix = ""
+    local gunname = "M60E3"
 
---     return anim .. suffix
--- end
+    if attached["bo1_pap"] then
+        gunname = "Slow Burn"
+    end
+
+    return gunname
+end
 
 SWEP.Attachments = {
     {

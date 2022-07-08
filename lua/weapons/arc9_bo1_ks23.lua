@@ -242,6 +242,23 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
     return anim .. g
 end
 
+SWEP.HookP_NameChange = function(self, name)
+
+    local attached = self:GetElements()
+
+    local gunname = "KS-23"
+
+    if attached["bo1_pap"] then
+        gunname = "Gaubitsa"
+    end
+
+    if attached["doom_ee"] then
+        gunname = "Shotgun"
+    end
+
+    return gunname
+end
+
 SWEP.Hook_ModifyBodygroups = function(self, data)
 
     local vm = data.model

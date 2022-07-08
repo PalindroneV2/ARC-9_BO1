@@ -3,7 +3,7 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ARC-9 - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "9K34 Strela-3"
+SWEP.PrintName = "Strela-3"
 SWEP.Class = "Missile Launcher"
 SWEP.Description = [[
     Man-portable air defense system developed in the Soviet Union.
@@ -347,6 +347,19 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     if attached["bo1_pap"] then
         vm:SetSkin(2)
     end
+end
+
+SWEP.HookP_NameChange = function(self, name)
+
+    local attached = self:GetElements()
+
+    local gunname = "9K34 Strela-3"
+
+    if attached["bo1_pap"] then
+        gunname = "Stripe"
+    end
+
+    return gunname
 end
 
 SWEP.Attachments = {

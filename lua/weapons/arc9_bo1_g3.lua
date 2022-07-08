@@ -368,7 +368,7 @@ SWEP.HookP_NameChange = function(self, name)
         len = "5"
     end
     gunname = "HK" .. len .. cal
-    if len == "3" and cal == "1" then
+    if gunname == "HK31" then -- len == "3" and cal == "1"
         gunname = "HK G3"
     end
 

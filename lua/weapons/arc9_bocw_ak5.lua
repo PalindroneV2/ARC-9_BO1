@@ -9,7 +9,7 @@ SWEP.Description = [[
     Swedish variant of the FN FNC.
 ]]
 SWEP.Trivia = {
-    Manufacturer = "FN Herstal",
+    Manufacturer = "Bofors",
     Calibre = "5.56x45mm NATO",
     Mechanism = "Gas-Operated",
     Country = "Sweden",
@@ -274,6 +274,18 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
 
 end
 
+SWEP.HookP_NameChange = function(self, name)
+
+    local attached = self:GetElements()
+
+    local gunname = "Ak 5"
+
+    if attached["bo1_pap"] then
+        gunname = "Blitzkrig 99"
+    end
+
+    return gunname
+end
 
 SWEP.Hook_TranslateAnimation = function (self, anim)
     local attached = self:GetElements()

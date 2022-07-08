@@ -25,7 +25,7 @@ ATT.ModelOffset = Vector(0, 0, -0.25)
 
 ATT.Sights = {
     {
-        Pos = Vector(-0.01, 10, -1.3),
+        Pos = Vector(0, 6.5, -1.3),
         Ang = Angle(0, 0, 0),
         Magnification = 1,
         IgnoreExtra = true

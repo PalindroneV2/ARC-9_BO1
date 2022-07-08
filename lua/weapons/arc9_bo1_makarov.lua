@@ -214,12 +214,18 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     vm:SetSkin(camo)
 end
 
+SWEP.HookP_NameChange = function(self, name)
 
--- SWEP.Hook_TranslateAnimation = function (self, anim)
---     local attached = self:GetElements()
--- end
+    local attached = self:GetElements()
 
---TEST 3
+    local gunname = "Makarov PM"
+
+    if attached["bo1_pap"] then
+        gunname = "Sergei's Sidekick"
+    end
+
+    return gunname
+end
 
 SWEP.Attachments = {
     {

@@ -12,7 +12,7 @@ SWEP.Description = [[
     Will use slugs rather than buckshot by default.
 ]]
 SWEP.Trivia = {
-    Manufacturer = "Remington",
+    Manufacturer = "Kel-Tec",
     Calibre = "12 Gauge",
     Mechanism = "Pump-Action",
     Country = "USA",
@@ -243,6 +243,19 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     end
     vm:SetSkin(camo)
 
+end
+
+SWEP.HookP_NameChange = function(self, name)
+
+    local attached = self:GetElements()
+
+    local gunname = "Kel-Tec KSG-12"
+
+    if attached["bo1_pap"] then
+        gunname = "Mist Maker"
+    end
+
+    return gunname
 end
 
 SWEP.Hook_TranslateAnimation = function (self, anim)

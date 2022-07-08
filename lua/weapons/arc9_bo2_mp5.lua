@@ -318,6 +318,44 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
 
 end
 
+SWEP.HookP_NameChange = function(self, name)
+
+    local attached = self:GetElements()
+
+    local gunname = "HK MP5"
+    local barrel = "A"
+    local stock = "3"
+    if attached["stock_h"] then
+        stock = "2"
+    end
+
+    if attached["mp5sd_suppressor"] then
+        barrel = "SD"
+    end
+    if attached["mp5k"] then
+        barrel = "K"
+        stock = ""
+        if attached["stock_pdw"] then
+            stock = " PDW"
+        end
+    end
+    if attached["bo1_pap"] then
+        gunname = "MP115 "
+        barrel = "Nimrod"
+        stock = ""
+
+        if attached["mp5sd_suppressor"] then
+            barrel = "Shadow"
+        end
+        if attached["mp5k"] then
+            barrel = "Kollider"
+        end
+    end
+
+    gunname = gunname .. barrel .. stock
+
+    return gunname
+end
 
 SWEP.Hook_TranslateAnimation = function (self, anim)
     local attached = self:GetElements()

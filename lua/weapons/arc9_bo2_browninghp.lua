@@ -224,12 +224,25 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     vm:SetSkin(color)
 end
 
+SWEP.HookP_NameChange = function(self, name)
 
--- SWEP.Hook_TranslateAnimation = function (self, anim)
---     local attached = self:GetElements()
--- end
+    local attached = self:GetElements()
 
---TEST 3
+    local gunname = "FN Browning HP"
+
+    if attached["maria"] then
+        gunname = "Maria"
+    end
+
+    if attached["bo1_pap"] then
+        gunname = "Moses Unlimited"
+        if attached["maria"] then
+            gunname = "Holy Mother"
+        end
+    end
+
+    return gunname
+end
 
 SWEP.Attachments = {
     {

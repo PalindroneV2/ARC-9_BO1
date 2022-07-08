@@ -13,10 +13,10 @@ SWEP.Description = [[
 ]]
 SWEP.Trivia = {
     Manufacturer = "Colt",
-    Calibre = ".45 ACP",
-    Mechanism = "Blowback",
+    Calibre = ".357 Magnum",
+    Mechanism = "Single-Action Revolver",
     Country = "USA",
-    Year = 1911,
+    Year = 1955,
     Games = [[BO1, BO2]]
 }
 SWEP.Credits = {
@@ -230,6 +230,18 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
 
 end
 
+SWEP.HookP_NameChange = function(self, name)
+
+    local attached = self:GetElements()
+
+    local gunname = "Colt Python"
+
+    if attached["bo1_pap"] then
+        gunname = "Cobra"
+    end
+
+    return gunname
+end
 
 SWEP.Hook_TranslateAnimation = function (self, anim)
     -- local attached = self:GetElements()
