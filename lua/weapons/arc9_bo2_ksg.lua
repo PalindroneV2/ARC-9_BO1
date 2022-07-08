@@ -285,6 +285,13 @@ SWEP.Attachments = {
         InstalledElements = {"mount"}
     },
     {
+        PrintName = "Underbarrel",
+        Bone = "j_pump",
+        Pos = Vector(6.2, 0, 0.125),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_grips"},
+    },
+    {
         PrintName = "Perk-a-Cola",
         DefaultCompactName = "PERK",
         Bone = "j_gun",

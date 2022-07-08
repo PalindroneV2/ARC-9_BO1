@@ -283,6 +283,13 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = "waw_bayonet",
     },
+    {
+        PrintName = "Underbarrel",
+        Bone = "j_pump",
+        Pos = Vector(6.2, 0, 0.125),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_grips"},
+    },
 }
 
 SWEP.Animations = {

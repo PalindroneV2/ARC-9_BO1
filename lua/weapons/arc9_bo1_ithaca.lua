@@ -310,6 +310,13 @@ SWEP.Attachments = {
         Installed = "bo1_ithaca_barrel"
     },
     {
+        PrintName = "Underbarrel",
+        Bone = "j_pump",
+        Pos = Vector(6.2, 0, 0.125),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_grips"},
+    },
+    {
         PrintName = "Strap",
         DefaultCompactName = "00 BUCK",
         Bone = "j_gun",
@@ -402,12 +409,56 @@ SWEP.Animations = {
             {s = "ARC9_BO1.MK_Shell", t = 21 / 30},
         },
         RestoreAmmo = 1,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.95,
+                lhik = 0,
+                rhik = 1
+            },
+        },
     },
     ["reload_insert"] = {
         Source = "reload_loop",
         Time = 16 / 30,
         EventTable = {
             {s = "ARC9_BO1.MK_Shell", t = 10 / 30},
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.95,
+                lhik = 0,
+                rhik = 1
+            },
         },
     },
     ["reload_finish"] = {
@@ -416,6 +467,18 @@ SWEP.Animations = {
         EventTable = {
             {s = "ARC9_BO1.MK_Back", t = 8 / 30},
             {s = "ARC9_BO1.MK_Fwd", t = 12 / 30},
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.5,
+                lhik = 1,
+                rhik = 1
+            },
         },
     },
     ["enter_sprint"] = {
