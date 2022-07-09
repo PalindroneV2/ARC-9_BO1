@@ -8,7 +8,6 @@ VertexlitGeneric
 	$detailblendmode	0
 	$detailblendfactor 1.25
 
-	
 	//"$color2" "[ .4 .4 .4 ]"
 	"$blendtintbybasealpha" "1"
 	"$phong" "1"
