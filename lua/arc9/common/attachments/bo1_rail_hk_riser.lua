@@ -13,6 +13,7 @@ ATT.Scale = 1
 ATT.ModelOffset = Vector(-0.1, 0, 0)
 ATT.ModelAngleOffset = Angle(0,-90,0)
 ATT.Folder = "RISERS"
+ATT.IconOffset = Vector(0, 0, -1)
 
 ATT.Attachments = {
     {

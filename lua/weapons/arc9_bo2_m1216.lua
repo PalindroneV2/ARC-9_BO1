@@ -42,8 +42,8 @@ SWEP.CustomBlendFactor = 1
 
 SWEP.DefaultBodygroups = "000000000"
 
-SWEP.DamageMax = 12
-SWEP.DamageMin = 6 -- damage done at maximum range
+SWEP.DamageMax = 8
+SWEP.DamageMin = 4 -- damage done at maximum range
 SWEP.RangeMax = 3000
 SWEP.RangeMin = 750
 SWEP.Penetration = 2
@@ -297,7 +297,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(6, 0, 1),
         Ang = Angle(0, 0, 0),
-        Category = {"bo2_fastmag", "bo1_shot_slug"},
+        Category = {"bo2_fastmag", "bo2_extmag", "bo1_shot_slug"},
     },
     [5] = {
         PrintName = "Perk-a-Cola",

@@ -334,7 +334,7 @@ SWEP.Attachments = {
         Bone = "tag_clip",
         Pos = Vector(1, 0, 0),
         Ang = Angle(0, 0, 0),
-        Category = "bo1_fastmag",
+        Category = {"bo2_fastmag", "bo2_extmag"},
     },
     {
         PrintName = "Tactical Left",

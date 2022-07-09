@@ -80,7 +80,7 @@ SWEP.RecoilDissipationRate = 40 -- How much recoil dissipates per second.
 SWEP.RecoilResetTime = 0.01 -- How long the gun must go before the recoil pattern starts to reset.
 
 SWEP.RecoilAutoControl = 0.3
-SWEP.RecoilKick = 2
+SWEP.RecoilKick = 4
 
 SWEP.Spread = math.rad(2.3 / 37.5)
 SWEP.SpreadAddRecoil = math.rad(75 / 37.5)
@@ -304,6 +304,14 @@ SWEP.Attachments = {
         Icon_Offset = Vector(-5, 0, 2.65),
     },
     {
+        PrintName = "Magazine",
+        DefaultCompactName = "MAG",
+        Bone = "j_gun",
+        Pos = Vector(5, 0, -1),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo2_fastmag", "bo2_extmag"},
+    },
+    {
         PrintName = "Ammunition",
         DefaultCompactName = "AMMO",
         Bone = "j_gun",
@@ -327,7 +335,7 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"bo1_bipod"},
         Installed = "bo1_bipod_integrated",
-    }
+    },
 }
 
 SWEP.Animations = {

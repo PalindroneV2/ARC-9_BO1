@@ -1,3 +1,4 @@
+-- BARRELS
 local ATT = {}
 
 ATT = {}
@@ -22,7 +23,7 @@ ATT.Attachments = {
         PrintName = "Handguard",
         DefaultCompactName = "M4",
         DefaultIcon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m4.png", "mips smooth"),
-        Category = "retro_ar15_handguard_10",
+        Category = {"retro_ar15_handguard_carbine", "retro_ar15_handguard_10"},
         Bone = "j_gun",
         Pos = Vector(0, 0, -2),
         Ang = Angle(0, 0, 0),
@@ -96,7 +97,7 @@ ATT.Attachments = {
         PrintName = "Handguard",
         DefaultCompactName = "M4",
         DefaultIcon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m4.png", "mips smooth"),
-        Category = "retro_ar15_handguard_11",
+        Category = "retro_ar15_handguard_carbine",
         Bone = "j_gun",
         Pos = Vector(0, 0, -2),
         Ang = Angle(0, 0, 0),
@@ -173,7 +174,7 @@ ATT.Attachments = {
         PrintName = "Handguard",
         DefaultCompactName = "M4",
         DefaultIcon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m4.png", "mips smooth"),
-        Category = "retro_ar15_handguard_14",
+        Category = {"retro_ar15_handguard_carbine", "retro_ar15_handguard_14"},
         Bone = "j_gun",
         Pos = Vector(0, 0, -2),
         Ang = Angle(0, 0, 0),
@@ -225,6 +226,8 @@ ATT.PhysBulletMuzzleVelocityMult = 0.9
 
 ARC9.LoadAttachment(ATT, "retro_ar15_barrel_14")
 
+
+-- FRONT SIGHTS
 ATT = {}
 
 ATT.PrintName = "Troy Flip-Up Front Battle Sight"
@@ -237,32 +240,15 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = true
 
-ATT.Category = {"retro_ar15_front_iron_m16"}
+ATT.Category = {"retro_ar15_front_iron"}
 ATT.ActivateElements = {"troy_front"}
-ATT.ExcludeElements = {"bo1_rail_riser", "mw2_m4_irons"}
+ATT.ExcludeElements = {"mw2_m4_irons"}
+-- ATT.ExcludeElements = {"bo1_rail_riser", "mw2_m4_irons"}
 
 ARC9.LoadAttachment(ATT, "retro_ar15_front_troy")
 
 ATT = {}
 
-ATT.PrintName = "Troy Flip-Up Front Battle Sight"
-ATT.CompactName = "Troy"
-ATT.Icon = Material("entities/bo1_atts/optics/retro_ar15/troy_side.png")
-ATT.Description = [[Aftermarket Troy flip-up front sight.
-
-Functions identically to other iron sights.]]
-ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
-ATT.Free = true
-
-ATT.Category = {"retro_ar15_front_iron_m4"}
-ATT.ActivateElements = {"troy_front_m4", "gasblock_carbine_cut"}
-ATT.ExcludeElements = {"bo1_rail_riser", "mw2_m4_irons"}
-
-ARC9.LoadAttachment(ATT, "retro_ar15_front_troy_m4")
-
-ATT = {}
-
 ATT.PrintName = "USGI Flip-Up Front Sight"
 ATT.CompactName = "USGI"
 ATT.Icon = Material("entities/bo1_atts/optics/retro_ar15/usgi_side.png")
@@ -273,54 +259,73 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = true
 
-ATT.Category = {"retro_ar15_front_iron_m16"}
+ATT.Category = {"retro_ar15_front_iron"}
 ATT.ActivateElements = {"usgi_front"}
-ATT.ExcludeElements = {"bo1_rail_riser", "mw2_m4_irons"}
+ATT.ExcludeElements = {"mw2_m4_irons"}
+-- ATT.ExcludeElements = {"bo1_rail_riser", "mw2_m4_irons"}
 
 ARC9.LoadAttachment(ATT, "retro_ar15_front_usgi")
 
 ATT = {}
 
-ATT.PrintName = "USGI Flip-Up Front Sight"
-ATT.CompactName = "USGI"
-ATT.Icon = Material("entities/bo1_atts/optics/retro_ar15/usgi_side.png")
-ATT.Description = [[United States General Issue front sight.
-
-Functions identically to other iron sights.]]
+ATT.PrintName = "Flattened cut-down Gasblock"
+ATT.CompactName = "FLAT"
+ATT.Icon = Material("entities/bo1_atts/optics/retro_ar15/troy_side.png")
+ATT.Description = [[Aftermarket Gasblock piece flattened out to allow use of optics previously obstructed by the front sight.]]
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = true
 
-ATT.Category = {"retro_ar15_front_iron_m4"}
-ATT.ActivateElements = {"usgi_front_m4", "gasblock_carbine_cut"}
-ATT.ExcludeElements = {"bo1_rail_riser", "mw2_m4_irons"}
+ATT.Category = {"retro_ar15_front_iron"}
+ATT.ActivateElements = {"gasblock_flat"}
+ATT.ExcludeElements = {
+    "mw2_m4_irons",
+    "carbine" and "handguard_a4",
+}
 
-ARC9.LoadAttachment(ATT, "retro_ar15_front_usgi_m4")
+ARC9.LoadAttachment(ATT, "retro_ar15_front_flat")
+
+-- HANDGUARDS M16
 
 ATT = {}
 
-ATT.PrintName = [[M607a Barrel Assembly]]
-ATT.CompactName = [[M607a]]
-ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m607.png", "mips smooth")
+ATT.PrintName = [[M203 Heatshield Handguard]]
+ATT.CompactName = [[HEAT]]
+ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m16.png", "mips smooth")
 ATT.Description = [[
-    Rare M607a parts that fit an 11.5 barrel.
-    The M607a was a very early carbine version of the M16 marketed as an SMG, not for its caliber, but instead for its role as a compact weapon for rear echelon troops, vehicle drives and tank crews.
-    Ergonomics aren't the best and it makes controlling the weapon's recoil a bit harder, though it is lighter than the ribbed handguard.
+    Heatshield for an M16 barrel, you're not actually supposed to grab it and it is meant to have an M203 attached.
 ]]
 ATT.Pros = {}
-ATT.Cons = {
-    "-Cannot attach UBGLs",
-}
-ATT.SortOrder = 0
+ATT.Cons = {}
+ATT.SortOrder = 1
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 
-ATT.Category = {"retro_ar15_handguard_10", "retro_ar15_handguard_11", "retro_ar15_handguard_14"}
-ATT.ActivateElements = {"handguard_607", "no_ubgl"}
-ATT.RecoilMult = 1.1
-ATT.AimDownSightsTimeMult = 0.9
+ATT.Category = {"retro_ar15_handguard_20"}
+ATT.ActivateElements = {"handguard_heat"}
+ATT.ExcludeElements = {"bo1_m203", "bo1_mk"}
 
-ARC9.LoadAttachment(ATT, "retro_ar15_handguard_607")
+ATT.Model = "models/weapons/arc9/atts/cde_mp5k_nogrip.mdl"
+ATT.Scale = 0.375
+ATT.ModelOffset = Vector(5, 0, -1.5)
+ATT.IconOffset = Vector(0, 0, 0)
+
+ATT.LHIK = true
+ATT.LHIK_Priority = 0
+
+ATT.Attachments = {
+    {
+        PrintName = "Bipod",
+        DefaultCompactName = "Bipod",
+        Bone = "j_gun",
+        Pos = Vector(-9.5, 0, 2.4),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_bipod"},
+        ExcludeElements = {"bo1_m203", "bo1_mk"}
+    },
+}
+
+ARC9.LoadAttachment(ATT, "retro_ar15_handguard_m203")
 
 ATT = {}
 
@@ -374,9 +379,10 @@ ATT.ActivateElements = {"handguard_a4", "nosling", "no_ub_rail", "ar15_ris", "no
 ATT.Attachments = {
     {
         PrintName = "Front",
-        Category = "retro_ar15_front_iron_m16",
+        Category = "retro_ar15_front_iron",
         InstalledElements = {"gasblock_cut"},
-        ExcludeElements = {"bo1_optic", "bo1_rail_riser", "mw2_m4_irons"},
+        ExcludeElements = {"mw2_m4_irons"},
+        -- ExcludeElements = {"bo1_optic", "bo1_rail_riser", "mw2_m4_irons"},
         Bone = "j_gun",
         Pos = Vector(-10, 0, -1),
         Ang = Angle(0, 0, 0),
@@ -427,6 +433,32 @@ ATT.Attachments = {
 
 ARC9.LoadAttachment(ATT, "retro_ar15_handguard_a4")
 
+-- HANDGUARDS M4
+ATT = {}
+
+ATT.PrintName = [[M607a Barrel Assembly]]
+ATT.CompactName = [[M607a]]
+ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m607.png", "mips smooth")
+ATT.Description = [[
+    Rare M607a parts that fit an 11.5 barrel.
+    The M607a was a very early carbine version of the M16 marketed as an SMG, not for its caliber, but instead for its role as a compact weapon for rear echelon troops, vehicle drives and tank crews.
+    Ergonomics aren't the best and it makes controlling the weapon's recoil a bit harder, though it is lighter than the ribbed handguard.
+]]
+ATT.Pros = {}
+ATT.Cons = {
+    "-Cannot attach UBGLs",
+}
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.Free = false
+
+ATT.Category = {"retro_ar15_handguard_carbine"}
+ATT.ActivateElements = {"handguard_607", "no_ubgl"}
+ATT.RecoilMult = 1.1
+ATT.AimDownSightsTimeMult = 0.9
+
+ARC9.LoadAttachment(ATT, "retro_ar15_handguard_607")
+
 ATT = {}
 
 ATT.PrintName = [[FAMAS F1 Front Assembly]]
@@ -468,46 +500,6 @@ ATT.AimDownSightsTimeMult = 1.2
 ATT.SprintToFireTimeMult = 1.2
 
 ARC9.LoadAttachment(ATT, "retro_ar15_handguard_famas")
-
-ATT = {}
-
-ATT.PrintName = [[M203 Heatshield Handguard]]
-ATT.CompactName = [[HEAT]]
-ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m16.png", "mips smooth")
-ATT.Description = [[
-    Heatshield for an M16 barrel, you're not actually supposed to grab it and it is meant to have an M203 attached.
-]]
-ATT.Pros = {}
-ATT.Cons = {}
-ATT.SortOrder = 1
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
-ATT.Free = false
-
-ATT.Category = {"retro_ar15_handguard_20"}
-ATT.ActivateElements = {"handguard_heat"}
-ATT.ExcludeElements = {"bo1_m203", "bo1_mk"}
-
-ATT.Model = "models/weapons/arc9/atts/cde_mp5k_nogrip.mdl"
-ATT.Scale = 0.375
-ATT.ModelOffset = Vector(5, 0, -1.5)
-ATT.IconOffset = Vector(0, 0, 0)
-
-ATT.LHIK = true
-ATT.LHIK_Priority = 0
-
-ATT.Attachments = {
-    {
-        PrintName = "Bipod",
-        DefaultCompactName = "Bipod",
-        Bone = "j_gun",
-        Pos = Vector(-9.5, 0, 2.4),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_bipod"},
-        ExcludeElements = {"bo1_m203", "bo1_mk"}
-    },
-}
-
-ARC9.LoadAttachment(ATT, "retro_ar15_handguard_m203")
 
 ATT = {}
 
@@ -564,16 +556,17 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 
-ATT.Category = {"retro_ar15_handguard_14", "retro_ar15_handguard_11", "retro_ar15_handguard_10"}
-ATT.ActivateElements = {"nosling", "ar15_ris", "no_ub_rail", "ris_carbine"}
+ATT.Category = {"retro_ar15_handguard_carbine"}
+ATT.ActivateElements = {"nosling", "ar15_ris", "no_ub_rail", "ris_carbine", "handguard_ris"}
 
 ATT.Attachments = {
     {
         PrintName = "Front",
-        Category = "retro_ar15_front_iron_m4",
+        Category = "retro_ar15_front_iron",
         UnInstalledElements = {"gasblock_carbine"},
         InstalledElements = {"gasblock_carbine_cut"},
-        ExcludeElements = {"bo1_optic", "bo1_rail_riser", "mw2_m4_irons", "bo1_tactical"},
+        ExcludeElements = {"mw2_m4_irons", "bo1_tactical"},
+        -- ExcludeElements = {"bo1_optic", "bo1_rail_riser", "mw2_m4_irons", "bo1_tactical"},
         Bone = "j_gun",
         Pos = Vector(-4, 0, -1),
         Ang = Angle(0, 0, 0),
@@ -620,6 +613,7 @@ ATT.Attachments = {
 
 ARC9.LoadAttachment(ATT, "retro_ar15_handguard_ris")
 
+-- REAR SIGHTS
 ATT = {}
 
 ATT.PrintName = "Carry Handle Rear Sight"
@@ -635,7 +629,8 @@ ATT.Folder = "AR-15 IRONS"
 
 ATT.InvAtt = "retro_ar15_upper_a4"
 ATT.Category = {"retro_ar15_iron"}
-ATT.ActivateElements = {"a4_carryhandle", "nosling"}
+ATT.IconOffset = Vector(-5, 0, 0)
+ATT.ActivateElements = {"a4_carryhandle", "nosling", "ar15_removable_iron"}
 
 ATT.Attachments = {
     {
@@ -649,6 +644,37 @@ ATT.Attachments = {
 }
 
 ARC9.LoadAttachment(ATT, "retro_ar15_iron_carry")
+
+ATT = {}
+
+ATT.PrintName = "A2 Removable Rear Sight"
+ATT.CompactName = "A2 REAR"
+ATT.Icon = Material("entities/bo1_atts/optics/retro_ar15/carry_side.png")
+ATT.Description = [[AR-15 back-up iron sight.
+
+Functions identically to other iron sights.]]
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.Free = true
+ATT.Folder = "AR-15 IRONS"
+
+ATT.InvAtt = "retro_ar15_upper_a4"
+ATT.Category = {"retro_ar15_iron"}
+ATT.IconOffset = Vector(-5, 0, 0)
+ATT.ActivateElements = {"irons_a2", "nosling", "ar15_removable_iron"}
+
+ATT.Attachments = {
+    {
+        PrintName = "Riser",
+        Bone = "j_gun",
+        Pos = Vector(0, 0, 0),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0, 0, 1.5),
+        Category = {"bo1_rail_riser"},
+    }
+}
+
+ARC9.LoadAttachment(ATT, "retro_ar15_iron_a2rear")
 
 ATT = {}
 
@@ -793,6 +819,7 @@ ATT.Folder = "AR-15 IRONS"
 
 ATT.InvAtt = "retro_ar15_upper_a4"
 ATT.Category = {"retro_ar15_iron"}
+ATT.IconOffset = Vector(-5, 0, 0)
 ATT.ActivateElements = {"troy_iron"}
 
 ARC9.LoadAttachment(ATT, "retro_ar15_iron_troy")
@@ -813,6 +840,7 @@ ATT.Folder = "AR-15 IRONS"
 
 ATT.InvAtt = "retro_ar15_upper_a4"
 ATT.Category = {"retro_ar15_iron"}
+ATT.IconOffset = Vector(-5, 0, 0)
 ATT.ActivateElements = {"3arc_iron"}
 
 ARC9.LoadAttachment(ATT, "retro_ar15_iron_3arc")
@@ -832,10 +860,12 @@ ATT.Folder = "AR-15 IRONS"
 
 ATT.InvAtt = "retro_ar15_upper_a4"
 ATT.Category = {"retro_ar15_iron"}
+ATT.IconOffset = Vector(-5, 0, 0)
 ATT.ActivateElements = {"usgi_iron"}
 
 ARC9.LoadAttachment(ATT, "retro_ar15_iron_usgi")
 
+-- FIREMODES
 ATT = {}
 
 ATT.PrintName = "M645 S-1-3 FCG"
@@ -946,58 +976,7 @@ ATT.RecoilSideMult = 0.95
 
 ARC9.LoadAttachment(ATT, "retro_ar15_lower_skullsplitter")
 
-ATT = {}
-
-ATT.PrintName = [[M635 32 round 9mm Mag]]
-ATT.CompactName = [[32 9MM]]
-ATT.Icon = Material("entities/bo1_atts/ammo/ext_mag.png")
-ATT.Description = [[9x19mm conversion for the AR-15 using 32-round box magazines.
-
-The pistol cartridge reduces long range stopping power significantly, but has less recoil and can be fired much faster.]]
-ATT.Pros = {}
-ATT.Cons = {}
-ATT.SortOrder = 5
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
-ATT.Free = false
-
-ATT.Category = {"retro_ar15_mag"}
-ATT.ActivateElements = {"9mm_mag"}
-ATT.ReloadTimeMult = 0.9
-ATT.ClipSize = 32
-
-ATT.DamageMax = 25
-ATT.DamageMin = 12
-
-ATT.SpreadMult = 1.5
-ATT.RangeMaxMult = 0.7
-ATT.RangeMinMult = 0.7
-
-ATT.RecoilUpMult = 0.5
-ATT.RecoilSideMult = 0.8
-
-ATT.PenetrationMult = 0.5
-ATT.PhysBulletMuzzleVelocity = 360 * 39.37
-ATT.RPM = 1000
-
-ATT.Ammo = "pistol"
-ATT.FirstShootSound = "ARC9_CDE.M16_9mm"
-ATT.ShootSound = "ARC9_CDE.M16_9mm"
-ATT.ShootSoundSilenced = "ARC9_CDE.M16_9mmSil"
-ATT.DistantShootSound = "ARC9_CDE.M16_9mmDist"
-ATT.MuzzleParticle = "muzzleflash_smg"
-
-ATT.Trivia = {
-    Manufacturer = "Colt",
-    Calibre = "9x19mm Parabellum",
-    Mechanism = "Direct Impingement",
-    Country = "USA",
-    Year = 1959,
-    Games = [[
-        Call of Duty: Modern Warfare (2019)
-    ]],
-}
-
-ARC9.LoadAttachment(ATT, "retro_ar15_mag_9mm")
+--MAGAZINES
 
 ATT = {}
 
@@ -1062,6 +1041,152 @@ ARC9.LoadAttachment(ATT, "retro_ar15_mag_20")
 
 ATT = {}
 
+ATT.PrintName = [[AR-15 40 round STANAG]]
+ATT.CompactName = [[STANAG 40]]
+ATT.Icon = Material("entities/bo1_atts/ammo/ext_mag.png")
+ATT.Description = [[
+    Modern polymer PMAG that holds 4 rounds.
+    Marginally reduces handling.
+]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 2
+ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.Free = false
+
+ATT.Category = {"retro_ar15_mag"}
+ATT.ActivateElements = {"40_mag"}
+ATT.ReloadTimeMult = 1.1
+ATT.ClipSize = 40
+ATT.AimDownSightsTimeMult = 1.025
+ATT.SprintToFireTimeMult = 1.025
+
+ARC9.LoadAttachment(ATT, "retro_ar15_mag_40")
+
+ATT = {}
+
+ATT.PrintName = [[AR-15 60 round Quad-Stack STANAG]]
+ATT.CompactName = [[STANAG 60]]
+ATT.Icon = Material("entities/bo1_atts/ammo/ext_mag.png")
+ATT.Description = [[
+    Modern polymer PMAG that holds 4 rounds.
+    Marginally reduces handling.
+]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 4
+ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.Free = false
+
+ATT.Category = {"retro_ar15_mag"}
+ATT.ActivateElements = {"60_mag"}
+ATT.ReloadTimeMult = 1.25
+ATT.ClipSize = 60
+ATT.AimDownSightsTimeMult = 1.15
+ATT.SprintToFireTimeMult = 1.15
+
+ARC9.LoadAttachment(ATT, "retro_ar15_mag_60")
+
+ATT = {}
+
+ATT.PrintName = [[AR-15 30 round P-Mag]]
+ATT.CompactName = [[P-MAG 30]]
+ATT.Icon = Material("entities/bo1_atts/ammo/ext_mag.png")
+ATT.Description = [[
+    Modern polymer PMAG that holds 4 rounds.
+    Marginally reduces handling.
+]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 1
+ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.Free = false
+
+ATT.Category = {"retro_ar15_mag"}
+ATT.ActivateElements = {"pul_mag"}
+ATT.ReloadTimeMult = 0.9
+
+ARC9.LoadAttachment(ATT, "retro_ar15_mag_pul")
+
+ATT = {}
+
+ATT.PrintName = [[AR-15 40 round P-Mag]]
+ATT.CompactName = [[P-MAG 40]]
+ATT.Icon = Material("entities/bo1_atts/ammo/ext_mag.png")
+ATT.Description = [[
+    Modern polymer PMAG that holds 4 rounds.
+    Marginally reduces handling.
+]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 3
+ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.Free = false
+
+ATT.Category = {"retro_ar15_mag"}
+ATT.ActivateElements = {"pul_40_mag"}
+ATT.ReloadTimeMult = 1.1
+ATT.ClipSize = 40
+ATT.AimDownSightsTimeMult = 1.025
+ATT.SprintToFireTimeMult = 1.025
+
+ARC9.LoadAttachment(ATT, "retro_ar15_mag_pul_40")
+
+ATT = {}
+
+ATT.PrintName = [[M635 32 round 9mm Mag]]
+ATT.CompactName = [[32 9MM]]
+ATT.Icon = Material("entities/bo1_atts/ammo/ext_mag.png")
+ATT.Description = [[9x19mm conversion for the AR-15 using 32-round box magazines.
+
+The pistol cartridge reduces long range stopping power significantly, but has less recoil and can be fired much faster.]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 5
+ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.Free = false
+
+ATT.Category = {"retro_ar15_mag"}
+ATT.ActivateElements = {"9mm_mag"}
+ATT.ReloadTimeMult = 0.9
+ATT.ClipSize = 32
+
+ATT.DamageMax = 25
+ATT.DamageMin = 12
+
+ATT.SpreadMult = 1.5
+ATT.RangeMaxMult = 0.7
+ATT.RangeMinMult = 0.7
+
+ATT.RecoilUpMult = 0.5
+ATT.RecoilSideMult = 0.8
+
+ATT.PenetrationMult = 0.5
+ATT.PhysBulletMuzzleVelocity = 360 * 39.37
+ATT.RPM = 1000
+
+ATT.Ammo = "pistol"
+ATT.FirstShootSound = "ARC9_CDE.M16_9mm"
+ATT.ShootSound = "ARC9_CDE.M16_9mm"
+ATT.ShootSoundSilenced = "ARC9_CDE.M16_9mmSil"
+ATT.DistantShootSound = "ARC9_CDE.M16_9mmDist"
+ATT.MuzzleParticle = "muzzleflash_smg"
+
+ATT.Trivia = {
+    Manufacturer = "Colt",
+    Calibre = "9x19mm Parabellum",
+    Mechanism = "Direct Impingement",
+    Country = "USA",
+    Year = 1959,
+    Games = [[
+        Call of Duty: Modern Warfare (2019)
+    ]],
+}
+
+ARC9.LoadAttachment(ATT, "retro_ar15_mag_9mm")
+
+ATT = {}
+
 ATT.PrintName = [[10 Round .50 Beowulf Mag]]
 ATT.CompactName = [[BEOWULF]]
 ATT.Icon = Material("entities/bo1_atts/ammo/ext_mag.png")
@@ -1114,54 +1239,6 @@ ATT.Trivia = {
 }
 
 ARC9.LoadAttachment(ATT, "retro_ar15_mag_beowulf")
-
-ATT = {}
-
-ATT.PrintName = [[AR-15 40 round STANAG]]
-ATT.CompactName = [[STANAG 40]]
-ATT.Icon = Material("entities/bo1_atts/ammo/ext_mag.png")
-ATT.Description = [[
-    Modern polymer PMAG that holds 4 rounds.
-    Marginally reduces handling.
-]]
-ATT.Pros = {}
-ATT.Cons = {}
-ATT.SortOrder = 2
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
-ATT.Free = false
-
-ATT.Category = {"retro_ar15_mag"}
-ATT.ActivateElements = {"40_mag"}
-ATT.ReloadTimeMult = 1.1
-ATT.ClipSize = 40
-ATT.AimDownSightsTimeMult = 1.025
-ATT.SprintToFireTimeMult = 1.025
-
-ARC9.LoadAttachment(ATT, "retro_ar15_mag_40")
-
-ATT = {}
-
-ATT.PrintName = [[AR-15 60 round Quad-Stack STANAG]]
-ATT.CompactName = [[STANAG 60]]
-ATT.Icon = Material("entities/bo1_atts/ammo/ext_mag.png")
-ATT.Description = [[
-    Modern polymer PMAG that holds 4 rounds.
-    Marginally reduces handling.
-]]
-ATT.Pros = {}
-ATT.Cons = {}
-ATT.SortOrder = 4
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
-ATT.Free = false
-
-ATT.Category = {"retro_ar15_mag"}
-ATT.ActivateElements = {"60_mag"}
-ATT.ReloadTimeMult = 1.25
-ATT.ClipSize = 60
-ATT.AimDownSightsTimeMult = 1.15
-ATT.SprintToFireTimeMult = 1.15
-
-ARC9.LoadAttachment(ATT, "retro_ar15_mag_60")
 
 ATT = {}
 
@@ -1222,106 +1299,7 @@ ATT.SprintToFireTimeAdd = 0.1
 
 ARC9.LoadAttachment(ATT, "retro_ar15_mag_patriot")
 
-ATT = {}
-
-ATT.PrintName = [[AR-15 40 round P-Mag]]
-ATT.CompactName = [[P-MAG 40]]
-ATT.Icon = Material("entities/bo1_atts/ammo/ext_mag.png")
-ATT.Description = [[
-    Modern polymer PMAG that holds 4 rounds.
-    Marginally reduces handling.
-]]
-ATT.Pros = {}
-ATT.Cons = {}
-ATT.SortOrder = 3
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
-ATT.Free = false
-
-ATT.Category = {"retro_ar15_mag"}
-ATT.ActivateElements = {"pul_40_mag"}
-ATT.ReloadTimeMult = 1.1
-ATT.ClipSize = 40
-ATT.AimDownSightsTimeMult = 1.025
-ATT.SprintToFireTimeMult = 1.025
-
-ARC9.LoadAttachment(ATT, "retro_ar15_mag_pul_40")
-
-ATT = {}
-
-ATT.PrintName = [[AR-15 30 round P-Mag]]
-ATT.CompactName = [[P-MAG 30]]
-ATT.Icon = Material("entities/bo1_atts/ammo/ext_mag.png")
-ATT.Description = [[
-    Modern polymer PMAG that holds 4 rounds.
-    Marginally reduces handling.
-]]
-ATT.Pros = {}
-ATT.Cons = {}
-ATT.SortOrder = 1
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
-ATT.Free = false
-
-ATT.Category = {"retro_ar15_mag"}
-ATT.ActivateElements = {"pul_mag"}
-ATT.ReloadTimeMult = 0.9
-
-ARC9.LoadAttachment(ATT, "retro_ar15_mag_pul")
-
-ATT = {}
-
-ATT.PrintName = "B5 Systems Bravo Stock"
-ATT.CompactName = "BRAVO"
-ATT.Icon = Material("entities/bo1_atts/other/stock.png")
-ATT.Description = [[Modern retractible six-position stock made for with improved ergonomics and surface area.
-
-Has excellent handling, but provides weaker recoil control compared to a full stock.]]
-ATT.Pros = {}
-ATT.Cons = {}
-ATT.SortOrder = 3
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
-ATT.Free = false
-
-ATT.Category = {"retro_ar15_stock"}
-ATT.ActivateElements = {"gen3_extended", "yessling"}
-
-ATT.RecoilMult = 0.8
-ATT.RecoilUpMult = 0.5
-ATT.RecoilRandomSideMult = 0.6
-ATT.RecoilAutoControlMult = 1.75
-
-ATT.SpeedMult = 0.97
-ATT.AimDownSightsTimeAdd = 0.09
-ATT.SprintToFireTimeAdd = 0.12
-ATT.SpeedAddSights = -0.12
-
-ARC9.LoadAttachment(ATT, "retro_ar15_stock_bravo")
-
-ATT = {}
-
-ATT.PrintName = "Fixed FAMAS F1 Rear Assembly"
-ATT.CompactName = "FAMAS"
-ATT.Icon = Material("entities/bo1_atts/other/stock.png")
-ATT.Description = [[Hollowed out FAMAS F1 rear end that works much like an M16 fixed stock.]]
-ATT.Pros = {}
-ATT.Cons = {}
-ATT.SortOrder = 1000
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
-ATT.Free = false
-
-ATT.Category = {"retro_ar15_stock"}
-ATT.ActivateElements = {"famas_stock", "nosling"}
-
-ATT.RecoilMult = 0.7
-ATT.RecoilUpMult = 0.5
-ATT.RecoilRandomSideMult = 0.5
-ATT.RecoilAutoControlMult = 2
-
-ATT.SpeedMult = 0.95
-ATT.AimDownSightsTimeAdd = 0.25
-ATT.SprintToFireTimeAdd = 0.29
-ATT.SpeedAddSights = -0.2
-
-ARC9.LoadAttachment(ATT, "retro_ar15_stock_famas")
+--STOCKS
 
 ATT = {}
 
@@ -1478,6 +1456,67 @@ ARC9.LoadAttachment(ATT, "retro_ar15_stock_gen3")
 
 ATT = {}
 
+ATT.PrintName = "B5 Systems Bravo Stock"
+ATT.CompactName = "BRAVO"
+ATT.Icon = Material("entities/bo1_atts/other/stock.png")
+ATT.Description = [[Modern retractible six-position stock made for with improved ergonomics and surface area.
+
+Has excellent handling, but provides weaker recoil control compared to a full stock.]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 3
+ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.Free = false
+
+ATT.Category = {"retro_ar15_stock"}
+ATT.ActivateElements = {"gen3_extended", "yessling"}
+
+ATT.RecoilMult = 0.8
+ATT.RecoilUpMult = 0.5
+ATT.RecoilRandomSideMult = 0.6
+ATT.RecoilAutoControlMult = 1.75
+
+ATT.SpeedMult = 0.97
+ATT.AimDownSightsTimeAdd = 0.09
+ATT.SprintToFireTimeAdd = 0.12
+ATT.SpeedAddSights = -0.12
+
+ARC9.LoadAttachment(ATT, "retro_ar15_stock_bravo")
+
+ATT = {}
+
+ATT.PrintName = "Wire Stock"
+ATT.CompactName = "WIRE"
+ATT.Icon = Material("entities/bo1_atts/other/stock.png")
+ATT.Description = [[Wire stock produced for M16 carbines in SMG roles. Made to be specially lightweight.
+
+Very lightweight and reduces hip fire spread, but barely provides any recoil control.]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 4
+ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.Free = false
+
+ATT.Category = {"retro_ar15_stock"}
+ATT.ActivateElements = {"wire_extended", "nosling"}
+
+ATT.RecoilMult = 0.95
+ATT.RecoilUpMult = 0.9
+ATT.RecoilRandomSideMult = 0.75
+ATT.RecoilAutoControlMult = 1.5
+
+ATT.SpreadMultHipFire = 0.8
+ATT.SpreadMultMove = 0.8
+
+ATT.SpeedMult = 0.995
+ATT.AimDownSightsTimeAdd = 0.05
+ATT.SprintToFireTimeAdd = 0.08
+ATT.SpeedAddSights = -0.08
+
+ARC9.LoadAttachment(ATT, "retro_ar15_stock_wire")
+
+ATT = {}
+
 ATT.PrintName = "Magpul MOE Stock"
 ATT.CompactName = "MOE"
 ATT.Icon = Material("entities/bo1_atts/other/stock.png")
@@ -1539,36 +1578,32 @@ ARC9.LoadAttachment(ATT, "retro_ar15_stock_sniper")
 
 ATT = {}
 
-ATT.PrintName = "Wire Stock"
-ATT.CompactName = "WIRE"
+ATT.PrintName = "Fixed FAMAS F1 Rear Assembly"
+ATT.CompactName = "FAMAS"
 ATT.Icon = Material("entities/bo1_atts/other/stock.png")
-ATT.Description = [[Wire stock produced for M16 carbines in SMG roles. Made to be specially lightweight.
-
-Very lightweight and reduces hip fire spread, but barely provides any recoil control.]]
+ATT.Description = [[Hollowed out FAMAS F1 rear end that works much like an M16 fixed stock.]]
 ATT.Pros = {}
 ATT.Cons = {}
-ATT.SortOrder = 4
+ATT.SortOrder = 1000
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Category = {"retro_ar15_stock"}
-ATT.ActivateElements = {"wire_extended", "nosling"}
+ATT.ActivateElements = {"famas_stock", "nosling"}
 
-ATT.RecoilMult = 0.95
-ATT.RecoilUpMult = 0.9
-ATT.RecoilRandomSideMult = 0.75
-ATT.RecoilAutoControlMult = 1.5
+ATT.RecoilMult = 0.7
+ATT.RecoilUpMult = 0.5
+ATT.RecoilRandomSideMult = 0.5
+ATT.RecoilAutoControlMult = 2
 
-ATT.SpreadMultHipFire = 0.8
-ATT.SpreadMultMove = 0.8
+ATT.SpeedMult = 0.95
+ATT.AimDownSightsTimeAdd = 0.25
+ATT.SprintToFireTimeAdd = 0.29
+ATT.SpeedAddSights = -0.2
 
-ATT.SpeedMult = 0.995
-ATT.AimDownSightsTimeAdd = 0.05
-ATT.SprintToFireTimeAdd = 0.08
-ATT.SpeedAddSights = -0.08
+ARC9.LoadAttachment(ATT, "retro_ar15_stock_famas")
 
-ARC9.LoadAttachment(ATT, "retro_ar15_stock_wire")
-
+--UPPERS
 ATT = {}
 
 ATT.PrintName = "A2 Upper Receiver"
@@ -1620,33 +1655,3 @@ ATT.Attachments = {
 }
 
 ARC9.LoadAttachment(ATT, "retro_ar15_upper_a4")
-
--- ATT = {}
-
--- ATT.PrintName = "M4A1 S-System Iron Sights"
--- ATT.CompactName = "S-Irons"
--- ATT.Icon = Material("entities/bo1_atts/optics/bo2_irons.png")
--- ATT.Description = [["You will aim with sights of iron and you will like it."
-
--- Functions identically to other iron sights.]]
--- ATT.SortOrder = 0
--- ATT.MenuCategory = "ARC-9 - MWC Attachments"
--- ATT.Free = true
-
--- ATT.Category = {"bo1_addon_irons"}
--- ATT.ActivateElements = {"mw2_m4_irons"}
--- ATT.RequireElements = {"mw2_m4_top"}
-
--- ATT.Model = "models/weapons/arc9/item/mw2_m4_irons.mdl"
--- ATT.Scale = Vector(0.375, 0.375, 0.375)
--- ATT.ModelOffset = Vector(1.75,0,-0.325)
--- ATT.ModelAngleOffset = Angle(0,0,0)
-
--- ATT.Sights = {
---     {
---         Pos = Vector(0, 12, -1.6),
---         Ang = Angle(0.025, 0.1, 0)
---     }
--- }
-
--- ARC9.LoadAttachment(ATT, "retro_ar15_iron_mw2")

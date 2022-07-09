@@ -298,7 +298,7 @@ SWEP.Attachments = {
         Bone = "tag_clip",
         Pos = Vector(0.5, 0, 0),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_fastmag"},
+        Category = {"bo1_fastmag", "bo2_extmag"},
     },
     {
         Hidden = true,

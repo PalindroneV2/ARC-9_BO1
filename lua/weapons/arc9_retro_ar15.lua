@@ -202,7 +202,7 @@ SWEP.SprintAng = Angle(0, 0, -5)
 SWEP.BipodPos = Vector(-2.765, 0, -1.5)
 SWEP.BipodAng = Angle(0, 0, 0)
 
-SWEP.CustomizePos = Vector(12.5, 40, 4)
+SWEP.CustomizePos = Vector(14.5, 40, 4)
 SWEP.CustomizeAng = Angle(90, 0, 0)
 
 SWEP.RestPos = Vector(0, 0, 0)
@@ -281,6 +281,11 @@ SWEP.AttachmentElements = {
     ["a4_carryhandle"] = {
         Bodygroups = {
             {6,4},
+        },
+    },
+    ["irons_a2"] = {
+        Bodygroups = {
+            {6,7},
         },
     },
     ["a2_top"] = {
@@ -383,23 +388,23 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local NewBipodPos = Vector(-2.765, 0, -1.5)
     local NewBipodAng = Angle(0, 0, 0)
 
-    if attached["retro_ar15_barrel_14"] then
+    if attached["barrel_14"] then
         length = 1
         hand = 4
         gasblock = 1
-    elseif attached["retro_ar15_barrel_11"] then
+    elseif attached["barrel_11"] then
         length = 2
         hand = 4
         gasblock = 1
-    elseif attached["retro_ar15_barrel_10"] then
+    elseif attached["barrel_10"] then
         length = 3
         hand = 4
         gasblock = 1
     end
 
-    if attached["retro_ar15_handguard_m203"] then hand = 1
-    elseif attached["retro_ar15_handguard_a2"] then hand = 2
-    elseif attached["retro_ar15_handguard_a4"] then
+    if attached["handguard_m203"] then hand = 1
+    elseif attached["handguard_a2"] then hand = 2
+    elseif attached["handguard_a4"] then
         hand = 3
         if attached["mw3_psrscope"] then
             gasblock = 2
@@ -409,17 +414,17 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         if length == 1 then
             gasblock = 4
         end
-    elseif attached["retro_ar15_handguard_ris"] then hand = 5
-    elseif attached["retro_ar15_handguard_607"] then hand = 6
-    elseif attached["retro_ar15_handguard_patriot"] then
+    elseif attached["handguard_ris"] then hand = 5
+    elseif attached["handguard_607"] then hand = 6
+    elseif attached["handguard_patriot"] then
         hand = 7
         gasblock = 4
-    elseif attached["retro_ar15_handguard_famas"] then
+    elseif attached["handguard_famas"] then
         hand = 8
         gasblock = 4
     end
 
-    if attached["retro_ar15_front_troy"] then
+    if attached["troy_front"] then
         frontsight = 1
         if hand == 3 then
             gasblock = 2
@@ -427,12 +432,22 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
                 gasblock = 4
             end
         end
-    elseif attached["retro_ar15_front_troy_m4"] then
-        frontsight = 2
-        if hand == 5 then
-            gasblock = 3
+        if attached["carbine"] then
+            frontsight = 2
+            if hand == 5 then
+                gasblock = 3
+            end
         end
-    elseif attached["retro_ar15_front_usgi"] then
+        if length == 1 and hand == 3 then
+            frontsight = 1
+            gasblock = 4
+        end
+    -- elseif attached["retro_ar15_front_troy_m4"] then
+    --     frontsight = 2
+    --     if hand == 5 then
+    --         gasblock = 3
+    --     end
+    elseif attached["usgi_front"] then
         frontsight = 3
         if hand == 3 then
             gasblock = 2
@@ -440,8 +455,26 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
                 gasblock = 4
             end
         end
-    elseif attached["retro_ar15_front_usgi_m4"] then
-        frontsight = 4
+        if attached["carbine"] then
+            frontsight = 4
+            if hand == 5 then
+                gasblock = 3
+            end
+        end
+        if length == 1 and hand == 3 then
+            frontsight = 3
+            gasblock = 4
+        end
+    -- elseif attached["retro_ar15_front_usgi_m4"] then
+    --     frontsight = 4
+    --     if hand == 5 then
+    --         gasblock = 3
+    --     end
+    elseif attached["gasblock_flat"] then
+        gasblock = 2
+        if length == 1 and hand == 3 then
+            gasblock = 4
+        end
         if hand == 5 then
             gasblock = 3
         end
@@ -456,7 +489,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     --*/
     --PrintTable(data)
 
-    if length == 0 and hand != 3 and attached["bo1_ubgl_m203"] then -- FORCIBLY ATTACH M203 HEATSHIELD ON A1/A2 HANDGUARDS
+    if length == 0 and hand != 3 and attached["bo1_m203"] then -- FORCIBLY ATTACH M203 HEATSHIELD ON A1/A2 HANDGUARDS
         vm:SetBodygroup(3, 1)
     end
     if length == 3 and hand == 6 then -- 10.5 BARREL CHANGES TO M607 BARREL
@@ -465,10 +498,10 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     if length == 3 and hand == 7 then -- 10.5 BARREL CHANGES TO FPW BARREL
         vm:SetBodygroup(2, 5)
     end
-    if length == 3 and attached["bo1_ubgl_m203"] then -- SHORTEN M203 ON 10.5 BARREL
+    if length == 3 and attached["bo1_m203"] then -- SHORTEN M203 ON 10.5 BARREL
         vm:SetBodygroup(4, 2)
     end
-    if length > 0 and attached["bo1_ubgl_mk"] then
+    if length > 0 and attached["bo1_mk"] then
         vm:SetBodygroup(4, 3)
     end
     if hand == 8 then -- FAMAS
@@ -494,7 +527,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         -- newpos = Vector(-2.765, -2, 0.075)
         -- newang = Angle(0.0375, 0, 0)
     end
-    if attached["retro_ar15_iron_carry"] then
+    if attached["ar15_removable_iron"] then
         newpos = Vector(-2.765, -2, -0.025)
         newang = Angle(0.0375, 0.55, 0)
         if gasblock == 1 then

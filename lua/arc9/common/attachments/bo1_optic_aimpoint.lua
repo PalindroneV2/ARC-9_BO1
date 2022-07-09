@@ -15,7 +15,7 @@ ATT.Cons = {
 ATT.SortOrder = 1
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
-ATT.Folder = "RDS"
+ATT.Folder = "REFLEX"
 
 ATT.Category = {"bo1_optic", "bo1_optic_alt", "bo1_optic_lp", "bo1_optic_rds"}
 

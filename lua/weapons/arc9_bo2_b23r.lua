@@ -280,6 +280,14 @@ SWEP.Attachments = {
         -- CorrectiveAng = Angle(0.05, 0.1, 0),
     },
     {
+        PrintName = "Magazine",
+        DefaultCompactName = "MAG",
+        Bone = "j_gun",
+        Pos = Vector(5, 0, -1),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo2_fastmag", "bo2_extmag"},
+    },
+    {
         PrintName = "Ammunition",
         DefaultCompactName = "AMMO",
         Bone = "j_gun",

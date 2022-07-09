@@ -280,7 +280,7 @@ SWEP.Attachments = {
     {
         PrintName = "Optic",
         Bone = "j_gun",
-        Pos = Vector(3, -0.0125, 3.15),
+        Pos = Vector(2, -0.0125, 3.15),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_optic", "bo1_rail_riser"},
         InstalledElements = {"mount"}
@@ -333,6 +333,14 @@ SWEP.Attachments = {
         Category = {"bo1_ammo", "bo1_pap"},
     },
     {
+        PrintName = "Magazine",
+        DefaultCompactName = "MAG",
+        Bone = "j_gun",
+        Pos = Vector(5, 0, -1),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo2_fastmag", "bo2_extmag"},
+    },
+    {
         PrintName = "Cosmetic",
         DefaultCompactName = "Gunmetal",
         Bone = "j_gun",
@@ -373,7 +381,7 @@ SWEP.Animations = {
         Source = "draw",
         Time = 1.5,
     },
-    /* ORIGINAL READY BROKEN STOCK SEEN THROUGH
+    /* ORIGINAL READY -- BROKEN STOCK SEEN THROUGH
     ["ready"] = {
         Source = "first_draw",
         Time = 2,

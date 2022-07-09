@@ -346,7 +346,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(5.75, 0, -1),
         Ang = Angle(0, 0, 0),
-        Category = {"bo2_fastmag"},
+        Category = {"bo2_fastmag", "bo2_extmag"},
     },
     {
         PrintName = "Ammunition",

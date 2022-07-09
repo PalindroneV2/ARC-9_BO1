@@ -14,7 +14,7 @@ ATT.SortOrder = 5
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 
-ATT.Category = {"bo1_mag_ext"}
+ATT.Category = {"bo1_mag_ext", "bo2_extmag"}
 ATT.ClipSizeMult = 1.5
 ATT.ReloadTimeMult = 1.1
 

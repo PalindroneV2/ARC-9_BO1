@@ -1,5 +1,5 @@
-ATT.PrintName = "Burris Mini"
-ATT.CompactName = [[RDS LP]]
+ATT.PrintName = "Burris Fast Fire"
+ATT.CompactName = [[RDS II-2]]
 ATT.Icon = Material("entities/bo1_atts/optics/bo2_rds.png", "mips smooth")
 ATT.Description = [[
     Small, low profile optic mainly used by pistols. Provides a small electronic dot reticle which speeds up target acquisition by eliminating the need to line up irons.
@@ -20,12 +20,12 @@ ATT.Folder = "RDS"
 ATT.Category = {"bo1_optic", "bo1_optic_alt", "bo1_optic_lp", "bo1_optic_rds", "bo1_optic_pistol"}
 
 ATT.Model = "models/weapons/arc9/atts/bo2_docter.mdl"
-ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, -0.075)
+ATT.Scale = 1.35
+ATT.ModelOffset = Vector(0, -0.02, 0.075)
 
 ATT.Sights = {
     {
-        Pos = Vector(0, 10, -0.7),
+        Pos = Vector(0, 10, -0.925),
         Ang = Angle(0, 0.05, 0),
         Magnification = 1,
         IgnoreExtra = false

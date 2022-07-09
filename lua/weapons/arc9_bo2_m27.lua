@@ -369,11 +369,11 @@ SWEP.ReloadHideBoneTables = {
 SWEP.Attachments = {
     {
         PrintName = "Magazine",
-        DefaultCompactName = "STD",
+        DefaultCompactName = "MAG",
         Bone = "tag_clip",
         Pos = Vector(0.5, 0, 0),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_mag_ext"},
+        Category = {"bo2_fastmag", "bo2_extmag"},
     },
     {
         PrintName = "Barrel",
