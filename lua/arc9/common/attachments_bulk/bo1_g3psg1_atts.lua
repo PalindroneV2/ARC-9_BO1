@@ -170,6 +170,7 @@ ATT.RPMAdd = 150
 ATT.RecoilMult = 0.35
 ATT.RecoilUpMult = 0.35
 ATT.RecoilSideMult = 0.35
+ATT.RecoilKickMult = 0.35
 
 ATT.RangeMaxMult = 0.75
 ATT.RangeMinMult = 0.75
@@ -233,6 +234,8 @@ ATT.RPMAdd = -100
 
 ARC9.LoadAttachment(ATT, "bo1_g3_mag_psg1")
 
+
+--HK21 ONLY
 ATT = {}
 
 ATT.PrintName = [[20 Round Standard Magazine]]

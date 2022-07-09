@@ -210,6 +210,9 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local newpos = Vector(-2.2, -1, 1.95) -- M39
     local newang = Angle(-0.1, -1.5, 0) -- M39
 
+    if attached["extmag"] then
+        vm:SetBodygroup(2,1)
+    end
     if attached["auto"] then
         vm:SetBodygroup(3,1)
     end
@@ -248,12 +251,24 @@ SWEP.HookP_NameChange = function(self, name)
     return gunname
 end
 
+SWEP.Hook_TranslateAnimation = function (self, anim)
+    local attached = self:GetElements()
+
+    local suffix = ""
+
+    if attached["extmag"] then
+        suffix = "_ext"
+    end
+
+    return anim .. suffix
+end
+
 SWEP.Attachments = {
     {
         PrintName = "Perk-a-Cola",
         DefaultCompactName = "PERK",
         Bone = "j_gun",
-        Pos = Vector(-5, 0, -5),
+        Pos = Vector(-5, 0, -7),
         Ang = Angle(0, 0, 0),
         Category = "bo1_perkacola",
     },
@@ -289,6 +304,14 @@ SWEP.Attachments = {
         Pos = Vector(4.85, 0.1, 0.875),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_muzzle_pistol"},
+    },
+    {
+        PrintName = "Magazine",
+        DefaultCompactName = "MAG",
+        Bone = "j_gun",
+        Pos = Vector(-1.5, 0, -1),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_mag_ext"},
     },
 }
 

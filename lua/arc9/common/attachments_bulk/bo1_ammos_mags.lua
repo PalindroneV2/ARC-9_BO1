@@ -282,6 +282,26 @@ ARC9.LoadAttachment(ATT, "bo1_ammo_pap")
 
 ATT = {}
 
+ATT.PrintName = [[Explosive Crossbow Bolt]]
+ATT.CompactName = [[EXPL]]
+ATT.Icon = Material("entities/bo1_atts/ammo/FMJ.png")
+ATT.Description = [[
+    Crossbow bolts fitted with custom electronic high-explosive warheads.
+]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.Free = false
+
+ATT.Category = {"bo1_xbow_ammo"}
+ATT.ActivateElements = {"xbow_explosive"}
+ATT.ShootEnt = "arc9_bo1_xbow_bolt_exp"
+
+ARC9.LoadAttachment(ATT, "bo1_xbow_ammo_expl")
+
+ATT = {}
+
 ATT.PrintName = [[40mm NATO DUD]]
 ATT.CompactName = [[DUD]]
 ATT.Icon = Material("entities/bo1_atts/ammo/FMJ.png")
