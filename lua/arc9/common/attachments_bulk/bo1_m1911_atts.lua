@@ -117,7 +117,7 @@ ARC9.LoadAttachment(ATT, "bo1_m1911_frames_hd")
 ATT = {}
 
 ATT.PrintName = "Springfield Armory Modern Frame"
-ATT.CompactName = "Modern"
+ATT.CompactName = "S.A. Frame"
 ATT.Icon = Material("materials/entities/bo1_atts/cosmetic/bo3_1911.png")
 ATT.Description = [[
     Modern M1911 platform Frame with improved ambidextrous safety and a dove-tail to protect the shooter from hammer bite.
@@ -171,49 +171,12 @@ ATT.ActivateElements = {"newtrigger"}
 
 ARC9.LoadAttachment(ATT, "bo1_m1911_trigger_fast")
 
-ATT = {}
-
-ATT.PrintName = "AMT Modern Long Slide"
-ATT.CompactName = "Baller"
-ATT.Icon = Material("materials/entities/bo1_atts/cosmetic/bo3_1911.png")
-ATT.Description = [[
-    Modern M1911 platform slide with angled serrations and replaceable Novak iron sights with tritium.
-    Longer barrel that improves range andd muzzle velocity.
-]]
-ATT.Pros = {}
-ATT.Cons = {}
-ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
-ATT.Free = true
-
-ATT.Category = {"bo1_m1911_slides"}
-ATT.ActivateElements = {"1911_slide_baller_modern", "longbarrel"}
-
-ARC9.LoadAttachment(ATT, "bo1_m1911_slides_hardballer_modern")
-
-ATT = {}
-
-ATT.PrintName = "Hardballer Long Slide"
-ATT.CompactName = "Long"
-ATT.Icon = Material("materials/entities/bo1_atts/cosmetic/bo3_1911.png")
-ATT.Description = [[
-    Longer 1911 slide and barrel with improved rifling and improved rear irons.
-]]
-ATT.Pros = {}
-ATT.Cons = {}
-ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
-ATT.Free = true
-
-ATT.Category = {"bo1_m1911_slides"}
-ATT.ActivateElements = {"1911_slide_baller", "longbarrel"}
-
-ARC9.LoadAttachment(ATT, "bo1_m1911_slides_hardballer")
+-- SLIDES
 
 ATT = {}
 
 ATT.PrintName = "Springfield Armory Modern Slide"
-ATT.CompactName = "Modern"
+ATT.CompactName = "5\" S.A."
 ATT.Icon = Material("materials/entities/bo1_atts/cosmetic/bo3_1911.png")
 ATT.Description = [[
     Modern M1911 platform slide with angled serrations and replaceable Novak iron sights with tritium.
@@ -231,15 +194,34 @@ ARC9.LoadAttachment(ATT, "bo1_m1911_slides_modern")
 
 ATT = {}
 
-ATT.PrintName = "Springfield Armory Commander Slide"
-ATT.CompactName = "Commander"
+ATT.PrintName = "Commander Short Slide"
+ATT.CompactName = "4.25\" G.I."
 ATT.Icon = Material("materials/entities/bo1_atts/cosmetic/bo3_1911.png")
 ATT.Description = [[
     Compact 1911 slide with that improves handling and sprint times but reduces muzzle velocity and worsens recoil.
 ]]
 ATT.Pros = {}
 ATT.Cons = {}
-ATT.SortOrder = 0
+ATT.SortOrder = 1
+ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.Free = true
+
+ATT.Category = {"bo1_m1911_slides"}
+ATT.ActivateElements = {"1911_slide_short", "shortbarrel"}
+
+ARC9.LoadAttachment(ATT, "bo1_m1911_slides_short")
+
+ATT = {}
+
+ATT.PrintName = "Springfield Armory Commander Slide"
+ATT.CompactName = "4.25\" S.A."
+ATT.Icon = Material("materials/entities/bo1_atts/cosmetic/bo3_1911.png")
+ATT.Description = [[
+    Compact 1911 slide with that improves handling and sprint times but reduces muzzle velocity and worsens recoil.
+]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 1
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = true
 
@@ -250,19 +232,39 @@ ARC9.LoadAttachment(ATT, "bo1_m1911_slides_short_modern")
 
 ATT = {}
 
-ATT.PrintName = "Commander Short Slide"
-ATT.CompactName = "Short"
+ATT.PrintName = "AMT Long Slide"
+ATT.CompactName = "7\" AMT"
 ATT.Icon = Material("materials/entities/bo1_atts/cosmetic/bo3_1911.png")
 ATT.Description = [[
-    Compact 1911 slide with that improves handling and sprint times but reduces muzzle velocity and worsens recoil.
+    Longer 1911 slide and barrel with improved rifling and improved rear irons.
 ]]
 ATT.Pros = {}
 ATT.Cons = {}
-ATT.SortOrder = 0
+ATT.SortOrder = 2
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = true
 
 ATT.Category = {"bo1_m1911_slides"}
-ATT.ActivateElements = {"1911_slide_short", "shortbarrel"}
+ATT.ActivateElements = {"1911_slide_baller", "longbarrel"}
 
-ARC9.LoadAttachment(ATT, "bo1_m1911_slides_short")
+ARC9.LoadAttachment(ATT, "bo1_m1911_slides_hardballer")
+
+ATT = {}
+
+ATT.PrintName = "Springfield Armory Modern Longslide"
+ATT.CompactName = "7\" S.A."
+ATT.Icon = Material("materials/entities/bo1_atts/cosmetic/bo3_1911.png")
+ATT.Description = [[
+    Modern M1911 platform slide with angled serrations and replaceable Novak iron sights with tritium.
+    Longer barrel that improves range andd muzzle velocity.
+]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 2
+ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.Free = true
+
+ATT.Category = {"bo1_m1911_slides"}
+ATT.ActivateElements = {"1911_slide_baller_modern", "longbarrel"}
+
+ARC9.LoadAttachment(ATT, "bo1_m1911_slides_hardballer_modern")

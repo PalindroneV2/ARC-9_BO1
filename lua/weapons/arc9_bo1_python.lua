@@ -149,11 +149,10 @@ SWEP.DistantShootSound = "ARC9_BO1.Python_RingOff"
 --SWEP.MuzzleEffect = "muzzleflash_4"
 SWEP.MuzzleParticle = "muzzleflash_minimi" -- Used for some muzzle effects.
 
-
-SWEP.NoShellEject = true
 -- SWEP.ShellModel = "models/shells/shell_9mm.mdl"
 -- SWEP.ShellScale = 1.25
 -- SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556_steel"
+SWEP.NoShellEject = true
 
 SWEP.MuzzleEffectQCA = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectQCA = 1 -- which attachment to put the case effect on

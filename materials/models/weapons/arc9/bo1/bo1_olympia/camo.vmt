@@ -3,9 +3,6 @@ VertexlitGeneric
 	$basetexture	"models\weapons\arc9\bo1\bo1_olympia\olympia_c"
 	$phongexponenttexture	"models\weapons\arc9\bo1\bo1_olympia\olympia_s"
 	$bumpmap	"models\weapons\arc9\bo1\bo1_olympia\olympia_n"
-	$detail "models\weapons\arc9\bo1\olympia_wood"
-	$detailblendmode 0
-	$detailblendfactor 1
 
 	//"$color2" "[ .4 .4 .4 ]"
 	"$blendtintbybasealpha" "1"
@@ -17,4 +14,14 @@ VertexlitGeneric
 	"$basemapalphaenvmapmask" "1"
 	"$envmapfresnel" "0.01"
 	"$envmaptint" "[ .01 .01 .01 ]"
+
+    $detailblendmode 4
+    $detailblendfactor 1
+	Proxies {
+		CustomCamo {
+			camoTexture $detail
+			camoScale $detailscale
+            blend $detailblendfactor
+		}
+	}
 }

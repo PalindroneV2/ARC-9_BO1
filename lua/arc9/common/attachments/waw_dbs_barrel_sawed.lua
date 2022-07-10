@@ -1,5 +1,5 @@
-ATT.PrintName = [[Sawn-Off Barrel]]
-ATT.CompactName = [[SAWN-OFF]]
+ATT.PrintName = [[Sawed-Off Barrel]]
+ATT.CompactName = [[SAWED-OFF]]
 ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m4.png", "mips smooth")
 ATT.Description = [[
     Convert your shotgun into a compact weapon by ilegally sawing off the barrel.
@@ -10,7 +10,7 @@ ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Category = {"waw_dbs_barrel"}
-ATT.ActivateElements = {"sawn-off"}
+ATT.ActivateElements = {"sawed-off"}
 
 ATT.SpreadMult = 1.15
 ATT.RecoilMult = 1.1

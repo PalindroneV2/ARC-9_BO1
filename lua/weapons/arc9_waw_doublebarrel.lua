@@ -234,7 +234,7 @@ SWEP.AttachmentElements = {
             {1,0},
         },
     },
-    ["sawn-off"] = {
+    ["sawed-off"] = {
         Bodygroups = {
             {2,1},
         },
@@ -252,8 +252,8 @@ SWEP.HookP_NameChange = function(self, name)
 
     local gunname = "Double-Barrel Shotgun"
 
-    if attached["sawn-off"] then
-        gunname = "Sawn-Off " .. gunname
+    if attached["sawed-off"] then
+        gunname = "Sawed-Off " .. gunname
     end
     if attached["bo1_pap"] then
         gunname = "24 Bore Long Range"

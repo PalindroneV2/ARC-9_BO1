@@ -242,7 +242,7 @@ ATT.Free = true
 
 ATT.Category = {"retro_ar15_front_iron"}
 ATT.ActivateElements = {"troy_front"}
-ATT.ExcludeElements = {"mw2_m4_irons"}
+ATT.ExcludeElements = {"mw2_m4_irons", "bo1_tactical"}
 -- ATT.ExcludeElements = {"bo1_rail_riser", "mw2_m4_irons"}
 
 ARC9.LoadAttachment(ATT, "retro_ar15_front_troy")
@@ -261,7 +261,7 @@ ATT.Free = true
 
 ATT.Category = {"retro_ar15_front_iron"}
 ATT.ActivateElements = {"usgi_front"}
-ATT.ExcludeElements = {"mw2_m4_irons"}
+ATT.ExcludeElements = {"mw2_m4_irons", "bo1_tactical"}
 -- ATT.ExcludeElements = {"bo1_rail_riser", "mw2_m4_irons"}
 
 ARC9.LoadAttachment(ATT, "retro_ar15_front_usgi")
@@ -565,7 +565,7 @@ ATT.Attachments = {
         Category = "retro_ar15_front_iron",
         UnInstalledElements = {"gasblock_carbine"},
         InstalledElements = {"gasblock_carbine_cut"},
-        ExcludeElements = {"mw2_m4_irons", "bo1_tactical"},
+        ExcludeElements = {"mw2_m4_irons"},
         -- ExcludeElements = {"bo1_optic", "bo1_rail_riser", "mw2_m4_irons", "bo1_tactical"},
         Bone = "j_gun",
         Pos = Vector(-4, 0, -1),
@@ -776,7 +776,7 @@ ATT.Folder = "AR-15 IRONS"
 
 ATT.Category = {"bo1_addon_irons_2"}
 ATT.ActivateElements = {"mw2_m4_irons"}
-ATT.ExcludeElements = {"handguard_patriot"}
+ATT.ExcludeElements = {"handguard_patriot","bo1_tactical"}
 ATT.DrawFunc = function(swep, model, wm)
     if swep:GetElements()["carbine"] then
         model:SetBodygroup(0,1)

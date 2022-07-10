@@ -18,7 +18,9 @@ SWEP.Trivia = {
     Games = [[COD4, MW2, BO1, MW3, BO2, AW, BO3, MW19, BOCW]]
 }
 SWEP.Credits = {
-    Author = "Palindrone"
+    Author = "Palindrone",
+    Original = "Treyarch",
+    Model = "Kally"
 }
 
 SWEP.Slot = 2
@@ -204,6 +206,8 @@ SWEP.BipodAng = Angle(0, 0, 0)
 
 SWEP.CustomizePos = Vector(14.5, 40, 4)
 SWEP.CustomizeAng = Angle(90, 0, 0)
+SWEP.CustomizeSnapshotPos = Vector(0, 0, 0)
+SWEP.CustomizeSnapshotAng = Angle(0, 0, 0)
 
 SWEP.RestPos = Vector(0, 0, 0)
 SWEP.RestAng = Angle(0, 0, 0)
@@ -387,20 +391,28 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
 
     local NewBipodPos = Vector(-2.765, 0, -1.5)
     local NewBipodAng = Angle(0, 0, 0)
+    local newCustPose = Vector(0, 0, 0)
+    local newCustAng = Angle(0, 0, 0)
 
     if attached["barrel_14"] then
         length = 1
         hand = 4
         gasblock = 1
+        newCustPose = Vector(-1.5, 0, 0)
     elseif attached["barrel_11"] then
         length = 2
         hand = 4
         gasblock = 1
+        newCustPose = Vector(-1.5, 0, 0)
     elseif attached["barrel_10"] then
         length = 3
         hand = 4
         gasblock = 1
+        newCustPose = Vector(-3, 0, 0)
     end
+
+    self.CustomizeSnapshotPos = newCustPose
+    self.CustomizeSnapshotAng = newCustAng
 
     if attached["handguard_m203"] then hand = 1
     elseif attached["handguard_a2"] then hand = 2
@@ -512,9 +524,10 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     if hand == 3 and barrel == 0 and attached["bo1_optic"] then
         vm:SetBodygroup(8, 2)
     end
-    if !attached["a4_top"] and hand == 5 and attached["bo1_optic"] then
-        vm:SetBodygroup(8, 3)
-    end
+    -- Hides front sight when optic attached on A1/A2 Tops when using RIS receiver. Not needed anymore since flat gasblock now exists.
+    -- if !attached["a4_top"] and hand == 5 and attached["bo1_optic"] then
+    --     vm:SetBodygroup(8, 3)
+    -- end
 
     -- IRON SIGHT POSITION CHANGES
     local newpos = Vector(-2.765, -2, 0.25)

@@ -356,7 +356,7 @@ SWEP.HookP_NameChange = function(self, name)
     end
 
     if attached["longbarrel"] then
-        gunname = "AMT Hardballer"
+        gunname = "Colt Longslide"
     end
 
     if attached["bo1_pap"] then
@@ -399,7 +399,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Slide",
-        DefaultCompactName = "G.I. Slide",
+        DefaultCompactName = "5\" G.I.",
         Bone = "j_bolt",
         Scale = Vector(1,1,1),
         Pos = Vector(2, 0, 0),

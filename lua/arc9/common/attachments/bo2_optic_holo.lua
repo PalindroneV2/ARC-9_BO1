@@ -23,8 +23,8 @@ ATT.ModelOffset = Vector(0, 0, 0)
 
 ATT.Sights = {
     {
-        Pos = Vector(-0.0125, 8, -1.35),
-        Ang = Angle(0, 0, 0),
+        Pos = Vector(0, 8, -1.35),
+        Ang = Angle(0.05, 0, 0),
         Magnification = 1.25,
         IgnoreExtra = false
     },
@@ -32,5 +32,5 @@ ATT.Sights = {
 
 ATT.HoloSight = true
 ATT.HoloSightReticle = Material("hud/arc9_bo1/reticles/bo2_holo.png", "mips smooth")
-ATT.HoloSightSize = 350
+ATT.HoloSightSize = 400
 ATT.HoloSightColorable = true

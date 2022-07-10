@@ -299,10 +299,10 @@ SWEP.Attachments = {
 }
 
 SWEP.HideBones = {
-    -- "tag_clip2",
+    "j_clip_full",
 }
 SWEP.ReloadHideBoneTables = {
-    -- [1] = {"tag_clip2"},
+    [1] = {"j_clip_full"},
 }
 
 SWEP.Animations = {
