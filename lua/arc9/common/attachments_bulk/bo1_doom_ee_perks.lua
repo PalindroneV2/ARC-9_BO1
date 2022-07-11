@@ -14,7 +14,7 @@ ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Category = {"waw_perk_ssg"}
-ATT.ActivateElements = {"sawn-off", "stock_h", "ssg"}
+ATT.ActivateElements = {"sawed-off", "stock_h", "ssg"}
 
 ATT.SpeedMult = 2
 

@@ -242,7 +242,7 @@ ATT.Free = true
 
 ATT.Category = {"retro_ar15_front_iron"}
 ATT.ActivateElements = {"troy_front"}
-ATT.ExcludeElements = {"mw2_m4_irons", "bo1_tactical"}
+ATT.ExcludeElements = {"mw2_m4_irons"}
 -- ATT.ExcludeElements = {"bo1_rail_riser", "mw2_m4_irons"}
 
 ARC9.LoadAttachment(ATT, "retro_ar15_front_troy")
@@ -261,7 +261,7 @@ ATT.Free = true
 
 ATT.Category = {"retro_ar15_front_iron"}
 ATT.ActivateElements = {"usgi_front"}
-ATT.ExcludeElements = {"mw2_m4_irons", "bo1_tactical"}
+ATT.ExcludeElements = {"mw2_m4_irons"}
 -- ATT.ExcludeElements = {"bo1_rail_riser", "mw2_m4_irons"}
 
 ARC9.LoadAttachment(ATT, "retro_ar15_front_usgi")
@@ -280,7 +280,6 @@ ATT.Category = {"retro_ar15_front_iron"}
 ATT.ActivateElements = {"gasblock_flat"}
 ATT.ExcludeElements = {
     "mw2_m4_irons",
-    "carbine" and "handguard_a4",
 }
 
 ARC9.LoadAttachment(ATT, "retro_ar15_front_flat")
@@ -302,7 +301,7 @@ ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Category = {"retro_ar15_handguard_20"}
-ATT.ActivateElements = {"handguard_heat"}
+ATT.ActivateElements = {"handguard_m203"}
 ATT.ExcludeElements = {"bo1_m203", "bo1_mk"}
 
 ATT.Model = "models/weapons/arc9/atts/cde_mp5k_nogrip.mdl"

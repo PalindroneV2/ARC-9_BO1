@@ -725,24 +725,22 @@ SWEP.HookP_NameChange = function(self, name)
         end
     end
 
-    if attached["fcg_semi"] then
-        brand = name
-        model = ""
-        alt = ""
-        if attached["mw3_psrscope"] and attached["a4_top"] and attached["sniper_stock"] then
-            brand = ""
-            model = "Mk. 12 "
-            alt = "SPR"
-        end
-    end
-
     local gunname = ""
     gunname = brand .. model .. alt
+
+    if attached["fcg_semi"] then
+        gunname = name
+        if attached["mw3_psrscope"] and attached["a4_top"] and attached["sniper_stock"] then
+            gunname = "Mk. 12 SPR"
+        end
+    end
 
     if ((model .. alt) == "M16A1") and attached["fcg_semi"] and attached["woodcamo"] then gunname = "Service Rifle"
         if attached["beowulf"] then gunname = "Survivalist's Rifle" end
     end
-    if ((model .. alt) == "M607a") and attached["woodcamo"] then gunname = "Service Carbine" end
+    if ((model .. alt) == "M635") and attached["woodcamo"] then gunname = "Service Carbine"
+        if attached["9mm_mag"] then gunname = "Service SMG" end
+    end
 
     if attached["bo1_pap"] then gunname = "Skullpiercer"
         if attached["fcg_skull"] then gunname = "Skullsplitter" end

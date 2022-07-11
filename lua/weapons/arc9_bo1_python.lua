@@ -219,9 +219,9 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local attached = data.elements
     local finish = 0
 
-    -- if attached["snubnose"] then
-    --     vm:SetBodygroup(1,1)
-    -- end
+    if attached["snubnose"] then
+        vm:SetBodygroup(1,1)
+    end
     if attached["bo1_pap"] then
         finish = finish + 2
     end

@@ -127,7 +127,7 @@ SWEP.Num = 8
 SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
-        Mode = -1,
+        Mode = 1,
     },
 }
 SWEP.ManualActionChamber = 0 -- How many shots we go between needing to cycle again.
