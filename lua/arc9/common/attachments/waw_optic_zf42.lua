@@ -1,6 +1,6 @@
-ATT.PrintName = "ZF4 (4x)"
+ATT.PrintName = "ZF42 (4x)"
 ATT.CompactName = [[ZF4 4x]]
-ATT.Icon = Material("entities/bo1_atts/optics/waw_telescopic.png", "mips smooth")
+ATT.Icon = Material("entities/bo1_atts/optics/waw_mosin.png", "mips smooth")
 ATT.Description = [[
     Medium range combat scope for improved precision at longer ranges.
 
@@ -16,17 +16,18 @@ ATT.MenuCategory = "ARC-9 - WAW Attachments"
 ATT.Free = false
 ATT.Folder = "SCOPE"
 
-ATT.Category = {"waw_stg44_zf4"}
-ATT.ActivateElements = {"waw_zf4"}
+ATT.Category = {"waw_ger_scope"}
+ATT.ActivateElements = {"kar_scope"}
 
-ATT.Model = "models/weapons/arc9/atts/waw_zf4.mdl"
+ATT.Model = "models/weapons/arc9/atts/waw_zf42.mdl"
 ATT.Scale = 1
-ATT.ModelBodygroups = "001"
-ATT.ModelOffset = Vector(-5, 0.02, -2.1)
+ATT.ModelBodygroups = "000"
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ShotgunReload = true
 
 ATT.Sights = {
     {
-        Pos = Vector(-0.0025, 4, -3.2875),
+        Pos = Vector(-0.0035, 10, -2.835),
         Ang = Angle(0, 0, 0),
         Magnification = 1,
         IgnoreExtra = true
