@@ -6,17 +6,16 @@ SWEP.AdminOnly = false
 SWEP.PrintName = "Kar98k"
 SWEP.Class = "Rifle"
 SWEP.Description = [[
-    "What does a battle rifle have in common with a microwave? They both go 'ping' when they're done."
-    
-    American semi-automatic battle rifle using an en-bloc 8-round magazine which gave US Troops an advantage against the more commonplace bolt-action rifles wielded by their enemies during World War 2.
+    Carbine version of the famous Mauser rifle model of 1898 with a shorter barrel.
+    It served as the standard arm for German armed forces during World War II.
 ]]
 SWEP.Trivia = {
-    Manufacturer = "U.S. Ordnance",
-    Calibre = ".30-06 Springfield",
-    Mechanism = "Recoil-Operated",
-    Country = "USA",
-    Year = 1928,
-    Games = [[COD1, COD2, COD3, WAW, BO1, WW2, VG]]
+    Manufacturer = "Mauser",
+    Calibre = "7.92x57mm Mauser",
+    Mechanism = "Bolt Action",
+    Country = "German Empire",
+    Year = 1935,
+    Games = [[COD1, COD2, COD3, WAW, BO1, WW2, MW19, VG]]
 }
 SWEP.Credits = {
     Author = "Palindrone"
@@ -89,7 +88,7 @@ SWEP.Spread = math.rad(1 / 37.5)
 SWEP.SpreadAddRecoil = math.rad(75 / 37.5)
 
 SWEP.SpreadAddHipFire = math.rad(250 / 37.5)
-SWEP.SpreadAddMove = math.rad(125 / 37.5)
+--SWEP.SpreadAddMove = math.rad(125 / 37.5)
 SWEP.SpreadAddMidAir = 0 -- = math.rad(110 / 37.5)
 
 SWEP.RecoilPatternDrift = 20
@@ -101,7 +100,7 @@ SWEP.VisualRecoilCenter = Vector(0, 0, 0)
 SWEP.VisualRecoilPunch = 0
 SWEP.VisualRecoilMultSights = 0
 
-SWEP.Speed = 0.75
+SWEP.Speed = 0.95
 
 SWEP.ShootWhileSprint = true
 SWEP.ReloadInSights = false
@@ -164,6 +163,7 @@ SWEP.MuzzleEffectQCA = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectQCA = 2 -- which attachment to put the case effect on
 SWEP.ProceduralViewQCA = 1
 SWEP.CamQCA = 3
+SWEP.NoShellEject = true
 
 SWEP.BulletBones = {
 }
@@ -219,8 +219,12 @@ SWEP.AttachmentElements = {
 SWEP.Hook_ModifyBodygroups = function(self, data)
 
     local vm = data.model
-    -- local CUSTSTATE = self:GetCustomize()
     local attached = data.elements
+    local CUSTSTATE = self:GetCustomize()
+
+    if CUSTSTATE then
+        vm:SetBodygroup(1,0)
+    end
 
     local camo = 0
     if attached["bo1_pap"] then
@@ -324,6 +328,7 @@ SWEP.Attachments = {
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
         Category = {"waw_ger_scope"},
+        ExcludeElements = {"waw_rifgrenade"},
     },
 }
 
@@ -444,7 +449,7 @@ SWEP.Animations = {
         Source = "reload_in",
         Time = 60 / 30,
         RestoreAmmo = 1, -- loads a shell since the first reload has a shell in animation
-        MinProgress = 1,
+        MinProgress = 20 / 30,
         EventTable = {
             {s = "ARC9_WAW.K98_Up", t = 5 / 30},
             {s = "ARC9_WAW.K98_Back", t = 10 / 30},

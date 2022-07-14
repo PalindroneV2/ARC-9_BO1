@@ -95,7 +95,7 @@ SWEP.UsePelletSpread = true -- Multiple bullets fired at once clump up, like for
 SWEP.PelletSpread = 0.2
 
 SWEP.SpreadAddHipFire = 0.075
-SWEP.SpreadAddMove = 0.02
+--SWEP.SpreadAddMove = 0.02
 SWEP.SpreadAddMidAir = 0.05
 
 SWEP.RecoilPatternDrift = 20

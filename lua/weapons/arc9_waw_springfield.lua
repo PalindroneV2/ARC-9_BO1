@@ -3,20 +3,20 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ARC-9 - World at War" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "M1 Garand"
-SWEP.Class = "Battle Rifle"
+SWEP.PrintName = "Springfield M1903A1"
+SWEP.Class = "Rifle"
 SWEP.Description = [[
-    "What does a battle rifle have in common with a microwave? They both go 'ping' when they're done."
-    
-    American semi-automatic battle rifle using an en-bloc 8-round magazine which gave US Troops an advantage against the more commonplace bolt-action rifles wielded by their enemies during World War 2.
+    American bolt action rifle rifle using that was used as the standard infantry rifle in the Great War and remained in specialized roles such as snipers during World War II.
+
+    This variant specifically saw much more use by the US Marines during the second world war rather than the more modern M1903A4.
 ]]
 SWEP.Trivia = {
-    Manufacturer = "U.S. Ordnance",
+    Manufacturer = "Springfield",
     Calibre = ".30-06 Springfield",
-    Mechanism = "Recoil-Operated",
+    Mechanism = "Bolt Action",
     Country = "USA",
-    Year = 1928,
-    Games = [[COD1, COD2, COD3, WAW, BO1, WW2, VG]]
+    Year = 1903,
+    Games = [[COD1, COD2, COD3, WAW, WW2]]
 }
 SWEP.Credits = {
     Author = "Palindrone"
@@ -26,33 +26,30 @@ SWEP.Slot = 3
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/arc9/c_waw_garand.mdl"
-SWEP.WorldModel = "models/weapons/arc9/c_waw_garand.mdl"
+SWEP.ViewModel = "models/weapons/arc9/c_waw_springfield.mdl"
+SWEP.WorldModel = "models/weapons/arc9/w_waw_springfield.mdl"
+SWEP.WorldModelMirror = "models/weapons/arc9/w_waw_springfield.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    Pos        =    Vector(-6.5, 0.5, -3.25),
-    Ang        =    Angle(-15, 0, 180),
+    Pos        =    Vector(-7, 2.5, -3),
+    Ang        =    Angle(-15, 1, 180),
     Bone    =    "ValveBiped.Bip01_R_Hand",
-    Scale = 1.025,
+    Scale = 1,
 }
 SWEP.ViewModelFOVBase = 75
 
-SWEP.DefaultBodygroups = "00000000000000"
+SWEP.DefaultBodygroups = "01000000000000"
 
-SWEP.CustomCamoTexture = "models/weapons/arc9/bo1/camos/black_detail"
-SWEP.CustomCamoScale = 1
-SWEP.CustomBlendFactor = 1
-
-SWEP.DamageMax = 60
-SWEP.DamageMin = 40 -- damage done at maximum range
-SWEP.RangeMax = 8000
-SWEP.RangeMin = 2000
+SWEP.DamageMax = 105
+SWEP.DamageMin = 65 -- damage done at maximum range
+SWEP.RangeMax = 10000
+SWEP.RangeMin = 3000
 SWEP.Penetration = 8
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
 SWEP.EntityMuzzleVelocity = 10000
 
-SWEP.PhysBulletMuzzleVelocity = 960 * 39.37
+SWEP.PhysBulletMuzzleVelocity = 1200 * 39.37
 
 SWEP.BodyDamageMults = {
     [HITGROUP_HEAD] = 2,
@@ -69,7 +66,7 @@ SWEP.TracerEffect = "ARC9_tracer" -- The effect to use for hitscan tracers
 SWEP.TracerColor = Color(255, 255, 255) -- Color of tracers. Only works if tracer effect supports it. For physical bullets, this is compressed down to 9-bit color.
 
 SWEP.ChamberSize = 0 -- dont fucking change this again.
-SWEP.ClipSize = 8 -- DefaultClip is automatically set.
+SWEP.ClipSize = 5 -- DefaultClip is automatically set.
 SWEP.ReloadTime = 1
 
 SWEP.Crosshair = true
@@ -88,7 +85,7 @@ SWEP.RecoilResetTime = 0.01 -- How long the gun must go before the recoil patter
 SWEP.RecoilAutoControl = 0.5
 SWEP.RecoilKick = 1
 
-SWEP.Spread = math.rad(3.6 / 37.5)
+SWEP.Spread = math.rad(1 / 37.5)
 SWEP.SpreadAddRecoil = math.rad(75 / 37.5)
 
 SWEP.SpreadAddHipFire = math.rad(250 / 37.5)
@@ -118,13 +115,19 @@ SWEP.SpeedMultBlindFire = 1
 SWEP.AimDownSightsTime = 0.2
 SWEP.SprintToFireTime = 0.2
 
-SWEP.RPM = 500
+SWEP.RPM = 600
 SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
         Mode = 1,
     },
 }
+SWEP.ManualActionChamber = 1 -- How many shots we go between needing to cycle again.
+SWEP.ManualAction = true -- Pump/bolt action. Play the "cycle" animation after firing, when the trigger is released.
+SWEP.ManualActionNoLastCycle = false -- Do not cycle on the last shot.
+SWEP.SlamFire = false
+SWEP.CycleTime = 1
+
 SWEP.NPCWeaponType = {"weapon_ar2", "weapon_smg1"}
 SWEP.NPCWeight = 100
 
@@ -141,9 +144,9 @@ SWEP.ShootVolume = 125
 SWEP.ShootPitch = 100
 SWEP.ShootPitchVariation = 0
 
-SWEP.ShootSound = "ARC9_WAW.Garand_Fire"
+SWEP.ShootSound = "ARC9_WAW.Springfield_Fire"
 SWEP.ShootSoundSilenced = "ARC9_BO1.FAL_Sil"
-SWEP.DistantShootSound = "ARC9_WAW.Rifle_RingOff"
+SWEP.DistantShootSound = "ARC9_WAW.K98_Ringoff"
 
 SWEP.UBGLIntegralReload = true -- The UBGL uses reload animations that are baked into the gun.
 SWEP.DoFireAnimationUBGL = true
@@ -161,6 +164,7 @@ SWEP.MuzzleEffectQCA = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectQCA = 2 -- which attachment to put the case effect on
 SWEP.ProceduralViewQCA = 1
 SWEP.CamQCA = 3
+SWEP.NoShellEject = true
 
 SWEP.BulletBones = {
 }
@@ -171,8 +175,8 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(0.35, -8, 1),
-    Ang = Angle(0.05, -0.9, 0),
+    Pos = Vector(-2.15, -6, 2.1),
+    Ang = Angle(-0.025, 0.1, 0),
     Magnification = 1.5,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
@@ -186,7 +190,7 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_AR2
 SWEP.AnimDraw = ACT_HL2MP_GESTURE_RANGE_ATTACK_KNIFE
 
-SWEP.ActivePos = Vector(3, -6, -1)
+SWEP.ActivePos = Vector(1, -6, -1)
 SWEP.ActiveAng = Angle(0, 0, -5)
 
 SWEP.BipodPos = Vector(-1.9535, -8, -1)
@@ -216,8 +220,12 @@ SWEP.AttachmentElements = {
 SWEP.Hook_ModifyBodygroups = function(self, data)
 
     local vm = data.model
-    -- local CUSTSTATE = self:GetCustomize()
     local attached = data.elements
+    local CUSTSTATE = self:GetCustomize()
+
+    if CUSTSTATE then
+        vm:SetBodygroup(1,0)
+    end
 
     local camo = 0
     if attached["bo1_pap"] then
@@ -228,10 +236,17 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     end
     if attached["waw_rifgrenade"] then
         vm:SetBodygroup(2,2)
-        vm:SetBodygroup(3,1)
+        if self:GetUBGL() then
+            vm:SetBodygroup(3,1)
+        end
         if self:Clip2() == 0 then
             vm:SetBodygroup(3,0)
         end
+    end
+
+    if attached["spring_scope"] then
+        vm:SetBodygroup(1,2)
+        vm:SetBodygroup(4,1)
     end
     vm:SetSkin(camo)
 
@@ -241,10 +256,10 @@ SWEP.HookP_NameChange = function(self, name)
 
     local attached = self:GetElements()
 
-    local gunname = "M1 Garand"
+    local gunname = "Springfield M1903A1"
 
-    if attached["bo1_pap"] then gunname = "M1000"
-        if attached["waw_rifgrenade"] then gunname = "M1000 Imploder" end
+    if attached["bo1_pap"] then gunname = "Krautspotter"
+        if attached["bo1_pap"] then gunname = "Treespotter" end
     end
 
     return gunname
@@ -254,11 +269,10 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
     local attached = self:GetElements()
 
     local suffix = ""
-
     if self:Clip1() == 0 and !self:GetUBGL() then
-        return anim .. "_empty"
+        suffix = "_empty"
     end
-    if self:GetUBGL() then
+    if self:GetUBGL() and (anim != "reload_ubgl") then
         suffix = "_ubgl"
     end
 
@@ -287,7 +301,7 @@ SWEP.Attachments = {
         PrintName = "Ammunition",
         DefaultCompactName = "AMMO",
         Bone = "j_gun",
-        Pos = Vector(4.5, 0, -2),
+        Pos = Vector(4.5, 0, 0),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ammo", "bo1_pap"},
     },
@@ -303,9 +317,19 @@ SWEP.Attachments = {
         PrintName = "Muzzle",
         Bone = "j_gun",
         Scale = Vector(1.3, 1, 1),
-        Pos = Vector(25.55, 0.1, 1.575),
+        Pos = Vector(26.25, 0, 1.25),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_muzzle", "waw_muzz_grenade", "waw_bayonet"},
+    },
+    {
+        PrintName = "Optic",
+        DefaultCompactName = "IRONS",
+        Bone = "j_gun",
+        Pos = Vector(0, 0, 0),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(2, 0, 2),
+        Category = {"waw_spring_scope"},
+        ExcludeElements = {"waw_rifgrenade"},
     },
 }
 
@@ -323,18 +347,93 @@ SWEP.Animations = {
         Source = "idle",
         Time = 1 / 30,
     },
-    ["idle_empty"] = {
-        Source = "idle_empty",
-        Time = 3 / 30,
-    },
     ["draw"] = {
         Source = "draw",
         Time = 0.75,
     },
-    ["draw_empty"] = {
-        Source = "draw_empty",
+    ["holster"] = {
+        Source = "holster",
         Time = 0.5,
     },
+    ["ready"] = {
+        Source = "draw",
+        Time = 0.75,
+    },
+    ["fire"] = {
+        Source = {"fire"},
+        Time = 7 / 30,
+        {s = "ARC9_WAW.Springfield_Mech", t = 0 / 30},
+    },
+    ["cycle"] = {
+        Source = {"cycle"},
+        Time = 28 / 30,
+        ShellEjectAt = 10 / 30,
+        EventTable = {
+            {s = "ARC9_WAW.Arisaka_Up", t = 5 / 30},
+            {s = "ARC9_WAW.Arisaka_Back", t = 10 / 30},
+            {s = "ARC9_WAW.Arisaka_Fwd", t = 20 / 30},
+            {s = "ARC9_WAW.Arisaka_Down", t = 22 / 30},
+        },
+    },
+    ["fire_iron"] = {
+        Source = {"fire"},
+        Time = 7 / 30,
+        {s = "ARC9_WAW.Springfield_Mech", t = 1 / 30},
+    },
+    ["cycle_ads"] = {
+        Source = {"cycle"},
+        Time = 28 / 30,
+        ShellEjectAt = 10 / 30,
+        EventTable = {
+            {s = "ARC9_WAW.Arisaka_Up", t = 5 / 30},
+            {s = "ARC9_WAW.Arisaka_Back", t = 10 / 30},
+            {s = "ARC9_WAW.Arisaka_Fwd", t = 20 / 30},
+            {s = "ARC9_WAW.Arisaka_Down", t = 22 / 30},
+        },
+    },
+    ["reload"] = {
+        Source = "reload",
+        Time = 2.366 * 1.25,
+        EventTable = {
+            {s = "ARC9_WAW.Arisaka_Up", t = 0.15 * 1.25},
+            {s = "ARC9_WAW.Arisaka_Back", t = 0.3 * 1.25},
+            {s = "ARC9_WAW.K98_Rechamber", t = 0.5 * 1.25},
+            {s = "ARC9_WAW.Arisaka_Fwd", t = 1.67 * 1.25},
+            {s = "ARC9_WAW.K98_Eject", t = 1.69 * 1.25},
+            {s = "ARC9_WAW.Arisaka_Down", t = 1.71 * 1.25},
+        },
+    },
+
+    --reload--
+    ["reload_start"] = {
+        Source = "reload_in",
+        Time = 60 / 30,
+        RestoreAmmo = 1, -- loads a shell since the first reload has a shell in animation
+        MinProgress = 20 / 30,
+        EventTable = {
+            {s = "ARC9_WAW.Arisaka_Up", t = 5 / 30},
+            {s = "ARC9_WAW.Arisaka_Back", t = 10 / 30},
+            {s = "ARC9_WAW.Arisaka_Insert", t = 35 / 30},
+        },
+    },
+    ["reload_insert"] = {
+        Source = "reload_loop",
+        Time = 26 / 40,
+        MinProgress = 3 / 30,
+        EventTable = {
+            {s = "ARC9_WAW.Arisaka_Insert", t = 3 / 30},
+        }
+    },
+    ["reload_finish"] = {
+        Source = "reload_out",
+        Time = 26 / 30,
+        EventTable = {
+            {s = "ARC9_WAW.Arisaka_Fwd", t = 5 / 30},
+            {s = "ARC9_WAW.Arisaka_Down", t = 10 / 30},
+        },
+    },
+
+    --BAYONET--
     ["bash"] = {
         Source = "swipe",
         Time = 30 / 30,
@@ -343,81 +442,13 @@ SWEP.Animations = {
         Source = "stab",
         Time = 30 / 30,
     },
-    ["holster"] = {
-        Source = "holster",
-        Time = 0.5,
-    },
-    ["holster_empty"] = {
-        Source = "holster_empty",
-        Time = 0.5,
-    },
-    ["ready"] = {
-        Source = "first_draw",
-        Time = 64 / 30,
-        EventTable = {
-            {s = "ARC9_WAW.Garand_Pull", t = 21 / 30},
-            {s = "ARC9_WAW.Garand_Close", t = 36 / 30}
-        },
-    },
-    ["fire"] = {
-        Source = {"fire"},
-        Time = 7 / 30,
-        ShellEjectAt = 0,
-        EventTable = {{ s = "ARC9_WAW.Garand_Mech", t = 0 }}
-    },
-    ["fire_empty"] = {
-        Source = {"fire_empty"},
-        Time = 7 / 30,
-        ShellEjectAt = 0,
-         EventTable = {
-            {s = "ARC9_WAW.Garand_Ping", t = 0},
-            {s = "ARC9_WAW.Garand_Mech2", t = 1 / 30}
-        },
-    },
-    ["fire_iron"] = {
-        Source = {"fire_ads"},
-        Time = 7 / 30,
-        ShellEjectAt = 0,
-        EventTable = {{ s = "ARC9_WAW.Garand_Mech", t = 0 }}
-    },
-    ["fire_iron_empty"] = {
-        Source = {"fire_ads_empty"},
-        Time = 7 / 30,
-        ShellEjectAt = 0,
-        EventTable = {
-            {s = "ARC9_WAW.Garand_Ping", t = 0},
-            {s = "ARC9_WAW.Garand_Mech2", t = 1 / 30},
-        },
-    },
-    ["reload"] = {
-        Source = "reload_long",
-        Time = 105 / 30,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Framerate = 37,
-        Checkpoints = {28, 38, 69},
-        EventTable = {
-            {s = "ARC9_WAW.Garand_Pull", t = 16 / 30},
-            {s = "ARC9_WAW.Garand_Out", t = 23 / 30},
-            {s = "ARC9_WAW.Garand_Close", t = 32 / 30},
-            {s = "ARC9_WAW.Garand_Pull", t = 68 / 30},
-            {s = "ARC9_WAW.Garand_In", t = 77 / 30},
-            {s = "ARC9_WAW.Garand_Close", t = 85 / 30},
-        },
-    },
-    ["reload_empty"] = {
-        Source = "reload",
-        Time = 46 / 30,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Framerate = 30,
-        Checkpoints = {28, 38, 69},
-        EventTable = {
-            {s = "ARC9_WAW.Garand_In", t = 27 / 30},
-            {s = "ARC9_WAW.Garand_Close", t = 33 / 30},
-        },
-    },
 
     -- M7 GRENADE LAUNCHER --
     ["idle_ubgl"] = {
+        Source = "idle_glsetup",
+        Time = 1 / 30,
+    },
+    ["idle_ubgl_empty"] = {
         Source = "idle_glsetup",
         Time = 1 / 30,
     },
@@ -425,9 +456,9 @@ SWEP.Animations = {
         Source = "glsetup_in",
         Time = 80 / 30,
         EventTable = {
-            {s = "ARC9_WAW.RGren_Futz", t = 34 / 30},
-            {s = "ARC9_WAW.RGren_Load", t = 40 / 30},
-            {s = "ARC9_WAW.RGren_Click", t = 41 / 30},
+            {s = "ARC9_WAW.RGren_Futz", t = 24 / 30},
+            {s = "ARC9_WAW.RGren_Load", t = 30 / 30},
+            {s = "ARC9_WAW.RGren_Click", t = 31 / 30},
         }
     },
     ["exit_ubgl"] = {
@@ -445,13 +476,11 @@ SWEP.Animations = {
     },
     ["exit_ubgl_empty"] = {
         Source = "glsetup_out_empty",
-        Time = 20 / 30,
+        Time = 10 / 30,
     },
     ["fire_ubgl"] = {
         Source = "fire_glsetup",
         Time = 7 / 30,
-        TPAnim = ACT_HL2MP_GESTURE_RANGE_ATTACK_REVOLVER,
-        TPAnimStartTime = 0,
     },
     ["reload_ubgl"] = {
         Source = "reload_glsetup",
@@ -463,19 +492,5 @@ SWEP.Animations = {
             {s = "ARC9_WAW.RGren_Click", t = 24 / 30},
         },
         MinProgress = 0.1,
-    },
-    ["reload_ubgl_soh"] = {
-        Source = "reload_glsetup",
-        Time = 64 / 60,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
-        TPAnimStartTime = 0.1,
-        LHIK = true,
-        LHIKIn = 0.125,
-        LHIKOut = 0.125,
-        EventTable = {
-            {s = "ARC9_WAW.RGren_Futz", t = 16 / 60},
-            {s = "ARC9_WAW.RGren_Load", t = 19 / 60},
-            {s = "ARC9_WAW.RGren_Click", t = 24 / 60},
-        }
     },
 }
