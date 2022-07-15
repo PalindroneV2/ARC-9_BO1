@@ -27,8 +27,9 @@ ATT.ShotgunReload = true
 
 ATT.Sights = {
     {
-        Pos = Vector(-0.0035, 10, -2.835),
+        Pos = Vector(0.995, 10, -2.26),
         Ang = Angle(0, 0, 0),
+        ViewModelFOV = 60,
         Magnification = 1,
         IgnoreExtra = true
     },

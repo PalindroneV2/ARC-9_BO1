@@ -1,5 +1,5 @@
-ATT.PrintName = "Unertl Scope (4x)"
-ATT.CompactName = [[Unertl]]
+ATT.PrintName = "PU 3.5x Scope (4x)"
+ATT.CompactName = [[PU 3.5x]]
 ATT.Icon = Material("entities/bo1_atts/optics/waw_mosin.png", "mips smooth")
 ATT.Description = [[
     Medium range combat scope for improved precision at longer ranges.
@@ -16,18 +16,18 @@ ATT.MenuCategory = "ARC-9 - WAW Attachments"
 ATT.Free = false
 ATT.Folder = "SCOPE"
 
-ATT.Category = {"waw_spring_scope"}
-ATT.ActivateElements = {"spring_scope"}
+ATT.Category = {"waw_rus_scope"}
+ATT.ActivateElements = {"mosin_scope"}
 
-ATT.Model = "models/weapons/arc9/atts/waw_unertl.mdl"
-ATT.Scale = 1
+ATT.Model = "models/weapons/arc9/atts/waw_rus_scope.mdl"
+ATT.Scale = 0.375
 ATT.ModelBodygroups = "000"
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ShotgunReload = true
 
 ATT.Sights = {
     {
-        Pos = Vector(0.015, 9, -2.99),
+        Pos = Vector(0.486, 10, -2.96),
         Ang = Angle(0, 0, 0),
         ViewModelFOV = 35,
         Magnification = 1,
