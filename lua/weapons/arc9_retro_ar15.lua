@@ -252,7 +252,7 @@ SWEP.AttachmentElements = {
             {1,7}
         },
     },
-    ["bo1_m203"] = {
+    ["cde_m203"] = {
         Bodygroups = {
             {4,1},
         },
@@ -501,7 +501,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     --*/
     --PrintTable(data)
 
-    if length == 0 and hand != 3 and attached["bo1_m203"] then -- FORCIBLY ATTACH M203 HEATSHIELD ON A1/A2 HANDGUARDS
+    if length == 0 and hand != 3 and attached["cde_m203"] then -- FORCIBLY ATTACH M203 HEATSHIELD ON A1/A2 HANDGUARDS
         vm:SetBodygroup(3, 1)
     end
     if length == 3 and hand == 6 then -- 10.5 BARREL CHANGES TO M607 BARREL
@@ -510,7 +510,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     if length == 3 and hand == 7 then -- 10.5 BARREL CHANGES TO FPW BARREL
         vm:SetBodygroup(2, 5)
     end
-    if length == 3 and attached["bo1_m203"] then -- SHORTEN M203 ON 10.5 BARREL
+    if length == 3 and attached["cde_m203"] then -- SHORTEN M203 ON 10.5 BARREL
         vm:SetBodygroup(4, 2)
     end
     if length > 0 and attached["bo1_mk"] then
@@ -744,7 +744,7 @@ SWEP.HookP_NameChange = function(self, name)
 
     if attached["bo1_pap"] then gunname = "Skullpiercer"
         if attached["fcg_skull"] then gunname = "Skullsplitter" end
-        if attached["bo1_m203"] then gunname = "Skullcrusher" end
+        if attached["cde_m203"] then gunname = "Skullcrusher" end
         if attached["carbine"] then gunname = "Predator"
             if attached["a2_top"] then gunname = "Xeno Matter 4000" end
         end
@@ -760,7 +760,7 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
 
     local suffix = ""
 
-    if attached["bo1_ubgl_m203"] then
+    if attached["cde_m203"] then
         suffix = "_m203"
         if self:GetUBGL() then
             suffix = "_glsetup"
@@ -844,7 +844,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(11, 0, 1.35),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_m203", "bo1_mk", "bo1_rail_underbarrel"},
+        Category = {"cde_m203", "bo1_mk", "bo1_rail_underbarrel"},
         ExcludeElements = {"carbine", "no_ub_rail", "is_patriot"},
     },
     [7] = {
@@ -1313,6 +1313,9 @@ SWEP.Animations = {
                 rhik = 0,
             },
         },
+        EventTable = {
+            {s = "ARC9_CDE.M203_Mech", t = 1 / 60},
+        },
     },
     ["reload_ubgl_glsetup"] = {
         Source = "reload_glsetup",
@@ -1325,27 +1328,10 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = "ARC9_BO1.M203_Open", t = 0.125},
-            {s = "ARC9_BO1.M203_40mmOut", t = 0.175},
-            {s = "ARC9_BO1.M203_40mmIn", t = 1.5},
-            {s = "ARC9_BO1.M203_Close", t = 2.25},
-        }
-    },
-    ["reload_ubgl_glsetup_soh"] = {
-        Source = "reload_glsetup",
-        Time = 3 / 2,
-        IKTimeLine = {
-            {
-                t = 0,
-                lhik = 0,
-                rhik = 0,
-            },
-        },
-        EventTable = {
-            {s = "ARC9_BO1.M203_Open", t = 0.125 / 2},
-            {s = "ARC9_BO1.M203_40mmOut", t = 0.175 / 2},
-            {s = "ARC9_BO1.M203_40mmIn", t = 1.5 / 2},
-            {s = "ARC9_BO1.M203_Close", t = 2.25 / 2},
+            {s = "ARC9_CDE.M203_Open", t = 0.125},
+            -- {s = "ARC9_CDE.M203_40mmOut", t = 0.175},
+            {s = "ARC9_CDE.M203_40mmIn", t = 1.5},
+            {s = "ARC9_CDE.M203_Close", t = 2.25},
         }
     },
     ["enter_sprint_glsetup"] = {

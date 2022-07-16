@@ -52,7 +52,7 @@ ATT.Attachments = {
         Bone = "j_gun",
         Pos = Vector(-2, 0, 0.35),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_m203", "bo1_rail_underbarrel"},
+        Category = {"cde_m203", "bo1_rail_underbarrel"},
         ExcludeElements = {"ar15_ris", "is_patriot"}
     },
 }
@@ -125,7 +125,7 @@ ATT.Attachments = {
         Bone = "j_gun",
         Pos = Vector(-2, 0, 0.35),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_m203", "bo1_mk", "bo1_rail_underbarrel"},
+        Category = {"cde_m203", "bo1_mk", "bo1_rail_underbarrel"},
         ExcludeElements = {"ar15_ris"}
     },
 }
@@ -202,7 +202,7 @@ ATT.Attachments = {
         Bone = "j_gun",
         Pos = Vector(-2, 0, 0.35),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_m203", "bo1_mk", "bo1_rail_underbarrel"},
+        Category = {"cde_m203", "bo1_mk", "bo1_rail_underbarrel"},
         ExcludeElements = {"ar15_ris"}
     },
 }
@@ -302,7 +302,7 @@ ATT.Free = false
 
 ATT.Category = {"retro_ar15_handguard_20"}
 ATT.ActivateElements = {"handguard_m203"}
-ATT.ExcludeElements = {"bo1_m203", "bo1_mk"}
+ATT.ExcludeElements = {"cde_m203", "bo1_mk"}
 
 ATT.Model = "models/weapons/arc9/atts/cde_mp5k_nogrip.mdl"
 ATT.Scale = 0.375
@@ -320,7 +320,7 @@ ATT.Attachments = {
         Pos = Vector(-9.5, 0, 2.4),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_bipod"},
-        ExcludeElements = {"bo1_m203", "bo1_mk"}
+        ExcludeElements = {"cde_m203", "bo1_mk"}
     },
 }
 
@@ -392,7 +392,7 @@ ATT.Attachments = {
         Bone = "j_gun",
         Pos = Vector(-4, 0, 2.4),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_m203", "bo1_mk", "bo1_grips"},
+        Category = {"cde_m203", "bo1_mk", "bo1_grips"},
     },
     {
         PrintName = "Tactical Left",
@@ -426,7 +426,7 @@ ATT.Attachments = {
         Pos = Vector(-8, 0, 2.3),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_tactical", "bo1_bipod"},
-        ExcludeElements = {"bo1_m203", "bo1_mk"}
+        ExcludeElements = {"cde_m203", "bo1_mk"}
     },
 }
 
@@ -532,7 +532,7 @@ ATT.LHIK_Priority = 0
 
 ATT.Category = {"retro_ar15_handguard_10"}
 ATT.ActivateElements = {"handguard_patriot", "no_gasblock", "nosling", "noubgl"}
-ATT.ExcludeElements = {"bo1_m203", "bo1_mk"}
+ATT.ExcludeElements = {"cde_m203", "bo1_mk"}
 
 
 ATT.RecoilMult = 1.15
@@ -576,7 +576,7 @@ ATT.Attachments = {
         Bone = "j_gun",
         Pos = Vector(-3, 0, 2.45),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_m203", "bo1_mk", "bo1_grips"},
+        Category = {"cde_m203", "bo1_mk", "bo1_grips"},
         InstalledElements = {"allowtac"},
     },
     {
@@ -1220,9 +1220,9 @@ ATT.PenetrationMult = 1.1
 ATT.PhysBulletMuzzleVelocity = 900 * 39.37
 
 ATT.Ammo = "ar2"
-ATT.FirstShootSound = "ARC9_BO1.HK21_Fire"
-ATT.ShootSound = "ARC9_BO1.HK21_Fire"
-ATT.ShootSoundSilenced = "ARC9_BO1.FAL_Sil"
+ATT.FirstShootSound = "ARC9_CDE.HK21_Fire"
+ATT.ShootSound = "ARC9_CDE.HK21_Fire"
+ATT.ShootSoundSilenced = "ARC9_CDE.FAL_Sil"
 ATT.DistantShootSound = "^weapons/ARC9/bo1_m16/ringoff_f.wav"
 ATT.MuzzleParticle = "muzzleflash_smg"
 
@@ -1654,3 +1654,51 @@ ATT.Attachments = {
 }
 
 ARC9.LoadAttachment(ATT, "retro_ar15_upper_a4")
+
+-- UBGL
+ATT = {}
+
+ATT.PrintName = [[M203 Grenade Launcher]]
+ATT.CompactName = [[M203]]
+ATT.Icon = Material("materials/entities/bo1_atts/ubs/m203.png")
+ATT.Description = [[
+    Underbarrel grenade launcher that fires 40mm High Explosive rounds.
+    Reduced handling.
+]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.Free = false
+
+ATT.Category = {"cde_m203"}
+ATT.ActivateElements = {"cde_m203"}
+ATT.ExcludeElements = {"no_ubgl"}
+
+ATT.AimDownSightsTimeMult = 1.1
+ATT.SprintToFireTimeMult = 1.1
+
+ATT.UBGL = true
+ATT.UBGLAmmo = "smg1_grenade"
+ATT.UBGLClipSize = 1
+ATT.UBGLFiremode = 1
+ATT.UBGLFiremodeName = "M203"
+ATT.UBGLChamberSize = 0
+ATT.ShootVolumeUBGL = 110
+
+ATT.SpreadUBGL = -0.2
+
+ATT.FirstShootSoundUBGL = false
+ATT.ShootSoundUBGL = "ARC9_CDE.M203_Fire"
+ATT.DistantShootSoundUBGL = "ARC9_CDE.M203_Dist"
+ATT.HasSightsUBGL = false
+
+ATT.EnterUBGLSound = "ARC9_CDE.M203_Open"
+ATT.ExitUBGLSound = "ARC9_CDE.M203_Close"
+
+ATT.ShootEntUBGL = "arc9_bo1_m203_he"
+ATT.ShootEntForceUBGL = 15000
+
+ATT.MuzzleParticleUBGL = "muzzleflash_m79"
+
+ARC9.LoadAttachment(ATT, "retro_ar15_ubgl_m203")

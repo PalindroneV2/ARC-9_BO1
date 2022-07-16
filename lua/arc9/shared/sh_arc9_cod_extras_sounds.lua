@@ -105,6 +105,83 @@ sound.Add( {
     }
 } )
 
+-- EXTRAS M203
+
+sound.Add( {
+    name = "ARC9_CDE.M203_Fire",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arc9/cde_m16/m203/fire-01.ogg",
+        "^weapons/arc9/cde_m16/m203/fire-02.ogg",
+        "^weapons/arc9/cde_m16/m203/fire-03.ogg",
+        "^weapons/arc9/cde_m16/m203/fire-04.ogg",
+        "^weapons/arc9/cde_m16/m203/fire-05.ogg",
+        "^weapons/arc9/cde_m16/m203/fire-06.ogg",
+    }
+} )
+sound.Add( {
+    name = "ARC9_CDE.M203_Dist",
+    channel = CHAN_WEAPON,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/arc9/cde_m16/m203/fire-dist-01.ogg",
+        "^weapons/arc9/cde_m16/m203/fire-dist-02.ogg",
+        "^weapons/arc9/cde_m16/m203/fire-dist-03.ogg",
+        "^weapons/arc9/cde_m16/m203/fire-dist-04.ogg",
+        "^weapons/arc9/cde_m16/m203/fire-dist-05.ogg",
+        "^weapons/arc9/cde_m16/m203/fire-dist-06.ogg",
+    }
+} )
+
+sound.Add( {
+    name = "ARC9_CDE.M203_Mech",
+    channel = CHAN_USER_BASE,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arc9/cde_m16/m203/mech-01.ogg",
+        "^weapons/arc9/cde_m16/m203/mech-02.ogg",
+        "^weapons/arc9/cde_m16/m203/mech-03.ogg",
+        "^weapons/arc9/cde_m16/m203/mech-04.ogg",
+        "^weapons/arc9/cde_m16/m203/mech-05.ogg",
+        "^weapons/arc9/cde_m16/m203/mech-06.ogg",
+    }
+} )
+sound.Add( {
+    name = "ARC9_CDE.M203_Open",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arc9/cde_m16/m203/open.ogg",
+    }
+} )
+sound.Add( {
+    name = "ARC9_CDE.M203_Close",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arc9/cde_m16/m203/close.ogg",
+    }
+} )
+sound.Add( {
+    name = "ARC9_CDE.M203_40mmIn",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arc9/cde_m16/m203/insert.ogg",
+    }
+} )
+
 -- FNV EE --
 
 sound.Add({
