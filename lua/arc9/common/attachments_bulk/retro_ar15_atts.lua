@@ -1220,9 +1220,9 @@ ATT.PenetrationMult = 1.1
 ATT.PhysBulletMuzzleVelocity = 900 * 39.37
 
 ATT.Ammo = "ar2"
-ATT.FirstShootSound = "ARC9_CDE.HK21_Fire"
-ATT.ShootSound = "ARC9_CDE.HK21_Fire"
-ATT.ShootSoundSilenced = "ARC9_CDE.FAL_Sil"
+ATT.FirstShootSound = "ARC9_BO1.HK21_Fire"
+ATT.ShootSound = "ARC9_BO1.HK21_Fire"
+ATT.ShootSoundSilenced = "ARC9_BO1.FAL_Sil"
 ATT.DistantShootSound = "^weapons/ARC9/bo1_m16/ringoff_f.wav"
 ATT.MuzzleParticle = "muzzleflash_smg"
 
