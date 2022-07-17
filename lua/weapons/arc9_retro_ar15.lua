@@ -394,18 +394,21 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local newCustPose = Vector(0, 0, 0)
     local newCustAng = Angle(0, 0, 0)
 
-    if attached["barrel_14"] then
+    if attached["barrel_16"] then
         length = 1
-        hand = 4
-        gasblock = 1
         newCustPose = Vector(-1.5, 0, 0)
-    elseif attached["barrel_11"] then
+    elseif attached["barrel_14"] then
         length = 2
         hand = 4
         gasblock = 1
         newCustPose = Vector(-1.5, 0, 0)
-    elseif attached["barrel_10"] then
+    elseif attached["barrel_11"] then
         length = 3
+        hand = 4
+        gasblock = 1
+        newCustPose = Vector(-1.5, 0, 0)
+    elseif attached["barrel_10"] then
+        length = 4
         hand = 4
         gasblock = 1
         newCustPose = Vector(-3, 0, 0)
@@ -423,14 +426,26 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
             NewBipodPos = Vector(-2.765, 0, -2)
             NewBipodAng = Angle(0, 0, 0)
         end
-        if length == 1 then
+        if length == 2 then
             gasblock = 4
         end
+    elseif attached["handguard_car15"] then hand = 4
+        gasblock = 1
     elseif attached["handguard_ris"] then hand = 5
+        if length == 1 then
+            gasblock = 1
+        end
     elseif attached["handguard_607"] then hand = 6
+        if length == 1 then
+            gasblock = 1
+        end
+        if length == 4 then
+            length = 5
+        end
     elseif attached["handguard_patriot"] then
         hand = 7
         gasblock = 4
+        length = 6
     elseif attached["handguard_famas"] then
         hand = 8
         gasblock = 4
@@ -440,7 +455,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         frontsight = 1
         if hand == 3 then
             gasblock = 2
-            if length == 1 then
+            if length == 2 then
                 gasblock = 4
             end
         end
@@ -450,7 +465,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
                 gasblock = 3
             end
         end
-        if length == 1 and hand == 3 then
+        if length <= 2 and hand == 3 then
             frontsight = 1
             gasblock = 4
         end
@@ -463,7 +478,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         frontsight = 3
         if hand == 3 then
             gasblock = 2
-            if length == 1 then
+            if length == 2 then
                 gasblock = 4
             end
         end
@@ -473,7 +488,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
                 gasblock = 3
             end
         end
-        if length == 1 and hand == 3 then
+        if length <= 2 and hand == 3 then
             frontsight = 3
             gasblock = 4
         end
@@ -484,7 +499,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     --     end
     elseif attached["gasblock_flat"] then
         gasblock = 2
-        if length == 1 and hand == 3 then
+        if length == 2 and hand == 3 then
             gasblock = 4
         end
         if hand == 5 then
@@ -501,24 +516,27 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     --*/
     --PrintTable(data)
 
-    if length == 0 and hand != 3 and attached["cde_m203"] then -- FORCIBLY ATTACH M203 HEATSHIELD ON A1/A2 HANDGUARDS
+    if !attached["carbine_hg"] and hand != 3 and attached["cde_m203"] then -- FORCIBLY ATTACH M203 HEATSHIELD ON A1/A2 HANDGUARDS
         vm:SetBodygroup(3, 1)
     end
-    if length == 3 and hand == 6 then -- 10.5 BARREL CHANGES TO M607 BARREL
-        vm:SetBodygroup(2, 4)
-    end
-    if length == 3 and hand == 7 then -- 10.5 BARREL CHANGES TO FPW BARREL
-        vm:SetBodygroup(2, 5)
-    end
-    if length == 3 and attached["cde_m203"] then -- SHORTEN M203 ON 10.5 BARREL
+    -- if length == 4 and hand == 6 then -- 10.5 BARREL CHANGES TO M607 BARREL
+    --     vm:SetBodygroup(2, 4)
+    -- end
+    -- if length == 4 and hand == 7 then -- 10.5 BARREL CHANGES TO FPW BARREL
+    --     vm:SetBodygroup(2, 6)
+    -- end
+    if length == 4 and attached["cde_m203"] then -- SHORTEN M203 ON 10.5 BARREL
         vm:SetBodygroup(4, 2)
     end
-    if length > 0 and attached["bo1_mk"] then
+    if attached["carbine_hg"] and attached["bo1_mk"] then
         vm:SetBodygroup(4, 3)
     end
     if hand == 8 then -- FAMAS
         vm:SetBodygroup(0, 2) --FORCES UPPER TO FLAT
-        vm:SetBodygroup(2, 6) -- BARREL CHANGES TO FAMAS SPECIFIC
+        vm:SetBodygroup(2, 7) -- BARREL CHANGES TO FAMAS SPECIFIC
+        if length == 1 then
+            vm:SetBodygroup(2, 1) -- BARREL CHANGES TO FAMAS SPECIFIC
+        end
     end
 
     if hand == 3 and barrel == 0 and attached["bo1_optic"] then
@@ -734,12 +752,24 @@ SWEP.HookP_NameChange = function(self, name)
             gunname = "Mk. 12 SPR"
         end
     end
+    if attached["barrel_16"] then
+        local sport = "SP1"
+        if attached["a2_top"] then
+            sport = "SP2"
+        end
+        if attached["a4_top"] then
+            sport = "SP3"
+        end
+        gunname = name .. " " .. sport
+    end
 
     if ((model .. alt) == "M16A1") and attached["fcg_semi"] and attached["woodcamo"] then gunname = "Service Rifle"
         if attached["beowulf"] then gunname = "Survivalist's Rifle" end
     end
-    if ((model .. alt) == "M635") and attached["woodcamo"] then gunname = "Service Carbine"
-        if attached["9mm_mag"] then gunname = "Service SMG" end
+    if ((model .. alt) == "M607a") and attached["woodcamo"] then gunname = "Service Carbine" end
+    if ((model .. alt) == "M635") and attached["woodcamo"] then gunname = "Service SMG" end
+    if attached["handguard_famas"] then
+        gunname = "FAMAS M4"
     end
 
     if attached["bo1_pap"] then gunname = "Skullpiercer"
@@ -842,10 +872,11 @@ SWEP.Attachments = {
     [6] = {
         PrintName = "Underbarrel",
         Bone = "j_gun",
-        Pos = Vector(11, 0, 1.35),
+        Pos = Vector(11, 0, 1.35), --(-4, 0, -0.4)
         Ang = Angle(0, 0, 0),
         Category = {"cde_m203", "bo1_mk", "bo1_rail_underbarrel"},
-        ExcludeElements = {"carbine", "no_ub_rail", "is_patriot"},
+        ExcludeElements = {"no_ub_rail", "carbine_hg", "is_patriot"},
+        InstalledElements = {"allowtac"},
     },
     [7] = {
         PrintName = "Handguard",
@@ -858,13 +889,12 @@ SWEP.Attachments = {
         ExcludeElements = {"carbine"}
     },
     [8] = {
-        PrintName = "Firing Group",
+        PrintName = "Lower",
         DefaultCompactName = "AUTO",
         Bone = "j_gun",
         Pos = Vector(0.15, 0, 1.1),
         Ang = Angle(0, 0, 0),
         Category = {"retro_ar15_lower"},
-        ExcludeElements = {"is_patriot"},
     },
     [9] = {
         PrintName = "Optic",
@@ -903,7 +933,7 @@ SWEP.Attachments = {
         Pos = Vector(15, 0.6, 2),
         Ang = Angle(0, 0, -90),
         Category = {"bo1_rail_tactical"},
-        ExcludeElements = {"no_tac_rail", "carbine", "is_patriot"},
+        ExcludeElements = {"no_tac_rail", "carbine_hg", "is_patriot"},
     },
     [14] = {
         PrintName = "Ammunition",

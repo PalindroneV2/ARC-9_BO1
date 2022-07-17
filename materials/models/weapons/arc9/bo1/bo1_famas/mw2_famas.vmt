@@ -4,7 +4,6 @@ VertexlitGeneric
 	//$color2 "[0.5 0.5 0.5]"
 	$bumpmap	"models\weapons\arc9\bo1\bo1_famas\mw2famas_n"
 
-	
 	//"$color2" "[ .4 .4 .4 ]"
 	"$blendtintbybasealpha" "1"
 	"$phong" "1"

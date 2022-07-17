@@ -11,17 +11,18 @@ ATT.Description = [[
 ]]
 ATT.Pros = {}
 ATT.Cons = {}
-ATT.SortOrder = 2
+ATT.SortOrder = 3
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Category = {"retro_ar15_barrel"}
-ATT.ActivateElements = {"carbine","barrel_10"}
+ATT.ActivateElements = {"carbine","barrel_10", "carbine_hg"}
+-- ATT.ExcludeElements = {"bo1_mk"}
 
 ATT.Attachments = {
     {
         PrintName = "Handguard",
-        DefaultCompactName = "M4",
+        DefaultCompactName = "CAR-15",
         DefaultIcon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m4.png", "mips smooth"),
         Category = {"retro_ar15_handguard_carbine", "retro_ar15_handguard_10"},
         Bone = "j_gun",
@@ -85,17 +86,17 @@ ATT.Description = [[Short carbine-length barrel that belonged to the XM177E2, an
 
 Comes attached with a muzzle devices that reduces both recoil and audible rapport, but cannot fit other muzzle attachments as a result.]]
 
-ATT.SortOrder = 1
+ATT.SortOrder = 2
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Category = {"retro_ar15_barrel"}
-ATT.ActivateElements = {"carbine", "barrel_11"}
+ATT.ActivateElements = {"carbine", "barrel_11", "carbine_hg"}
 
 ATT.Attachments = {
     {
         PrintName = "Handguard",
-        DefaultCompactName = "M4",
+        DefaultCompactName = "CAR-15",
         DefaultIcon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m4.png", "mips smooth"),
         Category = "retro_ar15_handguard_carbine",
         Bone = "j_gun",
@@ -162,17 +163,17 @@ ATT.Description = [[Carbine-length 14.5" barrel, standard for M4 rifles.
 
 The shorter barrel length reduces muzzle velocity and effective range. Despite this, its compact form made it overshadow the 20 inch barrel in the modern day.]]
 
-ATT.SortOrder = 0
+ATT.SortOrder = 1
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Category = {"retro_ar15_barrel"}
-ATT.ActivateElements = {"carbine", "barrel_14"}
+ATT.ActivateElements = {"carbine", "barrel_14", "carbine_hg"}
 
 ATT.Attachments = {
     {
         PrintName = "Handguard",
-        DefaultCompactName = "M4",
+        DefaultCompactName = "CAR-15",
         DefaultIcon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m4.png", "mips smooth"),
         Category = {"retro_ar15_handguard_carbine", "retro_ar15_handguard_14"},
         Bone = "j_gun",
@@ -226,6 +227,79 @@ ATT.PhysBulletMuzzleVelocityMult = 0.9
 
 ARC9.LoadAttachment(ATT, "retro_ar15_barrel_14")
 
+ATT = {}
+
+ATT.PrintName = [[16" Sporter Barrel]]
+ATT.CompactName = [[16" SPORTER]]
+ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m4.png", "mips smooth")
+ATT.Description = [[16" barrel compliant with several states' minimum rifle barrel length laws.
+
+The shorter barrel length reduces muzzle velocity and effective range. Despite this, its compact form made it overshadow the 20 inch barrel in the modern day.]]
+
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.Free = false
+
+ATT.Category = {"retro_ar15_barrel"}
+ATT.ActivateElements = {"carbine", "barrel_16"}
+
+ATT.Attachments = {
+    {
+        PrintName = "Handguard",
+        DefaultCompactName = "A1",
+        DefaultIcon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m4.png", "mips smooth"),
+        Category = {"retro_ar15_handguard_carbine", "retro_ar15_handguard_20", "retro_ar15_handguard_16"},
+        Bone = "j_gun",
+        Pos = Vector(0, 0, -2),
+        Ang = Angle(0, 0, 0),
+    },
+    {
+        PrintName = "Muzzle",
+        DefaultCompactName = "Birdcage",
+        Bone = "j_gun",
+        Pos = Vector(-12.75, 0, -0.5),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_muzzle"},
+    },
+    {
+        PrintName = "Cosmetic II",
+        Bone = "j_gun",
+        Pos = Vector(10, 0, -3.5),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_cosmetic_ar15"},
+        ExcludeElements = {"nosling"},
+        InstallSound = "weapons/arc9/bo1_m16/bo_spawn.wav",
+    },
+    {
+        PrintName = "Underbarrel",
+        DefaultCompactName = "UB",
+        Bone = "j_gun",
+        -- Pos = Vector(-4, 0, 0.4),
+        Pos = Vector(-2, 0, 0.35),
+        Ang = Angle(0, 0, 0),
+        Category = {"cde_m203", "bo1_mk", "bo1_rail_underbarrel"},
+        ExcludeElements = {"ar15_ris"}
+    },
+}
+
+-- ATT.MuzzleEffectQCA = 1
+
+ATT.SpreadMult = 1.1
+ATT.RecoilMult = 1.075
+ATT.SpreadMultHipFire = 0.95
+ATT.SpreadMultMove = 0.95
+
+ATT.SpeedMult = 1.01
+ATT.SpeedMultSights = 1.025
+
+ATT.AimDownSightsTimeMult = 0.95
+ATT.SprintToFireTimeMult = 0.975
+
+ATT.RangeMaxMult = 0.95
+ATT.RangeMinMult = 0.95
+ATT.PhysBulletMuzzleVelocityMult = 0.95
+
+ARC9.LoadAttachment(ATT, "retro_ar15_barrel_16")
 
 -- FRONT SIGHTS
 ATT = {}
@@ -435,6 +509,28 @@ ARC9.LoadAttachment(ATT, "retro_ar15_handguard_a4")
 -- HANDGUARDS M4
 ATT = {}
 
+ATT.PrintName = [[CAR-15 Carbine Handguard]]
+ATT.CompactName = [[CAR-15]]
+ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m607.png", "mips smooth")
+ATT.Description = [[
+    Short, round, ribbed handguard used on M16 carbines.
+]]
+ATT.Pros = {}
+ATT.Cons = {
+}
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.Free = false
+
+ATT.Category = {"retro_ar15_handguard_16"}
+ATT.ActivateElements = {"handguard_car15", "carbine_hg"}
+ATT.RecoilMult = 1.1
+ATT.AimDownSightsTimeMult = 0.9
+
+ARC9.LoadAttachment(ATT, "retro_ar15_handguard_car15")
+
+ATT = {}
+
 ATT.PrintName = [[M607a Barrel Assembly]]
 ATT.CompactName = [[M607a]]
 ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m607.png", "mips smooth")
@@ -452,7 +548,7 @@ ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Category = {"retro_ar15_handguard_carbine"}
-ATT.ActivateElements = {"handguard_607", "no_ubgl"}
+ATT.ActivateElements = {"handguard_607", "no_ubgl", "carbine_hg"}
 ATT.RecoilMult = 1.1
 ATT.AimDownSightsTimeMult = 0.9
 
@@ -474,7 +570,7 @@ ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Category = {"retro_ar15_handguard_14"}
-ATT.ActivateElements = {"handguard_famas", "no_gasblock", "nosling"}
+ATT.ActivateElements = {"handguard_famas", "no_gasblock", "nosling", "carbine_hg"}
 
 ATT.IronSights = {
     Pos = Vector(-2.75, 3, -0.4),
@@ -556,7 +652,7 @@ ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Category = {"retro_ar15_handguard_carbine"}
-ATT.ActivateElements = {"nosling", "ar15_ris", "no_ub_rail", "ris_carbine", "handguard_ris"}
+ATT.ActivateElements = {"nosling", "ar15_ris", "no_ub_rail", "ris_carbine", "handguard_ris", "carbine_hg"}
 
 ATT.Attachments = {
     {
@@ -679,7 +775,7 @@ ATT = {}
 
 ATT.PrintName = [[TMM-4 S-System Rail]]
 ATT.CompactName = [[S-SYSTEM]]
-ATT.Icon = Material("entities/bo1_atts/barrel/barrel.png")
+ATT.Icon = Material("entities/bo1_atts/optics/retro_ar15/carry_side.png")
 ATT.Description = [[Three-Rail RIS Handguard allows for attachment of underbarrels.]]
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC-9 - MWC Attachments"
@@ -695,7 +791,7 @@ ATT.ModelAngleOffset = Angle(0,0,0)
 ATT.RequireElements = {"ar15_ris" and "a4_top"}
 
 ATT.DrawFunc = function(swep, model, wm)
-    if swep:GetElements()["carbine"] and !swep:GetElements()["handguard_a4"] then
+    if swep:GetElements()["carbine_hg"] and !swep:GetElements()["handguard_a4"] then
         model:SetBodygroup(0,1)
         model:SetBodygroup(1,2)
         if swep:GetElements()["tmm4_mount"] then
@@ -763,8 +859,8 @@ ARC9.LoadAttachment(ATT, "retro_ar15_tmm4_riser")
 ATT = {}
 
 ATT.PrintName = "Low Profile Flip-Up Iron Sights"
-ATT.CompactName = "Alt-Irons"
-ATT.Icon = Material("entities/bo1_atts/optics/bo2_irons.png")
+ATT.CompactName = "LP Irons"
+ATT.Icon = Material("entities/bo1_atts/optics/retro_ar15/carry_side.png")
 ATT.Description = [["You will aim with sights of iron and you will like it."
 
 Functions identically to other iron sights.]]
@@ -777,7 +873,7 @@ ATT.Category = {"bo1_addon_irons_2"}
 ATT.ActivateElements = {"mw2_m4_irons"}
 ATT.ExcludeElements = {"handguard_patriot","bo1_tactical"}
 ATT.DrawFunc = function(swep, model, wm)
-    if swep:GetElements()["carbine"] then
+    if swep:GetElements()["carbine_hg"] then
         model:SetBodygroup(0,1)
         if swep:GetElements()["handguard_a4"] then
             model:SetBodygroup(0,2)
@@ -882,6 +978,7 @@ ATT.Free = true
 
 ATT.Category = {"retro_ar15_lower"}
 ATT.ActivateElements = {"fcg_bst"}
+ATT.ExcludeElements = {"is_patriot"}
 
 ATT.FiremodesOverride = {
     {
@@ -919,6 +1016,7 @@ ATT.Free = true
 
 ATT.Category = {"retro_ar15_lower"}
 ATT.ActivateElements = {"fcg_semi"}
+ATT.ExcludeElements = {"is_patriot"}
 
 ATT.FiremodesOverride = {
     {
@@ -955,6 +1053,7 @@ ATT.Free = true
 ATT.Category = {"retro_ar15_lower"}
 ATT.RequireElements = {"bo1_pap"}
 ATT.ActivateElements = {"fcg_skull"}
+ATT.ExcludeElements = {"is_patriot"}
 
 ATT.FiremodesOverride = {
     {
@@ -965,8 +1064,9 @@ ATT.FiremodesOverride = {
     },
 }
 ATT.RunawayBurstOverride = true
-ATT.PostBurstDelayOverride = 0.1
+-- ATT.PostBurstDelayOverride = 0.1
 
+ATT.RPMMult = 1.1
 ATT.SpreadMult = 0.95
 ATT.SpreadMultRecoil = 0.9
 ATT.RecoilMult = 0.9
@@ -974,6 +1074,38 @@ ATT.RecoilUpMult = 0.95
 ATT.RecoilSideMult = 0.95
 
 ARC9.LoadAttachment(ATT, "retro_ar15_lower_skullsplitter")
+
+ATT = {}
+
+ATT.PrintName = "M231 FPW FCG"
+ATT.CompactName = "FPW"
+ATT.Icon = Material("entities/bo1_atts/other/select_fire.png")
+ATT.Description = [[Increased rate of fire for vehicle Firing Port Weapons.]]
+ATT.Pros = {}
+ATT.Cons = {
+}
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.Free = true
+
+ATT.Category = {"retro_ar15_lower"}
+ATT.RequireElements = {"handguard_patriot"}
+ATT.ActivateElements = {"fcg_patriot"}
+
+ATT.FiremodesOverride = {
+    {
+        Mode = -1,
+    },
+}
+
+ATT.RPMOverride = 1225
+ATT.SpreadMult = 1.1
+ATT.SpreadMultRecoil = 1.15
+ATT.RecoilMult = 1.1
+ATT.RecoilUpMult = 1.05
+ATT.RecoilSideMult = 1.05
+
+ARC9.LoadAttachment(ATT, "retro_ar15_lower_fpw")
 
 --MAGAZINES
 
@@ -1291,7 +1423,7 @@ ATT.ExcludeElements = {
     "bo1_rail_riser",
     "bo1_muzzle",
     "bo1_optic",
-    "retro_ar15_lower",
+    -- "retro_ar15_lower",
 }
 ATT.AimDownSightsTimeAdd = 0.1
 ATT.SprintToFireTimeAdd = 0.1

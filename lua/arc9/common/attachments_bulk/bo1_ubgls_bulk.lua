@@ -253,7 +253,7 @@ ATT.Free = false
 
 ATT.Category = {"bo1_mk"}
 ATT.ActivateElements = {"bo1_mk"}
-ATT.ExcludeElements = {"no_ubgl"}
+ATT.ExcludeElements = {"no_ubgl", "barrel_10"}
 ATT.AimDownSightsTimeMult = 1.1
 ATT.SprintToFireTimeMult = 1.1
 

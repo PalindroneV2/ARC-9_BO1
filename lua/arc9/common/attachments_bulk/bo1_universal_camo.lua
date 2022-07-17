@@ -2,6 +2,19 @@ local ATT = {}
 
 ATT = {}
 
+ATT.PrintName = "Full Camo"
+ATT.FullColorIcon = true
+ATT.CompactName = "FULL CAMO"
+ATT.Icon = Material("entities/bo1_generic.png")
+ATT.Category = "bo1_camo_full"
+ATT.Description = [[Cover the weapon completely in the selected camo.]]
+ATT.MenuCategory = "ARC-9 - Camos"
+ATT.ActivateElements = {"camo_full"}
+
+ARC9.LoadAttachment(ATT, "bo1_camo_complete")
+
+ATT = {}
+
 ATT.PrintName = "Redwood"
 ATT.FullColorIcon = true
 ATT.CompactName = "REDWOOD"
