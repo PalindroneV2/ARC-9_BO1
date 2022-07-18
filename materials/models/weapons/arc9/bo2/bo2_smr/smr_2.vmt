@@ -1,11 +1,10 @@
 "VertexlitGeneric"
 {
 	"$basetexture" "models/weapons/arc9/bo2/bo2_smr/smr"
-	
 	"$bumpmap" "models/weapons/arc9/bo2/bo2_smr/smr_n"
-
-	"$detail" "models/weapons/arc9/bo1/gunmetal"
-
+	"$phongexponenttexture" "models/weapons/arc9/bo2/bo2_smr/smr_s"
+	"$envmapmask" "models/weapons/arc9/bo2/bo2_smr/smr_s"
+	"$normalmapalphaenvmapmask" "1"
 	
 	//"$color2" "[ .4 .4 .4 ]"
 	"$blendtintbybasealpha" "1"

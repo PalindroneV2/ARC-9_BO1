@@ -280,7 +280,7 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
 
     local suf1 = ""
     local suf2 = ""
-    if attached["bo2_fastmag"] and anim == "reload" or anim == "reload_empty" then
+    if attached["bo2_fastmag"] and (anim == "reload" or anim == "reload_empty") then
         suf2 = "_fast"
     end
     if attached["bo1_igrip"] then
@@ -460,7 +460,7 @@ SWEP.Animations = {
             {s = "ARC9_BO2.AR_MagIn", t = 42 / 30},
             {s = "ARC9_BO2.AR_Fwd", t = 60 / 30},
         },
-        MinProgress = 65 / 30,
+        MinProgress = 60 / 30,
         IKTimeLine = {
             {
                 t = 0,

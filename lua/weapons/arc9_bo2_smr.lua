@@ -3,19 +3,17 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ARC9 - Black Ops II" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "HK XM8"
-SWEP.Class = "Assault Rifle"
+SWEP.PrintName = "SMI Saritch 308"
+SWEP.Class = "Battle Rifle"
 SWEP.Description = [[
-    German assault rifle. Remnant of HK's OICW prototype. Tried for replacement of the US army's standard M4 carbines but the project was canceled.
-
-    In some alternate timeline the US Army may have adopted this rifle.
+    Russian bullpup rifle in .308 Winchester and 7.62mm NATO for the civilian market.
 ]]
 SWEP.Trivia = {
-    Manufacturer = "Heckler & Koch",
-    Calibre = "5.56x45mm NATO",
+    Manufacturer = "DSA",
+    Calibre = ".308 Winchester",
     Mechanism = "Gas-Operated",
-    Country = "Germany",
-    Year = 2002,
+    Country = "Russia",
+    Year = 2009,
     Games = [[Call of Duty: Black Ops II]]
 }
 SWEP.Credits = {
@@ -26,22 +24,22 @@ SWEP.Slot = 2
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/arc9/c_bo2_xm8.mdl"
-SWEP.WorldModel = "models/weapons/arc9/w_bo2_xm8.mdl"
-SWEP.WorldModelMirror = "models/weapons/arc9/w_bo2_xm8.mdl"
+SWEP.ViewModel = "models/weapons/arc9/c_bo2_smr.mdl"
+SWEP.WorldModel = "models/weapons/arc9/w_bo2_smr.mdl"
+SWEP.WorldModelMirror = "models/weapons/arc9/w_bo2_smr.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    Pos        =    Vector(-3, 3.5, -6.9),
-    Ang        =    Angle(-5, 0, 180),
+    Pos        =    Vector(-4.25, 3.5, -7.15),
+    Ang        =    Angle(0, 1, 180),
     Bone    =    "ValveBiped.Bip01_R_Hand",
-    Scale = 1.2,
+    Scale = 1.05,
 }
 SWEP.ViewModelFOVBase = 75
 
 SWEP.DefaultBodygroups = "00000000000000"
 
-SWEP.DamageMax = 30
-SWEP.DamageMin = 20 -- damage done at maximum range
+SWEP.DamageMax = 50
+SWEP.DamageMin = 35 -- damage done at maximum range
 SWEP.RangeMax = 8000
 SWEP.RangeMin = 2000
 SWEP.Penetration = 8
@@ -52,7 +50,7 @@ SWEP.EntityMuzzleVelocity = 10000
 SWEP.PhysBulletMuzzleVelocity = 960 * 39.37
 
 SWEP.BodyDamageMults = {
-    [HITGROUP_HEAD] = 2,
+    [HITGROUP_HEAD] = 2.5,
     [HITGROUP_CHEST] = 1,
     [HITGROUP_LEFTARM] = 1,
     [HITGROUP_RIGHTARM] = 1,
@@ -66,24 +64,24 @@ SWEP.TracerEffect = "ARC9_tracer" -- The effect to use for hitscan tracers
 SWEP.TracerColor = Color(255, 255, 255) -- Color of tracers. Only works if tracer effect supports it. For physical bullets, this is compressed down to 9-bit color.
 
 SWEP.ChamberSize = 0 -- dont fucking change this again.
-SWEP.ClipSize = 32 -- DefaultClip is automatically set.
+SWEP.ClipSize = 20 -- DefaultClip is automatically set.
 SWEP.ReloadTime = 1
 
 SWEP.Crosshair = true
 SWEP.CanBlindFire = false
 
-SWEP.Recoil = 0.5
+SWEP.Recoil = 1
 SWEP.RecoilSide = 0.4
-SWEP.RecoilUp = 0.3
+SWEP.RecoilUp = 1
 
-SWEP.RecoilRandomUp = 0.2
-SWEP.RecoilRandomSide = 0.6
+SWEP.RecoilRandomUp = 0.75
+SWEP.RecoilRandomSide = 0.25
 
 SWEP.RecoilDissipationRate = 40 -- How much recoil dissipates per second.
 SWEP.RecoilResetTime = 0.01 -- How long the gun must go before the recoil pattern starts to reset.
 
 SWEP.RecoilAutoControl = 0.5
-SWEP.RecoilKick = 1
+SWEP.RecoilKick = 2
 
 SWEP.Spread = math.rad(1.7 / 37.5)
 SWEP.SpreadAddRecoil = math.rad(55 / 37.5)
@@ -115,14 +113,14 @@ SWEP.SpeedMultBlindFire = 1
 SWEP.AimDownSightsTime = 0.11
 SWEP.SprintToFireTime = 0.333
 
-SWEP.RPM = 1250
+SWEP.RPM = 535
 SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
-        Mode = 4,
+        Mode = 1,
     },
     {
-        Mode = 1,
+        Mode = -1,
     },
 }
 SWEP.RunawayBurst = true
@@ -136,13 +134,13 @@ SWEP.FreeAimRadiusMultSights = 0
 
 SWEP.SwayMultSights = 0
 
-SWEP.Ammo = "smg1" -- what ammo type the gun uses
+SWEP.Ammo = "ar2" -- what ammo type the gun uses
 
 SWEP.ShootVolume = 125
 SWEP.ShootPitch = 100
 SWEP.ShootPitchVariation = 0
 
-SWEP.ShootSound = "ARC9_BO2.XM8_Fire"
+SWEP.ShootSound = "ARC9_BO2.SMR_Fire"
 SWEP.ShootSoundSilenced = "ARC9_BO2.M27_Sil"
 SWEP.DistantShootSound = {
     "^weapons/ARC9/bo2_generic_ar/dist/0.wav",
@@ -172,8 +170,8 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(-2.5, 0, 0.8),
-    Ang = Angle(0.025, 0, 0),
+    Pos = Vector(-2.425, 0, 0.5),
+    Ang = Angle(0, 0.03, 0),
     Magnification = 1.1,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
@@ -212,9 +210,14 @@ SWEP.AttachmentElements = {
             {1,1},
         },
     },
+    ["mount"] = {
+        Bodygroups = {
+            {2,1}
+        },
+    },
     ["bo2_m320"] = {
         Bodygroups = {
-            {3,1}
+            {3,2}
         },
     },
     ["cover_r"] = {
@@ -227,6 +230,13 @@ SWEP.AttachmentElements = {
             {5,1}
         },
     },
+    -- ["mw3_magnifier"] = {
+    --     AttPosMods = {
+    --         [6] = {
+    --             Pos = Vector(2, 0, 3),
+    --         },
+    --     },
+    -- },
 }
 
 SWEP.Hook_ModifyBodygroups = function(self, data)
@@ -237,14 +247,8 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
 
     if CUSTSTATE then
         vm:SetBodygroup(0, 1)
-        vm:SetBodygroup(2, 1)
     else
         vm:SetBodygroup(0, 0)
-        vm:SetBodygroup(2, 0)
-    end
-
-    if attached["mount"] then
-        vm:SetBodygroup(2, 2)
     end
 
     local camo = 0
@@ -264,10 +268,10 @@ SWEP.HookP_NameChange = function(self, name)
 
     local attached = self:GetElements()
 
-    local gunname = "HK XM8"
+    local gunname = "SMI Saritch 308"
 
     if attached["bo1_pap"] then
-        gunname = "Micro Aerator"
+        gunname = "SM1L3R"
     end
 
     return gunname
@@ -277,12 +281,6 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
     local attached = self:GetElements()
 
     local suffix = ""
-
-    -- local empty = ""
-
-    -- if self:Clip1() <= 0 then
-    --     empty = "_empty"
-    -- end
 
     if attached["bo2_m320"] then
         suffix = "_m320"
@@ -315,7 +313,7 @@ SWEP.Attachments = {
         PrintName = "Perk-a-Cola",
         DefaultCompactName = "PERK",
         Bone = "j_gun",
-        Pos = Vector(-5, 0, -5),
+        Pos = Vector(1.5, 0, -5),
         Ang = Angle(0, 0, 0),
         Category = "bo1_perkacola",
     },
@@ -323,7 +321,7 @@ SWEP.Attachments = {
         PrintName = "Muzzle",
         DefaultCompactName = "Birdcage",
         Bone = "j_gun",
-        Pos = Vector(23.5, 0, 0.85),
+        Pos = Vector(15.25, 0, 1.15),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_muzzle"},
         ExcludeElements = {"newbarrel"},
@@ -331,7 +329,7 @@ SWEP.Attachments = {
     {
         PrintName = "Underbarrel",
         Bone = "j_gun",
-        Pos = Vector(13, 0, -0.5),
+        Pos = Vector(9, 0, -1),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_grips", "bo2_m320"},
     },
@@ -339,7 +337,7 @@ SWEP.Attachments = {
         PrintName = "Tactical Right",
         DefaultCompactName = "TAC R",
         Bone = "j_gun",
-        Pos = Vector(15, 0.7, 1),
+        Pos = Vector(9, 0.9, 1),
         Ang = Angle(0, 0, -90),
         Category = {"bo1_tactical"},
         InstalledElements = {"cover_r"},
@@ -348,7 +346,7 @@ SWEP.Attachments = {
         PrintName = "Tactical Left",
         DefaultCompactName = "TAC L",
         Bone = "j_gun",
-        Pos = Vector(15, -0.7, 1),
+        Pos = Vector(9, -0.9, 1),
         Ang = Angle(0, 0, 90),
         Category = {"bo1_tactical"},
         InstalledElements = {"cover_l"},
@@ -357,24 +355,24 @@ SWEP.Attachments = {
         PrintName = "Optic",
         Bone = "j_gun",
         Scale = Vector(1, 1, 1),
-        Pos = Vector(3.5, -0.01, 3.4),
+        Pos = Vector(2, 0, 3),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_optic", "bo1_rail_riser"},
         InstalledElements = {"mount"},
     },
     {
         PrintName = "Firing Group",
-        DefaultCompactName = "S-1-4",
+        DefaultCompactName = "S-1-F",
         Bone = "j_gun",
-        Pos = Vector(0, 0, -1),
+        Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_fcg", "bo1_fcg_auto"},
+        Category = {"bo1_fcg", "bo1_fcg_bst"},
     },
     {
         PrintName = "Magazine",
         DefaultCompactName = "Standard",
         Bone = "j_gun",
-        Pos = Vector(3.75, 0, -2),
+        Pos = Vector(-8, 0, -2),
         Ang = Angle(0, 0, 0),
         Category = {"bo2_fastmag", "bo2_extmag"},
     },
@@ -382,7 +380,7 @@ SWEP.Attachments = {
         PrintName = "Ammunition",
         DefaultCompactName = "AMMO",
         Bone = "j_gun",
-        Pos = Vector(4, 0, -5),
+        Pos = Vector(-8, 0, -6),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ammo", "bo1_pap"},
     },
@@ -390,30 +388,23 @@ SWEP.Attachments = {
         PrintName = "Cosmetic",
         DefaultCompactName = "Gunmetal",
         Bone = "j_gun",
-        Pos = Vector(-3, 0, 1),
+        Pos = Vector(-10, 0, 2),
         Ang = Angle(0, 0, 0),
         Category = "universal_camo",
     },
-}
-
-SWEP.HideBones = {
-    -- "tag_clip",
-    -- "tag_fast_mag",
-    "tag_clip_full",
-}
-SWEP.ReloadHideBoneTables = {
-    [1] = {"tag_clip"},
-    [2] = {"tag_fast_mag"},
-    [3] = {"tag_clip_full"},
+    {
+        Hidden = true,
+        Bone = "j_gun",
+        Pos = Vector(-3, 0, 2.65),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_stock_mh"},
+        Installed = "bo1_stock_medium",
+    },
 }
 
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
-        Time = 1 / 30,
-    },
-    ["idle_empty"] = {
-        Source = "idle_empty",
         Time = 1 / 30,
     },
     ["draw"] = {
@@ -422,14 +413,6 @@ SWEP.Animations = {
     },
     ["holster"] = {
         Source = "holster",
-        Time = 0.75,
-    },
-    ["draw_empty"] = {
-        Source = "draw_empty",
-        Time = 1,
-    },
-    ["holster_empty"] = {
-        Source = "holster_empty",
         Time = 0.75,
     },
     ["ready"] = {
@@ -445,18 +428,8 @@ SWEP.Animations = {
         Time = 5 / 30,
         ShellEjectAt = 0,
     },
-    ["fire_empty"] = {
-        Source = {"fire_last"},
-        Time = 5 / 30,
-        ShellEjectAt = 0,
-    },
     ["fire_iron"] = {
         Source = {"fire_ads"},
-        Time = 5 / 30,
-        ShellEjectAt = 0,
-    },
-    ["fire_iron_empty"] = {
-        Source = {"fire_last_ads"},
         Time = 5 / 30,
         ShellEjectAt = 0,
     },
@@ -464,127 +437,35 @@ SWEP.Animations = {
         Source = "reload",
         Time = 2.5,
         EventTable = {
-            {s = "ARC9_BO2.AR_MagOut", t = 0.5},
-            {s = "ARC9_BO2.AR_MagIn", t = 1.55}
-        },
-        MinProgress = 1.6,
-        IKTimeLine = {
-            {
-                t = 0,
-                lhik = 1,
-                rhik = 1
-            },
-            {
-                t = 0.15,
-                lhik = 0,
-                rhik = 1
-            },
-            {
-                t = 0.75,
-                lhik = 0,
-                rhik = 1
-            },
-            {
-                t = 0.9,
-                lhik = 1,
-                rhik = 1
-            },
+            {s = "ARC9_BO2.AR_MagOut", t = 0.25},
+            {s = "ARC9_BO2.AR_MagIn", t = 1.5},
         },
     },
     ["reload_empty"] = {
         Source = "reload_empty",
-        Time = 3,
+        Time = 3.15,
         EventTable = {
-            {s = "ARC9_BO2.AR_MagOut", t = 0.5},
-            {s = "ARC9_BO2.AR_MagIn", t = 1.55},
+            {s = "ARC9_BO2.AR_MagOut", t = 0.25},
+            {s = "ARC9_BO2.AR_MagIn", t = 1.5},
             {s = "ARC9_BO2.AR_Back", t = 2.15},
-            {s = "ARC9_BO2.AR_Fwd", t = 2.35},
-        },
-        MinProgress = 2.0,
-        IKTimeLine = {
-            {
-                t = 0,
-                lhik = 1,
-                rhik = 1
-            },
-            {
-                t = 0.15,
-                lhik = 0,
-                rhik = 1
-            },
-            {
-                t = 0.6,
-                lhik = 0,
-                rhik = 1
-            },
-            {
-                t = 0.7,
-                lhik = 1,
-                rhik = 1
-            },
+            {s = "ARC9_BO2.AR_Fwd", t = 2.30}
         },
     },
     ["fast"] = {
-        Source = "reload_fast",
-        Time = 1.79,
+        Source = "fast",
+        Time = 1.8,
         EventTable = {
-            {s = "ARC9_BO2.AR_MagOut", t = 0.6},
-            {s = "ARC9_BO2.AR_MagIn", t = 1.25}
-        },
-        MinProgress = 1.4,
-        IKTimeLine = {
-            {
-                t = 0,
-                lhik = 1,
-                rhik = 1
-            },
-            {
-                t = 0.15,
-                lhik = 0,
-                rhik = 1
-            },
-            {
-                t = 0.75,
-                lhik = 0,
-                rhik = 1
-            },
-            {
-                t = 0.9,
-                lhik = 1,
-                rhik = 1
-            },
+            {s = "ARC9_BO2.AR_MagOut", t = 0.3},
+            {s = "ARC9_BO2.AR_MagIn", t = 0.9}
         },
     },
     ["fast_empty"] = {
-        Source = "reload_empty_fast",
+        Source = "fast_empty",
         Time = 2.3,
         EventTable = {
-            {s = "ARC9_BO2.AR_MagOut", t = 0.6},
-            {s = "ARC9_BO2.AR_MagIn", t = 1.25},
-            {s = "ARC9_BO2.AR_Fwd", t = 1.9},
-        },
-        MinProgress = 2.0,
-        IKTimeLine = {
-            {
-                t = 0,
-                lhik = 1,
-                rhik = 1
-            },
-            {
-                t = 0.15,
-                lhik = 0,
-                rhik = 1
-            },
-            {
-                t = 0.75,
-                lhik = 0,
-                rhik = 1
-            },
-            {
-                t = 0.9,
-                lhik = 1,
-                rhik = 1
-            },
+            {s = "ARC9_BO2.AR_MagOut", t = 0.3},
+            {s = "ARC9_BO2.AR_MagIn", t = 0.9},
+            {s = "ARC9_BO2.AR_Fwd", t = 1.5}
         },
     },
     ["enter_sprint"] = {
@@ -597,18 +478,6 @@ SWEP.Animations = {
     },
     ["exit_sprint"] = {
         Source = "sprint_out",
-        Time = 1,
-    },
-    ["enter_sprint_empty"] = {
-        Source = "sprint_in_empty",
-        Time = 1,
-    },
-    ["idle_sprint_empty"] = {
-        Source = "sprint_loop_empty",
-        Time = 30 / 40
-    },
-    ["exit_sprint_empty"] = {
-        Source = "sprint_out_empty",
         Time = 1,
     },
 
@@ -624,18 +493,6 @@ SWEP.Animations = {
     },
     ["holster_m320"] = {
         Source = "holster_gl",
-        Time = 0.75,
-    },
-    ["idle_empty_m320"] = {
-        Source = "idle_empty_gl",
-        Time = 1 / 30,
-    },
-    ["draw_empty_m320"] = {
-        Source = "draw_empty_gl",
-        Time = 1,
-    },
-    ["holster_empty_m320"] = {
-        Source = "holster_empty_gl",
         Time = 0.75,
     },
     ["ready_m320"] = {
@@ -656,55 +513,40 @@ SWEP.Animations = {
         Time = 5 / 30,
         ShellEjectAt = 0,
     },
-    ["fire_empty_m320"] = {
-        Source = {"fire_last_gl"},
-        Time = 5 / 30,
-        ShellEjectAt = 0,
-    },
-    ["fire_iron_empty_m320"] = {
-        Source = {"fire_last_ads_gl"},
-        Time = 5 / 30,
-        ShellEjectAt = 0,
-    },
     ["reload_m320"] = {
         Source = "reload_gl",
         Time = 2.5,
         EventTable = {
-            {s = "ARC9_BO2.AR_MagOut", t = 0.6},
-            {s = "ARC9_BO2.AR_MagIn", t = 1.5}
+            {s = "ARC9_BO2.AR_MagOut", t = 0.7},
+            {s = "ARC9_BO2.AR_MagIn", t = 1.25}
         },
-        MinProgress = 1.6,
     },
     ["reload_empty_m320"] = {
         Source = "reload_empty_gl",
-        Time = 3,
+        Time = 3.15,
         EventTable = {
-            {s = "ARC9_BO2.AR_MagOut", t = 0.6},
-            {s = "ARC9_BO2.AR_MagIn", t = 1.5},
-            {s = "ARC9_BO2.AR_Back", t = 2},
-            {s = "ARC9_BO2.AR_Fwd", t = 2.15},
-        },
-        MinProgress = 2.0,
-    },
-    ["fast_m320"] = {
-        Source = "reload_gl_fast",
-        Time = 2.5,
-        EventTable = {
-            {s = "ARC9_BO2.AR_MagOut", t = 0.6},
-            {s = "ARC9_BO2.AR_MagIn", t = 1.25}
-        },
-        MinProgress = 1.4,
-    },
-    ["fast_empty_m320"] = {
-        Source = "reload_empty_gl_fast",
-        Time = 3,
-        EventTable = {
-            {s = "ARC9_BO2.AR_MagOut", t = 0.6},
+            {s = "ARC9_BO2.AR_MagOut", t = 0.7},
             {s = "ARC9_BO2.AR_MagIn", t = 1.25},
             {s = "ARC9_BO2.AR_Back", t = 1.8},
-            {s = "ARC9_BO2.AR_Fwd", t = 1.9},
+            {s = "ARC9_BO2.AR_Fwd", t = 1.95}
         },
-        MinProgress = 2,
+    },
+    ["fast_m320"] = {
+        Source = "fast_gl",
+        Time = 1.8,
+        EventTable = {
+            {s = "ARC9_BO2.AR_MagOut", t = 0.3},
+            {s = "ARC9_BO2.AR_MagIn", t = 0.9},
+        },
+    },
+    ["fast_empty_m320"] = {
+        Source = "fast_empty_gl",
+        Time = 2.3,
+        EventTable = {
+            {s = "ARC9_BO2.AR_MagOut", t = 0.3},
+            {s = "ARC9_BO2.AR_MagIn", t = 0.9},
+            {s = "ARC9_BO2.AR_Fwd", t = 1.5}
+        },
     },
     ["enter_sprint_m320"] = {
         Source = "sprint_in_gl",
@@ -716,18 +558,6 @@ SWEP.Animations = {
     },
     ["exit_sprint_m320"] = {
         Source = "sprint_out_gl",
-        Time = 1,
-    },
-    ["enter_sprint_empty_m320"] = {
-        Source = "sprint_in_empty_gl",
-        Time = 1,
-    },
-    ["idle_sprint_empty_m320"] = {
-        Source = "sprint_loop_empty_gl",
-        Time = 30 / 40
-    },
-    ["exit_sprint_empty_m320"] = {
-        Source = "sprint_out_empty_gl",
         Time = 1,
     },
 
@@ -756,15 +586,28 @@ SWEP.Animations = {
     ["fire_glsetup"] = {
         Source = "fire_glsetup",
         Time = 0.7,
+        TPAnim = ACT_HL2MP_GESTURE_RANGE_ATTACK_REVOLVER,
+        TPAnimStartTime = 0,
     },
-    ["reload_ubgl_glsetup"] = {
+    ["reload_glsetup"] = {
         Source = "reload_glsetup",
         Time = 96 / 30,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
+        TPAnimStartTime = 0.1,
         EventTable = {
             {s = "ARC9_BO1.M203_40mmOut", t = 18 / 30},
             {s = "ARC9_BO1.M203_40mmIn", t = 48 / 30},
             {s = "ARC9_BO1.M203_Close", t = 62 / 30},
         }
+    },
+    ["reload_glsetup_soh"] = {
+        Source = "reload_glsetup",
+        Time = 96 / 60,
+        EventTable = {
+            {s = "ARC9_BO1.M203_40mmOut", t = 18 / 60},
+            {s = "ARC9_BO1.M203_40mmIn", t = 48 / 60},
+            {s = "ARC9_BO1.M203_Close", t = 62 / 60},
+        },
     },
     ["enter_sprint_glsetup"] = {
         Source = "sprint_in_glsetup",
