@@ -29,7 +29,7 @@ ATT.RecoilRandomSideMult = 0.75
 ATT.RecoilAutoControlMult = 1.5
 
 ATT.SpreadMultHipFire = 0.8
-ATT.SpreadMultMove = 0.8
+--ATT.SpreadMultMove = 0.8
 
 ATT.SpeedMult = 0.995
 ATT.AimDownSightsTimeAdd = 0.05

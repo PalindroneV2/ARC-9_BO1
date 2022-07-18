@@ -28,7 +28,7 @@ ATT.RecoilUpMult = 0.9
 ATT.AimDownSightsTimeMult = 1.1
 ATT.SprintToFireTimeMult = 1.1
 ATT.SpreadMultHipFire = 1.1
-ATT.SpreadMultMove = 1.1
+--ATT.SpreadMultMove = 1.1
 ATT.PhysBulletMuzzleVelocityMult = 1.1
 
 ARC9.LoadAttachment(ATT, "bo1_m1911_compensator")

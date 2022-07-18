@@ -24,7 +24,7 @@ ATT.ActivateElements = {"barrel_rpk"}
 ATT.SpreadMult = 0.85
 ATT.RecoilMult = 0.85
 ATT.SpreadMultHipFire = 1.1
-ATT.SpreadMultMove = 1.1
+--ATT.SpreadMultMove = 1.1
 
 ATT.SpeedMult = 0.9
 ATT.SpeedMultSights = 0.9
@@ -85,7 +85,7 @@ ATT.ActivateElements = {"barrel_krinkov"}
 ATT.SpreadMult = 1.5
 ATT.RecoilMult = 1.25
 ATT.SpreadMultHipFire = 0.7
-ATT.SpreadMultMove = 0.7
+--ATT.SpreadMultMove = 0.7
 
 ATT.SpeedMult = 1.025
 ATT.SpeedMultSights = 1.125
@@ -147,7 +147,7 @@ ATT.ShootPitchMult = 1.1
 ATT.SpreadMult = 1.5
 ATT.RecoilMult = 1.25
 ATT.SpreadMultHipFire = 0.7
-ATT.SpreadMultMove = 0.7
+--ATT.SpreadMultMove = 0.7
 
 ATT.SpeedMult = 1.025
 ATT.SpeedMultSights = 1.125
@@ -474,7 +474,7 @@ ATT.AimDownSightsTimeMult = 1.2
 ATT.SprintToFireTimeMult = 1.2
 ATT.SpeedMultSights = 0.825
 ATT.SpreadMultHipFire = 1.2
-ATT.SpreadMultMove = 1.2
+--ATT.SpreadMultMove = 1.2
 ATT.SpeedMultShooting = 0.95
 
 ARC9.LoadAttachment(ATT, "bo1_ultimate_ak_stock_vss")
@@ -505,7 +505,7 @@ ATT.AimDownSightsTimeMult = 1.2
 ATT.SprintToFireTimeMult = 1.2
 ATT.SpeedMultSights = 0.825
 ATT.SpreadMultHipFire = 1.2
-ATT.SpreadMultMove = 1.2
+--ATT.SpreadMultMove = 1.2
 ATT.SpeedMultShooting = 0.95
 
 ARC9.LoadAttachment(ATT, "bo1_ultimate_ak_stock_rpk")
@@ -535,7 +535,7 @@ ATT.AimDownSightsTimeMult = 0.97
 ATT.SprintToFireTimeMult = 0.97
 ATT.SpeedMultSights = 1.025
 ATT.SpreadMultHipFire = 0.9
-ATT.SpreadMultMove = 0.9
+--ATT.SpreadMultMove = 0.9
 ATT.SpeedMultShooting = 1.1
 
 ARC9.LoadAttachment(ATT, "bo1_ultimate_ak_stock_sidefolder")
@@ -595,7 +595,7 @@ ATT.AimDownSightsTimeMult = 1.1
 ATT.SprintToFireTimeMult = 1.1
 ATT.SpeedMultSights = 0.85
 ATT.SpreadMultHipFire = 0.975
-ATT.SpreadMultMove = 0.975
+--ATT.SpreadMultMove = 0.975
 ATT.SpeedMultShooting = 0.975
 
 ARC9.LoadAttachment(ATT, "bo1_ultimate_ak_stock_type2")
@@ -623,7 +623,7 @@ ATT.RecoilRandomSideMult = 0.75
 ATT.RecoilAutoControlMult = 1.5
 
 ATT.SpreadMultHipFire = 0.8
-ATT.SpreadMultMove = 0.8
+--ATT.SpreadMultMove = 0.8
 
 ATT.SpeedMult = 0.995
 ATT.AimDownSightsTimeAdd = 0.05

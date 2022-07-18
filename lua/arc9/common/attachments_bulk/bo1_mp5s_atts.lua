@@ -66,7 +66,7 @@ ATT.RPMOverride = 900
 
 ATT.SpreadMult = 1.25
 ATT.SpreadMultHipFire = 0.9
-ATT.SpreadMultMove = 0.9
+--ATT.SpreadMultMove = 0.9
 
 ATT.ClipSize = 25
 ATT.ReloadTimeMult = 0.9
@@ -373,7 +373,7 @@ ATT.SpeedMult = 1.01
 ATT.RecoilMult = 1.1
 ATT.RecoilUpMult = 1.15
 ATT.SprintToFireTimeMult = 0.95
-ATT.SpreadMultMove = 0.95
+--ATT.SpreadMultMove = 0.95
 ATT.LHIK_Priority = 0
 
 ATT.Attachments = {
@@ -418,7 +418,7 @@ ATT.RecoilMult = 0.975
 ATT.AimDownSightsTimeMult = 1.025
 ATT.SprintToFireTimeMult = 1.05
 ATT.SpreadMultHipFire = 1.05
-ATT.SpreadMultMove = 1.05
+--ATT.SpreadMultMove = 1.05
 ATT.RangeMaxMult = 1.1
 ATT.RangeMinMult = 1.1
 ATT.PhysBulletMuzzleVelocityMult = 1.1

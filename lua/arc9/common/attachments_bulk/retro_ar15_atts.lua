@@ -3,6 +3,68 @@ local ATT = {}
 
 ATT = {}
 
+ATT.PrintName = [[7" Department of Energy Barrel]]
+ATT.CompactName = [[7" DOE]]
+ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m4.png", "mips smooth")
+ATT.Description = [[
+    Super short SMG barrel made specifically for Department of Energy models of the 9mm Colt SMG.
+
+    Requires use of a 9mm Caliber conversion.
+]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 4
+ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.Free = false
+
+ATT.Category = {"retro_ar15_barrel"}
+ATT.ActivateElements = {"carbine","barrel_9mm", "carbine_hg"}
+ATT.RequireElements = {"9mm_mag"}
+-- ATT.ExcludeElements = {"bo1_mk"}
+
+ATT.Attachments = {
+    {
+        PrintName = "Muzzle",
+        DefaultCompactName = "None",
+        Bone = "j_gun",
+        Pos = Vector(-4.7, 0, -0.5),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_muzzle_pistol"},
+        ExcludeElements = {"is_patriot"},
+    },
+    {
+        PrintName = "Underbarrel",
+        DefaultCompactName = "UB",
+        Bone = "j_gun",
+        Pos = Vector(-2, 0, 0.35),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_rail_underbarrel"},
+        ExcludeElements = {"ar15_ris", "is_patriot"}
+    },
+}
+
+ATT.MuzzleEffectQCA = 1
+
+ATT.SpreadMult = 1.55
+ATT.RecoilMult = 1.3
+ATT.SpreadMultHipFire = 0.575
+--ATT.SpreadMultMove = 0.575
+ATT.RPMMult = 1.05
+
+ATT.SpeedMult = 1.05
+ATT.SpeedMultSights = 1.15
+
+ATT.AimDownSightsTimeMult = 0.7
+ATT.SprintToFireTimeMult = 0.75
+
+ATT.RangeMaxMult = 0.55
+ATT.RangeMinMult = 0.55
+ATT.PhysBulletMuzzleVelocityMult = 0.55
+
+ARC9.LoadAttachment(ATT, "retro_ar15_barrel_9mm")
+
+ATT = {}
+
 ATT.PrintName = [[10.5" Commando Barrel]]
 ATT.CompactName = [[10.5" CAR-15]]
 ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m4.png", "mips smooth")
@@ -63,7 +125,7 @@ ATT.MuzzleEffectQCA = 1
 ATT.SpreadMult = 1.5
 ATT.RecoilMult = 1.25
 ATT.SpreadMultHipFire = 0.7
-ATT.SpreadMultMove = 0.7
+--ATT.SpreadMultMove = 0.7
 
 ATT.SpeedMult = 1.025
 ATT.SpeedMultSights = 1.125
@@ -136,7 +198,7 @@ ATT.MuzzleEffectQCA = 1
 ATT.RecoilMult = 1.15
 ATT.SpreadMult = 1.3
 ATT.SpreadMultHipFire = 0.8
-ATT.SpreadMultMove = 0.8
+--ATT.SpreadMultMove = 0.8
 
 ATT.SpeedMult = 1.015
 ATT.SpeedMultSights = 1.075
@@ -213,7 +275,7 @@ ATT.MuzzleEffectQCA = 1
 ATT.SpreadMult = 1.15
 ATT.RecoilMult = 1.1
 ATT.SpreadMultHipFire = 0.9
-ATT.SpreadMultMove = 0.9
+--ATT.SpreadMultMove = 0.9
 
 ATT.SpeedMult = 1.01
 ATT.SpeedMultSights = 1.05
@@ -287,7 +349,7 @@ ATT.Attachments = {
 ATT.SpreadMult = 1.1
 ATT.RecoilMult = 1.075
 ATT.SpreadMultHipFire = 0.95
-ATT.SpreadMultMove = 0.95
+--ATT.SpreadMultMove = 0.95
 
 ATT.SpeedMult = 1.01
 ATT.SpeedMultSights = 1.025
@@ -682,7 +744,7 @@ ATT.Attachments = {
         Pos = Vector(-3.5, 0.7, 1.5),
         Ang = Angle(0, 0, -90),
         Category =  {"bo1_tactical"},
-        InstalledElements = {"carbinetac"},
+        InstalledElements = {"removecovers"},
         RequireElements = {"allowtac"},
     },
     {
@@ -692,7 +754,7 @@ ATT.Attachments = {
         Pos = Vector(-3.5, -0.7, 1.5),
         Ang = Angle(0, 0, 90),
         Category =  {"bo1_tactical"},
-        InstalledElements = {"carbinetac"},
+        InstalledElements = {"removecovers"},
         RequireElements = {"allowtac"},
     },
     {
@@ -702,6 +764,7 @@ ATT.Attachments = {
         Pos = Vector(-3, 0, 0.5),
         Ang = Angle(0, 0, 180),
         Category =  {"bo1_tactical_top"},
+        RequireElements = {"gasblock_flat"},
         ExcludeElements = {"mw2_m4_top"}
     },
 }
@@ -748,7 +811,7 @@ ATT.Icon = Material("entities/bo1_atts/optics/retro_ar15/carry_side.png")
 ATT.Description = [[AR-15 back-up iron sight.
 
 Functions identically to other iron sights.]]
-ATT.SortOrder = 0
+ATT.SortOrder = 1
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = true
 ATT.Folder = "AR-15 IRONS"
@@ -776,8 +839,8 @@ ATT = {}
 ATT.PrintName = [[TMM-4 S-System Rail]]
 ATT.CompactName = [[S-SYSTEM]]
 ATT.Icon = Material("entities/bo1_atts/optics/retro_ar15/carry_side.png")
-ATT.Description = [[Three-Rail RIS Handguard allows for attachment of underbarrels.]]
-ATT.SortOrder = 0
+ATT.Description = [[Picatinny rail system for the top of the weapon that goes from the top receiver to the end of the handguard.]]
+ATT.SortOrder = 5
 ATT.MenuCategory = "ARC-9 - MWC Attachments"
 ATT.Free = false
 ATT.Folder = "AR-15 IRONS"
@@ -789,6 +852,7 @@ ATT.Scale = Vector(0.375, 0.375, 0.375)
 ATT.ModelOffset = Vector(1.5 , 0, -0.35)
 ATT.ModelAngleOffset = Angle(0,0,0)
 ATT.RequireElements = {"ar15_ris" and "a4_top"}
+ATT.ExcludeElements = {"barrel_9mm"}
 
 ATT.DrawFunc = function(swep, model, wm)
     if swep:GetElements()["carbine_hg"] and !swep:GetElements()["handguard_a4"] then
@@ -864,14 +928,14 @@ ATT.Icon = Material("entities/bo1_atts/optics/retro_ar15/carry_side.png")
 ATT.Description = [["You will aim with sights of iron and you will like it."
 
 Functions identically to other iron sights.]]
-ATT.SortOrder = 0
+ATT.SortOrder = 6
 ATT.MenuCategory = "ARC-9 - MWC Attachments"
 ATT.Free = true
 ATT.Folder = "AR-15 IRONS"
 
 ATT.Category = {"bo1_addon_irons_2"}
 ATT.ActivateElements = {"mw2_m4_irons"}
-ATT.ExcludeElements = {"handguard_patriot","bo1_tactical"}
+ATT.ExcludeElements = {"handguard_patriot","bo1_tactical", "barrel_9mm"}
 ATT.DrawFunc = function(swep, model, wm)
     if swep:GetElements()["carbine_hg"] then
         model:SetBodygroup(0,1)
@@ -907,7 +971,7 @@ ATT.Icon = Material("entities/bo1_atts/optics/retro_ar15/troy_side.png")
 ATT.Description = [[Aftermarket Troy flip-up rear sight.
 
 Functions identically to other iron sights.]]
-ATT.SortOrder = 0
+ATT.SortOrder = 3
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = true
 ATT.Folder = "AR-15 IRONS"
@@ -928,7 +992,7 @@ ATT.Description = [[Aftermarket MP flip-up rear si- Wait...
 Is that just a Troy sight put on backwards?
 
 Functions identically to other iron sights.]]
-ATT.SortOrder = 0
+ATT.SortOrder = 4
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = true
 ATT.Folder = "AR-15 IRONS"
@@ -948,7 +1012,7 @@ ATT.Icon = Material("entities/bo1_atts/optics/retro_ar15/usgi_side.png")
 ATT.Description = [[United States General Issue rear sight.
 
 Functions identically to other iron sights.]]
-ATT.SortOrder = 0
+ATT.SortOrder = 2
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = true
 ATT.Folder = "AR-15 IRONS"
@@ -1296,6 +1360,10 @@ ATT.PenetrationMult = 0.5
 ATT.PhysBulletMuzzleVelocity = 360 * 39.37
 ATT.RPM = 1000
 
+ATT.ShellModel = "models/shells/shell_9mm.mdl"
+ATT.ShellPitch = 90
+ATT.ShellScale = 1.25
+
 ATT.Ammo = "pistol"
 ATT.FirstShootSound = "ARC9_CDE.M16_9mm"
 ATT.ShootSound = "ARC9_CDE.M16_9mm"
@@ -1459,7 +1527,7 @@ ATT.AimDownSightsTimeAdd = 0.22
 ATT.SprintToFireTimeAdd = 0.25
 ATT.SpeedAddSights = -0.2
 ATT.SpreadMultHipFire = 1.15
-ATT.SpreadMultMove = 1.15
+--ATT.SpreadMultMove = 1.15
 
 ARC9.LoadAttachment(ATT, "retro_ar15_stock_full")
 
@@ -1544,7 +1612,7 @@ ATT.RecoilRandomSideMult = 0.6
 ATT.RecoilAutoControlMult = 1.75
 
 ATT.SpreadMultRecoil = 0.85
-ATT.SpreadMultMove = 0.8
+--ATT.SpreadMultMove = 0.8
 
 ATT.SpeedMult = 0.97
 ATT.AimDownSightsTimeAdd = 0.12
@@ -1576,7 +1644,7 @@ ATT.RecoilRandomSideMult = 0.6
 ATT.RecoilAutoControlMult = 1.75
 
 ATT.SpreadMultRecoil = 0.85
-ATT.SpreadMultMove = 0.8
+--ATT.SpreadMultMove = 0.8
 
 ATT.SpeedMult = 0.97
 ATT.AimDownSightsTimeAdd = 0.12
@@ -1637,7 +1705,7 @@ ATT.RecoilRandomSideMult = 0.75
 ATT.RecoilAutoControlMult = 1.5
 
 ATT.SpreadMultHipFire = 0.8
-ATT.SpreadMultMove = 0.8
+--ATT.SpreadMultMove = 0.8
 
 ATT.SpeedMult = 0.995
 ATT.AimDownSightsTimeAdd = 0.05
@@ -1703,7 +1771,7 @@ ATT.SprintToFireTimeAdd = 0.3
 ATT.SpeedAddSights = -0.3
 
 ATT.SpreadMultHipFire = 1.25
-ATT.SpreadMultMove = 1.5
+--ATT.SpreadMultMove = 1.5
 
 ARC9.LoadAttachment(ATT, "retro_ar15_stock_sniper")
 

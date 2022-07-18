@@ -388,6 +388,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local hand = 0 -- HANDGUARD
     local gasblock = 0 -- FRONT SIGHT/GASBLOCK
     local frontsight = 0 -- FRONT SIGHT (REMOVABLE)
+    local covers = 0
 
     local NewBipodPos = Vector(-2.765, 0, -1.5)
     local NewBipodAng = Angle(0, 0, 0)
@@ -412,6 +413,15 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         hand = 4
         gasblock = 1
         newCustPose = Vector(-3, 0, 0)
+    elseif attached["barrel_9mm"] then
+        length = 8
+        hand = 9
+        gasblock = 4
+        frontsight = 5
+        if attached["bo1_optic"] then
+            frontsight = 6
+        end
+        newCustPose = Vector(-3, 0, 0)
     end
 
     self.CustomizeSnapshotPos = newCustPose
@@ -429,12 +439,17 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         if length == 2 then
             gasblock = 4
         end
+        if length == 2 then
+            gasblock = 4
+        end
+        covers = 1
     elseif attached["handguard_car15"] then hand = 4
         gasblock = 1
     elseif attached["handguard_ris"] then hand = 5
         if length == 1 then
             gasblock = 1
         end
+        covers = 1
     elseif attached["handguard_607"] then hand = 6
         if length == 1 then
             gasblock = 1
@@ -450,6 +465,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         hand = 8
         gasblock = 4
     end
+    if attached["removecovers"] then covers = 0 end
 
     if attached["troy_front"] then
         frontsight = 1
@@ -469,11 +485,6 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
             frontsight = 1
             gasblock = 4
         end
-    -- elseif attached["retro_ar15_front_troy_m4"] then
-    --     frontsight = 2
-    --     if hand == 5 then
-    --         gasblock = 3
-    --     end
     elseif attached["usgi_front"] then
         frontsight = 3
         if hand == 3 then
@@ -492,11 +503,6 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
             frontsight = 3
             gasblock = 4
         end
-    -- elseif attached["retro_ar15_front_usgi_m4"] then
-    --     frontsight = 4
-    --     if hand == 5 then
-    --         gasblock = 3
-    --     end
     elseif attached["gasblock_flat"] then
         gasblock = 2
         if length == 2 and hand == 3 then
@@ -513,18 +519,11 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     vm:SetBodygroup(3, hand)
     vm:SetBodygroup(8, gasblock)
     vm:SetBodygroup(9, frontsight)
-    --*/
-    --PrintTable(data)
+    vm:SetBodygroup(11, covers)
 
     if !attached["carbine_hg"] and hand != 3 and attached["cde_m203"] then -- FORCIBLY ATTACH M203 HEATSHIELD ON A1/A2 HANDGUARDS
         vm:SetBodygroup(3, 1)
     end
-    -- if length == 4 and hand == 6 then -- 10.5 BARREL CHANGES TO M607 BARREL
-    --     vm:SetBodygroup(2, 4)
-    -- end
-    -- if length == 4 and hand == 7 then -- 10.5 BARREL CHANGES TO FPW BARREL
-    --     vm:SetBodygroup(2, 6)
-    -- end
     if length == 4 and attached["cde_m203"] then -- SHORTEN M203 ON 10.5 BARREL
         vm:SetBodygroup(4, 2)
     end
@@ -539,14 +538,9 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         end
     end
 
-    if hand == 3 and barrel == 0 and attached["bo1_optic"] then
-        vm:SetBodygroup(8, 2)
-    end
-    -- Hides front sight when optic attached on A1/A2 Tops when using RIS receiver. Not needed anymore since flat gasblock now exists.
-    -- if !attached["a4_top"] and hand == 5 and attached["bo1_optic"] then
-    --     vm:SetBodygroup(8, 3)
+    -- if hand == 3 and barrel == 0 and attached["bo1_optic"] then
+    --     vm:SetBodygroup(8, 2)
     -- end
-
     -- IRON SIGHT POSITION CHANGES
     local newpos = Vector(-2.765, -2, 0.25)
     local newang = Angle(0.0375, 0, 0)
@@ -572,6 +566,10 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         if frontsight == 4 then
             newpos = Vector(-2.765, -2, -0.075)
             newang = Angle(0.015, 0.9, 0)
+        end
+        if frontsight == 5 then
+            newpos = Vector(-2.765, -2, -0.075)
+            newang = Angle(0.05, 0.9, 0)
         end
     end
     if attached["retro_ar15_iron_usgi"] then
@@ -736,10 +734,15 @@ SWEP.HookP_NameChange = function(self, name)
     end
 
     if attached["9mm_mag"] then
-        model = "M635"
-        alt = ""
+        model = "M"
+        alt = "635"
+        if attached["barrel_9mm"] then
+            model = "M"
+            alt = "633"
+        end
         if attached["a2_top"] or attached["a4_top"] then
             model = "9mm SMG"
+            alt = ""
         end
     end
 
@@ -768,6 +771,7 @@ SWEP.HookP_NameChange = function(self, name)
     end
     if ((model .. alt) == "M607a") and attached["woodcamo"] then gunname = "Service Carbine" end
     if ((model .. alt) == "M635") and attached["woodcamo"] then gunname = "Service SMG" end
+    if ((model .. alt) == "M633") and attached["woodcamo"] then gunname = "Service SMG" end
     if attached["handguard_famas"] then
         gunname = "FAMAS M4"
     end

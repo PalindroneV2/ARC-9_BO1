@@ -15,7 +15,7 @@ ATT.ActivateElements = {"barrel_sawed"}
 ATT.SpreadMult = 1.5
 ATT.RecoilMult = 1.25
 ATT.SpreadMultHipFire = 0.7
-ATT.SpreadMultMove = 0.7
+--ATT.SpreadMultMove = 0.7
 
 ATT.SpeedMult = 1.025
 ATT.SpeedMultSights = 1.125
