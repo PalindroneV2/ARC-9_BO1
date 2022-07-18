@@ -1,6 +1,6 @@
 SWEP.Base = "arc9_base"
 SWEP.Spawnable = true -- this obviously has to be set to true
-SWEP.Category = "ARC-9 - Black Ops II" -- edit this if you like
+SWEP.Category = "ARC9 - Black Ops II" -- edit this if you like
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "FN Ballista"
@@ -287,7 +287,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(5, 0, 3.225),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_rail_optic"},
+        Category = {"bo1_optic"},
         InstalledElements = {"mount"},
         MergeSlots = {7}
     },

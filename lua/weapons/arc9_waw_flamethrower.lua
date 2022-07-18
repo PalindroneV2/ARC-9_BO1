@@ -1,6 +1,6 @@
 SWEP.Base = "arc9_base"
 SWEP.Spawnable = true -- this obviously has to be set to true
-SWEP.Category = "ARC-9 - World at War" -- edit this if you like
+SWEP.Category = "ARC9 - World at War" -- edit this if you like
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "M2 Flamethrower"
