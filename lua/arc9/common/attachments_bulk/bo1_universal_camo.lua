@@ -505,6 +505,21 @@ ARC9.LoadAttachment(ATT, "bo1_camo_weed")
 
 ATT = {}
 
+ATT.PrintName = "China #1"
+ATT.FullColorIcon = true
+ATT.CompactName = "CCP"
+ATT.Icon = Material("entities/bo1_camos/ccp.jpg")
+ATT.Category = "universal_camo"
+ATT.Description = [[Nothing happened in Tiananmen Square in 1989.]]
+ATT.MenuCategory = "ARC-9 - Camos"
+ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/ccp"
+ATT.Folder = "BO1 CAMOS/GAMER"
+ATT.CustomCamoScale = 5
+
+ARC9.LoadAttachment(ATT, "bo1_camo_ccp")
+
+ATT = {}
+
 ATT.PrintName = "Normal"
 ATT.FullColorIcon = true
 ATT.CompactName = "BUMP"

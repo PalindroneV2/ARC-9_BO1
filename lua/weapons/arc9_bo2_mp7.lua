@@ -307,7 +307,7 @@ SWEP.Attachments = {
         PrintName = "Stock",
         DefaultCompactName = "None",
         Bone = "j_gun",
-        Pos = Vector(-5, 0, 1.5),
+        Pos = Vector(-5, 0, 0.5),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_stock_lm"},
         Installed = "bo1_stock_light"
@@ -378,7 +378,7 @@ SWEP.Attachments = {
     {
         PrintName = "Cosmetic",
         Bone = "j_gun",
-        Pos = Vector(-12.5, 0, 2.65),
+        Pos = Vector(-5, 0, 3.65),
         Ang = Angle(0, 0, 0),
         Category = {"universal_camo"},
     },
