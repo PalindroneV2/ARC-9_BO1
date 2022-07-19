@@ -237,6 +237,42 @@ SWEP.AttachmentElements = {
     },
 }
 
+local snd_mech = ""
+local snd_mechlast = ""
+local snd_magin = "ARC9_BO1.M1911_In"
+local snd_magout = "ARC9_BO1.M1911_Out"
+local snd_slideback = "ARC9_BO1.M1911_Slide_Back"
+local snd_slidefwd = "ARC9_BO1.M1911_Slide_Fwd"
+
+-- SWEP.Hook_Think = function(self)
+--     local snd_attach = self:GetElements()
+--     if snd_attach["waw_sound"] then
+--         snd_mech = "ARC9_WAW.M1911_Mech"
+--         snd_mechlast = "ARC9_WAW.M1911_MechLast"
+--     else
+--         snd_mech = ""
+--         snd_mechlast = ""
+--     end
+--     if snd_attach["bo2_sound"] then
+--         snd_magin = "ARC9_BO2.Pistol_MagIn"
+--         snd_magout = "ARC9_BO2.Pistol_MagOut"
+--         snd_slideback = "ARC9_BO2.Pistol_SlideBack"
+--         snd_slidefwd = "ARC9_BO2.Pistol_SlideFwd"
+--     else
+--         snd_magin = "ARC9_BO1.M1911_In"
+--         snd_magout = "ARC9_BO1.M1911_Out"
+--         snd_slideback = "ARC9_BO1.M1911_Slide_Back"
+--         snd_slidefwd = "ARC9_BO1.M1911_Slide_Fwd"
+--     end
+--     return snd_mech, snd_mechlast, snd_magin, snd_magout, snd_slideback, snd_slidefwd
+-- end
+-- print(snd_mech)
+-- print(snd_mechlast)
+-- print(snd_magin)
+-- print(snd_magout)
+-- print(snd_slideback)
+-- print(snd_slidefwd)
+
 SWEP.Hook_ModifyBodygroups = function(self, data)
 
     local vm = data.model
@@ -248,7 +284,8 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local finish = 0
     local comp = 0
 
-    if attached["m1911_comp"] then
+
+    if attached["m191_comp"] then
         comp = 1
     end
 
@@ -342,7 +379,6 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     }
 
     self.CustomizeSnapshotPos = snappos
-
 end
 
 SWEP.HookP_NameChange = function(self, name)
@@ -374,10 +410,17 @@ SWEP.HookP_NameChange = function(self, name)
 end
 
 SWEP.Hook_TranslateAnimation = function (self, anim)
-    -- local attached = self:GetElements()
+    local attached = self:GetElements()
+    if attached["waw_sound"] then
+        return anim .. "_waw"
+    end
+    if attached["bo2_sound"] then
+        return anim .. "_bo2"
+    end
+    if attached["cod4_sound"] then
+        return anim .. "_cod4"
+    end
 end
-
---TEST 3
 
 SWEP.Attachments = {
     {
@@ -405,6 +448,7 @@ SWEP.Attachments = {
         Pos = Vector(2, 0, 0),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_m1911_slides"},
+        DefaultIcon = Material("materials/entities/bo1_atts/cosmetic/waw_1911.png", "mips smooth"),
     },
     {
         PrintName = "Frame",
@@ -413,6 +457,7 @@ SWEP.Attachments = {
         Pos = Vector(-1, 0, -1),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_m1911_frames"},
+        DefaultIcon = Material("materials/entities/bo1_atts/cosmetic/waw_1911.png", "mips smooth"),
     },
     {
         PrintName = "Trigger",
@@ -421,6 +466,7 @@ SWEP.Attachments = {
         Pos = Vector(1, 0, -0.1),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_m1911_trigger"},
+        DefaultIcon = Material("materials/entities/bo1_atts/cosmetic/waw_1911.png", "mips smooth"),
     },
     {
         PrintName = "Hammer",
@@ -429,6 +475,7 @@ SWEP.Attachments = {
         Pos = Vector(0, 0, 1),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_m1911_hammer"},
+        DefaultIcon = Material("materials/entities/bo1_atts/cosmetic/waw_1911.png", "mips smooth"),
     },
     {
         PrintName = "Finish",
@@ -437,6 +484,16 @@ SWEP.Attachments = {
         Pos = Vector(-5, 0, 2),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_m1911_cosmetics"},
+        DefaultIcon = Material("materials/entities/bo1_generic.png", "mips smooth"),
+    },
+    {
+        PrintName = "Sounds",
+        DefaultCompactName = "BO1",
+        Bone = "j_gun",
+        Pos = Vector(-7.5, 0, 2),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_m1911_sounds"},
+        DefaultIcon = Material("materials/entities/bo1_generic.png", "mips smooth"),
     },
     {
         PrintName = "Tactical",
@@ -490,8 +547,8 @@ SWEP.Animations = {
         Source = "first_draw",
         Time = 1,
         EventTable = {
-            {s = "ARC9_BO1.M1911_Slide_Back", t = 0.2},
-            {s = "ARC9_BO1.M1911_Slide_Fwd", t = 0.8}
+            {s = snd_slideback, t = 0.2},
+            {s = snd_slidefwd, t = 0.8}
         }
     },
     ["ready_bo2"] = {
@@ -506,29 +563,41 @@ SWEP.Animations = {
         Source = {"fire"},
         Time = 8 / 30,
         ShellEjectAt = 1 / 30,
+        EventTable = {
+            {s = snd_mech, t = 1 / 30},
+        }
     },
     ["fire_empty"] = {
         Source = "fire_last",
         Time = 8 / 30,
         ShellEjectAt = 1 / 30,
+        EventTable = {
+            {s = snd_mechlast, t = 1 / 30},
+        }
     },
     ["fire_iron"] = {
         Source = "fire_ads",
         Time = 8 / 30,
         ShellEjectAt = 1 / 30,
+        EventTable = {
+            {s = snd_mech, t = 1 / 30},
+        }
     },
     ["fire_iron_empty"] = {
         Source = "fire_last",
         Time = 8 / 30,
         ShellEjectAt = 1 / 30,
+        EventTable = {
+            {s = snd_mechlast, t = 1 / 30},
+        }
     },
     ["reload"] = {
         Source = "reload",
         Time = 1.5,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         EventTable = {
-            {s = "ARC9_BO1.M1911_Out", t = 0.25},
-            {s = "ARC9_BO1.M1911_In", t = 1}
+            {s = snd_magout, t = 0.25},
+            {s = snd_magin, t = 1}
         },
     },
     ["reload_empty"] = {
@@ -536,9 +605,9 @@ SWEP.Animations = {
         Time = 2,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         EventTable = {
-            {s = "ARC9_BO1.M1911_Out", t = 0.25},
-            {s = "ARC9_BO1.M1911_In", t = 1},
-            {s = "ARC9_BO1.M1911_Slide_Fwd", t = 1.5}
+            {s = snd_magout, t = 0.25},
+            {s = snd_magin, t = 1},
+            {s = snd_slidefwd, t = 1.5}
         },
     },
     ["reload_bo2"] = {
@@ -576,7 +645,7 @@ SWEP.Animations = {
         EventTable = {
             {s = "ARC9_COD4E.1911_Out", t = 0.25},
             {s = "ARC9_COD4E.1911_In", t = 1},
-            {s = "ARC9_COD4E.1911_Chamber", t = 1.5}
+            {s = "ARC9_COD4E.1911_Chamber", t = 1.35}
         },
     },
     ["enter_sprint"] = {

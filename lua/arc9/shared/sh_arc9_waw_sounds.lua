@@ -1629,6 +1629,22 @@ sound.Add( {
     --pitch = {95, 110},
     sound = {"^weapons/arc9/bo1_m1911/ringoff_waw.wav"}
 } )
+sound.Add( {
+    name = "ARC9_WAW.M1911_Mech",
+    channel = CHAN_USER_BASE,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {"^weapons/arc9/bo1_m1911/mech_waw.wav"}
+} )
+sound.Add( {
+    name = "ARC9_WAW.M1911_MechLast",
+    channel = CHAN_USER_BASE,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {"^weapons/arc9/bo1_m1911/mech_last_waw.wav"}
+} )
 
 sound.Add( {
     name = "ARC9_WAW.TT33_Fire",

@@ -196,7 +196,7 @@ ATT = {}
 
 ATT.PrintName = "Commander Short Slide"
 ATT.CompactName = "4.25\" G.I."
-ATT.Icon = Material("materials/entities/bo1_atts/cosmetic/bo3_1911.png")
+ATT.Icon = Material("materials/entities/bo1_atts/cosmetic/bo2_1911.png")
 ATT.Description = [[
     Compact 1911 slide with that improves handling and sprint times but reduces muzzle velocity and worsens recoil.
 ]]
@@ -234,7 +234,7 @@ ATT = {}
 
 ATT.PrintName = "AMT Long Slide"
 ATT.CompactName = "7\" AMT"
-ATT.Icon = Material("materials/entities/bo1_atts/cosmetic/bo3_1911.png")
+ATT.Icon = Material("materials/entities/bo1_atts/cosmetic/bo2_1911.png")
 ATT.Description = [[
     Longer 1911 slide and barrel with improved rifling and improved rear irons.
 ]]
@@ -268,3 +268,47 @@ ATT.Category = {"bo1_m1911_slides"}
 ATT.ActivateElements = {"1911_slide_baller_modern", "longbarrel"}
 
 ARC9.LoadAttachment(ATT, "bo1_m1911_slides_hardballer_modern")
+
+-- SOUND MODS
+ATT = {}
+
+ATT.PrintName = "World at War"
+ATT.CompactName = "WaW"
+ATT.Icon = Material("materials/entities/waw_generic.png")
+ATT.Description = [[
+    The weapon as it sounds in Call of Duty: World at War.
+]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 2
+ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.Free = true
+
+ATT.ShootSound = "ARC9_WAW.M1911_Fire"
+
+ATT.Category = {"bo1_m1911_sounds"}
+ATT.ActivateElements = {"waw_sound"}
+
+ARC9.LoadAttachment(ATT, "bo1_m1911_sounds_waw")
+
+ATT = {}
+
+ATT.PrintName = "Black Ops II"
+ATT.CompactName = "BO2"
+ATT.Icon = Material("materials/entities/bo2_generic.png")
+ATT.Description = [[
+    The weapon as it sounds in Call of Duty: Black Ops II.
+]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 2
+ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.Free = true
+
+ATT.ShootSound = "ARC9_BO2.M1911_Fire"
+ATT.DistantShootSound = "ARC9_BO2.Pistol_RingOff"
+
+ATT.Category = {"bo1_m1911_sounds"}
+ATT.ActivateElements = {"bo2_sound"}
+
+ARC9.LoadAttachment(ATT, "bo1_m1911_sounds_bo2")
