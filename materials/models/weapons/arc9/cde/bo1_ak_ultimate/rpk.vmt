@@ -1,12 +1,14 @@
 VertexlitGeneric
 {
 	$basetexture	"models\weapons\arc9\bo1\bo1_rpk\rpk_c"
-	
 	$bumpmap	"models\weapons\arc9\bo1\bo1_rpk\rpk_n"
+	$phongexponenttexture "models\weapons\arc9\bo1\bo1_rpk\rpk_s"
+	$envmapmask "models\weapons\arc9\bo1\bo1_rpk\rpk_s"
+	"$normalmapalphaenvmapmask" "1"
 
 	$detail "models/weapons/arc9/bo1/gunmetal"
 	$detailblendmode 0
-	"$detailblendfactor" "1.5"
+	"$detailblendfactor" "1"
 	
 	
 	//"$color2" "[ .4 .4 .4 ]"

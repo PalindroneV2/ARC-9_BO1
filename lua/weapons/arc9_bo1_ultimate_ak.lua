@@ -89,7 +89,8 @@ SWEP.SpreadAddRecoil = math.rad(90 / 37.5)
 
 SWEP.SpreadAddHipFire = math.rad(260 / 37.5)
 --SWEP.SpreadAddMove = math.rad(135 / 37.5)
-SWEP.SpreadAddMidAir = 0 -- = math.rad(110 / 37.5)
+SWEP.SpreadAddMidAir = 0
+SWEP.SpreadAddShooting = math.rad(5 / 37.5) -- 0 -- = math.rad(110 / 37.5)
 
 SWEP.VisualRecoilUp = 0 -- Vertical tilt for visual recoil.
 SWEP.VisualRecoilSide = 0 -- Horizontal tilt for visual recoil.
