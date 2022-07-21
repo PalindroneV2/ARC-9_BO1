@@ -23,6 +23,9 @@ ATT.ExcludeElements = {}
 ATT.RecoilMult = 1.1
 ATT.RecoilUpMult = 1.1
 ATT.RecoilSideMult = 1.1
+ATT.SpreadMult = 1.1
+ATT.SpreadMultHipFire = 0.85
+ATT.SpreadMultRecoil = 1.1
 
 ATT.AimDownSightsTimeMult = 0.9
 ATT.RangeMaxMult = 0.85
@@ -53,6 +56,9 @@ ATT.ExcludeElements = {}
 ATT.RecoilMult = 1.3
 ATT.RecoilUpMult = 1.3
 ATT.RecoilSideMult = 1.3
+ATT.SpreadMult = 1.3
+ATT.SpreadMultHipFire = 0.5
+ATT.SpreadMultRecoil = 1.5
 
 ATT.AimDownSightsTimeMult = 0.8
 ATT.RangeMaxMult = 0.7
@@ -91,6 +97,7 @@ ATT.RecoilUpMult = 0.9
 ATT.RecoilSideMult = 0.9
 ATT.SpreadMult = 0.3
 ATT.SpreadMultHipFire = 1.5
+ATT.SpreadMultRecoil = 1.5
 
 ATT.DamageMaxAdd = 5
 ATT.DamageMinAdd = 15

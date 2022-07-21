@@ -1532,6 +1532,7 @@ ATT.AimDownSightsTimeAdd = 0.22
 ATT.SprintToFireTimeAdd = 0.25
 ATT.SpeedAddSights = -0.2
 ATT.SpreadMultHipFire = 1.15
+ATT.SpreadMultRecoil = 0.6
 --ATT.SpreadMultMove = 1.15
 
 ARC9.LoadAttachment(ATT, "retro_ar15_stock_full")
@@ -1557,35 +1558,7 @@ ATT.RecoilMult = 0.75
 ATT.RecoilUpMult = 0.5
 ATT.RecoilRandomSideMult = 0.6
 ATT.RecoilAutoControlMult = 1.8
-
-ATT.SpeedMult = 0.96
-ATT.AimDownSightsTimeAdd = 0.17
-ATT.SprintToFireTimeAdd = 0.2
-ATT.SpeedAddSights = -0.16
-
-ARC9.LoadAttachment(ATT, "retro_ar15_stock_gen1")
-
-ATT = {}
-
-ATT.PrintName = "Generation 1 Collapsible Stock"
-ATT.CompactName = "GEN1"
-ATT.Icon = Material("entities/bo1_atts/other/stock.png")
-ATT.Description = [[Early production retractible two-position stock.
-
-Provides slightly better handling than a fixed stock, but with slightly less recoil control.]]
-ATT.Pros = {}
-ATT.Cons = {}
-ATT.SortOrder = 1
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
-ATT.Free = false
-
-ATT.Category = {"retro_ar15_stock"}
-ATT.ActivateElements = {"gen1_extended", "nosling"}
-
-ATT.RecoilMult = 0.75
-ATT.RecoilUpMult = 0.5
-ATT.RecoilRandomSideMult = 0.6
-ATT.RecoilAutoControlMult = 1.8
+ATT.SpreadMultRecoil = 0.8
 
 ATT.SpeedMult = 0.96
 ATT.AimDownSightsTimeAdd = 0.17
@@ -1617,7 +1590,7 @@ ATT.RecoilRandomSideMult = 0.6
 ATT.RecoilAutoControlMult = 1.75
 
 ATT.SpreadMultRecoil = 0.85
---ATT.SpreadMultMove = 0.8
+ATT.SpreadMultRecoil = 0.8
 
 ATT.SpeedMult = 0.97
 ATT.AimDownSightsTimeAdd = 0.12
@@ -1649,7 +1622,7 @@ ATT.RecoilRandomSideMult = 0.6
 ATT.RecoilAutoControlMult = 1.75
 
 ATT.SpreadMultRecoil = 0.85
---ATT.SpreadMultMove = 0.8
+ATT.SpreadMultRecoil = 0.75
 
 ATT.SpeedMult = 0.97
 ATT.AimDownSightsTimeAdd = 0.12
@@ -1679,6 +1652,7 @@ ATT.RecoilMult = 0.8
 ATT.RecoilUpMult = 0.5
 ATT.RecoilRandomSideMult = 0.6
 ATT.RecoilAutoControlMult = 1.75
+ATT.SpreadMultRecoil = 0.75
 
 ATT.SpeedMult = 0.97
 ATT.AimDownSightsTimeAdd = 0.09
@@ -1710,7 +1684,7 @@ ATT.RecoilRandomSideMult = 0.75
 ATT.RecoilAutoControlMult = 1.5
 
 ATT.SpreadMultHipFire = 0.8
---ATT.SpreadMultMove = 0.8
+ATT.SpreadMultRecoil = 0.975
 
 ATT.SpeedMult = 0.995
 ATT.AimDownSightsTimeAdd = 0.05
@@ -1740,6 +1714,7 @@ ATT.RecoilMult = 0.8
 ATT.RecoilUpMult = 0.5
 ATT.RecoilRandomSideMult = 0.6
 ATT.RecoilAutoControlMult = 1.75
+ATT.SpreadMultRecoil = 0.75
 
 ATT.SpeedMult = 0.97
 ATT.AimDownSightsTimeAdd = 0.09
@@ -1769,6 +1744,7 @@ ATT.RecoilMult = 0.65
 ATT.RecoilUpMult = 0.5
 ATT.RecoilRandomSideMult = 0.25
 ATT.RecoilAutoControlMult = 2.5
+ATT.SpreadMultRecoil = 0.5
 
 ATT.SpeedMult = 0.9
 ATT.AimDownSightsTimeAdd = 0.25
@@ -1799,6 +1775,7 @@ ATT.RecoilMult = 0.7
 ATT.RecoilUpMult = 0.5
 ATT.RecoilRandomSideMult = 0.5
 ATT.RecoilAutoControlMult = 2
+ATT.SpreadMultRecoil = 0.6
 
 ATT.SpeedMult = 0.95
 ATT.AimDownSightsTimeAdd = 0.25
