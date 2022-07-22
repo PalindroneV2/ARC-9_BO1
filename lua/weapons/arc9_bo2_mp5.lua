@@ -87,7 +87,7 @@ SWEP.RecoilAutoControl = 0.5
 SWEP.RecoilKick = 1
 
 SWEP.Spread = math.rad(2.75 / 37.5)
-SWEP.SpreadAddRecoil = math.rad(50 / 37.5)
+SWEP.SpreadAddRecoil = math.rad(100 / 37.5)
 
 SWEP.SpreadAddHipFire = math.rad(230 / 37.5)
 --SWEP.SpreadAddMove = math.rad(110 / 37.5)
@@ -419,7 +419,7 @@ SWEP.Attachments = {
     [2] = {
         PrintName = "Stock",
         Bone = "j_gun",
-        Pos = Vector(-7.5, 0, 0),
+        Pos = Vector(-11, 0, 0.75),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_stocks","bo1_mp5_stock"},
         Installed = "bo1_stock_light",
@@ -486,7 +486,7 @@ SWEP.Attachments = {
     [10] = {
         PrintName = "Cosmetic",
         Bone = "j_gun",
-        Pos = Vector(-7, 0, 2),
+        Pos = Vector(-10, 0, 4),
         Ang = Angle(0, 0, 0),
         Category = {"universal_camo"},
     },

@@ -3,7 +3,7 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ARC9 - Black Ops II" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "OTs-03 SVU-AS"
+SWEP.PrintName = "SVU-AS"
 SWEP.Class = "Designated Marskman Rifle"
 SWEP.Description = [[
     A modern bullpup configuration of the classic Dragunov SVD.
@@ -243,10 +243,10 @@ SWEP.HookP_NameChange = function(self, name)
 
     local attached = self:GetElements()
 
-    local gunname = "XPR-50"
+    local gunname = "OTs-03 SVU-AS"
 
     if attached["bo1_pap"] then
-        gunname = "Xpress Death"
+        gunname = "Shadowy Veil Utilizer"
     end
 
     return gunname
@@ -312,9 +312,17 @@ SWEP.Attachments = {
         PrintName = "Underbarrel",
         DefaultCompactName = "UB",
         Bone = "j_gun",
-        Pos = Vector(8, 0, 0.9),
+        Pos = Vector(7, 0, 0.9),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_rail_underbarrel", "bo1_bipod"},
+        Category = {"bo1_rail_underbarrel"},
+    },
+    {
+        PrintName = "Bipod",
+        DefaultCompactName = "None",
+        Bone = "j_gun",
+        Pos = Vector(10, 0, 0.9),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_bipod"},
         Installed = "bo1_bipod_integrated",
     },
     {

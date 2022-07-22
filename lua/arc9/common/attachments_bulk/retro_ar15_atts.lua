@@ -50,7 +50,7 @@ ATT.RecoilMult = 1.3
 ATT.SpreadMultHipFire = 0.575
 ATT.SpreadAddShooting = math.rad(25 / 37.5)
 ATT.SpreadMultRecoil = 1.55
-ATT.RPMMult = 1.05
+ATT.RPMAdd = 50
 
 ATT.SpeedMult = 1.05
 ATT.SpeedMultSights = 1.15
@@ -487,15 +487,15 @@ ATT.RecoilMult = 0.9
 ATT.AimDownSightsTimeMult = 1.1
 ATT.SprintToFireTimeMult = 1.1
 
-ATT.Attachments = {
-    {
-        PrintName = "Tactical",
-        Bone = "j_gun",
-        Pos = Vector(-8, 0.7, 1.5),
-        Ang = Angle(0, 0, -90),
-        Category =  {"bo1_rail_tactical"}
-    },
-}
+-- ATT.Attachments = {
+--     {
+--         PrintName = "Tactical",
+--         Bone = "j_gun",
+--         Pos = Vector(-8, 0.7, 1.5),
+--         Ang = Angle(0, 0, -90),
+--         Category =  {"bo1_rail_tactical"}
+--     },
+-- }
 
 ARC9.LoadAttachment(ATT, "retro_ar15_handguard_a2")
 
@@ -512,6 +512,10 @@ Stats identical to other handguards.]]
 ATT.SortOrder = 2
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
+
+ATT.RecoilMult = 0.9
+ATT.AimDownSightsTimeMult = 1.15
+ATT.SprintToFireTimeMult = 1.15
 
 ATT.Category = {"retro_ar15_handguard_20", "retro_ar15_handguard_14"}
 ATT.ActivateElements = {"handguard_a4", "nosling", "no_ub_rail", "ar15_ris", "no_tac_rail"}
@@ -1362,8 +1366,8 @@ ATT.RecoilUpMult = 0.5
 ATT.RecoilSideMult = 0.8
 
 ATT.PenetrationMult = 0.5
-ATT.PhysBulletMuzzleVelocity = 360 * 39.37
-ATT.RPM = 1000
+ATT.PhysBulletMuzzleVelocityAdd = -360 * 39.37
+ATT.RPMAdd = 50
 
 ATT.ShellModel = "models/shells/shell_9mm.mdl"
 ATT.ShellPitch = 90
