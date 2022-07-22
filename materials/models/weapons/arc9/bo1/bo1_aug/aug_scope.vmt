@@ -4,6 +4,9 @@ VertexlitGeneric
 	// $color2 "[0.5 0.5 0.5]"
 	$bumpmap	"models\weapons\arc9\bo1\bo1_aug\aug_n"
 	$phongexponenttexture	"models\weapons\arc9\bo1\bo1_aug\aug_s"
+	$envmapmask	"models\weapons\arc9\bo1\bo1_aug\aug_s"
+	$normalmapalphaenvmapmask 1
+
 	"$detail" "models\weapons\arc9\bo1\camos\black_detail"
 	"$detailblendfactor" "0.4"
 

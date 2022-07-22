@@ -1,13 +1,10 @@
 "VertexlitGeneric"
 {
 	"$basetexture" "models/weapons/arc9/bo2/bo2_xpr50/xpr50"
-	
 	"$bumpmap" "models/weapons/arc9/bo2/bo2_xpr50/xpr50_n"
-
-	$detail "models/weapons/arc9/bo1/black_detail"
-	$detailblendmode "4"
-	"$detailblendfactor" "1"
-
+	"$phongexponenttexture" "models/weapons/arc9/bo2/bo2_xpr50/xpr50_s"
+	"$envmapmask" "models/weapons/arc9/bo2/bo2_xpr50/xpr50_s"
+	"$normalmapalphaenvmapmask" "1"
 	
 	//"$color2" "[ .4 .4 .4 ]"
 	"$blendtintbybasealpha" "1"
@@ -20,4 +17,8 @@
 	"$envmapfresnel" "0.01"
 	"$envmaptint" "[ .01 .01 .01 ]"
 	"$nocull" "1"
+
+	$detail "models/weapons/arc9/bo1/black_detail"
+	$detailblendmode "4"
+	"$detailblendfactor" "1"
 }

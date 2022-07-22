@@ -96,7 +96,7 @@ ATT.Attachments = {
         PrintName = "Muzzle",
         DefaultCompactName = "Birdcage",
         Bone = "j_gun",
-        Pos = Vector(-7.5, 0, -0.5),
+        Pos = Vector(-7, 0, -0.5),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_muzzle"},
         ExcludeElements = {"is_patriot"},
@@ -171,7 +171,7 @@ ATT.Attachments = {
         PrintName = "Muzzle",
         DefaultCompactName = "XM177",
         Bone = "j_gun",
-        Pos = Vector(-8.6, 0, -0.5),
+        Pos = Vector(-8.1, 0, -0.5),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_muzzle"},
     },
@@ -249,7 +249,7 @@ ATT.Attachments = {
         PrintName = "Muzzle",
         DefaultCompactName = "Birdcage",
         Bone = "j_gun",
-        Pos = Vector(-11.5, 0, -0.5),
+        Pos = Vector(-10.75, 0, -0.5),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_muzzle"},
     },
@@ -327,25 +327,25 @@ ATT.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"bo1_muzzle"},
     },
-    {
-        PrintName = "Cosmetic II",
-        Bone = "j_gun",
-        Pos = Vector(10, 0, -3.5),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_cosmetic_ar15"},
-        ExcludeElements = {"nosling"},
-        InstallSound = "weapons/arc9/bo1_m16/bo_spawn.wav",
-    },
-    {
-        PrintName = "Underbarrel",
-        DefaultCompactName = "UB",
-        Bone = "j_gun",
-        -- Pos = Vector(-4, 0, 0.4),
-        Pos = Vector(-2, 0, 0.35),
-        Ang = Angle(0, 0, 0),
-        Category = {"cde_m203", "bo1_mk", "bo1_rail_underbarrel"},
-        ExcludeElements = {"ar15_ris"}
-    },
+    -- {
+    --     PrintName = "Cosmetic II",
+    --     Bone = "j_gun",
+    --     Pos = Vector(10, 0, -3.5),
+    --     Ang = Angle(0, 0, 0),
+    --     Category = {"bo1_cosmetic_ar15"},
+    --     ExcludeElements = {"nosling"},
+    --     InstallSound = "weapons/arc9/bo1_m16/bo_spawn.wav",
+    -- },
+    -- {
+    --     PrintName = "Underbarrel",
+    --     DefaultCompactName = "UB",
+    --     Bone = "j_gun",
+    --     -- Pos = Vector(-4, 0, 0.4),
+    --     Pos = Vector(-2, 0, 0.35),
+    --     Ang = Angle(0, 0, 0),
+    --     Category = {"cde_m203", "bo1_mk", "bo1_rail_underbarrel"},
+    --     ExcludeElements = {"ar15_ris"}
+    -- },
 }
 
 -- ATT.MuzzleEffectQCA = 1
@@ -417,7 +417,7 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = true
 
-ATT.Category = {"retro_ar15_front_iron"}
+ATT.Category = {"retro_ar15_front_iron", "retro_ar15_front_cut"}
 ATT.ActivateElements = {"gasblock_flat"}
 ATT.ExcludeElements = {
     "mw2_m4_irons",

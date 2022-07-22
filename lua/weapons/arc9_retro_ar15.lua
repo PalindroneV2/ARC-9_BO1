@@ -90,7 +90,7 @@ SWEP.RecoilAutoControl = 0.5
 SWEP.RecoilKick = 1
 
 SWEP.Spread = math.rad(1.5 / 37.5)
-SWEP.SpreadAddRecoil = math.rad(60 / 37.5)
+SWEP.SpreadAddRecoil = math.rad(100 / 37.5)
 
 SWEP.SpreadAddHipFire = math.rad(250 / 37.5)
 --SWEP.SpreadAddMove = math.rad(125 / 37.5)
@@ -764,14 +764,21 @@ SWEP.HookP_NameChange = function(self, name)
         gunname = name .. alt
     end
     if attached["barrel_16"] then
-        local sport = "SP1"
+        local sport = "Gov't"
+        if attached["fcg_semi"] then
+            sport = "SP1"
+        end
         if attached["a2_top"] then
             name = name .. "A2"
-            sport = "SP2"
+            if attached["fcg_semi"] then
+                sport = "SP2"
+            end
         end
         if attached["a4_top"] then
-        name = name .. "A3"
-            sport = "SP3"
+            name = name .. "A3"
+            if attached["fcg_semi"] then
+                sport = "SP3"
+            end
         end
         if attached["handguard_car15"] and attached["gen2_extended"] then
             sport = "Gov't"

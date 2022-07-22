@@ -4,7 +4,8 @@ VertexlitGeneric
 	// $color2 "[0.5 0.5 0.5]"
 	$bumpmap	"models\weapons\arc9\bo1\bo1_aug\aug_n"
 	$phongexponenttexture	"models\weapons\arc9\bo1\bo1_aug\aug_s"
-	// "$detail" "models\weapons\arc9\bo1\camos\black_detail"
+	$envmapmask	"models\weapons\arc9\bo1\bo1_aug\aug_s"
+	$normalmapalphaenvmapmask 1
 	
 	//"$color2" "[ .4 .4 .4 ]"
 	"$blendtintbybasealpha" "1"
@@ -12,8 +13,8 @@ VertexlitGeneric
 	"$phongboost" "1"
 	"$phongalbedotint" "2"
 	"$PhongFresnelRanges" "[ 2 5 4 ]"
+
 	"$envmap" "env_cubemap"
-	"$basemapalphaenvmapmask" "1"
 	"$envmapfresnel" "0.01"
 	"$envmaptint" "[ .01 .01 .01 ]"
 }
