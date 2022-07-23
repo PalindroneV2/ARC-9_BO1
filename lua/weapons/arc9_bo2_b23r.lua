@@ -127,7 +127,7 @@ SWEP.Firemodes = {
     },
 }
 SWEP.RunawayBurst = true
-SWEP.PostBurstDelay = 0.1
+SWEP.PostBurstDelay = 0
 SWEP.NPCWeaponType = {"weapon_pistol"}
 SWEP.NPCWeight = 100
 
@@ -284,7 +284,7 @@ SWEP.Attachments = {
         PrintName = "Magazine",
         DefaultCompactName = "MAG",
         Bone = "j_gun",
-        Pos = Vector(5, 0, -1),
+        Pos = Vector(-2, 0, -2),
         Ang = Angle(0, 0, 0),
         Category = {"bo2_fastmag", "bo2_extmag"},
     },
@@ -292,7 +292,7 @@ SWEP.Attachments = {
         PrintName = "Ammunition",
         DefaultCompactName = "AMMO",
         Bone = "j_gun",
-        Pos = Vector(-1.25, 0, -2.5),
+        Pos = Vector(-2, 0, -5),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ammo", "bo1_pap"},
     },
@@ -310,7 +310,7 @@ SWEP.Attachments = {
         PrintName = "Cosmetic",
         DefaultCompactName = "Gunmetal",
         Bone = "j_gun",
-        Pos = Vector(0, 0, -1),
+        Pos = Vector(-5, 0, -1),
         Ang = Angle(0, 0, 0),
         Category = "universal_camo",
     },

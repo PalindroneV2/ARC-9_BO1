@@ -17,7 +17,7 @@ ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 ATT.Folder = "RDS"
 
-ATT.Category = {"bo1_optic", "bo1_optic_alt", "bo1_optic_lp", "bo1_optic_rds", "bo1_optic_pistol"}
+ATT.Category = {"bo1_optic", "bo1_optic_alt", "bo1_optic_lp", "bo1_optic_rds"}
 
 ATT.Model = "models/weapons/arc9/atts/bo2_docter.mdl"
 ATT.Scale = 1.35

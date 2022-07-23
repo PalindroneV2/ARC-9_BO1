@@ -192,7 +192,7 @@ SWEP.ActiveAng = Angle(0, 0, -5)
 SWEP.CrouchPos = SWEP.ActivePos
 SWEP.CrouchAng = SWEP.ActiveAng
 
-SWEP.SprintPos = Vector(0, 0, -1)
+SWEP.SprintPos = Vector(0, -1, -1)
 SWEP.SprintAng = Angle(0, 0, -5)
 
 SWEP.CustomizePos = Vector(12.5, 40, 4)
@@ -206,16 +206,6 @@ SWEP.BarrelLength = 25
 SWEP.ExtraSightDist = 5
 
 SWEP.AttachmentElements = {
-    ["bo2_fastmag"] = {
-        Bodygroups = {
-            {1,1},
-        },
-    },
-    ["mount"] = {
-        Bodygroups = {
-            {2,1}
-        },
-    },
     ["bo2_m320"] = {
         Bodygroups = {
             {3,1}
@@ -231,8 +221,25 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
 
     if CUSTSTATE then
         vm:SetBodygroup(0, 1)
+        vm:SetBodygroup(1, 2)
+        vm:SetBodygroup(2, 2)
     else
         vm:SetBodygroup(0, 0)
+        vm:SetBodygroup(1, 0)
+        vm:SetBodygroup(2, 0)
+    end
+
+    if attached["fastmag"] then
+        vm:SetBodygroup(1, 1)
+        if CUSTSTATE then
+            vm:SetBodygroup(1, 3)
+        end
+    end
+    if attached["mount"] then
+        vm:SetBodygroup(2, 1)
+        if CUSTSTATE then
+            vm:SetBodygroup(2, 3)
+        end
     end
 
     local camo = 0

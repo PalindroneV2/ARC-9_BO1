@@ -23,6 +23,7 @@ ATT.MuzzleDevice = true
 ATT.Silencer = true
 ATT.MuzzleParticle = "muzzleflash_suppressed"
 ATT.DistantShootSoundOverride = ""
+ATT.FirstDistantShootSoundOverride = ""
 
 ATT.ShootVolumeMult = 4 / 5
 ATT.ShootPitchMult = 1.1
@@ -63,6 +64,7 @@ ATT.MuzzleDevice = true
 ATT.Silencer = true
 ATT.MuzzleParticle = "muzzleflash_suppressed"
 ATT.DistantShootSoundOverride = ""
+ATT.FirstDistantShootSoundOverride = ""
 
 ATT.ShootVolumeMult = 4 / 5
 ATT.ShootPitchMult = 1.1
@@ -103,6 +105,7 @@ ATT.MuzzleDevice = true
 ATT.Silencer = true
 ATT.MuzzleParticle = "muzzleflash_suppressed"
 ATT.DistantShootSoundOverride = ""
+ATT.FirstDistantShootSoundOverride = ""
 
 ATT.ShootVolumeMult = 4 / 5
 ATT.ShootPitchMult = 1.1
@@ -142,6 +145,7 @@ ATT.MuzzleDevice = true
 ATT.Silencer = true
 ATT.MuzzleParticle = "muzzleflash_suppressed"
 ATT.DistantShootSoundOverride = ""
+ATT.FirstDistantShootSoundOverride = ""
 
 ATT.ShootVolumeMult = 4 / 5
 ATT.ShootPitchMult = 1.1
@@ -181,6 +185,7 @@ ATT.MuzzleDevice = true
 ATT.Silencer = true
 ATT.MuzzleParticle = "muzzleflash_suppressed"
 ATT.DistantShootSoundOverride = ""
+ATT.FirstDistantShootSoundOverride = ""
 
 ATT.ShootVolumeMult = 4 / 5
 ATT.ShootPitchMult = 1.1
@@ -220,6 +225,7 @@ ATT.MuzzleDevice = true
 ATT.Silencer = true
 ATT.MuzzleParticle = "muzzleflash_suppressed"
 ATT.DistantShootSoundOverride = ""
+ATT.FirstDistantShootSoundOverride = ""
 
 ATT.ShootVolumeMult = 4 / 5
 ATT.ShootPitchMult = 1.1
@@ -259,6 +265,7 @@ ATT.MuzzleDevice = true
 ATT.Silencer = true
 ATT.MuzzleParticle = "muzzleflash_suppressed"
 ATT.DistantShootSoundOverride = ""
+ATT.FirstDistantShootSoundOverride = ""
 
 ATT.ShootVolumeMult = 4 / 5
 ATT.ShootPitchMult = 1.1
@@ -298,6 +305,7 @@ ATT.MuzzleDevice = true
 ATT.Silencer = true
 ATT.MuzzleParticle = "muzzleflash_suppressed"
 ATT.DistantShootSoundOverride = ""
+ATT.FirstDistantShootSoundOverride = ""
 
 ATT.ShootVolumeMult = 4 / 5
 ATT.ShootPitchMult = 1.1
@@ -338,6 +346,7 @@ ATT.MuzzleDevice = true
 ATT.Silencer = true
 ATT.MuzzleParticle = "muzzleflash_suppressed"
 ATT.DistantShootSoundOverride = ""
+ATT.FirstDistantShootSoundOverride = ""
 
 ATT.ShootVolumeMult = 4 / 5
 ATT.ShootPitchMult = 1.1
