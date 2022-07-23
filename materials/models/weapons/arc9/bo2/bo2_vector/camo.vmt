@@ -17,4 +17,14 @@
 	"$envmaptint" "[ .01 .01 .01 ]"
 
 	"$nocull" "1"
+
+    $detailblendmode 4
+    $detailblendfactor 0.75
+	Proxies {
+		CustomCamo {
+			camoTexture $detail
+			camoScale $detailscale
+            blend $detailblendfactor
+		}
+	}
 }
