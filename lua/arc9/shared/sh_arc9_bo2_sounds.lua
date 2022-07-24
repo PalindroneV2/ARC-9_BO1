@@ -26,7 +26,7 @@ sound.Add({
 })
 sound.Add({
     name = "ARC9_BO2.Kard_Fire",
-    channel = CHAN_WEAPON,
+    channel = CHAN_STATIC,
     level = 100,
     sound = "^weapons/arc9/bo2_generic_pistol/fire_kard.wav"
 })

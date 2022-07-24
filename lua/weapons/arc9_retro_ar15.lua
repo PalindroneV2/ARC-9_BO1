@@ -542,7 +542,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     if !attached["carbine_hg"] and hand != 3 and attached["cde_m203"] then -- FORCIBLY ATTACH M203 HEATSHIELD ON A1/A2 HANDGUARDS
         vm:SetBodygroup(3, 1)
     end
-    if length == 4 and attached["cde_m203"] then -- SHORTEN M203 ON 10.5 BARREL
+    if (length == 3 or length == 4 or length == 9) and attached["cde_m203"] then -- SHORTEN M203 ON 10.5 BARREL
         vm:SetBodygroup(4, 2)
     end
     if attached["carbine_hg"] and attached["bo1_mk"] then

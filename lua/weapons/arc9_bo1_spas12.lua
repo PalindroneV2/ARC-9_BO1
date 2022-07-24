@@ -89,7 +89,7 @@ SWEP.RecoilAutoControl = 0.5
 SWEP.RecoilKick = 2
 
 SWEP.Spread = 0.03
-SWEP.SpreadAddRecoil = 0.0015
+SWEP.SpreadAddRecoil = 0.0025
 
 SWEP.UsePelletSpread = true -- Multiple bullets fired at once clump up, like for a shotgun. Spread affects which direction they get fired, not their spread relative to one another.
 SWEP.PelletSpread = 0.2

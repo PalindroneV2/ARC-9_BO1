@@ -849,6 +849,7 @@ ATT.Free = false
 
 ATT.Category = {"retro_ar15_handguard_commando"}
 ATT.ActivateElements = {"nosling", "ar15_ris", "no_ub_rail", "ris_carbine", "handguard_ris_mw19", "carbine_hg"}
+ATT.ExcludeElements = {"mw2_m4_irons"}
 
 ATT.Attachments = {
     {
@@ -985,7 +986,7 @@ ATT.Scale = Vector(0.375, 0.375, 0.375)
 ATT.ModelOffset = Vector(1.5 , 0, -0.35)
 ATT.ModelAngleOffset = Angle(0,0,0)
 ATT.RequireElements = {"ar15_ris" and "a4_top"}
-ATT.ExcludeElements = {"barrel_9mm"}
+ATT.ExcludeElements = {"barrel_9mm", "handguard_ris_mw19"}
 
 ATT.DrawFunc = function(swep, model, wm)
     if swep:GetElements()["carbine_hg"] and !swep:GetElements()["handguard_a4"] then
@@ -1068,7 +1069,7 @@ ATT.Folder = "AR-15 IRONS"
 
 ATT.Category = {"bo1_addon_irons_2"}
 ATT.ActivateElements = {"mw2_m4_irons"}
-ATT.ExcludeElements = {"handguard_patriot","bo1_tactical", "barrel_9mm"}
+ATT.ExcludeElements = {"handguard_patriot","bo1_tactical", "barrel_9mm", "handguard_ris_mw19"}
 ATT.DrawFunc = function(swep, model, wm)
     if swep:GetElements()["carbine_hg"] then
         model:SetBodygroup(0,1)
