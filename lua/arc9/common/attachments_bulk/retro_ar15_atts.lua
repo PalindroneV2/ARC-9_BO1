@@ -67,7 +67,7 @@ ARC9.LoadAttachment(ATT, "retro_ar15_barrel_9mm")
 ATT = {}
 
 ATT.PrintName = [[10.5" Commando Barrel]]
-ATT.CompactName = [[10.5" CAR-15]]
+ATT.CompactName = [[10.5" Commando]]
 ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m4.png", "mips smooth")
 ATT.Description = [[
     Even shorter Carbine-length 10.5" Barrel. It's use mainly by special forces groups earned it the nickname "Commando". Attached by default with a standard round, ribbed handguard.
@@ -87,7 +87,7 @@ ATT.Attachments = {
         PrintName = "Handguard",
         DefaultCompactName = "CAR-15",
         DefaultIcon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m4.png", "mips smooth"),
-        Category = {"retro_ar15_handguard_carbine", "retro_ar15_handguard_10"},
+        Category = {"retro_ar15_handguard_carbine", "retro_ar15_handguard_10", "retro_ar15_handguard_commando"},
         Bone = "j_gun",
         Pos = Vector(0, 0, -2),
         Ang = Angle(0, 0, 0),
@@ -118,6 +118,15 @@ ATT.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"cde_m203", "bo1_rail_underbarrel"},
         ExcludeElements = {"ar15_ris", "is_patriot"}
+    },
+    {
+        PrintName = "Gasblock",
+        DefaultCompactName = "G.I.",
+        Bone = "j_gun",
+        Pos = Vector(-6, 0, -2.5),
+        Ang = Angle(0, 0, 0),
+        Category = {"retro_ar15_front_cut"},
+        ExcludeElements = {"ar15_ris"}
     },
 }
 
@@ -162,18 +171,18 @@ ATT.Attachments = {
         PrintName = "Handguard",
         DefaultCompactName = "CAR-15",
         DefaultIcon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m4.png", "mips smooth"),
-        Category = "retro_ar15_handguard_carbine",
+        Category = {"retro_ar15_handguard_carbine", "retro_ar15_handguard_commando"},
         Bone = "j_gun",
         Pos = Vector(0, 0, -2),
         Ang = Angle(0, 0, 0),
     },
     {
         PrintName = "Muzzle",
-        DefaultCompactName = "XM177",
+        DefaultCompactName = "Birdcage",
         Bone = "j_gun",
         Pos = Vector(-8.1, 0, -0.5),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_muzzle"},
+        Category = {"retro_ar15_muzzle", "bo1_muzzle"},
     },
     {
         PrintName = "Cosmetic II",
@@ -191,6 +200,15 @@ ATT.Attachments = {
         Pos = Vector(-2, 0, 0.35),
         Ang = Angle(0, 0, 0),
         Category = {"cde_m203", "bo1_mk", "bo1_rail_underbarrel"},
+        ExcludeElements = {"ar15_ris"}
+    },
+    {
+        PrintName = "Gasblock",
+        DefaultCompactName = "G.I.",
+        Bone = "j_gun",
+        Pos = Vector(-6, 0, -2.5),
+        Ang = Angle(0, 0, 0),
+        Category = {"retro_ar15_front_cut"},
         ExcludeElements = {"ar15_ris"}
     },
 }
@@ -213,11 +231,29 @@ ATT.RangeMaxMult = 0.75
 ATT.RangeMinMult = 0.75
 ATT.PhysBulletMuzzleVelocityMult = 0.75
 
+ARC9.LoadAttachment(ATT, "retro_ar15_barrel_11")
+
+ATT = {}
+
+ATT.PrintName = [[XM177 4.5" Moderator]]
+ATT.CompactName = [[SOG Moderator]]
+ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m4.png", "mips smooth")
+ATT.Description = [[Short carbine-length barrel that belonged to the XM177E2, an early M16 carbine made for the MACV-SOG.
+
+Comes attached with a muzzle devices that reduces both recoil and audible rapport, but cannot fit other muzzle attachments as a result.]]
+
+ATT.SortOrder = 2
+ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.Free = false
+
+ATT.Category = {"retro_ar15_muzzle"}
+ATT.ActivateElements = {"barrel_11_sog"}
+
 ATT.ShootVolumeMult = 0.85
 ATT.ShootPitchMult = 1.1
 ATT.ShootPitchVariation = 0.1
 
-ARC9.LoadAttachment(ATT, "retro_ar15_barrel_11")
+ARC9.LoadAttachment(ATT, "retro_ar15_muzzle_moderator")
 
 ATT = {}
 
@@ -269,6 +305,15 @@ ATT.Attachments = {
         Pos = Vector(-2, 0, 0.35),
         Ang = Angle(0, 0, 0),
         Category = {"cde_m203", "bo1_mk", "bo1_rail_underbarrel"},
+        ExcludeElements = {"ar15_ris"}
+    },
+    {
+        PrintName = "Gasblock",
+        DefaultCompactName = "G.I.",
+        Bone = "j_gun",
+        Pos = Vector(-6, 0, -2.5),
+        Ang = Angle(0, 0, 0),
+        Category = {"retro_ar15_front_cut"},
         ExcludeElements = {"ar15_ris"}
     },
 }
@@ -326,6 +371,15 @@ ATT.Attachments = {
         Pos = Vector(-12.75, 0, -0.5),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_muzzle"},
+    },
+    {
+        PrintName = "Gasblock",
+        DefaultCompactName = "G.I.",
+        Bone = "j_gun",
+        Pos = Vector(-11, 0, -2.5),
+        Ang = Angle(0, 0, 0),
+        Category = {"retro_ar15_front_cut"},
+        ExcludeElements = {"ar15_ris"}
     },
     -- {
     --     PrintName = "Cosmetic II",
@@ -417,7 +471,7 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = true
 
-ATT.Category = {"retro_ar15_front_iron", "retro_ar15_front_cut"}
+ATT.Category = {"retro_ar15_front_cut"}
 ATT.ActivateElements = {"gasblock_flat"}
 ATT.ExcludeElements = {
     "mw2_m4_irons",
@@ -523,7 +577,7 @@ ATT.ActivateElements = {"handguard_a4", "nosling", "no_ub_rail", "ar15_ris", "no
 ATT.Attachments = {
     {
         PrintName = "Front",
-        Category = "retro_ar15_front_iron",
+        Category = {"retro_ar15_front_iron", "retro_ar15_front_cut"},
         InstalledElements = {"gasblock_cut"},
         ExcludeElements = {"mw2_m4_irons"},
         -- ExcludeElements = {"bo1_optic", "bo1_rail_riser", "mw2_m4_irons"},
@@ -728,7 +782,7 @@ ATT.ActivateElements = {"nosling", "ar15_ris", "no_ub_rail", "ris_carbine", "han
 ATT.Attachments = {
     {
         PrintName = "Front",
-        Category = "retro_ar15_front_iron",
+        Category = {"retro_ar15_front_iron", "retro_ar15_front_cut"},
         UnInstalledElements = {"gasblock_carbine"},
         InstalledElements = {"gasblock_carbine_cut"},
         ExcludeElements = {"mw2_m4_irons"},
@@ -779,6 +833,76 @@ ATT.Attachments = {
 }
 
 ARC9.LoadAttachment(ATT, "retro_ar15_handguard_ris")
+
+ATT = {}
+
+ATT.PrintName = [[FSS 9" RIS Hanguard]]
+ATT.CompactName = [[FSS 9"]]
+ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m4.png", "mips smooth")
+ATT.Description = [[RIS Quad-Rail Handguard fitting a carbine barrels with low profile gas systems, common in modern AR-15s.
+
+Allows for the attachment of alternative front sights and a low profile laser pointer on top, but is otherwise identical to a regular handguard.
+]]
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.Free = false
+
+ATT.Category = {"retro_ar15_handguard_commando"}
+ATT.ActivateElements = {"nosling", "ar15_ris", "no_ub_rail", "ris_carbine", "handguard_ris_mw19", "carbine_hg"}
+
+ATT.Attachments = {
+    {
+        PrintName = "Front",
+        Category = "retro_ar15_front_iron",
+        UnInstalledElements = {"gasblock_carbine"},
+        InstalledElements = {"gasblock_carbine_cut"},
+        ExcludeElements = {"gasblock_flat"},
+        Bone = "j_gun",
+        Pos = Vector(-4, 0, -1),
+        Ang = Angle(0, 0, 0),
+    },
+    {
+        PrintName = "Underbarrel",
+        DefaultCompactName = "UB",
+        Bone = "j_gun",
+        Pos = Vector(-3, 0, 2.45),
+        Ang = Angle(0, 0, 0),
+        Category = {"cde_m203", "bo1_mk", "bo1_grips"},
+        InstalledElements = {"allowtac"},
+    },
+    {
+        PrintName = "Tactical Left",
+        DefaultCompactName = "TAC L",
+        Bone = "j_gun",
+        Pos = Vector(-3.5, 0.7, 1.5),
+        Ang = Angle(0, 0, -90),
+        Category =  {"bo1_tactical"},
+        InstalledElements = {"removecovers"},
+        RequireElements = {"allowtac"},
+    },
+    {
+        PrintName = "Tactical Right",
+        DefaultCompactName = "TAC R",
+        Bone = "j_gun",
+        Pos = Vector(-3.5, -0.7, 1.5),
+        Ang = Angle(0, 0, 90),
+        Category =  {"bo1_tactical"},
+        InstalledElements = {"removecovers"},
+        RequireElements = {"allowtac"},
+    },
+    {
+        PrintName = "Tactical Top",
+        DefaultCompactName = "TAC TOP",
+        Bone = "j_gun",
+        Pos = Vector(-3, 0, 0.5),
+        Ang = Angle(0, 0, 180),
+        Category =  {"bo1_tactical_top"},
+        RequireElements = {"gasblock_flat"},
+        ExcludeElements = {"mw2_m4_top"}
+    },
+}
+
+ARC9.LoadAttachment(ATT, "retro_ar15_handguard_ris_mw19")
 
 -- REAR SIGHTS
 ATT = {}

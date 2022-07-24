@@ -424,6 +424,9 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         end
         newCustPose = Vector(-3, 0, 0)
     end
+    if attached["barrel_11_sog"] then
+        length = 9
+    end
 
     self.CustomizeSnapshotPos = newCustPose
     self.CustomizeSnapshotAng = newCustAng
@@ -465,6 +468,10 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     elseif attached["handguard_famas"] then
         hand = 8
         gasblock = 4
+    elseif attached["handguard_ris_mw19"] then
+        hand = 10
+        gasblock = 4
+        covers = 1
     end
     if attached["removecovers"] then covers = 0 end
 
@@ -486,6 +493,9 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
             frontsight = 1
             gasblock = 4
         end
+        if hand == 10 then
+            frontsight = 7
+        end
     elseif attached["usgi_front"] then
         frontsight = 3
         if hand == 3 then
@@ -504,6 +514,9 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
             frontsight = 3
             gasblock = 4
         end
+        if hand == 10 then
+            frontsight = 8
+        end
     elseif attached["gasblock_flat"] then
         gasblock = 2
         if length == 2 and hand == 3 then
@@ -511,6 +524,10 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         end
         if hand == 5 then
             gasblock = 3
+        end
+        if attached["carbine"] then
+            gasblock = 3
+            if length == 1 then gasblock = 2 end
         end
     end
     self.BipodPos = NewBipodPos
@@ -707,8 +724,8 @@ SWEP.HookP_NameChange = function(self, name)
             alt = " Mod. 0"
         end
         if attached["barrel_11"] then
-            model = "Mk. 18"
-            alt = " Mod. 0"
+            model = "M"
+            alt = "933"
         end
         if attached["barrel_14"] then
             model = "M4A1"
@@ -958,6 +975,15 @@ SWEP.Attachments = {
         Pos = Vector(1, 0, -4.25),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ammo", "bo1_pap"},
+    },
+    [14] = {
+        PrintName = "Front Sight",
+        DefaultCompactName = "G.I.",
+        Bone = "j_gun",
+        Pos = Vector(19, 0, 4.15),
+        Ang = Angle(0, 0, 0),
+        Category = {"retro_ar15_front_cut"},
+        ExcludeElements = {"ar15_ris", "carbine"}
     },
 }
 
