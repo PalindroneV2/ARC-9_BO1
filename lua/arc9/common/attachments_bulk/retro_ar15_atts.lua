@@ -859,7 +859,7 @@ ATT.Attachments = {
         InstalledElements = {"gasblock_carbine_cut"},
         ExcludeElements = {"gasblock_flat"},
         Bone = "j_gun",
-        Pos = Vector(-4, 0, -1),
+        Pos = Vector(-6, 0, -1),
         Ang = Angle(0, 0, 0),
     },
     {
@@ -895,10 +895,10 @@ ATT.Attachments = {
         PrintName = "Tactical Top",
         DefaultCompactName = "TAC TOP",
         Bone = "j_gun",
-        Pos = Vector(-3, 0, 0.5),
+        Pos = Vector(-3.5, 0, 0.5),
         Ang = Angle(0, 0, 180),
         Category =  {"bo1_tactical_top"},
-        RequireElements = {"gasblock_flat"},
+        -- RequireElements = {"gasblock_flat"},
         ExcludeElements = {"mw2_m4_top"}
     },
 }
