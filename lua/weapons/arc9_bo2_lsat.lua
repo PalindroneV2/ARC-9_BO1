@@ -326,7 +326,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(14, 0, 0),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_grips", "bo1_igrip"},
+        Category = {"bo1_igrip"},
     },
     {
         PrintName = "Tactical Right",

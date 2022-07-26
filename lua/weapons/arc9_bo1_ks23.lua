@@ -278,6 +278,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local newActiveAng = Angle(0, 0, 0)
 
     if attached["doom_ee"] then
+        vm:SetBodygroup(2,1)
         newActivePos = Vector(-2.175, -1, -2)
         newActiveAng = Angle(0.05, 0, 0)
     end
@@ -297,6 +298,7 @@ SWEP.Attachments = {
         Icon_Offset = Vector(0, 0, 0),
         Category = {"bo1_optic"},
         InstalledElements = {"mount"},
+        ExcludeElements = {"doom_ee"},
     },
     {
         PrintName = "Perk-a-Cola",
@@ -313,6 +315,7 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"bo1_stock_h"},
         Installed = "bo1_stock_heavy",
+        ExcludeElements = {"doom_ee"},
     },
     {
         PrintName = "Ammo Type",
@@ -321,6 +324,7 @@ SWEP.Attachments = {
         Pos = Vector(2, 0, -2),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_shot_slug"},
+        ExcludeElements = {"doom_ee"},
     },
     {
         PrintName = "Ammunition",
@@ -329,6 +333,7 @@ SWEP.Attachments = {
         Pos = Vector(0, 0, -2),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ammo", "bo1_pap"},
+        ExcludeElements = {"doom_ee"},
     },
     {
         PrintName = "Cosmetic",
@@ -337,6 +342,7 @@ SWEP.Attachments = {
         Pos = Vector(-5, 0, 4),
         Ang = Angle(0, 0, 0),
         Category = "universal_camo",
+        ExcludeElements = {"doom_ee"},
     },
 }
 
