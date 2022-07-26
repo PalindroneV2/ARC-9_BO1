@@ -1,9 +1,9 @@
 "VertexlitGeneric"
 {
-	"$basetexture" "models/weapons/arc9/bo1/bo1_m1911/1911_mp_c"
-	"$bumpmap" "models/weapons/arc9/bo1/bo1_m1911/1911_n"
-	"$phongexponenttexture" "models/weapons/arc9/bo1/bo1_m1911/1911_s"
-	"$envmapmask" "models/weapons/arc9/bo1/bo1_m1911/1911_s"
+	"$basetexture" "models/weapons/arc9/bo2/bo2_mg08/mg08_mp_c"
+	"$bumpmap" "models/weapons/arc9/bo2/bo2_mg08/mg08_n"
+	"$phongexponenttexture" "models/weapons/arc9/bo2/bo2_mg08/mg08_s"
+	"$envmapmask" "models/weapons/arc9/bo2/bo2_mg08/mg08_s"
 	$normalmapalphaenvmapmask "1"
 	
 	$detail		"models\weapons\arc9\bo1\gold_c"
@@ -19,7 +19,6 @@
 	$phongalbedotint "1"
 	
 	$envmap "env_cubemap"
-	// $envmapmask	"models\weapons\arc9\bo1\gold_s"
 	$envmaptint "[1 .75 .25]"
 	$envmapfresnel "[1 1 1]"
 

@@ -353,6 +353,14 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ammo", "bo1_pap"},
     },
+    {
+        Hidden = true,
+        Bone = "j_gun",
+        Pos = Vector(-3, 0, 2.65),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_stock_h"},
+        Installed = "bo1_stock_heavy",
+    },
 }
 
 SWEP.HideBones = {

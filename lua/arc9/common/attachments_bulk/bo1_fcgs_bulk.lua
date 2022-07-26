@@ -181,3 +181,29 @@ ATT.RecoilMult = 1.3
 ATT.RPM = 1500
 
 ARC9.LoadAttachment(ATT, "waw_m1919_stinger")
+
+ATT = {}
+
+ATT.PrintName = "Group 935 Rapid Fire Modification"
+ATT.CompactName = "G935"
+ATT.Icon = Material("entities/bo1_atts/other/rapid_fire.png")
+ATT.Description = [[
+Group 935 has learned much from the manipulation of matter through element 115.
+This modification allows the MG-08 to fire 50% faster than base RPM.
+]]
+ATT.Pros = {}
+ATT.Cons = {
+}
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.Free = true
+
+ATT.Category = {"bo2_fcg_mg08"}
+-- ATT.ActivateElements = {"stinger"}
+
+ATT.SpreadMult = 1.25
+ATT.SpreadMultRecoil = 1.25
+ATT.RecoilMult = 1.25
+ATT.RPM = 750
+
+ARC9.LoadAttachment(ATT, "bo2_mg08_935")

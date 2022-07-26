@@ -15,6 +15,19 @@ ARC9.LoadAttachment(ATT, "bo1_camo_complete")
 
 ATT = {}
 
+ATT.PrintName = "Gold"
+ATT.FullColorIcon = true
+ATT.CompactName = "GOLD"
+ATT.Icon = Material("entities/bo1_generic.png")
+ATT.Category = "camo_gold"
+ATT.Description = [[Always believe in your soul.]]
+ATT.MenuCategory = "ARC-9 - Camos"
+ATT.ActivateElements = {"camo_gold"}
+
+ARC9.LoadAttachment(ATT, "bo1_camo_gold")
+
+ATT = {}
+
 ATT.PrintName = "Redwood"
 ATT.FullColorIcon = true
 ATT.CompactName = "REDWOOD"
