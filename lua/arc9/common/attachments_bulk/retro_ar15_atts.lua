@@ -48,7 +48,7 @@ ATT.MuzzleEffectQCA = 1
 ATT.SpreadMult = 1.55
 ATT.RecoilMult = 1.3
 ATT.SpreadMultHipFire = 0.575
-ATT.SpreadAddShooting = math.rad(25 / 37.5)
+-- ATT.SpreadAddShooting = math.rad(25 / 37.5)
 ATT.SpreadMultRecoil = 1.55
 ATT.RPMAdd = 50
 
@@ -136,7 +136,7 @@ ATT.SpreadMult = 1.5
 ATT.SpreadMultRecoil = 1.5
 ATT.RecoilMult = 1.25
 ATT.SpreadMultHipFire = 0.7
-ATT.SpreadAddShooting = math.rad(20 / 37.5)
+-- ATT.SpreadAddShooting = math.rad(20 / 37.5)
 
 ATT.SpeedMult = 1.025
 ATT.SpeedMultSights = 1.125
@@ -218,7 +218,7 @@ ATT.MuzzleEffectQCA = 1
 ATT.RecoilMult = 1.15
 ATT.SpreadMult = 1.3
 ATT.SpreadMultHipFire = 0.8
-ATT.SpreadAddShooting = math.rad(17.5 / 37.5)
+-- ATT.SpreadAddShooting = math.rad(17.5 / 37.5)
 ATT.SpreadMultRecoil = 1.3
 
 ATT.SpeedMult = 1.015
@@ -323,7 +323,7 @@ ATT.MuzzleEffectQCA = 1
 ATT.SpreadMult = 1.15
 ATT.RecoilMult = 1.1
 ATT.SpreadMultHipFire = 0.9
-ATT.SpreadAddShooting = math.rad(12.5 / 37.5)
+-- ATT.SpreadAddShooting = math.rad(12.5 / 37.5)
 ATT.SpreadMultRecoil = 1.15
 
 ATT.SpeedMult = 1.01
@@ -407,7 +407,7 @@ ATT.Attachments = {
 ATT.SpreadMult = 1.1
 ATT.RecoilMult = 1.075
 ATT.SpreadMultHipFire = 0.95
-ATT.SpreadAddShooting = math.rad(10 / 37.5)
+-- ATT.SpreadAddShooting = math.rad(10 / 37.5)
 ATT.SpreadMultRecoil = 1.1
 
 ATT.SpeedMult = 1.01
