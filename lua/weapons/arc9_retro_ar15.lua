@@ -19,8 +19,8 @@ SWEP.Trivia = {
 }
 SWEP.Credits = {
     Author = "Palindrone",
-    Original = "Treyarch",
-    Model = "Kally"
+    Model = "Kally",
+    Original = "Treyarch"
 }
 
 SWEP.Slot = 2
