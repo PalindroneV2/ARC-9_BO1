@@ -590,7 +590,7 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RANGE_ATTACK_REVOLVER,
         TPAnimStartTime = 0,
     },
-    ["reload_glsetup"] = {
+    ["reload_ubgl_glsetup"] = {
         Source = "reload_glsetup",
         Time = 96 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,

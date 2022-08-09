@@ -39,8 +39,8 @@ SWEP.DefaultBodygroups = "00000000000000"
 
 SWEP.DefaultSkin = 6
 
-SWEP.DamageMax = 43
-SWEP.DamageMin = 20 -- damage done at maximum range
+SWEP.DamageMax = 24
+SWEP.DamageMin = 12 -- damage done at maximum range
 SWEP.RangeMax = 4000
 SWEP.RangeMin = 1000
 SWEP.Penetration = 4
