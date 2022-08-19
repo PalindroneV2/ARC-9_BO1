@@ -89,6 +89,7 @@ SWEP.RecoilKick = 2
 SWEP.Spread = math.rad(2.75 / 37.5)
 SWEP.SpreadAddRecoil = math.rad(105 / 37.5)
 
+SWEP.SpreadMultSighted = 0.1
 SWEP.SpreadAddHipFire = math.rad(300 / 37.5)
 --SWEP.SpreadAddMove = math.rad(160 / 37.5)
 SWEP.SpreadAddMidAir = 0
