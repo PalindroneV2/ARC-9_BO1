@@ -177,7 +177,7 @@ ATT.ActivateElements = {"stinger"}
 
 ATT.SpreadMult = 1.3
 ATT.SpreadMultRecoil = 1.3
-ATT.RecoilMult = 1.3
+ATT.RecoilMult = 1.15
 ATT.RPM = 1500
 
 ARC9.LoadAttachment(ATT, "waw_m1919_stinger")
