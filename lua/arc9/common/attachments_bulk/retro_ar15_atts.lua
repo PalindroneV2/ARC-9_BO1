@@ -49,7 +49,7 @@ ATT.SpreadMult = 1.55
 ATT.RecoilMult = 1.3
 ATT.SpreadMultHipFire = 0.575
 -- ATT.SpreadAddShooting = math.rad(25 / 37.5)
---ATT.SpreadAddRecoil = 1.55
+ATT.SpreadMultRecoil = 1.55
 ATT.RPMAdd = 50
 
 ATT.SpeedMult = 1.05
@@ -133,7 +133,7 @@ ATT.Attachments = {
 ATT.MuzzleEffectQCA = 1
 
 ATT.SpreadMult = 1.5
---ATT.SpreadAddRecoil = 1.5
+ATT.SpreadMultRecoil = 1.5
 ATT.RecoilMult = 1.25
 ATT.SpreadMultHipFire = 0.7
 -- ATT.SpreadAddShooting = math.rad(20 / 37.5)
@@ -219,7 +219,7 @@ ATT.RecoilMult = 1.15
 ATT.SpreadMult = 1.3
 ATT.SpreadMultHipFire = 0.8
 -- ATT.SpreadAddShooting = math.rad(17.5 / 37.5)
---ATT.SpreadAddRecoil = 1.3
+ATT.SpreadMultRecoil = 1.3
 
 ATT.SpeedMult = 1.015
 ATT.SpeedMultSights = 1.075
@@ -324,7 +324,7 @@ ATT.SpreadMult = 1.15
 ATT.RecoilMult = 1.1
 ATT.SpreadMultHipFire = 0.9
 -- ATT.SpreadAddShooting = math.rad(12.5 / 37.5)
---ATT.SpreadAddRecoil = 1.15
+ATT.SpreadMultRecoil = 1.15
 
 ATT.SpeedMult = 1.01
 ATT.SpeedMultSights = 1.05
@@ -408,7 +408,7 @@ ATT.SpreadMult = 1.1
 ATT.RecoilMult = 1.075
 ATT.SpreadMultHipFire = 0.95
 -- ATT.SpreadAddShooting = math.rad(10 / 37.5)
---ATT.SpreadAddRecoil = 1.1
+ATT.SpreadMultRecoil = 1.1
 
 ATT.SpeedMult = 1.01
 ATT.SpeedMultSights = 1.025
@@ -1190,7 +1190,7 @@ ATT.RunawayBurstOverride = true
 ATT.PostBurstDelayOverride = 0.1
 
 ATT.SpreadMult = 0.9
---ATT.SpreadAddRecoil = 0.8
+ATT.SpreadMultRecoil = 0.8
 ATT.RecoilMult = 0.8
 ATT.RecoilUpMult = 0.9
 ATT.RecoilSideMult = 0.9
@@ -1224,7 +1224,7 @@ ATT.FiremodesOverride = {
 
 ATT.RangeMaxMult = 1.25
 ATT.SpreadMult = 0.75
---ATT.SpreadAddRecoil = 0.75
+ATT.SpreadMultRecoil = 0.75
 ATT.RecoilMult = 0.75
 ATT.RecoilUpMult = 0.85
 ATT.RecoilSideMult = 0.85
@@ -1266,7 +1266,7 @@ ATT.RunawayBurstOverride = true
 
 ATT.RPMMult = 1.1
 ATT.SpreadMult = 0.95
---ATT.SpreadAddRecoil = 0.9
+ATT.SpreadMultRecoil = 0.9
 ATT.RecoilMult = 0.9
 ATT.RecoilUpMult = 0.95
 ATT.RecoilSideMult = 0.95
@@ -1298,7 +1298,7 @@ ATT.FiremodesOverride = {
 
 ATT.RPMOverride = 1225
 ATT.SpreadMult = 1.1
---ATT.SpreadAddRecoil = 1.15
+ATT.SpreadMultRecoil = 1.15
 ATT.RecoilMult = 1.1
 ATT.RecoilUpMult = 1.05
 ATT.RecoilSideMult = 1.05
@@ -1661,7 +1661,7 @@ ATT.AimDownSightsTimeAdd = 0.22
 ATT.SprintToFireTimeAdd = 0.25
 ATT.SpeedAddSights = -0.2
 ATT.SpreadMultHipFire = 1.15
---ATT.SpreadAddRecoil = 0.6
+ATT.SpreadMultRecoil = 0.6
 --ATT.SpreadMultMove = 1.15
 
 ARC9.LoadAttachment(ATT, "retro_ar15_stock_full")
@@ -1687,7 +1687,7 @@ ATT.RecoilMult = 0.75
 ATT.RecoilUpMult = 0.5
 ATT.RecoilRandomSideMult = 0.6
 ATT.RecoilAutoControlMult = 1.8
---ATT.SpreadAddRecoil = 0.8
+ATT.SpreadMultRecoil = 0.8
 
 ATT.SpeedMult = 0.96
 ATT.AimDownSightsTimeAdd = 0.17
@@ -1718,8 +1718,8 @@ ATT.RecoilUpMult = 0.5
 ATT.RecoilRandomSideMult = 0.6
 ATT.RecoilAutoControlMult = 1.75
 
---ATT.SpreadAddRecoil = 0.85
---ATT.SpreadAddRecoil = 0.8
+ATT.SpreadMultRecoil = 0.85
+ATT.SpreadMultRecoil = 0.8
 
 ATT.SpeedMult = 0.97
 ATT.AimDownSightsTimeAdd = 0.12
@@ -1750,8 +1750,8 @@ ATT.RecoilUpMult = 0.5
 ATT.RecoilRandomSideMult = 0.6
 ATT.RecoilAutoControlMult = 1.75
 
---ATT.SpreadAddRecoil = 0.85
---ATT.SpreadAddRecoil = 0.75
+ATT.SpreadMultRecoil = 0.85
+ATT.SpreadMultRecoil = 0.75
 
 ATT.SpeedMult = 0.97
 ATT.AimDownSightsTimeAdd = 0.12
@@ -1781,7 +1781,7 @@ ATT.RecoilMult = 0.8
 ATT.RecoilUpMult = 0.5
 ATT.RecoilRandomSideMult = 0.6
 ATT.RecoilAutoControlMult = 1.75
---ATT.SpreadAddRecoil = 0.75
+ATT.SpreadMultRecoil = 0.75
 
 ATT.SpeedMult = 0.97
 ATT.AimDownSightsTimeAdd = 0.09
@@ -1813,7 +1813,7 @@ ATT.RecoilRandomSideMult = 0.75
 ATT.RecoilAutoControlMult = 1.5
 
 ATT.SpreadMultHipFire = 0.8
---ATT.SpreadAddRecoil = 0.975
+ATT.SpreadMultRecoil = 0.975
 
 ATT.SpeedMult = 0.995
 ATT.AimDownSightsTimeAdd = 0.05
@@ -1843,7 +1843,7 @@ ATT.RecoilMult = 0.8
 ATT.RecoilUpMult = 0.5
 ATT.RecoilRandomSideMult = 0.6
 ATT.RecoilAutoControlMult = 1.75
---ATT.SpreadAddRecoil = 0.75
+ATT.SpreadMultRecoil = 0.75
 
 ATT.SpeedMult = 0.97
 ATT.AimDownSightsTimeAdd = 0.09
@@ -1873,7 +1873,7 @@ ATT.RecoilMult = 0.65
 ATT.RecoilUpMult = 0.5
 ATT.RecoilRandomSideMult = 0.25
 ATT.RecoilAutoControlMult = 2.5
---ATT.SpreadAddRecoil = 0.5
+ATT.SpreadMultRecoil = 0.5
 
 ATT.SpeedMult = 0.9
 ATT.AimDownSightsTimeAdd = 0.25
@@ -1904,7 +1904,7 @@ ATT.RecoilMult = 0.7
 ATT.RecoilUpMult = 0.5
 ATT.RecoilRandomSideMult = 0.5
 ATT.RecoilAutoControlMult = 2
---ATT.SpreadAddRecoil = 0.6
+ATT.SpreadMultRecoil = 0.6
 
 ATT.SpeedMult = 0.95
 ATT.AimDownSightsTimeAdd = 0.25
