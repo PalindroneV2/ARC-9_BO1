@@ -87,17 +87,17 @@ SWEP.RecoilResetTime = 0.01 -- How long the gun must go before the recoil patter
 SWEP.RecoilAutoControl = 0.5
 SWEP.RecoilKick = 2
 
-SWEP.Spread = math.rad(3.6 / 37.5)
-SWEP.SpreadAddRecoil = math.rad(110 / 37.5)
+SWEP.Spread = math.rad(35 / 37.5)
+SWEP.SpreadMultRecoil = 1.25
 
-SWEP.SpreadMultSighted = 0.1
-SWEP.SpreadAddHipFire = math.rad(210 / 37.5)
---SWEP.SpreadAddMove = math.rad(110 / 37.5)
+SWEP.SpreadMultSights = 0.9
+SWEP.SpreadAddHipFire = math.rad(150 / 37.5)
+SWEP.SpreadAddMove = math.rad(0 / 37.5)
 SWEP.SpreadAddMidAir = 0
 -- SWEP.SpreadAddShooting = math.rad(5 / 37.5) -- 0 -- = math.rad(125 / 37.5)
 
 SWEP.UsePelletSpread = true -- Multiple bullets fired at once clump up, like for a shotgun. Spread affects which direction they get fired, not their spread relative to one another.
-SWEP.PelletSpread = 0.2
+SWEP.PelletSpread = 0.3
 
 SWEP.RecoilPatternDrift = 20
 
@@ -405,7 +405,7 @@ SWEP.Animations = {
         Time = 60 / 40,
         EventTable = {
             {s = "ARC9_WAW.TrenchGun_Pull", t = 12 / 40},
-            {s = "ARC9_WAW.TrenchGun_Push", t = 16 / 40},
+            {s = "ARC9_WAW.TrenchGun_Push", t = 20 / 40},
         },
     },
     ["reload_finish_empty"] = {
@@ -413,7 +413,7 @@ SWEP.Animations = {
         Time = 60 / 40,
         EventTable = {
             {s = "ARC9_WAW.TrenchGun_Pull", t = 12 / 40},
-            {s = "ARC9_WAW.TrenchGun_Push", t = 16 / 40},
+            {s = "ARC9_WAW.TrenchGun_Push", t = 20 / 40},
         },
     },
 }

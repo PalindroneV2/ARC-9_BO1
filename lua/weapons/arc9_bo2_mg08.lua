@@ -89,11 +89,11 @@ SWEP.RecoilAutoControl = 0.5
 SWEP.RecoilKick = 2
 
 SWEP.Spread = math.rad(3.7 / 37.5)
-SWEP.SpreadAddRecoil = math.rad(150 / 37.5)
+SWEP.SpreadMultRecoil = 1.25
 
-SWEP.SpreadMultSighted = 0.1
+SWEP.SpreadMultSights = 0.2
 SWEP.SpreadAddHipFire = math.rad(300 / 37.5)
---SWEP.SpreadAddMove = math.rad(160 / 37.5)
+SWEP.SpreadAddMove = math.rad(0 / 37.5)
 SWEP.SpreadAddMidAir = 0
 -- SWEP.SpreadAddShooting = math.rad(5 / 37.5) -- math.rad(120 / 37.5)
 
@@ -186,6 +186,11 @@ SWEP.IronSights = {
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
 }
+SWEP.Bipod = true -- This weapon comes with a bipod.
+SWEP.RecoilMultBipod = 0.25
+-- SWEP.SpreadMultBipod = 0.25
+SWEP.SwayMultBipod = 0.25
+SWEP.FreeAimRadiusMultBipod = 0
 
 SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "ar2"
@@ -195,7 +200,7 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_AR2
 SWEP.AnimDraw = ACT_HL2MP_GESTURE_RANGE_ATTACK_KNIFE
 
-SWEP.ActivePos = Vector(0, -0.5, -1)
+SWEP.ActivePos = Vector(0, -2, -1)
 SWEP.ActiveAng = Angle(0, 0, -5)
 
 SWEP.BipodPos = Vector(-3.45, -3, -2.5)
@@ -207,7 +212,7 @@ SWEP.CrouchAng = SWEP.ActiveAng
 SWEP.SprintPos = SWEP.ActivePos
 SWEP.SprintAng = SWEP.ActiveAng
 
-SWEP.CustomizePos = Vector(12.5, 40, 4)
+SWEP.CustomizePos = Vector(17, 50, 4)
 SWEP.CustomizeAng = Angle(90, 0, 0)
 
 SWEP.RestPos = Vector(0, 0, -1)

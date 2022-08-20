@@ -86,10 +86,11 @@ SWEP.RecoilAutoControl = 0.5
 SWEP.RecoilKick = 3
 
 SWEP.Spread = math.rad(3 / 37.5)
-SWEP.SpreadAddRecoil = math.rad(100 / 37.5)
+SWEP.SpreadMultRecoil = 1.25
 
-SWEP.SpreadMultSighted = 0.1
+SWEP.SpreadMultSights = 0.1
 SWEP.SpreadAddHipFire = math.rad(150 / 37.5)
+SWEP.SpreadAddMove = math.rad(0 / 37.5)
 SWEP.SpreadAddMidAir = 0
 -- SWEP.SpreadAddShooting = math.rad(5 / 37.5) -- math.rad(120 / 37.5)
 
@@ -350,25 +351,25 @@ SWEP.Animations = {
         Time = 2.433 * (30 / 40),
         RestoreAmmo = 1, -- loads a shell since the first reload has a shell in animation
         MinProgress = 1.2,
-        SoundTable = {
-            {s = "ArcCW_BO1.Python_Open", t = 20 / 40},
-            {s = "ArcCW_BO2.Judge_Empty", t = 40 / 40},
-            {s = "ArcCW_BO2.Judge_Load", t = 60 / 40},
+        EventTable = {
+            {s = "ARC9_BO1.Python_Open", t = 20 / 40},
+            {s = "ARC9_BO2.Judge_Empty", t = 40 / 40},
+            {s = "ARC9_BO2.Judge_Load", t = 60 / 40},
         },
     },
     ["reload_insert"] = {
         Source = "reload_loop",
         Time = 1.003 * (30 / 40),
         MinProgress = 16 / 30,
-        SoundTable = {
-            {s = "ArcCW_BO2.Judge_Load", t = 0.8 * (30 / 40)},
+        EventTable = {
+            {s = "ARC9_BO2.Judge_Load", t = 0.8 * (30 / 40)},
         },
     },
     ["reload_finish"] = {
         Source = "reload_out",
         Time = 1.6 * (30 / 40),
-        SoundTable = {
-            {s = "ArcCW_BO1.Python_Close", t = 0.75 * (30 / 40)},
+        EventTable = {
+            {s = "ARC9_BO1.Python_Close", t = 0.75 * (30 / 40)},
         },
     },
     -- speed--
@@ -377,11 +378,11 @@ SWEP.Animations = {
         Time = 3.76 * (30 / 40),
         RestoreAmmo = 5,
         MinProgress = 1,
-        SoundTable = {
-            {s = "ArcCW_BO1.Python_Open", t = 20 / 40},
-            {s = "ArcCW_BO2.Judge_Empty", t = 40 / 40},
-            {s = "ArcCW_BO1.Python_Load", t = 60 / 40},
-            {s = "ArcCW_BO1.Python_Close", t = 80 / 40},
+        EventTable = {
+            {s = "ARC9_BO1.Python_Open", t = 20 / 40},
+            {s = "ARC9_BO2.Judge_Empty", t = 40 / 40},
+            {s = "ARC9_BO1.Python_Load", t = 60 / 40},
+            {s = "ARC9_BO1.Python_Close", t = 80 / 40},
         },
     },
     ["reload_empty"] = {
@@ -389,11 +390,11 @@ SWEP.Animations = {
         Time = 3.76 * (30 / 40),
         RestoreAmmo = 5,
         MinProgress = 1,
-        SoundTable = {
-            {s = "ArcCW_BO1.Python_Open", t = 20 / 40},
-            {s = "ArcCW_BO2.Judge_Empty", t = 40 / 40},
-            {s = "ArcCW_BO1.Python_Load", t = 60 / 40},
-            {s = "ArcCW_BO1.Python_Close", t = 80 / 40},
+        EventTable = {
+            {s = "ARC9_BO1.Python_Open", t = 20 / 40},
+            {s = "ARC9_BO2.Judge_Empty", t = 40 / 40},
+            {s = "ARC9_BO1.Python_Load", t = 60 / 40},
+            {s = "ARC9_BO1.Python_Close", t = 80 / 40},
         },
     },
     ["reload_start_speed"] = {
@@ -401,10 +402,10 @@ SWEP.Animations = {
         Time = 2.4 * (30 / 40),
         RestoreAmmo = 5,
         MinProgress = 1,
-        SoundTable = {
-            {s = "ArcCW_BO1.Python_Open", t = 20 / 40},
-            {s = "ArcCW_BO2.Judge_Empty", t = 40 / 40},
-            {s = "ArcCW_BO1.Python_Load", t = 60 / 40},
+        EventTable = {
+            {s = "ARC9_BO1.Python_Open", t = 20 / 40},
+            {s = "ARC9_BO2.Judge_Empty", t = 40 / 40},
+            {s = "ARC9_BO1.Python_Load", t = 60 / 40},
         },
     },
     ["reload_insert_speed"] = {
@@ -414,8 +415,8 @@ SWEP.Animations = {
     ["reload_finish_speed"] = {
         Source = "reload_out_speed",
         Time = 1.6 * (30 / 40),
-        SoundTable = {
-            {s = "ArcCW_BO1.Python_Close", t = 0.75 * (30 / 40)},
+        EventTable = {
+            {s = "ARC9_BO1.Python_Close", t = 0.75 * (30 / 40)},
         },
     },
     ["enter_sprint"] = {

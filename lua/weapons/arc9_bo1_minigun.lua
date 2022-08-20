@@ -31,7 +31,7 @@ SWEP.WorldModelOffset = {
     Pos        =    Vector(-3, 5, 3),
     Ang        =    Angle(-5, 5, 180),
     Bone    =    "ValveBiped.Bip01_R_Hand",
-    Scale   =   0.9
+    Scale   =   0.75
 }
 SWEP.ViewModelFOVBase = 75
 
@@ -89,11 +89,11 @@ SWEP.RecoilResetTime = 0.1 -- How long the gun must go before the recoil pattern
 SWEP.UseVisualRecoil = false
 
 SWEP.Spread = math.rad(3 / 37.5)
-SWEP.SpreadAddRecoil = math.rad(10 / 37.5)
+SWEP.SpreadMultRecoil = 1.25
 
-SWEP.SpreadMultSighted = 0.1
-SWEP.SpreadAddHipFire = math.rad(10 / 37.5)
---SWEP.SpreadAddMove = math.rad(10 / 37.5)
+SWEP.SpreadMultSights = 0.1
+SWEP.SpreadAddHipFire = math.rad(50 / 37.5)
+SWEP.SpreadAddMove = math.rad(0 / 37.5)
 SWEP.SpreadAddMidAir = 0
 -- SWEP.SpreadAddShooting = math.rad(5 / 37.5) -- math.rad(10 / 37.5)
 SWEP.SpreadAddCrouch = math.rad(0 / 37.5)

@@ -85,7 +85,7 @@ SWEP.PushBackForce = 1
 SWEP.Spread = 0.0015
 SWEP.SpreadAddRecoil = 0.0015
 
-SWEP.SpreadMultSighted = 0.1
+SWEP.SpreadMultSights = 0.1
 SWEP.SpreadAddHipFire = 0.03
 --SWEP.SpreadAddMove = 0.015
 SWEP.SpreadAddMidAir = 0

@@ -92,7 +92,7 @@ SWEP.RecoilKick = 2
 SWEP.Spread = math.rad(45 / 37.5)
 SWEP.SpreadAddRecoil = math.rad(50 / 37.5)
 
-SWEP.SpreadMultSighted = 0.1
+SWEP.SpreadMultSights = 0.9
 SWEP.SpreadAddHipFire = math.rad(200 / 37.5)
 --SWEP.SpreadAddMove = math.rad(125 / 37.5)
 SWEP.SpreadAddMidAir = 0
@@ -121,8 +121,8 @@ SWEP.SpeedMultMelee = 1
 SWEP.SpeedMultCrouch = 1
 SWEP.SpeedMultBlindFire = 1
 
-SWEP.AimDownSightsTime = 0.11
-SWEP.SprintToFireTime = 0.14
+SWEP.AimDownSightsTime = 0.25
+SWEP.SprintToFireTime = 0.25
 
 SWEP.RPM = 312
 SWEP.Num = 16

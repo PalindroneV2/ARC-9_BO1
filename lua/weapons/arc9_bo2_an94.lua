@@ -90,11 +90,11 @@ SWEP.RecoilAutoControl = 0.5
 SWEP.RecoilKick = 2
 
 SWEP.Spread = math.rad(1.6 / 37.5)
-SWEP.SpreadAddRecoil = math.rad(60 / 37.5)
+SWEP.SpreadMultRecoil = 1.25
 
-SWEP.SpreadMultSighted = 0.1
-SWEP.SpreadAddHipFire = math.rad(250 / 37.5)
---SWEP.SpreadAddMove = math.rad(125 / 37.5)
+SWEP.SpreadMultSights = 0.1
+SWEP.SpreadAddHipFire = math.rad(150 / 37.5)
+SWEP.SpreadAddMove = math.rad(0 / 37.5)
 SWEP.SpreadAddMidAir = 0
 -- SWEP.SpreadAddShooting = math.rad(5 / 37.5) -- 0 -- = math.rad(110 / 37.5)
 
@@ -512,9 +512,9 @@ SWEP.Animations = {
         Source = "reload_glsetup",
         Time = 3,
         EventTable = {
-            {s = "ARC9_BO1.gp25_40mmOut", t = 18 / 30},
-            {s = "ARC9_BO1.gp25_40mmIn", t = 60 / 30},
-            {s = "ARC9_BO1.gp25_Close", t = 70 / 30},
+            {s = "ARC9_BO1.M203_40mmOut", t = 18 / 30},
+            {s = "ARC9_BO1.M203_40mmIn", t = 60 / 30},
+            {s = "ARC9_BO1.M203_Close", t = 70 / 30},
         }
     },
     ["enter_sprint_glsetup"] = {

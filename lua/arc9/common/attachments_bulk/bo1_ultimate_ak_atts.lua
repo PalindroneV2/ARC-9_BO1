@@ -24,7 +24,7 @@ ATT.ActivateElements = {"barrel_rpk"}
 ATT.SpreadMult = 0.85
 ATT.RecoilMult = 0.85
 ATT.SpreadMultHipFire = 1.1
-ATT.SpreadMultRecoil = 0.85
+--ATT.SpreadAddRecoil = 0.85
 --ATT.SpreadMultMove = 1.1
 
 ATT.SpeedMult = 0.9
@@ -86,7 +86,7 @@ ATT.ActivateElements = {"barrel_krinkov"}
 ATT.SpreadMult = 1.5
 ATT.RecoilMult = 1.25
 ATT.SpreadMultHipFire = 0.7
-ATT.SpreadMultRecoil = 1.5
+--ATT.SpreadAddRecoil = 1.5
 
 ATT.SpeedMult = 1.025
 ATT.SpeedMultSights = 1.125

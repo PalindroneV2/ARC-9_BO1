@@ -66,8 +66,8 @@ SWEP.BodyDamageMults = {
 
 SWEP.TracerNum = 1 -- Tracer every X
 SWEP.TracerFinalMag = 0 -- The last X bullets in a magazine are all tracers
-SWEP.TracerEffect = "ARC9_tracer" -- The effect to use for hitscan tracers
-SWEP.TracerColor = Color(255, 255, 255) -- Color of tracers. Only works if tracer effect supports it. For physical bullets, this is compressed down to 9-bit color.
+SWEP.TracerEffect = "arccw_swarms_tracer_red" -- The effect to use for hitscan tracers
+SWEP.TracerColor = Color(255, 0, 0) -- Color of tracers. Only works if tracer effect supports it. For physical bullets, this is compressed down to 9-bit color.
 
 SWEP.ChamberSize = 0 -- dont fucking change this again.
 SWEP.ClipSize = 30 -- DefaultClip is automatically set.
@@ -90,11 +90,11 @@ SWEP.RecoilAutoControl = 0.5
 SWEP.RecoilKick = 1
 
 SWEP.Spread = math.rad(1.5 / 37.5)
-SWEP.SpreadAddRecoil = math.rad(100 / 37.5)
+SWEP.SpreadMultRecoil = 1.25
 
-SWEP.SpreadMultSighted = 0.1
-SWEP.SpreadAddHipFire = math.rad(250 / 37.5)
---SWEP.SpreadAddMove = math.rad(125 / 37.5)
+SWEP.SpreadMultSights = 0.1
+SWEP.SpreadAddHipFire = math.rad(150 / 37.5)
+SWEP.SpreadAddMove = math.rad(0 / 37.5)
 SWEP.SpreadAddMidAir = 0
 -- SWEP.SpreadAddShooting = math.rad(15 / 37.5)
 
@@ -188,7 +188,7 @@ SWEP.IronSights = {
 
 SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "ar2"
-SWEP.HoldtypeSights = "rpg"
+SWEP.HoldtypeSights = "ar2"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_AR2

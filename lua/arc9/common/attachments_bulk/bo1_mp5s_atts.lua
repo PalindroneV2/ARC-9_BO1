@@ -66,7 +66,7 @@ ATT.RPMOverride = 900
 
 ATT.SpreadMult = 1.25
 ATT.SpreadMultHipFire = 0.9
-ATT.SpreadMultRecoil = 1.25
+--ATT.SpreadAddRecoil = 1.25
 
 ATT.ClipSize = 25
 ATT.ReloadTimeMult = 0.9

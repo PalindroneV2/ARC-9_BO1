@@ -13,8 +13,11 @@ ATT.Category = {"bo1_python_barrel"}
 ATT.ActivateElements = {"snubnose"}
 
 ATT.SpreadMult = 1.5
+ATT.SpreadMultRecoil = 1.5
+ATT.PelletSpreadMult = 1.5
+-- ATT.SpreadMultShooting = 1.25
 ATT.RecoilMult = 1.25
-ATT.SpreadMultHipFire = 0.7
+-- ATT.SpreadMultHipFire = 0.75
 --ATT.SpreadMultMove = 0.7
 
 ATT.SpeedMult = 1.025
