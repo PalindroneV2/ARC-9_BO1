@@ -1,0 +1,6 @@
+"UnlitGeneric"
+{
+	"$basetexture"		"effects\bopack_tracers\red_f"
+	"$additive"		"1"
+	"$vertexcolor"	"1"
+}
