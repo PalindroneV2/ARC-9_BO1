@@ -301,6 +301,13 @@ SWEP.AttachmentElements = {
             }
         }
     },
+    ["rpdhand"] = {
+        AttPosMods = {
+            [5] = {
+                Pos = Vector(11.5, 0, 0.4),
+            }
+        }
+    },
 }
 
 SWEP.Hook_ModifyBodygroups = function(self, data)
@@ -312,28 +319,26 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local irons = 0
     local hand = 0
     local grip = 0
-    if attached["bo1_ultimate_ak_barrel_short"] then
+    if attached["barrel_krinkov"] then
         barrel = 1
-        irons = 4
+        irons = 3
         hand = 0
-    elseif attached["bo1_ultimate_ak_barrel_rpk"] then
+    elseif attached["barrel_rpk"] then
         barrel = 2
-        irons = 8
+        irons = 6
         hand = 3
+    elseif attached["barrel_rpd"] then
+        barrel = 4
+        irons = 12
+        hand = 0
     elseif attached["barrel_asval"] then
         vm:SetBodygroup(0,3)
         barrel = 3
-        irons = 12
-        hand = 7
+        irons = 9
+        hand = 9
     end
     if attached["bo1_irons_alt"] then
         irons = irons + 1
-    end
-    if attached["rail"] then
-        irons = irons + 2
-    end
-    if attached["lowsight"] then
-        irons = irons + 3
     end
     if attached["bo1_ultimate_ak_mag_45_dual"] then
         vm:SetBodygroup(1, 5)
@@ -349,6 +354,10 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         end
     end
 
+    if attached["rail"] then
+        vm:SetBodygroup(9, 1)
+    end
+
     if attached["wornhand"] then
         hand = hand + 1
         grip = 1
@@ -356,6 +365,11 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         hand = hand + 2
         if barrel == 2 then hand = 5 end
         grip = 2
+        vm:SetBodygroup(9, 2)
+    elseif attached["rpdhand"] then
+        hand = hand + 3
+        if barrel == 2 then hand = 7 end
+        grip = 0
     end
     if attached["stock_vss"] then
         grip = 3
@@ -483,6 +497,10 @@ SWEP.HookP_NameChange = function(self, name)
         end
     end
 
+    if attached["barrel_rpd"] and attached["rpdhand"] then
+        gunname = "Type 93"
+    end
+
     if attached["bo1_pap"] then
         gunname = "Reznov's Revenge"
         if attached["barrel_krinkov"] then
@@ -496,6 +514,10 @@ SWEP.HookP_NameChange = function(self, name)
         end
         if attached["barrel_asval"] then
             gunname = "Total Silence"
+        end
+
+        if attached["barrel_rpd"] and attached["rpdhand"] then
+            gunname = "Strain 93"
         end
     end
 

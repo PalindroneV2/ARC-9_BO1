@@ -107,7 +107,7 @@ SWEP.ChamberSize = 0 -- dont fucking change this again.
 SWEP.ClipSize = 21 -- DefaultClip is automatically set.
 SWEP.ReloadTime = 1
 
-SWEP.Crosshair = false
+SWEP.Crosshair = true
 SWEP.LauncherCrosshair = false -- Force the launcher crosshair
 SWEP.MissileCrosshair = false -- Force the missile launcher crosshair
 SWEP.CanBlindFire = false

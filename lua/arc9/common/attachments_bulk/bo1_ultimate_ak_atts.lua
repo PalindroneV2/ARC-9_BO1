@@ -23,15 +23,15 @@ ATT.ActivateElements = {"barrel_rpk"}
 
 ATT.SpreadMult = 0.85
 ATT.RecoilMult = 0.85
-ATT.SpreadMultHipFire = 1.1
+ATT.SpreadMultHipFire = 1.3
 ATT.SpreadMultRecoil = 0.85
 --ATT.SpreadMultMove = 1.1
 
-ATT.SpeedMult = 0.9
-ATT.SpeedMultSights = 0.9
+ATT.SpeedMult = 0.8
+ATT.SpeedMultSights = 0.8
 
-ATT.AimDownSightsTimeMult = 1.15
-ATT.SprintToFireTimeMult = 1.15
+ATT.AimDownSightsTimeMult = 1.25
+ATT.SprintToFireTimeMult = 1.25
 
 ATT.RangeMaxMult = 1.25
 ATT.RangeMinMult = 1.25
@@ -173,6 +173,48 @@ ATT.Attachments = {
 
 ARC9.LoadAttachment(ATT, "bo1_ultimate_ak_barrel_asval")
 
+ATT = {}
+
+ATT.PrintName = [[RPD Dragoon 420mm Barrel]]
+ATT.CompactName = [[RPD]]
+ATT.Icon = Material("entities/bo1_atts/barrel/barrel.png")
+ATT.Description = [[
+    Perhaps custom Chinese-made barrel for the AK-47 seeming come from an RPD.
+
+    The heavier machine gun barrel offers slightly better precision and recoil control.
+
+    Its weight makes handling slightly slower though.
+]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 2
+ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.Free = false
+
+ATT.Category = {"bo1_ultimate_ak_barrel"}
+ATT.ActivateElements = {"barrel_rpd"}
+
+ATT.SpreadMult = 0.9
+ATT.RecoilMult = 0.9
+ATT.SpreadMultHipFire = 1.1
+ATT.SpreadMultRecoil = 0.975
+--ATT.SpreadMultMove = 1.1
+
+ATT.SpeedMult = 0.95
+ATT.SpeedMultSights = 0.95
+
+ATT.AimDownSightsTimeMult = 1.05
+ATT.SprintToFireTimeMult = 1.05
+
+ATT.RangeMaxMult = 1.05
+ATT.RangeMinMult = 1.05
+ATT.PhysBulletMuzzleVelocityMult = 1.05
+
+-- ATT.Attachments = {
+-- }
+
+ARC9.LoadAttachment(ATT, "bo1_ultimate_ak_barrel_rpd")
+
 -- GOLD
 
 ATT = {}
@@ -195,6 +237,28 @@ ATT.Category = {"bo1_ultimate_ak_gold"}
 ARC9.LoadAttachment(ATT, "bo1_ultimate_ak_furniture_gold")
 
 -- FURNITURES HANDGUARDS
+
+ATT = {}
+
+ATT.PrintName = "RPD Handguard"
+ATT.CompactName = "RPD"
+ATT.Icon = Material("materials/entities/bo1_generic.png")
+ATT.Description = [[
+    Grip taken off the RPD Machine Gun and modified to fit the barrel assembly of the AK platform.
+    Improves recoil control at the cost of handling.
+]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+--ATT.Free = true
+
+ATT.Category = {"bo1_ultimate_ak_handg"}
+ATT.ActivateElements = {"rpdhand"}
+ATT.RecoilMult = 0.9
+ATT.AimDownSightsTimeMult = 1.1
+
+ARC9.LoadAttachment(ATT, "bo1_ultimate_ak_furniture_rpd")
 
 ATT = {}
 
