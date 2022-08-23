@@ -97,8 +97,8 @@ ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Model = "models/weapons/arc9/atts/bo1_soviet_supp.mdl"
-ATT.Scale = Vector(1.25, 1, 1)
-ATT.ModelOffset = Vector(0.4, 0, 0)
+ATT.Scale = Vector(1.25, 1.15, 1.15)
+ATT.ModelOffset = Vector(0.4, 0, 0.025)
 
 ATT.Category = {"bo1_muzzle"}
 ATT.MuzzleDevice = true
@@ -122,6 +122,126 @@ ATT.RangeMinMult = 0.9
 ATT.PhysBulletMuzzleVelocityMult = 1.1
 
 ARC9.LoadAttachment(ATT, "bo1_muzzle_suppressor_ussr")
+
+ATT = {}
+
+ATT.PrintName = [[Pistol 80s Suppressor]]
+ATT.CompactName = [[SUPP 80s]]
+ATT.Icon = Material("materials/entities/bo1_atts/barrel/bo2_suppressor.png")
+ATT.Description = [[
+    Lightweight can cools and disperses gases leaving the barrel, muffling the firearm's audible report.
+]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.Free = false
+
+ATT.Model = "models/weapons/arc9/atts/bo2_suppressor_80s_1.mdl"
+ATT.Scale = Vector(1, 1, 1)
+
+ATT.Category = {"bo1_muzzle_pistol"}
+ATT.MuzzleDevice = true
+ATT.Silencer = true
+ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.DistantShootSoundOverride = ""
+ATT.FirstDistantShootSoundOverride = ""
+
+ATT.ShootVolumeMult = 4 / 5
+ATT.ShootPitchMult = 1.1
+
+ATT.SpreadMult = 0.99
+ATT.RecoilMult = 0.975
+ATT.RecoilUpMult = 0.975
+ATT.AimDownSightsTimeMult = 1.025
+ATT.SprintToFireTimeMult = 1.05
+ATT.SpreadMultHipFire = 1.05
+--ATT.SpreadMultMove = 1.05
+ATT.RangeMaxMult = 1.1
+ATT.RangeMinMult = 0.9
+ATT.PhysBulletMuzzleVelocityMult = 1.1
+
+ARC9.LoadAttachment(ATT, "bo2_muzzle_suppressor_80s_1")
+
+ATT = {}
+
+ATT.PrintName = [[AR 80s Suppressor]]
+ATT.CompactName = [[SUPP 80s]]
+ATT.Icon = Material("materials/entities/bo1_atts/barrel/bo2_suppressor.png")
+ATT.Description = [[
+    Lightweight can cools and disperses gases leaving the barrel, muffling the firearm's audible report.
+]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.Free = false
+
+ATT.Model = "models/weapons/arc9/atts/bo2_suppressor_80s_2.mdl"
+ATT.Scale = Vector(1, 1, 1)
+
+ATT.Category = {"bo1_muzzle"}
+ATT.MuzzleDevice = true
+ATT.Silencer = true
+ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.DistantShootSoundOverride = ""
+ATT.FirstDistantShootSoundOverride = ""
+
+ATT.ShootVolumeMult = 4 / 5
+ATT.ShootPitchMult = 1.1
+
+ATT.SpreadMult = 0.99
+ATT.RecoilMult = 0.975
+ATT.RecoilUpMult = 0.975
+ATT.AimDownSightsTimeMult = 1.025
+ATT.SprintToFireTimeMult = 1.05
+ATT.SpreadMultHipFire = 1.05
+--ATT.SpreadMultMove = 1.05
+ATT.RangeMaxMult = 1.1
+ATT.RangeMinMult = 0.9
+ATT.PhysBulletMuzzleVelocityMult = 1.1
+
+ARC9.LoadAttachment(ATT, "bo2_muzzle_suppressor_80s_2")
+
+ATT = {}
+
+ATT.PrintName = [[AR 80s Suppressor 2]]
+ATT.CompactName = [[SUPP 80s 2]]
+ATT.Icon = Material("materials/entities/bo1_atts/barrel/bo2_suppressor.png")
+ATT.Description = [[
+    Lightweight can cools and disperses gases leaving the barrel, muffling the firearm's audible report.
+]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.Free = false
+
+ATT.Model = "models/weapons/arc9/atts/bo2_suppressor_80s_3.mdl"
+ATT.Scale = Vector(1, 1, 1)
+
+ATT.Category = {"bo1_muzzle"}
+ATT.MuzzleDevice = true
+ATT.Silencer = true
+ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.DistantShootSoundOverride = ""
+ATT.FirstDistantShootSoundOverride = ""
+
+ATT.ShootVolumeMult = 4 / 5
+ATT.ShootPitchMult = 1.1
+
+ATT.SpreadMult = 0.99
+ATT.RecoilMult = 0.975
+ATT.RecoilUpMult = 0.975
+ATT.AimDownSightsTimeMult = 1.025
+ATT.SprintToFireTimeMult = 1.05
+ATT.SpreadMultHipFire = 1.05
+--ATT.SpreadMultMove = 1.05
+ATT.RangeMaxMult = 1.1
+ATT.RangeMinMult = 0.9
+ATT.PhysBulletMuzzleVelocityMult = 1.1
+
+ARC9.LoadAttachment(ATT, "bo2_muzzle_suppressor_80s_3")
 
 ATT = {}
 

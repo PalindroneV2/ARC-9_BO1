@@ -326,7 +326,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     elseif attached["barrel_rpk"] then
         barrel = 2
         irons = 6
-        hand = 3
+        hand = 4
     elseif attached["barrel_rpd"] then
         barrel = 4
         irons = 12
@@ -354,8 +354,11 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         end
     end
 
-    if attached["rail"] then
+    if attached["rail_bo1"] then
         vm:SetBodygroup(9, 1)
+    end
+    if attached["rail_pic"] then
+        vm:SetBodygroup(9, 2)
     end
 
     if attached["wornhand"] then
@@ -363,9 +366,8 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         grip = 1
     elseif attached["modernhand"] then
         hand = hand + 2
-        if barrel == 2 then hand = 5 end
+        if barrel == 2 then hand = 6 end
         grip = 2
-        vm:SetBodygroup(9, 2)
     elseif attached["rpdhand"] then
         hand = hand + 3
         if barrel == 2 then hand = 7 end
@@ -404,11 +406,11 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         newang = Angle(0.025, 0, 0)
     end
     if barrel == 1 then
-        newpos = Vector(-2.425, -2, 1.15)
-        newang = Angle(0.05, -0.35, 0)
+        newpos = Vector(-2.425, -2, 1)
+        newang = Angle(0.06, 0, 0)
         if attached["bo1_alternate_irons"] then
             newpos = Vector(-2.425, -2, 0.8)
-            newang = Angle(0.05, 0.5, 0)
+            newang = Angle(0.06, 0.5, 0)
         end
     end
     if barrel == 3 then
@@ -451,6 +453,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         Pos = newpos,
         Ang = newang,
         Magnification = 1.1,
+        ViewModelFOV = 60,
         CrosshairInSights = false,
     }
 
@@ -623,7 +626,7 @@ SWEP.Attachments = {
         PrintName = "Muzzle",
         DefaultName = "Default",
         Bone = "j_gun",
-        Pos = Vector(22.1, 0, 1),
+        Pos = Vector(21.7, 0, 1),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_muzzle"},
         ExcludeElements = {"barrel_krinkov", "barrel_rpk", "barrel_asval"},
@@ -641,11 +644,9 @@ SWEP.Attachments = {
         PrintName = "Optic",
         DefaultName = "Irons",
         Bone = "j_gun",
-        Pos = Vector(2.25, 0.005, 3.175),
+        Pos = Vector(2.25, 0.005, 2.175),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic", "bo1_rail_riser"},
-        InstalledElements = {"rail"},
-        ExcludeElements = {"nobacksight"},
+        Category = {"bo1_ultimate_ak_rail"},
         MergeSlots = {7},
     },
     {

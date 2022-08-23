@@ -19,7 +19,7 @@ ATT.Category = {"bo1_optic", "bo1_optic_alt", "bo1_optic_rds"}
 
 ATT.Model = "models/weapons/arc9/atts/bo1_reddot.mdl"
 ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelOffset = Vector(0, -0.05, 0)
 
 ATT.Sights = {
     {
@@ -32,5 +32,5 @@ ATT.Sights = {
 
 ATT.HoloSight = true
 ATT.HoloSightReticle = Material("hud/arc9_bo1/reticles/reddot.png", "mips smooth")
-ATT.HoloSightSize = 200
+ATT.HoloSightSize = 50
 ATT.HoloSightColorable = true

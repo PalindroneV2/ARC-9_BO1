@@ -25,11 +25,25 @@ ATT.ModelOffset = Vector(0, 0, 0)
 
 ATT.Sights = {
     {
-        Pos = Vector(-0.005, 5, -5.185),
+        Pos = Vector(-0.005, 7.5, -5.185),
         Ang = Angle(0, 0, 0),
+        ViewModelFOV = 45,
         Magnification = 1,
         IgnoreExtra = true
     },
+}
+
+ATT.Attachments = {
+    {
+        PrintName = "CPU",
+        Bone = "j_gun",
+        Scale = Vector(1.5, 1.5, 1.5),
+        Pos = Vector(-3.25, 0, -4.1),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0, 0, 0),
+        Category = {"bo2_bcpu"},
+        --ExcludeElements = {"no_tac_rail"},
+    }
 }
 
 ATT.RTScope = true

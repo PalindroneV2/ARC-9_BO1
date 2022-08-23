@@ -52,3 +52,16 @@ ATT.RTScopeSurface = Material("models/weapons/arc9/bo1/bo1_acogs/longscope_lens"
 ATT.RTScopeReticle = Material("hud/arc9_bo1/scopes/psg1_scope.png", "mips smooth")
 ATT.RTScopeShadowIntensity = 1.5
 ATT.RTScopeNoPP = false
+
+ATT.Attachments = {
+    {
+        PrintName = "CPU",
+        Bone = "j_gun",
+        Scale = Vector(1.2, 1.2, 1.2),
+        Pos = Vector(-4.2, 0, -4.5),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0, 0, 0),
+        Category = {"bo2_bcpu"},
+        --ExcludeElements = {"no_tac_rail"},
+    }
+}

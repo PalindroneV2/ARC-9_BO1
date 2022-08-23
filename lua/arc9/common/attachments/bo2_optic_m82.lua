@@ -31,6 +31,19 @@ ATT.DrawFunc = function(swep, model, wm)
     end
 end
 
+ATT.Attachments = {
+    {
+        PrintName = "CPU",
+        Bone = "j_gun",
+        Scale = Vector(1.2, 1.2, 1.2),
+        Pos = Vector(-2.65, 0, -4.9),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0, 0, 0),
+        Category = {"bo2_bcpu"},
+        --ExcludeElements = {"no_tac_rail"},
+    }
+}
+
 ATT.Sights = {
     {
         Pos = Vector(-0.116, 8, -1.41),

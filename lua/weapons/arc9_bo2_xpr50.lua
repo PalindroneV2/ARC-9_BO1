@@ -291,7 +291,7 @@ SWEP.Attachments = {
     {
         PrintName = "Optic",
         Bone = "j_gun",
-        Pos = Vector(4, 0.075, 3.8),
+        Pos = Vector(4, -0.025, 4.01),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_optic","bo1_rail_riser"},
         MergeSlots = {3}

@@ -33,7 +33,7 @@ ATT.Sights = {
 
 ATT.RTScope = true
 ATT.RTScopeSubmatIndex = 2
-ATT.RTScopeFOV = 12
+ATT.RTScopeFOV = 10
 ATT.RTScopeRes = 1024
 ATT.RTScopeReticle = Material("hud/arc9_bo1/scopes/bo1_thermal_us.png", "mips smooth")
 ATT.RTScopeShadowIntensity = 1.5
@@ -59,11 +59,11 @@ ATT.RTScopeFLIRCCHot = { -- Color correction drawn only on FLIR targets
     ["$pp_colour_mulb"] = 0
 }
 ATT.RTScopeFLIRCCCold = { -- Color correction drawn only on FLIR targets
-    ["$pp_colour_addr"] = -205,
-    ["$pp_colour_addg"] = -55,
-    ["$pp_colour_addb"] = 0,
+    ["$pp_colour_addr"] = 0,
+    ["$pp_colour_addg"] = 1,
+    ["$pp_colour_addb"] = 1,
     ["$pp_colour_brightness"] = 0,
-    ["$pp_colour_contrast"] = 1,
+    ["$pp_colour_contrast"] = 0.25,
     ["$pp_colour_colour"] = 1,
     ["$pp_colour_mulr"] = 0,
     ["$pp_colour_mulg"] = 0,

@@ -1048,7 +1048,8 @@ ATT.Sights = {
     {
         Pos = Vector(0, 12, -1.6),
         Ang = Angle(0.025, 0.1, 0),
-        IsIronSight = true
+        ViewModelFOV = 60,
+        IsIronSight = true,
     }
 }
 
@@ -1091,7 +1092,9 @@ ATT.ModelAngleOffset = Angle(0,0,0)
 ATT.Sights = {
     {
         Pos = Vector(0, 10, -1.2),
-        Ang = Angle(0.025, -0.1, 0)
+        Ang = Angle(0.025, -0.1, 0),
+        ViewModelFOV = 60,
+        IsIronSight = true,
     }
 }
 

@@ -696,3 +696,67 @@ ATT.SprintToFireTimeAdd = 0.08
 ATT.SpeedAddSights = -0.08
 
 ARC9.LoadAttachment(ATT, "bo1_ultimate_ak_stock_underfolder")
+
+-- RAILS
+
+ATT = {}
+
+ATT.PrintName = "Smooth AK Optic Rail"
+ATT.CompactName = "SMOOTH"
+ATT.Icon = Material("entities/bo1_atts/optics/ultimate_ak/rail_bo1.png")
+ATT.Description = [[Smooth surface rail used to attach optics.]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 4
+ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.Free = false
+ATT.Folder = "AK MOUNT"
+
+ATT.Category = {"bo1_ultimate_ak_rail"}
+ATT.ActivateElements = {"rail_bo1"}
+
+ATT.Attachments = {
+    {
+        PrintName = "Optic",
+        DefaultName = "Irons",
+        Bone = "j_gun",
+        Pos = Vector(0, 0, -1),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0,0,1),
+        Category = {"bo1_optic", "bo1_rail_riser"},
+        ExcludeElements = {"nobacksight"},
+    }
+}
+
+ARC9.LoadAttachment(ATT, "bo1_ultimate_ak_rail_smooth")
+
+ATT = {}
+
+ATT.PrintName = "Picatinny AK Optic Rail"
+ATT.CompactName = "PICRAIL"
+ATT.Icon = Material("entities/bo1_atts/optics/ultimate_ak/rail_mw2.png")
+ATT.Description = [[Picatinny rail used to attach optics.]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 4
+ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.Free = false
+ATT.Folder = "AK MOUNT"
+
+ATT.Category = {"bo1_ultimate_ak_rail"}
+ATT.ActivateElements = {"rail_pic"}
+
+ATT.Attachments = {
+    {
+        PrintName = "Optic",
+        DefaultName = "Irons",
+        Bone = "j_gun",
+        Pos = Vector(0, 0, -1),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0,0,1),
+        Category = {"bo1_optic", "bo1_rail_riser"},
+        ExcludeElements = {"nobacksight"},
+    }
+}
+
+ARC9.LoadAttachment(ATT, "bo1_ultimate_ak_rail_picrail")
