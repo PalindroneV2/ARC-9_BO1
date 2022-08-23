@@ -444,9 +444,6 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         if length == 2 then
             gasblock = 4
         end
-        if length == 2 then
-            gasblock = 4
-        end
         covers = 1
     elseif attached["handguard_car15"] then hand = 4
         gasblock = 1
@@ -478,44 +475,46 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
 
     if attached["troy_front"] then
         frontsight = 1
-        if hand == 3 then
-            gasblock = 2
-            if length == 2 then
-                gasblock = 4
-            end
-        end
+        gasblock = 2
         if attached["carbine"] then
             frontsight = 2
             if hand == 5 then
                 gasblock = 3
             end
         end
-        if length <= 2 and hand == 3 then
-            frontsight = 1
-            gasblock = 4
-        end
-        if hand == 10 then
-            frontsight = 7
-        end
-    elseif attached["usgi_front"] then
-        frontsight = 3
         if hand == 3 then
-            gasblock = 2
+            frontsight = 1
+            if length < 2 then
+                gasblock = 2
+            end
             if length == 2 then
                 gasblock = 4
             end
         end
+        if hand == 10 then
+            gasblock = 4
+            frontsight = 7
+        end
+    elseif attached["usgi_front"] then
+        frontsight = 3
+        gasblock = 2
         if attached["carbine"] then
             frontsight = 4
             if hand == 5 then
                 gasblock = 3
             end
         end
-        if length <= 2 and hand == 3 then
+        if hand == 3 then
             frontsight = 3
-            gasblock = 4
+            if length < 2 then
+                gasblock = 2
+            end
+            if length == 2 then
+                gasblock = 4
+            end
         end
         if hand == 10 then
+            gasblock = 4
             frontsight = 8
         end
     elseif attached["gasblock_flat"] then
@@ -530,6 +529,10 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
             gasblock = 3
             if length == 1 then gasblock = 2 end
         end
+        -- if length <= 2 and hand == 3 then
+        --     frontsight = 0
+        --     gasblock = 2
+        -- end
     end
     self.BipodPos = NewBipodPos
     self.BipodAng = NewBipodAng
