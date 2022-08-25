@@ -5,6 +5,7 @@ ATT.Description = [[Simple optic with a crosshair drawn on it.]]
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC-9 - WAW Attachments"
 ATT.Free = true
+ATT.Folder = "REFLEX"
 
 ATT.Category = {"waw_aperture", "bo1_optic", "bo1_optic_pistol", "bo1_optic_lp"}
 ATT.ActivateElements = {"waw_aptrs"}
