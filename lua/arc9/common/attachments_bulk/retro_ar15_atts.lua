@@ -126,7 +126,7 @@ ATT.Attachments = {
         Pos = Vector(-6, 0, -2.5),
         Ang = Angle(0, 0, 0),
         Category = {"retro_ar15_front_cut"},
-        ExcludeElements = {"ar15_ris"}
+        ExcludeElements = {"ar15_ris", "handguard_patriot"}
     },
 }
 
@@ -1327,7 +1327,7 @@ ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = true
 
 ATT.Category = {"retro_ar15_mag"}
-ATT.ActivateElements = {"20_mag", "ar15_handload"}
+ATT.ActivateElements = {"20_mag", "ar15_handload", "snipermag"}
 ATT.RequiresElements = {"fcg_semi"}
 ATT.ReloadTimeMult = 0.8
 ATT.ClipSize = 10
@@ -1339,10 +1339,14 @@ ATT.RangeMinMult = 1.25
 ATT.PenetrationMult = 1.25
 ATT.PhysBulletMuzzleVelocityMult = 1.25
 ATT.SpreadMult = 0.3
-ATT.SpreadMultHipFire = 1.25
+ATT.SpreadMultHipFire = 2
+ATT.SpreadMultRecoil = 3
+ATT.RecoilMult = 1.5
+ATT.RecoilUpMult = 1.5
+ATT.RecoilKickMult = 1.5
 
-ATT.DamageMaxAdd = 5
-ATT.DamageMinAdd = 15
+ATT.DamageMaxAdd = 20
+ATT.DamageMinAdd = 20
 ATT.RPMAdd = -100
 
 ARC9.LoadAttachment(ATT, "retro_ar15_mag_10")
@@ -1664,9 +1668,8 @@ ATT.SpeedMult = 0.95
 ATT.AimDownSightsTimeAdd = 0.22
 ATT.SprintToFireTimeAdd = 0.25
 ATT.SpeedAddSights = -0.2
-ATT.SpreadMultHipFire = 1.15
-ATT.SpreadMultRecoil = 0.6
---ATT.SpreadMultMove = 1.15
+ATT.SpreadMultHipFire = 1.25
+ATT.SpreadMultRecoil = 0.65
 
 ARC9.LoadAttachment(ATT, "retro_ar15_stock_full")
 
@@ -1722,7 +1725,7 @@ ATT.RecoilUpMult = 0.5
 ATT.RecoilRandomSideMult = 0.6
 ATT.RecoilAutoControlMult = 1.75
 
-ATT.SpreadMultRecoil = 0.85
+ATT.SpreadMultHipFire = 0.95
 ATT.SpreadMultRecoil = 0.8
 
 ATT.SpeedMult = 0.97
@@ -1754,7 +1757,7 @@ ATT.RecoilUpMult = 0.5
 ATT.RecoilRandomSideMult = 0.6
 ATT.RecoilAutoControlMult = 1.75
 
-ATT.SpreadMultRecoil = 0.85
+ATT.SpreadMultHipFire = 0.95
 ATT.SpreadMultRecoil = 0.75
 
 ATT.SpeedMult = 0.97
@@ -1877,7 +1880,7 @@ ATT.RecoilMult = 0.65
 ATT.RecoilUpMult = 0.5
 ATT.RecoilRandomSideMult = 0.25
 ATT.RecoilAutoControlMult = 2.5
-ATT.SpreadMultRecoil = 0.5
+ATT.SpreadMultRecoil = 0.55
 
 ATT.SpeedMult = 0.9
 ATT.AimDownSightsTimeAdd = 0.25
@@ -1908,12 +1911,13 @@ ATT.RecoilMult = 0.7
 ATT.RecoilUpMult = 0.5
 ATT.RecoilRandomSideMult = 0.5
 ATT.RecoilAutoControlMult = 2
-ATT.SpreadMultRecoil = 0.6
 
 ATT.SpeedMult = 0.95
-ATT.AimDownSightsTimeAdd = 0.25
-ATT.SprintToFireTimeAdd = 0.29
+ATT.AimDownSightsTimeAdd = 0.22
+ATT.SprintToFireTimeAdd = 0.25
 ATT.SpeedAddSights = -0.2
+ATT.SpreadMultHipFire = 1.25
+ATT.SpreadMultRecoil = 0.65
 
 ARC9.LoadAttachment(ATT, "retro_ar15_stock_famas")
 

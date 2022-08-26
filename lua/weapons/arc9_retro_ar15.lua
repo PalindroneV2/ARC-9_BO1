@@ -90,7 +90,7 @@ SWEP.RecoilAutoControl = 0.5
 SWEP.RecoilKick = 1
 
 SWEP.Spread = math.rad(1.5 / 37.5)
-SWEP.SpreadMultRecoil = 1.25
+SWEP.SpreadMultRecoil = 2
 
 SWEP.SpreadMultSights = 0.1
 SWEP.SpreadAddHipFire = math.rad(150 / 37.5)
@@ -779,11 +779,12 @@ SWEP.HookP_NameChange = function(self, name)
         if attached["a4_top"] then
             alt = "A3"
         end
-        gunname = name
-        if attached["mw3_psrscope"] and attached["a4_top"] and attached["sniper_stock"] then
-            gunname = "Mk. 12 SPR"
-        end
         gunname = name .. alt
+        if attached["snipermag"] and attached["a4_top"] and attached["sniper_stock"] then
+            gunname = "Mk. 12 SPR"
+            model = "Mk. 12"
+            alt = " SPR"
+        end
     end
     if attached["barrel_16"] then
         local sport = "Gov't"
@@ -808,6 +809,7 @@ SWEP.HookP_NameChange = function(self, name)
         gunname = name .. " " .. sport
     end
 
+    if attached["beowulf"] then gunname = "AR-15 .50 Beowulf" end
     if ((model .. alt) == "M16A1") and attached["fcg_semi"] and attached["woodcamo"] then gunname = "Service Rifle"
         if attached["beowulf"] then gunname = "Survivalist's Rifle" end
     end
@@ -870,7 +872,16 @@ SWEP.ReloadHideBoneTables = {
 }
 
 SWEP.Attachments = {
-    [1] = {
+    {
+        PrintName = "Optic",
+        Bone = "j_gun",
+        Pos = Vector(3.5, 0, 5.025),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_optic", "bo1_rail_riser"},
+        InstalledElements = {"classicrail"},
+        ExcludeElements = {"a4_top", "handguard_famas", "is_patriot"},
+    },
+    {
         PrintName = "Upper",
         DefaultCompactName = "A1 TOP",
         Bone = "j_gun",
@@ -879,15 +890,15 @@ SWEP.Attachments = {
         Category = {"retro_ar15_upper"},
         ExcludeElements = {"handguard_famas", "is_patriot"},
     },
-    [2] = {
-        PrintName = "Magazine",
-        DefaultCompactName = "STANAG 30",
-        Bone = "tag_clip",
-        Pos = Vector(0, 0, -2),
+    {
+        PrintName = "Lower",
+        DefaultCompactName = "AUTO",
+        Bone = "j_gun",
+        Pos = Vector(0.15, 0, 1.1),
         Ang = Angle(0, 0, 0),
-        Category = {"retro_ar15_mag"},
+        Category = {"retro_ar15_lower"},
     },
-    [3] = {
+    {
         PrintName = "Barrel",
         DefaultCompactName = "20\" OG",
         DefaultIcon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m16.png", "mips smooth"),
@@ -896,35 +907,7 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"retro_ar15_barrel"},
     },
-    [4] = {
-        PrintName = "Stock",
-        Bone = "j_gun",
-        Pos = Vector(-3, 0, 2.65),
-        Ang = Angle(0, 0, 0),
-        Category = {"retro_ar15_stock"},
-        Installed = "retro_ar15_stock_full",
-        MergeSlots = {12},
-        ExcludeElements = {"is_patriot"},
-    },
-    [5] = {
-        PrintName = "Muzzle",
-        DefaultCompactName = "Birdcage",
-        Bone = "j_gun",
-        Pos = Vector(24, 0, 2.25),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_muzzle"},
-        ExcludeElements = {"carbine", "is_patriot"}
-    },
-    [6] = {
-        PrintName = "Underbarrel",
-        Bone = "j_gun",
-        Pos = Vector(11, 0, 1.35), --(-4, 0, -0.4)
-        Ang = Angle(0, 0, 0),
-        Category = {"cde_m203", "bo1_mk", "bo1_rail_underbarrel"},
-        ExcludeElements = {"no_ub_rail", "carbine_hg", "is_patriot"},
-        InstalledElements = {"allowtac"},
-    },
-    [7] = {
+    {
         PrintName = "Handguard",
         DefaultCompactName = "A1",
         DefaultIcon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m16.png", "mips smooth"),
@@ -934,54 +917,16 @@ SWEP.Attachments = {
         Category = {"retro_ar15_handguard_20"},
         ExcludeElements = {"carbine"}
     },
-    [8] = {
-        PrintName = "Lower",
-        DefaultCompactName = "AUTO",
+    {
+        PrintName = "Underbarrel",
         Bone = "j_gun",
-        Pos = Vector(0.15, 0, 1.1),
+        Pos = Vector(11, 0, 1.35), --(-4, 0, -0.4)
         Ang = Angle(0, 0, 0),
-        Category = {"retro_ar15_lower"},
+        Category = {"cde_m203", "bo1_mk", "bo1_rail_underbarrel"},
+        ExcludeElements = {"no_ub_rail", "carbine_hg", "is_patriot"},
+        InstalledElements = {"allowtac"},
     },
-    [9] = {
-        PrintName = "Optic",
-        Bone = "j_gun",
-        Pos = Vector(3.5, 0, 5.025),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic", "bo1_rail_riser"},
-        InstalledElements = {"classicrail"},
-        ExcludeElements = {"a4_top", "handguard_famas", "is_patriot"},
-    },
-    [10] = {
-        PrintName = "Cosmetic",
-        Bone = "j_gun",
-        Pos = Vector(-6, 0, 2.65),
-        Ang = Angle(0, 0, 0),
-        Category = {"universal_camo"},
-    },
-    [11] = {
-        PrintName = "Perk-a-Cola",
-        DefaultCompactName = "PERK",
-        Bone = "j_gun",
-        Pos = Vector(-5, 0, -5),
-        Ang = Angle(0, 0, 0),
-        Category = "bo1_perkacola",
-    },
-    [12] = {
-        Hidden = true,
-        Bone = "j_gun",
-        Pos = Vector(0, 0, 0),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_tube_stocks"},
-    },
-    [13] = {
-        PrintName = "Ammunition",
-        DefaultCompactName = "AMMO",
-        Bone = "tag_clip",
-        Pos = Vector(1, 0, -4.25),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_ammo", "bo1_pap"},
-    },
-    [14] = {
+    {
         PrintName = "Front Sight",
         DefaultCompactName = "G.I.",
         Bone = "j_gun",
@@ -989,6 +934,55 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"retro_ar15_front_cut"},
         ExcludeElements = {"ar15_ris", "carbine"}
+    },
+    {
+        PrintName = "Muzzle",
+        DefaultCompactName = "Birdcage",
+        Bone = "j_gun",
+        Pos = Vector(24, 0, 2.25),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_muzzle"},
+        ExcludeElements = {"carbine", "is_patriot"}
+    },
+    {
+        PrintName = "Stock",
+        Bone = "j_gun",
+        Pos = Vector(-3, 0, 2.65),
+        Ang = Angle(0, 0, 0),
+        Category = {"retro_ar15_stock"},
+        Installed = "retro_ar15_stock_full",
+        ExcludeElements = {"is_patriot"},
+    },
+    {
+        PrintName = "Magazine",
+        DefaultCompactName = "STANAG 30",
+        Bone = "tag_clip",
+        Pos = Vector(0, 0, -2),
+        Ang = Angle(0, 0, 0),
+        Category = {"retro_ar15_mag"},
+    },
+    {
+        PrintName = "Ammunition",
+        DefaultCompactName = "AMMO",
+        Bone = "tag_clip",
+        Pos = Vector(1, 0, -4.25),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_ammo", "bo1_pap"},
+    },
+    {
+        PrintName = "Cosmetic",
+        Bone = "j_gun",
+        Pos = Vector(-6, 0, 2.65),
+        Ang = Angle(0, 0, 0),
+        Category = {"universal_camo"},
+    },
+    {
+        PrintName = "Perk-a-Cola",
+        DefaultCompactName = "PERK",
+        Bone = "j_gun",
+        Pos = Vector(-5, 0, -5),
+        Ang = Angle(0, 0, 0),
+        Category = "bo1_perkacola",
     },
 }
 
