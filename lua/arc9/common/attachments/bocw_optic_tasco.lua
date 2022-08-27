@@ -26,6 +26,7 @@ ATT.Sights = {
     {
         Pos = Vector(0, 9, -0.7),
         Ang = Angle(0, 0, 0),
+        ViewModelFOV = 60,
         Magnification = 1.1,
         IgnoreExtra = false,
     },

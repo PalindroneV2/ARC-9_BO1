@@ -120,7 +120,7 @@ SWEP.SpeedMultBlindFire = 1
 SWEP.AimDownSightsTime = 0.11
 SWEP.SprintToFireTime = 0.14
 
-SWEP.RPM = 900
+SWEP.RPM = 750
 SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
@@ -180,6 +180,7 @@ SWEP.CaseBones = {}
 SWEP.IronSights = {
     Pos = Vector(-2.77, -5, 0.235),
     Ang = Angle(-0.025, -0.1, -0.5),
+    ViewModelFOV = 60,
     Magnification = 1.1,
     AssociatedSlot = 9,
     CrosshairInSights = false,
@@ -266,12 +267,20 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local vm = data.model
     local attached = data.elements
 
-    if attached["mount"] then
+    if attached["aug_a2"] then
+        vm:SetBodygroup(3,0)
+        vm:SetBodygroup(4,0)
+    end
+    if attached["aug_a3"] then
+        vm:SetBodygroup(3,1)
         vm:SetBodygroup(4,1)
     end
     if attached["swarovski"] then
-        vm:SetBodygroup(4,1)
-        vm:SetBodygroup(3,1)
+        vm:SetBodygroup(4,2)
+        vm:SetBodygroup(3,2)
+    end
+    if attached["a2mount"] or attached["a3mount"] then
+        vm:SetBodygroup(4,2)
     end
 
     local camo = 0
@@ -291,6 +300,12 @@ SWEP.HookP_NameChange = function(self, name)
 
     local gunname = "Steyr AUG A2"
 
+    if attached["aug_a2"] then
+        gunname = "Steyr AUG A2"
+    end
+    if attached["aug_a3"] then
+        gunname = "Steyr AUG A3"
+    end
     if attached["swarovski"] then
         gunname = "Steyr AUG A1"
     end
@@ -346,11 +361,12 @@ SWEP.Attachments = {
     {
         PrintName = "Optic",
         Bone = "j_gun",
-        Pos = Vector(2.75, -0.03, 4.95),
+        Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic", "bo1_rail_riser", "bo1_optic_aug"},
-        InstalledElements = {"mount"},
-        Installed = "bo1_optic_aug"
+        Category = {"bo1_aug_top", "bo1_optic_aug"},
+        Icon_Offset = Vector(4, 0, 3),
+        Installed = "bo1_optic_aug",
+        Integral = true,
     },
     {
         PrintName = "Barrel",

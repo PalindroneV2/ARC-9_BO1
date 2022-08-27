@@ -16,7 +16,8 @@ ATT.ActivateElements = {"swarovski"}
 
 ATT.Model = "models/weapons/arc9/atts/bo1_swarovski.mdl"
 ATT.Scale = 1
-ATT.ModelOffset = Vector(-2.75, 0.03, -4.95)
+ATT.ModelOffset = Vector(0, 0, 0)
+-- ATT.ModelOffset = Vector(-2.75, 0.03, -4.95)
 
 ATT.Sights = {
     {

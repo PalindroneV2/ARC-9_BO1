@@ -92,6 +92,20 @@ ARC9.LoadAttachment(ATT, "bo1_camo_akwood")
 
 ATT = {}
 
+ATT.PrintName = "Off White"
+ATT.FullColorIcon = true
+ATT.CompactName = "OFF WHITE"
+ATT.Icon = Material("entities/bo1_camos/off_white.png")
+ATT.Category = "universal_camo"
+ATT.Description = [[Look at that subtle off-white coloring. The tasteful thickness of it.]]
+ATT.MenuCategory = "ARC-9 - Camos"
+ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/off_white"
+ATT.Folder = "COD FLAT"
+
+ARC9.LoadAttachment(ATT, "bo1_camo_offwhite")
+
+ATT = {}
+
 ATT.PrintName = "Plain White"
 ATT.FullColorIcon = true
 ATT.CompactName = "WHITE"
