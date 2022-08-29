@@ -49,7 +49,7 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = true
 
-ATT.Category = {"bo1_m1911_cosmetics"}
+ATT.Category = {"bo1_m1911_cosmetics", "waw_pistol_cosmetic"}
 ATT.ActivateElements = {"gold"}
 
 ARC9.LoadAttachment(ATT, "bo1_m1911_cosmetic_gold")

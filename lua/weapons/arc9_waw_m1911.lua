@@ -1,6 +1,6 @@
 SWEP.Base = "arc9_base"
 SWEP.Spawnable = true -- this obviously has to be set to true
-SWEP.Category = "ARC9 - Black Ops" -- edit this if you like
+SWEP.Category = "ARC9 - World at War" -- edit this if you like
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "Colt M1911A1"
@@ -27,8 +27,8 @@ SWEP.Slot = 1
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/arc9/c_bo1_m1911.mdl"
-SWEP.WorldModel = "models/weapons/arc9/c_bo1_m1911.mdl"
+SWEP.ViewModel = "models/weapons/arc9/c_waw_m1911.mdl"
+SWEP.WorldModel = "models/weapons/arc9/c_waw_m1911.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
     Pos        =    Vector(-9.75, 3, -3.75),
@@ -140,9 +140,9 @@ SWEP.ShootVolume = 125
 SWEP.ShootPitch = 100
 SWEP.ShootPitchVariation = 0
 
-SWEP.ShootSound = "ARC9_BO1.M1911_Fire"
+SWEP.ShootSound = "ARC9_WAW.M1911_Fire"
 SWEP.ShootSoundSilenced = "ARC9_BO2.Pistol_Sil"
-SWEP.DistantShootSound = "ARC9_BO1.M1911_RingOff"
+SWEP.DistantShootSound = "ARC9_WAW.M1911_RingOff"
 
 --SWEP.MuzzleEffect = "muzzleflash_4"
 SWEP.MuzzleParticle = "muzzleflash_pistol" -- Used for some muzzle effects.
@@ -165,9 +165,10 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(-2.56, 0, 1),
-    Ang = Angle(-0.15, 0.1, 0),
+    Pos = Vector(-2.225, 2, 1.65),
+    Ang = Angle(-0.1, 0.3, 0),
     Magnification = 1.1,
+    ViewModelFOV = 60,
     --AssociatedSlot = 9,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
@@ -181,7 +182,7 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_PISTOL
 SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_PISTOL
 SWEP.AnimDraw = ACT_HL2MP_GESTURE_RANGE_ATTACK_KNIFE
 
-SWEP.ActivePos = Vector(0, 0, -1)
+SWEP.ActivePos = Vector(0, 1, 0)
 SWEP.ActiveAng = Angle(0, 0, -5)
 
 SWEP.CrouchPos = Vector(0, 0, -1)
@@ -190,8 +191,8 @@ SWEP.CrouchAng = Angle(0, 0, -5)
 SWEP.RestPos = Vector(0.532, -6, 0)
 SWEP.RestAng = Angle(-4.633, 36.881, 0)
 
-SWEP.SprintPos = Vector(0, 0, 0)
-SWEP.SprintAng = Angle(0, 0, 0)
+SWEP.SprintPos = Vector(0, -1, -1)
+SWEP.SprintAng = Angle(20, 0, -10)
 
 SWEP.CustomizePos = Vector(15, 25, 4)
 SWEP.CustomizeAng = Angle(90, 0, 0)
@@ -203,44 +204,10 @@ SWEP.BarrelLength = 9
 SWEP.ExtraSightDist = 15
 
 SWEP.AttachmentElements = {
-    ["longbarrel"] = {
-        AttPosMods = {
-            [2] = {
-                Pos = Vector(7.875, 0.175, 1.05)
-            },
-        },
-    },
-    ["shortbarrel"] = {
-        AttPosMods = {
-            [2] = {
-                Pos = Vector(4.65, 0.175, 1.05)
-            },
-        },
-    },
-    ["newhammer"] = {
-        Bodygroups = {
-            {3,1},
-        },
-    },
-    ["hdhammer"] = {
-        Bodygroups = {
-            {3,2},
-        },
-    },
-    ["newtrigger"] = {
-        Bodygroups = {
-            {4,1},
-        },
-    },
-    ["hdtrigger"] = {
-        Bodygroups = {
-            {4,2},
-        },
-    },
 }
 
-local snd_mech = ""
-local snd_mechlast = ""
+local snd_mech = "ARC9_WAW.M1911_Mech"
+local snd_mechlast = "ARC9_WAW.M1911_MechLast"
 local snd_magin = "ARC9_BO1.M1911_In"
 local snd_magout = "ARC9_BO1.M1911_Out"
 local snd_slideback = "ARC9_BO1.M1911_Slide_Back"
@@ -250,108 +217,29 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
 
     local vm = data.model
     local attached = data.elements
-    local newpos = Vector(-2.56, 0, 1)
-    local newang = Angle(-0.15, 0.1, 0)
-    local snappos = Vector(1, -10, 0)
-    local slide = 0
     local finish = 0
-    local comp = 0
-
-
-    if attached["m191_comp"] then
-        comp = 1
-    end
-
-    if attached["1911_frame_modern"] then
-        vm:SetBodygroup(0,1)
-    end
-    if attached["1911_frame_hd"] then
-        vm:SetBodygroup(0,2)
-        if !attached["newhammer"] then
-            vm:SetBodygroup(3,2)
-        end
-        if !attached["newtrigger"] then
-            vm:SetBodygroup(4,2)
-        end
-        slide = 6
-    end
-    if attached["1911_slide_modern"] then
-        slide = 1
-        newpos = Vector(-2.53, 0, 0.925)
-        newang = Angle(-0.1, 0, 0)
-    end
-    if attached["1911_slide_short"] then
-        slide = 2
-        if attached["m1911_comp"] then
-            comp = 2
-        end
-        if attached["1911_frame_hd"] then
-            slide = 7
-        end
-        snappos = Vector(-1, -10, 0)
-    end
-    if attached["1911_slide_short_modern"] then
-        slide = 3
-        newpos = Vector(-2.53, 0, 0.925)
-        newang = Angle(-0.1, 0, 0)
-        if attached["m1911_comp"] then
-            comp = 2
-        end
-        snappos = Vector(-1, -10, 0)
-    end
-    if attached["1911_slide_baller"] then
-        slide = 4
-        if attached["m1911_comp"] then
-            comp = 3
-        end
-        if attached["1911_frame_hd"] then
-            slide = 8
-        end
-        snappos = Vector(2.5, -10, 0)
-    end
-    if attached["1911_slide_baller_modern"] then
-        slide = 5
-        newpos = Vector(-2.53, 0, 0.925)
-        newang = Angle(-0.1, 0, 0)
-        if attached["m1911_comp"] then
-            comp = 3
-        end
-        snappos = Vector(2.5, -10, 0)
-    end
 
     if attached["nickel"] then
-        finish = 1
+        finish = 4
     elseif attached["worn"] then
-        finish = 2
+        finish = 8
     elseif attached["gold"] then
-        finish = 5
+        finish = 12
     end
 
-    vm:SetBodygroup(1,slide)
-    vm:SetBodygroup(2,slide)
-    vm:SetBodygroup(5, comp)
-
     if attached["bo1_pap"] then
-        finish = finish + 4
+        finish = finish + 1
         if finish == 5 then
-            finish = finish - 1
-        end
-        if finish == 6 then
-            finish = finish - 2
+            finish = finish + 1
         end
         if finish == 9 then
-            finish = finish - 5
+            finish = finish + 1
+        end
+        if finish == 13 then
+            finish = finish + 2
         end
     end
     vm:SetSkin(finish)
-
-    self.IronSights = {
-        Pos = newpos,
-        Ang = newang,
-        Magnification = 1.1,
-    }
-
-    self.CustomizeSnapshotPos = snappos
 end
 
 SWEP.HookP_NameChange = function(self, name)
@@ -360,49 +248,26 @@ SWEP.HookP_NameChange = function(self, name)
 
     local gunname = "Colt M1911A1"
 
-    if attached["shortbarrel"] then
-        gunname = "Colt Officer"
-    end
-
-    if attached["longbarrel"] then
-        gunname = "Colt Longslide"
-    end
-
     if attached["bo1_pap"] then
         gunname = "Pain"
-
-        if attached["shortbarrel"] then
-            gunname = "A Light Shining in Darkness"
-        end
-        if attached["longbarrel"] then
-            gunname = "Agent XLVII"
-        end
     end
 
     return gunname
 end
 
-SWEP.Hook_TranslateAnimation = function (self, anim)
-    local attached = self:GetElements()
-    if attached["waw_sound"] then
-        return anim .. "_waw"
-    end
-    if attached["bo2_sound"] then
-        return anim .. "_bo2"
-    end
-    if attached["cod4_sound"] then
-        return anim .. "_cod4"
-    end
-end
+-- SWEP.Hook_TranslateAnimation = function (self, anim)
+--     local attached = self:GetElements()
+-- end
 
 SWEP.Attachments = {
     {
-        PrintName = "Perk-a-Cola",
-        DefaultCompactName = "PERK",
+        PrintName = "Finish",
+        DefaultCompactName = "G.I. Finish",
         Bone = "j_gun",
-        Pos = Vector(-5, 0, -5),
+        Pos = Vector(-5, 0, 2),
         Ang = Angle(0, 0, 0),
-        Category = "bo1_perkacola",
+        Category = {"bo1_m1911_cosmetics"},
+        DefaultIcon = Material("materials/entities/waw_generic.png", "mips smooth"),
     },
     {
         PrintName = "Muzzle",
@@ -411,72 +276,7 @@ SWEP.Attachments = {
         Scale = Vector(1,1,1),
         Pos = Vector(5.66, 0.175, 1.05),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_muzzle_pistol", "bo1_m1911_compensator"},
-    },
-    {
-        PrintName = "Slide",
-        DefaultCompactName = "5\" G.I.",
-        Bone = "j_bolt",
-        Scale = Vector(1,1,1),
-        Pos = Vector(2, 0, 0),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_m1911_slides"},
-        DefaultIcon = Material("materials/entities/bo1_atts/cosmetic/waw_1911.png", "mips smooth"),
-    },
-    {
-        PrintName = "Frame",
-        DefaultCompactName = "G.I. Frame",
-        Bone = "j_gun",
-        Pos = Vector(-1, 0, -1),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_m1911_frames"},
-        DefaultIcon = Material("materials/entities/bo1_atts/cosmetic/waw_1911.png", "mips smooth"),
-    },
-    {
-        PrintName = "Trigger",
-        DefaultCompactName = "G.I. Trigger",
-        Bone = "j_gun",
-        Pos = Vector(1, 0, -0.1),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_m1911_trigger"},
-        DefaultIcon = Material("materials/entities/bo1_atts/cosmetic/waw_1911.png", "mips smooth"),
-    },
-    {
-        PrintName = "Hammer",
-        DefaultCompactName = "G.I. Hammer",
-        Bone = "j_press_rear",
-        Pos = Vector(0, 0, 1),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_m1911_hammer"},
-        DefaultIcon = Material("materials/entities/bo1_atts/cosmetic/waw_1911.png", "mips smooth"),
-    },
-    {
-        PrintName = "Finish",
-        DefaultCompactName = "G.I. Finish",
-        Bone = "j_gun",
-        Pos = Vector(-5, 0, 2),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_m1911_cosmetics"},
-        DefaultIcon = Material("materials/entities/bo1_generic.png", "mips smooth"),
-    },
-    {
-        PrintName = "Sounds",
-        DefaultCompactName = "BO1",
-        Bone = "j_gun",
-        Pos = Vector(-7.5, 0, 2),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_m1911_sounds"},
-        DefaultIcon = Material("materials/entities/bo1_generic.png", "mips smooth"),
-    },
-    {
-        PrintName = "Tactical",
-        DefaultCompactName = "TAC",
-        Bone = "j_gun",
-        Scale = Vector(0.75,0.75,0.75),
-        Pos = Vector(2.75, 0.175, 0.175),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_tactical", "bo1_pistol_rail"},
-        CorrectiveAng = Angle(0.05, 0.2, 0),
+        Category = {"bo1_muzzle_pistol"},
     },
     {
         PrintName = "Ammunition",
@@ -485,6 +285,14 @@ SWEP.Attachments = {
         Pos = Vector(-1.25, 0, -3),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ammo", "bo1_pap", "bo1_pap_1911"},
+    },
+    {
+        PrintName = "Perk-a-Cola",
+        DefaultCompactName = "PERK",
+        Bone = "j_gun",
+        Pos = Vector(-5, 0, -5),
+        Ang = Angle(0, 0, 0),
+        Category = "bo1_perkacola",
     },
 }
 
@@ -522,15 +330,7 @@ SWEP.Animations = {
         EventTable = {
             {s = snd_slideback, t = 0.2},
             {s = snd_slidefwd, t = 0.8}
-        }
-    },
-    ["ready_bo2"] = {
-        Source = "first_draw",
-        Time = 1,
-        EventTable = {
-            {s = "ARC9_BO2.Pistol_SlideBack", t = 0.2},
-            {s = "ARC9_BO2.Pistol_SlideFwd", t = 0.8}
-        }
+        },
     },
     ["fire"] = {
         Source = {"fire"},
@@ -538,7 +338,7 @@ SWEP.Animations = {
         ShellEjectAt = 1 / 30,
         EventTable = {
             {s = snd_mech, t = 1 / 30},
-        }
+        },
     },
     ["fire_empty"] = {
         Source = "fire_last",
@@ -546,7 +346,7 @@ SWEP.Animations = {
         ShellEjectAt = 1 / 30,
         EventTable = {
             {s = snd_mechlast, t = 1 / 30},
-        }
+        },
     },
     ["fire_iron"] = {
         Source = "fire_ads",
@@ -554,7 +354,7 @@ SWEP.Animations = {
         ShellEjectAt = 1 / 30,
         EventTable = {
             {s = snd_mech, t = 1 / 30},
-        }
+        },
     },
     ["fire_iron_empty"] = {
         Source = "fire_last",
@@ -562,23 +362,7 @@ SWEP.Animations = {
         ShellEjectAt = 1 / 30,
         EventTable = {
             {s = snd_mechlast, t = 1 / 30},
-        }
-    },
-    ["fire_iron_waw"] = {
-        Source = "fire_ads",
-        Time = 8 / 30,
-        ShellEjectAt = 1 / 30,
-        EventTable = {
-            {s = "ARC9_WAW.M1911_Mech", t = 1 / 30},
-        }
-    },
-    ["fire_iron_empty_waw"] = {
-        Source = "fire_last",
-        Time = 8 / 30,
-        ShellEjectAt = 1 / 30,
-        EventTable = {
-            {s = "ARC9_WAW.M1911_MechLast", t = 1 / 30},
-        }
+        },
     },
     ["reload"] = {
         Source = "reload",
@@ -616,25 +400,6 @@ SWEP.Animations = {
             {s = "ARC9_BO2.Pistol_MagOut", t = 0.25},
             {s = "ARC9_BO2.Pistol_MagIn", t = 1},
             {s = "ARC9_BO2.Pistol_SlideFwd", t = 1.5}
-        },
-    },
-    ["reload_cod4"] = {
-        Source = "reload",
-        Time = 1.5,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
-        EventTable = {
-            {s = "ARC9_COD4E.1911_Out", t = 0.25},
-            {s = "ARC9_COD4E.1911_In", t = 1}
-        },
-    },
-    ["reload_empty_cod4"] = {
-        Source = "reload_empty",
-        Time = 2,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
-        EventTable = {
-            {s = "ARC9_COD4E.1911_Out", t = 0.25},
-            {s = "ARC9_COD4E.1911_In", t = 1},
-            {s = "ARC9_COD4E.1911_Chamber", t = 1.35}
         },
     },
     ["enter_sprint"] = {
