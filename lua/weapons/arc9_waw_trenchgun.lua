@@ -288,7 +288,7 @@ SWEP.Attachments = {
     {
         PrintName = "Underbarrel",
         Bone = "j_pump",
-        Pos = Vector(6.2, 0, 0.125),
+        Pos = Vector(-0.5, 0, -0.4),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_grips"},
     },
@@ -391,6 +391,28 @@ SWEP.Animations = {
         EventTable = {
             {s = "ARC9_WAW.Trenchgun_Shell", t = 15 / 40},
         },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1,
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 1,
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 1,
+            },
+            {
+                t = 1,
+                lhik = 0,
+                rhik = 1,
+            },
+        },
     },
     ["reload_insert"] = {
         Source = "reload_loop",
@@ -407,6 +429,28 @@ SWEP.Animations = {
             {s = "ARC9_WAW.TrenchGun_Pull", t = 12 / 40},
             {s = "ARC9_WAW.TrenchGun_Push", t = 20 / 40},
         },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 1,
+            },
+            {
+                t = 0.05,
+                lhik = 0,
+                rhik = 1,
+            },
+            {
+                t = 0.15,
+                lhik = 0,
+                rhik = 1,
+            },
+            {
+                t = 0.25,
+                lhik = 1,
+                rhik = 1,
+            },
+        },
     },
     ["reload_finish_empty"] = {
         Source = "reload_end",
@@ -414,6 +458,28 @@ SWEP.Animations = {
         EventTable = {
             {s = "ARC9_WAW.TrenchGun_Pull", t = 12 / 40},
             {s = "ARC9_WAW.TrenchGun_Push", t = 20 / 40},
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 1,
+            },
+            {
+                t = 0.05,
+                lhik = 0,
+                rhik = 1,
+            },
+            {
+                t = 0.15,
+                lhik = 0,
+                rhik = 1,
+            },
+            {
+                t = 0.25,
+                lhik = 1,
+                rhik = 1,
+            },
         },
     },
 }

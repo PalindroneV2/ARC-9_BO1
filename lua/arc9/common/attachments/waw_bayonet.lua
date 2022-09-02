@@ -13,3 +13,14 @@ ATT.Free = false
 ATT.Category = {"waw_bayonet"}
 ATT.ActivateElements = {"waw_bayonet"}
 -- ATT.ExcludeElements = {"waw_rifgrenade"}
+
+
+ATT.Bash = true
+ATT.PrimaryBash = false
+
+ATT.BashDamage = 100
+ATT.BashLungeRange = 64
+ATT.BashRange = 64
+ATT.PreBashTime = 0.5
+ATT.PostBashTime = 0.5
+ATT.BashDecal = "ManhackCut"
