@@ -458,7 +458,7 @@ SWEP.Animations = {
     ["reload_ubgl"] = {
         Source = "reload_glsetup",
         Time = 64 / 30,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_MAGIC,
         EventTable = {
             {s = "ARC9_WAW.RGren_Futz", t = 16 / 30},
             {s = "ARC9_WAW.RGren_Load", t = 19 / 30},
@@ -469,7 +469,7 @@ SWEP.Animations = {
     ["reload_ubgl_soh"] = {
         Source = "reload_glsetup",
         Time = 64 / 60,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_MAGIC,
         TPAnimStartTime = 0.1,
         LHIK = true,
         LHIKIn = 0.125,

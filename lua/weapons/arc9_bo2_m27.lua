@@ -647,7 +647,7 @@ SWEP.Animations = {
     ["reload_ubgl_glsetup"] = {
         Source = "reload_glsetup",
         Time = 96 / 30,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_MAGIC,
         TPAnimStartTime = 0.1,
         EventTable = {
             {s = "ARC9_BO1.M203_40mmOut", t = 18 / 30},
@@ -658,7 +658,7 @@ SWEP.Animations = {
     ["reload_ubgl_glsetup_soh"] = {
         Source = "reload_glsetup",
         Time = 96 / 60,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_MAGIC,
         TPAnimStartTime = 0.1,
         EventTable = {
             {s = "ARC9_BO1.M203_40mmOut", t = 18 / 60},

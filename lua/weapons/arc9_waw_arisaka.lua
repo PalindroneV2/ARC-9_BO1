@@ -450,7 +450,7 @@ SWEP.Animations = {
     ["reload_start"] = {
         Source = "reload_in",
         Time = 60 / 30,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_MAGIC,
         RestoreAmmo = 1, -- loads a shell since the first reload has a shell in animation
         MinProgress = 20 / 30,
         EventTable = {
@@ -535,7 +535,7 @@ SWEP.Animations = {
     ["reload_ubgl"] = {
         Source = "reload_glsetup",
         Time = 64 / 30,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_MAGIC,
         EventTable = {
             {s = "ARC9_WAW.RGren_Futz", t = 16 / 30},
             {s = "ARC9_WAW.RGren_Load", t = 19 / 30},

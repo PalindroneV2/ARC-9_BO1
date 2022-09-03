@@ -191,7 +191,7 @@ SWEP.HoldtypeActive = "shotgun"
 SWEP.HoldtypeSights = "ar2"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
-SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN
+SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_MAGIC
 SWEP.AnimDraw = ACT_HL2MP_GESTURE_RANGE_ATTACK_KNIFE
 
 SWEP.ActivePos = Vector(0, 0, -1)
@@ -440,7 +440,7 @@ SWEP.Animations = {
     ["reload_start"] = {
         Source = "reload_in",
         Time = 54 / 30,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_MAGIC,
         RestoreAmmo = 1,
         -- MinProgress = 40 / 30,
         EventTable = {
@@ -472,7 +472,7 @@ SWEP.Animations = {
     ["reload_start_pap"] = {
         Source = "reload_in",
         Time = 54 / 30,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_MAGIC,
         RestoreAmmo = 12,
         -- MinProgress = 40 / 30,
         EventTable = {
@@ -504,7 +504,7 @@ SWEP.Animations = {
     ["reload_insert"] = {
         Source = "reload_loop",
         Time = 26 / 30,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_MAGIC,
         TPAnimStartTime = 0.3,
         EventTable = {
             {s = "ARC9_BO1.MK_Shell", t = 10 / 30},
@@ -537,7 +537,7 @@ SWEP.Animations = {
     ["reload_insert_pap"] = {
         Source = "reload_loop",
         Time = 26 / 30,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_MAGIC,
         TPAnimStartTime = 0.3,
         EventTable = {
             {s = "ARC9_BO1.MK_Shell", t = 10 / 30},

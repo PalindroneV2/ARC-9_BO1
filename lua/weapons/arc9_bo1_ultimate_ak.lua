@@ -939,7 +939,7 @@ SWEP.Animations = {
     ["reload_ubgl_gp25setup"] = {
         Source = "reload_gp25setup",
         Time = 3,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_MAGIC,
         TPAnimStartTime = 0.1,
         EventTable = {
             {s = "ARC9_BO1.M203_40mmOut", t = 18 / 30},
@@ -950,7 +950,7 @@ SWEP.Animations = {
     ["reload_ubgl_gp25setup_soh"] = {
         Source = "reload_gp25setup",
         Time = 3 / 2,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_MAGIC,
         TPAnimStartTime = 0.1,
         EventTable = {
             {s = "ARC9_BO1.M203_40mmOut", t = 18 / 60},
@@ -1072,7 +1072,7 @@ SWEP.Animations = {
     ["reload_ubgl_tishinasetup"] = {
         Source = "reload_tishinasetup",
         Time = 3,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_MAGIC,
         TPAnimStartTime = 0.1,
         EventTable = {
             {s = "ARC9_BO1.M203_40mmOut", t = 18 / 30},
@@ -1083,7 +1083,7 @@ SWEP.Animations = {
     ["reload_ubgl_tishinasetup_soh"] = {
         Source = "reload_tishinasetup",
         Time = 3 / 2,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_MAGIC,
         TPAnimStartTime = 0.1,
         EventTable = {
             {s = "ARC9_BO1.M203_40mmOut", t = 18 / 60},
@@ -1226,7 +1226,7 @@ SWEP.Animations = {
         Source = "reload_in_mksetup",
         Time = 35 / 30,
         RestoreAmmo = 1,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_MAGIC,
         TPAnimStartTime = 0.1,
         EventTable = {
             {s = "ARC9_BO1.MK_Shell", t = 22 / 30},
@@ -1235,7 +1235,7 @@ SWEP.Animations = {
     ["reload_ubgl_insert_mksetup"] = {
         Source = "reload_loop_mksetup",
         Time = 33 / 30,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_MAGIC,
         TPAnimStartTime = 0.1,
         EventTable = {
             {s = "ARC9_BO1.MK_Shell", t = 0 / 30},
@@ -1244,7 +1244,7 @@ SWEP.Animations = {
     ["reload_ubgl_finish_mksetup"] = {
         Source = "reload_out_mksetup",
         Time = 50 / 30,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_MAGIC,
         TPAnimStartTime = 0.1,
         EventTable = {
             {s = "ARC9_BO1.MK_Back", t = 20 / 30 },
