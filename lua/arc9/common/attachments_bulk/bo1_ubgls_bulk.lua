@@ -387,3 +387,98 @@ ATT.ShootEntForceUBGL = 15000
 ATT.MuzzleParticleUBGL = "muzzleflash_m79"
 
 ARC9.LoadAttachment(ATT, "waw_muzz_grenadier")
+
+ATT = {}
+
+ATT.PrintName = [[M203A1 Grenade Launcher]]
+ATT.CompactName = [[M203A1]]
+ATT.Icon = Material("materials/entities/bo1_atts/ubs/m203.png")
+ATT.Description = [[
+    Underbarrel grenade launcher that fires 40mm High Explosive rounds.
+    Reduced handling.
+]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.Free = false
+
+ATT.Category = {"bo1_uni_gls"}
+ATT.ActivateElements = {"bo1_m203_uni"}
+ATT.ExcludeElements = {"no_ubgl"}
+
+ATT.AimDownSightsTimeMult = 1.1
+ATT.SprintToFireTimeMult = 1.1
+
+ATT.Model = "models/weapons/arc9/atts/c_bo1_ub_m203.mdl"
+
+ATT.ModelOffset = Vector(-18.75, -3, 3.75)
+ATT.LHIK = true
+
+ATT.UBGL = true
+ATT.UBGLAmmo = "smg1_grenade"
+ATT.UBGLClipSize = 1
+ATT.UBGLFiremode = 1
+ATT.UBGLFiremodeName = "M203"
+ATT.UBGLChamberSize = 0
+ATT.ShootVolumeUBGL = 110
+
+ATT.SpreadUBGL = -0.2
+
+ATT.FirstShootSoundUBGL = false
+ATT.ShootSoundUBGL = "ARC9_BO1.M203_Fire"
+ATT.DistantShootSoundUBGL = false
+ATT.HasSightsUBGL = false
+
+ATT.EnterUBGLSound = "ARC9_BO1.M203_Open"
+ATT.ExitUBGLSound = "ARC9_BO1.M203_Close"
+
+ATT.ShootEntUBGL = "arc9_bo1_m203_he"
+ATT.ShootEntForceUBGL = 15000
+
+ATT.MuzzleParticleUBGL = "muzzleflash_m79"
+
+ATT.IKAnimationProxy = {
+    ["fire_ubgl"] = {
+        Source = "fire",
+    },
+    ["reload_ubgl"] = {
+        Source = "reload",
+        Time = 3,
+        EventTable = {
+            {s = "ARC9_CDE.M203_Open", t = 0.125},
+            -- {s = "ARC9_CDE.M203_40mmOut", t = 0.175},
+            {s = "ARC9_CDE.M203_40mmIn", t = 1.5},
+            {s = "ARC9_CDE.M203_Close", t = 2.25},
+        },
+    },
+    ["enter_ubgl"] = {
+        Source = "enter_ubgl"
+    },
+    ["idle_ubgl"] = {
+        Source = "idle_glsetup"
+    },
+    ["idle"] = {
+        Source = "idle"
+    },
+    ["exit_ubgl"] = {
+        Source = "exit_ubgl"
+    },
+} -- When an animation event plays, override it with one based on this LHIK model.
+
+ATT.IKGunMotionQCA = 1
+
+ATT.IKGunMotionOffset = Vector(-26.75, 0, 1)
+ATT.IKGunMotionOffsetAngle = Angle(0, 0, 0)
+
+ATT.IKGunMotionMult = 0.5
+ATT.IKGunMotionAngleMult = 0.5
+
+ATT.IKCameraMotionQCA = 4
+ATT.IKCameraMotionOffsetAngle = Angle(0, 0, 0)
+
+-- ATT.ActivePosHook = function(wep, vec)
+--     return vec + Vector(0, 0, 0)
+-- end
+
+ARC9.LoadAttachment(ATT, "bo1_universal_m203")

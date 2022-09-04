@@ -1403,7 +1403,7 @@ SWEP.Animations = {
             -- {s = "ARC9_CDE.M203_40mmOut", t = 0.175},
             {s = "ARC9_CDE.M203_40mmIn", t = 1.5},
             {s = "ARC9_CDE.M203_Close", t = 2.25},
-        }
+        },
     },
     ["enter_sprint_glsetup"] = {
         Source = "sprint_in_glsetup",
