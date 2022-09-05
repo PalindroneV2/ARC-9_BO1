@@ -411,8 +411,7 @@ ATT.AimDownSightsTimeMult = 1.1
 ATT.SprintToFireTimeMult = 1.1
 
 ATT.Model = "models/weapons/arc9/atts/c_bo1_ub_m203.mdl"
-
-ATT.ModelOffset = Vector(-18.75, -3, 3.75)
+ATT.ModelOffset = Vector(-12.6, -3, -3.5)
 ATT.LHIK = true
 
 ATT.UBGL = true
@@ -466,15 +465,15 @@ ATT.IKAnimationProxy = {
     },
 } -- When an animation event plays, override it with one based on this LHIK model.
 
-ATT.IKGunMotionQCA = 1
+ATT.IKGunMotionQCA = nil
 
-ATT.IKGunMotionOffset = Vector(-26.75, 0, 1)
+ATT.IKGunMotionOffset = Vector(0, 3, -1)
 ATT.IKGunMotionOffsetAngle = Angle(0, 0, 0)
 
 ATT.IKGunMotionMult = 0.5
 ATT.IKGunMotionAngleMult = 0.5
 
-ATT.IKCameraMotionQCA = 4
+ATT.IKCameraMotionQCA = 3
 ATT.IKCameraMotionOffsetAngle = Angle(0, 0, 0)
 
 -- ATT.ActivePosHook = function(wep, vec)
