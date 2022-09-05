@@ -217,6 +217,11 @@ SWEP.ReloadHideBoneTables = {
 }
 
 SWEP.AttachmentElements = {
+    ["bo1_igrip"] = {
+        Bodygroups = {
+            {1,1}
+        },
+    },
     ["stock_l"] = {
         Bodygroups = {
             {5,2}
@@ -270,7 +275,7 @@ end
 SWEP.Hook_TranslateAnimation = function (self, anim)
     local attached = self:GetElements()
 
-    if attached["bo1_intgrip"] then
+    if attached["bo1_igrip"] then
         return anim .. "_grip"
     end
 end
@@ -304,9 +309,9 @@ SWEP.Attachments = {
     {
         PrintName = "Underbarrel",
         Bone = "j_pump",
-        Pos = Vector(6.2, 0, 0.125),
+        Pos = Vector(-1, 0, -0.5),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_grips"},
+        Category = {"bo1_grips", "bo1_igrip"},
     },
     {
         PrintName = "Strap",
@@ -416,18 +421,8 @@ SWEP.Animations = {
                 rhik = 1
             },
             {
-                t = 0.2,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.85,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.95,
-                lhik = 0,
+                t = 1,
+                lhik = 1,
                 rhik = 1
             },
         },
@@ -445,18 +440,8 @@ SWEP.Animations = {
                 rhik = 1
             },
             {
-                t = 0.2,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.85,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.95,
-                lhik = 0,
+                t = 1,
+                lhik = 1,
                 rhik = 1
             },
         },
@@ -471,11 +456,11 @@ SWEP.Animations = {
         IKTimeLine = {
             {
                 t = 0,
-                lhik = 0,
+                lhik = 1,
                 rhik = 1
             },
             {
-                t = 0.5,
+                t = 1,
                 lhik = 1,
                 rhik = 1
             },
@@ -547,7 +532,7 @@ SWEP.Animations = {
     ["reload_start_grip"] = {
         Source = "reload_in_grip",
         Time = 15 / 30,
-        RestoreAmmo = 1,
+        -- RestoreAmmo = 1,
     },
     ["reload_insert_grip"] = {
         Source = "reload_loop_grip",
