@@ -4,7 +4,7 @@ ATT = {}
 
 ATT.PrintName = [[Speed Cola]]
 ATT.CompactName = [[SPEED]]
-ATT.Icon = Material("entities/bo1_atts/perks/speed_cola.png")
+ATT.Icon = Material("entities/bo1_atts/perkacola/speed_cola.png")
 ATT.Description = [[
     Reload speed is halved.
 ]]
@@ -24,7 +24,7 @@ ATT = {}
 
 ATT.PrintName = [[Stamin-Up]]
 ATT.CompactName = [[STAMINA]]
-ATT.Icon = Material("entities/bo1_atts/perks/stamin_up.png")
+ATT.Icon = Material("entities/bo1_atts/perkacola/stamin_up.png")
 ATT.Description = [[
     10% Higher Overall Speed.
 ]]
@@ -44,7 +44,7 @@ ATT = {}
 
 ATT.PrintName = [[Double Tap I]]
 ATT.CompactName = [[DT I]]
-ATT.Icon = Material("entities/bo1_atts/perks/double_tap1.png")
+ATT.Icon = Material("entities/bo1_atts/perkacola/double_tap1.png")
 ATT.Description = [[
     33% Fire Rate increase.
 ]]
@@ -64,7 +64,7 @@ ATT = {}
 
 ATT.PrintName = [[Double Tap II]]
 ATT.CompactName = [[DT II]]
-ATT.Icon = Material("entities/bo1_atts/perks/double_tap2.png")
+ATT.Icon = Material("entities/bo1_atts/perkacola/double_tap2.png")
 ATT.Description = [[
     Double damage dealt from firing twice the bullets.
 ]]
@@ -84,8 +84,8 @@ ARC9.LoadAttachment(ATT, "bo1_perkacola_doubletap2")
 ATT = {}
 
 ATT.PrintName = [[Deadshot Daiquiri]]
-ATT.CompactName = [[DEATHSHOT]]
-ATT.Icon = Material("entities/bo1_atts/perks/deadshot.png")
+ATT.CompactName = [[DEADSHOT]]
+ATT.Icon = Material("entities/bo1_atts/perkacola/deadshot.png")
 ATT.Description = [[
     Double damage dealt from firing twice the bullets.
 ]]
@@ -98,6 +98,8 @@ ATT.Free = false
 ATT.Category = {"bo1_perkacola"}
 ATT.ActivateElements = {"deadshot"}
 ATT.HeadshotDamageMult = 2
+ATT.SpreadMultHipfire = 0.7
+ATT.SpreadMultRecoil = 0.7
 
 ARC9.LoadAttachment(ATT, "bo1_perkacola_deadshot")
 
@@ -105,7 +107,7 @@ ATT = {}
 
 ATT.PrintName = [[Juggernog]]
 ATT.CompactName = [[JUG]]
-ATT.Icon = Material("entities/bo1_atts/perks/juggernog.png")
+ATT.Icon = Material("entities/bo1_atts/perkacola/juggernog.png")
 ATT.Description = [[
     Gain 60% resistance to damage.
 ]]
@@ -126,9 +128,9 @@ ATT = {}
 
 ATT.PrintName = [[PhD Flopper]]
 ATT.CompactName = [[PHD]]
-ATT.Icon = Material("entities/bo1_atts/perks/phd_flopper.png")
+ATT.Icon = Material("entities/bo1_atts/perkacola/phd_flopper.png")
 ATT.Description = [[
-    Gain complete resistance to explosives.
+    Gain complete resistance to explosives and fall damage. Falling from any height that would damage the player triggers an explosion.
 ]]
 ATT.Pros = {
     "+ Immunity to explosive damage."
@@ -142,6 +144,27 @@ ATT.Category = {"bo1_perkacola"}
 ATT.ActivateElements = {"phd_flopper"}
 
 ARC9.LoadAttachment(ATT, "bo1_perkacola_phdflopper")
+
+ATT = {}
+
+ATT.PrintName = [[Vulture Aid]]
+ATT.CompactName = [[VULTURE]]
+ATT.Icon = Material("entities/bo1_atts/perkacola/vulture_aid.png")
+ATT.Description = [[
+    Enemies drop ammo pack on death.
+]]
+ATT.Pros = {
+    "+ Immunity to explosive damage."
+}
+ATT.Cons = {}
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.Free = false
+
+ATT.Category = {"bo1_perkacola"}
+ATT.ActivateElements = {"vulture_aid"}
+
+ARC9.LoadAttachment(ATT, "bo1_perkacola_vulture")
 
 local function PlayerDetonate(ply)
     if !ply:IsValid() then return end
@@ -197,3 +220,42 @@ hook.Add("EntityTakeDamage", "ARC9_BO1_PERK_JUG", function(ent, dmg)
         dmg:ScaleDamage(100 / 250)
     end
 end)
+
+hook.Add("Move", "ARC9_BO1_PERK_PRO_STAMINUP", function(ent, mv)
+    if !(ent:IsPlayer() or ent:IsNPC()) then return end
+    local wep = ent:GetActiveWeapon()
+    if !IsValid(wep) or !wep.ARC9 then return end
+    local attached = wep:GetElements()
+    if !attached["staminup"] then return end
+
+    local max = ent:GetMaxSpeed()
+    local s = 1
+
+    if ent:Crouching() then s = s * ent:GetCrouchedWalkSpeed() end
+
+    mv:SetMaxSpeed(max * s * 1.10)
+    mv:SetMaxClientSpeed(max * s * 1.10)
+end)
+
+local function drop(ent, attacker)
+    local wep = IsValid(attacker) and attacker:IsPlayer() and attacker:GetActiveWeapon()
+    if !IsValid(wep) or !wep.ARC9 then return end
+    local attached = wep:GetElements()
+    if !attached["vulture_aid"] then return end
+
+  --  local mult = ent:IsPlayer() and 3 or (math.Clamp(ent:GetMaxHealth() / 100, 0.1, 6))
+
+    local box = ents.Create("arc9_ammo_bo1_drop")
+    box.AmmoType = wep.Primary.Ammo
+    box.AmmoCount = wep:GetCapacity()
+    box:SetPos(ent:WorldSpaceCenter())
+    box:SetAngles(AngleRand(-360, 360))
+    box:Spawn()
+    box:SetOwner(attacker)
+    local phys = box:GetPhysicsObject()
+    phys:ApplyForceCenter(Vector(math.random() * 100 - 50, math.random() * 100 - 50, 200))
+    phys:SetAngleVelocityInstantaneous(VectorRand() * 360)
+    SafeRemoveEntityDelayed(box, 15)
+end
+hook.Add("OnNPCKilled", "ARC9_BO1_PERK_VULTURE", drop)
+hook.Add("PlayerDeath", "ARC9_BO1_PERK_VULTURE", function(ply, infl, atk) drop(ply, atk) end)

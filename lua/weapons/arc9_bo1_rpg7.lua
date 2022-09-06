@@ -127,7 +127,7 @@ SWEP.SpeedMultMelee = 1
 SWEP.SpeedMultCrouch = 1
 SWEP.SpeedMultBlindFire = 1
 
-SWEP.AimDownSightsTime = 0.4
+SWEP.AimDownSightsTime = 1
 SWEP.SprintToFireTime = 0.4
 
 SWEP.RPM = 150
@@ -240,6 +240,8 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     self.ActiveAng = newactang
     self.CrouchPos = newactpos
     self.CrouchAng = newactang
+    self.SprintPos = newactpos
+    self.SprintAng = newactang
 end
 
 SWEP.Hook_TranslateAnimation = function (self, anim)
@@ -294,16 +296,6 @@ SWEP.Animations = {
     ["idle_empty"] = {
         Source = "idle_ads",
         Time = 1 / 35,
-    },
-    ["idle_doom"] = {
-        Source = "idle_ads",
-        Time = 1 / 35,
-    },
-    ["fire_doom"] = {
-        Source = {
-            "fire",
-        },
-        Time = 15 / 35,
     },
     ["draw"] = {
         Source = "draw",
@@ -364,5 +356,28 @@ SWEP.Animations = {
     ["exit_sprint"] = {
         Source = "sprint_out",
         Time = 1,
+    },
+
+    ["idle_doom"] = {
+        Source = "idle_ads",
+        Time = 1 / 35,
+    },
+    ["enter_sprint_doom"] = {
+        Source = "idle_ads",
+        Time = 1 / 35,
+    },
+    ["idle_sprint_doom"] = {
+        Source = "idle_ads",
+        Time = 1 / 35,
+    },
+    ["exit_sprint_doom"] = {
+        Source = "idle_ads",
+        Time = 1 / 35,
+    },
+    ["fire_doom"] = {
+        Source = {
+            "fire",
+        },
+        Time = 15 / 35,
     },
 }

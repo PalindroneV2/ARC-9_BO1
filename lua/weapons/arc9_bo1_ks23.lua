@@ -287,6 +287,8 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     self.ActiveAng = newActiveAng
     self.CrouchPos = newActivePos
     self.CrouchAng = newActiveAng
+    self.SprintPos = newActivePos
+    self.SprintAng = newActiveAng
 end
 
 SWEP.Attachments = {
@@ -300,14 +302,6 @@ SWEP.Attachments = {
         Category = {"bo1_optic"},
         InstalledElements = {"mount"},
         ExcludeElements = {"doom_ee"},
-    },
-    {
-        PrintName = "Perk-a-Cola",
-        DefaultCompactName = "PERK",
-        Bone = "j_gun",
-        Pos = Vector(-5, 0, -5),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_perkacola", "bo1_ks23_doom"},
     },
     {
         PrintName = "Stock",
@@ -344,6 +338,14 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = "universal_camo",
         ExcludeElements = {"doom_ee"},
+    },
+    {
+        PrintName = "Perk-a-Cola",
+        DefaultCompactName = "PERK",
+        Bone = "j_gun",
+        Pos = Vector(-5, 0, -5),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_perkacola", "bo1_ks23_doom"},
     },
 }
 

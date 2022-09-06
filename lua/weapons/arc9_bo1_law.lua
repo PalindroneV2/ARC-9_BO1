@@ -126,8 +126,8 @@ SWEP.SpeedMultMelee = 1
 SWEP.SpeedMultCrouch = 1
 SWEP.SpeedMultBlindFire = 1
 
-SWEP.AimDownSightsTime = 0.3
-SWEP.SprintToFireTime = 0.3
+SWEP.AimDownSightsTime = 1
+SWEP.SprintToFireTime = 0.4
 
 SWEP.Disposable = true
 SWEP.AutoReload = true
