@@ -407,7 +407,8 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(11, 0.105, 1.35),
         Ang = Angle(0, 0, 0),
-        Category = {"bo2_m320", "bo1_grips", "bo1_uni_gls"},
+        Category = {"bo2_m320", "bo1_grips"},
+        MergeSlots = {11},
     },
     {
         PrintName = "Firing Group",
@@ -448,6 +449,14 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = "universal_camo",
     },
+    {
+        Hidden = true,
+        PrintName = "Underbarrel",
+        Bone = "j_gun",
+        Pos = Vector(6.5, 0.105, 1.35),
+        Ang = Angle(0, 180, 0),
+        Category = {"ubgl_picatinny"},
+    },
 }
 
 SWEP.Animations = {
@@ -471,6 +480,28 @@ SWEP.Animations = {
         Time = 2,
         EventTable = {
             {s = "ARC9_BO2.AR_Charge", t = 22 / 35}
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.15,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.8,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.9,
+                lhik = 1,
+                rhik = 1
+            },
         },
     },
     ["fire"] = {

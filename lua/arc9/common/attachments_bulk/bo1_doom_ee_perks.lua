@@ -16,7 +16,7 @@ ATT.Free = false
 ATT.Category = {"waw_perk_ssg"}
 ATT.ActivateElements = {"sawed-off", "stock_h", "ssg"}
 
-ATT.SpeedMult = 2
+ATT.Speed = 2
 
 ATT.NumOverride = 26
 ATT.SpreadMult = 1.25
@@ -66,7 +66,7 @@ ATT.Free = false
 ATT.Category = {"bo1_perk_rpg7"}
 ATT.ActivateElements = {"doom_ee"}
 
-ATT.SpeedMult = 2
+ATT.Speed = 2
 ATT.RecoilMult = 0
 ATT.RecoilUpMult = 0
 ATT.RecoilSideMult = 0
@@ -105,7 +105,7 @@ ATT.Free = false
 ATT.Category = {"bo1_ks23_doom"}
 ATT.ActivateElements = {"doom_ee"}
 
-ATT.SpeedMult = 2
+ATT.Speed = 2
 
 ATT.NumOverride = 8
 ATT.SpreadMult = 0.5
