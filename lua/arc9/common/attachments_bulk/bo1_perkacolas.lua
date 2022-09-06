@@ -182,7 +182,7 @@ hook.Add("EntityTakeDamage", "ARC9_BO1_PERK_PHD", function(ent, dmg)
     end
     if attached["phd_flopper"] and dmg:GetDamageType() == DMG_FALL then
         dmg:ScaleDamage(0)
-        PlayerDetonate(ply)
+        PlayerDetonate(ent)
     end
 end)
 
