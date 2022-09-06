@@ -172,7 +172,7 @@ end
 
 hook.Add("EntityTakeDamage", "ARC9_BO1_PERK_PHD", function(ent, dmg)
     if !(ent:IsPlayer() or ent:IsNPC()) then return end
-    local wep = ply:GetActiveWeapon()
+    local wep = ent:GetActiveWeapon()
     if !IsValid(wep) or !wep.ARC9 then return end
     local attached = wep:GetElements()
     if !attached["phd_flopper"] then return end
@@ -188,7 +188,7 @@ end)
 
 hook.Add("EntityTakeDamage", "ARC9_BO1_PERK_JUG", function(ent, dmg)
     if !(ent:IsPlayer() or ent:IsNPC()) then return end
-    local wep = ply:GetActiveWeapon()
+    local wep = ent:GetActiveWeapon()
     if !IsValid(wep) or !wep.ARC9 then return end
     local attached = wep:GetElements()
     if !attached["juggernog"] then return end
