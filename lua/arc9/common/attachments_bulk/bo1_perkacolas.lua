@@ -170,7 +170,8 @@ local function PlayerDetonate(ply)
     })
 end
 
-hook.Add("EntityTakeDamage", "ARC9_BO1_PERK_PHD", function(ply, dmg)
+hook.Add("EntityTakeDamage", "ARC9_BO1_PERK_PHD", function(ent, dmg)
+    if !(ent:IsPlayer() or ent:IsNPC()) then return end
     local wep = ply:GetActiveWeapon()
     if !IsValid(wep) or !wep.ARC9 then return end
     local attached = wep:GetElements()
@@ -185,7 +186,8 @@ hook.Add("EntityTakeDamage", "ARC9_BO1_PERK_PHD", function(ply, dmg)
     end
 end)
 
-hook.Add("EntityTakeDamage", "ARC9_BO1_PERK_JUG", function(ply, dmg)
+hook.Add("EntityTakeDamage", "ARC9_BO1_PERK_JUG", function(ent, dmg)
+    if !(ent:IsPlayer() or ent:IsNPC()) then return end
     local wep = ply:GetActiveWeapon()
     if !IsValid(wep) or !wep.ARC9 then return end
     local attached = wep:GetElements()
