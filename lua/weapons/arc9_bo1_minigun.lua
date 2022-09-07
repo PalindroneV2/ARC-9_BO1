@@ -142,7 +142,7 @@ SWEP.ShootPitch = 100
 SWEP.ShootPitchVariation = 0
 
 SWEP.FirstShootSound = "ARC9_BO1.Minigun_Start"
-SWEP.ShootSoundLooping = "weapons/arc9/bo1_minigun/looping.wav"
+SWEP.ShootSoundLooping = "^weapons/arc9/bo1_minigun/looping.wav"
 SWEP.DistantShootSound = "ARC9_BO1.Minigun_Ring"
 SWEP.ShootSoundTail = "ARC9_BO1.Minigun_End"
 
