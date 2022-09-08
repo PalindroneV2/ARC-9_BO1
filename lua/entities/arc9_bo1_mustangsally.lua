@@ -5,6 +5,7 @@ ENT.PrintName 			= "1911 PAP Ammo (BO1)"
 
 ENT.Model = "models/weapons/arc9/item/bo1_40mm.mdl"
 ENT.Damage = 700
+ENT.ImpactDamage = 300
 ENT.Radius = 150
 ENT.FuseTime = 0.05
 ENT.Gravity = false

@@ -1,12 +1,12 @@
 SWEP.Base = "arc9_base"
 SWEP.Spawnable = true -- this obviously has to be set to true
-SWEP.Category = "ARC9 - Black Ops II" -- edit this if you like
+SWEP.Category = "ARC9 - World at War" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Ray Gun Mark II"
+SWEP.PrintName = "Ray Gun"
 SWEP.Class = "Wonder Weapon"
 SWEP.Description = [[
-    Second iteration of the classic Ray Gun, now in the format of a first fire SMG.
+    An experimental Nazi Wonder Weapon. Fires green bolts of plasma which explode on impact. Careful not to kill yourself with it.
 ]]
 SWEP.Trivia = {
     Manufacturer = "Group 935",
@@ -14,7 +14,7 @@ SWEP.Trivia = {
     Mechanism = "Unknown",
     Country = "Unknown",
     Year = "Unknown",
-    Games = [[BO2, BO3, BO4]]
+    Games = [[WAW, BO1, BO2, BO3, BO4, BOCW, VG]]
 }
 SWEP.Credits = {
     Author = "Palindrone"
@@ -24,9 +24,9 @@ SWEP.Slot = 4
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/arc9/c_bo2_raygunmk2.mdl"
-SWEP.WorldModel = "models/weapons/arc9/w_bo2_raygunmk2.mdl"
-SWEP.WorldModelMirror = "models/weapons/arc9/w_bo2_raygunmk2.mdl"
+SWEP.ViewModel = "models/weapons/arc9/c_bo1_raygun.mdl"
+SWEP.WorldModel = "models/weapons/arc9/c_bo1_raygun.mdl"
+-- SWEP.WorldModelMirror = "models/weapons/arc9/w_bo2_raygunmk2.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
     Pos        =    Vector(-12, 6.2, -6),
@@ -48,7 +48,7 @@ SWEP.RangeMax = 6000
 SWEP.RangeMin = 1000
 SWEP.Penetration = 50
 SWEP.DamageType = DMG_BULLET
-SWEP.ShootEnt = "ARC9_bo2_rgmk2_bolt"
+SWEP.ShootEnt = "arc9_bo1_raygun_bolt"
 SWEP.ShootEntForce = 10000
 
 SWEP.ArmorPiercing = 1 -- Between 0-1. A proportion of damage that is done as direct damage, ignoring protection.
@@ -60,7 +60,7 @@ SWEP.RicochetChance = 0
 
 SWEP.ExplosionDamage = 500
 SWEP.ExplosionRadius = 1
-SWEP.ExplosionEffect = "rgmk2_impact_glow"
+SWEP.ExplosionEffect = "raygun_splash"
 
 SWEP.BodyDamageMults = {
     [HITGROUP_HEAD] = 2,
@@ -104,7 +104,7 @@ SWEP.SuppressSmokeTrail = false
 -- end
 
 SWEP.ChamberSize = 0 -- dont fucking change this again.
-SWEP.ClipSize = 21 -- DefaultClip is automatically set.
+SWEP.ClipSize = 20 -- DefaultClip is automatically set.
 SWEP.ReloadTime = 1
 
 SWEP.Crosshair = true
@@ -157,15 +157,15 @@ SWEP.SpeedMultBlindFire = 1
 SWEP.AimDownSightsTime = 0.2
 SWEP.SprintToFireTime = 0.2
 
-SWEP.RPM = 500
+SWEP.RPM = 181
 SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
-        Mode = 3,
+        Mode = -1,
     },
 }
 SWEP.RunawayBurst = true
-SWEP.NPCWeaponType = {"weapon_smg1"}
+SWEP.NPCWeaponType = {"weapon_rpg"}
 SWEP.NPCWeight = 100
 
 SWEP.FreeAimRadius = 0 -- In degrees, how much this gun can free aim in hip fire.
@@ -181,7 +181,7 @@ SWEP.ShootVolume = 125
 SWEP.ShootPitch = 100
 SWEP.ShootPitchVariation = 0
 
-SWEP.ShootSound = "ARC9_BO2.RGMK2_Fire"
+SWEP.ShootSound = "ARC9_BO1.RayGun_Fire"
 -- SWEP.ShootSoundSilenced = "ARC9_BO2.MSMC_Sil"
 -- SWEP.DistantShootSound = {
 --     "^weapons/ARC9/bo2_generic_smg/dist1.wav",
@@ -189,10 +189,10 @@ SWEP.ShootSound = "ARC9_BO2.RGMK2_Fire"
 --     "^weapons/ARC9/bo2_generic_smg/dist3.wav"
 -- }
 
-SWEP.MuzzleParticle = "rgmk2_flash" -- Used for some muzzle effects.
-SWEP.MuzzleEffect = "rgmk2_flash"
+SWEP.MuzzleParticle = "raygun_flash" -- Used for some muzzle effects.
+SWEP.MuzzleEffect = "raygun_flash"
 
-SWEP.ImpactEffect = "rgmk2_impact_glow"
+SWEP.ImpactEffect = "raygun_splash"
 SWEP.ImpactDecal = "FadingScorch"
 
 SWEP.ShellModel = nil
@@ -214,8 +214,9 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(-5.325, -3, 0.7),
-    Ang = Angle(0, 0.1, 0),
+    Pos = Vector(-5, -3, 1.75),
+    Ang = Angle(-0.125, -0.6, 0),
+    ViewModelFOV = 60,
     Magnification = 1.1,
     AssociatedSlot = 9,
     CrosshairInSights = false,
@@ -223,11 +224,11 @@ SWEP.IronSights = {
 }
 
 SWEP.HoldtypeHolstered = "passive"
-SWEP.HoldtypeActive = "smg"
-SWEP.HoldtypeSights = "smg"
+SWEP.HoldtypeActive = "revolver"
+SWEP.HoldtypeSights = "revolver"
 
-SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SMG1
-SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_SMG1
+SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_PISTOL
+SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_PISTOL
 SWEP.AnimDraw = ACT_HL2MP_GESTURE_RANGE_ATTACK_KNIFE
 
 SWEP.ActivePos = Vector(0, -4, -1)
@@ -236,12 +237,12 @@ SWEP.ActiveAng = Angle(0, 0, -5)
 SWEP.CrouchPos = SWEP.ActivePos
 SWEP.CrouchAng = SWEP.ActiveAng
 
-SWEP.SprintPos = SWEP.ActivePos
-SWEP.SprintAng = SWEP.ActiveAng
+SWEP.SprintPos = Vector(0, -4, -1)
+SWEP.SprintAng = Angle(20, 0, -10)
 
-SWEP.CustomizePos = Vector(24, 25, 6)
+SWEP.CustomizePos = Vector(26, 25, 6)
 SWEP.CustomizeAng = Angle(90, 0, 0)
-SWEP.CustomizeSnapshotPos = Vector(0, 5, 0)
+SWEP.CustomizeSnapshotPos = Vector(4, 5, 0)
 SWEP.CustomizeSnapshotAng = Angle(0, 0, 0)
 
 SWEP.RestPos = Vector(0, 0, 0)
@@ -261,7 +262,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
 
     local camo = 0
     if attached["bo1_pap"] then
-        camo = camo + 2
+        camo = camo + 1
     end
     vm:SetSkin(camo)
 
@@ -271,10 +272,10 @@ SWEP.HookP_NameChange = function(self, name)
 
     local attached = self:GetElements()
 
-    local gunname = "Ray Gun Mark II"
+    local gunname = "Ray Gun"
 
     if attached["bo1_pap"] then
-        gunname = "Porter's Mark II Ray Gun"
+        gunname = "Porter's X2 Ray Gun"
     end
 
     return gunname
@@ -290,14 +291,15 @@ SWEP.Attachments = {
         Pos = Vector(-10, 0, -5),
         Ang = Angle(0, 0, 0),
         Category = "bo1_perkacola",
+        RejectAttachments = { ["bo1_perkacola_doubletap2"] = true },
     },
     {
         PrintName = "Ammunition",
         DefaultCompactName = "AMMO",
-        Bone = "tag_clip",
-        Pos = Vector(0, 0, -8),
+        Bone = "j_gun",
+        Pos = Vector(2, 0, 2),
         Ang = Angle(0, 0, 0),
-        Category = {"bo2_mk2_pap"},
+        Category = {"bo1_raygun_pap"},
     },
 }
 
@@ -308,16 +310,16 @@ SWEP.Animations = {
     },
     ["draw"] = {
         Source = "draw",
-        Time = 1,
+        Time = 0.66,
     },
     ["holster"] = {
         Source = "holster",
-        Time = 0.75,    },
+        Time = 0.666,
+    },
     ["ready"] = {
         Source = "first_draw",
-        Time = 1.46,
+        Time = 65 / 30,
         EventTable = {
-            {s = "ARC9_BO2.RGMK2_Raise", t = 1 / 30},
             {s = "ARC9_BO1.RayGun_Obtain", t = 1 / 30},
         }
     },
@@ -326,37 +328,27 @@ SWEP.Animations = {
         Time = 12 / 30,
     },
     ["fire_iron"] = {
-        Source = "fire_ads",
+        Source = "fire",
         Time = 12 / 30,
     },
     ["reload"] = {
         Source = "reload",
-        Time = 3.5,
+        Time = 120 / 30,
         EventTable = {
-            {s = "ARC9_BO2.RGMK2_Switch", t = 11 / 30},
-            {s = "ARC9_BO2.RGMK2_Out", t = 25 / 30},
-            {s = "ARC9_BO2.RGMK2_In", t = 70 / 30},
+            {s = "ARC9_BO1.RayGun_Open", t = 11 / 30},
+            {s = "ARC9_BO1.RayGun_Out", t = 38 / 30},
+            {s = "ARC9_BO1.RayGun_In", t = 71 / 30},
+            {s = "ARC9_BO1.RayGun_Close", t = 95 / 30},
         },
     },
     ["reload_empty"] = {
         Source = "reload",
-        Time = 3.5,
+        Time = 120 / 30,
         EventTable = {
-            {s = "ARC9_BO2.RGMK2_Switch", t = 11 / 30},
-            {s = "ARC9_BO2.RGMK2_Out", t = 25 / 30},
-            {s = "ARC9_BO2.RGMK2_In", t = 70 / 30},
+            {s = "ARC9_BO1.RayGun_Open", t = 11 / 30},
+            {s = "ARC9_BO1.RayGun_Out", t = 38 / 30},
+            {s = "ARC9_BO1.RayGun_In", t = 71 / 30},
+            {s = "ARC9_BO1.RayGun_Close", t = 95 / 30},
         },
-    },
-    ["enter_sprint"] = {
-        Source = "sprint_in",
-        Time = 1,
-    },
-    ["idle_sprint"] = {
-        Source = "sprint_loop",
-        Time = 30 / 40
-    },
-    ["exit_sprint"] = {
-        Source = "sprint_out",
-        Time = 1,
     },
 }

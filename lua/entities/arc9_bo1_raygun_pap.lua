@@ -3,6 +3,7 @@ ENT.Base = "arc9_bo1_raygun_bolt"
 ENT.PrintName = "Ray Gun Bolt PAP (BO1)"
 
 ENT.Damage = 2000
+ENT.ImpactDamage = 2000
 ENT.Radius = 75
 
 ENT.RaygunEffect = "raygun_splash_pap"
