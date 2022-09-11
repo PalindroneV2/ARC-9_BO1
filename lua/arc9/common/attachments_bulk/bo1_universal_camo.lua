@@ -525,10 +525,25 @@ ATT.Category = "universal_camo"
 ATT.Description = [[MOM GET THE CAMERA!.]]
 ATT.MenuCategory = "ARC-9 - Camos"
 ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/weed_detail"
-ATT.Folder = "BO1 CAMOS/GAMER"
+ATT.Folder = "GAMER"
 ATT.CustomCamoScale = 5
 
 ARC9.LoadAttachment(ATT, "bo1_camo_weed")
+
+ATT = {}
+
+ATT.PrintName = "Fireblu"
+ATT.FullColorIcon = true
+ATT.CompactName = "FIREBLU"
+ATT.Icon = Material("entities/bo1_camos/fireblu.jpg")
+ATT.Category = "universal_camo"
+ATT.Description = [[Inferno.]]
+ATT.MenuCategory = "ARC-9 - Camos"
+ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/fireblu"
+ATT.Folder = "GAMER"
+ATT.CustomCamoScale = 5
+
+ARC9.LoadAttachment(ATT, "bo1_camo_fireblu")
 
 ATT = {}
 
@@ -540,7 +555,7 @@ ATT.Category = "universal_camo"
 ATT.Description = [[Nothing happened in Tiananmen Square in 1989.]]
 ATT.MenuCategory = "ARC-9 - Camos"
 ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/ccp"
-ATT.Folder = "BO1 CAMOS/GAMER"
+ATT.Folder = "GAMER"
 ATT.CustomCamoScale = 5
 
 ARC9.LoadAttachment(ATT, "bo1_camo_ccp")
@@ -555,7 +570,7 @@ ATT.Category = "universal_camo"
 ATT.Description = [[Are you sure this is where this texture goes?.]]
 ATT.MenuCategory = "ARC-9 - Camos"
 ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/normalmap"
-ATT.Folder = "BO1 CAMOS/GAMER"
+ATT.Folder = "GAMER"
 ATT.CustomCamoScale = 1
 
 ARC9.LoadAttachment(ATT, "bo1_camo_bumpmap")
@@ -570,7 +585,7 @@ ATT.Category = "universal_camo"
 ATT.Description = [[Discount BO1 PAP camo.]]
 ATT.MenuCategory = "ARC-9 - Camos"
 ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/circuit"
-ATT.Folder = "BO1 CAMOS/GAMER"
+ATT.Folder = "GAMER"
 ATT.CustomCamoScale = 2.5
 
 ARC9.LoadAttachment(ATT, "bo1_camo_pap1")
