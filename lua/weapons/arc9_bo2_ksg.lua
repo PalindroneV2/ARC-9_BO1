@@ -263,6 +263,17 @@ end
 SWEP.Hook_TranslateAnimation = function (self, anim)
     local attached = self:GetElements()
 
+    if attached["bo1_pap"] then
+        if anim == "reload_start" then
+            return "reload_start_pap"
+        end
+        if anim == "reload_insert" then
+            return "reload_insert_pap"
+        end
+        if anim == "reload_end" then
+            return "reload_end_pap"
+        end
+    end
     if attached["bo2_fastmag"] then
         if anim == "reload_start" then
             return "reload_start_fast"
@@ -272,6 +283,17 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
         end
         if anim == "reload_end" then
             return "reload_end_fast"
+        end
+        if attached["bo1_pap"] then
+            if anim == "reload_start" then
+                return "reload_start_fast_pap"
+            end
+            if anim == "reload_insert" then
+                return "reload_insert_fast_pap"
+            end
+            if anim == "reload_end" then
+                return "reload_end_fast_pap"
+            end
         end
     end
 end
@@ -289,7 +311,7 @@ SWEP.Attachments = {
     {
         PrintName = "Underbarrel",
         Bone = "j_pump",
-        Pos = Vector(6.2, 0, 0.125),
+        Pos = Vector(-5, 0, 0.25),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_grips"},
     },
@@ -335,16 +357,10 @@ SWEP.Animations = {
     ["draw"] = {
         Source = "draw",
         Time = 1,
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 1,
     },
     ["holster"] = {
         Source = "holster",
         Time = 0.75,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.2,
     },
     ["ready"] = {
         Source = "first_draw",
@@ -399,6 +415,28 @@ SWEP.Animations = {
         EventTable = {
             {s = "ARC9_BO2.Shotgun_Shell", t = 21 / 30},
         },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1
+            },
+            {
+                t = 0.15,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.95,
+                lhik = 0,
+                rhik = 1
+            },
+        },
     },
     ["reload_insert"] = {
         Source = "reload_loop",
@@ -409,6 +447,28 @@ SWEP.Animations = {
         EventTable = {
             {s = "ARC9_BO2.Shotgun_Shell", t = 10 / 30},
         },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.15,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.95,
+                lhik = 0,
+                rhik = 1
+            },
+        },
     },
     ["reload_finish"] = {
         Source = "reload_out",
@@ -416,6 +476,28 @@ SWEP.Animations = {
         EventTable = {
             {s = "ARC9_BO2.Shotgun_Back", t = 8 / 30},
             {s = "ARC9_BO2.Shotgun_Fwd", t = 12 / 30},
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.1,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.25,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.35,
+                lhik = 1,
+                rhik = 1
+            },
         },
     },
     ["enter_sprint"] = {
@@ -442,6 +524,28 @@ SWEP.Animations = {
         EventTable = {
             {s = "ARC9_BO2.Shotgun_Shell", t = 21 / 30},
         },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1
+            },
+            {
+                t = 0.15,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.95,
+                lhik = 0,
+                rhik = 1
+            },
+        },
     },
     ["reload_insert_fast"] = {
         Source = "fast_loop",
@@ -453,6 +557,28 @@ SWEP.Animations = {
         EventTable = {
             {s = "ARC9_BO2.Shotgun_Shell", t = 10 / 30},
         },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.15,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.95,
+                lhik = 0,
+                rhik = 1
+            },
+        },
     },
     ["reload_finish_fast"] = {
         Source = "fast_out",
@@ -460,6 +586,161 @@ SWEP.Animations = {
         EventTable = {
             {s = "ARC9_BO2.Shotgun_Back", t = 8 / 30},
             {s = "ARC9_BO2.Shotgun_Fwd", t = 12 / 30},
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.1,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.25,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.35,
+                lhik = 1,
+                rhik = 1
+            },
+        },
+    },
+
+    --pap
+
+    ["reload_start_pap"] = {
+        Source = "reload_in",
+        Time = 40 / 30,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_MAGIC,
+        RestoreAmmo = 4, -- loads a shell since the first reload has a shell in animation
+        MinProgress = 1,
+        EventTable = {
+            {s = "ARC9_BO2.Shotgun_Shell", t = 21 / 30},
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1
+            },
+            {
+                t = 0.15,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.95,
+                lhik = 0,
+                rhik = 1
+            },
+        },
+    },
+    ["reload_insert_pap"] = {
+        Source = "reload_loop",
+        Time = 26 / 30,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_MAGIC,
+        TPAnimStartTime = 0.3,
+        MinProgress = 15 / 30,
+        RestoreAmmo = 3,
+        EventTable = {
+            {s = "ARC9_BO2.Shotgun_Shell", t = 10 / 30},
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.15,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.95,
+                lhik = 0,
+                rhik = 1
+            },
+        },
+    },
+    ["reload_start_fast_pap"] = {
+        Source = "fast_in",
+        Time = 40 / 30,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_MAGIC,
+        RestoreAmmo = 7, -- loads a shell since the first reload has a shell in animation
+        MinProgress = 1,
+        EventTable = {
+            {s = "ARC9_BO2.Shotgun_Shell", t = 21 / 30},
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1
+            },
+            {
+                t = 0.15,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.95,
+                lhik = 0,
+                rhik = 1
+            },
+        },
+    },
+    ["reload_insert_fast_pap"] = {
+        Source = "fast_loop",
+        Time = 26 / 30,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_MAGIC,
+        TPAnimStartTime = 0.3,
+        MinProgress = 15 / 30,
+        RestoreAmmo = 6,
+        EventTable = {
+            {s = "ARC9_BO2.Shotgun_Shell", t = 10 / 30},
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.15,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.95,
+                lhik = 0,
+                rhik = 1
+            },
         },
     },
 
@@ -507,6 +788,28 @@ SWEP.Animations = {
         EventTable = {
             {s = "ARC9_MW3E.KSG_In", t = 21 / 30},
         },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1
+            },
+            {
+                t = 0.15,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.95,
+                lhik = 0,
+                rhik = 1
+            },
+        },
     },
     ["reload_insert_mw3"] = {
         Source = "reload_loop",
@@ -517,6 +820,28 @@ SWEP.Animations = {
         EventTable = {
             {s = "ARC9_MW3E.KSG_In", t = 10 / 30},
         },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.15,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.95,
+                lhik = 0,
+                rhik = 1
+            },
+        },
     },
     ["reload_finish_mw3"] = {
         Source = "reload_out",
@@ -524,6 +849,28 @@ SWEP.Animations = {
         EventTable = {
             {s = "ARC9_MW3E.KSG_Back", t = 8 / 30},
             {s = "ARC9_MW3E.KSG_Fwd", t = 12 / 30},
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.1,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.25,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.35,
+                lhik = 1,
+                rhik = 1
+            },
         },
     },
     --MW3 fast
@@ -536,6 +883,28 @@ SWEP.Animations = {
         EventTable = {
             {s = "ARC9_MW3E.KSG_In", t = 21 / 30},
         },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1
+            },
+            {
+                t = 0.15,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.95,
+                lhik = 0,
+                rhik = 1
+            },
+        },
     },
     ["reload_insert_fast_mw3"] = {
         Source = "fast_loop",
@@ -547,6 +916,28 @@ SWEP.Animations = {
         EventTable = {
             {s = "ARC9_MW3E.KSG_In", t = 10 / 30},
         },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.15,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.95,
+                lhik = 0,
+                rhik = 1
+            },
+        },
     },
     ["reload_finish_fast_mw3"] = {
         Source = "fast_out",
@@ -554,6 +945,28 @@ SWEP.Animations = {
         EventTable = {
             {s = "ARC9_MW3E.KSG_Back", t = 8 / 30},
             {s = "ARC9_MW3E.KSG_Fwd", t = 12 / 30},
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.1,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.25,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.35,
+                lhik = 1,
+                rhik = 1
+            },
         },
     },
 }

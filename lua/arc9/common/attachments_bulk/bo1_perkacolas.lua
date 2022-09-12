@@ -56,7 +56,8 @@ ATT.Free = false
 
 ATT.Category = {"bo1_perkacola"}
 ATT.ActivateElements = {"doubletap1"}
-ATT.RPMMult = 1.33
+ATT.RPMMult = 4 / 3
+ATT.CycleTimeMult = 2 / 3
 
 ARC9.LoadAttachment(ATT, "bo1_perkacola_doubletap1")
 
