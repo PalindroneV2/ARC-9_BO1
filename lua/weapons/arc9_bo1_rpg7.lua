@@ -197,6 +197,14 @@ SWEP.AnimDraw = ACT_HL2MP_GESTURE_RANGE_ATTACK_KNIFE
 SWEP.ActivePos = Vector(3, 4, -1)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
+SWEP.MovingPos = SWEP.ActivePos
+SWEP.MovingAng = SWEP.ActiveAng
+
+SWEP.MovingMidPoint = {
+    Pos = SWEP.ActivePos,
+    Ang = SWEP.ActiveAng
+}
+
 SWEP.CrouchPos = Vector(3, 4, -1)
 SWEP.CrouchAng = Angle(0, 0, 0)
 
@@ -238,6 +246,8 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     end
     self.ActivePos = newactpos
     self.ActiveAng = newactang
+    self.MovingPos = newActivePos
+    self.MovingAng = newActiveAng
     self.CrouchPos = newactpos
     self.CrouchAng = newactang
     self.SprintPos = newactpos
