@@ -298,7 +298,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         newang = Angle(0.025, 0.1, 0)
     end
 
-    if attached["usgi_iron"] then
+    if attached["matech_iron"] then
         vm:SetBodygroup(2,2)
         newpos = Vector(-2.825, -1.5, 0.4)
         newang = Angle(0.03, -0.9, 0)

@@ -277,7 +277,7 @@ SWEP.AttachmentElements = {
             {4,5},
         },
     },
-    ["usgi_iron"] = {
+    ["matech_iron"] = {
         Bodygroups = {
             {6,3},
         },
@@ -503,7 +503,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
             gasblock = 4
             frontsight = 7
         end
-    elseif attached["usgi_front"] then
+    elseif attached["matech_front"] then
         frontsight = 3
         gasblock = 2
         if attached["carbine"] then
@@ -602,7 +602,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
             newang = Angle(0.05, 0.9, 0)
         end
     end
-    if attached["retro_ar15_iron_usgi"] then
+    if attached["retro_ar15_iron_matech"] then
         newpos = Vector(-2.765, -2, 0.275)
         newang = Angle(0.0375, -0.05, 0)
         if gasblock == 1 then

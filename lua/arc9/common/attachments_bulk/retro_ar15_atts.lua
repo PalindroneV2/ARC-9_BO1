@@ -444,9 +444,9 @@ ARC9.LoadAttachment(ATT, "retro_ar15_front_troy")
 
 ATT = {}
 
-ATT.PrintName = "USGI Flip-Up Front Sight"
-ATT.CompactName = "USGI"
-ATT.Icon = Material("entities/bo1_atts/optics/retro_ar15/usgi_side.png")
+ATT.PrintName = "MaTech Flip-Up Front Sight"
+ATT.CompactName = "MaTech"
+ATT.Icon = Material("entities/bo1_atts/optics/retro_ar15/matech_side.png")
 ATT.Description = [[United States General Issue front sight.
 
 Functions identically to other iron sights.]]
@@ -455,11 +455,11 @@ ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = true
 
 ATT.Category = {"retro_ar15_front_iron"}
-ATT.ActivateElements = {"usgi_front"}
+ATT.ActivateElements = {"matech_front"}
 ATT.ExcludeElements = {"mw2_m4_irons"}
 -- ATT.ExcludeElements = {"bo1_rail_riser", "mw2_m4_irons"}
 
-ARC9.LoadAttachment(ATT, "retro_ar15_front_usgi")
+ARC9.LoadAttachment(ATT, "retro_ar15_front_matech")
 
 ATT = {}
 
@@ -1124,7 +1124,7 @@ ATT = {}
 
 ATT.PrintName = "III-ARC MP Folding Sight"
 ATT.CompactName = "III-ARC"
-ATT.Icon = Material("entities/bo1_atts/optics/retro_ar15/troy_side.png")
+ATT.Icon = Material("entities/bo1_atts/optics/retro_ar15/3arc_side.png")
 ATT.Description = [[Aftermarket MP flip-up rear si- Wait...
 Is that just a Troy sight put on backwards?
 
@@ -1143,9 +1143,9 @@ ARC9.LoadAttachment(ATT, "retro_ar15_iron_3arc")
 
 ATT = {}
 
-ATT.PrintName = "USGI Flip-Up Rear Sight"
-ATT.CompactName = "USGI"
-ATT.Icon = Material("entities/bo1_atts/optics/retro_ar15/usgi_side.png")
+ATT.PrintName = "MaTech Flip-Up Rear Sight"
+ATT.CompactName = "MaTech"
+ATT.Icon = Material("entities/bo1_atts/optics/retro_ar15/matech_side.png")
 ATT.Description = [[United States General Issue rear sight.
 
 Functions identically to other iron sights.]]
@@ -1157,9 +1157,9 @@ ATT.Folder = "AR-15 IRONS"
 ATT.InvAtt = "retro_ar15_upper_a4"
 ATT.Category = {"retro_ar15_iron"}
 ATT.IconOffset = Vector(-5, 0, 0)
-ATT.ActivateElements = {"usgi_iron"}
+ATT.ActivateElements = {"matech_iron"}
 
-ARC9.LoadAttachment(ATT, "retro_ar15_iron_usgi")
+ARC9.LoadAttachment(ATT, "retro_ar15_iron_matech")
 
 -- FIREMODES
 ATT = {}
