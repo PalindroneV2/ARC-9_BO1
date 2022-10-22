@@ -126,7 +126,14 @@ SWEP.Num = 8
 SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
+        PrintName = "PUMP",
+        Mode = 1,
+        ActivateElements = {"normal"},
+    },
+    {
+        PrintName = "SLAM",
         Mode = -1,
+        ActivateElements = {"slam"},
     },
 }
 SWEP.ManualActionChamber = 1 -- How many shots we go between needing to cycle again.
@@ -283,9 +290,15 @@ end
 SWEP.Hook_TranslateAnimation = function (self, anim)
     local attached = self:GetElements()
 
-    if attached["bo1_igrip"] then
-        return anim .. "_grip"
+    if (self:GetFiremodeName() == "SLAM") and (anim == "cycle") then
+        nanim = anim .. "_iron"
     end
+
+    if attached["bo1_igrip"] then
+        nanim = anim .. "_grip"
+    end
+
+    return nanim
 end
 
 SWEP.Attachments = {
