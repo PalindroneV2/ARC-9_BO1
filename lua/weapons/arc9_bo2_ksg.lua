@@ -204,6 +204,7 @@ SWEP.MovingMidPoint = {
     Ang = SWEP.ActiveAng
 }
 
+SWEP.SprintVerticalOffset = false
 SWEP.SprintPos = Vector(0, -1, -1)
 SWEP.SprintAng = Angle(0, 0, 0)
 

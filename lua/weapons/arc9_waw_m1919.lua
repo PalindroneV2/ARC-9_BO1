@@ -226,6 +226,7 @@ SWEP.BipodAng = Angle(-2.45, 0, 0)
 SWEP.CrouchPos = Vector(0, 1, -1)
 SWEP.CrouchAng = Angle(0, 0, -5)
 
+SWEP.SprintVerticalOffset = false
 SWEP.SprintPos = Vector(9, 0, -1)
 SWEP.SprintAng = Angle(45, -7, -5)
 
