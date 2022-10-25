@@ -19,7 +19,7 @@ ATT.Attachments = {
     {
         PrintName = "Optic",
         Bone = "j_gun",
-        Pos = Vector(9.25, 0.075, -0.075),
+        Pos = Vector(9.25, 0.1, -0.1),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_optic", "bo1_rail_riser"},
         InstalledElements = {"mount"},
@@ -323,7 +323,7 @@ ATT.Attachments = {
     {
         PrintName = "Optic",
         Bone = "j_gun",
-        Pos = Vector(4.9, 0.1, -2.1),
+        Pos = Vector(4.9, 0, -2),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 1.5),
         Category = {"bo1_optic", "bo1_rail_riser"},

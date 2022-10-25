@@ -67,7 +67,7 @@ SWEP.BodyDamageMults = {
 SWEP.TracerNum = 1 -- Tracer every X
 SWEP.TracerFinalMag = 0 -- The last X bullets in a magazine are all tracers
 SWEP.TracerEffect = "arccw_swarms_tracer_red" -- The effect to use for hitscan tracers
-SWEP.TracerColor = Color(255, 0, 0) -- Color of tracers. Only works if tracer effect supports it. For physical bullets, this is compressed down to 9-bit color.
+SWEP.TracerColor = Color(255, 255, 255) -- Color of tracers. Only works if tracer effect supports it. For physical bullets, this is compressed down to 9-bit color.
 
 SWEP.ChamberSize = 0 -- dont fucking change this again.
 SWEP.ClipSize = 30 -- DefaultClip is automatically set.
@@ -533,9 +533,9 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         if hand == 5 then
             gasblock = 3
         end
-        if attached["carbine"] then
+        if attached["carbine_hg"] then
             gasblock = 3
-            if length == 1 then gasblock = 2 end
+            if length == 1 then gasblock = 3 end
         end
         -- if length <= 2 and hand == 3 then
         --     frontsight = 0

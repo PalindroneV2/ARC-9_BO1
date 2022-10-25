@@ -234,7 +234,7 @@ ATT.TracerNum = 1
 ATT.TracerFinalMag = 5
 ATT.TracerColor = Color(233, 34, 93)
 
-ATT.TracerSizeAdd = 10
+ATT.TracerSizeAdd = 2
 
 ARC9.LoadAttachment(ATT, "bo1_ammo_pap_launcher")
 
@@ -272,7 +272,7 @@ ATT.DistantShootSound = {
 
 ATT.MuzzleParticle = "rgmk2_pap_flash"
 ATT.TracerColor = Color(233, 34, 93)
-ATT.TracerSizeAdd = 10
+ATT.TracerSizeAdd = 2
 
 ARC9.LoadAttachment(ATT, "bo1_ammo_pap")
 
