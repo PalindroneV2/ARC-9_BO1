@@ -479,6 +479,9 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         hand = 10
         gasblock = 4
         covers = 1
+    elseif attached["handguard_mlok"] then
+        hand = 11
+        -- gasblock = 4
     end
     if attached["removecovers"] then covers = 0 end
 
@@ -499,6 +502,10 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
             if length == 2 then
                 gasblock = 4
             end
+        end
+        if hand == 11 then
+            frontsight = 1
+            gasblock = 4
         end
         if hand == 10 then
             gasblock = 4
@@ -526,6 +533,10 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
             gasblock = 4
             frontsight = 8
         end
+        if hand == 11 then
+            frontsight = 3
+            gasblock = 4
+        end
     elseif attached["gasblock_flat"] then
         gasblock = 2
         if length == 2 and hand == 3 then
@@ -537,6 +548,9 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         if attached["carbine_hg"] then
             gasblock = 3
             if length == 1 then gasblock = 3 end
+        end
+        if hand == 11 then
+            gasblock = 4
         end
         -- if length <= 2 and hand == 3 then
         --     frontsight = 0
@@ -552,7 +566,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     vm:SetBodygroup(9, frontsight)
     vm:SetBodygroup(11, covers)
 
-    if !attached["carbine_hg"] and hand != 3 and attached["cde_m203"] then -- FORCIBLY ATTACH M203 HEATSHIELD ON A1/A2 HANDGUARDS
+    if !attached["carbine_hg"] and hand != 3 and hand != 11 and attached["cde_m203"] then -- FORCIBLY ATTACH M203 HEATSHIELD ON A1/A2 HANDGUARDS
         vm:SetBodygroup(3, 1)
     end
     if (length == 3 or length == 4 or length == 9) and attached["cde_m203"] then -- SHORTEN M203 ON 10.5 BARREL

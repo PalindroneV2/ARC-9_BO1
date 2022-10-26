@@ -589,3 +589,18 @@ ATT.Folder = "GAMER"
 ATT.CustomCamoScale = 2.5
 
 ARC9.LoadAttachment(ATT, "bo1_camo_pap1")
+
+ATT = {}
+
+ATT.PrintName = "Benjamins"
+ATT.FullColorIcon = true
+ATT.CompactName = "$100"
+ATT.Icon = Material("entities/bo1_camos/benjamins.png")
+ATT.Category = "universal_camo"
+ATT.Description = [[Discount BO1 PAP camo.]]
+ATT.MenuCategory = "ARC-9 - Camos"
+ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/benjamins"
+ATT.Folder = "GAMER"
+ATT.CustomCamoScale = 2.5
+
+ARC9.LoadAttachment(ATT, "bo1_camo_benjamins")
