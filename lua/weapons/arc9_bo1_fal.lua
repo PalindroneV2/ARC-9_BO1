@@ -12,11 +12,11 @@ SWEP.Description = [[
 ]]
 SWEP.Trivia = {
     Manufacturer = "FN Herstal",
-    Calibre = "5.56x45mm NATO",
+    Calibre = "7.62x51mm NATO",
     Mechanism = "Gas-Operated",
     Country = "Belgium",
     Year = 1953,
-    Games = [[MW2, BO1, BO2]]
+    Games = [[MW2, BO1, BO2, MW19]]
 }
 SWEP.Credits = {
     Author = "Palindrone"
