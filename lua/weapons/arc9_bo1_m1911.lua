@@ -214,14 +214,14 @@ SWEP.ExtraSightDist = 15
 SWEP.AttachmentElements = {
     ["longbarrel"] = {
         AttPosMods = {
-            [2] = {
+            [1] = {
                 Pos = Vector(7.875, 0.175, 1.05)
             },
         },
     },
     ["shortbarrel"] = {
         AttPosMods = {
-            [2] = {
+            [1] = {
                 Pos = Vector(4.65, 0.175, 1.05)
             },
         },
@@ -267,7 +267,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local comp = 0
 
 
-    if attached["m191_comp"] then
+    if attached["m1911_comp"] then
         comp = 1
     end
 
@@ -406,14 +406,6 @@ end
 
 SWEP.Attachments = {
     {
-        PrintName = "Perk-a-Cola",
-        DefaultCompactName = "PERK",
-        Bone = "j_gun",
-        Pos = Vector(-5, 0, -5),
-        Ang = Angle(0, 0, 0),
-        Category = "bo1_perkacola",
-    },
-    {
         PrintName = "Muzzle",
         DefaultCompactName = "Muzz",
         Bone = "j_gun",
@@ -494,6 +486,14 @@ SWEP.Attachments = {
         Pos = Vector(-1.25, 0, -3),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ammo", "bo1_pap", "bo1_pap_1911"},
+    },
+    {
+        PrintName = "Perk-a-Cola",
+        DefaultCompactName = "PERK",
+        Bone = "j_gun",
+        Pos = Vector(-5, 0, -5),
+        Ang = Angle(0, 0, 0),
+        Category = "bo1_perkacola",
     },
 }
 
