@@ -1486,7 +1486,7 @@ ATT.SortOrder = 2
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 
-ATT.Category = {"retro_ar15_mag"}
+ATT.Category = {"retro_ar15_mag", "mwc_ar15_mag"}
 ATT.ActivateElements = {"40_mag"}
 ATT.ReloadTimeMult = 1.1
 ATT.ClipSize = 40
@@ -1510,7 +1510,7 @@ ATT.SortOrder = 4
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 
-ATT.Category = {"retro_ar15_mag"}
+ATT.Category = {"retro_ar15_mag", "mwc_ar15_mag"}
 ATT.ActivateElements = {"60_mag"}
 ATT.ReloadTimeMult = 1.25
 ATT.ClipSize = 60
@@ -1534,7 +1534,7 @@ ATT.SortOrder = 1
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 
-ATT.Category = {"retro_ar15_mag"}
+ATT.Category = {"retro_ar15_mag", "mwc_ar15_mag"}
 ATT.ActivateElements = {"pul_mag"}
 ATT.ReloadTimeMult = 0.9
 
@@ -1555,7 +1555,7 @@ ATT.SortOrder = 3
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 
-ATT.Category = {"retro_ar15_mag"}
+ATT.Category = {"retro_ar15_mag", "mwc_ar15_mag"}
 ATT.ActivateElements = {"pul_40_mag"}
 ATT.ReloadTimeMult = 1.1
 ATT.ClipSize = 40
@@ -1578,7 +1578,7 @@ ATT.SortOrder = 5
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 
-ATT.Category = {"retro_ar15_mag"}
+ATT.Category = {"retro_ar15_mag", "mwc_ar15_mag"}
 ATT.ActivateElements = {"9mm_mag"}
 ATT.ReloadTimeMult = 0.9
 ATT.ClipSize = 32
