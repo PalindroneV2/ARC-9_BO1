@@ -673,8 +673,11 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     if attached["universal_camo"] then
         camo = 1
     end
+    if attached["camo_full"] then
+        camo = 2
+    end
     if attached["bo1_pap"] then
-        camo = camo + 2
+        camo = camo + 3
     end
     vm:SetSkin(camo)
 
@@ -998,6 +1001,15 @@ SWEP.Attachments = {
         Pos = Vector(-6, 0, 2.65),
         Ang = Angle(0, 0, 0),
         Category = {"universal_camo"},
+        InstalledElements = {"unicamo_activate"}
+    },
+    {
+        PrintName = "Paintjob",
+        Bone = "j_gun",
+        Pos = Vector(-9, 0, 2.65),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_camo_full"},
+        RequireElements = {"unicamo_activate"},
     },
     {
         PrintName = "Perk-a-Cola",

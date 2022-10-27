@@ -19,7 +19,7 @@
 	"$envmapfresnel" "0.01"
 	"$envmaptint" "[ .01 .01 .01 ]"
 
-	$detailblendmode 2
+	$detailblendmode 4
 	$detailblendfactor 0.5
 	Proxies {
 		CustomCamo {
