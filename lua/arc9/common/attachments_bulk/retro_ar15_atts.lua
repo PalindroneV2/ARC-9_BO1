@@ -2056,7 +2056,7 @@ ATT.Attachments = {
         Pos = Vector(-1, 0, -0.6),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(1.5, 0, 1),
-        MergeSlots = {2}
+        MergeSlots = {2},
     },
     {
         Hidden = true,
