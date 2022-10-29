@@ -117,7 +117,7 @@ ATT.Attachments = {
         Pos = Vector(-2, 0, 0.35),
         Ang = Angle(0, 0, 0),
         Category = {"cde_m203", "bo1_rail_underbarrel"},
-        ExcludeElements = {"ar15_ris", "is_patriot"}
+        ExcludeElements = {"ar15_ris", "mlok", "is_patriot"}
     },
     {
         PrintName = "Gasblock",
@@ -126,7 +126,7 @@ ATT.Attachments = {
         Pos = Vector(-6, 0, -2.5),
         Ang = Angle(0, 0, 0),
         Category = {"retro_ar15_front_cut"},
-        ExcludeElements = {"ar15_ris", "handguard_patriot"}
+        ExcludeElements = {"ar15_ris", "mlok", "handguard_patriot"}
     },
 }
 
@@ -200,7 +200,7 @@ ATT.Attachments = {
         Pos = Vector(-2, 0, 0.35),
         Ang = Angle(0, 0, 0),
         Category = {"cde_m203", "bo1_mk", "bo1_rail_underbarrel"},
-        ExcludeElements = {"ar15_ris"}
+        ExcludeElements = {"ar15_ris", "mlok"}
     },
     {
         PrintName = "Gasblock",
@@ -209,7 +209,7 @@ ATT.Attachments = {
         Pos = Vector(-6, 0, -2.5),
         Ang = Angle(0, 0, 0),
         Category = {"retro_ar15_front_cut"},
-        ExcludeElements = {"ar15_ris"}
+        ExcludeElements = {"ar15_ris", "mlok", "handguard_patriot"}
     },
 }
 
@@ -305,7 +305,7 @@ ATT.Attachments = {
         Pos = Vector(-2, 0, 0.35),
         Ang = Angle(0, 0, 0),
         Category = {"cde_m203", "bo1_mk", "bo1_rail_underbarrel"},
-        ExcludeElements = {"ar15_ris"}
+        ExcludeElements = {"ar15_ris", "mlok"}
     },
     {
         PrintName = "Gasblock",
@@ -314,7 +314,7 @@ ATT.Attachments = {
         Pos = Vector(-6, 0, -2.5),
         Ang = Angle(0, 0, 0),
         Category = {"retro_ar15_front_cut"},
-        ExcludeElements = {"ar15_ris"}
+        ExcludeElements = {"ar15_ris", "mlok", "handguard_patriot"}
     },
 }
 
@@ -359,7 +359,7 @@ ATT.Attachments = {
         PrintName = "Handguard",
         DefaultCompactName = "A1",
         DefaultIcon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m4.png", "mips smooth"),
-        Category = {"retro_ar15_handguard_carbine", "retro_ar15_handguard_20", "retro_ar15_handguard_16"},
+        Category = {"retro_ar15_handguard_carbine", "retro_ar15_handguard_20", "retro_ar15_handguard_14", "retro_ar15_handguard_16"},
         Bone = "j_gun",
         Pos = Vector(0, 0, -2),
         Ang = Angle(0, 0, 0),
@@ -379,7 +379,7 @@ ATT.Attachments = {
         Pos = Vector(-11, 0, -2.5),
         Ang = Angle(0, 0, 0),
         Category = {"retro_ar15_front_cut"},
-        ExcludeElements = {"ar15_ris"}
+        ExcludeElements = {"ar15_ris", "mlok", "handguard_patriot"}
     },
     -- {
     --     PrintName = "Cosmetic II",
@@ -594,16 +594,16 @@ ATT.Attachments = {
         Category = {"cde_m203", "bo1_mk", "bo1_grips"},
     },
     {
-        PrintName = "Tactical Left",
-        DefaultCompactName = "TAC L",
+        PrintName = "Tactical Right",
+        DefaultCompactName = "TAC R",
         Bone = "j_gun",
         Pos = Vector(-8, 0.7, 1.5),
         Ang = Angle(0, 0, -90),
         Category =  {"bo1_tactical"}
     },
     {
-        PrintName = "Tactical Right",
-        DefaultCompactName = "TAC R",
+        PrintName = "Tactical Left",
+        DefaultCompactName = "TAC L",
         Bone = "j_gun",
         Pos = Vector(-8, -0.7, 1.5),
         Ang = Angle(0, 0, 90),
@@ -650,7 +650,7 @@ ATT.AimDownSightsTimeMult = 1.15
 ATT.SprintToFireTimeMult = 1.15
 
 ATT.Category = {"retro_ar15_handguard_20"}
-ATT.ActivateElements = {"handguard_mlok", "nosling", "no_ub_rail", "ar15_ris", "no_tac_rail"}
+ATT.ActivateElements = {"handguard_mlok", "mlok", "nosling", "no_ub_rail", "no_tac_rail"}
 
 ATT.Attachments = {
     {
@@ -672,34 +672,16 @@ ATT.Attachments = {
         Category = {"cde_m203", "bo1_mk", "bo1_grips"},
     },
     {
-        PrintName = "Backup Optic Left",
-        DefaultCompactName = "BACKUP L",
-        Bone = "j_gun",
-        Pos = Vector(-1.75, -0.9, 0.4),
-        Ang = Angle(0, 0, -37.5),
-        Category =  {"bo1_optic_lp"},
-        KeepBaseIrons = true,
-    },
-    {
-        PrintName = "Backup Optic Right",
-        DefaultCompactName = "BACKUP R",
-        Bone = "j_gun",
-        Pos = Vector(-1.75, 0.9, 0.4),
-        Ang = Angle(0, 0, 37.5),
-        Category =  {"bo1_optic_lp"},
-        KeepBaseIrons = true,
-    },
-    {
-        PrintName = "Tactical Left",
-        DefaultCompactName = "TAC L",
+        PrintName = "Tactical Right",
+        DefaultCompactName = "TAC R",
         Bone = "j_gun",
         Pos = Vector(-9, 0.9, 1.5),
         Ang = Angle(0, 0, -90),
         Category =  {"bo1_tactical"}
     },
     {
-        PrintName = "Tactical Right",
-        DefaultCompactName = "TAC R",
+        PrintName = "Tactical Left",
+        DefaultCompactName = "TAC L",
         Bone = "j_gun",
         Pos = Vector(-9, -0.9, 1.5),
         Ang = Angle(0, 0, 90),
@@ -722,6 +704,26 @@ ATT.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"bo1_tactical", "bo1_bipod"},
         ExcludeElements = {"cde_m203", "bo1_mk"}
+    },
+    {
+        PrintName = "Backup Optic Left",
+        DefaultCompactName = "BACKUP L",
+        Bone = "j_gun",
+        Pos = Vector(-1.75, -0.9, 0.4),
+        Ang = Angle(0, 0, -37.5),
+        Category =  {"bo1_optic_lp", "bo1_rail_riser"},
+        KeepBaseIrons = true,
+        RejectAttachments = { ["bo1_rail_hk_riser"] = true },
+    },
+    {
+        PrintName = "Backup Optic Right",
+        DefaultCompactName = "BACKUP R",
+        Bone = "j_gun",
+        Pos = Vector(-1.75, 0.9, 0.4),
+        Ang = Angle(0, 0, 37.5),
+        Category =  {"bo1_optic_lp", "bo1_rail_riser"},
+        KeepBaseIrons = true,
+        RejectAttachments = { ["bo1_rail_hk_riser"] = true },
     },
 }
 
@@ -790,13 +792,14 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 
-ATT.Category = {"retro_ar15_handguard_14"}
+ATT.Category = {"retro_ar15_handguard_20", "retro_ar15_handguard_carbine"}
 ATT.ActivateElements = {"handguard_famas", "no_gasblock", "nosling", "carbine_hg"}
 
 ATT.IronSights = {
-    Pos = Vector(-2.75, 3, -0.4),
-    Ang = Angle(0.045, 0.45, 0),
+    Pos = Vector(-2.74, -2, -0.4),
+    Ang = Angle(0.1, 0.45, 0),
     Magnification = 1.1,
+    ViewModelFOV = 60,
     CrosshairInSights = false,
 }
 
@@ -897,8 +900,8 @@ ATT.Attachments = {
         InstalledElements = {"allowtac"},
     },
     {
-        PrintName = "Tactical Left",
-        DefaultCompactName = "TAC L",
+        PrintName = "Tactical Right",
+        DefaultCompactName = "TAC R",
         Bone = "j_gun",
         Pos = Vector(-3.5, 0.7, 1.5),
         Ang = Angle(0, 0, -90),
@@ -907,8 +910,8 @@ ATT.Attachments = {
         RequireElements = {"allowtac"},
     },
     {
-        PrintName = "Tactical Right",
-        DefaultCompactName = "TAC R",
+        PrintName = "Tactical Left",
+        DefaultCompactName = "TAC L",
         Bone = "j_gun",
         Pos = Vector(-3.5, -0.7, 1.5),
         Ang = Angle(0, 0, 90),
@@ -929,6 +932,98 @@ ATT.Attachments = {
 }
 
 ARC9.LoadAttachment(ATT, "retro_ar15_handguard_ris")
+
+ATT = {}
+
+ATT.PrintName = [[M-LOK Short Handguard]]
+ATT.CompactName = [[MLOK S]]
+ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m16.png", "mips smooth")
+ATT.Description = [[A carbine-length handguard with M-LOK mounts.
+
+Allows for the attachment of alternative front sights and tactical attachments on all 4 sides, plus a canted mounted rail for a backup optic.
+
+Stats identical to other handguards.]]
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.Free = false
+
+ATT.Category = {"retro_ar15_handguard_carbine"}
+ATT.ActivateElements = {"nosling", "mlok", "handguard_mlok_short", "no_ub_rail", "carbine_hg"}
+
+ATT.Attachments = {
+    {
+        PrintName = "Front",
+        Category = {"retro_ar15_front_iron", "retro_ar15_front_cut"},
+        UnInstalledElements = {"gasblock_carbine"},
+        InstalledElements = {"gasblock_carbine_cut"},
+        ExcludeElements = {"mw2_m4_irons"},
+        -- ExcludeElements = {"bo1_optic", "bo1_rail_riser", "mw2_m4_irons", "bo1_tactical"},
+        Bone = "j_gun",
+        Pos = Vector(-4, 0, -1),
+        Ang = Angle(0, 0, 0),
+    },
+    {
+        PrintName = "Underbarrel",
+        DefaultCompactName = "UB",
+        Bone = "j_gun",
+        Pos = Vector(-3, 0, 2.45),
+        Ang = Angle(0, 0, 0),
+        Category = {"cde_m203", "bo1_mk", "bo1_grips"},
+        InstalledElements = {"allowtac"},
+    },
+    {
+        PrintName = "Tactical Right",
+        DefaultCompactName = "TAC R",
+        Bone = "j_gun",
+        Pos = Vector(-4.5, 0.9, 1.5),
+        Ang = Angle(0, 0, -90),
+        Category =  {"bo1_tactical"},
+        InstalledElements = {"removecovers"},
+        RequireElements = {"allowtac"},
+    },
+    {
+        PrintName = "Tactical Left",
+        DefaultCompactName = "TAC L",
+        Bone = "j_gun",
+        Pos = Vector(-4.5, -0.9, 1.5),
+        Ang = Angle(0, 0, 90),
+        Category =  {"bo1_tactical"},
+        InstalledElements = {"removecovers"},
+        RequireElements = {"allowtac"},
+    },
+    {
+        PrintName = "Tactical Top",
+        DefaultCompactName = "TAC TOP",
+        Bone = "j_gun",
+        Pos = Vector(-3, 0, 0.5),
+        Ang = Angle(0, 0, 180),
+        Category =  {"bo1_tactical_top"},
+        RequireElements = {"gasblock_flat"},
+        ExcludeElements = {"mw2_m4_top"}
+    },
+    {
+        PrintName = "Backup Optic Left",
+        DefaultCompactName = "BACKUP L",
+        Bone = "j_gun",
+        Pos = Vector(-1.75, -0.9, 0.4),
+        Ang = Angle(0, 0, -37.5),
+        Category =  {"bo1_optic_lp", "bo1_rail_riser"},
+        KeepBaseIrons = true,
+        RejectAttachments = { ["bo1_rail_hk_riser"] = true },
+    },
+    {
+        PrintName = "Backup Optic Right",
+        DefaultCompactName = "BACKUP R",
+        Bone = "j_gun",
+        Pos = Vector(-1.75, 0.9, 0.4),
+        Ang = Angle(0, 0, 37.5),
+        Category =  {"bo1_optic_lp", "bo1_rail_riser"},
+        KeepBaseIrons = true,
+        RejectAttachments = { ["bo1_rail_hk_riser"] = true },
+    },
+}
+
+ARC9.LoadAttachment(ATT, "retro_ar15_handguard_mlok_short")
 
 ATT = {}
 
@@ -968,8 +1063,8 @@ ATT.Attachments = {
         InstalledElements = {"allowtac"},
     },
     {
-        PrintName = "Tactical Left",
-        DefaultCompactName = "TAC L",
+        PrintName = "Tactical Right",
+        DefaultCompactName = "TAC R",
         Bone = "j_gun",
         Pos = Vector(-3.5, 0.7, 1.5),
         Ang = Angle(0, 0, -90),
@@ -978,8 +1073,8 @@ ATT.Attachments = {
         RequireElements = {"allowtac"},
     },
     {
-        PrintName = "Tactical Right",
-        DefaultCompactName = "TAC R",
+        PrintName = "Tactical Left",
+        DefaultCompactName = "TAC L",
         Bone = "j_gun",
         Pos = Vector(-3.5, -0.7, 1.5),
         Ang = Angle(0, 0, 90),
@@ -1000,6 +1095,98 @@ ATT.Attachments = {
 }
 
 ARC9.LoadAttachment(ATT, "retro_ar15_handguard_ris_mw19")
+
+ATT = {}
+
+ATT.PrintName = [[M-LOK Medium Handguard]]
+ATT.CompactName = [[MLOK  M]]
+ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m16.png", "mips smooth")
+ATT.Description = [[A carbine-length handguard with M-LOK mounts.
+
+Allows for the attachment of alternative front sights and tactical attachments on all 4 sides, plus a canted mounted rail for a backup optic.
+
+Stats identical to other handguards.]]
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.Free = false
+
+ATT.Category = {"retro_ar15_handguard_unused"}
+ATT.ActivateElements = {"nosling", "handguard_mlok_mid", "mlok", "no_ub_rail", "carbine_hg"}
+ATT.ExcludeElements = {"mw2_m4_irons"}
+
+ATT.Attachments = {
+    {
+        PrintName = "Front",
+        Category = "retro_ar15_front_iron",
+        UnInstalledElements = {"gasblock_carbine"},
+        InstalledElements = {"gasblock_carbine_cut"},
+        ExcludeElements = {"gasblock_flat"},
+        Bone = "j_gun",
+        Pos = Vector(-6, 0, -1),
+        Ang = Angle(0, 0, 0),
+    },
+    {
+        PrintName = "Underbarrel",
+        DefaultCompactName = "UB",
+        Bone = "j_gun",
+        Pos = Vector(-3, 0, 2.45),
+        Ang = Angle(0, 0, 0),
+        Category = {"cde_m203", "bo1_mk", "bo1_grips"},
+        InstalledElements = {"allowtac"},
+    },
+    {
+        PrintName = "Tactical Right",
+        DefaultCompactName = "TAC R",
+        Bone = "j_gun",
+        Pos = Vector(-5, 0.9, 1.5),
+        Ang = Angle(0, 0, -90),
+        Category =  {"bo1_tactical"},
+        InstalledElements = {"removecovers"},
+        -- RequireElements = {"allowtac"},
+    },
+    {
+        PrintName = "Tactical Left",
+        DefaultCompactName = "TAC L",
+        Bone = "j_gun",
+        Pos = Vector(-5, -0.9, 1.5),
+        Ang = Angle(0, 0, 90),
+        Category =  {"bo1_tactical"},
+        InstalledElements = {"removecovers"},
+        -- RequireElements = {"allowtac"},
+    },
+    {
+        PrintName = "Tactical Top",
+        DefaultCompactName = "TAC TOP",
+        Bone = "j_gun",
+        Pos = Vector(-3.5, 0, 0.5),
+        Ang = Angle(0, 0, 180),
+        Category =  {"bo1_tactical_top"},
+        -- RequireElements = {"gasblock_flat"},
+        ExcludeElements = {"mw2_m4_top"}
+    },
+    {
+        PrintName = "Backup Optic Left",
+        DefaultCompactName = "BACKUP L",
+        Bone = "j_gun",
+        Pos = Vector(-1.75, -0.9, 0.4),
+        Ang = Angle(0, 0, -37.5),
+        Category =  {"bo1_optic_lp", "bo1_rail_riser"},
+        KeepBaseIrons = true,
+        RejectAttachments = { ["bo1_rail_hk_riser"] = true },
+    },
+    {
+        PrintName = "Backup Optic Right",
+        DefaultCompactName = "BACKUP R",
+        Bone = "j_gun",
+        Pos = Vector(-1.75, 0.9, 0.4),
+        Ang = Angle(0, 0, 37.5),
+        Category =  {"bo1_optic_lp", "bo1_rail_riser"},
+        KeepBaseIrons = true,
+        RejectAttachments = { ["bo1_rail_hk_riser"] = true },
+    },
+}
+
+ARC9.LoadAttachment(ATT, "retro_ar15_handguard_mlok_mid")
 
 -- REAR SIGHTS
 ATT = {}

@@ -265,6 +265,36 @@ ARC9.LoadAttachment(ATT, "bo1_camo_true_od")
 
 ATT = {}
 
+ATT.PrintName = "Toy Soldier"
+ATT.FullColorIcon = true
+ATT.CompactName = "TOY"
+ATT.Icon = Material("entities/bo1_camos/toy_green.png")
+ATT.Category = "universal_camo"
+ATT.Description = [[Bright green color, like a toy army man.]]
+ATT.MenuCategory = "ARC-9 - Camos"
+ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/toy_green"
+ATT.CustomCamoScale = 20
+ATT.Folder = "COD FLAT"
+
+ARC9.LoadAttachment(ATT, "bo1_camo_toy_green")
+
+ATT = {}
+
+ATT.PrintName = "American Cheese"
+ATT.FullColorIcon = true
+ATT.CompactName = "CHEESE"
+ATT.Icon = Material("entities/bo1_camos/yellow.png")
+ATT.Category = "universal_camo"
+ATT.Description = [[It's not actually cheese, but still good.]]
+ATT.MenuCategory = "ARC-9 - Camos"
+ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/yellow"
+ATT.CustomCamoScale = 20
+ATT.Folder = "COD FLAT"
+
+ARC9.LoadAttachment(ATT, "bo1_camo_yellow")
+
+ATT = {}
+
 ATT.PrintName = "Black"
 ATT.FullColorIcon = true
 ATT.CompactName = "BLACK"

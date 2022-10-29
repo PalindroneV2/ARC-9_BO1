@@ -482,6 +482,12 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     elseif attached["handguard_mlok"] then
         hand = 11
         -- gasblock = 4
+    elseif attached["handguard_mlok_mid"] then
+        hand = 12
+        gasblock = 4
+    elseif attached["handguard_mlok_short"] then
+        hand = 13
+        gasblock = 1
     end
     if attached["removecovers"] then covers = 0 end
 
@@ -505,6 +511,14 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         end
         if hand == 11 then
             frontsight = 1
+            gasblock = 4
+        end
+        if hand == 12 then
+            gasblock = 4
+            frontsight = 7
+        end
+        if hand == 13 then
+            frontsight = 7
             gasblock = 4
         end
         if hand == 10 then
@@ -537,6 +551,14 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
             frontsight = 3
             gasblock = 4
         end
+        if hand == 12 then
+            frontsight = 8
+            gasblock = 4
+        end
+        if hand == 13 then
+            frontsight = 8
+            gasblock = 4
+        end
     elseif attached["gasblock_flat"] then
         gasblock = 2
         if length == 2 and hand == 3 then
@@ -549,7 +571,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
             gasblock = 3
             if length == 1 then gasblock = 3 end
         end
-        if hand == 11 then
+        if hand >= 11 then
             gasblock = 4
         end
         -- if length <= 2 and hand == 3 then
@@ -577,10 +599,6 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     end
     if hand == 8 then -- FAMAS
         vm:SetBodygroup(0, 2) --FORCES UPPER TO FLAT
-        vm:SetBodygroup(2, 7) -- BARREL CHANGES TO FAMAS SPECIFIC
-        if length == 1 then
-            vm:SetBodygroup(2, 1) -- BARREL CHANGES TO FAMAS SPECIFIC
-        end
     end
 
     -- if hand == 3 and barrel == 0 and attached["bo1_optic"] then
@@ -594,8 +612,6 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     end
     if attached["mw2_m4_irons"] then
         vm:SetBodygroup(8,4)
-        -- newpos = Vector(-2.765, -2, 0.075)
-        -- newang = Angle(0.0375, 0, 0)
     end
     if attached["ar15_removable_iron"] then
         newpos = Vector(-2.765, -2, -0.025)
@@ -616,6 +632,14 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
             newpos = Vector(-2.765, -2, -0.075)
             newang = Angle(0.05, 0.9, 0)
         end
+        if frontsight == 7 then
+            newpos = Vector(-2.765, -2, -0.075)
+            newang = Angle(0.015, 0.9, 0)
+        end
+        if frontsight == 8 then
+            newpos = Vector(-2.765, -2, -0.075)
+            newang = Angle(0.015, 0.9, 0)
+        end
     end
     if attached["retro_ar15_iron_matech"] then
         newpos = Vector(-2.765, -2, 0.275)
@@ -632,6 +656,14 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
             newpos = Vector(-2.765, -2, 0.275)
             newang = Angle(0.015, -0.1, 0)
         end
+        if frontsight == 7 then
+            newpos = Vector(-2.765, -2, 0.275)
+            newang = Angle(0.015, -0.1, 0)
+        end
+        if frontsight == 8 then
+            newpos = Vector(-2.765, -2, 0.275)
+            newang = Angle(0.015, -0.1, 0)
+        end
     end
     if attached["troy_iron"] or attached["3arc_iron"] then
         newpos = Vector(-2.765, -2, 0.25)
@@ -645,6 +677,14 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
             newang = Angle(0.0375, -0.1, 0)
         end
         if frontsight == 4 then
+            newpos = Vector(-2.765, -2, 0.275)
+            newang = Angle(0.0375, -0.1, 0)
+        end
+        if frontsight == 7 then
+            newpos = Vector(-2.765, -2, 0.275)
+            newang = Angle(0.0375, -0.1, 0)
+        end
+        if frontsight == 8 then
             newpos = Vector(-2.765, -2, 0.275)
             newang = Angle(0.0375, -0.1, 0)
         end
@@ -959,7 +999,7 @@ SWEP.Attachments = {
         Pos = Vector(19, 0, 4.15),
         Ang = Angle(0, 0, 0),
         Category = {"retro_ar15_front_cut"},
-        ExcludeElements = {"ar15_ris", "carbine"}
+        ExcludeElements = {"ar15_ris", "mlok", "carbine", "handguard_famas"}
     },
     {
         PrintName = "Muzzle",
