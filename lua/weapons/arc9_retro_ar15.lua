@@ -403,7 +403,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
 
     local NewBipodPos = Vector(-2.765, 0, -1.5)
     local NewBipodAng = Angle(0, 0, 0)
-    local newCustPose = Vector(0, 0, 0)
+    local newCustPose = Vector(1.5, 0, 0)
     local newCustAng = Angle(0, 0, 0)
 
     if attached["barrel_16"] then
@@ -837,6 +837,8 @@ SWEP.HookP_NameChange = function(self, name)
 
     local gunname = ""
     gunname = brand .. model .. alt
+    print("---gunname 1---")
+    print(gunname)
 
     if attached["fcg_semi"] then
         if attached["a2_top"] then
@@ -845,12 +847,18 @@ SWEP.HookP_NameChange = function(self, name)
         if attached["a4_top"] then
             alt = "A3"
         end
+        if attached["carbine"] and !attached["barrel_16"] then
+            name = "Colt CAR-15"
+            alt = ""
+        end
         gunname = name .. alt
         if attached["snipermag"] and attached["a4_top"] and attached["sniper_stock"] then
             gunname = "Mk. 12 SPR"
             model = "Mk. 12"
             alt = " SPR"
         end
+        print("---gunname 2---")
+        print(gunname)
     end
     if attached["barrel_16"] then
         local sport = "Gov't"

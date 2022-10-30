@@ -6,7 +6,6 @@ VertexlitGeneric
 	$envmapmask "models/weapons/arc9/cde/kali_ar15/cm901_s"
 	"$normalmapalphaenvmapmask" "1"
 
-	
 	//"$color2" "[ .4 .4 .4 ]"
 	"$blendtintbybasealpha" "1"
 	"$phong" "1"

@@ -126,7 +126,7 @@ ATT.Attachments = {
         Pos = Vector(-6, 0, -2.5),
         Ang = Angle(0, 0, 0),
         Category = {"retro_ar15_front_cut"},
-        ExcludeElements = {"ar15_ris", "mlok", "handguard_patriot"}
+        ExcludeElements = {"ar15_ris", "mlok", "handguard_patriot", "handguard_famas"}
     },
 }
 
@@ -209,7 +209,7 @@ ATT.Attachments = {
         Pos = Vector(-6, 0, -2.5),
         Ang = Angle(0, 0, 0),
         Category = {"retro_ar15_front_cut"},
-        ExcludeElements = {"ar15_ris", "mlok", "handguard_patriot"}
+        ExcludeElements = {"ar15_ris", "mlok", "handguard_patriot", "handguard_famas"}
     },
 }
 
@@ -314,7 +314,7 @@ ATT.Attachments = {
         Pos = Vector(-6, 0, -2.5),
         Ang = Angle(0, 0, 0),
         Category = {"retro_ar15_front_cut"},
-        ExcludeElements = {"ar15_ris", "mlok", "handguard_patriot"}
+        ExcludeElements = {"ar15_ris", "mlok", "handguard_patriot", "handguard_famas"}
     },
 }
 
@@ -376,30 +376,11 @@ ATT.Attachments = {
         PrintName = "Gasblock",
         DefaultCompactName = "G.I.",
         Bone = "j_gun",
-        Pos = Vector(-11, 0, -2.5),
+        Pos = Vector(-11.5, 0, -2.5),
         Ang = Angle(0, 0, 0),
         Category = {"retro_ar15_front_cut"},
-        ExcludeElements = {"ar15_ris", "mlok", "handguard_patriot"}
+        ExcludeElements = {"ar15_ris", "mlok", "handguard_patriot", "carbine_hg", "handguard_famas"}
     },
-    -- {
-    --     PrintName = "Cosmetic II",
-    --     Bone = "j_gun",
-    --     Pos = Vector(10, 0, -3.5),
-    --     Ang = Angle(0, 0, 0),
-    --     Category = {"bo1_cosmetic_ar15"},
-    --     ExcludeElements = {"nosling"},
-    --     InstallSound = "weapons/arc9/bo1_m16/bo_spawn.wav",
-    -- },
-    -- {
-    --     PrintName = "Underbarrel",
-    --     DefaultCompactName = "UB",
-    --     Bone = "j_gun",
-    --     -- Pos = Vector(-4, 0, 0.4),
-    --     Pos = Vector(-2, 0, 0.35),
-    --     Ang = Angle(0, 0, 0),
-    --     Category = {"cde_m203", "bo1_mk", "bo1_rail_underbarrel"},
-    --     ExcludeElements = {"ar15_ris"}
-    -- },
 }
 
 -- ATT.MuzzleEffectQCA = 1
@@ -582,7 +563,7 @@ ATT.Attachments = {
         ExcludeElements = {"mw2_m4_irons"},
         -- ExcludeElements = {"bo1_optic", "bo1_rail_riser", "mw2_m4_irons"},
         Bone = "j_gun",
-        Pos = Vector(-10, 0, -1),
+        Pos = Vector(-11.5, 0, -1),
         Ang = Angle(0, 0, 0),
     },
     {
@@ -752,6 +733,36 @@ ATT.AimDownSightsTimeMult = 0.9
 
 ARC9.LoadAttachment(ATT, "retro_ar15_handguard_car15")
 
+ATT.Attachments = {
+    {
+        PrintName = "Gasblock",
+        DefaultCompactName = "G.I.",
+        Bone = "j_gun",
+        Pos = Vector(-6, 0, -0.5),
+        Ang = Angle(0, 0, 0),
+        Category = {"retro_ar15_front_cut"},
+        ExcludeElements = {"ar15_ris", "mlok", "handguard_patriot"}
+    },
+    {
+        PrintName = "Cosmetic II",
+        Bone = "j_gun",
+        Pos = Vector(10, 0, -0.5),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_cosmetic_ar15"},
+        ExcludeElements = {"nosling"},
+        InstallSound = "weapons/arc9/bo1_m16/bo_spawn.wav",
+    },
+    {
+        PrintName = "Underbarrel",
+        DefaultCompactName = "UB",
+        Bone = "j_gun",
+        Pos = Vector(-2, 0, 2.35),
+        Ang = Angle(0, 0, 0),
+        Category = {"cde_m203", "bo1_mk", "bo1_rail_underbarrel"},
+        ExcludeElements = {"ar15_ris", "mlok"}
+    },
+}
+
 ATT = {}
 
 ATT.PrintName = [[M607a Barrel Assembly]]
@@ -774,6 +785,18 @@ ATT.Category = {"retro_ar15_handguard_carbine"}
 ATT.ActivateElements = {"handguard_607", "no_ubgl", "carbine_hg"}
 ATT.RecoilMult = 1.1
 ATT.AimDownSightsTimeMult = 0.9
+
+ATT.Attachments = {
+    {
+        PrintName = "Gasblock",
+        DefaultCompactName = "G.I.",
+        Bone = "j_gun",
+        Pos = Vector(-6, 0, -0.5),
+        Ang = Angle(0, 0, 0),
+        Category = {"retro_ar15_front_cut"},
+        ExcludeElements = {"ar15_ris", "mlok", "handguard_patriot"}
+    },
+}
 
 ARC9.LoadAttachment(ATT, "retro_ar15_handguard_607")
 
@@ -887,7 +910,7 @@ ATT.Attachments = {
         ExcludeElements = {"mw2_m4_irons"},
         -- ExcludeElements = {"bo1_optic", "bo1_rail_riser", "mw2_m4_irons", "bo1_tactical"},
         Bone = "j_gun",
-        Pos = Vector(-4, 0, -1),
+        Pos = Vector(-6, 0, -1),
         Ang = Angle(0, 0, 0),
     },
     {
@@ -959,7 +982,7 @@ ATT.Attachments = {
         ExcludeElements = {"mw2_m4_irons"},
         -- ExcludeElements = {"bo1_optic", "bo1_rail_riser", "mw2_m4_irons", "bo1_tactical"},
         Bone = "j_gun",
-        Pos = Vector(-4, 0, -1),
+        Pos = Vector(-6, 0, -1),
         Ang = Angle(0, 0, 0),
     },
     {
@@ -1473,7 +1496,7 @@ ATT.FiremodesOverride = {
     },
 }
 ATT.RunawayBurstOverride = true
-ATT.PostBurstDelayOverride = 0.1
+ATT.PostBurstDelayOverride = 0.2
 
 ATT.SpreadMult = 0.9
 ATT.SpreadMultRecoil = 0.8
@@ -1548,7 +1571,7 @@ ATT.FiremodesOverride = {
     },
 }
 ATT.RunawayBurstOverride = true
--- ATT.PostBurstDelayOverride = 0.1
+ATT.PostBurstDelayOverride = 0.2
 
 ATT.RPMMult = 1.1
 ATT.SpreadMult = 0.95
