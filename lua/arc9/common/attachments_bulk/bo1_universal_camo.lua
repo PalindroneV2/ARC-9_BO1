@@ -585,10 +585,25 @@ ATT.Category = "universal_camo"
 ATT.Description = [[Nothing happened in Tiananmen Square in 1989.]]
 ATT.MenuCategory = "ARC-9 - Camos"
 ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/ccp"
-ATT.Folder = "GAMER"
+ATT.Folder = "FLAGS"
 ATT.CustomCamoScale = 5
 
 ARC9.LoadAttachment(ATT, "bo1_camo_ccp")
+
+ATT = {}
+
+ATT.PrintName = "True Comrade"
+ATT.FullColorIcon = true
+ATT.CompactName = "USSR"
+ATT.Icon = Material("entities/bo1_camos/ussr.png")
+ATT.Category = "universal_camo"
+ATT.Description = [[The Great Soviet Union will live through the ages..]]
+ATT.MenuCategory = "ARC-9 - Camos"
+ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/ussr"
+ATT.Folder = "FLAGS"
+ATT.CustomCamoScale = 5
+
+ARC9.LoadAttachment(ATT, "bo1_camo_ussr")
 
 ATT = {}
 

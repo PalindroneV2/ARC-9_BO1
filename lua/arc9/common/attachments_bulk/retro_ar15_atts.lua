@@ -2326,4 +2326,15 @@ ATT.ShootEntForceUBGL = 15000
 
 ATT.MuzzleParticleUBGL = "muzzleflash_m79"
 
+ATT.Attachments = {
+    {
+        PrintName = "Payload",
+        DefaultCompactName = "HE",
+        Bone = "j_gun",
+        Pos = Vector(0, 0, 3),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_ubgl_40mm"},
+    },
+}
+
 ARC9.LoadAttachment(ATT, "retro_ar15_ubgl_m203")

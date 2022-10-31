@@ -837,8 +837,6 @@ SWEP.HookP_NameChange = function(self, name)
 
     local gunname = ""
     gunname = brand .. model .. alt
-    print("---gunname 1---")
-    print(gunname)
 
     if attached["fcg_semi"] then
         if attached["a2_top"] then
@@ -857,8 +855,6 @@ SWEP.HookP_NameChange = function(self, name)
             model = "Mk. 12"
             alt = " SPR"
         end
-        print("---gunname 2---")
-        print(gunname)
     end
     if attached["barrel_16"] then
         local sport = "Gov't"
