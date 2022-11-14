@@ -1,7 +1,7 @@
 AddCSLuaFile()
 
 ENT.Type 				= "anim"
-ENT.Base 				= "arc9_bo1_projectile_base"
+ENT.Base 				= "arc9_proj_base"
 ENT.PrintName 			= "M202 Rocket (BO1)"
 ENT.Author 				= ""
 ENT.Information 		= ""

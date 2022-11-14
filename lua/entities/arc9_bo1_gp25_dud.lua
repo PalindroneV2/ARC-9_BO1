@@ -1,7 +1,7 @@
 AddCSLuaFile()
 
 ENT.Type 				= "anim"
-ENT.Base 				= "arc9_bo1_projectile_base"
+ENT.Base 				= "arc9_proj_base"
 ENT.PrintName 			= "GP25 Dud"
 
 ENT.Model = "models/weapons/arc9/item/bo1_40mm_gp25.mdl"

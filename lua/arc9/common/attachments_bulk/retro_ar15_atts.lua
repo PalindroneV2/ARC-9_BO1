@@ -1631,10 +1631,11 @@ ATT.Cons = {}
 ATT.SortOrder = 1
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = true
+ATT.Folder = "5.56MM/STANAG"
 
 ATT.Category = {"retro_ar15_mag"}
 ATT.ActivateElements = {"20_mag", "ar15_handload", "snipermag"}
-ATT.RequiresElements = {"fcg_semi"}
+ATT.RequireElements = {"fcg_semi"}
 ATT.ReloadTimeMult = 0.8
 ATT.ClipSize = 10
 ATT.AimDownSightsTimeMult = 0.975
@@ -1671,6 +1672,7 @@ ATT.Cons = {}
 ATT.SortOrder = 1
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = true
+ATT.Folder = "5.56MM/STANAG"
 
 ATT.Category = {"retro_ar15_mag"}
 ATT.ActivateElements = {"20_mag"}
@@ -1695,6 +1697,7 @@ ATT.Cons = {}
 ATT.SortOrder = 2
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
+ATT.Folder = "5.56MM/STANAG"
 
 ATT.Category = {"retro_ar15_mag", "mwc_ar15_mag"}
 ATT.ActivateElements = {"40_mag"}
@@ -1719,6 +1722,7 @@ ATT.Cons = {}
 ATT.SortOrder = 4
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
+ATT.Folder = "5.56MM/STANAG"
 
 ATT.Category = {"retro_ar15_mag", "mwc_ar15_mag"}
 ATT.ActivateElements = {"60_mag"}
@@ -1743,6 +1747,7 @@ ATT.Cons = {}
 ATT.SortOrder = 1
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
+ATT.Folder = "5.56MM/PMAG"
 
 ATT.Category = {"retro_ar15_mag", "mwc_ar15_mag"}
 ATT.ActivateElements = {"pul_mag"}
@@ -1764,6 +1769,7 @@ ATT.Cons = {}
 ATT.SortOrder = 3
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
+ATT.Folder = "5.56MM/PMAG"
 
 ATT.Category = {"retro_ar15_mag", "mwc_ar15_mag"}
 ATT.ActivateElements = {"pul_40_mag"}
@@ -1787,6 +1793,7 @@ ATT.Cons = {}
 ATT.SortOrder = 5
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
+ATT.Folder = "ALT. CAL."
 
 ATT.Category = {"retro_ar15_mag", "mwc_ar15_mag"}
 ATT.ActivateElements = {"9mm_mag"}
@@ -1845,10 +1852,11 @@ ATT.Cons = {}
 ATT.SortOrder = 5
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = true
+ATT.Folder = "ALT. CAL."
 
 ATT.Category = {"retro_ar15_mag"}
-ATT.ActivateElements = {"20_mag", "beowulf"}
-ATT.RequiresElements = {"fcg_semi"}
+ATT.ActivateElements = {"beowulf"}
+ATT.RequireElements = {"fcg_semi"}
 ATT.ReloadTimeMult = 0.8
 ATT.ClipSize = 10
 ATT.AimDownSightsTimeMult = 0.975
@@ -1901,6 +1909,7 @@ ATT.Cons = {}
 ATT.SortOrder = 6
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
+ATT.Folder = "DRUM"
 
 ATT.Category = {"retro_ar15_mag"}
 ATT.ActivateElements = {"100_mag", "no_ubgl"}
@@ -1926,6 +1935,7 @@ ATT.Cons = {
 ATT.SortOrder = 6
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
+ATT.Folder = "DRUM"
 
 ATT.Category = {"retro_ar15_mag"}
 ATT.ActivateElements = {"100_mag", "is_patriot", "no_ubgl"}
