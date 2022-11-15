@@ -177,9 +177,9 @@ SWEP.IronSights = {
 
 SWEP.NoShellEject = true
 
-SWEP.HoldtypeHolstered = "passive"
-SWEP.HoldtypeActive = "shotgun"
-SWEP.HoldtypeSights = "ar2"
+SWEP.HoldTypeHolstered = "passive"
+SWEP.HoldType = "shotgun"
+SWEP.HoldTypeSights = "ar2"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SHOTGUN
 SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_MAGIC

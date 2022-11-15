@@ -177,9 +177,9 @@ SWEP.IronSights = {
     SwitchToSound = "", -- sound that plays when switching to this sight
 }
 
-SWEP.HoldtypeHolstered = "passive"
-SWEP.HoldtypeActive = "pistol"
-SWEP.HoldtypeSights = "smg"
+SWEP.HoldTypeHolstered = "passive"
+SWEP.HoldType = "pistol"
+SWEP.HoldTypeSights = "smg"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SMG1
 SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_SMG1
