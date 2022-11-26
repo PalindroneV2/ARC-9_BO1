@@ -1,6 +1,6 @@
 AddCSLuaFile()
 
-ENT.Base 				= "arc9_proj_base"
+ENT.Base 				= "arc9_bo1_projectile_base"
 ENT.PrintName 			= "Ray Gun Bolt (BO1)"
 
 ENT.Model = "models/props_phx/gibs/flakgib1.mdl"

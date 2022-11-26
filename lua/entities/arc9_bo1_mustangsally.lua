@@ -1,6 +1,6 @@
 AddCSLuaFile()
 
-ENT.Base 				= "arc9_proj_base"
+ENT.Base 				= "arc9_bo1_projectile_base"
 ENT.PrintName 			= "1911 PAP Ammo (BO1)"
 
 ENT.Model = "models/weapons/arc9/item/bo1_40mm.mdl"
