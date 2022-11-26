@@ -417,8 +417,8 @@ SWEP.Animations = {
     },
     ["reload"] = {
         Source = "reload",
-        Time = 281 / 35,
-        LastClip1OutTime = 110 / 35,
+        Time = 281 / 40,
+        LastClip1OutTime = 110 / 40,
         EventTable = {
             {s = "ARC9_BO1.M60_Charge", t = 17 / 35},
             {s = "ARC9_BO1.M60_Charge", t = 20 / 35},
@@ -456,8 +456,8 @@ SWEP.Animations = {
     },
     ["reload_empty"] = {
         Source = "reload",
-        Time = 281 / 35,
-        LastClip1OutTime = 110 / 35,
+        Time = 281 / 40,
+        LastClip1OutTime = 110 / 40,
         EventTable = {
             {s = "ARC9_BO1.M60_Charge", t = 17 / 35},
             {s = "ARC9_BO1.M60_Charge", t = 20 / 35},
