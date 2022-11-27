@@ -14,7 +14,7 @@ ENT.BoxSize = Vector(6, 4, 1)
 
 ENT.Damage = 200
 ENT.Radius = 300
-ENT.ImpactDamage = 1500
+ENT.ImpactDamage = 500
 
 ENT.Drunkenness = 0
 
