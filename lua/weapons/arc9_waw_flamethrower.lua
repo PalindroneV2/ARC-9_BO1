@@ -49,7 +49,7 @@ SWEP.RangeMin = 1000
 SWEP.Penetration = 4
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEnt = "arc9_bo1_flames"
-SWEP.ShootEntForce = 25000
+SWEP.ShootEntForce = 5000
 
 SWEP.PhysBulletMuzzleVelocity = 960 * 39.37
 
@@ -96,7 +96,7 @@ SWEP.RecoilResetTime = 0.01 -- How long the gun must go before the recoil patter
 SWEP.RecoilAutoControl = 0.5
 SWEP.RecoilKick = 1
 
-SWEP.Spread = 0
+SWEP.Spread = 0.05
 SWEP.SpreadAddRecoil = 0
 
 SWEP.SpreadMultSights = 0.1
