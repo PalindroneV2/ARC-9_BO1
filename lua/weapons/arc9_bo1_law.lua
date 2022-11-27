@@ -43,7 +43,7 @@ SWEP.RangeMax = 6000
 SWEP.RangeMin = 1000
 SWEP.Penetration = 0
 SWEP.DamageType = nil
-SWEP.ShootEnt = "arc9_waw_rocket_bazooka" -- Set to an entity to launch it out of this weapon.
+SWEP.ShootEnt = "arc9_bo1_rocket_law" -- Set to an entity to launch it out of this weapon.
 SWEP.ShootEntForce = 12500
 SWEP.ShootEntityData = {}
 

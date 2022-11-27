@@ -17,6 +17,7 @@ ENT.SmokeTrailSize = 6
 ENT.SmokeTrailTime = 0.5
 ENT.Flare = false
 ENT.LifeTime = 10
+ENT.Drunkenness = 0
 
 ENT.Drag = true
 ENT.Gravity = true
@@ -178,6 +179,10 @@ if SERVER then
 
         if drunk then
             self:SetAngles(self:GetAngles() + (AngleRand() * FrameTime() * 1000 / 360))
+        end
+
+        if self.Drunkenness > 0 then
+            self:SetAngles(self:GetAngles() + (AngleRand() * FrameTime() * self.Drunkenness / 360))
         end
 
         self:GetPhysicsObject():AddVelocity(Vector(0, 0, self.Lift) + self:GetForward() * self.Boost)

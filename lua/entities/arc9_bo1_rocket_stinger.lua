@@ -18,7 +18,7 @@ ENT.Flare = false
 
 ENT.Damage = 100
 ENT.Radius = 200
-ENT.ImpactDamage = 1000
+ENT.ImpactDamage = 550
 
 ENT.SeekerAngle = math.cos(math.rad(30))
 ENT.SteerSpeed = 15000
