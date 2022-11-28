@@ -67,7 +67,7 @@ function ENT:PhysicsCollide(data, collider)
 end
 
 
-function ENT:StartTouch(ent)
+function ENT:Touch(ent)
     if !self.Hit and ent == self:GetOwner() then return end
     if self.Damaged[ent] then return end
     local dmg = DamageInfo()
