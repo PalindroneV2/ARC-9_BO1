@@ -3,18 +3,18 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ARC9 - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = [[Crossbow]]
-SWEP.Class = "Grenade Launcher"
+SWEP.PrintName = [[Ballistic Knife]]
+SWEP.Class = "Ballistic Knife"
 SWEP.Description = [[
-    Compound crossbow used for specialist roles with special explosive tips.
+    Soviet device that uses a spring mechanism to propel forward special throwing knives.
 ]]
 SWEP.Trivia = {
     Manufacturer = "Unknown",
-    Calibre = "Bolts",
-    Mechanism = "Crossbow",
-    Country = "USA",
-    Year = 1963,
-    Games = [[BO1]]
+    Projetcile = "Ballistic Knives",
+    Mechanism = "Spring-Loaded",
+    Country = "USSR",
+    Year = 1970,
+    Games = [[BO1,BO2,BO4,BOCW]]
 }
 SWEP.Credits = {
     Author = "Palindrone"
@@ -24,9 +24,9 @@ SWEP.Slot = 4
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/arc9/c_bo1_crossbow.mdl"
-SWEP.WorldModel = "models/weapons/arc9/c_bo1_crossbow.mdl"
--- SWEP.WorldModelMirror = "models/weapons/arc9/c_bo1_crossbow.mdl"
+SWEP.ViewModel = "models/weapons/arc9/c_bo1_ballistic_knife.mdl"
+SWEP.WorldModel = "models/weapons/arc9/c_bo1_ballistic_knife.mdl"
+SWEP.WorldModelMirror = "models/weapons/arc9/c_bo1_ballistic_knife.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
     Pos        =    Vector(-3, 5, -7.5),
@@ -45,7 +45,7 @@ SWEP.RangeMax = 6000
 SWEP.RangeMin = 1000
 SWEP.Penetration = 0
 SWEP.DamageType = nil
-SWEP.ShootEnt = "arc9_bo1_xbow_bolt" -- Set to an entity to launch it out of this weapon.
+SWEP.ShootEnt = "arc9_bo1_bknife_projectile" -- Set to an entity to launch it out of this weapon.
 SWEP.ShootEntForce = 12500
 SWEP.ShootEntityData = {} -- Extra data that can be given to a projectile. Sets SENT.WeaponDataLink with this table.
 
@@ -145,9 +145,14 @@ SWEP.ShootVolume = 125
 SWEP.ShootPitch = 100
 SWEP.ShootPitchVariation = 0
 
-SWEP.ShootSound = "ARC9_BO1.Crossbow_Fire"
+SWEP.ShootSound = "ARC9_BO1.Ballistic_Fire"
 SWEP.ShootSoundSilenced = "ARC9_BO1.M16_Sil"
 SWEP.DistantShootSound = "ARC9_BO1.Crossbow_Dist"
+
+SWEP.MeleeSwingSound = "ARC9_BO1.Knife_Swing"
+SWEP.MeleeMissSound = "ARC9_BO1.Knife_Swing"
+SWEP.MeleeHitSound = "ARC9_BO1.Knife_HitObject"
+SWEP.MeleeHitNPCSound = "ARC9_BO1.Knife_Slash"
 
 SWEP.MuzzleParticle = nil --"muzzleflash_shotgun"
 -- SWEP.ShellModel = nil --"models/shells/shell_12gauge.mdl"
@@ -177,6 +182,16 @@ SWEP.IronSights = {
     SwitchToSound = "", -- sound that plays when switching to this sight
 }
 
+SWEP.Bash = true
+-- SWEP.PrimaryBash = true
+
+SWEP.BashDamage = 100
+SWEP.BashLungeRange = 128
+SWEP.BashRange = 64
+SWEP.PreBashTime = 5 / 35
+SWEP.PostBashTime = 25 / 35
+
+SWEP.HasSights = false
 SWEP.NoShellEject = true
 
 SWEP.HoldTypeHolstered = "passive"
@@ -203,10 +218,13 @@ SWEP.CrouchAng = Angle(0, 0, -5)
 
 SWEP.SprintVerticalOffset = false
 SWEP.SprintPos = Vector(0, 0, -1)
-SWEP.SprintAng = Angle(0, 0, -5)
+SWEP.SprintAng = Angle(0, 0, 0)
 
-SWEP.CustomizePos = Vector(12.5, 40, 4)
-SWEP.CustomizeAng = Angle(90, 0, 0)
+SWEP.CustomizePos = Vector(18.5, 20, -32.5)
+SWEP.CustomizeAng = Angle(0, 90, 0)
+SWEP.CustomizeSnapshotPos = Vector(-15, 20, 32.5 / 2)
+SWEP.CustomizeSnapshotAng = Angle(0, 0, 0)
+SWEP.CustomizeNoRotate = true
 
 SWEP.RestPos = Vector(0, 0, 0)
 SWEP.RestAng = Angle(0, 0, 0)
@@ -216,14 +234,31 @@ SWEP.BarrelLength = 25
 SWEP.ExtraSightDist = 5
 
 SWEP.AttachmentElements = {
+    ["bowie_knife"] = {
+        Bodygroups = {
+            {2,1}
+        },
+    },
+    ["usa_bayonet"] = {
+        Bodygroups = {
+            {2,2}
+        },
+    },
+    ["ger_bayonet"] = {
+        Bodygroups = {
+            {2,3}
+        },
+    },
+    ["jap_bayonet"] = {
+        Bodygroups = {
+            {2,4}
+        },
+    },
 }
 
 SWEP.Hook_ModifyBodygroups = function(self, data)
     local vm = data.model
     local attached = data.elements
-
-    if attached["mount"] then vm:SetBodygroup(2,1) end
-    if attached["xbow_explosive"] then vm:SetBodygroup(1,1) end
 
     local camo = 0
     if attached["universal_camo"] then
@@ -239,10 +274,10 @@ SWEP.HookP_NameChange = function(self, name)
 
     local attached = self:GetElements()
 
-    local gunname = "Crossbow"
+    local gunname = "Ballistic Knife"
 
     if attached["bo1_pap"] then
-        gunname = "Awful Lawton"
+        gunname = "The Krauss Refibrillator"
     end
 
     return gunname
@@ -250,54 +285,37 @@ end
 
 SWEP.Attachments = {
     {
-        PrintName = "Optic",
-        Bone = "j_gun",
-        Pos = Vector(3.5, 0, 4.2),
+        PrintName = "Off-Hand",
+        DefaultCompactName = "Knife",
+        Bone = "tag_origin",
+        Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic", "bo1_rail_riser"},
-        InstalledElements = {"mount"},
-    },
-    {
-        PrintName = "Bolt",
-        DefaultCompactName = "Impact",
-        Bone = "j_gun",
-        Pos = Vector(17, 0, 3.75),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_xbow_ammo"},
+        Category = {"bo1_bknife_offhand"},
     },
     {
         PrintName = "Ammunition",
         DefaultCompactName = "AMMO",
-        Bone = "j_gun",
-        Pos = Vector(3, 0, 2),
+        Bone = "tag_clip",
+        Pos = Vector(3, 0, 0),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_pap_launcher"},
-    },
-    {
-        PrintName = "Cosmetic",
-        DefaultCompactName = "Gunmetal",
-        Bone = "j_gun",
-        Pos = Vector(-10, 0, 2),
-        Ang = Angle(0, 0, 0),
-        Category = "universal_camo",
+        Category = {"bo1_pap_bknife"},
     },
     {
         PrintName = "Perk-a-Cola",
         DefaultCompactName = "PERK",
         Bone = "j_gun",
-        Pos = Vector(-3, 0, -3),
+        Pos = Vector(-3, 0, 0),
         Ang = Angle(0, 0, 0),
         Category = "bo1_perkacola",
     },
-    {
-        Hidden = true,
-        Bone = "j_gun",
-        Pos = Vector(-3, 0, 2.65),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_stock_m"},
-        Installed = "bo1_stock_medium"
-    },
 }
+
+SWEP.Hook_TranslateAnimation = function (self, anim)
+    local attached = self:GetElements()
+    if attached["jap_bayonet"] and anim == "bash" then
+        return "bash_2"
+    end
+end
 
 SWEP.Animations = {
     ["idle"] = {
@@ -314,25 +332,25 @@ SWEP.Animations = {
     },
     ["fire"] = {
         Source = {
-            "fire_last",
+            "fire",
         },
-        Time = 0.2,
-    },
-    ["fire_iron"] = {
-        Source = {
-            "fire_last",
-        },
-        Time = 0.2,
+        Time = 0.9,
     },
     ["reload"] = {
         Source = "reload",
-        Time = 93 / 35,
+        Time = 2,
         EventTable = {
-            {s = "ARC9_BO1.Crossbow_Draw", t = 5 / 35},
-            {s = "ARC9_BO1.Crossbow_Futz", t = 45 / 35},
-            {s = "ARC9_BO1.Crossbow_Latch", t = 50 / 35},
-            {s = "ARC9_BO1.Crossbow_Bolt", t = 60 / 35},
+            {s = "ARC9_BO1.Ballistic_Load", t = 0.5},
         },
+        MinProgress = 0.01,
+    },
+    ["bash"] = {
+        Source = "swipe",
+        Time = 25 / 35,
+    },
+    ["bash_2"] = {
+        Source = "stab",
+        Time = 1.333,
     },
     ["enter_sprint"] = {
         Source = "sprint_in",
@@ -346,29 +364,8 @@ SWEP.Animations = {
         Source = "sprint_out",
         Time = 1,
     },
-
-    ["idle_empty"] = {
-        Source = "idle_empty",
-        Time = 1 / 35,
-    },
-    ["draw_empty"] = {
-        Source = "draw_empty",
-        Time = 25 / 35,
-    },
-    ["holster_empty"] = {
-        Source = "holster_empty",
-        Time = 25 / 35,
-    },
-    ["enter_sprint_empty"] = {
-        Source = "sprint_in_empty",
-        Time = 1,
-    },
-    ["idle_sprint_empty"] = {
-        Source = "sprint_loop_empty",
-        Time = 30 / 30
-    },
-    ["exit_sprint_empty"] = {
-        Source = "sprint_out_empty",
-        Time = 1,
-    },
 }
+
+function SWEP:SecondaryAttack()
+    return self:MeleeAttack()
+end

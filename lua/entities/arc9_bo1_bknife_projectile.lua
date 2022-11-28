@@ -10,9 +10,10 @@ ENT.AdminSpawnable = false
 ENT.Ticks = 0
 ENT.CollisionGroup = COLLISION_GROUP_PROJECTILE
 ENT.CanPickup = true
+ENT.Damage = 125
 
 if CLIENT then
-    killicon.Add( "arc9_bo1_ballistic_knife", "arc9/weaponicons/arc9_bo1_ballistic_knife", Color( 255, 255, 255, 255 ) )
+    killicon.Add( "arc9_bo1_bknife_projectile", "arc9/weaponicons/arc9_bo1_ballistic_knife", Color( 255, 255, 255, 255 ) )
 end
 
 if SERVER then
@@ -43,7 +44,7 @@ if SERVER then
 
         util.SpriteTrail(self, 0, Color(255, 255, 255), false, 3, 1, 0.15, 2, "trails/tube.vmt")
         SafeRemoveEntityDelayed(self, 60)
-        self:SetPhysicsAttacker(self:GetOwner(), 10)
+        -- self:SetPhysicsAttacker(self:GetOwner(), 10)
     end
 
     function ENT:Think()
