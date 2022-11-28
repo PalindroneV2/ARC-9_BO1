@@ -71,15 +71,7 @@ function ENT:StartTouch(ent)
     if !self.Hit and ent == self:GetOwner() then return end
     if self.Damaged[ent] then return end
     local dmg = DamageInfo()
-
-    -- DMG_BURN does no damage to zombies so we need DMG_DIRECT...
-    -- But DMG_DIRECT also causes antlions to go poof
-    -- fuck you valve
-    if ent:GetClass() == "npc_antlion" then
-        dmg:SetDamageType(DMG_SLOWBURN)
-    else
-        dmg:SetDamageType(DMG_BURN + DMG_DIRECT)
-    end
+    dmg:SetDamageType(DMG_BURN + DMG_DIRECT)
     dmg:SetDamage(10)
     if ent == self:GetOwner() then
         dmg:SetDamage(2)
