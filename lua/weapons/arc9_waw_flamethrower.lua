@@ -42,14 +42,15 @@ SWEP.ViewModelFOVBase = 75
 
 SWEP.DefaultBodygroups = "00000000000000"
 
-SWEP.DamageMax = 35
-SWEP.DamageMin = 20 -- damage done at maximum range
-SWEP.RangeMax = 6000
-SWEP.RangeMin = 1000
+SWEP.DamageMax = 10
+SWEP.DamageMin = 10
+SWEP.RangeMax = 0
+SWEP.RangeMin = 0
 SWEP.Penetration = 4
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEnt = "arc9_bo1_flames"
-SWEP.ShootEntForce = 5000
+SWEP.ShootEntForce = 1200
+SWEP.ShootEntInheritPlayerVelocity = true
 
 SWEP.PhysBulletMuzzleVelocity = 960 * 39.37
 
@@ -77,8 +78,8 @@ SWEP.Overheat = true -- Weapon will jam when it overheats, playing the "overheat
 SWEP.HeatPerShot = 1
 SWEP.HeatCapacity = 100 -- rounds that can be fired non-stop before the gun jams, playing the "fix" animation
 SWEP.HeatDissipation = 25 -- rounds' worth of heat lost per second
-SWEP.HeatLockout = true -- overheating means you cannot fire until heat has been fully depleted
-SWEP.HeatDelayTime = 0.5 -- Amount of time that passes before heat begins to dissipate.
+SWEP.HeatLockout = false -- overheating means you cannot fire until heat has been fully depleted
+SWEP.HeatDelayTime = 1 -- Amount of time that passes before heat begins to dissipate.
 
 SWEP.Crosshair = true
 SWEP.CanBlindFire = false
@@ -96,10 +97,10 @@ SWEP.RecoilResetTime = 0.01 -- How long the gun must go before the recoil patter
 SWEP.RecoilAutoControl = 0.5
 SWEP.RecoilKick = 1
 
-SWEP.Spread = 0.05
+SWEP.Spread = 0.075
 SWEP.SpreadAddRecoil = 0
 
-SWEP.SpreadMultSights = 0.1
+SWEP.SpreadMultSights = 1
 SWEP.SpreadAddHipFire = 0
 --SWEP.SpreadAddMove = 0
 SWEP.SpreadAddMidAir = 0

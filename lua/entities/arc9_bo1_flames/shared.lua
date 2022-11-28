@@ -5,12 +5,12 @@ ENT.Author = ""
 ENT.Information = ""
 ENT.Spawnable = false
 ENT.AdminSpawnable = false
-ENT.Model = "models/props_phx/gibs/flakgib1.mdl"
-ENT.FuseTime = 0.15
-ENT.ArmTime = 0
-ENT.FireTime = 0.1
+ENT.Model = "models/hunter/misc/sphere025x025.mdl"
+ENT.Life = 0.75
+ENT.FireTime = 0.5
 ENT.ImpactFuse = false
 ENT.CollisionGroup = COLLISION_GROUP_PROJECTILE
+ENT.RenderGroup = RENDERGROUP_BOTH
 ENT.Armed = false
 ENT.NextDamageTick = 0
 ENT.Ticks = 0
@@ -38,70 +38,88 @@ function ENT:Initialize()
         self:DrawShadow(false)
         self:GetPhysicsObject():EnableGravity(false)
         self:SetTrigger(true)
-        self:UseTriggerBounds(true, 8)
+        self:UseTriggerBounds(true, 12)
         local phys = self:GetPhysicsObject()
 
         if phys:IsValid() then
             phys:Wake()
             phys:SetBuoyancyRatio(0)
             phys:SetDragCoefficient(0)
-            phys:SetMass(8)
+            phys:SetMass(1)
         end
 
         self:SetCollisionGroup(COLLISION_GROUP_PROJECTILE)
+        self.Damaged = {}
     end
+    self.UseLight = false
     self.SpawnTime = CurTime()
-
 end
 
---[[]
 function ENT:PhysicsCollide(data, collider)
-    local ent = data.HitEntity
+    if data.OurOldVelocity:Length() <= 256 then return end
+    self:GetPhysicsObject():SetVelocityInstantaneous(VectorRand() * 256)
+    if !self.Hit and math.random() <= 0.5 then
+        local v = data.OurOldVelocity:GetNormalized()
+        util.Decal("Scorch", data.HitPos - v, data.HitPos + v, self)
 
-    if not ent:IsWorld() and IsValid(ent) then
-        ent:Ignite(10, 100)
     end
-
-    self:Remove()
+    self.Hit = true
 end
-]]
+
 
 function ENT:StartTouch(ent)
+    if !self.Hit and ent == self:GetOwner() then return end
+    if self.Damaged[ent] then return end
     local dmg = DamageInfo()
-    dmg:SetDamageType(DMG_BURN + DMG_DIRECT)
+
+    -- DMG_BURN does no damage to zombies so we need DMG_DIRECT...
+    -- But DMG_DIRECT also causes antlions to go poof
+    -- fuck you valve
+    if ent:GetClass() == "npc_antlion" then
+        dmg:SetDamageType(DMG_SLOWBURN)
+    else
+        dmg:SetDamageType(DMG_BURN + DMG_DIRECT)
+    end
     dmg:SetDamage(10)
+    if ent == self:GetOwner() then
+        dmg:SetDamage(2)
+    else
+        ent:Ignite(5, 100)
+    end
     dmg:SetInflictor(self)
     dmg:SetAttacker(self:GetOwner())
     dmg:SetDamagePosition(self:GetPos())
     dmg:SetDamageForce(self:GetVelocity())
     ent:TakeDamageInfo(dmg)
-    ent:Ignite(5, 100)
+
+    self.Damaged[ent] = true
 end
 
 function ENT:Think()
-    if not self.SpawnTime then
-        self.SpawnTime = CurTime()
-    end
-
-    if SERVER and CurTime() - self.SpawnTime >= self.FuseTime and not self.Armed then
+    if SERVER and CurTime() - self.SpawnTime >= self.Life then
         self:Remove()
     end
 
-    if CLIENT then
-        if not self.Light then
+    if SERVER then
+        self:GetPhysicsObject():AddVelocity(Vector(0, 0, -150))
+    end
+
+    if CLIENT and CurTime() - self.SpawnTime >= 0.1 then
+        local same = LocalPlayer() == self:GetOwner()
+        if !self.Light and self.UseLight then
             self.Light = DynamicLight(self:EntIndex())
 
             if self.Light then
                 self.Light.Pos = self:GetPos()
                 self.Light.r = 255
-                self.Light.g = 135
-                self.Light.b = 0
+                self.Light.g = 175
+                self.Light.b = 25
                 self.Light.Brightness = 6
                 self.Light.Decay = 10
                 self.Light.Size = 200
                 self.Light.DieTime = CurTime() + self.FireTime
             end
-        else
+        elseif self.UseLight then
             self.Light.Pos = self:GetPos()
         end
 
@@ -109,16 +127,16 @@ function ENT:Think()
         if not self:IsValid() or self:WaterLevel() > 2 then return end
         if not IsValid(emitter) then return end
 
-        local d = (CurTime() - self.SpawnTime) / self.FuseTime
+        local d = (CurTime() - self.SpawnTime) / self.Life
 
         local fire = emitter:Add("sprites/physg_glow1", self:GetPos())
         fire:SetVelocity(VectorRand() * 300)
         fire:SetGravity(Vector(math.Rand(-1, 1), math.Rand(-1, 1), -10))
         fire:SetDieTime(math.Rand(0.25, 0.5))
-        fire:SetStartAlpha(75)
+        fire:SetStartAlpha(same and 50 or 75)
         fire:SetEndAlpha(0)
         fire:SetStartSize(5)
-        fire:SetEndSize(math.Rand(50, 75))
+        fire:SetEndSize(math.Rand(25, 50))
         fire:SetRoll(math.Rand(-180, 180))
         fire:SetRollDelta(math.Rand(-0.2, 0.2))
         fire:SetColor(200, 93, 20)
@@ -128,15 +146,15 @@ function ENT:Think()
         fire:SetCollide(true)
         fire:SetBounce(0)
 
-        if self.Ticks % 2 == 0 then
+        if self.Ticks % 5 == 0 then
             local fire2 = emitter:Add("effects/fire_cloud" .. math.random(1, 2), self:GetPos())
             fire2:SetVelocity(VectorRand() * 5)
             fire2:SetGravity(Vector(math.Rand(-1, 1), math.Rand(-1, 1), -150))
             fire2:SetDieTime(math.Rand(0.2, 0.5))
-            fire2:SetStartAlpha(25)
+            fire2:SetStartAlpha(same and 20 or 40)
             fire2:SetEndAlpha(0)
-            fire2:SetStartSize(d * 20)
-            fire2:SetEndSize(20 + d * 30)
+            fire2:SetStartSize(d * 50)
+            fire2:SetEndSize(25 + d * 75)
             fire2:SetRoll(math.Rand(-180, 180))
             fire2:SetRollDelta(math.Rand(-1, 1))
             fire2:SetColor(255, 255, 255)
@@ -145,11 +163,6 @@ function ENT:Think()
             fire2:SetLighting(false)
             fire2:SetCollide(true)
             fire2:SetBounce(0)
-
-            timer.Simple(0.7, function()
-                fire:SetStartAlpha(100)
-                fire:SetColor(100, 100, 100)
-            end)
         end
 
         emitter:Finish()
@@ -163,7 +176,4 @@ function ENT:OnRemove()
 end
 
 function ENT:Draw()
-    if CLIENT then
-        self:DrawModel()
-    end
 end
