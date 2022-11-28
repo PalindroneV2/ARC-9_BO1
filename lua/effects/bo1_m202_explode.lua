@@ -60,11 +60,11 @@ function EFFECT:Init(data)
         fire:SetCollide(false)
     end
 
-    for i = 1, 20 do
+    for i = 1, 10 do
         local fire = emitter:Add("effects/fire_embers" .. math.random(1, 3), data:GetOrigin())
         fire:SetVelocity(VectorRand() * 1500)
         fire:SetGravity(Vector(0, 0, -750))
-        fire:SetDieTime(math.Rand(0.5, 0.8))
+        fire:SetDieTime(math.Rand(0.8, 1.5))
         fire:SetStartAlpha(200)
         fire:SetEndAlpha(0)
         fire:SetStartSize(math.Rand(30, 50))
@@ -79,6 +79,24 @@ function EFFECT:Init(data)
         fire:SetCollide(true)
     end
 
+    for i = 1, math.random(6, 9) do
+        local fire = emitter:Add("sprites/glow04_noz", data:GetOrigin())
+        fire:SetVelocity(VectorRand() * 100 + Vector(0, 0, math.Rand(300, 800)))
+        fire:SetGravity(Vector(0, 0, -400))
+        fire:SetDieTime(math.Rand(2, 3))
+        fire:SetStartAlpha(200)
+        fire:SetEndAlpha(0)
+        fire:SetStartSize(math.Rand(3, 5))
+        fire:SetEndSize(math.Rand(10, 20))
+        fire:SetRoll(math.Rand(-180, 180))
+        fire:SetRollDelta(math.Rand(-0.5, 0.5))
+        fire:SetColor(255, 180, 100)
+        fire:SetAirResistance(2)
+        fire:SetPos(self:GetPos())
+        fire:SetLighting(false)
+        fire:SetBounce(0.2)
+        fire:SetCollide(true)
+    end
     emitter:Finish()
 end
 
