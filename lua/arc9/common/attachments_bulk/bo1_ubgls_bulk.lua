@@ -318,12 +318,12 @@ ATT.SprintToFireTimeMult = 1.1
 
 ATT.UBGL = true
 ATT.UBGLAmmo = "Uranium"
-ATT.UBGLClipSize = 100
+ATT.UBGLClipSize = 40
 ATT.UBGLFiremode = -1
 ATT.UBGLFiremodeName = "FLAMER"
 ATT.UBGLChamberSize = 0
 ATT.ShootVolumeUBGL = 110
-ATT.RPMUBGL = 1000
+ATT.RPMUBGL = 700
 
 ATT.FirstShootSoundUBGL = false
 ATT.ShootSoundUBGL = false
@@ -336,7 +336,7 @@ ATT.EnterUBGLSound = "ARC9_BO1.Flamer_Start"
 ATT.ExitUBGLSound = "ARC9_BO1.Flamer_Stop"
 
 ATT.ShootEntUBGL = "arc9_bo1_flames"
-ATT.ShootEntForceUBGL = 25000
+ATT.ShootEntForceUBGL = 1000
 
 ATT.MuzzleParticleUBGL = "muzzleflash_minimi"
 
