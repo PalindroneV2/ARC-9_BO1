@@ -16,17 +16,20 @@ ENT.SmokeTrailSize = 64
 ENT.SmokeTrailTime = 5
 ENT.Flare = false
 
-ENT.Damage = 150
+ENT.Damage = 250
 ENT.Radius = 200
-ENT.ImpactDamage = 900
+ENT.ImpactDamage = 1250
 
 ENT.SeekerAngle = math.cos(math.rad(75))
 ENT.SteerSpeed = 7500
 ENT.FuseTime = 0
-ENT.Boost = 4000
+ENT.Boost = 2000
+ENT.BoostTarget = 10000
 ENT.Lift = 80
 ENT.DragCoefficient = 0.1
+
 ENT.LifeTime = 15
+ENT.BoostTime = 15
 
 ENT.SemiActive = true
 

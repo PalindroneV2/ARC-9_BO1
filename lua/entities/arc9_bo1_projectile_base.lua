@@ -24,6 +24,8 @@ ENT.Gravity = true
 ENT.DragCoefficient = 0.25
 ENT.Boost = 0
 ENT.Lift = 0
+ENT.BoostTime = 10
+
 ENT.GunshipWorkaround = true
 ENT.HelicopterWorkaround = true
 
@@ -71,7 +73,7 @@ if SERVER then
         self.SpawnTime = CurTime()
 
         if self.SmokeTrail then
-            util.SpriteTrail(self, 0, Color( 255 , 255 , 255 ), false, self.SmokeTrailSize, 0, self.SmokeTrailTime, 1 / self.SmokeTrailSize * 0.5, "particle/particle_smokegrenade")
+            util.SpriteTrail(self, 0, Color(150, 150, 150, 150), false, self.SmokeTrailSize, 0, self.SmokeTrailTime, 1 / self.SmokeTrailSize * 0.5, "trails/smoke")
         end
     end
 
@@ -178,14 +180,22 @@ if SERVER then
         end
 
         if drunk then
-            self:SetAngles(self:GetAngles() + (AngleRand() * FrameTime() * 1000 / 360))
+            self:GetPhysicsObject():AddAngleVelocity(VectorRand() * FrameTime() * 1500)
+            --self:SetAngles(self:GetAngles() + (AngleRand() * FrameTime() * 1000 / 360))
         end
 
         if self.Drunkenness > 0 then
-            self:SetAngles(self:GetAngles() + (AngleRand() * FrameTime() * self.Drunkenness / 360))
+            self:GetPhysicsObject():AddAngleVelocity(VectorRand() * FrameTime() * self.Drunkenness)
+            --self:SetAngles(self:GetAngles() + (AngleRand() * FrameTime() * self.Drunkenness / 360))
         end
 
-        self:GetPhysicsObject():AddVelocity(Vector(0, 0, self.Lift) + self:GetForward() * self.Boost)
+        if self.BoostTime + self.SpawnTime > CurTime() then
+            local vel = self:GetVelocity():Length()
+            if !self.BoostTarget or vel < self.BoostTarget then
+                self:GetPhysicsObject():AddVelocity(self:GetForward() * self.Boost)
+            end
+            self:GetPhysicsObject():AddVelocity(Vector(0, 0, self.Lift))
+        end
 
         -- Gunships have no physics collection, periodically trace to try and blow up in their face
         if self.GunshipWorkaround and (self.GunshipCheck or 0 < CurTime()) then
@@ -316,10 +326,20 @@ end
 
 local flaremat = Material("effects/arc9_lensflare")
 function ENT:Draw()
+    self.SpawnTime = self.SpawnTime or CurTime()
+    self:DrawModel()
+
     if self.Flare and !self.Defused then
         render.SetMaterial(flaremat)
         render.DrawSprite(self:GetPos(), math.Rand(90, 110), math.Rand(90, 110), Color(255, 250, 240))
-    else
-        self:DrawModel()
+    end
+
+    if self.Boost and self.BoostTime + self.SpawnTime > CurTime() and (self.Tick or 0) % 3 == 0 then
+        local eff = EffectData()
+        eff:SetOrigin(self:GetPos())
+        eff:SetAngles(self:GetAngles())
+        eff:SetEntity(self)
+        eff:SetScale(0.5)
+        util.Effect("MuzzleEffect", eff)
     end
 end

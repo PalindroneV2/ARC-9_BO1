@@ -45,7 +45,7 @@ SWEP.RangeMin = 1000
 SWEP.Penetration = 0
 SWEP.DamageType = nil
 SWEP.ShootEnt = "arc9_bo1_rocket_rpg" -- Set to an entity to launch it out of this weapon.
-SWEP.ShootEntForce = 10000
+SWEP.ShootEntForce = 2000
 SWEP.ShootEntityData = {}
 
 -- SWEP.PhysBulletMuzzleVelocity = 960 * 39.37
