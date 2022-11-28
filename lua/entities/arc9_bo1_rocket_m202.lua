@@ -19,12 +19,12 @@ ENT.ImpactDamage = 300
 ENT.Drunkenness = 0
 
 ENT.FuseTime = 0
-ENT.Boost = 700
-ENT.BoostTarget = 4000
+ENT.Boost = 2000
+ENT.BoostTarget = 3000
 ENT.Lift = 75
-ENT.DragCoefficient = 0.1
+ENT.DragCoefficient = 0.25
 
-ENT.BoostTime = 0.5
+ENT.BoostTime = 0.25
 
 if CLIENT then
     killicon.Add( "arc9_bo1_m202rocket", "arc9/weaponicons/arc9_bo1_m202", Color( 255, 255, 255, 255 ) )
@@ -40,7 +40,7 @@ function ENT:Detonate()
         util.Effect( "WaterSurfaceExplosion", effectdata )
         --self:EmitSound("weapons/underwater_explode3.wav", 125, 100, 1, CHAN_AUTO)
     else
-        util.Effect( "HelicopterMegaBomb", effectdata)
+        --util.Effect( "HelicopterMegaBomb", effectdata)
         util.Effect("bo1_m202_explode", effectdata)
         --self:EmitSound("phx/kaboom.wav", 125, 100, 1, CHAN_AUTO)
     end

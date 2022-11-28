@@ -3,10 +3,10 @@ function EFFECT:Init(data)
 
     local emitter = ParticleEmitter(data:GetOrigin())
     if not IsValid(emitter) then return end
-    for i = 1, 15 do
+    for i = 1, 10 do
         local smoke = emitter:Add("particle/smokestack", data:GetOrigin())
-        smoke:SetVelocity(VectorRand() * 200)
-        smoke:SetGravity(Vector(math.Rand(-25, 25), math.Rand(-25, 25), 70))
+        smoke:SetVelocity(VectorRand() * 100)
+        smoke:SetGravity(Vector(math.Rand(-5, 5), math.Rand(-5, 5), 70))
         smoke:SetDieTime(math.Rand(5, 7))
         smoke:SetStartAlpha(80)
         smoke:SetEndAlpha(0)
@@ -15,7 +15,7 @@ function EFFECT:Init(data)
         smoke:SetRoll(math.Rand(-180, 180))
         smoke:SetRollDelta(math.Rand(-0.5, 0.5))
         smoke:SetColor(175, 175, 175)
-        smoke:SetAirResistance(170)
+        smoke:SetAirResistance(120)
         smoke:SetPos(self:GetPos())
         smoke:SetLighting(false)
         smoke:SetBounce(0.5)
@@ -43,7 +43,7 @@ function EFFECT:Init(data)
 
     for i = 1, 10 do
         local fire = emitter:Add("effects/fire_cloud" .. math.random(1, 2), data:GetOrigin())
-        fire:SetVelocity(VectorRand() * 800 + Vector(0, 0, 100))
+        fire:SetVelocity(VectorRand() * 1200 - Vector(0, 0, 100))
         fire:SetGravity(Vector(0, 0, 0))
         fire:SetDieTime(math.Rand(0.1, 0.25))
         fire:SetStartAlpha(255)
