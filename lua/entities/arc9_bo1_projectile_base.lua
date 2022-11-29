@@ -334,12 +334,12 @@ function ENT:Draw()
         render.DrawSprite(self:GetPos(), math.Rand(90, 110), math.Rand(90, 110), Color(255, 250, 240))
     end
 
-    if self.Boost and self.BoostTime + self.SpawnTime > CurTime() and (self.Tick or 0) % 3 == 0 then
+    if (self.Boost or 0) > 0 and self.BoostTime + self.SpawnTime > CurTime() and (self.Tick or 0) % 3 == 0 then
         local eff = EffectData()
         eff:SetOrigin(self:GetPos())
         eff:SetAngles(self:GetAngles())
         eff:SetEntity(self)
-        eff:SetScale(0.5)
+        eff:SetScale(1)
         util.Effect("MuzzleEffect", eff)
     end
 end
