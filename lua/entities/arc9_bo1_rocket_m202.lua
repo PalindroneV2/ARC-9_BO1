@@ -42,7 +42,8 @@ function ENT:Detonate()
     else
         --util.Effect( "HelicopterMegaBomb", effectdata)
         util.Effect("bo1_m202_explode", effectdata)
-        --self:EmitSound("phx/kaboom.wav", 125, 100, 1, CHAN_AUTO)
+        self:EmitSound("^weapons/explode5.wav", 100, 110)
+        self:EmitSound("^ambient/fire/ignite.wav", 110, 110)
     end
 
     util.BlastDamage(self, IsValid(self:GetOwner()) and self:GetOwner() or self, self:GetPos(), self.Radius, self.DamageOverride or self.Damage)
