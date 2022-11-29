@@ -98,6 +98,7 @@ function EFFECT:Init(data)
         fire:SetCollide(true)
     end
     emitter:Finish()
+    self:Remove()
 end
 
 function EFFECT:Think()
