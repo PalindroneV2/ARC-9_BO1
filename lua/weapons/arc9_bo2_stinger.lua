@@ -88,7 +88,7 @@ SWEP.Hook_Think = function(self)
         end
         -- end
 
-        local targets = ents.FindInCone(self:GetShootPos() + (self:GetShootDir():Forward() * 32), self:GetShootDir():Forward(), 30000, math.cos(math.rad(5)))
+        local targets = ents.GetAll()
 
         local best = nil
         -- local bestang = -1000
@@ -103,12 +103,15 @@ SWEP.Hook_Think = function(self)
             if ent.UnTrackable then continue end
             local dot = (ent:GetPos() - self:GetShootPos()):GetNormalized():Dot(self:GetShootDir():Forward())
 
+            if math.deg(math.acos(dot)) > 5 then continue end
+
             local entscore = 1
 
             if ent:IsPlayer() then entscore = entscore + 15 end
             if ent:IsNPC() then entscore = entscore + 10 end
             if ent:IsVehicle() then entscore = entscore + 25 end
             if ent:Health() > 0 then entscore = entscore + 5 end
+            if ent.IsAirAsset then entscore = entscore + 100 end
 
             entscore = entscore + (dot * 2.5)
 
