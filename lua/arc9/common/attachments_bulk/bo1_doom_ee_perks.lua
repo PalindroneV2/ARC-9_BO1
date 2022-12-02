@@ -176,7 +176,6 @@ hook.Add("Move", "ARC9_BO1_DOOM_EE_SPEED", function(ent, mv)
     if !IsValid(wep) or !wep.ARC9 then return end
     local attached = wep:GetElements()
     if !attached["doom_ee"] then return end
-    ent:SprintDisable()
 
     local max = ent:GetMaxSpeed()
     local s = 1
