@@ -38,9 +38,9 @@ SWEP.ViewModelFOVBase = 75
 
 SWEP.DefaultBodygroups = "0000000000"
 
-SWEP.DamageMax = 200
-SWEP.DamageMin = 50 -- damage done at maximum range
-SWEP.RangeMax = 10000
+SWEP.DamageMax = 300
+SWEP.DamageMin = 75 -- damage done at maximum range
+SWEP.RangeMax = 15000
 SWEP.RangeMin = 2500
 SWEP.Penetration = 50
 SWEP.ImpactForce = 25
@@ -88,7 +88,7 @@ SWEP.RecoilKick = 4
 SWEP.Spread = math.rad(1.15 / 37.5)
 SWEP.SpreadMultRecoil = 1.25
 
-SWEP.SpreadMultSights = 0.1
+SWEP.SpreadMultSights = 0
 SWEP.SpreadAddHipFire = math.rad(250 / 37.5)
 SWEP.SpreadAddMove = math.rad(0 / 37.5)
 SWEP.SpreadAddMidAir = 0

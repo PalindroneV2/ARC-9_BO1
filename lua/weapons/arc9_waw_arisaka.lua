@@ -39,9 +39,9 @@ SWEP.ViewModelFOVBase = 75
 
 SWEP.DefaultBodygroups = "01000000000000"
 
-SWEP.DamageMax = 105
-SWEP.DamageMin = 65 -- damage done at maximum range
-SWEP.RangeMax = 10000
+SWEP.DamageMax = 40
+SWEP.DamageMin = 105 -- damage done at maximum range
+SWEP.RangeMax = 8000
 SWEP.RangeMin = 3000
 SWEP.Penetration = 8
 SWEP.DamageType = DMG_BULLET
@@ -51,7 +51,7 @@ SWEP.EntityMuzzleVelocity = 10000
 SWEP.PhysBulletMuzzleVelocity = 1200 * 39.37
 
 SWEP.BodyDamageMults = {
-    [HITGROUP_HEAD] = 2,
+    [HITGROUP_HEAD] = 10,
     [HITGROUP_CHEST] = 1,
     [HITGROUP_LEFTARM] = 1,
     [HITGROUP_RIGHTARM] = 1,
