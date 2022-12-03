@@ -396,22 +396,23 @@ ARC9.LoadAttachment(ATT, "bo1_glammo_dud")
 
 ATT = {}
 
-ATT.PrintName = [[MK3A2 Offensive Blast Grenade]]
-ATT.CompactName = [[HL2 FRAG]]
+ATT.PrintName = [[M67 Fragmentation Grenade]]
+ATT.CompactName = [[M67 Frag]]
 ATT.Icon = Material("entities/bo1_atts/ammo/FMJ.png")
 ATT.Description = [[
-    Your grenade launcher now fires a powerful blast grenade.
+    Somehow fire a standard fragmentation grenade.
 ]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
-ATT.Ignore = true
+ATT.Ignore = false
 
 ATT.Category = {"bo1_glammo"}
-ATT.ActivateElements = {"bo1_gl_hl2frag"}
-ATT.ShootEnt = "npc_grenade_frag"
+ATT.ActivateElements = {"bo1_gl_m67frag"}
+ATT.ShootEnt = "arc9_bo1_frag"
 ATT.ShootEntityData = {}
+ATT.FuseTimer = 3
 
-ARC9.LoadAttachment(ATT, "bo1_glammo_combineball")
+ARC9.LoadAttachment(ATT, "bo1_glammo_m67frag")

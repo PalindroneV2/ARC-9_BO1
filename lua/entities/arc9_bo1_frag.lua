@@ -16,5 +16,5 @@ ENT.FuseTime = 5
 ENT.BounceSounds = {""}
 
 if CLIENT then
-    killicon.Add( "arc9_bo1_frag", "arc9/weaponicons/mw3_ubs/gp25", Color( 255, 255, 255, 255 ) )
+    killicon.Add( "arc9_bo1_frag", "arc9/weaponicons/ubs/m203", Color( 255, 255, 255, 255 ) )
 end

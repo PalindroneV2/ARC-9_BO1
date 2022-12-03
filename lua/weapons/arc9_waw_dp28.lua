@@ -74,7 +74,7 @@ SWEP.ReloadTime = 1
 SWEP.Crosshair = true
 SWEP.CanBlindFire = false
 
-SWEP.Recoil = 0.75
+SWEP.Recoil = 0.6
 SWEP.RecoilSide = 0.55
 SWEP.RecoilUp = 0.7
 

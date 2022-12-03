@@ -75,18 +75,18 @@ SWEP.ReloadTime = 1
 SWEP.Crosshair = true
 SWEP.CanBlindFire = false
 
-SWEP.Recoil = 1
-SWEP.RecoilSide = 0.7
-SWEP.RecoilUp = 1
+SWEP.Recoil = 0.5
+SWEP.RecoilSide = 0.35
+SWEP.RecoilUp = 0.5
 
-SWEP.RecoilRandomUp = 1
-SWEP.RecoilRandomSide = 0.6
+SWEP.RecoilRandomUp = 0.5
+SWEP.RecoilRandomSide = 0.3
 
 SWEP.RecoilDissipationRate = 40 -- How much recoil dissipates per second.
 SWEP.RecoilResetTime = 0.01 -- How long the gun must go before the recoil pattern starts to reset.
 
 SWEP.RecoilAutoControl = 0.5
-SWEP.RecoilKick = 1
+SWEP.RecoilKick = 0.9
 
 --1 SPREAD = 2160 MOA
 
@@ -130,6 +130,8 @@ SWEP.Firemodes = {
     },
     {
         Mode = -1,
+        DamageMaxMult = 0.75,
+        DamageMinMult = 0.85,
     },
 }
 SWEP.NPCWeaponType = {"weapon_ar2", "weapon_smg1"}

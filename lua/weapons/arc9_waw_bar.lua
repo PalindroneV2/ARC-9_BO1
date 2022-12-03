@@ -130,6 +130,8 @@ SWEP.Firemodes = {
         PrintName = "600 RPM",
         Mode = -1,
         RPM = 600,
+        DamageMaxMult = 0.85,
+        DamageMinMult = 0.90,
     },
     {
         Mode = 1,

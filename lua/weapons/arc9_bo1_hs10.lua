@@ -42,10 +42,10 @@ SWEP.CustomBlendFactor = 1
 
 SWEP.DefaultBodygroups = "002000000"
 
-SWEP.DamageMax = 9
-SWEP.DamageMin = 6 -- damage done at maximum range
+SWEP.DamageMax = 35
+SWEP.DamageMin = 8 -- damage done at maximum range
 SWEP.RangeMax = 2500
-SWEP.RangeMin = 500
+SWEP.RangeMin = 1500
 SWEP.Penetration = 2
 SWEP.DamageType = DMG_BUCKSHOT
 SWEP.ShootEntity = nil -- entity to fire, if any
@@ -88,10 +88,10 @@ SWEP.RecoilResetTime = 0.01 -- How long the gun must go before the recoil patter
 SWEP.RecoilAutoControl = 0.5
 SWEP.RecoilKick = 2
 
-SWEP.Spread = 0.035
+SWEP.Spread = 0.02
 
 SWEP.UsePelletSpread = true -- Multiple bullets fired at once clump up, like for a shotgun. Spread affects which direction they get fired, not their spread relative to one another.
-SWEP.PelletSpread = 0.2
+SWEP.PelletSpread = 0.05
 
 SWEP.SpreadMultRecoil = 1.25
 

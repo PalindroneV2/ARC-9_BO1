@@ -42,10 +42,10 @@ SWEP.CustomBlendFactor = 1
 
 SWEP.DefaultBodygroups = "002000000"
 
-SWEP.DamageMax = 20
-SWEP.DamageMin = 10 -- damage done at maximum range
-SWEP.RangeMax = 3000
-SWEP.RangeMin = 750
+SWEP.DamageMax = 40
+SWEP.DamageMin = 13 -- damage done at maximum range
+SWEP.RangeMax = 3500
+SWEP.RangeMin = 1500
 SWEP.Penetration = 2
 SWEP.DamageType = DMG_BUCKSHOT
 SWEP.ShootEntity = nil -- entity to fire, if any
