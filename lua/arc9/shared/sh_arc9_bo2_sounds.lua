@@ -1009,3 +1009,46 @@ sound.Add({
     level = 70,
     sound = "^weapons/arc9/bo2_storm/charge/powerdown.wav"
 })
+
+-- MINGUN --
+
+sound.Add({
+    name = "ARC9_BO2.GAU19_Fire_Start",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = "^weapons/arc9/BO2_VULCAN/fire_start.wav"
+})
+sound.Add({
+    name = "ARC9_BO2.GAU19_Fire_Loop",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = "^weapons/arc9/BO2_VULCAN/fire_loop.wav"
+})
+sound.Add({
+    name = "ARC9_BO2.GAU19_Fire_Stop",
+    channel = CHAN_STATIC,
+    level = 100,
+    sound = "^weapons/arc9/BO2_VULCAN/fire_stop.wav"
+})
+sound.Add({
+    name = "ARC9_BO2.GAU19_Spool_Start",
+    channel = CHAN_AUTO,
+    level = 70,
+    sound = "^weapons/arc9/BO2_VULCAN/spool_start.wav"
+})
+sound.Add({
+    name = "ARC9_BO2.GAU19_Spool_Loop",
+    channel = CHAN_AUTO,
+    level = 70,
+    sound = "^weapons/arc9/BO2_VULCAN/spool_loop.wav"
+})
+sound.Add({
+    name = "ARC9_BO2.GAU19_Spool_Stop",
+    channel = CHAN_AUTO,
+    level = 70,
+    sound = "^weapons/arc9/BO2_VULCAN/spool_stop.wav"
+})

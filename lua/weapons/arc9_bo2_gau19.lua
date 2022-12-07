@@ -1,19 +1,19 @@
 SWEP.Base = "arc9_base"
 SWEP.Spawnable = true -- this obviously has to be set to true
-SWEP.Category = "ARC9 - Black Ops" -- edit this if you like
+SWEP.Category = "ARC9 - Black Ops II" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "M134 Minigun"
+SWEP.PrintName = "GAU-19"
 SWEP.Class = "Heavy Machine Gun"
-SWEP.Description = [[How you are able to carry this death machine and shoot it standing is of no importance. What is is what you will destroy with it's delivery of 7.62x51mm NATO rounds at 1750 rounds per minute.]]
+SWEP.Description = [[How you are able to carry this death machine and shoot it standing is of no importance. What is important is what you will destroy with it's delivery of .50 BMG rounds at 1666 rounds per minute.]]
 
 SWEP.Trivia = {
     Manufacturer = "U.S. Ordnance/General Electric",
-    Calibre = "7.62x51mm NATO",
+    Calibre = ".50 BMG",
     Mechanism = "Electrically driven rotary breech",
     Country = "USA",
     Year = 1960,
-    Games = [[COD4, MW2, BO1, MW3, BO2, AW, BO3, BO4, MW19, BOCW]]
+    Games = [[Call of Duty: Black Ops II]]
 }
 SWEP.Credits = {
     Author = "Palindrone"
@@ -23,10 +23,10 @@ SWEP.Slot = 4
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/arc9/c_bo1_minigun.mdl"
-SWEP.WorldModel = "models/weapons/arc9/w_bo1_minigun.mdl"
+SWEP.ViewModel = "models/weapons/arc9/c_bo2_gau19.mdl"
+SWEP.WorldModel = "models/weapons/arc9/w_bo2_gau19.mdl"
 SWEP.MirrorVMWM = true
-SWEP.WorldModelMirror = "models/weapons/arc9/w_bo1_minigun.mdl"
+SWEP.WorldModelMirror = "models/weapons/arc9/w_bo2_gau19.mdl"
 SWEP.WorldModelOffset = {
     Pos        =    Vector(-3, 5, 3),
     Ang        =    Angle(-5, 5, 180),
@@ -38,8 +38,8 @@ SWEP.ViewModelFOVBase = 75
 SWEP.DefaultBodygroups = "10"
 SWEP.DefaultWMBodygroups = "00"
 
-SWEP.DamageMax = 50
-SWEP.DamageMin = 30 -- damage done at maximum range
+SWEP.DamageMax = 99
+SWEP.DamageMin = 50 -- damage done at maximum range
 SWEP.RangeMax = 7200
 SWEP.RangeMin = 1800
 SWEP.Penetration = 9
@@ -49,7 +49,7 @@ SWEP.EntityMuzzleVelocity = 10000
 SWEP.Num = 1
 SWEP.AmmoPerShot = 1
 SWEP.PushBackForce = 1
-SWEP.ArmorPiercing = 0.1 -- Between 0-1. A proportion of damage that is done as direct damage, ignoring protection.
+SWEP.ArmorPiercing = 1 -- Between 0-1. A proportion of damage that is done as direct damage, ignoring protection.
 
 SWEP.PhysBulletMuzzleVelocity = 1200 * 39.37 -- IN HU (INCHES)
 
@@ -118,7 +118,7 @@ SWEP.SpeedMultBlindFire = 1
 SWEP.AimDownSightsTime = 1
 SWEP.SprintToFireTime = 0.75
 
-SWEP.RPM = 1750
+SWEP.RPM = 1666
 -- SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
@@ -141,10 +141,9 @@ SWEP.ShootVolume = 125
 SWEP.ShootPitch = 100
 SWEP.ShootPitchVariation = 0
 
-SWEP.FirstShootSound = "ARC9_BO1.Minigun_Start"
-SWEP.ShootSoundLooping = "^weapons/arc9/bo1_minigun/looping.wav"
-SWEP.DistantShootSound = "ARC9_BO1.Minigun_Ring"
-SWEP.ShootSoundTail = "ARC9_BO1.Minigun_End"
+SWEP.FirstShootSound = "ARC9_BO2.GAU19_Fire_Start"
+SWEP.ShootSoundLooping = "ARC9_BO2.GAU19_Fire_Loop"
+SWEP.ShootSoundTail = "ARC9_BO2.GAU19_Spool_Stop"
 
 --SWEP.MuzzleEffect = "muzzleflash_4"
 SWEP.MuzzleParticle = "muzzleflash_minimi" -- Used for some muzzle effects.
@@ -185,7 +184,7 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_AR2
 SWEP.AnimDraw = ACT_HL2MP_GESTURE_RANGE_ATTACK_KNIFE
 
-SWEP.ActivePos = Vector(0, -2, -1)
+SWEP.ActivePos = Vector(0, 0, 0)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
 SWEP.MovingPos = SWEP.ActivePos
@@ -196,12 +195,12 @@ SWEP.MovingMidPoint = {
     Ang = SWEP.ActiveAng
 }
 
-SWEP.CrouchPos = Vector(0, -2, -1)
-SWEP.CrouchAng = Angle(0, 0, 0)
+SWEP.CrouchPos = SWEP.ActivePos
+SWEP.CrouchAng = SWEP.ActiveAng
 
 SWEP.SprintVerticalOffset = false
-SWEP.SprintPos = Vector(0, -2, 1)
-SWEP.SprintAng = Angle(0, -10, 0)
+SWEP.SprintPos = SWEP.ActivePos
+SWEP.SprintAng = SWEP.ActiveAng
 
 SWEP.CustomizePos = Vector(20, 40, 7.5)
 SWEP.CustomizeAng = Angle(90, 0, 0)
@@ -223,9 +222,9 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local attached = data.elements
 
     if CUSTSTATE then
-        vm:SetBodygroup(0,0)
-    else
         vm:SetBodygroup(0,1)
+    else
+        vm:SetBodygroup(0,0)
     end
 
     if attached["bo1_pap"] then
@@ -343,7 +342,7 @@ SWEP.Animations = {
         },
     },
     ["fire"] = {
-        Source = {"fire_spin"},
+        Source = {"fire"},
         Time = 1,
         ShellEjectAt = 0,
         IKTimeLine = {
@@ -352,6 +351,9 @@ SWEP.Animations = {
                 lhik = 1,
                 rhik = 1,
             },
+        },
+        EventTable = {
+            {s = "ARC9_BO2.GAU19_Spool_Loop", t = 0.01}
         },
     },
     ["idle_iron"] = {
@@ -376,6 +378,9 @@ SWEP.Animations = {
                 rhik = 1,
             },
         },
+        EventTable = {
+            {s = "ARC9_BO2.GAU19_Spool_Loop", t = 0.01}
+        },
     },
     ["reload"] = {
         Source = "reload",
@@ -397,5 +402,17 @@ SWEP.Animations = {
         --         rhik = 1,
         --     },
         -- },
+    },
+    ["enter_sprint"] = {
+        Source = "sprint_in",
+        Time = 1,
+    },
+    ["idle_sprint"] = {
+        Source = "sprint_loop",
+        Time = 30 / 40
+    },
+    ["exit_sprint"] = {
+        Source = "sprint_out",
+        Time = 1,
     },
 }
