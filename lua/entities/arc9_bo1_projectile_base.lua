@@ -70,9 +70,9 @@ if SERVER then
             phys:SetBuoyancyRatio(0.4)
         end
 
-        self.SpawnTime = CurTime()
+        self:SetCollisionGroup(COLLISION_GROUP_PROJECTILE)
 
-        PrintTable(self.ShootEntData)
+        self.SpawnTime = CurTime()
 
         if self.SmokeTrail then
             util.SpriteTrail(self, 0, Color(150, 150, 150, 150), false, self.SmokeTrailSize, 0, self.SmokeTrailTime, 1 / self.SmokeTrailSize * 0.5, "trails/smoke")
