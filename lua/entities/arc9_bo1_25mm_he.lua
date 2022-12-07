@@ -10,7 +10,7 @@ ENT.DragCoefficient = 1
 
 ENT.Radius = 250
 ENT.DamageOverride = 150
-ENT.ImpactDamage = 100
+ENT.ImpactDamage = 0
 ENT.FuseTime = 0.05
 
 if CLIENT then

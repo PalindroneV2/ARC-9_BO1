@@ -11,7 +11,7 @@ ENT.Radius = 250
 ENT.FuseTime = 0.05
 ENT.Dead = true
 ENT.Defused = true
-ENT.ImpactDamage = 100
+ENT.ImpactDamage = 0
 
 if CLIENT then
     killicon.Add( "arc9_bo1_40mm_dud", "arc9/weaponicons/ubs/m203", Color( 255, 255, 255, 255 ) )

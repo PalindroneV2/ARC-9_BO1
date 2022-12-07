@@ -9,7 +9,7 @@ ENT.Model = "models/weapons/arc9/item/bo1_40mm.mdl"
 -- Generic grenade used by grenade launcher weapons (hence no damage)
 ENT.Radius = 250
 ENT.FuseTime = 0
-ENT.ImpactDamage = 100
+ENT.ImpactDamage = 0
 
 if CLIENT then
     killicon.Add( "arc9_bo1_40mm_he", "arc9/weaponicons/ubs/m203", Color( 255, 255, 255, 255 ) )
