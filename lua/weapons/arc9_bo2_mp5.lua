@@ -417,7 +417,7 @@ end
 --TEST 3
 
 SWEP.Attachments = {
-    [1] = {
+    {
         PrintName = "Optic",
         Bone = "j_gun",
         Pos = Vector(-3.5, 0.1, 3.35),
@@ -426,7 +426,7 @@ SWEP.Attachments = {
         InstalledElements = {"mount"},
         ExcludeElements = {"mp5k", "mp5k_mw2_ris"},
     },
-    [2] = {
+    {
         PrintName = "Stock",
         Bone = "j_gun",
         Pos = Vector(-11, 0, 0.75),
@@ -434,7 +434,7 @@ SWEP.Attachments = {
         Category = {"bo1_stocks","bo1_mp5_stock"},
         Installed = "bo1_stock_light",
     },
-    [3] = {
+    {
         PrintName = "Muzzle",
         Bone = "j_gun",
         Scale = Vector(1,1,1),
@@ -443,23 +443,23 @@ SWEP.Attachments = {
         Category = {"bo1_muzzle_smg", "bo1_muzzle_pistol"},
         ExcludeElements = {"mp5k", "mp5sd"},
     },
-    [4] = {
+    {
         PrintName = "Barrel",
         Bone = "j_gun",
         Pos = Vector(6, 0, 3),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_mp5_barrel"},
     },
-    [5] = {
+    {
         PrintName = "Underbarrel",
         Bone = "j_gun",
         Scale = Vector(1,1,1),
         Pos = Vector(6, 0.2, 0.5),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_rail_underbarrel"},
+        Category = {"bo1_rail_underbarrel","bo1_uni_gls"},
         ExcludeElements = {"mp5k", "mp5_ris", "mp5sd"},
     },
-    [6] = {
+    {
         PrintName = "Firing Group",
         DefaultCompactName = "S-1-3-F",
         Bone = "j_gun",
@@ -467,7 +467,7 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"bo1_fcg"},
     },
-    [7] = {
+    {
         PrintName = "Perk-a-Cola",
         DefaultCompactName = "PERK",
         Bone = "j_gun",
@@ -475,7 +475,7 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = "bo1_perkacola",
     },
-    [8] = {
+    {
         PrintName = "Magazine",
         DefaultCompactName = "30 RND",
         Bone = "tag_clip",
@@ -485,7 +485,7 @@ SWEP.Attachments = {
         -- MergeSlots = {9},
         ExcludeElements = {"mp5k"},
     },
-    [9] = {
+    {
         PrintName = "Ammunition",
         DefaultCompactName = "AMMO",
         Bone = "tag_clip",
@@ -493,7 +493,7 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ammo", "bo1_pap"},
     },
-    [10] = {
+    {
         PrintName = "Cosmetic",
         Bone = "j_gun",
         Pos = Vector(-10, 0, 4),

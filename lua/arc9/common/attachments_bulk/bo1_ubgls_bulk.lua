@@ -410,8 +410,8 @@ ATT.ExcludeElements = {"no_ubgl"}
 ATT.AimDownSightsTimeMult = 1.1
 ATT.SprintToFireTimeMult = 1.1
 
-ATT.Model = "models/weapons/arc9/atts/c_bo1_ub_m203.mdl"
-ATT.ModelOffset = Vector(-12.6, -3, -3.5)
+ATT.Model = "models/weapons/arc9/ubs/bo1_m203_standalone.mdl"
+ATT.ModelOffset = Vector(-22, -2.8, 4)
 ATT.LHIK = true
 
 ATT.UBGL = true
@@ -438,6 +438,12 @@ ATT.ShootEntForceUBGL = 15000
 ATT.MuzzleParticleUBGL = "muzzleflash_m79"
 
 ATT.IKAnimationProxy = {
+    ["idle"] = {
+        Source = "idle"
+    },
+    ["idle_ubgl"] = {
+        Source = "idle_glsetup"
+    },
     ["fire_ubgl"] = {
         Source = "fire",
     },
@@ -452,28 +458,22 @@ ATT.IKAnimationProxy = {
         },
     },
     ["enter_ubgl"] = {
-        Source = "enter_ubgl"
-    },
-    ["idle_ubgl"] = {
-        Source = "idle_glsetup"
-    },
-    ["idle"] = {
-        Source = "idle"
+        Source = "in"
     },
     ["exit_ubgl"] = {
-        Source = "exit_ubgl"
+        Source = "out"
     },
 } -- When an animation event plays, override it with one based on this LHIK model.
 
-ATT.IKGunMotionQCA = nil
+ATT.IKGunMotionQCA = 1
 
-ATT.IKGunMotionOffset = Vector(0, 3, -1)
-ATT.IKGunMotionOffsetAngle = Angle(0, 0, 0)
+ATT.IKGunMotionOffset = Vector(0, 0, 0)
+ATT.IKGunMotionOffsetAngle = Angle(0, -90, -90)
 
-ATT.IKGunMotionMult = 0.5
-ATT.IKGunMotionAngleMult = 0.5
+ATT.IKGunMotionMult = 1
+ATT.IKGunMotionAngleMult = 1
 
-ATT.IKCameraMotionQCA = 3
+ATT.IKCameraMotionQCA = 4
 ATT.IKCameraMotionOffsetAngle = Angle(0, 0, 0)
 
 -- ATT.ActivePosHook = function(wep, vec)
