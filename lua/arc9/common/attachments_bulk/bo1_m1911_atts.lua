@@ -4,12 +4,10 @@ local ATT = {}
 
 ATT = {}
 
-ATT.PrintName = [[Compensator]]
+ATT.PrintName = [[M1911A1 Compensator]]
 ATT.CompactName = [[COMP]]
 ATT.Icon = Material("materials/entities/bo1_atts/barrel/bo1_suppressor.png")
-ATT.Description = [[
-    Special M1911 platform compensator.
-]]
+ATT.Description = [[Weapon exclusive compensator.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -40,9 +38,7 @@ ATT = {}
 ATT.PrintName = "24 Karat Gold"
 ATT.CompactName = "Gold"
 ATT.Icon = Material("materials/entities/bo1_generic.png")
-ATT.Description = [[
-    An opulent golden gun.
-]]
+ATT.Description = [[An opulent golden gun.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -59,9 +55,7 @@ ATT = {}
 ATT.PrintName = "Nickel Finish"
 ATT.CompactName = "NICKEL"
 ATT.Icon = Material("materials/entities/bo1_generic.png")
-ATT.Description = [[
-    Fancy and shiny nickel finish for your weapon. Gives you no tactical advantage whatsoever.
-]]
+ATT.Description = [[Fancy and shiny nickel finish for your weapon. Gives you no tactical advantage whatsoever.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -78,9 +72,7 @@ ATT = {}
 ATT.PrintName = "Battle Worn"
 ATT.CompactName = "Worn"
 ATT.Icon = Material("materials/entities/bo1_generic.png")
-ATT.Description = [[
-    The blued finish of your weapon has been worn down by years of combat.
-]]
+ATT.Description = [[The blued finish of your weapon has been worn down by years of combat.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -99,9 +91,7 @@ ATT = {}
 ATT.PrintName = "HD Frame"
 ATT.CompactName = "HD G.I."
 ATT.Icon = Material("materials/entities/bo1_atts/cosmetic/bo3_1911.png")
-ATT.Description = [[
-    M1911 assets from Black Ops Cold War.
-]]
+ATT.Description = [[M1911 assets from Black Ops Cold War.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -119,9 +109,7 @@ ATT = {}
 ATT.PrintName = "Springfield Armory Modern Frame"
 ATT.CompactName = "S.A. Frame"
 ATT.Icon = Material("materials/entities/bo1_atts/cosmetic/bo3_1911.png")
-ATT.Description = [[
-    Modern M1911 platform Frame with improved ambidextrous safety and a dove-tail to protect the shooter from hammer bite.
-]]
+ATT.Description = [[Modern M1911 platform Frame with improved ambidextrous safety and a dove-tail to protect the shooter from hammer bite.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -138,9 +126,7 @@ ATT = {}
 ATT.PrintName = "Ring Hammer"
 ATT.CompactName = "Ring"
 ATT.Icon = Material("materials/entities/bo1_atts/cosmetic/bo3_1911.png")
-ATT.Description = [[
-    Notched Ring Hammer that improves grip by increasing friction.
-]]
+ATT.Description = [[Notched Ring Hammer that improves grip by increasing friction.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -157,9 +143,7 @@ ATT = {}
 ATT.PrintName = "Competition Hair Trigger"
 ATT.CompactName = "CHT"
 ATT.Icon = Material("materials/entities/bo1_atts/cosmetic/bo3_1911.png")
-ATT.Description = [[
-    Longer improved trigger with reduced pull.
-]]
+ATT.Description = [[Longer improved trigger with reduced pull.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -178,9 +162,7 @@ ATT = {}
 ATT.PrintName = "Springfield Armory Modern Slide"
 ATT.CompactName = "5\" S.A."
 ATT.Icon = Material("materials/entities/bo1_atts/cosmetic/bo3_1911.png")
-ATT.Description = [[
-    Modern M1911 platform slide with angled serrations and replaceable Novak iron sights with tritium.
-]]
+ATT.Description = [[Modern M1911 platform slide with angled serrations and replaceable Novak iron sights with tritium.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -197,14 +179,19 @@ ATT = {}
 ATT.PrintName = "Commander Short Slide"
 ATT.CompactName = "4.25\" G.I."
 ATT.Icon = Material("materials/entities/bo1_atts/cosmetic/bo2_1911.png")
-ATT.Description = [[
-    Compact 1911 slide with that improves handling and sprint times but reduces muzzle velocity and worsens recoil.
-]]
+ATT.Description = [[Compact 1911 slide with that improves handling and sprint times but reduces muzzle velocity and worsens recoil.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 1
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
-ATT.Free = true
+
+ATT.RangeMaxMult = 0.75
+ATT.PhysBulletMuzzleVelocityMult = 0.9
+ATT.RecoilKickMult = 1.15
+ATT.SpreadAdd = math.rad(3 / 37.5)
+
+ATT.SpreadAddHipFire = -math.rad(30 / 37.5)
+ATT.SpreadAddMove = -math.rad(15 / 37.5)
 
 ATT.Category = {"bo1_m1911_slides"}
 ATT.ActivateElements = {"1911_slide_short", "shortbarrel"}
@@ -216,15 +203,22 @@ ATT = {}
 ATT.PrintName = "Springfield Armory Commander Slide"
 ATT.CompactName = "4.25\" S.A."
 ATT.Icon = Material("materials/entities/bo1_atts/cosmetic/bo3_1911.png")
-ATT.Description = [[
-    Compact 1911 slide with that improves handling and sprint times but reduces muzzle velocity and worsens recoil.
-]]
+ATT.Description = [[Compact 1911 slide with that improves handling and sprint times but reduces muzzle velocity and worsens recoil.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 1
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
-ATT.Free = true
 
+ATT.RangeMaxMult = 0.75
+ATT.PhysBulletMuzzleVelocityMult = 0.9
+ATT.RecoilKickMult = 1.15
+ATT.SpreadAdd = math.rad(3 / 37.5)
+
+ATT.SpreadAddHipFire = -math.rad(30 / 37.5)
+ATT.SpreadAddMove = -math.rad(15 / 37.5)
+
+ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+
+ATT.InvAtt = "bo1_m1911_slides_short"
 ATT.Category = {"bo1_m1911_slides"}
 ATT.ActivateElements = {"1911_slide_short_modern", "shortbarrel"}
 
@@ -235,14 +229,19 @@ ATT = {}
 ATT.PrintName = "AMT Long Slide"
 ATT.CompactName = "7\" AMT"
 ATT.Icon = Material("materials/entities/bo1_atts/cosmetic/bo2_1911.png")
-ATT.Description = [[
-    Longer 1911 slide and barrel with improved rifling and improved rear irons.
-]]
+ATT.Description = [[Longer 1911 slide and barrel with improved rifling and improved rear irons.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 2
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
-ATT.Free = true
+
+ATT.RangeMaxMult = 1.25
+ATT.PhysBulletMuzzleVelocityMult = 1.15
+ATT.RecoilKickMult = 0.85
+ATT.SpreadAdd = -math.rad(1.5 / 37.5)
+
+ATT.SpreadAddHipFire = math.rad(20 / 37.5)
+ATT.SpreadAddMove = math.rad(10 / 37.5)
 
 ATT.Category = {"bo1_m1911_slides"}
 ATT.ActivateElements = {"1911_slide_baller", "longbarrel"}
@@ -262,8 +261,16 @@ ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 2
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
-ATT.Free = true
 
+ATT.RangeMaxMult = 1.25
+ATT.PhysBulletMuzzleVelocityMult = 1.15
+ATT.RecoilKickMult = 0.85
+ATT.SpreadAdd = -math.rad(1.5 / 37.5)
+
+ATT.SpreadAddHipFire = math.rad(20 / 37.5)
+ATT.SpreadAddMove = math.rad(10 / 37.5)
+
+ATT.InvAtt = "bo1_m1911_slides_hardballer"
 ATT.Category = {"bo1_m1911_slides"}
 ATT.ActivateElements = {"1911_slide_baller_modern", "longbarrel"}
 

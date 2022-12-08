@@ -5,9 +5,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "Makarov PM"
 SWEP.Class = "Pistol"
-SWEP.Description = [[
-    A soviet pistol designed shortly after World War II, standard for all branches of police and military, still used by the Russian Armed Forces to this day.
-]]
+SWEP.Description = [[A soviet pistol designed shortly after World War II, standard for all branches of police and military, still used by the Russian Armed Forces to this day.
+Owing to its compact size and weight, it is very accurate, but its calibre and magazine capacity limits its firepower.]]
 SWEP.Trivia = {
     Manufacturer = "Tula Arms Plant",
     Calibre = "9x18mm Russian",
@@ -40,10 +39,10 @@ SWEP.DefaultBodygroups = "00000000000000"
 
 SWEP.DefaultSkin = 6
 
-SWEP.DamageMax = 30
+SWEP.DamageMax = 27
 SWEP.DamageMin = 10 -- damage done at maximum range
-SWEP.RangeMax = 4000
-SWEP.RangeMin = 1000
+SWEP.RangeMax = 3000
+SWEP.RangeMin = 1200
 SWEP.Penetration = 4
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
@@ -52,7 +51,7 @@ SWEP.EntityMuzzleVelocity = 10000
 SWEP.PhysBulletMuzzleVelocity = 960 * 39.37
 
 SWEP.BodyDamageMults = {
-    [HITGROUP_HEAD] = 2,
+    [HITGROUP_HEAD] = 2.5, -- head + chest NOT enough
     [HITGROUP_CHEST] = 1,
     [HITGROUP_LEFTARM] = 1,
     [HITGROUP_RIGHTARM] = 1,
@@ -85,12 +84,12 @@ SWEP.RecoilResetTime = 0.01 -- How long the gun must go before the recoil patter
 SWEP.RecoilAutoControl = 0.5
 SWEP.RecoilKick = 0.5
 
-SWEP.Spread = math.rad(3.15 / 37.5)
+SWEP.Spread = math.rad(6.5 / 37.5)
 SWEP.SpreadMultRecoil = 1.25
 
-SWEP.SpreadMultSights = 0.1
-SWEP.SpreadAddHipFire = math.rad(150 / 37.5)
-SWEP.SpreadAddMove = math.rad(0 / 37.5)
+SWEP.SpreadMultSights = 1
+SWEP.SpreadAddHipFire = math.rad(50 / 37.5)
+SWEP.SpreadAddMove = math.rad(40 / 37.5)
 SWEP.SpreadAddMidAir = 0
 -- SWEP.SpreadAddShooting = math.rad(5 / 37.5) -- math.rad(108 / 37.5)
 

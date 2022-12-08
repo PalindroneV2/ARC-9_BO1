@@ -5,10 +5,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "CZ 75"
 SWEP.Class = "Pistol"
-SWEP.Description = [[
-    A high capacity czech pistol inpsired by the Browning Hi-Power.
-    The most common pistol in the Czech Republic, owned by civilians, law enforcement and military alike.
-]]
+SWEP.Description = [[A Czech pistol known for being one of the original "wonder nine"s. It is exported widely and remains the most common pistol in the Czech Republic today.
+Boasts a generous double-stack magazine and good stopping power, but is not the best when hip-fired.]]
 SWEP.Trivia = {
     Manufacturer = "CZUB",
     Calibre = "9x19mm Parabellum",
@@ -40,9 +38,9 @@ SWEP.DefaultBodygroups = "00000000000000"
 
 SWEP.DefaultSkin = 6
 
-SWEP.DamageMax = 30
-SWEP.DamageMin = 10 -- damage done at maximum range
-SWEP.RangeMax = 4000
+SWEP.DamageMax = 28
+SWEP.DamageMin = 14 -- damage done at maximum range
+SWEP.RangeMax = 3000
 SWEP.RangeMin = 1000
 SWEP.Penetration = 4
 SWEP.DamageType = DMG_BULLET
@@ -52,7 +50,7 @@ SWEP.EntityMuzzleVelocity = 10000
 SWEP.PhysBulletMuzzleVelocity = 960 * 39.37
 
 SWEP.BodyDamageMults = {
-    [HITGROUP_HEAD] = 2,
+    [HITGROUP_HEAD] = 2.5,
     [HITGROUP_CHEST] = 1,
     [HITGROUP_LEFTARM] = 1,
     [HITGROUP_RIGHTARM] = 1,
@@ -72,7 +70,7 @@ SWEP.ReloadTime = 1
 SWEP.Crosshair = true
 SWEP.CanBlindFire = false
 
-SWEP.Recoil = 0.3
+SWEP.Recoil = 0.6
 SWEP.RecoilSide = 0.4
 SWEP.RecoilUp = 0.4
 
@@ -85,12 +83,13 @@ SWEP.RecoilResetTime = 0.01 -- How long the gun must go before the recoil patter
 SWEP.RecoilAutoControl = 0.5
 SWEP.RecoilKick = 0.5
 
-SWEP.Spread = math.rad(3.15 / 37.5)
+SWEP.Spread = math.rad(3.5 / 37.5)
 SWEP.SpreadMultRecoil = 1.25
 
-SWEP.SpreadMultSights = 0.1
-SWEP.SpreadAddHipFire = math.rad(150 / 37.5)
-SWEP.SpreadAddMove = math.rad(0 / 37.5)
+SWEP.SpreadMultSights = 1
+SWEP.SpreadAddHipFire = math.rad(100 / 37.5)
+SWEP.SpreadAddMove = math.rad(50 / 37.5)
+SWEP.SpreadMultMoveSights = 0.5
 SWEP.SpreadAddMidAir = 0
 -- SWEP.SpreadAddShooting = math.rad(5 / 37.5) -- math.rad(108 / 37.5)
 
@@ -297,7 +296,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(1, 0.1, 0),
         Ang = Angle(0, 0, 0),
-        Category = "bo1_fcg_auto",
+        Category = "bo1_cz75_fcg",
     },
     {
         PrintName = "Irons",

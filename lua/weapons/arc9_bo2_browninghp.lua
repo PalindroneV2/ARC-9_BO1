@@ -5,10 +5,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "Browning HP"
 SWEP.Class = "Pistol"
-SWEP.Description = [[
-    Another semi-automatic pistol designed by the legendary gunsmith, John Moses Browning.
-    This 9mm pistol innovated with the use of double stack magazines which inspired many future handguns' designs.
-]]
+SWEP.Description = [[Pistol designed for the French "high power" trials, innovating with a staggered double-stack magazine design to increase capacity.
+A well-rounded pistol whose only downside is its poor hip fire performance.]]
 SWEP.Trivia = {
     Manufacturer = "FN Herstal",
     Calibre = "9x19mm Parabellum",
@@ -41,8 +39,8 @@ SWEP.DefaultBodygroups = "00000000000000"
 SWEP.DefaultSkin = 6
 
 SWEP.DamageMax = 30
-SWEP.DamageMin = 10 -- damage done at maximum range
-SWEP.RangeMax = 4000
+SWEP.DamageMin = 12 -- damage done at maximum range
+SWEP.RangeMax = 3000
 SWEP.RangeMin = 1000
 SWEP.Penetration = 4
 SWEP.DamageType = DMG_BULLET
@@ -52,7 +50,7 @@ SWEP.EntityMuzzleVelocity = 10000
 SWEP.PhysBulletMuzzleVelocity = 960 * 39.37
 
 SWEP.BodyDamageMults = {
-    [HITGROUP_HEAD] = 2,
+    [HITGROUP_HEAD] = 2.5,
     [HITGROUP_CHEST] = 1,
     [HITGROUP_LEFTARM] = 1,
     [HITGROUP_RIGHTARM] = 1,
@@ -72,7 +70,7 @@ SWEP.ReloadTime = 1
 SWEP.Crosshair = true
 SWEP.CanBlindFire = false
 
-SWEP.Recoil = 0.3
+SWEP.Recoil = 0.5
 SWEP.RecoilSide = 0.4
 SWEP.RecoilUp = 0.4
 
@@ -88,9 +86,10 @@ SWEP.RecoilKick = 0.5
 SWEP.Spread = math.rad(3.5 / 37.5)
 SWEP.SpreadMultRecoil = 1.25
 
-SWEP.SpreadMultSights = 0.1
-SWEP.SpreadAddHipFire = math.rad(150 / 37.5)
-SWEP.SpreadAddMove = math.rad(0 / 37.5)
+SWEP.SpreadMultSights = 1
+SWEP.SpreadAddHipFire = math.rad(120 / 37.5)
+SWEP.SpreadAddMove = math.rad(40 / 37.5)
+SWEP.SpreadMultMoveSights = 0.5
 SWEP.SpreadAddMidAir = 0
 -- SWEP.SpreadAddShooting = math.rad(5 / 37.5) -- 0 -- = math.rad(95 / 37.5)
 
@@ -284,7 +283,7 @@ SWEP.Attachments = {
         PrintName = "Magazine",
         DefaultCompactName = "MAG",
         Bone = "j_gun",
-        Pos = Vector(5, 0, -1),
+        Pos = Vector(-1.5, 0, -4),
         Ang = Angle(0, 0, 0),
         Category = {"bo2_fastmag", "bo2_extmag"},
     },
@@ -293,7 +292,7 @@ SWEP.Attachments = {
         DefaultCompactName = "TAC",
         Bone = "j_gun",
         Scale = Vector(1, 1, 1),
-        Pos = Vector(3.25, 0, 0.2),
+        Pos = Vector(5.75, 0, 0.2),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_tactical", "bo1_pistol_rail"},
         CorrectiveAng = Angle(0.05, 0.3, 0),
@@ -302,7 +301,7 @@ SWEP.Attachments = {
         PrintName = "Ammunition",
         DefaultCompactName = "AMMO",
         Bone = "j_gun",
-        Pos = Vector(-1.25, 0, -2.5),
+        Pos = Vector(-1.25, 0, -1),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ammo", "bo1_pap"},
     },

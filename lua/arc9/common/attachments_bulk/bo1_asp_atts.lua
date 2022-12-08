@@ -15,6 +15,14 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 
+ATT.RangeMaxMult = 0.85
+ATT.PhysBulletMuzzleVelocityMult = 0.85
+ATT.RecoilKickMult = 1.25
+ATT.SpreadAdd = math.rad(3 / 37.5)
+
+ATT.SpreadAddHipFire = -math.rad(10 / 37.5)
+ATT.SpreadAddMove = -math.rad(10 / 37.5)
+
 ATT.Category = {"bo1_asp_barrel"}
 ATT.ActivateElements = {"asp", "newbarrel"}
 ATT.ExcludeElements = {}
@@ -35,6 +43,12 @@ ATT.Cons = {}
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
+
+ATT.RangeMaxMult = 1.1
+ATT.PhysBulletMuzzleVelocityMult = 1.1
+ATT.SpreadAdd = -math.rad(1.4 / 37.5)
+
+ATT.SpreadAddHipFire = math.rad(5 / 37.5)
 
 ATT.Category = {"bo1_asp_barrel"}
 ATT.ActivateElements = {"hush", "newbarrel"}
@@ -59,14 +73,16 @@ ATT = {}
 ATT.PrintName = [[Translucent Polymer Grip]]
 ATT.CompactName = [[ASP]]
 ATT.Icon = Material("entities/bo1_atts/bocw/atts_ak5/barrels/heavy_pro.png", "mips smooth")
-ATT.Description = [[
-    Lightweight translucent polymer grips allow the user to glance at the magazine inside to quickly asses how many shots they have left.
+ATT.Description = [[Lightweight translucent polymer grips allow the user to glance at the magazine inside to quickly asses how many shots they have left.
 ]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
+
+ATT.ReloadTimeMult = 0.9
+ATT.SprintToFireTimeAdd = 0.05
 
 ATT.Category = {"bo1_asp_grip"}
 ATT.ActivateElements = {"asp_grip"}

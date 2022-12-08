@@ -4,17 +4,12 @@ SWEP.Category = "ARC9 - Black Ops" -- edit this if you like
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "Colt Python"
-SWEP.Class = "Pistol"
-SWEP.Description = [[
-    This handgun is a staple of firearm design. It would come to influence many future semi-automatic handguns.
-    The M1911 has been in service with military forces, law enforcement agencies and civilians for over 100 years.
-
-    The pistol that forgot to become obsolete.
-]]
+SWEP.Class = "Revolver"
+SWEP.Description = [[]]
 SWEP.Trivia = {
     Manufacturer = "Colt",
     Calibre = ".357 Magnum",
-    Mechanism = "Single-Action Revolver",
+    Mechanism = "Double Action",
     Country = "USA",
     Year = 1955,
     Games = [[BO1, BO2]]
@@ -41,10 +36,10 @@ SWEP.ViewModelFOVBase = 75
 
 SWEP.DefaultBodygroups = "00010000000000"
 
-SWEP.DamageMax = 65
-SWEP.DamageMin = 35 -- damage done at maximum range
+SWEP.DamageMax = 60
+SWEP.DamageMin = 25 -- damage done at maximum range
 SWEP.RangeMax = 4000
-SWEP.RangeMin = 1000
+SWEP.RangeMin = 500
 SWEP.Penetration = 4
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
@@ -77,7 +72,7 @@ SWEP.CanBlindFire = false
 
 SWEP.Recoil = 1
 SWEP.RecoilSide = 0.7
-SWEP.RecoilUp = 0.7
+SWEP.RecoilUp = 0.8
 
 SWEP.RecoilRandomUp = 0.5
 SWEP.RecoilRandomSide = 0.35
@@ -91,9 +86,9 @@ SWEP.RecoilKick = 3
 SWEP.Spread = math.rad(2 / 37.5)
 SWEP.SpreadMultRecoil = 1.25
 
-SWEP.SpreadMultSights = 0.1
-SWEP.SpreadAddHipFire = math.rad(150 / 37.5)
-SWEP.SpreadAddMove = math.rad(0 / 37.5)
+SWEP.SpreadMultSights = 1
+SWEP.SpreadAddHipFire = math.rad(120 / 37.5)
+SWEP.SpreadAddMove = math.rad(50 / 37.5)
 SWEP.SpreadAddMidAir = 0
 -- SWEP.SpreadAddShooting = math.rad(5 / 37.5) -- math.rad(120 / 37.5)
 

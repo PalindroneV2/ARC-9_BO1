@@ -207,3 +207,36 @@ ATT.RecoilMult = 1.25
 ATT.RPM = 750
 
 ARC9.LoadAttachment(ATT, "bo2_mg08_935")
+
+ATT = {}
+
+ATT.PrintName = "CZ 75 Automatic Barrel"
+ATT.CompactName = "AUTO"
+ATT.Icon = Material("entities/bo1_atts/other/select_fire.png")
+ATT.Description = [[Select-fire variant made for police and military use. Features an extended compensated barrel and an attachment point for magazine in front.
+Fire rate is dramatically increased, but so is weapon spread and recoil.]]
+ATT.Pros = {}
+ATT.Cons = {
+}
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.Free = true
+
+ATT.Category = {"bo1_cz75_fcg"}
+ATT.ActivateElements = {"auto"}
+
+ATT.FiremodesOverride = {
+    {
+        Mode = -1,
+    },
+    {
+        Mode = 1,
+    },
+}
+
+ATT.RPM = 1000
+
+ATT.SpreadMultRecoil = 1.25
+ATT.RecoilMult = 1.15
+
+ARC9.LoadAttachment(ATT, "bo1_cz75_auto")
