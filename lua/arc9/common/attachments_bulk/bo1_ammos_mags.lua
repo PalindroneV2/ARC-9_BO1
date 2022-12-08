@@ -67,21 +67,20 @@ ARC9.LoadAttachment(ATT, "bo1_pm63_mag_ext")
 
 ATT = {}
 
-ATT.PrintName = [[32 Round Magazine]]
+ATT.PrintName = [[MAC-11 32 Round Magazine]]
 ATT.CompactName = [[32 RND]]
 ATT.Icon = Material("entities/bo1_atts/ammo/ext_mag.png")
-ATT.Description = [[
-Extended magazine holds double the ammunition.
-]]
+ATT.Description = [[Long stick magazine that doubles capacity. Makes hipfire worse, but makes up for it in volume of fire.]]
 ATT.Pros = {}
 ATT.Cons = {}
-ATT.SortOrder = 5
+ATT.SortOrder = 1
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Category = {"bo1_mac11_mag"}
 ATT.ClipSize = 32
 ATT.ReloadTimeMult = 1.1
+ATT.SpreadAddHipFire = math.rad(50 / 37.5)
 
 ATT.ActivateElements = {"extmag"}
 
