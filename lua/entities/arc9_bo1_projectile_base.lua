@@ -199,6 +199,10 @@ if SERVER then
             self:GetPhysicsObject():AddVelocity(Vector(0, 0, self.Lift))
         end
 
+        local v = self:GetVelocity()
+        self:SetAngles(v:Angle())
+        self:GetPhysicsObject():SetVelocityInstantaneous(v)
+
         -- Gunships have no physics collection, periodically trace to try and blow up in their face
         if self.GunshipWorkaround and (self.GunshipCheck or 0 < CurTime()) then
             self.GunshipCheck = CurTime() + 0.33
