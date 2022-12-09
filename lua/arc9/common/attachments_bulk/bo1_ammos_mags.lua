@@ -45,12 +45,11 @@ ARC9.LoadAttachment(ATT, "bo1_mag_fast")
 
 ATT = {}
 
-ATT.PrintName = [[30 Round Magazine]]
-ATT.CompactName = [[30 RND]]
+ATT.PrintName = [[PM-63 32 Round Magazine]]
+ATT.CompactName = [[32 RND]]
 ATT.Icon = Material("entities/bo1_atts/ammo/ext_mag.png")
-ATT.Description = [[
-Extended magazine holds double the ammunition.
-]]
+ATT.Description = [[Long stick magazine that more than doubles capacity.
+Hinders the weapon's handling somewhat.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 5
@@ -60,6 +59,7 @@ ATT.Free = false
 ATT.Category = {"bo1_pm63_mag"}
 ATT.ClipSize = 32
 ATT.ReloadTimeMult = 1.1
+ATT.SpreadAddHipFire = math.rad(40 / 37.5)
 
 ATT.ActivateElements = {"extmag"}
 
@@ -70,7 +70,8 @@ ATT = {}
 ATT.PrintName = [[MAC-11 32 Round Magazine]]
 ATT.CompactName = [[32 RND]]
 ATT.Icon = Material("entities/bo1_atts/ammo/ext_mag.png")
-ATT.Description = [[Long stick magazine that doubles capacity. Makes hipfire worse, but makes up for it in volume of fire.]]
+ATT.Description = [[Long stick magazine that doubles capacity.
+Makes hipfire worse, but makes up for it in volume of fire.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 1
@@ -110,12 +111,10 @@ ARC9.LoadAttachment(ATT, "waw_thompson_mag_drum")
 
 ATT = {}
 
-ATT.PrintName = [[35rnd Stick Magazine]]
-ATT.CompactName = [[35rnd]]
+ATT.PrintName = [[PPSh-41 35rnd Stick Magazine]]
+ATT.CompactName = [[35 RND]]
 ATT.Icon = Material("entities/bo1_atts/ammo/ext_mag.png")
-ATT.Description = [[
-Smaller easier to carry magazine reduces reload time.
-]]
+ATT.Description = [[Lightweight stick magazine. Dramatically improves the weapon's handling.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 5
@@ -124,7 +123,9 @@ ATT.Free = false
 
 ATT.Category = {"waw_ppsh_stick"}
 ATT.ClipSize = 35
-ATT.ReloadTimeMult = 0.8
+ATT.ReloadTimeMult = 0.75
+ATT.SpreadAddHipFire = -math.rad(50 / 37.5)
+ATT.SpreadAddMove = -math.rad(30 / 37.5)
 
 ATT.ActivateElements = {"ppsh_stick"}
 
@@ -436,3 +437,66 @@ ATT.ActivateElements = {"bo1_gl_piped"}
 ATT.ShootEnt = "arc9_bo1_40mm_pipe"
 
 ARC9.LoadAttachment(ATT, "bo1_glammo_pipe")
+
+ATT = {}
+
+ATT.PrintName = [[Hollow Point Rounds]]
+ATT.CompactName = [[HP]]
+ATT.Icon = Material("entities/bo1_atts/ammo/FMJ.png")
+ATT.Description = [[Rounds with improved close range performance.]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.Free = false
+
+ATT.DamageMaxMult = 1.1
+ATT.PenetrationMult = 0.25
+ATT.RangeMaxMult = 0.75
+
+ATT.Category = {"bo1_ammo"}
+
+ARC9.LoadAttachment(ATT, "bo1_ammo_hp")
+
+ATT = {}
+
+ATT.PrintName = [[Full Metal Jacket Rounds]]
+ATT.CompactName = [[FMJ]]
+ATT.Icon = Material("entities/bo1_atts/ammo/FMJ.png")
+ATT.Description = [[Rounds with improved penetration and long range performance.]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.Free = false
+
+ATT.DamageMinMult = 1.25
+ATT.PenetrationMult = 2
+ATT.RangeMinMult = 0.75
+
+ATT.Category = {"bo1_ammo"}
+
+ARC9.LoadAttachment(ATT, "bo1_ammo_fmj")
+
+
+ATT = {}
+
+ATT.PrintName = [[Match Rounds]]
+ATT.CompactName = [[MATCH]]
+ATT.Icon = Material("entities/bo1_atts/ammo/FMJ.png")
+ATT.Description = [[Rounds with improved ballistics performance and damage against vital parts.]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.Free = false
+
+ATT.HeadshotDamageMult = 1.25
+ATT.ChestDamageMult = 1.1
+ATT.SpreadMult = 0.5
+ATT.LegDamageMult = 0.75
+ATT.ArmDamageMult = 0.9
+
+ATT.Category = {"bo1_ammo"}
+
+ARC9.LoadAttachment(ATT, "bo1_ammo_match")
