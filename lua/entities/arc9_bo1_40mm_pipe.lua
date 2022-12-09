@@ -63,27 +63,27 @@ if SERVER then
             end
         end
 
-        if self.ImpactDamage and IsValid(tgt) then
-            local dmg = DamageInfo()
-            dmg:SetAttacker(IsValid(self:GetOwner()) and self:GetOwner() or self)
-            dmg:SetInflictor(self)
-            dmg:SetDamageType(DMG_BLAST) -- helicopters
-            dmg:SetDamage(self.ImpactDamage)
-            dmg:SetDamagePosition(colData.HitPos)
-            dmg:SetDamageForce(self:GetForward() * self.ImpactDamage)
-
-            if IsValid(tgt:GetOwner()) and tgt:GetOwner():GetClass() == "npc_helicopter" then
-                tgt = tgt:GetOwner()
-                dmg:ScaleDamage(0.1)
-                dmg:SetDamageType(DMG_BLAST + DMG_AIRBOAT)
-                dmg:SetDamageForce(self:GetForward() * 100)
-            end
-
-            tgt:TakeDamageInfo(dmg)
-        end
-
         if !self.Impacted then
             self.Impacted = true
+
+            if self.ImpactDamage and IsValid(tgt) then
+                local dmg = DamageInfo()
+                dmg:SetAttacker(IsValid(self:GetOwner()) and self:GetOwner() or self)
+                dmg:SetInflictor(self)
+                dmg:SetDamageType(DMG_BLAST) -- helicopters
+                dmg:SetDamage(self.ImpactDamage)
+                dmg:SetDamagePosition(colData.HitPos)
+                dmg:SetDamageForce(self:GetForward() * self.ImpactDamage)
+
+                if IsValid(tgt:GetOwner()) and tgt:GetOwner():GetClass() == "npc_helicopter" then
+                    tgt = tgt:GetOwner()
+                    dmg:ScaleDamage(0.1)
+                    dmg:SetDamageType(DMG_BLAST + DMG_AIRBOAT)
+                    dmg:SetDamageForce(self:GetForward() * 100)
+                end
+
+                tgt:TakeDamageInfo(dmg)
+            end
 
             if IsValid(tgt) and (tgt:IsPlayer() or tgt:IsNPC() or tgt:IsNextBot()) then
                 self.HitPos = colData.HitPos
