@@ -415,3 +415,24 @@ ATT.ShootEntityData = {}
 ATT.FuseTimer = 3
 
 ARC9.LoadAttachment(ATT, "bo1_glammo_m67frag")
+
+ATT = {}
+
+ATT.PrintName = [[40mm Pipe Grenade]]
+ATT.CompactName = [[PIPE]]
+ATT.Icon = Material("entities/bo1_atts/ammo/FMJ.png")
+ATT.Description = [[Home-made explosives only drunk demolitions men dare to use.
+Has a timed fuse, but will detonate with extra impact damage if it hits an enemy on the first bounce.]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.Free = false
+
+ATT.ShootEntForceOverride = 2000
+
+ATT.Category = {"bo1_glammo"}
+ATT.ActivateElements = {"bo1_gl_piped"}
+ATT.ShootEnt = "arc9_bo1_40mm_pipe"
+
+ARC9.LoadAttachment(ATT, "bo1_glammo_pipe")

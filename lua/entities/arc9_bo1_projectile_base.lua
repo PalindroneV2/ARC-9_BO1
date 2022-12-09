@@ -200,8 +200,10 @@ if SERVER then
         end
 
         local v = self:GetVelocity()
-        self:SetAngles(v:Angle())
-        self:GetPhysicsObject():SetVelocityInstantaneous(v)
+        if v:Length() >= 1000 then
+            self:SetAngles(v:Angle())
+            self:GetPhysicsObject():SetVelocityInstantaneous(v)
+        end
 
         -- Gunships have no physics collection, periodically trace to try and blow up in their face
         if self.GunshipWorkaround and (self.GunshipCheck or 0 < CurTime()) then
