@@ -5,9 +5,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "HK MP5A3"
 SWEP.Class = "Submachine Gun"
-SWEP.Description = [[
-    A submachinegun derivative of the G3 design chambered in 9mm. Known for its use by the British SAS.
-]]
+SWEP.Description = [[A submachinegun derivative of the G3 design chambered in 9mm. Known for its use by the British SAS.
+Low recoil and accurate, but not the best at hip firing. Very customizable.]]
 SWEP.Trivia = {
     Manufacturer = "Heckler & Koch",
     Calibre = "9x19mm Parabellum",
@@ -41,10 +40,10 @@ SWEP.CustomBlendFactor = 1
 
 SWEP.DefaultBodygroups = "00000000000000"
 
-SWEP.DamageMax = 25
-SWEP.DamageMin = 15 -- damage done at maximum range
-SWEP.RangeMax = 6000
-SWEP.RangeMin = 1000
+SWEP.DamageMax = 32
+SWEP.DamageMin = 11 -- damage done at maximum range
+SWEP.RangeMax = 3000
+SWEP.RangeMin = 1500
 SWEP.Penetration = 8
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
@@ -53,7 +52,7 @@ SWEP.EntityMuzzleVelocity = 10000
 SWEP.PhysBulletMuzzleVelocity = 960 * 39.37
 
 SWEP.BodyDamageMults = {
-    [HITGROUP_HEAD] = 2,
+    [HITGROUP_HEAD] = 2.5,
     [HITGROUP_CHEST] = 1,
     [HITGROUP_LEFTARM] = 1,
     [HITGROUP_RIGHTARM] = 1,
@@ -73,12 +72,12 @@ SWEP.ReloadTime = 1
 SWEP.Crosshair = true
 SWEP.CanBlindFire = false
 
-SWEP.Recoil = 0.4
-SWEP.RecoilSide = 0.7
+SWEP.Recoil = 0.45
+SWEP.RecoilSide = 0.5
 SWEP.RecoilUp = 0.7
 
 SWEP.RecoilRandomUp = 0.2
-SWEP.RecoilRandomSide = 0.6
+SWEP.RecoilRandomSide = 0.3
 
 SWEP.RecoilDissipationRate = 40 -- How much recoil dissipates per second.
 SWEP.RecoilResetTime = 0.01 -- How long the gun must go before the recoil pattern starts to reset.
@@ -89,9 +88,9 @@ SWEP.RecoilKick = 1
 SWEP.Spread = math.rad(2.75 / 37.5)
 SWEP.SpreadMultRecoil = 1.25
 
-SWEP.SpreadMultSights = 0.1
-SWEP.SpreadAddHipFire = math.rad(150 / 37.5)
-SWEP.SpreadAddMove = math.rad(0 / 37.5)
+SWEP.SpreadMultSights = 1
+SWEP.SpreadAddHipFire = math.rad(130 / 37.5)
+SWEP.SpreadAddMove = math.rad(20 / 37.5)
 SWEP.SpreadAddMidAir = 0
 -- SWEP.SpreadAddShooting = math.rad(5 / 37.5) -- math.rad(95 / 37.5)
 
@@ -115,8 +114,8 @@ SWEP.SpeedMultMelee = 1
 SWEP.SpeedMultCrouch = 1
 SWEP.SpeedMultBlindFire = 1
 
-SWEP.AimDownSightsTime = 0.2
-SWEP.SprintToFireTime = 0.2
+SWEP.AimDownSightsTime = 0.23
+SWEP.SprintToFireTime = 0.22
 
 SWEP.RPM = 800
 SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
@@ -424,7 +423,7 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"bo1_optic", "bo1_rail_riser"},
         InstalledElements = {"mount"},
-        ExcludeElements = {"mp5k", "mp5k_mw2_ris"},
+        ExcludeElements = {"mp5k_mw2_ris"},
     },
     {
         PrintName = "Stock",
@@ -449,6 +448,7 @@ SWEP.Attachments = {
         Pos = Vector(6, 0, 3),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_mp5_barrel"},
+        Icon_Offset = Vector(-6, 0, -2),
     },
     {
         PrintName = "Underbarrel",
@@ -479,7 +479,7 @@ SWEP.Attachments = {
         PrintName = "Magazine",
         DefaultCompactName = "30 RND",
         Bone = "tag_clip",
-        Pos = Vector(1, 0, -2),
+        Pos = Vector(0, 0, -3),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_fastmag", "bo1_mp5_mag"},
         -- MergeSlots = {9},
@@ -489,7 +489,7 @@ SWEP.Attachments = {
         PrintName = "Ammunition",
         DefaultCompactName = "AMMO",
         Bone = "tag_clip",
-        Pos = Vector(2, 0, -4),
+        Pos = Vector(1, 0, -6),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ammo", "bo1_pap"},
     },

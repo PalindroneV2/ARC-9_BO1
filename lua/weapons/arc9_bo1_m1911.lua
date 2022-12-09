@@ -5,7 +5,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "Colt M1911A1"
 SWEP.Class = "Pistol"
-SWEP.Description = [[A staple of firearm design, in service with military forces, law enforcement agencies and civilians for over 100 years. The pistol that forgot to become obsolete.
+SWEP.Description = [[A staple of firearm design, in service with military forces, law enforcement agencies and civilians for over 100 years. A pistol that forgot to become obsolete.
 Fires a powerful cartridge, but is let down by its single stack magazine.]]
 SWEP.Trivia = {
     Manufacturer = "Colt",
@@ -84,7 +84,7 @@ SWEP.RecoilKick = 1
 SWEP.Spread = math.rad(3 / 37.5)
 SWEP.SpreadMultRecoil = 1.25
 
-SWEP.SpreadMultSights = 0.1
+SWEP.SpreadMultSights = 1
 SWEP.SpreadAddHipFire = math.rad(120 / 37.5)
 SWEP.SpreadAddMove = math.rad(50 / 37.5)
 SWEP.SpreadMultMoveSights = 0.5

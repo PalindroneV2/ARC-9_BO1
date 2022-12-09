@@ -5,8 +5,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "PPSh-41"
 SWEP.Class = "Submachine Gun"
-SWEP.Description = [[
-    Russian submachine gun with an obscene rate of fire and a drum magazine
+SWEP.Description = [[Russian submachine gun with an obscene rate of fire and a drum magazine.
 ]]
 SWEP.Trivia = {
     Manufacturer = "Tula Arms Plant",
@@ -42,11 +41,11 @@ SWEP.ViewModelFOVBase = 75
 
 SWEP.DefaultBodygroups = "00000000000000"
 
-SWEP.DamageMax = 35
-SWEP.DamageMin = 20 -- damage done at maximum range
-SWEP.RangeMax = 6000
-SWEP.RangeMin = 1000
-SWEP.Penetration = 4
+SWEP.DamageMax = 23
+SWEP.DamageMin = 10 -- damage done at maximum range
+SWEP.RangeMax = 2000
+SWEP.RangeMin = 800
+SWEP.Penetration = 5
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
 SWEP.EntityMuzzleVelocity = 10000
@@ -78,8 +77,8 @@ SWEP.Recoil = 0.4
 SWEP.RecoilSide = 0.4
 SWEP.RecoilUp = 0.5
 
-SWEP.RecoilRandomUp = 0.3
-SWEP.RecoilRandomSide = 0.1
+SWEP.RecoilRandomUp = 0.2
+SWEP.RecoilRandomSide = 0.3
 
 SWEP.RecoilDissipationRate = 40 -- How much recoil dissipates per second.
 SWEP.RecoilResetTime = 0.01 -- How long the gun must go before the recoil pattern starts to reset.
@@ -87,12 +86,12 @@ SWEP.RecoilResetTime = 0.01 -- How long the gun must go before the recoil patter
 SWEP.RecoilAutoControl = 0.5
 SWEP.RecoilKick = 1
 
-SWEP.Spread = math.rad(3.6 / 37.5)
+SWEP.Spread = math.rad(12 / 37.5)
 SWEP.SpreadMultRecoil = 1.25
 
-SWEP.SpreadMultSights = 0.1
-SWEP.SpreadAddHipFire = math.rad(150 / 37.5)
-SWEP.SpreadAddMove = math.rad(0 / 37.5)
+SWEP.SpreadMultSights = 1
+SWEP.SpreadAddHipFire = math.rad(120 / 37.5)
+SWEP.SpreadAddMove = math.rad(80 / 37.5)
 SWEP.SpreadAddMidAir = 0
 -- SWEP.SpreadAddShooting = math.rad(5 / 37.5) -- 0 -- = math.rad(125 / 37.5)
 
@@ -117,7 +116,7 @@ SWEP.SpeedMultCrouch = 1
 SWEP.SpeedMultBlindFire = 1
 
 SWEP.AimDownSightsTime = 0.3
-SWEP.SprintToFireTime = 0.3
+SWEP.SprintToFireTime = 0.35
 
 SWEP.RPM = 1200
 SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.

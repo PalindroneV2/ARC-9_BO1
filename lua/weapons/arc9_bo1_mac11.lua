@@ -5,14 +5,13 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "MAC-11"
 SWEP.Class = "Machine Pistol"
-SWEP.Description = [[
-    Subcompact variant of the earlier MAC-10.
-]]
+SWEP.Description = [[American machine pistol made as a subcompact variant of the MAC-10.
+Has an absurdly high fire rate. Very powerful, but only in close quarters.]]
 SWEP.Trivia = {
     Manufacturer = "Military Armament Corporation",
     Calibre = ".380 ACP",
     Mechanism = "Blowback",
-    Country = "Israel",
+    Country = "United States",
     Year = 1950,
     Games = [[BO1]]
 }
@@ -41,10 +40,10 @@ SWEP.ViewModelFOVBase = 75
 
 SWEP.DefaultBodygroups = "00000000000000"
 
-SWEP.DamageMax = 28
-SWEP.DamageMin = 12 -- damage done at maximum range
-SWEP.RangeMax = 4000
-SWEP.RangeMin = 1500
+SWEP.DamageMax = 25
+SWEP.DamageMin = 6 -- damage done at maximum range
+SWEP.RangeMax = 2500
+SWEP.RangeMin = 800
 SWEP.Penetration = 8
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
@@ -53,7 +52,7 @@ SWEP.EntityMuzzleVelocity = 10000
 SWEP.PhysBulletMuzzleVelocity = 960 * 39.37
 
 SWEP.BodyDamageMults = {
-    [HITGROUP_HEAD] = 2,
+    [HITGROUP_HEAD] = 1.5,
     [HITGROUP_CHEST] = 1,
     [HITGROUP_LEFTARM] = 1,
     [HITGROUP_RIGHTARM] = 1,
@@ -89,7 +88,7 @@ SWEP.RecoilKick = 1
 SWEP.Spread = math.rad(8 / 37.5)
 SWEP.SpreadMultRecoil = 1.25
 
-SWEP.SpreadMultSights = 0.1
+SWEP.SpreadMultSights = 1
 SWEP.SpreadAddHipFire = math.rad(50 / 37.5)
 SWEP.SpreadAddMove = math.rad(50 / 37.5)
 SWEP.SpreadAddMidAir = 0

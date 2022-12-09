@@ -1,11 +1,8 @@
 ATT.PrintName = "WLP Laser Pointer"
 ATT.CompactName = [[WLP]]
 ATT.Icon = Material("entities/bo1_atts/tactical/bo2_laser.png", "mips smooth")
-ATT.Description = [[
-    Tacical laser pointer. Tighter aim when firing from hip, less dispersion when moving.
-
-    Belongs to Black Ops II.
-]]
+ATT.Description = [[Tacical laser pointer.
+Tighter aim when firing from hip, less dispersion when moving.]]
 ATT.Pros = {
     "+ Clearer sight picture"
 }
@@ -26,5 +23,7 @@ ATT.LaserStrength = 3
 ATT.LaserColor = Color(255, 0, 0)
 ATT.LaserAttachment = 1
 
-ATT.SpreadMultHipFire = 0.8
---ATT.SpreadMultMove = 0.8
+ATT.SpreadMultHipFire = 0.9
+ATT.SpreadMultMove = 0.9
+
+ATT.SpeedMultShooting = 0.8

@@ -5,9 +5,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "IMI Uzi"
 SWEP.Class = "Submachine Gun"
-SWEP.Description = [[
-    An israeli SMG chambered in 9mm designed to be compact and easy to manufacture. Made famous by it's use in Hollywood films.
-]]
+SWEP.Description = [[Israeli SMG chambered in 9mm designed to be compact and easy to manufacture. Made famous by it's use in Hollywood films.
+A balanced weapon providing good firepower and hip fire accuracy.]]
 SWEP.Trivia = {
     Manufacturer = "IMI",
     Calibre = "9x19mm Parabellum",
@@ -43,8 +42,8 @@ SWEP.DefaultBodygroups = "00000000000000"
 
 SWEP.DamageMax = 32
 SWEP.DamageMin = 15 -- damage done at maximum range
-SWEP.RangeMax = 6000
-SWEP.RangeMin = 1000
+SWEP.RangeMax = 3000
+SWEP.RangeMin = 1500
 SWEP.Penetration = 8
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
@@ -73,7 +72,7 @@ SWEP.ReloadTime = 1
 SWEP.Crosshair = true
 SWEP.CanBlindFire = false
 
-SWEP.Recoil = 0.4
+SWEP.Recoil = 0.5
 SWEP.RecoilSide = 0.7
 SWEP.RecoilUp = 0.7
 
@@ -86,12 +85,12 @@ SWEP.RecoilResetTime = 0.01 -- How long the gun must go before the recoil patter
 SWEP.RecoilAutoControl = 0.5
 SWEP.RecoilKick = 1
 
-SWEP.Spread = math.rad(3.4 / 37.5)
+SWEP.Spread = math.rad(6 / 37.5)
 SWEP.SpreadMultRecoil = 1.25
 
-SWEP.SpreadMultSights = 0.1
-SWEP.SpreadAddHipFire = math.rad(150 / 37.5)
-SWEP.SpreadAddMove = math.rad(0 / 37.5)
+SWEP.SpreadMultSights = 1
+SWEP.SpreadAddHipFire = math.rad(100 / 37.5)
+SWEP.SpreadAddMove = math.rad(40 / 37.5)
 SWEP.SpreadAddMidAir = 0
 -- SWEP.SpreadAddShooting = math.rad(5 / 37.5) -- 0 -- = math.rad(91 / 37.5)
 
@@ -115,10 +114,10 @@ SWEP.SpeedMultMelee = 1
 SWEP.SpeedMultCrouch = 1
 SWEP.SpeedMultBlindFire = 1
 
-SWEP.AimDownSightsTime = 0.2
-SWEP.SprintToFireTime = 0.2
+SWEP.AimDownSightsTime = 0.25
+SWEP.SprintToFireTime = 0.23
 
-SWEP.RPM = 850
+SWEP.RPM = 695
 SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {

@@ -134,12 +134,11 @@ ARC9.LoadAttachment(ATT, "bo1_fcg_semi")
 
 ATT = {}
 
-ATT.PrintName = "LC10 Receiver"
+ATT.PrintName = "MPL LC10 Receiver"
 ATT.CompactName = "LC10"
 ATT.Icon = Material("entities/bo1_atts/other/rapid_fire.png")
-ATT.Description = [[
-Heavy modification for the MPL that gives it a significantly higher rate of fire.
-]]
+ATT.Description = [[Heavy modification for the MPL that gives it a significantly higher rate of fire.
+Spread is drastically increased.]]
 ATT.Pros = {}
 ATT.Cons = {
 }
@@ -150,9 +149,10 @@ ATT.Free = true
 ATT.Category = {"bo1_mpl_fcg"}
 ATT.ActivateElements = {"lc10"}
 
-ATT.SpreadMult = 1.1
-ATT.SpreadMultRecoil = 1.05
-ATT.RecoilMult = 1.1
+ATT.SpreadAdd = math.rad(5 / 37.5)
+ATT.SpreadAddHipFire = math.rad(75 / 37.5)
+ATT.SpreadAddMove = math.rad(40 / 37.5)
+ATT.RecoilKickMult = 1.5
 ATT.RPM = 800
 
 ARC9.LoadAttachment(ATT, "bo1_mpl_fcg_lc10")

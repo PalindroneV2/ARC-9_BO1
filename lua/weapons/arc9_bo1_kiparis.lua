@@ -5,9 +5,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "OTS-02 Kiparis"
 SWEP.Class = "Submachine Gun"
-SWEP.Description = [[
-    Submachine Gun designed in the 70s intended for internal security and police units, didn't see use until the 90s.
-]]
+SWEP.Description = [[Russian submachine Gun designed in the 70s intended for internal security and police units, but didn't see use until the 90s.
+A forgiving firearm with high fire rate and capacity to back it up with.]]
 SWEP.Trivia = {
     Manufacturer = "KBP",
     Calibre = "9x18mm Makarov",
@@ -41,10 +40,10 @@ SWEP.CustomBlendFactor = 1
 
 SWEP.DefaultBodygroups = "00000000000000"
 
-SWEP.DamageMax = 30
-SWEP.DamageMin = 20 -- damage done at maximum range
-SWEP.RangeMax = 6000
-SWEP.RangeMin = 1000
+SWEP.DamageMax = 27
+SWEP.DamageMin = 7 -- damage done at maximum range
+SWEP.RangeMax = 2500
+SWEP.RangeMin = 1200
 SWEP.Penetration = 8
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
@@ -86,12 +85,12 @@ SWEP.RecoilResetTime = 0.01 -- How long the gun must go before the recoil patter
 SWEP.RecoilAutoControl = 0.5
 SWEP.RecoilKick = 1
 
-SWEP.Spread = math.rad(3.4 / 37.5)
+SWEP.Spread = math.rad(9.5 / 37.5)
 SWEP.SpreadMultRecoil = 1.25
 
-SWEP.SpreadMultSights = 0.1
-SWEP.SpreadAddHipFire = math.rad(150 / 37.5)
-SWEP.SpreadAddMove = math.rad(0 / 37.5)
+SWEP.SpreadMultSights = 1
+SWEP.SpreadAddHipFire = math.rad(120 / 37.5)
+SWEP.SpreadAddMove = math.rad(40 / 37.5)
 SWEP.SpreadAddMidAir = 0
 -- SWEP.SpreadAddShooting = math.rad(5 / 37.5) -- 0 -- = math.rad(91 / 37.5)
 
@@ -118,7 +117,7 @@ SWEP.SpeedMultBlindFire = 1
 SWEP.AimDownSightsTime = 0.2
 SWEP.SprintToFireTime = 0.2
 
-SWEP.RPM = 650
+SWEP.RPM = 850
 SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {

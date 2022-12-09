@@ -4,10 +4,11 @@ local ATT = {}
 
 ATT = {}
 
-ATT.PrintName = [[Kurz Barrel]]
+ATT.PrintName = [[MP5 Kurz Barrel]]
 ATT.CompactName = [[KURZ]]
 ATT.Icon = Material("entities/bo1_atts/barrel/barrel.png")
-ATT.Description = [[Three-Rail RIS Handguard allows for attachment of underbarrels.]]
+ATT.Description = [[Shortened barrel and handguard used on the MP5K model. Handguard comes with an integrated foregrip.
+Increases fire rate and hip fire accuracy, but range and recoil is worse.]]
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
@@ -16,6 +17,7 @@ ATT.Category = {"bo1_mp5_barrel"}
 ATT.ActivateElements = {"mp5k"}
 
 ATT.Attachments = {
+    --[[]
     {
         PrintName = "Optic",
         Bone = "j_gun",
@@ -25,6 +27,7 @@ ATT.Attachments = {
         InstalledElements = {"mount"},
         ExcludeElements = {"mp5k_mw2_ris"},
     },
+    ]]
     {
         PrintName = "Muzzle",
         Bone = "j_gun",
@@ -49,7 +52,7 @@ ATT.Attachments = {
         Icon_Offset = Vector(0, 0, -0.50),
         Category = {"bo1_mp5k_nogrip"},
         InstalledElements = {"mp5k_nogrip"},
-        MergeSlots = {5}
+        MergeSlots = {4}
     },
     {
         Hidden = true,
@@ -60,13 +63,12 @@ ATT.Attachments = {
         InstalledElements = {"mp5k_nogrip", "mp5k_mw2_ris"},
     },
 }
-ATT.RecoilMult = 0.9
-ATT.RecoilUpMult = 0.85
+
 ATT.RPMOverride = 900
 
-ATT.SpreadMult = 1.25
-ATT.SpreadMultHipFire = 0.9
-ATT.SpreadMultRecoil = 1.25
+ATT.SpreadAdd = math.rad(3 / 37.5)
+ATT.SpreadAddHipFire = -math.rad(30 / 37.5)
+ATT.SpreadAddMove = -math.rad(10 / 37.5)
 
 ATT.ClipSize = 25
 ATT.ReloadTimeMult = 0.9
@@ -88,10 +90,12 @@ ATT = {}
 ATT.PrintName = [[RIS Handguard]]
 ATT.CompactName = [[RIS]]
 ATT.Icon = Material("entities/bo1_atts/barrel/barrel.png")
-ATT.Description = [[Three-Rail RIS Handguard allows for attachment of underbarrels.]]
+ATT.Description = [[Three-rail RIS Handguard grants additional attachment points.]]
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
+
+ATT.RecoilAutoControlMult = 0.95
 
 ATT.Category = {"bo1_mp5_barrel"}
 ATT.ActivateElements = {"mp5_ris"}
@@ -103,7 +107,25 @@ ATT.Attachments = {
         Pos = Vector(0, 0.2, 2.9),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_grips"},
-    }
+    },
+    {
+        PrintName = "Tactical Right",
+        DefaultCompactName = "TAC R",
+        Bone = "j_gun",
+        Pos = Vector(2, 1, 1.8),
+        Ang = Angle(0, 0, -90),
+        Icon_Offset = Vector(0, 0, 0),
+        Category =  {"bo1_tactical"}
+    },
+    {
+        PrintName = "Tactical Left",
+        DefaultCompactName = "TAC L",
+        Bone = "j_gun",
+        Pos = Vector(2, -1, 1.8),
+        Ang = Angle(0, 0, 90),
+        Icon_Offset = Vector(0, 0, 0),
+        Category =  {"bo1_tactical"}
+    },
 }
 
 ARC9.LoadAttachment(ATT, "bo1_mp5_barrel_ris")
@@ -308,7 +330,9 @@ ATT = {}
 ATT.PrintName = [[ICS RAS Handguard]]
 ATT.CompactName = [[RAS]]
 ATT.Icon = Material("entities/mw2_generic.png")
-ATT.Description = [[Rail Attachment System with 4 rails allows for attachment of several accessories.]]
+ATT.Description = [[Rail Attachment System with 4 rails allows for attachment of several accessories.
+Due to hand placement, side rails are only accessible if a foregrip is attached.
+Removal of integrated foregrip increases recoil.]]
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
@@ -317,6 +341,8 @@ ATT.Category = {"bo1_mp5k_mw2_rail"}
 ATT.ActivateElements = {"mp5k_mw2"}
 
 ATT.Model = "models/weapons/arc9/atts/mw2e_mp5k_rail.mdl"
+ATT.RecoilMult = 1.1
+ATT.RecoilUpMult = 1.15
 -- ATT.ModelOffset = Vector(-3.1, 0.1, -2)
 
 ATT.Attachments = {
@@ -336,7 +362,29 @@ ATT.Attachments = {
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, -0.5),
         Category = {"bo1_grips"},
+        InstalledElements = {"mp5k_foregrip"},
     },
+    {
+        PrintName = "Tactical Right",
+        DefaultCompactName = "TAC R",
+        Bone = "j_gun",
+        Pos = Vector(0, 1, 0),
+        Ang = Angle(0, 0, -90),
+        Icon_Offset = Vector(0, 0, 0),
+        Category =  {"bo1_tactical"},
+        RequireElements = {"mp5k_foregrip"},
+    },
+    {
+        PrintName = "Tactical Left",
+        DefaultCompactName = "TAC L",
+        Bone = "j_gun",
+        Pos = Vector(0, -1, 0),
+        Ang = Angle(0, 0, 90),
+        Icon_Offset = Vector(0, 0, 0),
+        Category =  {"bo1_tactical"},
+        RequireElements = {"mp5k_foregrip"},
+    },
+
 }
 
 ATT.LHIK = true
@@ -349,11 +397,7 @@ ATT = {}
 ATT.PrintName = "No Foregrip"
 ATT.CompactName = [[BARE]]
 ATT.Icon = Material("entities/bo1_atts/ubs/bo2_foregrip.png", "mips smooth")
-ATT.Description = [[
-    No foregrip for a minimal speed bonus.
-
-    Belongs to Black Ops.
-]]
+ATT.Description = [[Handguard with no foregrip. Increases mobility slightly.]]
 ATT.Pros = {
 }
 ATT.Cons = {}

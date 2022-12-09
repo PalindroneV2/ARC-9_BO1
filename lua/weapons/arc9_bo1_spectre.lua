@@ -5,9 +5,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "Spectre M4"
 SWEP.Class = "Submachine Gun"
-SWEP.Description = [[
-    Italian SMG used by Swiss and Italian Special Forces.
-]]
+SWEP.Description = [[Italian SMG used by Swiss and Italian Special Forces.
+High damage and fire rate, but recoil and spread are punishing.]]
 SWEP.Trivia = {
     Manufacturer = "IMI",
     Calibre = "9x19mm Parabellum",
@@ -42,8 +41,8 @@ SWEP.CustomBlendFactor = 1
 SWEP.DefaultBodygroups = "00000000000000"
 
 SWEP.DamageMax = 32
-SWEP.DamageMin = 15 -- damage done at maximum range
-SWEP.RangeMax = 6000
+SWEP.DamageMin = 10 -- damage done at maximum range
+SWEP.RangeMax = 2000
 SWEP.RangeMin = 1000
 SWEP.Penetration = 8
 SWEP.DamageType = DMG_BULLET
@@ -73,12 +72,12 @@ SWEP.ReloadTime = 1
 SWEP.Crosshair = true
 SWEP.CanBlindFire = false
 
-SWEP.Recoil = 0.4
+SWEP.Recoil = 0.7
 SWEP.RecoilSide = 0.5
 SWEP.RecoilUp = 0.3
 
-SWEP.RecoilRandomUp = 0.2
-SWEP.RecoilRandomSide = 0.5
+SWEP.RecoilRandomUp = 0.25
+SWEP.RecoilRandomSide = 0.4
 
 SWEP.RecoilDissipationRate = 40 -- How much recoil dissipates per second.
 SWEP.RecoilResetTime = 0.01 -- How long the gun must go before the recoil pattern starts to reset.
@@ -86,12 +85,12 @@ SWEP.RecoilResetTime = 0.01 -- How long the gun must go before the recoil patter
 SWEP.RecoilAutoControl = 0.5
 SWEP.RecoilKick = 0.9
 
-SWEP.Spread = math.rad(3.2 / 37.5)
+SWEP.Spread = math.rad(7.4 / 37.5)
 SWEP.SpreadMultRecoil = 1.25
 
-SWEP.SpreadMultSights = 0.1
-SWEP.SpreadAddHipFire = math.rad(150 / 37.5)
-SWEP.SpreadAddMove = math.rad(0 / 37.5)
+SWEP.SpreadMultSights = 1
+SWEP.SpreadAddHipFire = math.rad(120 / 37.5)
+SWEP.SpreadAddMove = math.rad(60 / 37.5)
 SWEP.SpreadAddMidAir = 0
 -- SWEP.SpreadAddShooting = math.rad(5 / 37.5) -- 0 -- = math.rad(91 / 37.5)
 
@@ -218,7 +217,7 @@ SWEP.AttachmentElements = {
             {3,1}
         },
     },
-    ["ext_mag"] = {
+    ["extmag"] = {
         Bodygroups = {
             {1,1}
         },
@@ -348,7 +347,7 @@ SWEP.Attachments = {
         Bone = "tag_clip",
         Pos = Vector(.5, 0, -3),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_mag_ext"},
+        Category = {"bo1_spectre_mag"},
     },
     {
         PrintName = "Ammunition",

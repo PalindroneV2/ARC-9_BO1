@@ -5,9 +5,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "PM-63 RAK"
 SWEP.Class = "Machine Pistol"
-SWEP.Description = [[
-    Polish submachine gun chambered in the standard eastern bloc 9mm Makarov
-]]
+SWEP.Description = [[Polish submachine gun designed for rear echelon soldiers.
+While lacking in firepower and range, it makes up for it with unparalleled handling characteristics.]]
 SWEP.Trivia = {
     Manufacturer = "FB Radom",
     Calibre = "9x18mm Makarov",
@@ -41,10 +40,10 @@ SWEP.ViewModelFOVBase = 75
 
 SWEP.DefaultBodygroups = "00000000000000"
 
-SWEP.DamageMax = 33
-SWEP.DamageMin = 12 -- damage done at maximum range
-SWEP.RangeMax = 4000
-SWEP.RangeMin = 800
+SWEP.DamageMax = 27
+SWEP.DamageMin = 8 -- damage done at maximum range
+SWEP.RangeMax = 2200
+SWEP.RangeMin = 1000
 SWEP.Penetration = 3
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
@@ -73,7 +72,7 @@ SWEP.ReloadTime = 1
 SWEP.Crosshair = true
 SWEP.CanBlindFire = false
 
-SWEP.Recoil = 0.4
+SWEP.Recoil = 0.3
 SWEP.RecoilSide = 1
 SWEP.RecoilUp = 0.4
 
@@ -83,15 +82,15 @@ SWEP.RecoilRandomSide = 0.4
 SWEP.RecoilDissipationRate = 40 -- How much recoil dissipates per second.
 SWEP.RecoilResetTime = 0.01 -- How long the gun must go before the recoil pattern starts to reset.
 
-SWEP.RecoilAutoControl = 0.5
+SWEP.RecoilAutoControl = 1
 SWEP.RecoilKick = 1
 
-SWEP.Spread = math.rad(3.1 / 37.5)
+SWEP.Spread = math.rad(8.5 / 37.5)
 SWEP.SpreadMultRecoil = 1.25
 
-SWEP.SpreadMultSights = 0.1
-SWEP.SpreadAddHipFire = math.rad(150 / 37.5)
-SWEP.SpreadAddMove = math.rad(0 / 37.5)
+SWEP.SpreadMultSights = 1
+SWEP.SpreadAddHipFire = math.rad(50 / 37.5)
+SWEP.SpreadAddMove = math.rad(25 / 37.5)
 SWEP.SpreadAddMidAir = 0
 -- SWEP.SpreadAddShooting = math.rad(5 / 37.5) -- 0 -- = math.rad(91 / 37.5)
 

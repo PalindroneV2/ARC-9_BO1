@@ -14,6 +14,9 @@ ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 180)
 ATT.ExcludeElements = {"no_ub_rail"}
 
+ATT.SprintToFireTimeAdd = 0.02
+ATT.AimDownSightsTimeAdd = 0.02
+
 ATT.Attachments = {
     {
         PrintName = "Underbarrel",

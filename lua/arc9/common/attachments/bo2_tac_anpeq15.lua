@@ -1,14 +1,9 @@
 ATT.PrintName = "AN/PEQ-15 Laser Pointer"
 ATT.CompactName = [[AN/PEQ-15]]
 ATT.Icon = Material("entities/bo1_atts/tactical/bo2_laser.png", "mips smooth")
-ATT.Description = [[
-    Tacical laser pointer. Tighter aim when firing from hip, less dispersion when moving.
-
-    Belongs to Black Ops II.
-]]
-ATT.Pros = {
-    "+ Clearer sight picture"
-}
+ATT.Description = [[Tacical laser pointer.
+Tighter aim when firing from hip.]]
+ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 1
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
@@ -28,3 +23,5 @@ ATT.LaserAttachment = 1
 
 ATT.SpreadMultHipFire = 0.8
 --ATT.SpreadMultMove = 0.8
+
+ATT.SpeedMultShooting = 0.8

@@ -6,9 +6,7 @@ ATT.Description = [[
 
     Belongs to Black Ops II.
 ]]
-ATT.Pros = {
-    "+ Clearer sight picture"
-}
+ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 1
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
@@ -29,3 +27,5 @@ ATT.LaserAttachment = 1
 
 ATT.SpreadMultHipFire = 0.8
 --ATT.SpreadMultMove = 0.8
+
+ATT.SpeedMultShooting = 0.8

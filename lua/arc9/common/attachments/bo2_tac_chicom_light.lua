@@ -1,13 +1,9 @@
 ATT.PrintName = "QCW-05 Sight Lamp"
 ATT.CompactName = [[CHICOM]]
 ATT.Icon = Material("entities/bo1_atts/tactical/bo2_laser.png", "mips smooth")
-ATT.Description = [[
-    Tacical flashlight. Tighter aim when firing from hip, less dispersion when moving.
-
-    Belongs to Black Ops II.
-]]
+ATT.Description = [[Tacical flashlight that goes under the carry handle.
+Slightly tightens aim when firing from hip.]]
 ATT.Pros = {
-    "+ Clearer sight picture"
 }
 ATT.Cons = {}
 ATT.SortOrder = 1
@@ -28,5 +24,5 @@ ATT.FlashlightDistance = 1024
 ATT.FlashlightFOV = 50
 ATT.FlashlightAttachment = 1
 
-ATT.SpreadMultHipFire = 0.95
---ATT.SpreadMultMove = 0.95
+ATT.SpreadMultHipFire = 0.9
+ATT.AimDownSightsTimeAdd = 0.02

@@ -5,9 +5,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "MPL"
 SWEP.Class = "Submachine Gun"
-SWEP.Description = [[
-    A submachinegun adopted by West Germany during the 1960s.
-]]
+SWEP.Description = [[A submachine gun adopted by West Germany during the 1960s.
+Low fire rate, but good accuracy while on the move.]]
 SWEP.Trivia = {
     Manufacturer = "Walther GMBH",
     Calibre = "9x19mm Parabellum",
@@ -41,10 +40,10 @@ SWEP.CustomBlendFactor = 1
 
 SWEP.DefaultBodygroups = "00000000000000"
 
-SWEP.DamageMax = 25
-SWEP.DamageMin = 15 -- damage done at maximum range
-SWEP.RangeMax = 6000
-SWEP.RangeMin = 1000
+SWEP.DamageMax = 30
+SWEP.DamageMin = 12 -- damage done at maximum range
+SWEP.RangeMax = 4000
+SWEP.RangeMin = 1500
 SWEP.Penetration = 8
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
@@ -73,7 +72,7 @@ SWEP.ReloadTime = 1
 SWEP.Crosshair = true
 SWEP.CanBlindFire = false
 
-SWEP.Recoil = 0.4
+SWEP.Recoil = 0.5
 SWEP.RecoilSide = 0.7
 SWEP.RecoilUp = 0.7
 
@@ -89,9 +88,9 @@ SWEP.RecoilKick = 1
 SWEP.Spread = math.rad(3.4 / 37.5)
 SWEP.SpreadMultRecoil = 1.25
 
-SWEP.SpreadMultSights = 0.1
-SWEP.SpreadAddHipFire = math.rad(150 / 37.5)
-SWEP.SpreadAddMove = math.rad(0 / 37.5)
+SWEP.SpreadMultSights = 1
+SWEP.SpreadAddHipFire = math.rad(80 / 37.5)
+SWEP.SpreadAddMove = math.rad(40 / 37.5)
 SWEP.SpreadAddMidAir = 0
 -- SWEP.SpreadAddShooting = math.rad(5 / 37.5) -- 0 -- = math.rad(91 / 37.5)
 
@@ -115,8 +114,8 @@ SWEP.SpeedMultMelee = 1
 SWEP.SpeedMultCrouch = 1
 SWEP.SpeedMultBlindFire = 1
 
-SWEP.AimDownSightsTime = 0.2
-SWEP.SprintToFireTime = 0.2
+SWEP.AimDownSightsTime = 0.24
+SWEP.SprintToFireTime = 0.22
 
 SWEP.RPM = 550
 SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
