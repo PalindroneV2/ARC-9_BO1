@@ -89,6 +89,28 @@ ARC9.LoadAttachment(ATT, "bo1_mac11_mag_ext")
 
 ATT = {}
 
+ATT.PrintName = [[Spectre M4 45 Round Magazine]]
+ATT.CompactName = [[45 RND]]
+ATT.Icon = Material("entities/bo1_atts/ammo/ext_mag.png")
+ATT.Description = [[Extended stick magazine that increases capacity.
+The extra weight makes hip fire even more difficult.]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 1
+ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.Free = false
+
+ATT.Category = {"bo1_spectre_mag"}
+ATT.ClipSize = 45
+ATT.ReloadTimeMult = 1.1
+ATT.SpreadAddHipFire = math.rad(50 / 37.5)
+
+ATT.ActivateElements = {"extmag"}
+
+ARC9.LoadAttachment(ATT, "bo1_spectre_mag_ext")
+
+ATT = {}
+
 ATT.PrintName = [[50 Round Drum Magazine]]
 ATT.CompactName = [[DRUM]]
 ATT.Icon = Material("entities/bo1_atts/ammo/ext_mag.png")
@@ -500,3 +522,24 @@ ATT.ArmDamageMult = 0.9
 ATT.Category = {"bo1_ammo"}
 
 ARC9.LoadAttachment(ATT, "bo1_ammo_match")
+
+ATT = {}
+
+ATT.PrintName = [[Magnum Rounds]]
+ATT.CompactName = [[MAGNUM]]
+ATT.Icon = Material("entities/bo1_atts/ammo/FMJ.png")
+ATT.Description = [[Rounds with improved range and velocity.]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.Free = false
+
+ATT.RecoilKickMult = 1.25
+ATT.PhysBulletMuzzleVelocityMult = 1.25
+ATT.RangeMaxMult = 1.25
+ATT.RangeMinMult = 1.25
+
+ATT.Category = {"bo1_ammo"}
+
+ARC9.LoadAttachment(ATT, "bo1_ammo_magnum")
