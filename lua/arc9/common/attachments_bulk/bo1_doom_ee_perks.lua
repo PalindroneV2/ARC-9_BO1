@@ -182,6 +182,8 @@ hook.Add("Move", "ARC9_BO1_DOOM_EE_SPEED", function(ent, mv)
 
     if ent:Crouching() then s = s * ent:GetCrouchedWalkSpeed() end
 
+    -- ent:SprintDisable() (apparently doesnt work)
+    ent:SetRunSpeed(max * s * 1)
     mv:SetMaxSpeed(max * s * 2)
     mv:SetMaxClientSpeed(max * s * 2)
 end)

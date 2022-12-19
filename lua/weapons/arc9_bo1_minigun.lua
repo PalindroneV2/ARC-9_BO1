@@ -142,7 +142,7 @@ SWEP.ShootPitch = 100
 SWEP.ShootPitchVariation = 0
 
 SWEP.FirstShootSound = "ARC9_BO1.Minigun_Start"
-SWEP.ShootSoundLooping = "^weapons/arc9/bo1_minigun/looping.wav"
+SWEP.ShootSoundLooping = "ARC9_BO1.Minigun_Loop"
 SWEP.DistantShootSound = "ARC9_BO1.Minigun_Ring"
 SWEP.ShootSoundTail = "ARC9_BO1.Minigun_End"
 
@@ -234,15 +234,15 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
 
     local newActivePos = Vector(0, -2, -1)
     local newActiveAng = Angle(0, 0, 0)
-    local newSprintPos = Vector(0, -2, -1)
-    local newSprintAng = Angle(0, -10, 0)
+    -- local newSprintPos = Vector(0, -2, -1)
+    -- local newSprintAng = Angle(0, -10, 0)
 
     if attached["doom_ee"] then
         vm:SetBodygroup(0,0)
         newActivePos = Vector(-8.25, -17.5, 0)
         newActiveAng = Angle(0, 5, 0)
-        newSprintPos = Vector(-8.25, -17.5, 0)
-        newSprintAng = Angle(0, 5, 0)
+        -- newSprintPos = Vector(-8.25, -17.5, 0)
+        -- newSprintAng = Angle(0, 5, 0)
     end
 
     self.ActivePos = newActivePos
@@ -251,8 +251,8 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     self.MovingAng = newActiveAng
     self.CrouchPos = newActivePos
     self.CrouchAng = newActiveAng
-    self.SprintPos = newSprintPos
-    self.SprintAng = newSprintAng
+    self.SprintPos = newActivePos
+    self.SprintAng = newActiveAng
 end
 
 SWEP.HookP_NameChange = function(self, name)
@@ -262,7 +262,7 @@ SWEP.HookP_NameChange = function(self, name)
     local gunname = "M134 Minigun"
 
     if attached["bo1_pap"] then
-        gunname = "Meat Grinder"
+        gunname = "Death Machine"
     end
 
     if attached["doom_ee"] then

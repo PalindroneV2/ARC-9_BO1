@@ -215,6 +215,14 @@ SWEP.ExtraSightDist = 5
 SWEP.AttachmentElements = {
 }
 
+-- I'm not smart enough for this (palindrone)
+-- SWEP.Hook_Think = function(self)
+--     local bone = self:LookupBone("j_barrel")
+--     if self:GetRecoilAmount() > 0 then
+--         self:ManipulateBoneAngles( bone, Angle(0,90,0) )
+--     end
+-- end
+
 SWEP.Hook_ModifyBodygroups = function(self, data)
 
     local vm = data.model
@@ -233,32 +241,44 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
 
     local newActivePos = Vector(0, -2, -1)
     local newActiveAng = Angle(0, 0, 0)
-    local newSprintPos = Vector(0, -2, -1)
-    local newSprintAng = Angle(0, -10, 0)
+    -- local newSprintPos = Vector(0, -2, -1)
+    -- local newSprintAng = Angle(0, -10, 0)
 
     if attached["doom_ee"] then
-        vm:SetBodygroup(0,0)
-        newActivePos = Vector(-8.25, -17.5, 0)
+        -- vm:SetBodygroup(0,0)
+        newActivePos = Vector(-5.75, -17.5, 0)
         newActiveAng = Angle(0, 5, 0)
-        newSprintPos = Vector(-8.25, -17.5, 0)
-        newSprintAng = Angle(0, 5, 0)
+        -- newSprintPos = Vector(-8.25, -17.5, 0)
+        -- newSprintAng = Angle(0, 5, 0)
     end
 
     self.ActivePos = newActivePos
     self.ActiveAng = newActiveAng
     self.MovingPos = newActivePos
     self.MovingAng = newActiveAng
+    self.MovingMidPoint = {
+        Pos = newActivePos,
+        Ang = newActiveAng
+    }
     self.CrouchPos = newActivePos
     self.CrouchAng = newActiveAng
-    self.SprintPos = newSprintPos
-    self.SprintAng = newSprintAng
+    self.SprintPos = newActivePos
+    self.SprintAng = newActiveAng
+end
+
+SWEP.Hook_TranslateAnimation = function (self, anim)
+    local attached = self:GetElements()
+
+    if attached["doom_ee"] then
+        return anim .. "_doom"
+    end
 end
 
 SWEP.HookP_NameChange = function(self, name)
 
     local attached = self:GetElements()
 
-    local gunname = "M134 Minigun"
+    local gunname = "GAU-19"
 
     if attached["bo1_pap"] then
         gunname = "Meat Grinder"
@@ -342,7 +362,8 @@ SWEP.Animations = {
         },
     },
     ["fire"] = {
-        Source = {"fire"},
+        -- Source = {"fire"},
+        Source = {"fire_spin"},
         Time = 1,
         ShellEjectAt = 0,
         IKTimeLine = {
@@ -413,6 +434,31 @@ SWEP.Animations = {
     },
     ["exit_sprint"] = {
         Source = "sprint_out",
+        Time = 1,
+    },
+    ["fire_doom"] = {
+        -- Source = {"fire"},
+        Source = {"fire_spin"},
+        Time = 1,
+        ShellEjectAt = 0,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1,
+            },
+        },
+    },
+    ["enter_sprint_doom"] = {
+        Source = "idle",
+        Time = 1,
+    },
+    ["idle_sprint_doom"] = {
+        Source = "idle",
+        Time = 30 / 40
+    },
+    ["exit_sprint_doom"] = {
+        Source = "idle",
         Time = 1,
     },
 }
