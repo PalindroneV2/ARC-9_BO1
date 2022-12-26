@@ -667,7 +667,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Stock",
-        DefaultName = "Buffer Tube",
+        DefaultName = "None",
         Bone = "j_gun",
         Pos = Vector(-5, 0, 1),
         Ang = Angle(0, 0, 0),
