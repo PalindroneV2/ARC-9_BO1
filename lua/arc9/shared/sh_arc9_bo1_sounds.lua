@@ -2759,7 +2759,7 @@ sound.Add({
 
 sound.Add( {
     name = "PAP_Fire",
-    channel = CHAN_USER_BASE + 1,
+    channel = CHAN_STATIC,
     volume = 1.0,
     level = 100,
     --pitch = {95, 110},

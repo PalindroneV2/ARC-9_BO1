@@ -305,14 +305,14 @@ SWEP.AttachmentElements = {
     },
     ["svd_scope"] = {
         AttPosMods = {
-            [7] = {
+            [2] = {
                 Pos = Vector(1.5, -0.1, 2.6),
             }
         }
     },
     ["rpdhand"] = {
         AttPosMods = {
-            [5] = {
+            [7] = {
                 Pos = Vector(11.5, 0, 0.4),
             }
         }

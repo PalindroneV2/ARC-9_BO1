@@ -24,3 +24,18 @@ ATT.Attachments = {
         Category = {"bo1_muzzle"},
     },
 }
+
+ATT.SpreadMult = 1.5
+ATT.RecoilMult = 1.25
+ATT.SpreadMultHipFire = 0.7
+--ATT.SpreadMultMove = 0.7
+
+ATT.SpeedMult = 1.025
+ATT.SpeedMultSights = 1.125
+
+ATT.AimDownSightsTimeMult = 0.75
+ATT.SprintToFireTimeMult = 0.8
+
+ATT.RangeMaxMult = 0.6
+ATT.RangeMinMult = 0.6
+ATT.PhysBulletMuzzleVelocityMult = 0.6

@@ -13,3 +13,18 @@ ATT.Free = false
 ATT.Category = {"bo1_aug_barrels"}
 ATT.ActivateElements = {"barrel_long", "newbarrel"}
 ATT.ExcludeElements = {}
+
+ATT.SpreadMult = 0.9
+ATT.RecoilMult = 0.85
+ATT.SpreadMultHipFire = 1.25
+--ATT.SpreadMultMove = 1.25
+
+ATT.SpeedMult = 0.975
+ATT.SpeedMultSights = 0.925
+
+ATT.AimDownSightsTimeMult = 1.2
+ATT.SprintToFireTimeMult = 1.2
+
+ATT.RangeMaxMult = 1.3
+ATT.RangeMinMult = 1.3
+ATT.PhysBulletMuzzleVelocityMult = 1.3

@@ -350,7 +350,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Stock",
-        DefaultCompactName = "Standard",
+        DefaultCompactName = "Sawed-Off",
         Bone = "j_gun",
         Pos = Vector(-5, 0, -2),
         Ang = Angle(0, 0, 0),
