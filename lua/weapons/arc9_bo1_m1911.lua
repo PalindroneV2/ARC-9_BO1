@@ -211,14 +211,14 @@ SWEP.ExtraSightDist = 15
 SWEP.AttachmentElements = {
     ["longbarrel"] = {
         AttPosMods = {
-            [1] = {
+            [2] = {
                 Pos = Vector(7.875, 0.175, 1.05)
             },
         },
     },
     ["shortbarrel"] = {
         AttPosMods = {
-            [1] = {
+            [2] = {
                 Pos = Vector(4.65, 0.175, 1.05)
             },
         },
