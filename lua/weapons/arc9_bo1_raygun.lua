@@ -294,6 +294,14 @@ end
 
 SWEP.Attachments = {
     {
+        PrintName = "Ammunition",
+        DefaultCompactName = "AMMO",
+        Bone = "j_gun",
+        Pos = Vector(2, 0, 2),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_raygun_pap"},
+    },
+    {
         PrintName = "Perk-a-Cola",
         DefaultCompactName = "PERK",
         Bone = "j_gun",
@@ -301,14 +309,6 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = "bo1_perkacola",
         RejectAttachments = { ["bo1_perkacola_doubletap2"] = true },
-    },
-    {
-        PrintName = "Ammunition",
-        DefaultCompactName = "AMMO",
-        Bone = "j_gun",
-        Pos = Vector(2, 0, 2),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_raygun_pap"},
     },
 }
 

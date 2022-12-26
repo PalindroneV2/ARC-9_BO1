@@ -379,12 +379,11 @@ SWEP.ReloadHideBoneTables = {
 
 SWEP.Attachments = {
     {
-        PrintName = "Magazine",
-        DefaultCompactName = "MAG",
-        Bone = "tag_clip",
-        Pos = Vector(0.5, 0, 0),
+        PrintName = "Optic",
+        Bone = "j_gun",
+        Pos = Vector(2.25, 0.105, 3.75),
         Ang = Angle(0, 0, 0),
-        Category = {"bo2_fastmag", "bo2_extmag"},
+        Category = {"bo1_optic", "bo1_rail_riser", "bo2_m27_irons"},
     },
     {
         PrintName = "Barrel",
@@ -394,14 +393,14 @@ SWEP.Attachments = {
         Pos = Vector(12, 0.105, 3.2),
         Ang = Angle(0, 0, 0),
         Category = {"bo2_m27_barrel"},
-    },
     {
-        PrintName = "Stock",
+        PrintName = "Underbarrel",
         Bone = "j_gun",
-        Pos = Vector(-3, 0, 2.65),
+        Pos = Vector(11, 0.105, 1.35),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_stock_lm"},
-        Installed = "bo1_stock_medium"
+        Category = {"bo2_m320", "bo1_grips"},
+        -- MergeSlots = {11},
+    },
     },
     {
         PrintName = "Muzzle",
@@ -412,12 +411,12 @@ SWEP.Attachments = {
         Category = {"bo1_muzzle"},
     },
     {
-        PrintName = "Underbarrel",
+        PrintName = "Stock",
         Bone = "j_gun",
-        Pos = Vector(11, 0.105, 1.35),
+        Pos = Vector(-3, 0, 2.65),
         Ang = Angle(0, 0, 0),
-        Category = {"bo2_m320", "bo1_grips"},
-        MergeSlots = {11},
+        Category = {"bo1_stock_lm"},
+        Installed = "bo1_stock_medium"
     },
     {
         PrintName = "Firing Group",
@@ -428,19 +427,12 @@ SWEP.Attachments = {
         Category = {"bo1_fcg", "bo1_fcg_semi", "bo1_fcg_bst"},
     },
     {
-        PrintName = "Optic",
-        Bone = "j_gun",
-        Pos = Vector(2.25, 0.105, 3.75),
+        PrintName = "Magazine",
+        DefaultCompactName = "MAG",
+        Bone = "tag_clip",
+        Pos = Vector(0.5, 0, 0),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic", "bo1_rail_riser", "bo2_m27_irons"},
-    },
-    {
-        PrintName = "Perk-a-Cola",
-        DefaultCompactName = "PERK",
-        Bone = "j_gun",
-        Pos = Vector(-5, 0, -5),
-        Ang = Angle(0, 0, 0),
-        Category = "bo1_perkacola",
+        Category = {"bo2_fastmag", "bo2_extmag"},
     },
     {
         PrintName = "Ammunition",
@@ -451,21 +443,30 @@ SWEP.Attachments = {
         Category = {"bo1_ammo", "bo1_pap"},
     },
     {
+        PrintName = "Perk-a-Cola",
+        DefaultCompactName = "PERK",
+        Bone = "j_gun",
+        Pos = Vector(-5, 0, -5),
+        Ang = Angle(0, 0, 0),
+        Category = "bo1_perkacola",
+    },
+    {
         PrintName = "Cosmetic",
         DefaultCompactName = "Gunmetal",
         Bone = "j_gun",
         Pos = Vector(-7, 0, 0),
         Ang = Angle(0, 0, 0),
         Category = "universal_camo",
+        CosmeticOnly = true,
     },
-    {
-        Hidden = true,
-        PrintName = "Underbarrel",
-        Bone = "j_gun",
-        Pos = Vector(6.5, 0.105, 1.35),
-        Ang = Angle(0, 180, 0),
-        Category = {"ubgl_picatinny"},
-    },
+    -- {
+    --     Hidden = true,
+    --     PrintName = "Underbarrel",
+    --     Bone = "j_gun",
+    --     Pos = Vector(6.5, 0.105, 1.35),
+    --     Ang = Angle(0, 180, 0),
+    --     Category = {"ubgl_picatinny"},
+    -- },
 }
 
 SWEP.Animations = {

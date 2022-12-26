@@ -68,7 +68,7 @@ SWEP.TracerEffect = "ARC9_tracer" -- The effect to use for hitscan tracers
 SWEP.TracerColor = Color(255, 255, 255) -- Color of tracers. Only works if tracer effect supports it. For physical bullets, this is compressed down to 9-bit color.
 
 SWEP.ChamberSize = 0 -- dont fucking change this again.
-SWEP.ClipSize = 4 -- DefaultClip is automatically set.
+SWEP.ClipSize = 6 -- DefaultClip is automatically set.
 SWEP.ShotgunReload = true
 SWEP.ReloadTime = 1
 
@@ -314,6 +314,7 @@ SWEP.Attachments = {
         Pos = Vector(-10, 0, 4),
         Ang = Angle(0, 0, 0),
         Category = "universal_camo",
+        CosmeticOnly = true,
     },
 }
 

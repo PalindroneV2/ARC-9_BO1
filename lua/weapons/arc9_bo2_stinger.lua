@@ -386,15 +386,14 @@ SWEP.HookP_NameChange = function(self, name)
 end
 
 SWEP.Attachments = {
-    [1] = {
-        PrintName = "Perk-a-Cola",
-        DefaultCompactName = "PERK",
+    {
+        PrintName = "Sight",
         Bone = "j_gun",
-        Pos = Vector(-3, 0, -3),
+        Pos = Vector(3, 0, 4),
         Ang = Angle(0, 0, 0),
-        Category = "bo1_perkacola",
+        Category = {"bo1_alt_irons"},
     },
-    [2] = {
+    {
         PrintName = "Ammunition",
         DefaultCompactName = "AMMO",
         Bone = "j_gun",
@@ -402,12 +401,13 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"bo1_pap_launcher"},
     },
-    [3] = {
-        PrintName = "Sight",
+    {
+        PrintName = "Perk-a-Cola",
+        DefaultCompactName = "PERK",
         Bone = "j_gun",
-        Pos = Vector(3, 0, 4),
+        Pos = Vector(-3, 0, -3),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_alt_irons"},
+        Category = "bo1_perkacola",
     },
     --Adding or removing slots doesn't take effect until map restart when it used to just work if you reloaded the weapon by dying or dropping it.
 }

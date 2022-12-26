@@ -326,7 +326,7 @@ SWEP.Attachments = {
         Pos = Vector(10, 0, 1),
         Ang = Angle(0, 0, 0),
         Category = "bo1_ithaca_barrel",
-        Installed = "bo1_ithaca_barrel"
+        Installed = "bo1_ithaca_barrel",
     },
     {
         PrintName = "Underbarrel",
@@ -342,7 +342,7 @@ SWEP.Attachments = {
         Pos = Vector(-4, 0, 0.5),
         Ang = Angle(0, 0, 0),
         Category = "bo1_ithaca_strap",
-        Installed = "bo1_ithaca_strap"
+        Installed = "bo1_ithaca_strap",
     },
     {
         PrintName = "Ammunition",
@@ -359,6 +359,7 @@ SWEP.Attachments = {
         Pos = Vector(-5, 0, 4),
         Ang = Angle(0, 0, 0),
         Category = "universal_camo",
+        CosmeticOnly = true,
     },
     {
         PrintName = "Perk-a-Cola",

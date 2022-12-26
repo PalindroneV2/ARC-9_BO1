@@ -302,12 +302,12 @@ end
 
 SWEP.Attachments = {
     {
-        Hidden = true,
+        PrintName = "Optic",
         Bone = "j_gun",
-        Pos = Vector(-3, 0, 2.65),
+        Pos = Vector(6.5, 0.1, 3.85),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_stock_m"},
-        Installed = "bo1_stock_medium"
+        Category = {"bo1_optic", "bo1_rail_riser"},
+        InstalledElements = {"mount"},
     },
     {
         PrintName = "Muzzle",
@@ -333,12 +333,12 @@ SWEP.Attachments = {
         Category = {"bo1_fcg"},
     },
     {
-        PrintName = "Optic",
-        Bone = "j_gun",
-        Pos = Vector(6.5, 0.1, 3.85),
+        PrintName = "Ammunition",
+        DefaultCompactName = "AMMO",
+        Bone = "tag_clip",
+        Pos = Vector(1, 0, -4.25),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic", "bo1_rail_riser"},
-        InstalledElements = {"mount"},
+        Category = {"bo1_ammo", "bo1_pap"},
     },
     {
         PrintName = "Perk-a-Cola",
@@ -349,20 +349,21 @@ SWEP.Attachments = {
         Category = "bo1_perkacola",
     },
     {
-        PrintName = "Ammunition",
-        DefaultCompactName = "AMMO",
-        Bone = "tag_clip",
-        Pos = Vector(1, 0, -4.25),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_ammo", "bo1_pap"},
-    },
-    {
         PrintName = "Cosmetic",
         DefaultCompactName = "Gunmetal",
         Bone = "j_gun",
         Pos = Vector(-7, 0, 0),
         Ang = Angle(0, 0, 0),
         Category = "universal_camo",
+        CosmeticOnly = true,
+    },
+    {
+        Hidden = true,
+        Bone = "j_gun",
+        Pos = Vector(-3, 0, 2.65),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_stock_m"},
+        Installed = "bo1_stock_medium"
     },
 }
 

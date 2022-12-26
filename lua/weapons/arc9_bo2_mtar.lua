@@ -392,6 +392,7 @@ SWEP.Attachments = {
         Pos = Vector(-10, 0, 2),
         Ang = Angle(0, 0, 0),
         Category = "universal_camo",
+        CosmeticOnly = true,
     },
 }
 

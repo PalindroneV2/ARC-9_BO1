@@ -3,13 +3,13 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ARC9 - Black Ops II" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "KRISS Vector"
+SWEP.PrintName = "TDI Vector"
 SWEP.Class = "Submachine Gun"
 SWEP.Description = [[
     American SMG with a unique recoil absorption system.
 ]]
 SWEP.Trivia = {
-    Manufacturer = "KRISS",
+    Manufacturer = "TDI",
     Calibre = "9x19mm Parabellum",
     Mechanism = "Gas-Operated",
     Country = "USA",
@@ -291,7 +291,7 @@ SWEP.HookP_NameChange = function(self, name)
 
     local attached = self:GetElements()
 
-    local gunname = "KRISS Vector"
+    local gunname = "TDI Vector"
 
     if attached["bo1_pap"] then
         gunname = "Polygon K115"
@@ -321,37 +321,13 @@ SWEP.Attachments = {
         Category = {"bo1_muzzle_pistol"},
     },
     {
-        Hidden = true,
+        PrintName = "Underbarrel",
         DefaultCompactName = "None",
         Bone = "j_gun",
-        Pos = Vector(-5, 0, 0.5),
+        Pos = Vector(9, 0, -1),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_stock_l"},
-        Installed = "bo1_stock_light"
-    },
-    {
-        PrintName = "Firing Group",
-        DefaultCompactName = "S-1-F",
-        Bone = "j_gun",
-        Pos = Vector(2, 0, 0),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_fcg"},
-    },
-    {
-        PrintName = "Perk-a-Cola",
-        DefaultCompactName = "PERK",
-        Bone = "j_gun",
-        Pos = Vector(-10, 0, -5),
-        Ang = Angle(0, 0, 0),
-        Category = "bo1_perkacola",
-    },
-    {
-        PrintName = "Magazine",
-        DefaultCompactName = "40 RND",
-        Bone = "tag_clip",
-        Pos = Vector(0, 0, -5),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo2_fastmag", "bo2_extmag"},
+        Icon_Offset = Vector(0, 0, 0),
+        Category = {"bo1_igrip"},
     },
     {
         PrintName = "Tactical Left",
@@ -374,13 +350,20 @@ SWEP.Attachments = {
         -- RequireElements = {"bo1_igrip"},
     },
     {
-        PrintName = "Underbarrel",
-        DefaultCompactName = "None",
+        PrintName = "Firing Group",
+        DefaultCompactName = "S-1-F",
         Bone = "j_gun",
-        Pos = Vector(9, 0, -1),
+        Pos = Vector(2, 0, 0),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(0, 0, 0),
-        Category = {"bo1_igrip"},
+        Category = {"bo1_fcg"},
+    },
+    {
+        PrintName = "Magazine",
+        DefaultCompactName = "40 RND",
+        Bone = "tag_clip",
+        Pos = Vector(0, 0, -5),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo2_fastmag", "bo2_extmag"},
     },
     {
         PrintName = "Ammunition",
@@ -391,11 +374,29 @@ SWEP.Attachments = {
         Category = {"bo1_ammo", "bo1_pap"},
     },
     {
+        PrintName = "Perk-a-Cola",
+        DefaultCompactName = "PERK",
+        Bone = "j_gun",
+        Pos = Vector(-10, 0, -5),
+        Ang = Angle(0, 0, 0),
+        Category = "bo1_perkacola",
+    },
+    {
         PrintName = "Cosmetic",
         Bone = "j_gun",
         Pos = Vector(-5, 0, 3.65),
         Ang = Angle(0, 0, 0),
         Category = {"universal_camo"},
+        CosmeticOnly = true,
+    },
+    {
+        Hidden = true,
+        DefaultCompactName = "None",
+        Bone = "j_gun",
+        Pos = Vector(-5, 0, 0.5),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_stock_l"},
+        Installed = "bo1_stock_light"
     },
 }
 

@@ -266,21 +266,13 @@ end
 
 SWEP.Attachments = {
     {
-    PrintName = "Perk-a-Cola",
-        DefaultCompactName = "PERK",
-        Bone = "j_gun",
-        Pos = Vector(-5, 0, -5),
-        Ang = Angle(0, 0, 0),
-        Category = "bo1_perkacola",
-    },
-    {
         PrintName = "Optic",
         Bone = "j_gun",
         Pos = Vector(4, 0.075, 3.8),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_optic","bo1_rail_riser"},
         InstalledElements = {"mount"},
-        MergeSlots = {3}
+        MergeSlots = {2}
     },
     {
         Hidden = true,
@@ -309,12 +301,13 @@ SWEP.Attachments = {
         Category = {"bo1_rail_underbarrel"},
     },
     {
-        PrintName = "Cosmetic",
+        PrintName = "Bipod",
+        DefaultCompactName = "None",
         Bone = "j_gun",
-        Pos = Vector(0, 0, 0),
+        Pos = Vector(20, 0, 0),
         Ang = Angle(0, 0, 0),
-        Category = {"universal_camo"},
-        Icon_Offset = Vector(-5, 0, 2.65),
+        Category = {"bo1_bipod"},
+        Installed = "bo1_bipod_integrated",
     },
     {
         PrintName = "Magazine",
@@ -333,21 +326,29 @@ SWEP.Attachments = {
         Category = {"bo1_ammo", "bo1_pap"},
     },
     {
+        PrintName = "Perk-a-Cola",
+        DefaultCompactName = "PERK",
+        Bone = "j_gun",
+        Pos = Vector(-5, 0, -5),
+        Ang = Angle(0, 0, 0),
+        Category = "bo1_perkacola",
+    },
+    {
+        PrintName = "Cosmetic",
+        Bone = "j_gun",
+        Pos = Vector(0, 0, 0),
+        Ang = Angle(0, 0, 0),
+        Category = {"universal_camo"},
+        CosmeticOnly = true,
+        Icon_Offset = Vector(-5, 0, 2.65),
+    },
+    {
         Hidden = true,
         Bone = "j_gun",
         Pos = Vector(-3, 0, 2.65),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_stock_h"},
         Installed = "bo1_stock_heavy",
-    },
-    {
-        PrintName = "Bipod",
-        DefaultCompactName = "None",
-        Bone = "j_gun",
-        Pos = Vector(20, 0, 0),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_bipod"},
-        Installed = "bo1_bipod_integrated",
     },
 }
 

@@ -276,6 +276,14 @@ SWEP.Attachments = {
         InstalledElements = {"mount"},
     },
     {
+        PrintName = "Barrel",
+        DefaultCompactName = "Standard",
+        Bone = "j_bolt",
+        Pos = Vector(12, 0, 0.75),
+        Ang = Angle(0, 0, 0),
+        Category = "bo1_olympia_barrel",
+    },
+    {
         PrintName = "Stock",
         DefaultCompactName = "None",
         Bone = "j_gun",
@@ -315,14 +323,7 @@ SWEP.Attachments = {
         Pos = Vector(-10, 0, 2),
         Ang = Angle(0, 0, 0),
         Category = "universal_camo",
-    },
-    {
-        PrintName = "Barrel",
-        DefaultCompactName = "Standard",
-        Bone = "j_bolt",
-        Pos = Vector(12, 0, 0.75),
-        Ang = Angle(0, 0, 0),
-        Category = "bo1_olympia_barrel",
+        CosmeticOnly = true,
     },
 }
 

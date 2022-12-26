@@ -291,13 +291,6 @@ SWEP.Attachments = {
         InstalledElements = {"mount"},
     },
     {
-        PrintName = "Stock",
-        Bone = "j_gun",
-        Pos = Vector(-4, 0, 1.5),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_stock_l"},
-    },
-    {
         PrintName = "Muzzle",
         Bone = "j_gun",
         Scale = Vector(1.3, 1, 1),
@@ -314,12 +307,11 @@ SWEP.Attachments = {
         Category = {"bo1_fcg"},
     },
     {
-        PrintName = "Perk-a-Cola",
-        DefaultCompactName = "PERK",
+        PrintName = "Stock",
         Bone = "j_gun",
-        Pos = Vector(-7, 0, -7),
+        Pos = Vector(-4, 0, 1.5),
         Ang = Angle(0, 0, 0),
-        Category = "bo1_perkacola",
+        Category = {"bo1_stock_l"},
     },
     {
         PrintName = "Magazine",
@@ -344,6 +336,15 @@ SWEP.Attachments = {
         Pos = Vector(-7, 0, 0),
         Ang = Angle(0, 0, 0),
         Category = "universal_camo",
+        CosmeticOnly = true,
+    },
+    {
+        PrintName = "Perk-a-Cola",
+        DefaultCompactName = "PERK",
+        Bone = "j_gun",
+        Pos = Vector(-7, 0, -7),
+        Ang = Angle(0, 0, 0),
+        Category = "bo1_perkacola",
     },
 }
 

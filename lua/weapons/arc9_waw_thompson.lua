@@ -284,6 +284,14 @@ SWEP.Attachments = {
         Category = {"bo1_muzzle_pistol"},
     },
     {
+        PrintName = "Stock",
+        Bone = "j_gun",
+        Pos = Vector(-6, 0, 0),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_stock_h"},
+        Installed = "bo1_stock_heavy",
+    },
+    {
         PrintName = "Firing Group",
         DefaultCompactName = "S-1-F",
         Bone = "j_gun",
@@ -292,12 +300,12 @@ SWEP.Attachments = {
         Category = {"bo1_fcg"},
     },
     {
-        PrintName = "Perk-a-Cola",
-        DefaultCompactName = "PERK",
+        PrintName = "Magazine",
+        DefaultCompactName = "30rnd",
         Bone = "j_gun",
-        Pos = Vector(-10, 0, -5),
+        Pos = Vector(3.65, 0, -2),
         Ang = Angle(0, 0, 0),
-        Category = "bo1_perkacola",
+        Category = {"waw_thompson_mag"},
     },
     {
         PrintName = "Ammunition",
@@ -308,20 +316,12 @@ SWEP.Attachments = {
         Category = {"bo1_ammo", "bo1_pap"},
     },
     {
-        PrintName = "Stock",
+        PrintName = "Perk-a-Cola",
+        DefaultCompactName = "PERK",
         Bone = "j_gun",
-        Pos = Vector(-6, 0, 0),
+        Pos = Vector(-10, 0, -5),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_stock_h"},
-        Installed = "bo1_stock_heavy",
-    },
-    {
-        PrintName = "Magazine",
-        DefaultCompactName = "30rnd",
-        Bone = "j_gun",
-        Pos = Vector(3.65, 0, -2),
-        Ang = Angle(0, 0, 0),
-        Category = {"waw_thompson_mag"},
+        Category = "bo1_perkacola",
     },
 }
 

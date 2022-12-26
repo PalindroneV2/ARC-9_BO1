@@ -324,6 +324,7 @@ SWEP.Attachments = {
         Pos = Vector(-12.5, 0, 2.65),
         Ang = Angle(0, 0, 0),
         Category = {"universal_camo"},
+        CosmeticOnly = true,
     },
     {
         PrintName = "Ammunition",

@@ -333,14 +333,6 @@ end
 
 SWEP.Attachments = {
     {
-        PrintName = "Perk-a-Cola",
-        DefaultCompactName = "PERK",
-        Bone = "j_gun",
-        Pos = Vector(-5, 0, -5),
-        Ang = Angle(0, 0, 0),
-        Category = "bo1_perkacola",
-    },
-    {
         PrintName = "Optic",
         Bone = "j_gun",
         Pos = Vector(2.5, 0.1, 5),
@@ -364,14 +356,6 @@ SWEP.Attachments = {
         Category = {"bo1_m203", "bo1_mk", "bo1_rail_underbarrel"},
     },
     {
-        PrintName = "Receiver",
-        DefaultCompactName = "Valorisé",
-        Bone = "j_gun",
-        Pos = Vector(5, 0, 4),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_famas_receiver"}
-    },
-    {
         PrintName = "Fire Control Group",
         DefaultCompactName = "AUTO",
         Bone = "j_gun",
@@ -388,11 +372,29 @@ SWEP.Attachments = {
         Category = {"bo1_ammo", "bo1_pap"},
     },
     {
+        PrintName = "Receiver",
+        DefaultCompactName = "Valorisé",
+        Bone = "j_gun",
+        Pos = Vector(5, 0, 4),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_famas_receiver"},
+        CosmeticOnly = true,
+    },
+    {
         PrintName = "Cosmetic",
         Bone = "j_gun",
         Pos = Vector(-6, 0, 2.65),
         Ang = Angle(0, 0, 0),
         Category = {"universal_camo"},
+        CosmeticOnly = true,
+    },
+    {
+        PrintName = "Perk-a-Cola",
+        DefaultCompactName = "PERK",
+        Bone = "j_gun",
+        Pos = Vector(-5, 0, -5),
+        Ang = Angle(0, 0, 0),
+        Category = "bo1_perkacola",
     },
 }
 

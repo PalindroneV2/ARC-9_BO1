@@ -323,13 +323,13 @@ end
 
 SWEP.Attachments = {
     {
-        PrintName = "Perk-a-Cola",
-        DefaultCompactName = "PERK",
+        PrintName = "Barrel",
+        DefaultCompactName = "Standard",
         Bone = "j_gun",
-        Pos = Vector(-5, 0, -5),
+        Pos = Vector(10, 0, 0),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_perkacola", "waw_perk_ssg"},
-        -- InstallSound = "ARC9_BO1.DOOM_EE_ON",
+        Category = "waw_dbs_barrel",
+        ExcludeElements = {"ssg"},
     },
     {
         PrintName = "Ammunition",
@@ -343,6 +343,15 @@ SWEP.Attachments = {
         PrintName = "Grip",
         DefaultCompactName = "Standard",
         Bone = "j_gun",
+        Pos = Vector(10, 0, -2),
+        Ang = Angle(0, 0, 0),
+        Category = "bo1_igrip",
+        ExcludeElements = {"ssg"},
+    },
+    {
+        PrintName = "Stock",
+        DefaultCompactName = "Standard",
+        Bone = "j_gun",
         Pos = Vector(-5, 0, -2),
         Ang = Angle(0, 0, 0),
         Category = "bo1_stock_h",
@@ -350,22 +359,13 @@ SWEP.Attachments = {
         ExcludeElements = {"ssg"},
     },
     {
-        PrintName = "Grip",
-        DefaultCompactName = "Standard",
+        PrintName = "Perk-a-Cola",
+        DefaultCompactName = "PERK",
         Bone = "j_gun",
-        Pos = Vector(10, 0, -2),
+        Pos = Vector(-5, 0, -5),
         Ang = Angle(0, 0, 0),
-        Category = "bo1_igrip",
-        ExcludeElements = {"ssg"},
-    },
-    {
-        PrintName = "Barrel",
-        DefaultCompactName = "Standard",
-        Bone = "j_gun",
-        Pos = Vector(10, 0, 0),
-        Ang = Angle(0, 0, 0),
-        Category = "waw_dbs_barrel",
-        ExcludeElements = {"ssg"},
+        Category = {"bo1_perkacola", "waw_perk_ssg"},
+        -- InstallSound = "ARC9_BO1.DOOM_EE_ON",
     },
 }
 

@@ -275,14 +275,6 @@ SWEP.Attachments = {
         Category = {"bo1_muzzle_pistol", "waw_p38_muzzle"},
     },
     {
-        PrintName = "Cosmetic",
-        DefaultCompactName = "G.I.",
-        Bone = "j_bolt",
-        Pos = Vector(-2, 0, 0),
-        Ang = Angle(0, 0, 0),
-        Category = {"waw_pistol_cosmetic", "waw_p38_cosmetic"},
-    },
-    {
         PrintName = "Stock",
         Bone = "j_gun",
         Pos = Vector(-5, 0, -2.5),
@@ -305,6 +297,15 @@ SWEP.Attachments = {
         Pos = Vector(-5, 0, -5),
         Ang = Angle(0, 0, 0),
         Category = "bo1_perkacola",
+    },
+    {
+        PrintName = "Cosmetic",
+        DefaultCompactName = "G.I.",
+        Bone = "j_bolt",
+        Pos = Vector(-2, 0, 0),
+        Ang = Angle(0, 0, 0),
+        Category = {"waw_pistol_cosmetic", "waw_p38_cosmetic"},
+        CosmeticOnly = true,
     },
 }
 

@@ -349,20 +349,12 @@ end
 
 SWEP.Attachments = {
     {
-        PrintName = "Perk-a-Cola",
-        DefaultCompactName = "PERK",
+        PrintName = "Optic",
         Bone = "j_gun",
-        Pos = Vector(-5, 0, -5),
+        Pos = Vector(5.25, 0.125, 1.85),
         Ang = Angle(0, 0, 0),
-        Category = "bo1_perkacola",
-    },
-    {
-        PrintName = "Stock",
-        Bone = "j_gun",
-        Pos = Vector(-3, 0, 0),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_stock_mh"},
-        Installed = "bo1_stock_heavy",
+        Category = {"bo1_optic", "bo1_rail_riser"},
+        InstalledElements = {"mount"},
     },
     {
         PrintName = "Muzzle",
@@ -373,14 +365,6 @@ SWEP.Attachments = {
         ExcludeElements = {"newbarrel"},
     },
     {
-        PrintName = "Optic",
-        Bone = "j_gun",
-        Pos = Vector(5.25, 0.125, 1.85),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic", "bo1_rail_riser"},
-        InstalledElements = {"mount"},
-    },
-    {
         PrintName = "Underbarrel",
         DefaultCompactName = "UB",
         Bone = "j_gun",
@@ -389,20 +373,14 @@ SWEP.Attachments = {
         Category = {"bo1_rail_underbarrel", "bo1_m203", "bo1_mk", "bo1_igrip"},
     },
     {
-        PrintName = "Cosmetic",
+        PrintName = "Bipod",
+        DefaultCompactName = "None",
         Bone = "j_gun",
-        Pos = Vector(-7, 0, 2),
+        Pos = Vector(21, 0, -0.25),
         Ang = Angle(0, 0, 0),
-        Category = {"universal_camo"},
-        -- Installed = "bo1_cosmetic_wood"
-    },
-    {
-        PrintName = "Ammunition",
-        DefaultCompactName = "AMMO",
-        Bone = "j_gun",
-        Pos = Vector(5.5, 0, -3),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_ammo", "bo1_pap"},
+        Category = "bo1_bipod",
+        ExcludeElements = {"bo1_m203", "bo1_mk"},
+        Installed = "bo1_bipod_integrated"
     },
     {
         PrintName = "Tactical Left",
@@ -421,14 +399,37 @@ SWEP.Attachments = {
         Category = "bo1_rail_tactical",
     },
     {
-        PrintName = "Bipod",
-        DefaultCompactName = "None",
+        PrintName = "Stock",
         Bone = "j_gun",
-        Pos = Vector(21, 0, -0.25),
+        Pos = Vector(-3, 0, 0),
         Ang = Angle(0, 0, 0),
-        Category = "bo1_bipod",
-        ExcludeElements = {"bo1_m203", "bo1_mk"},
-        Installed = "bo1_bipod_integrated"
+        Category = {"bo1_stock_mh"},
+        Installed = "bo1_stock_heavy",
+    },
+    {
+        PrintName = "Ammunition",
+        DefaultCompactName = "AMMO",
+        Bone = "j_gun",
+        Pos = Vector(5.5, 0, -3),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_ammo", "bo1_pap"},
+    },
+    {
+        PrintName = "Perk-a-Cola",
+        DefaultCompactName = "PERK",
+        Bone = "j_gun",
+        Pos = Vector(-5, 0, -5),
+        Ang = Angle(0, 0, 0),
+        Category = "bo1_perkacola",
+    },
+    {
+        PrintName = "Cosmetic",
+        Bone = "j_gun",
+        Pos = Vector(-7, 0, 2),
+        Ang = Angle(0, 0, 0),
+        Category = {"universal_camo"},
+        CosmeticOnly = true,
+        -- Installed = "bo1_cosmetic_wood"
     },
 }
 

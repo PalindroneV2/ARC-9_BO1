@@ -273,28 +273,20 @@ end
 
 SWEP.Attachments = {
     {
+        PrintName = "Optic",
+        DefaultCompactName = "Irons",
+        Bone = "j_gun",
+        Pos = Vector(-2.2, 0, 2.2),
+        Ang = Angle(0, 0, 0),
+        Category = {"waw_aperture"},
+    },
+    {
         PrintName = "Firing Group",
         DefaultCompactName = "S-1-F",
         Bone = "j_gun",
         Pos = Vector(-4.5, 0, -1),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_fcg"},
-    },
-    {
-        PrintName = "Perk-a-Cola",
-        DefaultCompactName = "PERK",
-        Bone = "j_gun",
-        Pos = Vector(-7, 0, -7),
-        Ang = Angle(0, 0, 0),
-        Category = "bo1_perkacola",
-    },
-    {
-        PrintName = "Ammunition",
-        DefaultCompactName = "AMMO",
-        Bone = "j_gun",
-        Pos = Vector(3.5, 0, -3),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_ammo", "bo1_pap"},
     },
     {
         PrintName = "Magazine",
@@ -305,12 +297,20 @@ SWEP.Attachments = {
         Category = {"waw_ppsh_stick"},
     },
     {
-        PrintName = "Optic",
-        DefaultCompactName = "Irons",
+        PrintName = "Ammunition",
+        DefaultCompactName = "AMMO",
         Bone = "j_gun",
-        Pos = Vector(-2.2, 0, 2.2),
+        Pos = Vector(3.5, 0, -3),
         Ang = Angle(0, 0, 0),
-        Category = {"waw_aperture"},
+        Category = {"bo1_ammo", "bo1_pap"},
+    },
+    {
+        PrintName = "Perk-a-Cola",
+        DefaultCompactName = "PERK",
+        Bone = "j_gun",
+        Pos = Vector(-7, 0, -7),
+        Ang = Angle(0, 0, 0),
+        Category = "bo1_perkacola",
     },
 }
 

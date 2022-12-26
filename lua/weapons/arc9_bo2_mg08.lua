@@ -303,14 +303,6 @@ SWEP.Attachments = {
         ExcludeElements = {"newbarrel"},
     },
     {
-        PrintName = "Ammunition",
-        DefaultCompactName = "AMMO",
-        Bone = "j_gun",
-        Pos = Vector(4.5, 0, -2),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_ammo", "bo1_pap"},
-    },
-    {
         PrintName = "Firing Group",
         DefaultCompactName = "AUTO",
         Bone = "j_gun",
@@ -319,11 +311,12 @@ SWEP.Attachments = {
         Category = {"bo2_fcg_mg08"},
     },
     {
-        PrintName = "Cosmetic",
+        PrintName = "Ammunition",
+        DefaultCompactName = "AMMO",
         Bone = "j_gun",
-        Pos = Vector(-7, 0, 2),
+        Pos = Vector(4.5, 0, -2),
         Ang = Angle(0, 0, 0),
-        Category = {"camo_gold"},
+        Category = {"bo1_ammo", "bo1_pap"},
     },
     {
         PrintName = "Perk-a-Cola",
@@ -332,6 +325,14 @@ SWEP.Attachments = {
         Pos = Vector(-5, 0, -5),
         Ang = Angle(0, 0, 0),
         Category = "bo1_perkacola",
+    },
+    {
+        PrintName = "Cosmetic",
+        Bone = "j_gun",
+        Pos = Vector(-7, 0, 2),
+        Ang = Angle(0, 0, 0),
+        Category = {"camo_gold"},
+        CosmeticOnly = true,
     },
     {
         Hidden = true,

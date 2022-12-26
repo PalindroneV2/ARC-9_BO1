@@ -403,15 +403,6 @@ end
 
 SWEP.Attachments = {
     {
-        PrintName = "Muzzle",
-        DefaultCompactName = "Muzz",
-        Bone = "j_gun",
-        Scale = Vector(1,1,1),
-        Pos = Vector(5.66, 0.175, 1.05),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_muzzle_pistol", "bo1_m1911_compensator"},
-    },
-    {
         PrintName = "Slide",
         DefaultCompactName = "5\" G.I.",
         Bone = "j_bolt",
@@ -420,6 +411,15 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"bo1_m1911_slides"},
         DefaultIcon = Material("materials/entities/bo1_atts/cosmetic/waw_1911.png", "mips smooth"),
+    },
+    {
+        PrintName = "Muzzle",
+        DefaultCompactName = "Muzz",
+        Bone = "j_gun",
+        Scale = Vector(1,1,1),
+        Pos = Vector(5.66, 0.175, 1.05),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_muzzle_pistol", "bo1_m1911_compensator"},
     },
     {
         PrintName = "Frame",
@@ -449,24 +449,6 @@ SWEP.Attachments = {
         DefaultIcon = Material("materials/entities/bo1_atts/cosmetic/waw_1911.png", "mips smooth"),
     },
     {
-        PrintName = "Finish",
-        DefaultCompactName = "G.I. Finish",
-        Bone = "j_gun",
-        Pos = Vector(-5, 0, 2),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_m1911_cosmetics"},
-        DefaultIcon = Material("materials/entities/bo1_generic.png", "mips smooth"),
-    },
-    {
-        PrintName = "Sounds",
-        DefaultCompactName = "BO1",
-        Bone = "j_gun",
-        Pos = Vector(-7.5, 0, 2),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_m1911_sounds"},
-        DefaultIcon = Material("materials/entities/bo1_generic.png", "mips smooth"),
-    },
-    {
         PrintName = "Tactical",
         DefaultCompactName = "TAC",
         Bone = "j_gun",
@@ -491,6 +473,26 @@ SWEP.Attachments = {
         Pos = Vector(-5, 0, -5),
         Ang = Angle(0, 0, 0),
         Category = "bo1_perkacola",
+    },
+    {
+        PrintName = "Finish",
+        DefaultCompactName = "G.I. Finish",
+        Bone = "j_gun",
+        Pos = Vector(-5, 0, 2),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_m1911_cosmetics"},
+        DefaultIcon = Material("materials/entities/bo1_generic.png", "mips smooth"),
+        CosmeticOnly = true,
+    },
+    {
+        PrintName = "Sounds",
+        DefaultCompactName = "BO1",
+        Bone = "j_gun",
+        Pos = Vector(-7.5, 0, 2),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_m1911_sounds"},
+        DefaultIcon = Material("materials/entities/bo1_generic.png", "mips smooth"),
+        CosmeticOnly = true,
     },
 }
 

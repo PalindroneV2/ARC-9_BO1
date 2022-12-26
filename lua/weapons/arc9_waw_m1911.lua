@@ -267,15 +267,6 @@ end
 
 SWEP.Attachments = {
     {
-        PrintName = "Finish",
-        DefaultCompactName = "G.I. Finish",
-        Bone = "j_gun",
-        Pos = Vector(-5, 0, 2),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_m1911_cosmetics"},
-        DefaultIcon = Material("materials/entities/waw_generic.png", "mips smooth"),
-    },
-    {
         PrintName = "Muzzle",
         DefaultCompactName = "Muzz",
         Bone = "j_gun",
@@ -291,6 +282,16 @@ SWEP.Attachments = {
         Pos = Vector(-1.25, 0, -3),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ammo", "bo1_pap", "bo1_pap_1911"},
+    },
+    {
+        PrintName = "Finish",
+        DefaultCompactName = "G.I. Finish",
+        Bone = "j_gun",
+        Pos = Vector(-5, 0, 2),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_m1911_cosmetics"},
+        DefaultIcon = Material("materials/entities/waw_generic.png", "mips smooth"),
+        CosmeticOnly = true,
     },
     {
         PrintName = "Perk-a-Cola",

@@ -240,12 +240,12 @@ end
 
 SWEP.Attachments = {
     {
-        PrintName = "Perk-a-Cola",
-        DefaultCompactName = "PERK",
+        PrintName = "Optic",
+        DefaultCompactName = "None",
         Bone = "j_gun",
-        Pos = Vector(-3, 0, -3),
+        Pos = Vector(6.5, 0, 4.75),
         Ang = Angle(0, 0, 0),
-        Category = "bo1_perkacola",
+        Category = {"bo1_optic", "bo2_m32_optic"},
     },
     {
         PrintName = "Shell",
@@ -264,12 +264,12 @@ SWEP.Attachments = {
         Category = {"bo1_pap_launcher"},
     },
     {
-        PrintName = "Optic",
-        DefaultCompactName = "None",
+        PrintName = "Perk-a-Cola",
+        DefaultCompactName = "PERK",
         Bone = "j_gun",
-        Pos = Vector(6.5, 0, 4.75),
+        Pos = Vector(-3, 0, -3),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic", "bo2_m32_optic"},
+        Category = "bo1_perkacola",
     },
 }
 

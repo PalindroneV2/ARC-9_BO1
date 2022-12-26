@@ -287,14 +287,6 @@ SWEP.Attachments = {
         Category = {"bo1_python_barrel"},
     },
     {
-        PrintName = "Cylinder",
-        DefaultCompactName = "None",
-        Bone = "j_gun",
-        Pos = Vector(2, 0, 2),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_cylinder"},
-    },
-    {
         PrintName = "Tactical",
         DefaultCompactName = "TAC",
         Bone = "j_gun",
@@ -303,6 +295,14 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"bo1_tactical"},
         ExcludeElements = {"snubnose"}
+    },
+    {
+        PrintName = "Cylinder",
+        DefaultCompactName = "None",
+        Bone = "j_gun",
+        Pos = Vector(2, 0, 2),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_cylinder"},
     },
     {
         PrintName = "Ammunition",
@@ -327,6 +327,7 @@ SWEP.Attachments = {
         Pos = Vector(-5, 0, -1),
         Ang = Angle(0, 0, 0),
         Category = "universal_camo",
+        CosmeticOnly = true,
     },
 }
 

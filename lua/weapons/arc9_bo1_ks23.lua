@@ -342,6 +342,14 @@ SWEP.Attachments = {
         ExcludeElements = {"doom_ee"},
     },
     {
+        PrintName = "Perk-a-Cola",
+        DefaultCompactName = "PERK",
+        Bone = "j_gun",
+        Pos = Vector(-5, 0, -5),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_perkacola", "bo1_ks23_doom"},
+    },
+    {
         PrintName = "Cosmetic",
         DefaultCompactName = "Standard Black",
         Bone = "j_gun",
@@ -349,14 +357,7 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = "universal_camo",
         ExcludeElements = {"doom_ee"},
-    },
-    {
-        PrintName = "Perk-a-Cola",
-        DefaultCompactName = "PERK",
-        Bone = "j_gun",
-        Pos = Vector(-5, 0, -5),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_perkacola", "bo1_ks23_doom"},
+        CosmeticOnly = true,
     },
 }
 

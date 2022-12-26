@@ -280,36 +280,20 @@ end
 
 SWEP.Attachments = {
     {
+        PrintName = "Optic",
+        DefaultCompactName = "Irons",
+        Bone = "j_gun",
+        Pos = Vector(-3.5, 0, 3.6),
+        Ang = Angle(0, 0, 0),
+        Category = {"waw_aperture"},
+    },
+    {
         PrintName = "Muzzle",
         Bone = "j_gun",
         Scale = Vector(1,1.3,1.3),
         Pos = Vector(16.2, 0, 3.1),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_muzzle_pistol"},
-    },
-    {
-        PrintName = "Firing Group",
-        DefaultCompactName = "S-1-F",
-        Bone = "j_gun",
-        Pos = Vector(0, 0, -2),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_fcg"},
-    },
-    {
-        PrintName = "Perk-a-Cola",
-        DefaultCompactName = "PERK",
-        Bone = "j_gun",
-        Pos = Vector(-10, 0, -5),
-        Ang = Angle(0, 0, 0),
-        Category = "bo1_perkacola",
-    },
-    {
-        PrintName = "Ammunition",
-        DefaultCompactName = "AMMO",
-        Bone = "tag_clip",
-        Pos = Vector(0, 0, 0),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_ammo", "bo1_pap"},
     },
     {
         PrintName = "Stock",
@@ -320,12 +304,28 @@ SWEP.Attachments = {
         Installed = "bo1_stock_heavy",
     },
     {
-        PrintName = "Optic",
-        DefaultCompactName = "Irons",
+        PrintName = "Firing Group",
+        DefaultCompactName = "S-1-F",
         Bone = "j_gun",
-        Pos = Vector(-3.5, 0, 3.6),
+        Pos = Vector(0, 0, -2),
         Ang = Angle(0, 0, 0),
-        Category = {"waw_aperture"},
+        Category = {"bo1_fcg"},
+    },
+    {
+        PrintName = "Ammunition",
+        DefaultCompactName = "AMMO",
+        Bone = "tag_clip",
+        Pos = Vector(0, 0, 0),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_ammo", "bo1_pap"},
+    },
+    {
+        PrintName = "Perk-a-Cola",
+        DefaultCompactName = "PERK",
+        Bone = "j_gun",
+        Pos = Vector(-10, 0, -5),
+        Ang = Angle(0, 0, 0),
+        Category = "bo1_perkacola",
     },
 }
 

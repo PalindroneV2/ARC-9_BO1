@@ -300,37 +300,13 @@ SWEP.Attachments = {
         Category = {"bo1_muzzle"},
     },
     {
-        Hidden = true,
+        PrintName = "Underbarrel",
         DefaultCompactName = "None",
         Bone = "j_gun",
-        Pos = Vector(-5, 0, 0.5),
+        Pos = Vector(5.5, -0.01, 0.1),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_stock_lm"},
-        Installed = "bo1_stock_light"
-    },
-    {
-        PrintName = "Firing Group",
-        DefaultCompactName = "S-1-F",
-        Bone = "j_gun",
-        Pos = Vector(2, 0, 0),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_fcg"},
-    },
-    {
-        PrintName = "Perk-a-Cola",
-        DefaultCompactName = "PERK",
-        Bone = "j_gun",
-        Pos = Vector(-10, 0, -5),
-        Ang = Angle(0, 0, 0),
-        Category = "bo1_perkacola",
-    },
-    {
-        PrintName = "Magazine",
-        DefaultCompactName = "30 RND",
-        Bone = "tag_clip",
-        Pos = Vector(0, 0, -2),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo2_fastmag", "bo2_extmag"},
+        Icon_Offset = Vector(0, 0, 0),
+        Category = {"bo1_grips"},
     },
     {
         PrintName = "Tactical Left",
@@ -353,13 +329,20 @@ SWEP.Attachments = {
         RequireElements = {"bo1_grips"}
     },
     {
-        PrintName = "Underbarrel",
-        DefaultCompactName = "None",
+        PrintName = "Firing Group",
+        DefaultCompactName = "S-1-F",
         Bone = "j_gun",
-        Pos = Vector(5.5, -0.01, 0.1),
+        Pos = Vector(2, 0, 0),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(0, 0, 0),
-        Category = {"bo1_grips"},
+        Category = {"bo1_fcg"},
+    },
+    {
+        PrintName = "Magazine",
+        DefaultCompactName = "30 RND",
+        Bone = "tag_clip",
+        Pos = Vector(0, 0, -2),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo2_fastmag", "bo2_extmag"},
     },
     {
         PrintName = "Ammunition",
@@ -370,11 +353,29 @@ SWEP.Attachments = {
         Category = {"bo1_ammo", "bo1_pap"},
     },
     {
+        PrintName = "Perk-a-Cola",
+        DefaultCompactName = "PERK",
+        Bone = "j_gun",
+        Pos = Vector(-10, 0, -5),
+        Ang = Angle(0, 0, 0),
+        Category = "bo1_perkacola",
+    },
+    {
         PrintName = "Cosmetic",
         Bone = "j_gun",
         Pos = Vector(-5, 0, 3.65),
         Ang = Angle(0, 0, 0),
         Category = {"universal_camo"},
+        CosmeticOnly = true,
+    },
+    {
+        Hidden = true,
+        DefaultCompactName = "None",
+        Bone = "j_gun",
+        Pos = Vector(-5, 0, 0.5),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_stock_lm"},
+        Installed = "bo1_stock_light"
     },
 }
 

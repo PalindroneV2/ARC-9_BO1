@@ -9,7 +9,7 @@ SWEP.Description = [[
     A Chinese PDW that operatres in 4-round bursts.
 ]]
 SWEP.Trivia = {
-    Manufacturer = "IH Armament",
+    Manufacturer = "Jianshe",
     Calibre = "5.7x28mm",
     Mechanism = "Gas-Operated",
     Country = "Belgium",
@@ -258,7 +258,7 @@ SWEP.HookP_NameChange = function(self, name)
 
     local attached = self:GetElements()
 
-    local gunname = "QCW-05"
+    local gunname = "Jianshe CS/LS2"
 
     if attached["bo1_pap"] then
         gunname = "Cataclysmic Quadruple Burst"
@@ -304,22 +304,6 @@ SWEP.Attachments = {
         Category = {"bo1_fcg", "bo1_fcg_auto"},
     },
     {
-        PrintName = "Perk-a-Cola",
-        DefaultCompactName = "PERK",
-        Bone = "j_gun",
-        Pos = Vector(-7.5, 0, -5),
-        Ang = Angle(0, 0, 0),
-        Category = "bo1_perkacola",
-    },
-    {
-        PrintName = "Magazine",
-        DefaultCompactName = "40 RND",
-        Bone = "tag_clip",
-        Pos = Vector(0, 0, 0),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_fastmag", "bo2_extmag"},
-    },
-    {
         PrintName = "Tactical Left",
         DefaultCompactName = "TAC L",
         Bone = "j_gun",
@@ -349,6 +333,14 @@ SWEP.Attachments = {
         ExcludeElements = {"mount"}
     },
     {
+        PrintName = "Magazine",
+        DefaultCompactName = "40 RND",
+        Bone = "tag_clip",
+        Pos = Vector(0, 0, 0),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_fastmag", "bo2_extmag"},
+    },
+    {
         PrintName = "Ammunition",
         DefaultCompactName = "AMMO",
         Bone = "tag_clip",
@@ -357,11 +349,20 @@ SWEP.Attachments = {
         Category = {"bo1_ammo", "bo1_pap"},
     },
     {
+        PrintName = "Perk-a-Cola",
+        DefaultCompactName = "PERK",
+        Bone = "j_gun",
+        Pos = Vector(-7.5, 0, -5),
+        Ang = Angle(0, 0, 0),
+        Category = "bo1_perkacola",
+    },
+    {
         PrintName = "Cosmetic",
         Bone = "j_gun",
         Pos = Vector(-7.5, 0, 2.65),
         Ang = Angle(0, 0, 0),
         Category = {"universal_camo"},
+        CosmeticOnly = true,
     },
 }
 

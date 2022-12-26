@@ -394,62 +394,13 @@ end
 
 SWEP.Attachments = {
     {
-    PrintName = "Perk-a-Cola",
-        DefaultCompactName = "PERK",
-        Bone = "j_gun",
-        Pos = Vector(-5, 0, -5),
-        Ang = Angle(0, 0, 0),
-        Category = "bo1_perkacola",
-    },
-    {
         PrintName = "Optic",
         Bone = "j_gun",
         Pos = Vector(-3.5, 0.15, 4.45),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_optic","bo1_rail_riser"},
         InstalledElements = {"mount"},
-        MergeSlots = {8}
-    },
-    {
-        PrintName = "Muzzle",
-        Bone = "j_gun",
-        Pos = Vector(21.5, 0.125, 2.35),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_muzzle"},
-        ExcludeElements = {"barrel_sd"}
-    },
-    {
-        PrintName = "Magazine",
-        DefaultCompactName = "MAG",
-        Bone = "j_gun",
-        Pos = Vector(1, 0, 0),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_g3_mag"},
-        Installed = "bo1_g3_mag_psg1",
-    },
-    {
-        PrintName = "Stock",
-        Bone = "j_gun",
-        Pos = Vector(-9, 0, 2.65),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_stocks"},
-        Installed = "bo1_stock_heavy",
-    },
-    {
-        PrintName = "Underbarrel",
-        DefaultCompactName = "UB",
-        Bone = "j_gun",
-        Pos = Vector(8, 0, 1.5),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_rail_underbarrel"},
-        ExcludeElements = {"hg_hk21"}
-    },
-    {
-        PrintName = "Cosmetic",
-        Bone = "j_gun",
-        Pos = Vector(-12.5, 0, 2.65),
-        Ang = Angle(0, 0, 0),
-        Category = {"universal_camo"},
+        MergeSlots = {2}
     },
     {
         Hidden = true,
@@ -468,11 +419,47 @@ SWEP.Attachments = {
         Installed = "bo1_g3_barrel_psg1",
     },
     {
-        PrintName = "Handguard",
+        PrintName = "Muzzle",
         Bone = "j_gun",
-        Pos = Vector(3.5, 0, 3.5),
+        Pos = Vector(21.5, 0.125, 2.35),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_g3_hg"},
+        Category = {"bo1_muzzle"},
+        ExcludeElements = {"barrel_sd"}
+    },
+    {
+        PrintName = "Underbarrel",
+        DefaultCompactName = "UB",
+        Bone = "j_gun",
+        Pos = Vector(8, 0, 1.5),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_rail_underbarrel"},
+        ExcludeElements = {"hg_hk21"}
+    },
+    {
+        PrintName = "Bipod",
+        DefaultCompactName = "None",
+        Bone = "j_gun",
+        Pos = Vector(16, 0, 3),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_bipod"},
+        Installed = "bo1_bipod_integrated",
+    },
+    {
+        PrintName = "Stock",
+        Bone = "j_gun",
+        Pos = Vector(-9, 0, 2.65),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_stocks"},
+        Installed = "bo1_stock_heavy",
+    },
+    {
+        PrintName = "Magazine",
+        DefaultCompactName = "MAG",
+        Bone = "j_gun",
+        Pos = Vector(1, 0, 0),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_g3_mag"},
+        Installed = "bo1_g3_mag_psg1",
     },
     {
         PrintName = "Ammunition",
@@ -483,14 +470,29 @@ SWEP.Attachments = {
         Category = {"bo1_ammo", "bo1_pap"},
     },
     {
-        PrintName = "Bipod",
-        DefaultCompactName = "None",
+        PrintName = "Perk-a-Cola",
+        DefaultCompactName = "PERK",
         Bone = "j_gun",
-        Pos = Vector(16, 0, 3),
+        Pos = Vector(-5, 0, -5),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_bipod"},
-        Installed = "bo1_bipod_integrated",
-    }
+        Category = "bo1_perkacola",
+    },
+    {
+        PrintName = "Handguard",
+        Bone = "j_gun",
+        Pos = Vector(3.5, 0, 3.5),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_g3_hg"},
+        CosmeticOnly = true,
+    },
+    {
+        PrintName = "Cosmetic",
+        Bone = "j_gun",
+        Pos = Vector(-12.5, 0, 2.65),
+        Ang = Angle(0, 0, 0),
+        Category = {"universal_camo"},
+        CosmeticOnly = true,
+    },
 }
 
 -- SWEP.RejectAttachments = {
