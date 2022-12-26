@@ -109,6 +109,7 @@ ATT.Attachments = {
         Category = {"bo1_cosmetic_ar15"},
         ExcludeElements = {"nosling"},
         InstallSound = "weapons/arc9/bo1_m16/bo_spawn.wav",
+        CosmeticOnly = true,
     },
     {
         PrintName = "Underbarrel",
@@ -192,6 +193,7 @@ ATT.Attachments = {
         Category = {"bo1_cosmetic_ar15"},
         ExcludeElements = {"nosling"},
         InstallSound = "weapons/arc9/bo1_m16/bo_spawn.wav",
+        CosmeticOnly = true,
     },
     {
         PrintName = "Underbarrel",
@@ -297,6 +299,7 @@ ATT.Attachments = {
         Category = {"bo1_cosmetic_ar15"},
         ExcludeElements = {"nosling"},
         InstallSound = "weapons/arc9/bo1_m16/bo_spawn.wav",
+        CosmeticOnly = true,
     },
     {
         PrintName = "Underbarrel",
@@ -751,6 +754,7 @@ ATT.Attachments = {
         Category = {"bo1_cosmetic_ar15"},
         ExcludeElements = {"nosling"},
         InstallSound = "weapons/arc9/bo1_m16/bo_spawn.wav",
+        CosmeticOnly = true,
     },
     {
         PrintName = "Underbarrel",
