@@ -1,20 +1,20 @@
 SWEP.Base = "arc9_base"
 SWEP.Spawnable = true -- this obviously has to be set to true
-SWEP.Category = "ARC9 - Black Ops" -- edit this if you like
+SWEP.Category = "ARC9 - Black Ops II" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Olympia"
-SWEP.Class = "Shotgun"
+SWEP.PrintName = "Blundergat"
+SWEP.Class = "Wonder Weapon"
 SWEP.Description = [[
-    12 gauge sporting and hunting purpose made double-barrel shotgun by Beretta that uses the Over and Under design.
+    Custom made quad-barrel break-action shotgun with massive horizontal spread.
 ]]
 SWEP.Trivia = {
-    Manufacturer = "Beretta",
+    Manufacturer = "Unknown",
     Calibre = "12 Gauge",
-    Mechanism = "Double Barrel O/U, Break Action",
+    Mechanism = "Quad Barrel, Break Action",
     Country = "USA",
-    Year = 1984,
-    Games = [[Call of Duty: Black Ops]]
+    Year = 1933,
+    Games = [[BO2, BO4]]
 }
 SWEP.Credits = {
     Author = "Palindrone"
@@ -24,14 +24,15 @@ SWEP.Slot = 2
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/arc9/c_bo1_olympia.mdl"
-SWEP.WorldModel = "models/weapons/arc9/c_bo1_olympia.mdl"
+SWEP.ViewModel = "models/weapons/arc9/c_bo2_blundergat.mdl"
+SWEP.WorldModel = "models/weapons/arc9/w_bo2_blundergat.mdl"
+SWEP.MirrorWorldModel = "models/weapons/ARC9/w_bo2_blundergat.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    Pos        =    Vector(1.5, 4, -6),
-    Ang        =    Angle(-7.5, 1, 180),
+    Pos        =    Vector(-3, 4.5, -4.1),
+    Ang        =    Angle(-15, 1, 180),
     Bone    =    "ValveBiped.Bip01_R_Hand",
-    Scale   =   1
+    Scale   =   1.0
 }
 SWEP.ViewModelFOVBase = 75
 
@@ -41,11 +42,12 @@ SWEP.CustomBlendFactor = 1
 
 SWEP.DefaultBodygroups = "000000000"
 
-SWEP.DamageMax = 45
-SWEP.DamageMin = 13 -- damage done at maximum range
+SWEP.DamageMax = 50
+SWEP.DamageMin = 25 -- damage done at maximum range
 SWEP.RangeMax = 4000
 SWEP.RangeMin = 2000
 SWEP.Penetration = 2
+SWEP.ImpactForce = 25
 SWEP.DamageType = DMG_BUCKSHOT
 SWEP.ShootEntity = nil -- entity to fire, if any
 SWEP.EntityMuzzleVelocity = 10000
@@ -67,7 +69,7 @@ SWEP.TracerEffect = "ARC9_tracer" -- The effect to use for hitscan tracers
 SWEP.TracerColor = Color(255, 255, 255) -- Color of tracers. Only works if tracer effect supports it. For physical bullets, this is compressed down to 9-bit color.
 
 SWEP.ChamberSize = 0 -- dont fucking change this again.
-SWEP.ClipSize = 2 -- DefaultClip is automatically set.
+SWEP.ClipSize = 1 -- DefaultClip is automatically set.
 SWEP.ShotgunReload = false
 SWEP.ReloadTime = 1
 
@@ -87,17 +89,17 @@ SWEP.RecoilResetTime = 0.01 -- How long the gun must go before the recoil patter
 SWEP.RecoilAutoControl = 0.75
 SWEP.RecoilKick = 2
 
-SWEP.Spread = 0.015
+SWEP.Spread = 0.02
 SWEP.SpreadMultRecoil = 1.25
 
-SWEP.SpreadMultSights = 2
+SWEP.SpreadMultSights = 3
 SWEP.SpreadAddHipFire = math.rad(150 / 37.5)
 SWEP.SpreadAddMove = math.rad(0 / 37.5)
 SWEP.SpreadMultMidAir = 1.25
 -- SWEP.SpreadAddShooting = math.rad(5 / 37.5) -- 0.05
 
 SWEP.UsePelletSpread = true -- Multiple bullets fired at once clump up, like for a shotgun. Spread affects which direction they get fired, not their spread relative to one another.
-SWEP.PelletSpread = 0.035
+SWEP.PelletSpread = 0.25
 
 SWEP.RecoilPatternDrift = 20
 
@@ -122,8 +124,8 @@ SWEP.SpeedMultBlindFire = 1
 SWEP.AimDownSightsTime = 0.15
 SWEP.SprintToFireTime = 0.15
 
-SWEP.RPM = 500
-SWEP.Num = 8
+SWEP.RPM = 180
+SWEP.Num = 24
 SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
@@ -146,9 +148,9 @@ SWEP.ShootVolume = 125
 SWEP.ShootPitch = 100
 SWEP.ShootPitchVariation = 0
 
-SWEP.ShootSound = "ARC9_BO1.Olympia_Fire"
-SWEP.ShootSoundSilenced = "ARC9_BO1.SPAS_Sil"
-SWEP.DistantShootSound = {"^weapons/arc9/bo1_generic_shotgun/ringoff_f.wav", "^weapons/arc9/bo1_generic_shotgun/ringoff_r.wav"}
+SWEP.ShootSound = "ARC9_BO2.Blundergat_Fire"
+SWEP.ShootSoundSilenced = "ARC9_BO1.M16_Sil"
+SWEP.DistantShootSound = {"^weapons/arc9/bo2_generic_shotgun/dist/0.wav", "^weapons/arc9/bo2_generic_shotgun/dist/1.wav"}
 
 --SWEP.MuzzleEffect = "muzzleflash_4"
 SWEP.MuzzleParticle = "muzzleflash_shotgun" -- Used for some muzzle effects.
@@ -159,9 +161,9 @@ SWEP.MuzzleParticle = "muzzleflash_shotgun" -- Used for some muzzle effects.
 SWEP.NoShellEject = true
 
 SWEP.MuzzleEffectQCA = 1 -- which attachment to put the muzzle on
-SWEP.CaseEffectQCA = 2 -- which attachment to put the case effect on
-SWEP.ProceduralViewQCA = nil
-SWEP.CamQCA = 4
+SWEP.CaseEffectQCA = 1 -- which attachment to put the case effect on
+SWEP.ProceduralViewQCA = 1
+SWEP.CamQCA = 2
 
 SWEP.BulletBones = {
 }
@@ -172,8 +174,9 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(-2.75, -2, 1.25),
-    Ang = Angle(0, 0, 0),
+    Pos = Vector(-3.1, -1, 1),
+    Ang = Angle(0.025, -1.25, 0),
+    ViewModelFOV = 55,
     Magnification = 1.1,
     SwitchToSound = "", -- sound that plays when switching to this sight
 }
@@ -215,25 +218,8 @@ SWEP.BarrelLength = 25
 SWEP.ExtraSightDist = 5
 
 SWEP.AttachmentElements = {
-    ["stock_h"] = {
-        Bodygroups = {
-            {2,1},
-        },
-    },
-    ["barrel_short"] = {
-        Bodygroups = {
-            {1,1},
-        },
-    },
-    ["barrel_sawed"] = {
-        Bodygroups = {
-            {1,2},
-        },
-        AttPosMods = {
-            [1] = {
-                Pos = Vector(5, 0.05, 1.75),
-            },
-        },
+    ["bo1_pap" and "acidkit"] = {
+        ClipSizeMult = 3 / 6,
     },
 }
 
@@ -241,15 +227,36 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
 
     local vm = data.model
     local attached = data.elements
+    local CUSTSTATE = self:GetCustomize()
 
-    local camo = 0
-    if attached["universal_camo"] then
-        camo = 1
-    end
     if attached["bo1_pap"] then
-        camo = camo + 2
+        vm:SetBodygroup(2,1)
+        if CUSTSTATE then
+            vm:SetBodygroup(2,2)
+        else
+            vm:SetBodygroup(2,1)
+        end
+    else
+        vm:SetBodygroup(2,0)
     end
-    vm:SetSkin(camo)
+
+    if CUSTSTATE then
+        vm:SetBodygroup(0,1)
+        vm:SetBodygroup(1,1)
+        if attached["acidkit"] then
+            vm:SetBodygroup(1,3)
+        end
+    else
+        vm:SetBodygroup(0,0)
+        vm:SetBodygroup(1,0)
+        if attached["acidkit"] then
+            vm:SetBodygroup(1,2)
+        end
+    end
+
+    if attached["acidkit"] then
+        vm:SetSkin(1)
+    end
 
 end
 
@@ -257,10 +264,17 @@ SWEP.HookP_NameChange = function(self, name)
 
     local attached = self:GetElements()
 
-    local gunname = "Beretta 682"
+    local gunname = "Blundergat"
+
+    if attached["acidkit"] then
+        gunname = "Acid Gat"
+    end
 
     if attached["bo1_pap"] then
-        gunname = "Hades"
+        gunname = " The Sweeper"
+        if attached["acidkit"] then
+            gunname = "Vitriolic Withering"
+        end
     end
 
     return gunname
@@ -268,45 +282,20 @@ end
 
 SWEP.Attachments = {
     {
-        PrintName = "Optic Rail",
-        Bone = "j_bolt",
-        Pos = Vector(5, 0.05, 2.2),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_rail_optic"},
-        InstalledElements = {"mount"},
-    },
-    {
-        PrintName = "Barrel",
-        DefaultCompactName = "Standard",
-        Bone = "j_bolt",
-        Pos = Vector(12, 0, 0.75),
-        Ang = Angle(0, 0, 0),
-        Category = "bo1_olympia_barrel",
-    },
-    {
-        PrintName = "Stock",
-        DefaultCompactName = "None",
+        PrintName = "Kit",
+        DefaultCompactName = "KIT",
         Bone = "j_gun",
-        Pos = Vector(-10, 0, -2),
+        Pos = Vector(5, 0, 2),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_stock_h"},
-        Installed = "bo1_stock_heavy",
-    },
-    {
-        PrintName = "Shells",
-        DefaultCompactName = "00 BUCK",
-        Bone = "j_gun",
-        Pos = Vector(-2, 0, 1),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_shot_slug", "bo1_shot_dragon"},
+        Category = {"bo2_blundergat_kit"},
     },
     {
         PrintName = "Ammunition",
         DefaultCompactName = "AMMO",
         Bone = "j_gun",
-        Pos = Vector(-2, 0, -3),
+        Pos = Vector(10, 0, 2),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_ammo", "bo1_pap", "bo1_pap_1911"},
+        Category = {"bo1_ammo", "bo1_pap"},
     },
     {
         PrintName = "Perk-a-Cola",
@@ -315,15 +304,6 @@ SWEP.Attachments = {
         Pos = Vector(-10, 0, -6),
         Ang = Angle(0, 0, 0),
         Category = "bo1_perkacola",
-    },
-    {
-        PrintName = "Cosmetic",
-        DefaultCompactName = "Standard",
-        Bone = "j_gun",
-        Pos = Vector(-10, 0, 2),
-        Ang = Angle(0, 0, 0),
-        Category = "universal_camo",
-        CosmeticOnly = true,
     },
 }
 
@@ -338,6 +318,18 @@ SWEP.Animations = {
     },
     ["holster"] = {
         Source = "holster",
+        Time = 1,
+    },
+    ["idle_empty"] = {
+        Source = "idle_empty",
+        Time = 1 / 35,
+    },
+    ["draw_empty"] = {
+        Source = "draw_empty",
+        Time = 1,
+    },
+    ["holster_empty"] = {
+        Source = "holster_empty",
         Time = 1,
     },
     ["ready"] = {
@@ -360,30 +352,39 @@ SWEP.Animations = {
         },
         Time = 0.233,
     },
+    ["fire_empty"] = {
+        Source = {
+            "fire_last",
+        },
+        Time = 0.233,
+    },
+    ["fire_iron_empty"] = {
+        Source = {
+            "fire_last_ads",
+        },
+        Time = 0.233,
+    },
     ["reload"] = {
         Source = "reload",
-        Time = 130 / 40,
+        Time = 3,
         EventTable = {
-            {s = "ARC9_BO1.Olympia_Switch", t = 14 / 40},
-            {s = "ARC9_BO1.Olympia_Open", t = 32 / 40},
-            {s = "ARC9_BO1.Olympia_Shell", t = 78 / 40},
-            {s = "ARC9_BO1.Olympia_Close", t = 106 / 40},
+            {s = "ARC9_BO2.Blundergat_Open", t = 10 / 40},
+            {s = "ARC9_BO2.Blundergat_Insert", t = 45 / 40},
+            {s = "ARC9_BO2.Blundergat_Close", t = 90 / 40},
         },
     },
     ["reload_empty"] = {
         Source = "reload_empty",
-        Time = 168 / 40,
+        Time = 3,
         EventTable = {
-            {s = "ARC9_BO1.Olympia_Switch", t = 14 / 40},
-            {s = "ARC9_BO1.Olympia_Open", t = 32 / 40},
-            {s = "ARC9_BO1.Olympia_Shell", t = 78 / 40},
-            {s = "ARC9_BO1.Olympia_Shell", t = 113 / 40},
-            {s = "ARC9_BO1.Olympia_Close", t = 145 / 40},
+            {s = "ARC9_BO2.Blundergat_Open", t = 10 / 40},
+            {s = "ARC9_BO2.Blundergat_Insert", t = 45 / 40},
+            {s = "ARC9_BO2.Blundergat_Close", t = 90 / 40},
         },
     },
     ["enter_sprint"] = {
         Source = "sprint_in",
-        Time = 1,
+        Time = 10 / 30
     },
     ["idle_sprint"] = {
         Source = "sprint_loop",
@@ -391,6 +392,18 @@ SWEP.Animations = {
     },
     ["exit_sprint"] = {
         Source = "sprint_out",
-        Time = 1,
+        Time = 10 / 30
+    },
+    ["enter_sprint_empty"] = {
+        Source = "sprint_in_empty",
+        Time = 10 / 30
+    },
+    ["idle_sprint_empty"] = {
+        Source = "sprint_loop_empty",
+        Time = 30 / 30
+    },
+    ["exit_sprint_empty"] = {
+        Source = "sprint_out_empty",
+        Time = 10 / 30
     },
 }

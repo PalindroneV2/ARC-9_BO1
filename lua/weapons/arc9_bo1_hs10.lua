@@ -95,7 +95,7 @@ SWEP.PelletSpread = 0.05
 
 SWEP.SpreadMultRecoil = 1.25
 
-SWEP.SpreadMultSights = 0.9
+SWEP.SpreadMultSights = 2
 SWEP.SpreadAddHipFire = math.rad(150 / 37.5)
 SWEP.SpreadAddMove = math.rad(0 / 37.5)
 -- SWEP.SpreadAddShooting = math.rad(5 / 37.5) -- 0.05

@@ -372,7 +372,7 @@ SWEP.Attachments = {
     {
         PrintName = "Barrel",
         Bone = "j_gun",
-        Pos = Vector(10, 0, 2.6),
+        Pos = Vector(10, 0, 3.15),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_aug_barrels"},
     },
@@ -388,7 +388,7 @@ SWEP.Attachments = {
         PrintName = "Underbarrel",
         DefaultCompactName = "UB",
         Bone = "j_gun",
-        Pos = Vector(9.5, 0, 1.25),
+        Pos = Vector(10, 0, -1),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_m203", "bo1_mk"},
         ExcludeElements = {"barrel_mid", "barrel_short"}

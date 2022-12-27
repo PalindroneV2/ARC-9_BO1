@@ -344,8 +344,8 @@ ATT.PenetrationMult = 2
 ATT.RangeMaxMult = 1.5
 ATT.RangeMinMult = 1.5
 ATT.PhysBulletMuzzleVelocityMult = 1.75
--- ATT.FirstShootSound = "PAP_Effect"
--- ATT.ShootSound = "PAP_Effect"
+ATT.FirstShootSound = "PAP_Effect"
+ATT.ShootSound = "PAP_Effect"
 -- ATT.ShootSoundSilenced = "PAP_Effect"
 ATT.DistantShootSound = {
     "PAP_Flux_Left",
@@ -383,8 +383,8 @@ ATT.PenetrationMult = 2
 ATT.RangeMaxMult = 1.5
 ATT.RangeMinMult = 1.5
 ATT.PhysBulletMuzzleVelocityMult = 1.75
--- ATT.FirstShootSound = "PAP_Effect"
--- ATT.ShootSound = "PAP_Effect"
+ATT.FirstShootSound = "PAP_Effect"
+ATT.ShootSound = "PAP_Effect"
 -- ATT.ShootSoundSilenced = "PAP_Effect"
 ATT.DistantShootSound = {
     "PAP_Flux_Left",
@@ -397,6 +397,39 @@ ATT.TracerSizeAdd = 2.5
 ATT.ShootEnt = "arc9_bo1_raygun_pap"
 
 ARC9.LoadAttachment(ATT, "bo1_ammo_rayun_pap")
+
+ATT = {}
+
+ATT.PrintName = [[Acid Gat Kit]]
+ATT.CompactName = [[ACID]]
+ATT.Icon = Material("entities/bo1_atts/ammo/acid_kit.png")
+ATT.Description = [[
+    Crossbow bolts fitted with custom electronic high-explosive warheads.
+]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.Free = false
+
+ATT.Category = {"bo2_blundergat_kit"}
+ATT.ActivateElements = {"acidkit"}
+ATT.ShootEnt = "arc9_bo2_blundergat_dart"
+ATT.FirstShootSound = "ARC9_BO2.Acidgat_Fire"
+ATT.ShootSound = "ARC9_BO2.Acidgat_Fire"
+
+ATT.Num = 1
+ATT.ClipSize = 3
+ATT.RPM = 600
+
+ATT.FiremodesOverride = {
+    {
+        Mode = 3,
+    },
+}
+ATT.RunawayBurstOverride = true
+
+ARC9.LoadAttachment(ATT, "bo2_blundergat_kit_acid")
 
 ATT = {}
 
