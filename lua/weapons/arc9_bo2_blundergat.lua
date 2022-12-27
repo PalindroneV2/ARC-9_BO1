@@ -218,9 +218,11 @@ SWEP.BarrelLength = 25
 SWEP.ExtraSightDist = 5
 
 SWEP.AttachmentElements = {
-    ["bo1_pap" and "acidkit"] = {
-        ClipSizeMult = 3 / 6,
-    },
+    -- ["bo1_pap"] = {
+    --     ShootSoundOverride = "ARC9_BO2.Blundergat_Fire",
+    --     ShootSoundSilenced = "ARC9_BO1.M16_Sil",
+    --     DistantShootSound = {"^weapons/arc9/bo2_generic_shotgun/dist/0.wav", "^weapons/arc9/bo2_generic_shotgun/dist/1.wav"},
+    -- },
 }
 
 SWEP.Hook_ModifyBodygroups = function(self, data)
