@@ -5,7 +5,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "Colt Python"
 SWEP.Class = "Revolver"
-SWEP.Description = [[]]
+SWEP.Description = [[American revolver regarded as one of the finest of its kind. The bore gets tighter towards the end, aiding in accuracy.]]
 SWEP.Trivia = {
     Manufacturer = "Colt",
     Calibre = ".357 Magnum",
@@ -123,7 +123,7 @@ SWEP.Firemodes = {
         PrintName = "SINGLE"
     },
 }
-SWEP.NPCWeaponType = {"weapon_pistol"}
+SWEP.ARC9WeaponCategory = {"weapon_pistol"}
 SWEP.NPCWeight = 100
 
 SWEP.FreeAimRadius = 0 -- In degrees, how much this gun can free aim in hip fire.

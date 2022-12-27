@@ -16,13 +16,21 @@ ATT.MenuCategory = "ARC-9 - WAW Attachments"
 ATT.Free = false
 ATT.Folder = "SCOPE"
 
-ATT.Category = {"waw_stg44_zf4"}
+ATT.Category = {"waw_optic_zf4"}
 ATT.ActivateElements = {"waw_zf4"}
 
 ATT.Model = "models/weapons/arc9/atts/waw_zf4.mdl"
 ATT.Scale = 1
 ATT.ModelBodygroups = "001"
 ATT.ModelOffset = Vector(-5, 0.02, -2.1)
+
+ATT.DrawFunc = function(swep, model, wm)
+    if swep:GetElements()["differentmount"] then
+        model:SetBodygroup(2,0)
+    else
+        model:SetBodygroup(2,1)
+    end
+end
 
 ATT.Sights = {
     {

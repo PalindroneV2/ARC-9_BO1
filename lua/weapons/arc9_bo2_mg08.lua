@@ -130,7 +130,7 @@ SWEP.Firemodes = {
         Mode = 1,
     },
 }
-SWEP.NPCWeaponType = {"weapon_ar2"}
+SWEP.ARC9WeaponCategory = {"weapon_ar2"}
 SWEP.NPCWeight = 100
 
 SWEP.FreeAimRadius = 0 -- In degrees, how much this gun can free aim in hip fire.
@@ -194,7 +194,7 @@ SWEP.FreeAimRadiusMultBipod = 0
 
 SWEP.HoldTypeHolstered = "passive"
 SWEP.HoldType = "ar2"
-SWEP.HoldTypeSights = "rpg"
+SWEP.HoldTypeSights = "ar2"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_AR2

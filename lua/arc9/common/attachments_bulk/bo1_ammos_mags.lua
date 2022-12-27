@@ -89,6 +89,28 @@ ARC9.LoadAttachment(ATT, "bo1_mac11_mag_ext")
 
 ATT = {}
 
+ATT.PrintName = [[M1 Carbine 30 Round Magazine]]
+ATT.CompactName = [[30 RND]]
+ATT.Icon = Material("entities/bo1_atts/ammo/ext_mag.png")
+ATT.Description = [[Long stick magazine that doubles capacity.
+Makes hipfire worse, but makes up for it in volume of fire.]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 1
+ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.Free = false
+
+ATT.Category = {"waw_carbine_mag"}
+ATT.ClipSize = 30
+ATT.ReloadTimeMult = 1.1
+ATT.SpreadAddHipFire = math.rad(50 / 37.5)
+
+ATT.ActivateElements = {"extmag"}
+
+ARC9.LoadAttachment(ATT, "waw_carbine_mag_ext")
+
+ATT = {}
+
 ATT.PrintName = [[Spectre M4 45 Round Magazine]]
 ATT.CompactName = [[45 RND]]
 ATT.Icon = Material("entities/bo1_atts/ammo/ext_mag.png")

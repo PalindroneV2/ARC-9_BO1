@@ -40,7 +40,7 @@ SWEP.ViewModelFOVBase = 75
 
 SWEP.DefaultBodygroups = "00000000000000"
 
-SWEP.DamageMax = 45
+SWEP.DamageMax = 35
 SWEP.DamageMin = 25 -- damage done at maximum range
 SWEP.RangeMax = 8000
 SWEP.RangeMin = 2000
@@ -127,7 +127,7 @@ SWEP.Firemodes = {
         Mode = 1,
     },
 }
-SWEP.NPCWeaponType = {"weapon_ar2", "weapon_smg1"}
+SWEP.ARC9WeaponCategory = {"weapon_ar2", "weapon_smg1"}
 SWEP.NPCWeight = 100
 
 SWEP.FreeAimRadius = 0 -- In degrees, how much this gun can free aim in hip fire.
@@ -178,7 +178,7 @@ SWEP.IronSights = {
 
 SWEP.HoldTypeHolstered = "passive"
 SWEP.HoldType = "ar2"
-SWEP.HoldTypeSights = "rpg"
+SWEP.HoldTypeSights = "ar2"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_AR2
@@ -277,7 +277,7 @@ SWEP.Attachments = {
         Scale = Vector(1, 1, 1),
         Pos = Vector(4.5, -0.01, 3.6),
         Ang = Angle(0, 0, 0),
-        Category = {"waw_aperture", "waw_stg44_zf4"},
+        Category = {"waw_aperture", "waw_optic_zf4"},
     },
     {
         PrintName = "Muzzle",
