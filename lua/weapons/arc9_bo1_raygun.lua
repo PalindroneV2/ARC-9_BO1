@@ -303,12 +303,31 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Perk-a-Cola",
-        DefaultCompactName = "PERK",
+        DefaultCompactName = "COLA",
         Bone = "j_gun",
-        Pos = Vector(-10, 0, -5),
+        Pos = Vector(0, 0, -5),
         Ang = Angle(0, 0, 0),
         Category = "bo1_perkacola",
         RejectAttachments = { ["bo1_perkacola_doubletap2"] = true },
+        ExcludeElements = {"mwc_perk", "mwc_proficiency"},
+    },
+    {
+        PrintName = "Perk",
+        DefaultCompactName = "PERK",
+        Bone = "j_gun",
+        Pos = Vector(-3, 0, -5),
+        Ang = Angle(0, 0, 0),
+        Category = "mwc_perk",
+        ExcludeElements = {"bo1_perkacola"},
+    },
+    {
+        PrintName = "Proficiency",
+        DefaultCompactName = "PRO",
+        Bone = "j_gun",
+        Pos = Vector(-6, 0, -5),
+        Ang = Angle(0, 0, 0),
+        Category = "mwc_proficiency",
+        ExcludeElements = {"bo1_perkacola"},
     },
 }
 

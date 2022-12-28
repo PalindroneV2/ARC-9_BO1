@@ -198,15 +198,15 @@ SWEP.MovingMidPoint = {
     Ang = SWEP.ActiveAng
 }
 
-SWEP.CrouchPos = Vector(0, 0, -1)
-SWEP.CrouchAng = Angle(0, 0, -5)
+SWEP.CrouchPos = SWEP.ActivePos
+SWEP.CrouchAng = SWEP.ActiveAng
 
 SWEP.RestPos = Vector(0.532, -6, 0)
 SWEP.RestAng = Angle(-4.633, 36.881, 0)
 
 SWEP.SprintVerticalOffset = false
-SWEP.SprintPos = Vector(0, 0, 0)
-SWEP.SprintAng = Angle(0, 0, 0)
+SWEP.SprintPos = SWEP.ActivePos
+SWEP.SprintAng = SWEP.ActiveAng
 
 SWEP.CustomizePos = Vector(15, 30, 4)
 SWEP.CustomizeAng = Angle(90, 0, 0)
@@ -301,7 +301,7 @@ SWEP.Attachments = {
         PrintName = "Magazine",
         DefaultCompactName = "MAG",
         Bone = "j_gun",
-        Pos = Vector(-2, 0, -2),
+        Pos = Vector(-1, 0, -1),
         Ang = Angle(0, 0, 0),
         Category = {"bo2_fastmag", "bo2_extmag"},
     },
@@ -309,17 +309,36 @@ SWEP.Attachments = {
         PrintName = "Ammunition",
         DefaultCompactName = "AMMO",
         Bone = "j_gun",
-        Pos = Vector(-2, 0, -5),
+        Pos = Vector(-1, 0, -3),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_ammo", "bo1_pap"},
+        Category = {"bo1_ammo", "bo1_pap", "bo1_pap_1911"},
     },
     {
         PrintName = "Perk-a-Cola",
-        DefaultCompactName = "PERK",
+        DefaultCompactName = "COLA",
         Bone = "j_gun",
-        Pos = Vector(-5, 0, -5),
+        Pos = Vector(2, 0, -5),
         Ang = Angle(0, 0, 0),
         Category = "bo1_perkacola",
+        ExcludeElements = {"mwc_perk", "mwc_proficiency"},
+    },
+    {
+        PrintName = "Perk",
+        DefaultCompactName = "PERK",
+        Bone = "j_gun",
+        Pos = Vector(-1, 0, -5),
+        Ang = Angle(0, 0, 0),
+        Category = "mwc_perk",
+        ExcludeElements = {"bo1_perkacola"},
+    },
+    {
+        PrintName = "Proficiency",
+        DefaultCompactName = "PRO",
+        Bone = "j_gun",
+        Pos = Vector(-4, 0, -5),
+        Ang = Angle(0, 0, 0),
+        Category = "mwc_proficiency",
+        ExcludeElements = {"bo1_perkacola"},
     },
     {
         PrintName = "Cosmetic",

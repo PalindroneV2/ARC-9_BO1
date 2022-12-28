@@ -234,7 +234,7 @@ SWEP.AttachmentElements = {
     },
     ["famas_f1"] = {
         AttPosMods = {
-            [2] = {
+            [1] = {
                 Pos = Vector(2, 0.1, 6.4)
             },
         },
@@ -390,11 +390,30 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Perk-a-Cola",
-        DefaultCompactName = "PERK",
+        DefaultCompactName = "COLA",
         Bone = "j_gun",
-        Pos = Vector(-5, 0, -5),
+        Pos = Vector(-3, 0, -5),
         Ang = Angle(0, 0, 0),
         Category = "bo1_perkacola",
+        ExcludeElements = {"mwc_perk", "mwc_proficiency"},
+    },
+    {
+        PrintName = "Perk",
+        DefaultCompactName = "PERK",
+        Bone = "j_gun",
+        Pos = Vector(-6, 0, -5),
+        Ang = Angle(0, 0, 0),
+        Category = "mwc_perk",
+        ExcludeElements = {"bo1_perkacola"},
+    },
+    {
+        PrintName = "Proficiency",
+        DefaultCompactName = "PRO",
+        Bone = "j_gun",
+        Pos = Vector(-9, 0, -5),
+        Ang = Angle(0, 0, 0),
+        Category = "mwc_proficiency",
+        ExcludeElements = {"bo1_perkacola"},
     },
 }
 

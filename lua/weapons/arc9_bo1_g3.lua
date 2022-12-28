@@ -241,6 +241,11 @@ SWEP.AttachmentElements = {
             {4,3}
         },
     },
+    ["stock_uh"] = {
+        Bodygroups = {
+            {4,4}
+        },
+    },
     ["barrel_psg1"] = {
         AttPosMods = {
             [4] = {
@@ -294,9 +299,6 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         barrel = 1
         body = 1
         irons = 1
-        if attached["stock_h"] then
-            vm:SetBodygroup(4,4)
-        end
         if attached["bo1_bipod"] then
             bipod = 1
         end
@@ -449,8 +451,8 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(-9, 0, 2.65),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_stocks"},
-        Installed = "bo1_stock_heavy",
+        Category = {"bo1_stocks","bo1_stock_uh"},
+        Installed = "bo1_stock_ultraheavy",
     },
     {
         PrintName = "Magazine",
@@ -471,11 +473,30 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Perk-a-Cola",
-        DefaultCompactName = "PERK",
+        DefaultCompactName = "COLA",
         Bone = "j_gun",
-        Pos = Vector(-5, 0, -5),
+        Pos = Vector(-3, 0, -5),
         Ang = Angle(0, 0, 0),
         Category = "bo1_perkacola",
+        ExcludeElements = {"mwc_perk", "mwc_proficiency"},
+    },
+    {
+        PrintName = "Perk",
+        DefaultCompactName = "PERK",
+        Bone = "j_gun",
+        Pos = Vector(-6, 0, -5),
+        Ang = Angle(0, 0, 0),
+        Category = "mwc_perk",
+        ExcludeElements = {"bo1_perkacola"},
+    },
+    {
+        PrintName = "Proficiency",
+        DefaultCompactName = "PRO",
+        Bone = "j_gun",
+        Pos = Vector(-9, 0, -5),
+        Ang = Angle(0, 0, 0),
+        Category = "mwc_proficiency",
+        ExcludeElements = {"bo1_perkacola"},
     },
     {
         PrintName = "Handguard",
