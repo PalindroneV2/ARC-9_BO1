@@ -45,7 +45,7 @@ SWEP.RangeMax = 8000
 SWEP.RangeMin = 2000
 SWEP.Penetration = 8
 SWEP.DamageType = DMG_BULLET
-SWEP.ShootEnt = "arc9_bo2_blundergat_dart" -- entity to fire, if any
+SWEP.ShootEnt = nil
 SWEP.EntityMuzzleVelocity = 10000
 
 SWEP.PhysBulletMuzzleVelocity = 960 * 39.37
@@ -121,11 +121,19 @@ SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
         Mode = 3,
+        ShootEnt = "arc9_bo2_titus_flechette",
+        Hook_Think = function(self)
+            if self:Clip1() > 3 then
+                self:SetClip1(3)
+            end
+        end
     },
     {
         Mode = 2,
+        PostBurstDelay = 0.15,
         ShootEnt = nil,
         HasSights = false,
+        Ammo = "Buckshot",
         ShootSound = "ARC9_BO2.1216_Fire",
         ShootSoundSilenced = "ARC9_BO2.S12_Sil",
         DistantShootSound = {"^weapons/arc9/bo2_generic_shotgun/dist/0.wav", "^weapons/arc9/bo2_generic_shotgun/dist/1.wav"},
@@ -154,6 +162,7 @@ SWEP.Firemodes = {
     },
 }
 SWEP.RunawayBurst = true
+SWEP.PostBurstDelay = 0.15
 SWEP.ARC9WeaponCategory = {"weapon_ar2", "weapon_smg1"}
 SWEP.NPCWeight = 100
 
@@ -226,12 +235,12 @@ SWEP.MovingMidPoint = {
     Ang = SWEP.ActiveAng
 }
 
-SWEP.CrouchPos = Vector(0, 0, -1)
-SWEP.CrouchAng = Angle(0, 0, -5)
+SWEP.CrouchPos = SWEP.ActivePos
+SWEP.CrouchAng = SWEP.ActiveAng
 
 SWEP.SprintVerticalOffset = false
-SWEP.SprintPos = Vector(0, 0, -1)
-SWEP.SprintAng = Angle(0, 0, -5)
+SWEP.SprintPos = SWEP.ActivePos
+SWEP.SprintAng = SWEP.ActiveAng
 
 SWEP.CustomizePos = Vector(12.5, 40, 4)
 SWEP.CustomizeAng = Angle(90, 0, 0)
@@ -289,7 +298,7 @@ SWEP.Attachments = {
         PrintName = "Perk-a-Cola",
         DefaultCompactName = "COLA",
         Bone = "j_gun",
-        Pos = Vector(2, 0, -5),
+        Pos = Vector(-3, 0, -6.5),
         Ang = Angle(0, 0, 0),
         Category = "bo1_perkacola",
         ExcludeElements = {"mwc_perk", "mwc_proficiency"},
@@ -298,7 +307,7 @@ SWEP.Attachments = {
         PrintName = "Perk",
         DefaultCompactName = "PERK",
         Bone = "j_gun",
-        Pos = Vector(-5, 0, -5),
+        Pos = Vector(-6, 0, -6.5),
         Ang = Angle(0, 0, 0),
         Category = "mwc_perk",
         ExcludeElements = {"bo1_perkacola"},
@@ -307,7 +316,7 @@ SWEP.Attachments = {
         PrintName = "Proficiency",
         DefaultCompactName = "PRO",
         Bone = "j_gun",
-        Pos = Vector(-8, 0, -5),
+        Pos = Vector(-9, 0, -6.5),
         Ang = Angle(0, 0, 0),
         Category = "mwc_proficiency",
         ExcludeElements = {"bo1_perkacola"},
