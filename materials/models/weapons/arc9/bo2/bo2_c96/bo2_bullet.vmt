@@ -1,9 +1,9 @@
 "VertexlitGeneric"
 {
-	"$basetexture" "models/weapons/arc9/bo3/bo3_c96/decal"
-	"$bumpmap" "models/weapons/arc9/bo3/bo3_c96/decal_n"
-	"$translucent" "1"
+	"$basetexture" "models/weapons/arc9/bo2/bo2_mp5/bullet_c"
 	
+	"$bumpmap" "models/weapons/arc9/bo2/bo2_mp5/bullet_n"
+
 	
 	//"$color2" "[ .4 .4 .4 ]"
 	"$blendtintbybasealpha" "1"
@@ -15,6 +15,4 @@
 //	"$basemapalphaenvmapmask" "1"
 	"$envmapfresnel" "0.01"
 	"$envmaptint" "[ .01 .01 .01 ]"
-
-	"$nocull" "1"
 }
