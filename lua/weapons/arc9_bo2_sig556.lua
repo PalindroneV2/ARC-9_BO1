@@ -131,10 +131,12 @@ SWEP.RunawayBurst = true
 SWEP.ARC9WeaponCategory = {"weapon_ar2", "weapon_smg1"}
 SWEP.NPCWeight = 100
 
-SWEP.FreeAimRadius = 0 -- In degrees, how much this gun can free aim in hip fire.
+SWEP.FreeAimRadius = 12 / 1.25 -- In degrees, how much this gun can free aim in hip fire.
 SWEP.Sway = 0 -- How much the gun sways.
 
 SWEP.FreeAimRadiusMultSights = 0
+
+SWEP.FreeAimRadiusSights = 1
 
 SWEP.SwayMultSights = 0
 
