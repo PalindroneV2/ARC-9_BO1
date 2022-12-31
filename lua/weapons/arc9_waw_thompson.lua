@@ -30,8 +30,8 @@ SWEP.WorldModel = "models/weapons/arc9/c_waw_thompson.mdl"
 -- SWEP.WorldModelMirror = "models/weapons/arc9/w_bo2_thompson.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    Pos        =    Vector(-5, 4.5, -7.25),
-    Ang        =    Angle(-5, 0.5, 180),
+    Pos        =    Vector(-12.5, 2.5, -7.25),
+    Ang        =    Angle(-5, 1, 180),
     Bone    =    "ValveBiped.Bip01_R_Hand",
     Scale = 1,
 }
@@ -153,8 +153,8 @@ SWEP.DistantShootSound = "^weapons/arc9/waw_dist/waw_rifle.wav"
 --SWEP.MuzzleEffect = "muzzleflash_4"
 SWEP.MuzzleParticle = "muzzleflash_smg" -- Used for some muzzle effects.
 
-SWEP.ShellModel = "models/shells/shell_556.mdl"
-SWEP.ShellScale = 1
+SWEP.ShellModel = "models/shells/shell_9mm.mdl"
+SWEP.ShellScale = 1.355
 SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556_steel"
 
 SWEP.MuzzleEffectQCA = 1 -- which attachment to put the muzzle on
@@ -184,7 +184,7 @@ SWEP.HoldType = "ar2"
 SWEP.HoldTypeSights = "ar2"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SMG1
-SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_SMG1
+SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_AR2
 SWEP.AnimDraw = ACT_HL2MP_GESTURE_RANGE_ATTACK_KNIFE
 
 SWEP.ActivePos = Vector(2, -4, -1)

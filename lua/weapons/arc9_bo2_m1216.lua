@@ -29,7 +29,7 @@ SWEP.WorldModel = "models/weapons/arc9/w_bo2_m1216.mdl"
 SWEP.WorldModelMirror = "models/weapons/arc9/w_bo2_m1216.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    Pos        =    Vector(-3.3, 4, -5.8),
+    Pos        =    Vector(-7, 4, -5.8),
     Ang        =    Angle(-7, 1, 180),
     Bone    =    "ValveBiped.Bip01_R_Hand",
     Scale   =   1.1,
@@ -91,14 +91,14 @@ SWEP.RecoilKick = 2
 SWEP.Spread = 0.03
 SWEP.SpreadMultRecoil = 1.25
 
-SWEP.SpreadMultSights = 0.1
+SWEP.SpreadMultSights = 3
 SWEP.SpreadAddHipFire = math.rad(150 / 37.5)
 SWEP.SpreadAddMove = math.rad(0 / 37.5)
 SWEP.SpreadAddMidAir = 0
 -- SWEP.SpreadAddShooting = math.rad(5 / 37.5) -- 0 -- = 0.05
 
 SWEP.UsePelletSpread = true -- Multiple bullets fired at once clump up, like for a shotgun. Spread affects which direction they get fired, not their spread relative to one another.
-SWEP.PelletSpread = 1
+SWEP.PelletSpread = 0.35
 
 SWEP.RecoilPatternDrift = 20
 
@@ -187,7 +187,7 @@ SWEP.HoldTypeHolstered = "passive"
 SWEP.HoldType = "ar2"
 SWEP.HoldTypeSights = "ar2"
 
-SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
+SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SHOTGUN
 SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_MAGIC
 SWEP.AnimDraw = ACT_HL2MP_GESTURE_RANGE_ATTACK_KNIFE
 

@@ -32,7 +32,7 @@ SWEP.WorldModelOffset = {
     Pos        =    Vector(-5.5, 4.5, -6),
     Ang        =    Angle(-7, 1.5, 180),
     Bone    =    "ValveBiped.Bip01_R_Hand",
-    Scale = 1.1,
+    Scale = 1,
 }
 SWEP.aViewModelFOVBase = 75
 
@@ -183,8 +183,8 @@ SWEP.IronSights = {
 }
 
 SWEP.HoldTypeHolstered = "passive"
-SWEP.HoldType = "smg"
-SWEP.HoldTypeSights = "smg"
+SWEP.HoldType = "ar2"
+SWEP.HoldTypeSights = "ar2"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SMG1
 SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_SMG1

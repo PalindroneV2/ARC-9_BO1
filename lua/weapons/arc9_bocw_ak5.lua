@@ -412,7 +412,7 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"bocw_ak5_intgrip"},
         Installed = "bocw_ak5_grip",
-        -- Integral = true,
+        Integral = true,
     },
 }
 

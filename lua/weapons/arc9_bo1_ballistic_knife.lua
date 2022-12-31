@@ -29,8 +29,10 @@ SWEP.WorldModel = "models/weapons/arc9/c_bo1_ballistic_knife.mdl"
 SWEP.WorldModelMirror = "models/weapons/arc9/c_bo1_ballistic_knife.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    Pos        =    Vector(-3, 5, -7.5),
-    Ang        =    Angle(5, 7, 180),
+    TPIKPos        =    Vector(-3, 5, -7.5),
+    TPIKAng        =    Angle(5, 7, 180),
+    Pos        =    Vector(-6.75, 4.25, 9),
+    Ang        =    Angle(-30, 0, 90),
     Bone    =    "ValveBiped.Bip01_R_Hand",
     Scale = 1.1 ,
 }
@@ -195,11 +197,11 @@ SWEP.HasSights = false
 SWEP.NoShellEject = true
 
 SWEP.HoldTypeHolstered = "passive"
-SWEP.HoldType = "crossbow"
-SWEP.HoldTypeSights = "crossbow"
+SWEP.HoldType = "knife"
+SWEP.HoldTypeSights = "knife"
 
-SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_CROSSBOW
-SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_CROSSBOW
+SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_KNIFE
+SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_KNIFE
 SWEP.AnimDraw = ACT_HL2MP_GESTURE_RANGE_ATTACK_KNIFE
 
 SWEP.ActivePos = Vector(0, 0, -1)

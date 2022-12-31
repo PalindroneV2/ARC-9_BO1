@@ -25,13 +25,13 @@ SWEP.Slot = 4
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/ARC9/c_waw_panzerschreck.mdl"
-SWEP.WorldModel = "models/weapons/ARC9/w_waw_panzerschreck.mdl"
-SWEP.MirrorWorldModel = "models/weapons/ARC9/w_waw_panzerschreck.mdl"
+SWEP.ViewModel = "models/weapons/arc9/c_waw_panzerschreck.mdl"
+SWEP.WorldModel = "models/weapons/arc9/w_waw_panzerschreck.mdl"
+SWEP.MirrorWorldModel = "models/weapons/arc9/w_waw_panzerschreck.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    Pos        =    Vector(-14, 4.5, -7.75),
-    Ang        =    Angle(-10, -2, 180),
+    Pos        =    Vector(-12, 8, -19.5),
+    Ang        =    Angle(-5, -2, 180),
     Bone    =    "ValveBiped.Bip01_R_Hand",
     Scale = 0.95,
 }

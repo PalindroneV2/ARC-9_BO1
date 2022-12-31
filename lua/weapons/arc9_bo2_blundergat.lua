@@ -26,7 +26,7 @@ SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arc9/c_bo2_blundergat.mdl"
 SWEP.WorldModel = "models/weapons/arc9/w_bo2_blundergat.mdl"
-SWEP.MirrorWorldModel = "models/weapons/ARC9/w_bo2_blundergat.mdl"
+SWEP.MirrorWorldModel = "models/weapons/arc9/w_bo2_blundergat.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
     Pos        =    Vector(-3, 4.5, -4.1),

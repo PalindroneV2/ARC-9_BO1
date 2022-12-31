@@ -32,7 +32,7 @@ SWEP.WorldModelOffset = {
     Pos        =    Vector(-12, 6.2, -6),
     Ang        =    Angle(-6, 0, 180),
     Bone    =    "ValveBiped.Bip01_R_Hand",
-    Scale = 1.15,
+    Scale = 1,
 }
 SWEP.ViewModelFOVBase = 75
 
@@ -165,6 +165,7 @@ SWEP.Firemodes = {
     },
 }
 SWEP.RunawayBurst = true
+SWEP.PostBurstDelay = 0.1
 SWEP.ARC9WeaponCategory = {"weapon_smg1"}
 SWEP.NPCWeight = 100
 
@@ -223,8 +224,8 @@ SWEP.IronSights = {
 }
 
 SWEP.HoldTypeHolstered = "passive"
-SWEP.HoldType = "smg"
-SWEP.HoldTypeSights = "smg"
+SWEP.HoldType = "ar2"
+SWEP.HoldTypeSights = "ar2"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SMG1
 SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_SMG1

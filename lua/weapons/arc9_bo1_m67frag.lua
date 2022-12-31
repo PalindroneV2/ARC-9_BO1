@@ -22,11 +22,11 @@ SWEP.Slot = 4
 SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arc9/c_bo1_frag.mdl"
-SWEP.WorldModel = "models/weapons/arc9/c_bo1_frag.mdl"
+SWEP.WorldModel = "models/weapons/arc9/item/bo1_m67_frag.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    Pos        =    Vector(-3, 5, -7.5),
-    Ang        =    Angle(5, 7, 180),
+    Pos        =    Vector(0, -11, -7),
+    Ang        =    Angle(90, 0, -90),
     Bone    =    "ValveBiped.Bip01_R_Hand",
     Scale = 1.1,
 }
@@ -110,7 +110,7 @@ SWEP.Firemodes = {
         PrintName = "SINGLE"
     },
 }
-SWEP.ARC9WeaponCategory = {"weapon_shotgun"}
+SWEP.ARC9WeaponCategory = {"weapon_grenade"}
 SWEP.NPCWeight = 10
 
 SWEP.FreeAimRadius = 0 -- In degrees, how much this gun can free aim in hip fire.
@@ -159,11 +159,11 @@ SWEP.IronSights = {
 SWEP.NoShellEject = true
 
 SWEP.HoldTypeHolstered = "passive"
-SWEP.HoldType = "crossbow"
-SWEP.HoldTypeSights = "crossbow"
+SWEP.HoldType = "grenade"
+SWEP.HoldTypeSights = "grenade"
 
-SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SHOTGUN
-SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_CROSSBOW
+SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_GRENADE
+SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_GRENADE
 SWEP.AnimDraw = ACT_HL2MP_GESTURE_RANGE_ATTACK_KNIFE
 
 SWEP.ActivePos = Vector(0, 0, -1)

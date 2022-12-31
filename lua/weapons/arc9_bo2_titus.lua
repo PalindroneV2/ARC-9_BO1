@@ -30,8 +30,8 @@ SWEP.WorldModel = "models/weapons/arc9/c_bo2_titus.mdl"
 SWEP.WorldModelMirror = "models/weapons/arc9/c_bo2_titus.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    Pos        =    Vector(-4.25, 3.5, -7.15),
-    Ang        =    Angle(0, 1, 180),
+    Pos        =    Vector(-7, 3.5, -6.2),
+    Ang        =    Angle(-7.5, 1, 180),
     Bone    =    "ValveBiped.Bip01_R_Hand",
     Scale = 1.05,
 }
@@ -155,7 +155,7 @@ SWEP.Firemodes = {
         SpreadAddMove = math.rad(0 / 37.5),
         SpreadAddMidAir = 0,
         UsePelletSpread = true,
-        PelletSpread = 0.35,
+        PelletSpread = 0.2,
         Hook_TranslateAnimation = function(swep, anim)
             return anim .. "_mk"
         end,

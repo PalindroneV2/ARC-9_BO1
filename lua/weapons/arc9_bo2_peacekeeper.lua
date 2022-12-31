@@ -182,8 +182,8 @@ SWEP.IronSights = {
 }
 
 SWEP.HoldTypeHolstered = "passive"
-SWEP.HoldType = "smg"
-SWEP.HoldTypeSights = "smg"
+SWEP.HoldType = "ar2"
+SWEP.HoldTypeSights = "ar2"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SMG1
 SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_SMG1

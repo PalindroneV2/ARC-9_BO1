@@ -29,10 +29,10 @@ SWEP.WorldModel = "models/weapons/arc9/w_bo2_m32.mdl"
 SWEP.WorldModelMirror = "models/weapons/arc9/w_bo2_m32.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    Pos        =    Vector(-3, 5, -7.5),
-    Ang        =    Angle(5, 7, 180),
+    Pos        =    Vector(-2, 5, -6.5),
+    Ang        =    Angle(-5, 0, 180),
     Bone    =    "ValveBiped.Bip01_R_Hand",
-    Scale = 1.1,
+    Scale = 1,
 }
 SWEP.ViewModelFOVBase = 75
 
@@ -171,11 +171,11 @@ SWEP.IronSights = {
 SWEP.NoShellEject = true
 
 SWEP.HoldTypeHolstered = "passive"
-SWEP.HoldType = "crossbow"
-SWEP.HoldTypeSights = "crossbow"
+SWEP.HoldType = "smg"
+SWEP.HoldTypeSights = "smg"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SHOTGUN
-SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_CROSSBOW
+SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_MAGIC
 SWEP.AnimDraw = ACT_HL2MP_GESTURE_RANGE_ATTACK_KNIFE
 
 SWEP.ActivePos = Vector(0, 0, -1)
@@ -242,8 +242,8 @@ SWEP.Attachments = {
     {
         PrintName = "Optic",
         DefaultCompactName = "None",
-        Bone = "j_gun",
-        Pos = Vector(6.5, 0, 4.75),
+        Bone = "j_reload",
+        Pos = Vector(4.5, 0, 0.45),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_optic", "bo2_m32_optic"},
     },
