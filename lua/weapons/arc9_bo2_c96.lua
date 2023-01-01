@@ -124,6 +124,9 @@ SWEP.Firemodes = {
     {
         Mode = 1,
     },
+    {
+        Mode = -1,
+    },
 }
 SWEP.ARC9WeaponCategory = {"weapon_pistol"}
 SWEP.NPCWeight = 100
@@ -166,9 +169,10 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(-2.35, 3, 0.73),
-    Ang = Angle(-0.075, 0, 0),
+    Pos = Vector(-4.55, 0, 1),
+    Ang = Angle(-0.05, 0.1, 0),
     Magnification = 1.1,
+    ViewModelFOV = 60,
     --AssociatedSlot = 9,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
@@ -208,52 +212,50 @@ SWEP.CustomizeAng = Angle(90, 0, 0)
 SWEP.CustomizeSnapshotPos = Vector(0, -10, 0)
 SWEP.CustomizeSnapshotAng = Angle(0, 0, 0)
 
-SWEP.BarrelLength = 9
+SWEP.BarrelLength = 0 -- = 9
 
 SWEP.ExtraSightDist = 15
 
 SWEP.AttachmentElements = {
+    ["bo1_pap"] = {
+        Penetration = 25,
+    },
 }
 
 SWEP.Hook_ModifyBodygroups = function(self, data)
 
     local vm = data.model
     local attached = data.elements
-    local color = 0
 
-    if attached["maria"] then
-        color = 1
+    local camo = 0
+    if attached["camo_gold"] then
+        camo = 1
     end
-
     if attached["bo1_pap"] then
-        if color == 1 then
-            color = 1
-        else
-            color = color + 2
-        end
+        camo = camo + 2
     end
-
-    vm:SetSkin(color)
+    vm:SetSkin(camo)
 end
 
 SWEP.HookP_NameChange = function(self, name)
 
     local attached = self:GetElements()
 
-    local gunname = "FN Browning HP"
-
-    if attached["maria"] then
-        gunname = "Maria"
-    end
+    local gunname = "Mauser M712"
 
     if attached["bo1_pap"] then
-        gunname = "Moses Unlimited"
-        if attached["maria"] then
-            gunname = "Holy Mother"
-        end
+        gunname = "Boomhilda"
     end
 
     return gunname
+end
+
+SWEP.Hook_TranslateAnimation = function (self, anim)
+    local attached = self:GetElements()
+
+    if attached["mauserscope"] then
+        return anim .. "_up"
+    end
 end
 
 SWEP.Attachments = {
@@ -262,41 +264,15 @@ SWEP.Attachments = {
         DefaultCompactName = "IRONS",
         Bone = "j_gun",
         Scale = Vector(1, 1, 1),
-        Pos = Vector(2.5, 0, 2.5),
+        Pos = Vector(0, 0, 2.5),
         Ang = Angle(0, 0, 0),
         Category = {"bo2_optic_mauser"},
-    },
-    {
-        PrintName = "Muzzle",
-        DefaultCompactName = "MUZZ",
-        Bone = "j_gun",
-        Pos = Vector(6.75, 0.025, 1.15),
-        Ang = Angle(0, 0, 0),
-        Category = "bo1_muzzle_pistol",
-    },
-    {
-        PrintName = "Tactical",
-        DefaultCompactName = "TAC",
-        Bone = "j_gun",
-        Scale = Vector(1, 1, 1),
-        Pos = Vector(5.75, 0, 0.2),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_tactical"},
-        CorrectiveAng = Angle(0, 0, 0),
-    },
-    {
-        PrintName = "Magazine",
-        DefaultCompactName = "MAG",
-        Bone = "j_gun",
-        Pos = Vector(-1.5, 0, -4),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo2_fastmag", "bo2_extmag"},
     },
     {
         PrintName = "Ammunition",
         DefaultCompactName = "AMMO",
         Bone = "j_gun",
-        Pos = Vector(-1.25, 0, -1),
+        Pos = Vector(2.75, 0, -3),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ammo", "bo1_pap"},
     },
@@ -329,11 +305,10 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Cosmetic",
-        DefaultCompactName = "G.I.",
-        Bone = "j_bolt",
-        Pos = Vector(0, 0, 0),
+        Bone = "j_gun",
+        Pos = Vector(-7, 0, 2),
         Ang = Angle(0, 0, 0),
-        Category = "bo2_bhp_cosmetic",
+        Category = {"camo_gold"},
         CosmeticOnly = true,
     },
 }
@@ -368,7 +343,6 @@ SWEP.Animations = {
         Time = 1,
         EventTable = {
             {s = "ARC9_BO2.Pistol_SlideBack", t = 0.2},
-            {s = "ARC9_BO2.Pistol_SlideFwd", t = 0.7}
         }
     },
     ["fire"] = {
@@ -386,6 +360,11 @@ SWEP.Animations = {
         Time = 7 / 30,
         ShellEjectAt = 0,
     },
+    ["fire_iron_up"] = {
+        Source = "fire_ads_up",
+        Time = 7 / 30,
+        ShellEjectAt = 0,
+    },
     ["fire_iron_empty"] = {
         Source = "fire_last",
         Time = 7 / 30,
@@ -396,7 +375,7 @@ SWEP.Animations = {
         Time = 1.5,
         EventTable = {
             {s = "ARC9_BO2.Pistol_MagOut", t = 0.25},
-            {s = "ARC9_BO2.Pistol_MagIn", t = 1}
+            {s = "ARC9_BO2.Pistol_MagIn", t = 0.9}
         },
     },
     ["reload_empty"] = {
@@ -404,7 +383,7 @@ SWEP.Animations = {
         Time = 2,
         EventTable = {
             {s = "ARC9_BO2.Pistol_MagOut", t = 0.25},
-            {s = "ARC9_BO2.Pistol_MagIn", t = 1},
+            {s = "ARC9_BO2.Pistol_MagIn", t = 0.9},
             {s = "ARC9_BO2.Pistol_SlideFwd", t = 1.5}
         },
     },

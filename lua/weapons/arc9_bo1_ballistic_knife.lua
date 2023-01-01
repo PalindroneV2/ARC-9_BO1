@@ -20,7 +20,7 @@ SWEP.Credits = {
     Author = "Palindrone"
 }
 
-SWEP.Slot = 4
+SWEP.Slot = 0
 
 SWEP.UseHands = true
 
@@ -231,7 +231,7 @@ SWEP.CustomizeNoRotate = true
 SWEP.RestPos = Vector(0, 0, 0)
 SWEP.RestAng = Angle(0, 0, 0)
 
-SWEP.BarrelLength = 25
+SWEP.BarrelLength = 0 -- = 25
 
 SWEP.ExtraSightDist = 5
 

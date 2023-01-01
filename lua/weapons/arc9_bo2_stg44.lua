@@ -208,13 +208,20 @@ SWEP.CustomizeAng = Angle(90, 0, 0)
 SWEP.RestPos = Vector(0, 0, -1)
 SWEP.RestAng = Angle(0, 0, -5)
 
-SWEP.BarrelLength = 25
+SWEP.BarrelLength = 0 -- = 25
 
 SWEP.ExtraSightDist = 5
 
 SWEP.AttachmentElements = {
     ["9mm_mag"] = {
         Bodygroups = {{6,1}},
+    },
+    ["mauserscope"] = {
+        AttPosMods = {
+            [1] = {
+                Pos = Vector(0, -0.01, 3.6),
+            },
+        },
     },
     ["barrel_short"] = {
         AttPosMods = {
@@ -335,7 +342,7 @@ SWEP.Attachments = {
         Scale = Vector(1, 1, 1),
         Pos = Vector(3, -0.01, 3.6),
         Ang = Angle(0, 0, 0),
-        Category = {"waw_aperture", "waw_optic_zf4"},
+        Category = {"waw_aperture", "waw_optic_zf4", "bo2_optic_mauser"},
     },
     {
         PrintName = "Barrel",

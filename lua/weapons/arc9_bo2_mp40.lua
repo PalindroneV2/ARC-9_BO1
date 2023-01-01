@@ -1,9 +1,9 @@
 SWEP.Base = "arc9_base"
 SWEP.Spawnable = true -- this obviously has to be set to true
-SWEP.Category = "ARC9 - COD Extras" -- edit this if you like
+SWEP.Category = "ARC9 - Black Ops II" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "MP40 (BO3)"
+SWEP.PrintName = "MP40"
 SWEP.Class = "Submachine Gun"
 SWEP.Description = [[
     "Picture this scene. Europe, World War II. A band of plucky heores captured by the germans, but they've got a cunning plan. Darkness falls and they make their escape. Nazi guards firing fruitlessly into the night and the weapon they're using...
@@ -27,8 +27,9 @@ SWEP.Slot = 2
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/arc9/c_bo3_mp40.mdl"
-SWEP.WorldModel = "models/weapons/arc9/c_bo3_mp40.mdl"
+SWEP.ViewModel = "models/weapons/arc9/c_bo2_mp40.mdl"
+SWEP.WorldModel = "models/weapons/arc9/w_bo2_mp40.mdl"
+SWEP.WorldModelMirror = "models/weapons/arc9/w_bo2_mp40.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
     Pos        =    Vector(-7.5, 4.5, -5.25),
@@ -172,10 +173,10 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(-3.125, -5, -0.25),
+    Pos = Vector(-3, 0, 1.15),
     Ang = Angle(0.0375, 0, 0),
     Magnification = 1.1,
-    AssociatedSlot = 9,
+    ViewModelFOV = 60,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
 }
@@ -188,7 +189,7 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_AR2
 SWEP.AnimDraw = ACT_HL2MP_GESTURE_RANGE_ATTACK_KNIFE
 
-SWEP.ActivePos = Vector(0, -4, -2)
+SWEP.ActivePos = Vector(0, 0, -1)
 SWEP.ActiveAng = Angle(0, 0, -5)
 
 SWEP.MovingPos = SWEP.ActivePos
@@ -199,32 +200,34 @@ SWEP.MovingMidPoint = {
     Ang = SWEP.ActiveAng
 }
 
-SWEP.CrouchPos = Vector(0, -4, -2)
-SWEP.CrouchAng = Angle(0, 0, -5)
+SWEP.CrouchPos = SWEP.ActivePos
+SWEP.CrouchAng = SWEP.ActiveAng
 
 SWEP.SprintVerticalOffset = false
-SWEP.SprintPos = Vector(0, -4, -2)
-SWEP.SprintAng = Angle(0, 0, -5)
+SWEP.SprintPos = SWEP.ActivePos
+SWEP.SprintAng = SWEP.ActiveAng
 
 SWEP.CustomizePos = Vector(20.5, 40, 6)
 SWEP.CustomizeAng = Angle(90, 0, 0)
 
-SWEP.RestPos = Vector(0, 0, 0)
-SWEP.RestAng = Angle(0, 0, 0)
+SWEP.RestPos = Vector(0, 0, -1)
+SWEP.RestAng = Angle(0, 0, -5)
 
-SWEP.BarrelLength = 25
+SWEP.BarrelLength = 0 -- = 25
 
 SWEP.ExtraSightDist = 5
 
 SWEP.AttachmentElements = {
-    ["bo3_mauser_optic"] = {
-        Bodygroups = {
-            {1,1}
+    ["mauserscope"] = {
+        AttPosMods = {
+            [1] = {
+                Pos = Vector(2, 0, 3.9),
+            },
         },
     },
     ["stock_l"] = {
         Bodygroups = {
-            {2,1}
+            {1,1}
         },
     },
 }
@@ -232,10 +235,25 @@ SWEP.AttachmentElements = {
 SWEP.Hook_ModifyBodygroups = function(self, data)
     local vm = data.model
     local attached = data.elements
+    local CUSTSTATE = self:GetCustomize()
+    local body = 0
+    local stock = 0
+    if attached["stock_l"] then
+        stock = 1
+    end
+    if CUSTSTATE then
+        body = 1
+        stock = stock + 2
+    end
+
+    vm:SetBodygroup(0,body)
 
     local camo = 0
+    if attached["camo_gold"] then
+        camo = 1
+    end
     if attached["bo1_pap"] then
-        camo = camo + 3
+        camo = camo + 2
     end
     vm:SetSkin(camo)
 end
@@ -258,25 +276,25 @@ end
 SWEP.Attachments = {
     {
         PrintName = "Optic",
-        Bone = "tag_weapon",
+        Bone = "j_gun",
         Scale = Vector(1, 1, 1),
-        Pos = Vector(3, 0.025, 3.9),
+        Pos = Vector(4, 0, 3.8),
         Ang = Angle(0, 0, 0),
-        Category = {"bo3_mauser_optic", "waw_aperture"},
+        Category = {"bo2_optic_mauser", "waw_aperture"},
         InstalledElements = {"mount"},
     },
     {
         PrintName = "Muzzle",
-        Bone = "tag_weapon",
+        Bone = "j_gun",
         Scale = Vector(1.3, 1.3, 1.3),
-        Pos = Vector(27.25, 0, 2.9),
+        Pos = Vector(26.7, 0, 2.8),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_muzzle_smg", "bo1_muzzle_pistol"},
     },
     {
         PrintName = "Firing Group",
         DefaultCompactName = "S-1-F",
-        Bone = "tag_weapon",
+        Bone = "j_gun",
         Pos = Vector(2, 0, 0),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_fcg"},
@@ -284,7 +302,7 @@ SWEP.Attachments = {
     {
         PrintName = "Stock",
         DefaultCompactName = "Folded",
-        Bone = "tag_weapon",
+        Bone = "j_gun",
         Pos = Vector(-2, 0, 1.5),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_stock_l"},
@@ -292,7 +310,7 @@ SWEP.Attachments = {
     {
         PrintName = "Ammunition",
         DefaultCompactName = "AMMO",
-        Bone = "tag_weapon",
+        Bone = "j_gun",
         Pos = Vector(13, 0, -6),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ammo", "bo1_pap"},
@@ -300,7 +318,7 @@ SWEP.Attachments = {
     {
         PrintName = "Perk-a-Cola",
         DefaultCompactName = "COLA",
-        Bone = "tag_weapon",
+        Bone = "j_gun",
         Pos = Vector(-2, 0, -5),
         Ang = Angle(0, 0, 0),
         Category = "bo1_perkacola",
@@ -309,7 +327,7 @@ SWEP.Attachments = {
     {
         PrintName = "Perk",
         DefaultCompactName = "PERK",
-        Bone = "tag_weapon",
+        Bone = "j_gun",
         Pos = Vector(-5, 0, -5),
         Ang = Angle(0, 0, 0),
         Category = "mwc_perk",
@@ -318,11 +336,19 @@ SWEP.Attachments = {
     {
         PrintName = "Proficiency",
         DefaultCompactName = "PRO",
-        Bone = "tag_weapon",
+        Bone = "j_gun",
         Pos = Vector(-8, 0, -5),
         Ang = Angle(0, 0, 0),
         Category = "mwc_proficiency",
         ExcludeElements = {"bo1_perkacola"},
+    },
+    {
+        PrintName = "Cosmetic",
+        Bone = "j_gun",
+        Pos = Vector(-7, 0, 2),
+        Ang = Angle(0, 0, 0),
+        Category = {"camo_gold"},
+        CosmeticOnly = true,
     },
 }
 
@@ -337,17 +363,34 @@ SWEP.Animations = {
     },
     ["holster"] = {
         Source = "holster",
-        Time = 0.5,
+        Time = 20 / 30,
+    },
+    ["idle_empty"] = {
+        Source = "idle_empty",
+        Time = 1 / 30,
+    },
+    ["draw_empty"] = {
+        Source = "draw_empty",
+        Time = 20 / 30,
+    },
+    ["holster_empty"] = {
+        Source = "holster_empty",
+        Time = 20 / 30,
     },
     ["ready"] = {
-        Source = "first_draw",
-        Time = 30 / 30,
-        EventTable = {
-            {s = "ARC9_WaW.MP40_Bolt", t = 19 / 30}
-        },
+        Source = "draw",
+        Time = 20 / 30,
     },
     ["fire"] = {
         Source = {"fire"},
+        Time = 7 / 30,
+        ShellEjectAt = 0,
+        EventTable = {
+            {s = "ARC9_WAW.MP40_Mech", t = 1 / 30},
+        },
+    },
+    ["fire_empty"] = {
+        Source = {"fire_last"},
         Time = 7 / 30,
         ShellEjectAt = 0,
         EventTable = {
@@ -369,7 +412,7 @@ SWEP.Animations = {
     },
     ["reload"] = {
         Source = "reload",
-        Time = 2.2,
+        Time = 2.66,
         EventTable = {
             {s = "ARC9_WAW.MP40_MagOut", t = 18 / 30},
             {s = "ARC9_WAW.MP40_MagIn", t = 45 / 30}
@@ -377,10 +420,9 @@ SWEP.Animations = {
     },
     ["reload_empty"] = {
         Source = "reload_empty",
-        Time = 2.8,
+        Time = 3.25,
         EventTable = {
-            {s = "ARC9_WAW.MP40_Bolt", t = 10 / 30},
-            {s = "ARC9_WAW.MP40_MagOut", t = 25 / 30},
+            {s = "ARC9_WAW.MP40_MagOut", t = 20 / 30},
             {s = "ARC9_WAW.MP40_MagIn", t = 50 / 30},
             {s = "ARC9_WAW.MP40_Bolt", t = 65 / 30},
         },
@@ -395,6 +437,18 @@ SWEP.Animations = {
     },
     ["exit_sprint"] = {
         Source = "sprint_out",
+        Time = 1,
+    },
+    ["enter_sprint_empty"] = {
+        Source = "sprint_in_empty",
+        Time = 1,
+    },
+    ["idle_sprint_empty"] = {
+        Source = "sprint_loop_empty",
+        Time = 30 / 40
+    },
+    ["exit_sprint_empty"] = {
+        Source = "sprint_out_empty",
         Time = 1,
     },
 }
