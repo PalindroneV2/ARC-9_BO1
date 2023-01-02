@@ -335,12 +335,12 @@ SWEP.HookP_NameChange = function(self, name)
     local gunname = "HK MP5"
     local barrel = "A"
     local stock = "3"
-    if attached["stock_h"] then
-        stock = "2"
-    end
 
     if attached["mp5sd_suppressor"] then
         barrel = "SD"
+    end
+    if attached["stock_h"] then
+        stock = "2"
     end
     if attached["mp5k"] then
         barrel = "K"
