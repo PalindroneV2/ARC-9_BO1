@@ -7,7 +7,7 @@ VertexlitGeneric
 	"$normalmapalphaenvmapmask" "1"
 	
 	$detail "models/weapons/arc9/bo1/black_detail"
-	$detailblendfactor 1.22
+	$detailblendfactor 1.2
 	$detailblendmode 0
 
 	"$blendtintbybasealpha" "1"
