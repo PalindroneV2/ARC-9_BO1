@@ -1,8 +1,8 @@
 "VertexLitGeneric"
 {
-	$basetexture	"models\weapons\arc9\bo2\bo2_optics\hamr"
+	$basetexture	"models/weapons/arc9/bo2/bo2_optics/hamr"
 	
-	$bumpmap	"models\weapons\arc9\bo2\bo2_optics\hamr_n"
+	$bumpmap	"models/weapons/arc9/bo2/bo2_optics/hamr_n"
 	
 	
 	//"$color2" "[ .4 .4 .4 ]"

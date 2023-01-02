@@ -2,7 +2,7 @@
 {
 	"$basetexture" "models/weapons/arc9/bo1/bo1_uzi/uzi_c"
 	"$bumpmap" "models/weapons/arc9/bo1/bo1_uzi/uzi_n"
-	$detail "models\weapons\arc9\bo1\gunmetal"
+	$detail "models/weapons/arc9/bo1/gunmetal"
 	$detailblendmode 0
 	$detailblendfactor 1
 	

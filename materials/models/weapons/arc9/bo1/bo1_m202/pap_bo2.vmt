@@ -1,11 +1,11 @@
 VertexlitGeneric
 {
-	"$basetexture" "models\weapons\arc9\bo1\bo1_raygun\raygun"
-	$bumpmap	"models\weapons\arc9\bo1\bo1_raygun\raygun_n"
+	"$basetexture" "models/weapons/arc9/bo1/bo1_raygun/raygun"
+	$bumpmap	"models/weapons/arc9/bo1/bo1_raygun/raygun_n"
 	$selfillum 1
-	$selfillummask "models\weapons\arc9\pap\pap_cosmic_s"
+	$selfillummask "models/weapons/arc9/pap/pap_cosmic_s"
 
-	$detail	"models\weapons\arc9\pap\pap_cosmic"
+	$detail	"models/weapons/arc9/pap/pap_cosmic"
 	$detailscale 4
 	$detailblendmode 2
 	$detailblendfactor 1

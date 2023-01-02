@@ -6,7 +6,7 @@
 	"$envmapmask" "models/weapons/arc9/bo1/bo1_m1911/1911_s"
 	$normalmapalphaenvmapmask "1"
 	
-	$detail		"models\weapons\arc9\bo1\gold_c"
+	$detail		"models/weapons/arc9/bo1/gold_c"
 	"$detailscale" "1"
 	$detailblendmode		3
 	$detailblendfactor 1
@@ -19,7 +19,7 @@
 	$phongalbedotint "1"
 	
 	$envmap "env_cubemap"
-	// $envmapmask	"models\weapons\arc9\bo1\gold_s"
+	// $envmapmask	"models/weapons/arc9/bo1/gold_s"
 	$envmaptint "[1 .75 .25]"
 	$envmapfresnel "[1 1 1]"
 

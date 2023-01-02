@@ -1,11 +1,11 @@
 "VertexlitGeneric"
 {
-	$basetexture	"models\weapons\arc9\bo1\gunmetal"
-	$bumpmap	"models\weapons\arc9\bo2\bo2_optics\mms_lens_n"
+	$basetexture	"models/weapons/arc9/bo1/gunmetal"
+	$bumpmap	"models/weapons/arc9/bo2/bo2_optics/mms_lens_n"
 	"$selfillum" "1"
-	$selfillummask	"models\weapons\arc9\bo2\bo2_optics\noise"
+	$selfillummask	"models/weapons/arc9/bo2/bo2_optics/noise"
 
-	$detail "models\weapons\arc9\bo2\bo2_optics\noise"
+	$detail "models/weapons/arc9/bo2/bo2_optics/noise"
 	$detailscale	0.5
 	$detailblendmode	2
 	$detailblendfactor	1

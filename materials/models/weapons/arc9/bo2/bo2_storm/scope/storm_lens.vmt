@@ -1,8 +1,8 @@
 VertexlitGeneric
 {
-	$basetexture	"models\weapons\arc9\bo2\bo2_storm\scope\storm_lens"
+	$basetexture	"models/weapons/arc9/bo2/bo2_storm/scope/storm_lens"
 	//$color2 "[0.5 0.5 0.5]"
-	$bumpmap	"models\weapons\arc9\bo2\bo2_storm\scope\storm_lens_n"
+	$bumpmap	"models/weapons/arc9/bo2/bo2_storm/scope/storm_lens_n"
 
 	
 	//"$color2" "[ .4 .4 .4 ]"

@@ -1,7 +1,7 @@
 VertexlitGeneric
 {
-	$basetexture	"models\weapons\arc9\bo1\bo1_rpk\kobram_c"
-	$bumpmap	"models\weapons\arc9\bo1\bo1_rpk\kobram_n"
+	$basetexture	"models/weapons/arc9/bo1/bo1_rpk/kobram_c"
+	$bumpmap	"models/weapons/arc9/bo1/bo1_rpk/kobram_n"
 	
 	//"$color2" "[ .4 .4 .4 ]"
 	"$blendtintbybasealpha" "1"

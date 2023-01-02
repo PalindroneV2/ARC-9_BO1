@@ -1,8 +1,8 @@
 "VertexLitGeneric"
 {
-	$basetexture	"models\weapons\arc9\bo2\bo2_optics\rangefinder"
+	$basetexture	"models/weapons/arc9/bo2/bo2_optics/rangefinder"
 	
-	$bumpmap	"models\weapons\arc9\bo2\bo2_optics\rangefinder_n"
+	$bumpmap	"models/weapons/arc9/bo2/bo2_optics/rangefinder_n"
 	
 	
 	//"$color2" "[ .4 .4 .4 ]"
@@ -16,5 +16,5 @@
 	"$envmapfresnel" "0.01"
 	"$envmaptint" "[ .01 .01 .01 ]"
 
-	"$detail" "models\weapons\arc9\bo1\gunmetal"
+	"$detail" "models/weapons/arc9/bo1/gunmetal"
 }

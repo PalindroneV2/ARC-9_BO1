@@ -1,7 +1,7 @@
 VertexlitGeneric
 {
-	$basetexture	"models\weapons\arc9\bo1\bo1_irons\flat_top_c"
-	$bumpmap	"models\weapons\arc9\bo1\bo1_irons\flat_top_n"
+	$basetexture	"models/weapons/arc9/bo1/bo1_irons/flat_top_c"
+	$bumpmap	"models/weapons/arc9/bo1/bo1_irons/flat_top_n"
 
 	$phong                      		1
 //	$phongexponent                      "20"

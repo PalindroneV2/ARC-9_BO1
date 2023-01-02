@@ -2,9 +2,9 @@
 {
 	"$basetexture" "models/weapons/arc9/bo1/bo1_dragunov/svd_c"
 	"$bumpmap" "models/weapons/arc9/bo1/bo1_dragunov/svd_n"
-	$phongexponenttexture	"models\weapons\arc9\bo1\bo1_dragunov\svd_s"
+	$phongexponenttexture	"models/weapons/arc9/bo1/bo1_dragunov/svd_s"
 
-	$detail "models\weapons\arc9\bo1\camos\ak_redwood"
+	$detail "models/weapons/arc9/bo1/camos/ak_redwood"
 	$detailblendmode		0
 	$detailblendfactor	1
 	

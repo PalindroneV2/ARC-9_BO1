@@ -1,7 +1,7 @@
 VertexlitGeneric
 {
-	$basetexture	"models\weapons\arc9\bo1\bo1_car15\car15_strap_c"
-	$bumpmap	"models\weapons\arc9\bo1\bo1_car15\car15_strap_n"
+	$basetexture	"models/weapons/arc9/bo1/bo1_car15/car15_strap_c"
+	$bumpmap	"models/weapons/arc9/bo1/bo1_car15/car15_strap_n"
 
 	
 	//"$color2" "[ .4 .4 .4 ]"

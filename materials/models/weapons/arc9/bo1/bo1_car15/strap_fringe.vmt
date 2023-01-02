@@ -1,7 +1,7 @@
 VertexlitGeneric
 {
-	$basetexture	"models\weapons\arc9\bo1\bo1_car15\strap_fringe"
-	$bumpmap	"models\weapons\arc9\bo1\bo1_car15\car15_strap_n"
+	$basetexture	"models/weapons/arc9/bo1/bo1_car15/strap_fringe"
+	$bumpmap	"models/weapons/arc9/bo1/bo1_car15/car15_strap_n"
 
 	$phong                      		1
 	$phongexponent                      "20"

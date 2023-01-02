@@ -1,8 +1,8 @@
 "VertexLitGeneric"
 {
-	$basetexture	"models\weapons\arc9\bo1\bo1_acogs\acog_lens_c"
+	$basetexture	"models/weapons/arc9/bo1/bo1_acogs/acog_lens_c"
 	"$translucent" "0"
-	$bumpmap	"models\weapons\arc9\bo1\bo1_acogs\acog_lens_n"
+	$bumpmap	"models/weapons/arc9/bo1/bo1_acogs/acog_lens_n"
 	//"$color2" "[ .4 .4 .4 ]"
 	"$blendtintbybasealpha" "1"
 	"$phong" "1"
@@ -13,5 +13,5 @@
 //	"$basemapalphaenvmapmask" "1"
 	"$envmapfresnel" "0.01"
 	"$envmaptint" "[ .01 .01 .01 ]"
-	"$PhongExponentTexture"		"models\weapons\arc9\bo1\bo1_acogs\acog_lens_s"
+	"$PhongExponentTexture"		"models/weapons/arc9/bo1/bo1_acogs/acog_lens_s"
 }

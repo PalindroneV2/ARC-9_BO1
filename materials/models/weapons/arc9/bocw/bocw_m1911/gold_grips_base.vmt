@@ -16,7 +16,7 @@
 	"$envmapfresnel" "0.01"
 	"$envmaptint" "[ .01 .01 .01 ]"
 
-	$detail		"models\weapons\arc9\bo1\tan"
+	$detail		"models/weapons/arc9/bo1/tan"
 	$detailblendmode 1
 	$detailblendfactor 0.1
 }

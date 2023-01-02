@@ -1,10 +1,10 @@
 VertexlitGeneric
 {
-	$basetexture	"models\weapons\arc9\bo1\bo1_hk21\hk21_c"
+	$basetexture	"models/weapons/arc9/bo1/bo1_hk21/hk21_c"
 	//$color2 "[0.4 0.4 0.4]"
-	$bumpmap	"models\weapons\arc9\bo1\bo1_hk21\hk21_n"
+	$bumpmap	"models/weapons/arc9/bo1/bo1_hk21/hk21_n"
 
-	$detail		"models\weapons\arc9\bo1\black"
+	$detail		"models/weapons/arc9/bo1/black"
 	$detailblendmode 0
 	$detailblendfactor 1.1
 	

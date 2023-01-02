@@ -1,6 +1,6 @@
 "VertexLitGeneric"
 {
-	$basetexture	"models\weapons\arc9\bo1\bo1_acogs\nsp3a_lens"
+	$basetexture	"models/weapons/arc9/bo1/bo1_acogs/nsp3a_lens"
 	"$translucent" "0"
 	"$selfillum" "1"
 }

@@ -1,14 +1,14 @@
 VertexlitGeneric
 {
-	$basetexture	"models\weapons\arc9\bo2\bo2_raygunmk2\energy"
-	$bumpmap	"models\weapons\arc9\bo2\bo2_raygunmk2\energy_n"
+	$basetexture	"models/weapons/arc9/bo2/bo2_raygunmk2/energy"
+	$bumpmap	"models/weapons/arc9/bo2/bo2_raygunmk2/energy_n"
 
-    "$detail" "models\weapons\arc9\bo2\bo2_raygunmk2\energy_glow"
+    "$detail" "models/weapons/arc9/bo2/bo2_raygunmk2/energy_glow"
     "$detailblendfactor" "1"
     $detailblendmode 3
 
     "$selfillum" "1"
-    $selfillummask "models\weapons\arc9\bo2\bo2_raygunmk2\energy_glow"
+    $selfillummask "models/weapons/arc9/bo2/bo2_raygunmk2/energy_glow"
 
     Proxies
 	{

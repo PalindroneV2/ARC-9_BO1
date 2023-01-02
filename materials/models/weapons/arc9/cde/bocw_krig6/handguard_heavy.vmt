@@ -2,9 +2,9 @@
 // METALNESS: 211 GAMMA: 235
 "VertexLitGeneric"
 {
-	"$basetexture" "models\weapons\arc9\cde\bocw_krig6\handguard_heavy\c"
-	"$bumpmap" "models\weapons\arc9\cde\bocw_krig6\handguard_heavy\n"
-	"$phongexponenttexture" "models\weapons\arc9\cde\bocw_krig6\handguard_heavy\m"
+	"$basetexture" "models/weapons/arc9/cde/bocw_krig6/handguard_heavy/c"
+	"$bumpmap" "models/weapons/arc9/cde/bocw_krig6/handguard_heavy/n"
+	"$phongexponenttexture" "models/weapons/arc9/cde/bocw_krig6/handguard_heavy/m"
 	"$color2" "[ .4 .4 .4 ]"
 	"$blendtintbybasealpha" "1"
 	"$phong" "1"

@@ -1,6 +1,6 @@
 VertexlitGeneric
 {
-	$basetexture	"models\weapons\arc9\bo1\bo1_ithaca\trit"
+	$basetexture	"models/weapons/arc9/bo1/bo1_ithaca/trit"
 	//$color2 "[0.75 0.75 0.75]"
 	$selfillum 1
 

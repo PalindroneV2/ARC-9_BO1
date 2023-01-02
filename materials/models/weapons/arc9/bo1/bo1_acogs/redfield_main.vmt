@@ -1,9 +1,9 @@
 "VertexLitGeneric"
 {
-	$basetexture	"models\weapons\arc9\bo1\bo1_acogs\redfield_main_c"
+	$basetexture	"models/weapons/arc9/bo1/bo1_acogs/redfield_main_c"
 	
-	$bumpmap	"models\weapons\arc9\bo1\bo1_acogs\redfield_main_n"
-	$detail "models\weapons\arc9\bo1\black_detail"
+	$bumpmap	"models/weapons/arc9/bo1/bo1_acogs/redfield_main_n"
+	$detail "models/weapons/arc9/bo1/black_detail"
 	$detailblendmode 0
 	$detailblendfactor 1
 	"$blendtintbybasealpha" "1"

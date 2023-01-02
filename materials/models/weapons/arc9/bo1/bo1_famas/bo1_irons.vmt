@@ -1,7 +1,7 @@
 VertexlitGeneric
 {
-	$basetexture	"models\weapons\arc9\bo1\bo1_irons\irons_c"
-	$bumpmap	"models\weapons\arc9\bo1\bo1_irons\irons_n"
+	$basetexture	"models/weapons/arc9/bo1/bo1_irons/irons_c"
+	$bumpmap	"models/weapons/arc9/bo1/bo1_irons/irons_n"
 	$detail "models/weapons/arc9/bo1/gunmetal"
 
 	

@@ -1,6 +1,6 @@
 "VertexLitGeneric"
 {
-	$basetexture	"models\weapons\arc9\bo1\bo1_acogs\acog_scope_in"
+	$basetexture	"models/weapons/arc9/bo1/bo1_acogs/acog_scope_in"
 	//"$color2" "[ .4 .4 .4 ]"
 	"$blendtintbybasealpha" "1"
 	"$phong" "1"

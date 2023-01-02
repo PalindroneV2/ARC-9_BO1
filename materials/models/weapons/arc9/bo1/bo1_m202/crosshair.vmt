@@ -1,5 +1,5 @@
 "VertexLitGeneric"
 {
-	$basetexture	"models\weapons\arc9\bo1\bo1_m202\crosshair"
+	$basetexture	"models/weapons/arc9/bo1/bo1_m202/crosshair"
 	"$translucent" "1"
 }

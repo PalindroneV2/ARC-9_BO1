@@ -3,8 +3,8 @@ VertexlitGeneric
 	"$basetexture" "models/weapons/arc9/bo1/bo1_python/python_c"
 	"$bumpmap" "models/weapons/arc9/bo1/bo1_python/python_n"
 	
-	$detail		"models\weapons\arc9\bo1\gold_c"
-	$envmapmask	"models\weapons\arc9\bo1\gold_s"
+	$detail		"models/weapons/arc9/bo1/gold_c"
+	$envmapmask	"models/weapons/arc9/bo1/gold_s"
 	$detailblendmode		3
 	$detailblendfactor 1
 	

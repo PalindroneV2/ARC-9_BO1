@@ -1,6 +1,6 @@
 VertexLitGeneric
 {
-    $baseTexture "models\weapons\arc9\bo1\bo1_m16\m16a2"
+    $baseTexture "models/weapons/arc9/bo1/bo1_m16/m16a2"
     "$bumpmap" "models/weapons/arc9/cde/kali_ar15/Parts_A2_N"						
 	"$phongexponenttexture" "models/weapons/arc9/cde/kali_ar15/Parts_A2_Exp"
 
@@ -11,7 +11,7 @@ VertexLitGeneric
 	$phongalbedotint             "1"
 	$normalmapalphaphongmask    	1
 
-    $detail		"models\weapons\arc9\bo1\tan"
+    $detail		"models/weapons/arc9/bo1/tan"
 	$detailblendmode		3
 	$detailblendfactor 0.3
 

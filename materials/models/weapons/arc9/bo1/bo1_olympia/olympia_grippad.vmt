@@ -1,8 +1,8 @@
 VertexlitGeneric
 {
-	$basetexture	"models\weapons\arc9\bo1\bo1_olympia\olympia_nostock"
+	$basetexture	"models/weapons/arc9/bo1/bo1_olympia/olympia_nostock"
 	
-	//$bumpmap	"models\weapons\arc9\bo1\bo1_olympia\olympia_n"
+	//$bumpmap	"models/weapons/arc9/bo1/bo1_olympia/olympia_n"
 
 	
 	//"$color2" "[ .4 .4 .4 ]"

@@ -1,7 +1,7 @@
 "VertexLitGeneric"
 {
-	$basetexture	"models\weapons\arc9\bo2\bo2_optics\ballista_scope"
-	$bumpmap	"models\weapons\arc9\bo2\bo2_optics\ballista_scope_n"
+	$basetexture	"models/weapons/arc9/bo2/bo2_optics/ballista_scope"
+	$bumpmap	"models/weapons/arc9/bo2/bo2_optics/ballista_scope_n"
 	
 	//"$color2" "[ .4 .4 .4 ]"
 	"$blendtintbybasealpha" "1"

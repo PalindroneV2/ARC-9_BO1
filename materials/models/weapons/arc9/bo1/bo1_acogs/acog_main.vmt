@@ -1,8 +1,8 @@
 "VertexLitGeneric"
 {
-	$basetexture	"models\weapons\arc9\bo1\bo1_acogs\acog_main_c"
+	$basetexture	"models/weapons/arc9/bo1/bo1_acogs/acog_main_c"
 	
-	$bumpmap	"models\weapons\arc9\bo1\bo1_acogs\acog_main_n"
+	$bumpmap	"models/weapons/arc9/bo1/bo1_acogs/acog_main_n"
 	$detail "models/weapons/arc9/bo1/black_detail"
 	$detailblendmode 0
 	$detailblendfactor 10

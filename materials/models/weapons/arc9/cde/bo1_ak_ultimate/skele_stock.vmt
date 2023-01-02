@@ -1,8 +1,8 @@
 VertexLitGeneric
 {
-	$basetexture	"models\weapons\arc9\bo1\bo1_ak47\bizon"
+	$basetexture	"models/weapons/arc9/bo1/bo1_ak47/bizon"
 	//$color2 "[0.75 0.75 0.75]"
-	"$phongexponenttexture" "models\weapons\arc9\bo1\bo1_ak47\bizon_exponent"
+	"$phongexponenttexture" "models/weapons/arc9/bo1/bo1_ak47/bizon_exponent"
 	
 	"$blendtintbybasealpha" "1"
 	"$phong" "1"
@@ -14,6 +14,6 @@ VertexLitGeneric
 	"$envmapfresnel" "0.01"
 	"$envmaptint" "[ .01 .01 .01 ]"
 
-	$detail "models\weapons\arc9\bo1\gunmetal"
+	$detail "models/weapons/arc9/bo1/gunmetal"
 	$detailblendfactor 0.5
 }

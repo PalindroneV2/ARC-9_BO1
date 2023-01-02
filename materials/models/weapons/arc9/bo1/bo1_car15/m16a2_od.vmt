@@ -1,6 +1,6 @@
 VertexLitGeneric
 {
-    $baseTexture "models\weapons\arc9\bo1\bo1_m16\m16a2"
+    $baseTexture "models/weapons/arc9/bo1/bo1_m16/m16a2"
     "$bumpmap" "models/weapons/arc9/cde/kali_ar15/Parts_A2_N"						
 	"$phongexponenttexture" "models/weapons/arc9/cde/kali_ar15/Parts_A2_Exp"
 
@@ -16,7 +16,7 @@ VertexLitGeneric
 	"$envmapfresnel" "0.01"
 	"$envmaptint" "[ .01 .01 .01 ]"
 
-    $detail		"models\weapons\arc9\bo1\od_green"
+    $detail		"models/weapons/arc9/bo1/od_green"
 	$detailblendmode		3
 	$detailblendfactor 0.3
 }

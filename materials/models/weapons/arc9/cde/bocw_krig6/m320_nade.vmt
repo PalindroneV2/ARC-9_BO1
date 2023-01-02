@@ -15,7 +15,7 @@
 	"$envmapfresnel" "0.01"
 	"$envmaptint" "[ .01 .01 .01 ]"
 
-	"$phongexponenttexture" "models\weapons\arc9\cde\bocw_krig6\exponent"
+	"$phongexponenttexture" "models/weapons/arc9/cde/bocw_krig6/exponent"
 	"$cloakPassEnabled" 		"1"
 
 	"$nocull" "1"

@@ -1,10 +1,10 @@
 "VertexlitGeneric"
 {
-	$basetexture	"models\weapons\arc9\bo1\kaki_02"
+	$basetexture	"models/weapons/arc9/bo1/kaki_02"
 	"$selfillum" "1"
-	$selfillummask	"models\weapons\arc9\bo2\bo2_optics\noise"
+	$selfillummask	"models/weapons/arc9/bo2/bo2_optics/noise"
 
-	$detail "models\weapons\arc9\bo2\bo2_optics\noise"
+	$detail "models/weapons/arc9/bo2/bo2_optics/noise"
 	$detailscale	2
 	$detailblendmode	2
 	$detailblendfactor	1

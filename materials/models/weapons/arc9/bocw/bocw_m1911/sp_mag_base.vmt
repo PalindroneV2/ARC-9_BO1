@@ -18,7 +18,7 @@
 
 	$nocull 1
 
-	$detail		"models\weapons\arc9\bo1\blueshift"
+	$detail		"models/weapons/arc9/bo1/blueshift"
 	$detailblendmode 1
 	$detailblendfactor 0.15
 }

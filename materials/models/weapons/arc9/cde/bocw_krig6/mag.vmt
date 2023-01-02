@@ -2,9 +2,9 @@
 // METALNESS: 211 GAMMA: 235
 "VertexLitGeneric"
 {
-	"$basetexture" "models\weapons\arc9\cde\bocw_krig6\mag_c"
-	"$bumpmap" "models\weapons\arc9\cde\bocw_krig6\mag_n"
-	"$phongexponenttexture" "models\weapons\arc9\cde\bocw_krig6\mag_m"
+	"$basetexture" "models/weapons/arc9/cde/bocw_krig6/mag_c"
+	"$bumpmap" "models/weapons/arc9/cde/bocw_krig6/mag_n"
+	"$phongexponenttexture" "models/weapons/arc9/cde/bocw_krig6/mag_m"
 	"$color2" "[ .4 .4 .4 ]"
 	"$blendtintbybasealpha" "1"
 	"$phong" "1"
