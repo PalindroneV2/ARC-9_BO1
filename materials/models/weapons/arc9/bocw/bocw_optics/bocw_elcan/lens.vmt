@@ -1,11 +1,11 @@
 "VertexlitGeneric"
 {
-	"$basetexture""models\weapons\arc9\bocw\bocw_optics\bocw_elcan\lens_g"
+	"$basetexture""models/weapons/arc9/bocw/bocw_optics/bocw_elcan/lens_g"
 
 
-	"$bumpmap"	"models\weapons\arc9\bocw\$normal"
+	"$bumpmap"	"models/weapons/arc9/bocw/$normal"
 
-	"$detail" 	"models\weapons\arc9\bocw\bocw_optics\bocw_elcan\lens_c"
+	"$detail" 	"models/weapons/arc9/bocw/bocw_optics/bocw_elcan/lens_c"
 	"$blendtintbybasealpha" "1"
 	"$phong" "1"
 	"$phongboost" "1"

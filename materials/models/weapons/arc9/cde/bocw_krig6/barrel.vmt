@@ -1,8 +1,8 @@
 "VertexLitGeneric"
 {
-	"$basetexture" "models\weapons\arc9\cde\bocw_krig6\barrel_c"
-	"$bumpmap" "models\weapons\arc9\cde\bocw_krig6\barrel_n"
-	"$phongexponenttexture" "models\weapons\arc9\cde\bocw_krig6\barrel_m"
+	"$basetexture" "models/weapons/arc9/cde/bocw_krig6/barrel_c"
+	"$bumpmap" "models/weapons/arc9/cde/bocw_krig6/barrel_n"
+	"$phongexponenttexture" "models/weapons/arc9/cde/bocw_krig6/barrel_m"
 	"$color2" "[.7 .7 .7]"
 	"$blendtintbybasealpha" "1"
 	"$phong" "1"

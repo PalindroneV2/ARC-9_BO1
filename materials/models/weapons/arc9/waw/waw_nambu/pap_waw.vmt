@@ -1,7 +1,7 @@
 VertexlitGeneric
 {
-	$basetexture	"models\weapons\pap\pap_blue_burn"
-	$bumpmap	"models\weapons\pap\pap_n"
+	$basetexture	"models/weapons/pap/pap_blue_burn"
+	$bumpmap	"models/weapons/pap/pap_n"
 
 	$phong "1"
 	

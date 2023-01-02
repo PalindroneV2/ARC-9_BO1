@@ -1,7 +1,7 @@
 "VertexlitGeneric"
 {
-	"$basetexture""models\weapons\arc9\bocw\bocw_optics\bocw_elcan\back_c"
-	"$bumpmap"	"models\weapons\arc9\bocw\bocw_optics\bocw_elcan\back_n"
+	"$basetexture""models/weapons/arc9/bocw/bocw_optics/bocw_elcan/back_c"
+	"$bumpmap"	"models/weapons/arc9/bocw/bocw_optics/bocw_elcan/back_n"
 
 	
 	//"$color2" "[ .4 .4 .4 ]"

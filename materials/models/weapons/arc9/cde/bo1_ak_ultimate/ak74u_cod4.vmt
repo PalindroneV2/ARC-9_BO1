@@ -1,13 +1,13 @@
 VertexlitGeneric
 {
-	$basetexture	"models\weapons\arc9\cde\mwc_aks\ak74u_cod4"
-	"$bumpmap" "models\weapons\arc9\bo1\normalmap"
+	$basetexture	"models/weapons/arc9/cde/mwc_aks/ak74u_cod4"
+	"$bumpmap" "models/weapons/arc9/bo1/normalmap"
 
-	$detail "models\weapons\arc9\bo1\black_detail"
+	$detail "models/weapons/arc9/bo1/black_detail"
 	$detailblendmode 0
 	"$detailblendfactor" "1"
 
-	$phongexponenttexture "models\weapons\arc9\cde\mwc_aks\ak74u_cod4_s"
+	$phongexponenttexture "models/weapons/arc9/cde/mwc_aks/ak74u_cod4_s"
 	"$nocull" "1"
 	
 	"$blendtintbybasealpha" "1"

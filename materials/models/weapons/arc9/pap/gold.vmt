@@ -4,8 +4,8 @@
 	
 	"$bumpmap" "models/weapons/arc9/bo1/plastic"
 	
-	$detail		"models\weapons\arc9\bo1\gold_c"
-	$envmapmask	"models\weapons\arc9\bo1\gold_s"
+	$detail		"models/weapons/arc9/bo1/gold_c"
+	$envmapmask	"models/weapons/arc9/bo1/gold_s"
 	$detailblendmode		3
 	$detailblendfactor 1
 	

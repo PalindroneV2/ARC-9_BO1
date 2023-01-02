@@ -3,9 +3,9 @@ VertexlitGeneric
 	"$basetexture" "models/weapons/arc9/bo3/bo3_bloodhound/loader"
 	"$bumpmap" "models/weapons/arc9/bo3/bo3_bloodhound/loader_n"
 	$selfillum 1
-	$selfillummask "models\weapons\arc9\pap\pap_cosmic_s"
+	$selfillummask "models/weapons/arc9/pap/pap_cosmic_s"
 
-	$detail	"models\weapons\arc9\pap\pap_cosmic"
+	$detail	"models/weapons/arc9/pap/pap_cosmic"
 	$detailscale 4
 	$detailblendmode 2
 	$detailblendfactor 1

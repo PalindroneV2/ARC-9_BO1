@@ -1,7 +1,7 @@
 "VertexLitGeneric"
 {
-	"$basetexture"	"models\weapons\arc9\cde\gso_scar\snip_scar20"
-	"$phongexponenttexture" "models\weapons\arc9\cde\gso_scar\snip_scar20_exponent"
+	"$basetexture"	"models/weapons/arc9/cde/gso_scar/snip_scar20"
+	"$phongexponenttexture" "models/weapons/arc9/cde/gso_scar/snip_scar20_exponent"
 	"$blendtintbybasealpha" "1"
 	"$phong" "1"
 	"$phongboost" "1"

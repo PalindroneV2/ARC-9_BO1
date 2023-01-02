@@ -6,11 +6,11 @@ VertexlitGeneric
 	"$envmapmask" "models/weapons/arc9/waw/waw_p38/p38_s"
 	$normalmapalphaenvmapmask "1"
 
-	$detail	"models\weapons\arc9\pap\pap_cosmic"
+	$detail	"models/weapons/arc9/pap/pap_cosmic"
 	$detailscale 4
 	$detailblendmode 2
 	$selfillum 1
-	$selfillummask "models\weapons\arc9\pap\pap_cosmic_s"
+	$selfillummask "models/weapons/arc9/pap/pap_cosmic_s"
 	$detailblendfactor 1
 	Proxies
 	{

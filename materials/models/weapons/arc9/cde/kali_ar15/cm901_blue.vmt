@@ -1,8 +1,8 @@
 VertexlitGeneric
 {
-	$basetexture	"models\weapons\arc9\cde\kali_ar15\cm901_c"
+	$basetexture	"models/weapons/arc9/cde/kali_ar15/cm901_c"
 	//$color2 "[0.5 0.5 0.5]"
-	$bumpmap	"models\weapons\arc9\cde\kali_ar15\cm901_n"
+	$bumpmap	"models/weapons/arc9/cde/kali_ar15/cm901_n"
 
 	
 	//"$color2" "[ .4 .4 .4 ]"
@@ -16,7 +16,7 @@ VertexlitGeneric
 	"$envmapfresnel" "0.01"
 	"$envmaptint" "[ .01 .01 .01 ]"
 
-	"$detail" "models\weapons\arc9\bo1\blueshift"
+	"$detail" "models/weapons/arc9/bo1/blueshift"
 	"$detailblendfactor" "1"
 	$detailblendmode 2
 }
