@@ -273,6 +273,13 @@ ATT.RangeMinMult = 1.5
 ATT.PhysBulletMuzzleVelocityMult = 1.55
 
 ATT.MuzzleParticle = "rgmk2_pap_flash"
+ATT.FirstShootSound = "ARC9_COD.PAP_Fire"
+ATT.ShootSound = "ARC9_COD.PAP_Fire"
+ATT.ShootSoundSilenced = "ARC9_COD.PAP_Fire"
+ATT.DistantShootSound = {
+    "ARC9_COD.PAP_Flux_Left",
+    "ARC9_COD.PAP_Flux_Right",
+}
 
 ATT.TracerNum = 1
 ATT.TracerFinalMag = 5
@@ -306,12 +313,12 @@ ATT.PenetrationMult = 2
 ATT.RangeMaxMult = 1.5
 ATT.RangeMinMult = 1.5
 ATT.PhysBulletMuzzleVelocityMult = 1.55
-ATT.FirstShootSound = "PAP_Effect"
-ATT.ShootSound = "PAP_Effect"
-ATT.ShootSoundSilenced = "PAP_Effect"
+ATT.FirstShootSound = "ARC9_COD.PAP_Fire"
+ATT.ShootSound = "ARC9_COD.PAP_Fire"
+ATT.ShootSoundSilenced = "ARC9_COD.PAP_Fire"
 ATT.DistantShootSound = {
-    "PAP_Flux_Left",
-    "PAP_Flux_Right",
+    "ARC9_COD.PAP_Flux_Left",
+    "ARC9_COD.PAP_Flux_Right",
 }
 
 ATT.MuzzleParticle = "rgmk2_pap_flash"
@@ -344,12 +351,12 @@ ATT.PenetrationMult = 2
 ATT.RangeMaxMult = 1.5
 ATT.RangeMinMult = 1.5
 ATT.PhysBulletMuzzleVelocityMult = 1.75
-ATT.FirstShootSound = "PAP_Effect"
-ATT.ShootSound = "PAP_Effect"
--- ATT.ShootSoundSilenced = "PAP_Effect"
+ATT.FirstShootSound = "ARC9_COD.PAP_Fire"
+ATT.ShootSound = "ARC9_COD.PAP_Fire"
+-- ATT.ShootSoundSilenced = "ARC9_COD.PAP_Fire"
 ATT.DistantShootSound = {
-    "PAP_Flux_Left",
-    "PAP_Flux_Right",
+    "ARC9_COD.PAP_Flux_Left",
+    "ARC9_COD.PAP_Flux_Right",
 }
 
 ATT.MuzzleParticle = "rgmk2_pap_flash"
@@ -383,12 +390,12 @@ ATT.PenetrationMult = 2
 ATT.RangeMaxMult = 1.5
 ATT.RangeMinMult = 1.5
 ATT.PhysBulletMuzzleVelocityMult = 1.75
-ATT.FirstShootSound = "PAP_Effect"
-ATT.ShootSound = "PAP_Effect"
--- ATT.ShootSoundSilenced = "PAP_Effect"
+ATT.FirstShootSound = "ARC9_COD.PAP_Fire"
+ATT.ShootSound = "ARC9_COD.PAP_Fire"
+-- ATT.ShootSoundSilenced = "ARC9_COD.PAP_Fire"
 ATT.DistantShootSound = {
-    "PAP_Flux_Left",
-    "PAP_Flux_Right",
+    "ARC9_COD.PAP_Flux_Left",
+    "ARC9_COD.PAP_Flux_Right",
 }
 
 ATT.MuzzleParticle = "raygun_flash_pap"

@@ -387,6 +387,15 @@ SWEP.Animations = {
             {s = "ARC9_BO2.Pistol_SlideFwd", t = 1.5}
         },
     },
+    ["reload_empty_up"] = {
+        Source = "reload_empty_up",
+        Time = 2,
+        EventTable = {
+            {s = "ARC9_BO2.Pistol_MagOut", t = 0.25},
+            {s = "ARC9_BO2.Pistol_MagIn", t = 0.9},
+            {s = "ARC9_BO2.Pistol_SlideFwd", t = 1.5}
+        },
+    },
     ["enter_sprint"] = {
         Source = "sprint_in",
         Time = 1,

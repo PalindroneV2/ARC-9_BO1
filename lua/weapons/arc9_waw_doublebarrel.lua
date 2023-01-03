@@ -215,8 +215,8 @@ SWEP.MovingMidPoint = {
     Ang = SWEP.ActiveAng
 }
 
-SWEP.CrouchPos = Vector(0, -8.5, -1)
-SWEP.CrouchAng = Angle(0, 0, -5)
+SWEP.CrouchPos = SWEP.ActivePos
+SWEP.CrouchAng = SWEP.ActiveAng
 
 SWEP.SprintVerticalOffset = false
 SWEP.SprintPos = Vector(10, -4, -2)
@@ -298,11 +298,16 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     end
     self.ActivePos = newactpos
     self.ActiveAng = newactang
+    self.MovingPos = newactpos
+    self.MovingAng = newactang
+    self.MovingMidPoint = {
+        Pos = newactpos,
+        Ang = newactang
+    }
     self.CrouchPos = newactpos
     self.CrouchAng = newactang
     self.SprintPos = newactpos
     self.SprintAng = newactang
-
 end
 
 SWEP.Hook_TranslateAnimation = function (self, anim)

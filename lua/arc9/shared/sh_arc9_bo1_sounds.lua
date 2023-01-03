@@ -2758,7 +2758,7 @@ sound.Add({
 -- PAP EFFECT --
 
 sound.Add( {
-    name = "PAP_Fire",
+    name = "ARC9_COD.PAP_Fire",
     channel = CHAN_STATIC,
     volume = 1.0,
     level = 100,
@@ -2766,7 +2766,7 @@ sound.Add( {
     sound = {"^weapons/arc9/pap/pap_fire.wav"}
 } )
 sound.Add( {
-    name = "PAP_Flux_Left",
+    name = "ARC9_COD.PAP_Flux_Left",
     channel = CHAN_USER_BASE,
     volume = 0.7,
     level = 100,
@@ -2774,7 +2774,7 @@ sound.Add( {
     sound = {"^weapons/arc9/pap/pap_flux_left.wav"}
 } )
 sound.Add( {
-    name = "PAP_Flux_Right",
+    name = "ARC9_COD.PAP_Flux_Right",
     channel = CHAN_USER_BASE,
     volume = 0.7,
     level = 100,
