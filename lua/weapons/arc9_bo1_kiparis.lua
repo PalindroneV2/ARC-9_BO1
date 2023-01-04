@@ -378,23 +378,23 @@ SWEP.Animations = {
     },
     ["holster"] = {
         Source = "holster",
-        Time = 1,
+        Time = 0.75,
     },
     ["holster_empty"] = {
         Source = "holster_empty",
-        Time = 1,
+        Time = 0.75,
     },
     ["draw"] = {
         Source = "draw",
-        Time = 1,
+        Time = 0.75,
     },
     ["ready"] = {
         Source = "draw",
-        Time = 1,
+        Time = 0.75,
     },
     ["ready_stock"] = {
         Source = "first_draw_stock",
-        Time = 1.5,
+        Time = 1,
         EventTable = {
             {s = "ARC9_BO1.MAC11_Stock", t = 6 / 30},
             {s = "ARC9_BO1.MAC11_Stock", t = 12 / 30},

@@ -280,19 +280,10 @@ end
 
 SWEP.Attachments = {
     {
-        PrintName = "Optic",
-        Bone = "j_gun",
-        Pos = Vector(0, -0.125, 2.25),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic_lp", "bo1_rail_riser"},
-        -- CorrectiveAng = Angle(0.025, 0.05, 0),
-        InstalledElements = {"mount"},
-    },
-    {
         PrintName = "Muzzle",
         Bone = "j_gun",
         Scale = Vector(1.3, 1, 1),
-        Pos = Vector(8, -0.125, 1.45),
+        Pos = Vector(7, 0, 1.375),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_muzzle_smg", "bo1_muzzle_pistol"},
     },
@@ -315,7 +306,7 @@ SWEP.Attachments = {
         PrintName = "Magazine",
         DefaultCompactName = "MAG",
         Bone = "tag_clip",
-        Pos = Vector(.5, 0, 3),
+        Pos = Vector(0, 0, -1),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_mag_ext"},
     },
@@ -323,7 +314,7 @@ SWEP.Attachments = {
         PrintName = "Ammunition",
         DefaultCompactName = "AMMO",
         Bone = "tag_clip",
-        Pos = Vector(.5, 0, 0),
+        Pos = Vector(1, 0, -4),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ammo", "bo1_pap"},
     },
