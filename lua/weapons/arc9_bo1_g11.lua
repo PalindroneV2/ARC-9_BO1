@@ -154,7 +154,7 @@ SWEP.ShootPitchVariation = 0
 
 SWEP.ShootSound = "ARC9_BO1.G11_Fire"
 SWEP.ShootSoundSilenced = "ARC9_BO1.AUG_Sil"
-SWEP.DistantShootSound = {"weapons/ARC9/bo1_g11/ringoff_f.wav", "weapons/ARC9/bo1_g11/ringoff_r.wav"}
+SWEP.DistantShootSound = {"ARC9_BO1.G11_RingOff_F", "ARC9_BO1.G11_RingOff_R"}
 
 SWEP.UBGLIntegralReload = true -- The UBGL uses reload animations that are baked into the gun.
 SWEP.DoFireAnimationUBGL = true

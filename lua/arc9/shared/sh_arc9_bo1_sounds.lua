@@ -159,6 +159,23 @@ sound.Add( {
     }
 } )
 
+sound.Add( {
+    name = "ARC9_BO1.AUG_RingOff_F",
+    channel = CHAN_WEAPON,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {"^weapons/arc9/bo1_aug/ringoff_f.wav"}
+} )
+sound.Add( {
+    name = "ARC9_BO1.AUG_RingOff_R",
+    channel = CHAN_WEAPON,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {"^weapons/arc9/bo1_aug/ringoff_r.wav"}
+} )
+
 --- XL60 Main ---
 
 sound.Add( {
@@ -643,6 +660,23 @@ sound.Add( {
     sound = {
         "^weapons/arc9/bo1_g11/futz.wav",
     }
+} )
+
+sound.Add( {
+    name = "ARC9_BO1.G11_RingOff_F",
+    channel = CHAN_WEAPON,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {"^weapons/arc9/bo1_G11/ringoff_f.wav"}
+} )
+sound.Add( {
+    name = "ARC9_BO1.G11_RingOff_R",
+    channel = CHAN_WEAPON,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {"^weapons/arc9/bo1_G11/ringoff_r.wav"}
 } )
 
 --- M14 Main ---
@@ -1268,7 +1302,7 @@ sound.Add( {
     }
 } )
 sound.Add( {
-    name = "ARC9_BO1.MAC11_RingOff_F",
+    name = "ARC9_BO1.MAC11_RingOff_R",
     channel = CHAN_WEAPON,
     volume = 1.0,
     level = 100,
