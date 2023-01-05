@@ -130,7 +130,7 @@ SWEP.ManualActionNoLastCycle = false -- Do not cycle on the last shot.
 SWEP.SlamFire = false
 SWEP.CycleTime = 1
 
-SWEP.ARC9WeaponCategory = {"weapon_shotgun"}
+SWEP.ARC9WeaponCategory = 2
 SWEP.NPCWeight = 10
 
 SWEP.FreeAimRadius = 0 -- In degrees, how much this gun can free aim in hip fire.

@@ -167,8 +167,8 @@ SWEP.Firemodes = {
 }
 SWEP.RunawayBurst = true
 SWEP.PostBurstDelay = 0.1
-SWEP.ARC9WeaponCategory = {"weapon_smg1"}
-SWEP.NPCWeight = 100
+SWEP.ARC9WeaponCategory = 3
+SWEP.NPCWeight = 1
 
 SWEP.FreeAimRadius = 0 -- In degrees, how much this gun can free aim in hip fire.
 SWEP.Sway = 0 -- How much the gun sways.

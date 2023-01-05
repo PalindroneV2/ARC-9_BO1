@@ -128,7 +128,7 @@ SWEP.Firemodes = {
         Mode = 1,
     },
 }
-SWEP.ARC9WeaponCategory = {"weapon_ar2", "weapon_smg1"}
+SWEP.ARC9WeaponCategory = 4
 SWEP.NPCWeight = 100
 
 SWEP.FreeAimRadius = 0 -- In degrees, how much this gun can free aim in hip fire.
@@ -169,10 +169,10 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector (-1.56, -9, -0.25),
-    Ang = Angle(0.025, 0.15, 0),
+    Pos = Vector (-2.8, -3, 0.35),
+    Ang = Angle(0, 0.3, 0),
     Magnification = 1.1,
-    AssociatedSlot = 9,
+    ViewModelFOV = 60,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
 }

@@ -141,7 +141,7 @@ SWEP.Firemodes = {
         PhysBulletMuzzleVelocityMult = 1.15
     }
 }
-SWEP.ARC9WeaponCategory = {"weapon_shotgun"}
+SWEP.ARC9WeaponCategory = 2
 SWEP.NPCWeight = 100
 
 SWEP.FreeAimRadius = 0 -- In degrees, how much this gun can free aim in hip fire.

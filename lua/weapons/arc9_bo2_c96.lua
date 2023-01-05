@@ -129,7 +129,7 @@ SWEP.Firemodes = {
         Mode = -1,
     },
 }
-SWEP.ARC9WeaponCategory = {"weapon_pistol"}
+SWEP.ARC9WeaponCategory = 1
 SWEP.NPCWeight = 100
 
 SWEP.FreeAimRadius = 0 -- In degrees, how much this gun can free aim in hip fire.
@@ -145,9 +145,9 @@ SWEP.ShootVolume = 125
 SWEP.ShootPitch = 100
 SWEP.ShootPitchVariation = 0
 
-SWEP.ShootSound = "ARC9_BO2.BHP_Fire"
+SWEP.ShootSound = "ARC9_WAW.P38_Fire"
 SWEP.ShootSoundSilenced = "ARC9_BO2.Pistol_Sil"
-SWEP.DistantShootSound = "ARC9_BO2.Pistol_RingOff"
+SWEP.DistantShootSound = "^weapons/ARC9/waw_dist/waw_9mm.wav"
 
 --SWEP.MuzzleEffect = "muzzleflash_4"
 SWEP.MuzzleParticle = "muzzleflash_pistol" -- Used for some muzzle effects.

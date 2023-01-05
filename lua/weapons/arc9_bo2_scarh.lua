@@ -128,7 +128,7 @@ SWEP.Firemodes = {
         Mode = 1,
     },
 }
-SWEP.ARC9WeaponCategory = {"weapon_ar2", "weapon_smg1"}
+SWEP.ARC9WeaponCategory = 4
 SWEP.NPCWeight = 100
 
 SWEP.FreeAimRadius = 0 -- In degrees, how much this gun can free aim in hip fire.
@@ -146,6 +146,12 @@ SWEP.ShootPitchVariation = 0
 
 SWEP.ShootSound = "ARC9_BO2.SCAR_Fire"
 SWEP.ShootSoundSilenced = "ARC9_BO2.M27_Sil"
+SWEP.DistantShootSound = {
+    "^weapons/ARC9/bo2_generic_ar/dist/0.wav",
+    "^weapons/ARC9/bo2_generic_ar/dist/1.wav",
+    "^weapons/ARC9/bo2_generic_ar/dist/2.wav",
+    "^weapons/ARC9/bo2_generic_ar/dist/3.wav"
+}
 
 SWEP.UBGLIntegralReload = true -- The UBGL uses reload animations that are baked into the gun.
 SWEP.DoFireAnimationUBGL = true
@@ -153,7 +159,7 @@ SWEP.NoShellEjectUBGL = true
 SWEP.MuzzleEffectQCAUBGL = 1
 
 --SWEP.MuzzleEffect = "muzzleflash_4"
-SWEP.MuzzleParticle = "muzzleflash_4" -- Used for some muzzle effects.
+SWEP.MuzzleParticle = "muzzleflash_m14" -- Used for some muzzle effects.
 
 SWEP.ShellModel = "models/shells/shell_556.mdl"
 SWEP.ShellPitch = 90
@@ -303,7 +309,7 @@ SWEP.Attachments = {
     {
         PrintName = "Muzzle",
         Bone = "j_gun",
-        Pos = Vector(18.4, 0.05, 1.5),
+        Pos = Vector(18.4, 0.05, 1.325),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_muzzle"},
     },
@@ -319,7 +325,7 @@ SWEP.Attachments = {
         PrintName = "Tactical Right",
         DefaultCompactName = "TAC R",
         Bone = "j_gun",
-        Pos = Vector(12, 0.8, 2.55),
+        Pos = Vector(11, 0.75, 1.325),
         Ang = Angle(0, 0, -90),
         Category = {"bo1_tactical"},
     },
@@ -327,7 +333,7 @@ SWEP.Attachments = {
         PrintName = "Tactical Left",
         DefaultCompactName = "TAC L",
         Bone = "j_gun",
-        Pos = Vector(12, -0.8, 2.55),
+        Pos = Vector(11, -0.75, 1.325),
         Ang = Angle(0, 0, 90),
         Category = {"bo1_tactical"},
     },
@@ -335,18 +341,20 @@ SWEP.Attachments = {
         PrintName = "Tactical Top",
         DefaultCompactName = "TAC T",
         Bone = "j_gun",
-        Pos = Vector(12, 0, 3.5),
+        Pos = Vector(10.25, 0, 2.9),
         Ang = Angle(0, 0, 180),
         Category = {"bo1_tactical_top"},
         ExcludeElements = {"mw3_psrscope"},
     },
     {
+        Hidden = true,
         PrintName = "Stock",
         Bone = "j_gun",
         Pos = Vector(-3, 0, 2.65),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_stock_mh"},
+        Category = {"bo1_stock_m"},
         Installed = "bo1_stock_medium",
+        Integral = true,
     },
     {
         PrintName = "Magazine",

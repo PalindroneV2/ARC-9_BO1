@@ -128,8 +128,8 @@ SWEP.Firemodes = {
         Mode = 1,
     },
 }
-SWEP.ARC9WeaponCategory = {"weapon_ar2", "weapon_crossbow"}
-SWEP.NPCWeight = 100
+SWEP.ARC9WeaponCategory = 5
+SWEP.NPCWeight = 80
 
 SWEP.FreeAimRadius = 0 -- In degrees, how much this gun can free aim in hip fire.
 SWEP.Sway = 0 -- How much the gun sways.
