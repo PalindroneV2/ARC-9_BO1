@@ -1,6 +1,7 @@
 SWEP.Base = "arc9_base"
 SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ARC9 - Black Ops II" -- edit this if you like
+SWEP.SubCategory = "Submachine Guns"
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "Scorpion Evo 3 A1"
