@@ -1,9 +1,10 @@
 VertexlitGeneric
 {
-	$basetexture	"models/weapons/arc9/bo2/bo2_storm/storm"
-	//$color2 "[0.5 0.5 0.5]"
-	$bumpmap	"models/weapons/arc9/bo2/bo2_storm/storm_n"
-
+	"$basetexture" "models/weapons/arc9/bo2/bo2_storm/storm"
+	"$bumpmap" "models/weapons/arc9/bo2/bo2_storm/storm_n"
+	"$phongexponenttexture" "models/weapons/arc9/bo2/bo2_storm/storm_s"
+	"$envmapmask" "models/weapons/arc9/bo2/bo2_storm/storm_s"
+	"$normalmapalphaenvmapmask" "1"
 	
 	//"$color2" "[ .4 .4 .4 ]"
 	"$blendtintbybasealpha" "1"
