@@ -16,15 +16,15 @@ ATT.Free = false
 ATT.Folder = "SCOPE"
 
 ATT.Category = {"bo2_optic_storm"}
+ATT.ActivateElements = {"psr_scope"}
 
-
-ATT.Model = "models/weapons/arc9/atts/bo2_storm_scope.mdl.mdl"
+ATT.Model = "models/weapons/arc9/atts/bo2_storm_scope.mdl"
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 
 ATT.Sights = {
     {
-        Pos = Vector(0, 7.5, -4.5325),
+        Pos = Vector(0, 3, -5.385),
         Ang = Angle(0, 0.1, 0),
         ViewModelFOV = 40,
         Magnification = 1.25,
@@ -33,7 +33,7 @@ ATT.Sights = {
 }
 
 ATT.RTScope = true
-ATT.RTScopeSubmatIndex = 1
+ATT.RTScopeSubmatIndex = 5
 ATT.RTScopeFOV = 2
 ATT.RTScopeFOVMax = 2
 ATT.RTScopeFOVMin = 12
@@ -42,7 +42,7 @@ ATT.RTScopeAdjustmentLevels = 4
 ATT.RTScopeRes = 1024
 ATT.RTScopeReticle = Material("hud/arc9_bo1/scopes/bo2_storm_alt.png", "mips smooth")
 ATT.RTScopeShadowIntensity = 1.5
-ATT.RTScopeReticleScale = 1.1
+ATT.RTScopeReticleScale = 0.9
 ATT.RTScopeNoPP = false
 ATT.RTScopeNoShadow = false
 

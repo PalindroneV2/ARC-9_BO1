@@ -4,16 +4,16 @@ SWEP.Category = "ARC9 - Black Ops" -- edit this if you like
 SWEP.SubCategory = "Specials/Explosives"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = [[Pulwar Sword]]
+SWEP.PrintName = [[Pulwar]]
 SWEP.Class = "Melee Weapon"
 SWEP.Description = [[
-    Knife used by the legendary special forces unit MACV-SOG.
+    Single-handed curved sword from Afghanistan
 ]]
 SWEP.Trivia = {
     Manufacturer = "Many",
     Mechanism = "Slashing",
-    Country = "Many",
-    Year = "XVIII Century",
+    Country = "Afghanistan",
+    Year = "XIX Century",
     Games = [[BO2]]
 }
 SWEP.Credits = {
@@ -247,34 +247,34 @@ SWEP.Attachments = {
 SWEP.Animations = {
     ["idle"] = {
         Source = {"idle"},
-        Time = 450 / 30,
+        Time = 10,
     },
     ["draw"] = {
         Source = "draw",
-        Time = 1,
+        Time = 0.6,
     },
     ["ready"] = {
-        Source = "draw",
-        Time = 1,
+        Source = "first_draw",
+        Time = 1.6,
     },
     ["holster"] = {
         Source = "holster",
-        Time = 1,
+        Time = 0.3,
     },
     ["bash"] = {
-        Source = {"swipe","swipe2","swipe3","swipe4","swipe5"},
+        Source = {"swipe2","swipe3","swipe4","swipe5"},
         Time = 1,
     },
     ["bash2"] = {
         Source = {"charge"},
-        Time = 1.33,
+        Time = 0.6,
     },
     ["backstab"] = {
         Source = {"charge"},
-        Time = 1.33,
+        Time = 0.6,
     },
     ["enter_sprint"] = {
-        Source = {"idle"},
+        Source = {"sprint_in"},
         Time = 1,
     },
     ["idle_sprint"] = {
@@ -282,7 +282,7 @@ SWEP.Animations = {
         Time = 3 / 4,
     },
     ["exit_sprint"] = {
-        Source = {"idle"},
+        Source = {"sprint_out"},
         Time = 1,
     },
 }

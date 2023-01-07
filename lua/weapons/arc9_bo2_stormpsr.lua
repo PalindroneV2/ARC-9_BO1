@@ -67,7 +67,7 @@ SWEP.TracerEffect = "ARC9_tracer" -- The effect to use for hitscan tracers
 SWEP.TracerColor = Color(255, 255, 255) -- Color of tracers. Only works if tracer effect supports it. For physical bullets, this is compressed down to 9-bit color.
 
 SWEP.ChamberSize = 0 -- dont fucking change this again.
-SWEP.ClipSize = 5 -- DefaultClip is automatically set.
+SWEP.ClipSize = 30 -- DefaultClip is automatically set.
 SWEP.ReloadTime = 1
 
 SWEP.Crosshair = true
@@ -153,9 +153,10 @@ SWEP.ShellPitch = 90
 SWEP.ShellScale = 1.5
 
 SWEP.MuzzleEffectQCA = 1 -- which attachment to put the muzzle on
-SWEP.CaseEffectQCA = 2 -- which attachment to put the case effect on
+SWEP.CaseEffectQCA = nil -- which attachment to put the case effect on
 SWEP.ProceduralViewQCA = 1
-SWEP.CamQCA = 4
+SWEP.CamQCA = 2
+SWEP.NoShellEject = true
 
 SWEP.BulletBones = {
 }
@@ -182,7 +183,7 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_AR2
 SWEP.AnimDraw = ACT_HL2MP_GESTURE_RANGE_ATTACK_KNIFE
 
-SWEP.ActivePos = Vector(0, 0, -1)
+SWEP.ActivePos = Vector(0, -5, -1)
 SWEP.ActiveAng = Angle(0, 0, -5)
 
 SWEP.MovingPos = SWEP.ActivePos
@@ -235,25 +236,10 @@ SWEP.AttachmentElements = {
 SWEP.Hook_ModifyBodygroups = function(self, data)
     local vm = data.model
     local attached = data.elements
-    local CUSTSTATE = self:GetCustomize()
-
-    if CUSTSTATE then
-        vm:SetBodygroup(0,1)
-        vm:SetBodygroup(3,1)
-    else
-        vm:SetBodygroup(0,0)
-        vm:SetBodygroup(3,0)
+    -- local CUSTSTATE = self:GetCustomize()
+    if attached["psr_scope"] then
+        vm:SetBodygroup(1,1)
     end
-    if attached["muzzle"] then
-        vm:SetBodygroup(3,2)
-    end
-
-    if attached["bo1_bipod"] then
-        vm:SetBodygroup(2,0)
-        if self:GetBipod() then
-            vm:SetBodygroup(2,1)
-        end
-    else vm:SetBodygroup(2,2) end
 
     local camo = 0
     if attached["universal_camo"] then
@@ -282,9 +268,12 @@ SWEP.Attachments = {
     {
         PrintName = "Optic",
         Bone = "j_reload",
-        Pos = Vector(-5.975, 0, -0.25),
+        Pos = Vector(-5.975, 0, -0.225),
         Ang = Angle(0, 0, 0),
         Category = {"bo2_optic_storm"},
+        Installed = "bo2_optic_stormpsr",
+        Integral = true,
+        Hidden = true,
     },
     {
         PrintName = "Ammunition",
@@ -330,14 +319,6 @@ SWEP.Attachments = {
         CosmeticOnly = true,
         Icon_Offset = Vector(-5, 0, 2.65),
     },
-    {
-        Hidden = true,
-        Bone = "j_gun",
-        Pos = Vector(-3, 0, 2.65),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_stock_h"},
-        Installed = "bo1_stock_heavy",
-    },
 }
 
 SWEP.Animations = {
@@ -371,6 +352,19 @@ SWEP.Animations = {
     },
     ["reload"] = {
         Source = "reload",
+        Time = 4.5,
+        EventTable = {
+            {s = "ARC9_BO2.Storm_Bolt", t = 0.5},
+            {s = "ARC9_BO2.Storm_Open", t = 0.6},
+            {s = "ARC9_BO2.Storm_Spring", t = 1.4},
+            {s = "ARC9_BO2.Storm_ClipOut", t = 1.5},
+            {s = "ARC9_BO2.Storm_ClipIn", t = 3.2},
+            {s = "ARC9_BO2.Storm_Close", t = 3.85},
+            {s = "ARC9_BO2.Storm_Spring", t = 3.85},
+        },
+    },
+    ["reload_empty"] = {
+        Source = "reload_empty",
         Time = 4.5,
         EventTable = {
             {s = "ARC9_BO2.Storm_Bolt", t = 0.5},

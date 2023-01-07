@@ -1,19 +1,19 @@
 SWEP.Base = "arc9_base"
 SWEP.Spawnable = true -- this obviously has to be set to true
-SWEP.Category = "ARC9 - Black Ops" -- edit this if you like
+SWEP.Category = "ARC9 - Black Ops II" -- edit this if you like
 SWEP.SubCategory = "Specials/Explosives"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = [[Machete]]
+SWEP.PrintName = [[SEAL Knife]]
 SWEP.Class = "Melee Weapon"
 SWEP.Description = [[
-    Knife used by the legendary special forces unit MACV-SOG.
+    Knife used by the legendary special forces unit SEAL Team Six.
 ]]
 SWEP.Trivia = {
-    Manufacturer = "Many",
+    Manufacturer = "[REDACTED]",
     Mechanism = "Slashing",
-    Country = "Many",
-    Year = "XVIII Century",
+    Country = "USA",
+    Year = 2025,
     Games = [[BO2]]
 }
 SWEP.Credits = {
@@ -24,9 +24,9 @@ SWEP.Slot = 0
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/arc9/c_bo2_machete.mdl"
-SWEP.WorldModel = "models/weapons/arc9/c_bo2_machete.mdl"
-SWEP.WorldModelMirror = "models/weapons/arc9/c_bo2_machete.mdl"
+SWEP.ViewModel = "models/weapons/arc9/c_bo2_seal_knife.mdl"
+SWEP.WorldModel = "models/weapons/arc9/c_bo2_seal_knife.mdl"
+SWEP.WorldModelMirror = "models/weapons/arc9/c_bo2_seal_knife.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
     TPIKPos        =    Vector(-3, 5, -7.5),
@@ -171,8 +171,8 @@ SWEP.SprintVerticalOffset = false
 SWEP.SprintPos = SWEP.ActivePos
 SWEP.SprintAng = SWEP.ActiveAng
 
-SWEP.CustomizePos = Vector(18.5, 20, -32.5)
-SWEP.CustomizeAng = Angle(0, 90, 0)
+SWEP.CustomizePos = Vector(0, 0, 0)
+SWEP.CustomizeAng = Angle(0, 0, 0)
 SWEP.CustomizeSnapshotPos = Vector(-15, 20, 32.5 / 2)
 SWEP.CustomizeSnapshotAng = Angle(0, 0, 0)
 SWEP.CustomizeNoRotate = true
@@ -205,10 +205,10 @@ SWEP.HookP_NameChange = function(self, name)
 
     local attached = self:GetElements()
 
-    local gunname = "Machete"
+    local gunname = "S.O.G. Knife"
 
     if attached["bo1_pap"] then
-        gunname = "Trejo's Troubleshooter"
+        gunname = "V.C. Slicer"
     end
 
     return gunname
@@ -247,31 +247,31 @@ SWEP.Attachments = {
 SWEP.Animations = {
     ["idle"] = {
         Source = {"idle"},
-        Time = 10,
+        Time = 450 / 30,
     },
     ["draw"] = {
         Source = "draw",
-        Time = 0.6,
+        Time = 1,
     },
     ["ready"] = {
-        Source = "first_draw",
-        Time = 1.6,
+        Source = "draw",
+        Time = 1,
     },
     ["holster"] = {
         Source = "holster",
-        Time = 0.3,
+        Time = 1,
     },
     ["bash"] = {
-        Source = {"swipe2","swipe3","swipe4","swipe5"},
+        Source = {"swipe"},
         Time = 1,
     },
     ["bash2"] = {
-        Source = {"charge"},
-        Time = 0.6,
+        Source = {"stab"},
+        Time = 1.33,
     },
     ["backstab"] = {
-        Source = {"charge"},
-        Time = 0.6,
+        Source = {"stab"},
+        Time = 1.33,
     },
     ["enter_sprint"] = {
         Source = {"idle"},
