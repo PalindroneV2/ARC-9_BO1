@@ -6,7 +6,7 @@ VertexlitGeneric
 	"$envmap" "env_cubemap"
 	"$envmapcontrast" 0.9
 	"$envmapsaturation" 0.6
-	"$envmaptint" "[ 0.5 0.5 0.5 ]"
+	$envmaptint "[ 0.5 0.5 0.5 ]"
 
 	"$phong" 			"1"
 	"$phongexponent" 		"0"

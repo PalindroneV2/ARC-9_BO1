@@ -5,7 +5,7 @@
 	"$bumpmap" "models/weapons/arc9/bo2/bo2_b23r/b23r_n"
 
 	$detail		"models/weapons/arc9/bo1/gold_c"
-	$envmapmask	"models/weapons/arc9/bo1/gold_s"
+	$phongwraptexture "models/weapons/arc9/bo1/gold_s"
 	$detailblendmode		3
 	$detailblendfactor 1
 	
@@ -16,9 +16,8 @@
 	$phongtint "[1 .65 .2]"
 	$phongalbedotint "1"
 	
-	$normalmapalphaenvmapmask "1"
+	$normalmapalphaenvmapmask 1
 	
 	$envmap "env_cubemap"
 	$envmaptint "[1 .75 .25]"
-	$envmapfresnel "[1 1 1]"
-}
+	$envmapfresnel "[.02 .05 .04]"}
