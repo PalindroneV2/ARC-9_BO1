@@ -484,11 +484,8 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     elseif attached["handguard_mlok"] then
         hand = 11
         -- gasblock = 4
-    elseif attached["handguard_mlok_mid"] then
-        hand = 12
-        gasblock = 4
     elseif attached["handguard_mlok_short"] then
-        hand = 13
+        hand = 12
         gasblock = 1
     end
     if attached["removecovers"] then covers = 0 end
