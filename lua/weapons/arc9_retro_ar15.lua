@@ -898,7 +898,7 @@ SWEP.Attachments = {
         Pos = Vector(11, 0, 1.35), --(-4, 0, -0.4)
         Ang = Angle(0, 0, 0),
         Category = {"cde_m203", "bo1_mk", "bo1_rail_underbarrel"},
-        ExcludeElements = {"no_ub_rail", "carbine_hg", "is_patriot"},
+        ExcludeElements = {"no_ub_rail", "mlok", "carbine_hg", "is_patriot"},
         InstalledElements = {"allowtac"},
     },
     {

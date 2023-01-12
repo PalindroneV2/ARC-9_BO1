@@ -634,7 +634,7 @@ ATT.AimDownSightsTimeMult = 1.15
 ATT.SprintToFireTimeMult = 1.15
 
 ATT.Category = {"retro_ar15_handguard_20"}
-ATT.ActivateElements = {"handguard_mlok", "mlok", "nosling", "no_ub_rail", "no_tac_rail"}
+ATT.ActivateElements = {"handguard_mlok", "mlok", "nosling", "no_tac_rail"}
 
 ATT.Attachments = {
     {
@@ -651,9 +651,9 @@ ATT.Attachments = {
         PrintName = "Underbarrel",
         DefaultCompactName = "UB",
         Bone = "j_gun",
-        Pos = Vector(-4, 0, 2.4),
+        Pos = Vector(-4, 0, 2.55),
         Ang = Angle(0, 0, 0),
-        Category = {"cde_m203", "bo1_mk", "bo1_grips"},
+        Category = {"cde_m203", "bo1_mk", "bo1_rail_underbarrel"},
     },
     {
         PrintName = "Tactical Right",
@@ -993,9 +993,9 @@ ATT.Attachments = {
         PrintName = "Underbarrel",
         DefaultCompactName = "UB",
         Bone = "j_gun",
-        Pos = Vector(-3, 0, 2.45),
+        Pos = Vector(-4, 0, 2.55),
         Ang = Angle(0, 0, 0),
-        Category = {"cde_m203", "bo1_mk", "bo1_grips"},
+        Category = {"cde_m203", "bo1_mk", "bo1_rail_underbarrel"},
         InstalledElements = {"allowtac"},
     },
     {
