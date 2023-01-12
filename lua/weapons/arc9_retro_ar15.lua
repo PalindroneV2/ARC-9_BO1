@@ -180,10 +180,10 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(-2.765, -2, 0.25),
-    Ang = Angle(0, 0.0125, 0),
+    Pos = Vector(-2.765, -2, 0.24),
+    Ang = Angle(0, 0, 0),
     Magnification = 1.1,
-    -- AssociatedSlot = 9,
+    ViewModelFOV = 60,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
 }
@@ -602,95 +602,103 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     if hand == 8 then -- FAMAS
         vm:SetBodygroup(0, 2) --FORCES UPPER TO FLAT
     end
+    if attached["mw2_m4_irons"] then
+        vm:SetBodygroup(8,4)
+    end
 
     -- if hand == 3 and barrel == 0 and attached["bo1_optic"] then
     --     vm:SetBodygroup(8, 2)
     -- end
     -- IRON SIGHT POSITION CHANGES
-    local newpos = Vector(-2.765, -2, 0.25)
-    local newang = Angle(0.0375, 0, 0)
-    if gasblock == 1 then
-        newang = Angle(0.0375, 0.015, 0)
-    end
-    if attached["mw2_m4_irons"] then
-        vm:SetBodygroup(8,4)
-    end
-    if attached["ar15_removable_iron"] then
-        newpos = Vector(-2.765, -2, -0.025)
-        newang = Angle(0.0375, 0.55, 0)
-        if gasblock == 1 then
-            newpos = Vector(-2.765, -2, -0.025)
-            newang = Angle(0.0375, 0.65, 0)
-        end
-        if frontsight == 2 then
-            newpos = Vector(-2.765, -2, -0.075)
-            newang = Angle(0.015, 0.9, 0)
-        end
-        if frontsight == 4 then
-            newpos = Vector(-2.765, -2, -0.075)
-            newang = Angle(0.015, 0.9, 0)
-        end
-        if frontsight == 5 then
-            newpos = Vector(-2.765, -2, -0.075)
-            newang = Angle(0.05, 0.9, 0)
-        end
-        if frontsight == 7 then
-            newpos = Vector(-2.765, -2, -0.075)
-            newang = Angle(0.015, 0.9, 0)
-        end
-        if frontsight == 8 then
-            newpos = Vector(-2.765, -2, -0.075)
-            newang = Angle(0.015, 0.9, 0)
-        end
-    end
-    if attached["retro_ar15_iron_matech"] then
-        newpos = Vector(-2.765, -2, 0.275)
-        newang = Angle(0.0375, -0.05, 0)
-        if gasblock == 1 then
-            newpos = Vector(-2.765, -2, 0.275)
-            newang = Angle(0.0375, -0.1, 0)
-        end
-        if frontsight == 2 then
-            newpos = Vector(-2.765, -2, 0.275)
-            newang = Angle(0.015, -0.1, 0)
-        end
-        if frontsight == 4 then
-            newpos = Vector(-2.765, -2, 0.275)
-            newang = Angle(0.015, -0.1, 0)
-        end
-        if frontsight == 7 then
-            newpos = Vector(-2.765, -2, 0.275)
-            newang = Angle(0.015, -0.1, 0)
-        end
-        if frontsight == 8 then
-            newpos = Vector(-2.765, -2, 0.275)
-            newang = Angle(0.015, -0.1, 0)
-        end
-    end
-    if attached["troy_iron"] or attached["3arc_iron"] then
-        newpos = Vector(-2.765, -2, 0.25)
-        newang = Angle(0.0375, 0, 0)
-        if gasblock == 1 then
-            newpos = Vector(-2.765, -2, 0.25)
-            newang = Angle(0.0375, 0, 0)
-        end
-        if frontsight == 2 then
-            newpos = Vector(-2.765, -2, 0.275)
-            newang = Angle(0.0375, -0.1, 0)
-        end
-        if frontsight == 4 then
-            newpos = Vector(-2.765, -2, 0.275)
-            newang = Angle(0.0375, -0.1, 0)
-        end
-        if frontsight == 7 then
-            newpos = Vector(-2.765, -2, 0.275)
-            newang = Angle(0.0375, -0.1, 0)
-        end
-        if frontsight == 8 then
-            newpos = Vector(-2.765, -2, 0.275)
-            newang = Angle(0.0375, -0.1, 0)
-        end
-    end
+    -- local newpos = Vector(-2.765, -2, 0.24)
+    -- local newang = Angle(0, 0, 0)
+    -- if gasblock == 1 then
+    --     newang = Angle(0, 0.015, 0)
+    -- end
+    -- if attached["ar15_removable_iron"] then
+    --     newpos = Vector(-2.765, -2, -0.025)
+    --     newang = Angle(0.0375, 0.55, 0)
+    --     if gasblock == 1 then
+    --         newpos = Vector(-2.765, -2, -0.025)
+    --         newang = Angle(0.0375, 0.65, 0)
+    --     end
+    --     if frontsight == 2 then
+    --         newpos = Vector(-2.765, -2, -0.075)
+    --         newang = Angle(0.015, 0.9, 0)
+    --     end
+    --     if frontsight == 4 then
+    --         newpos = Vector(-2.765, -2, -0.075)
+    --         newang = Angle(0.015, 0.9, 0)
+    --     end
+    --     if frontsight == 5 then
+    --         newpos = Vector(-2.765, -2, -0.075)
+    --         newang = Angle(0.05, 0.9, 0)
+    --     end
+    --     if frontsight == 7 then
+    --         newpos = Vector(-2.765, -2, -0.075)
+    --         newang = Angle(0.015, 0.9, 0)
+    --     end
+    --     if frontsight == 8 then
+    --         newpos = Vector(-2.765, -2, -0.075)
+    --         newang = Angle(0.015, 0.9, 0)
+    --     end
+    -- end
+    -- if attached["retro_ar15_iron_matech"] then
+    --     newpos = Vector(-2.765, -2, 0.275)
+    --     newang = Angle(0.0375, -0.05, 0)
+    --     if gasblock == 1 then
+    --         newpos = Vector(-2.765, -2, 0.275)
+    --         newang = Angle(0.0375, -0.1, 0)
+    --     end
+    --     if frontsight == 2 then
+    --         newpos = Vector(-2.765, -2, 0.275)
+    --         newang = Angle(0.015, -0.1, 0)
+    --     end
+    --     if frontsight == 4 then
+    --         newpos = Vector(-2.765, -2, 0.275)
+    --         newang = Angle(0.015, -0.1, 0)
+    --     end
+    --     if frontsight == 7 then
+    --         newpos = Vector(-2.765, -2, 0.275)
+    --         newang = Angle(0.015, -0.1, 0)
+    --     end
+    --     if frontsight == 8 then
+    --         newpos = Vector(-2.765, -2, 0.275)
+    --         newang = Angle(0.015, -0.1, 0)
+    --     end
+    -- end
+    -- if attached["troy_iron"] or attached["3arc_iron"] then
+    --     newpos = Vector(-2.765, -2, 0.25)
+    --     newang = Angle(0.0375, 0, 0)
+    --     if gasblock == 1 then
+    --         newpos = Vector(-2.765, -2, 0.25)
+    --         newang = Angle(0.0375, 0, 0)
+    --     end
+    --     if frontsight == 2 then
+    --         newpos = Vector(-2.765, -2, 0.275)
+    --         newang = Angle(0.0375, -0.1, 0)
+    --     end
+    --     if frontsight == 4 then
+    --         newpos = Vector(-2.765, -2, 0.275)
+    --         newang = Angle(0.0375, -0.1, 0)
+    --     end
+    --     if frontsight == 7 then
+    --         newpos = Vector(-2.765, -2, 0.275)
+    --         newang = Angle(0.0375, -0.1, 0)
+    --     end
+    --     if frontsight == 8 then
+    --         newpos = Vector(-2.765, -2, 0.275)
+    --         newang = Angle(0.0375, -0.1, 0)
+    --     end
+    -- end
+
+    -- self.IronSights = {
+    --     Pos = newpos,
+    --     Ang = newang,
+    --     Magnification = 1.1,
+    --     ViewModelFOV = 60,
+    --     CrosshairInSights = false,
+    -- }
 
     if attached["mw2_m4_irons"] then
         vm:SetBodygroup(10,1)
@@ -699,14 +707,6 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     if attached["bo1_bipod"] and self:GetBipod() then
         vm:SetBodygroup(4,6)
     end
-
-    self.IronSights = {
-        Pos = newpos,
-        Ang = newang,
-        Magnification = 1.1,
-        ViewModelFOV = 60,
-        CrosshairInSights = false,
-    }
 
     -- COSMETICS
     -- CAMO

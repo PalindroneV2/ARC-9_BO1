@@ -366,16 +366,6 @@ SWEP.Animations = {
             {s = "weapons/arc9/bo1_rpg/latch.wav", t = 40 / 30},
         },
     },
-    -- ["reload_iron"] = {
-    --     Source = "reload",
-    --     Time = 93 / 30,
-    --     MinProgress = 0.1,
-    --     EventTable = {
-    --         {s = "ARC9_BO1.RPG_Slide", t = 25 / 30},
-    --         {s = "ARC9_BO1.RPG_Futz", t = 33 / 30},
-    --         {s = "ARC9_BO1.RPG_Latch", t = 40 / 30},
-    --     },
-    -- },
     ["enter_sprint"] = {
         Source = "sprint_in",
         Time = 1,

@@ -1357,7 +1357,7 @@ ATT.Attachments = {
 ATT.Sights = {
     {
         Pos = Vector(0, 12, -1.6),
-        Ang = Angle(0.025, 0.1, 0),
+        Ang = Angle(0, 0.1, 0),
         ViewModelFOV = 60,
         IsIronSight = true,
     }
@@ -1402,7 +1402,7 @@ ATT.ModelAngleOffset = Angle(0,0,0)
 ATT.Sights = {
     {
         Pos = Vector(0, 10, -1.2),
-        Ang = Angle(0.025, -0.1, 0),
+        Ang = Angle(0, -0.1, 0),
         ViewModelFOV = 60,
         IsIronSight = true,
     }
@@ -2277,7 +2277,7 @@ ATT.Attachments = {
         Category = {"retro_ar15_iron", "bo1_optic", "bo1_rail_riser", "ar15_rail_riser", "mw3e_deagle_tactical"},
         ExcludeElements = {"handguard_famas"},
         Bone = "j_gun",
-        Pos = Vector(-1, 0, -0.6),
+        Pos = Vector(-1, 0, -0.52),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(1.5, 0, 1),
         MergeSlots = {2},
