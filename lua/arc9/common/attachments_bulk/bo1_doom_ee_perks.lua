@@ -71,6 +71,7 @@ ATT.RecoilMult = 0
 ATT.RecoilUpMult = 0
 ATT.RecoilSideMult = 0
 ATT.RecoilKick = 0
+ATT.SpreadMultMidAir = 0
 ATT.HasSights = false
 ATT.Crosshair = false
 ATT.BottomlessClip = true
@@ -183,7 +184,7 @@ hook.Add("Move", "ARC9_BO1_DOOM_EE_SPEED", function(ent, mv)
     if ent:Crouching() then s = s * ent:GetCrouchedWalkSpeed() end
 
     -- ent:SprintDisable() (apparently doesnt work)
-    ent:SetRunSpeed(max * s * 1)
     mv:SetMaxSpeed(max * s * 2)
     mv:SetMaxClientSpeed(max * s * 2)
+    ent:SetRunSpeed(max * s * 1)
 end)

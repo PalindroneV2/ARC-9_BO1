@@ -1147,7 +1147,7 @@ ATT.Attachments = {
     {
         PrintName = "Rail",
         Bone = "j_gun",
-        Pos = Vector(-0.1, 0, -0.625),
+        Pos = Vector(-0.1, 0, -0.55),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 1.5),
         Category = {"bo1_ar15_toprail"},
@@ -2162,7 +2162,7 @@ ATT.Cons = {}
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 
-ATT.Category = {"retro_ar15_upper"}
+ATT.Category = {"retro_ar15_upper_a1"}
 ATT.ActivateElements = {"a1_top"}
 ATT.ExcludeElements = {"handguard_famas"}
 
@@ -2208,8 +2208,8 @@ ATT.Attachments = {
         Pos = Vector(-1, 0, -0.52),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(1.5, 0, 1),
-        Installed = "retro_ar15_iron_carry",
-        Integral = true,
+        -- Installed = "retro_ar15_iron_carry",
+        -- Integral = true,
         MergeSlots = {2},
     },
     {

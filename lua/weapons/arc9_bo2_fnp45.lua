@@ -211,6 +211,13 @@ SWEP.BarrelLength = 0 -- = 9
 SWEP.ExtraSightDist = 15
 
 SWEP.AttachmentElements = {
+    ["cod4_peq6"] = {
+        AttPosMods = {
+            [3] = {
+                Pos = Vector(3.6, 0, 0),
+            },
+        },
+    },
 }
 
 SWEP.Hook_ModifyBodygroups = function(self, data)
@@ -283,7 +290,7 @@ SWEP.Attachments = {
         DefaultCompactName = "TAC",
         Bone = "j_gun",
         Scale = 1,
-        Pos = Vector(4.25, 0.075, 0.175),
+        Pos = Vector(4.25, 0, 0.175),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_tactical"},
     },

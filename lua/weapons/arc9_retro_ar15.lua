@@ -863,8 +863,9 @@ SWEP.Attachments = {
         Pos = Vector(2.5, 0, 3),
         Ang = Angle(0, 0, 0),
         Category = {"retro_ar15_upper"},
-        Installed = "retro_ar15_upper_a1",
-        Integral = true,
+        -- Installed = "retro_ar15_upper_a1",
+        -- Integral = true,
+        ExcludeElements = {"is_patriot"},
         -- ExcludeElements = {"handguard_famas", "is_patriot"},
     },
     {
