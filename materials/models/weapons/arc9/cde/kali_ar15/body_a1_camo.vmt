@@ -20,7 +20,7 @@
 	$envmaptint "[ .01 .01 .01 ]"
 
 	$detailblendmode 4
-	$detailblendfactor 0.5
+	$detailblendfactor 0.75
 	Proxies {
 		CustomCamo {
 			camoTexture $detail

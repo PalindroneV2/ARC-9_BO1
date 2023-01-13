@@ -821,6 +821,7 @@ ATT.Free = false
 
 ATT.Category = {"retro_ar15_handguard_20", "retro_ar15_handguard_carbine"}
 ATT.ActivateElements = {"handguard_famas", "no_gasblock", "nosling", "carbine_hg"}
+ATT.RequireElements = {"a4_top"}
 
 ATT.IronSights = {
     Pos = Vector(-2.74, -2, -0.4),
@@ -1168,7 +1169,7 @@ ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = true
 ATT.Folder = "AR-15 IRONS"
 
-ATT.InvAtt = "retro_ar15_upper_a4"
+-- ATT.InvAtt = "retro_ar15_upper_a4"
 ATT.Category = {"retro_ar15_iron"}
 ATT.IconOffset = Vector(-5, 0, 0)
 ATT.ActivateElements = {"irons_a2", "nosling", "ar15_removable_iron"}
@@ -1331,7 +1332,7 @@ ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = true
 ATT.Folder = "AR-15 IRONS"
 
-ATT.InvAtt = "retro_ar15_upper_a4"
+-- ATT.InvAtt = "retro_ar15_upper_a4"
 ATT.Category = {"retro_ar15_iron"}
 ATT.IconOffset = Vector(-5, 0, 0)
 ATT.ActivateElements = {"troy_iron"}
@@ -1352,7 +1353,7 @@ ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = true
 ATT.Folder = "AR-15 IRONS"
 
-ATT.InvAtt = "retro_ar15_upper_a4"
+-- ATT.InvAtt = "retro_ar15_upper_a4"
 ATT.Category = {"retro_ar15_iron"}
 ATT.IconOffset = Vector(-5, 0, 0)
 ATT.ActivateElements = {"3arc_iron"}
@@ -1372,7 +1373,7 @@ ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = true
 ATT.Folder = "AR-15 IRONS"
 
-ATT.InvAtt = "retro_ar15_upper_a4"
+-- ATT.InvAtt = "retro_ar15_upper_a4"
 ATT.Category = {"retro_ar15_iron"}
 ATT.IconOffset = Vector(-5, 0, 0)
 ATT.ActivateElements = {"matech_iron"}
@@ -2152,6 +2153,23 @@ ARC9.LoadAttachment(ATT, "retro_ar15_stock_famas")
 --UPPERS
 ATT = {}
 
+ATT.PrintName = "A1 Upper Receiver"
+ATT.CompactName = "A1 TOP"
+ATT.Icon = Material("entities/bo1_atts/other/select_fire.png")
+ATT.Description = [[A1-Type AR-15 upper reciever. Introduced in the late 60s after revisions done to the original weapon, including a brass deflector and forward assist.]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+
+ATT.Category = {"retro_ar15_upper"}
+ATT.ActivateElements = {"a1_top"}
+ATT.ExcludeElements = {"handguard_famas"}
+
+ARC9.LoadAttachment(ATT, "retro_ar15_upper_a1")
+
+ATT = {}
+
 ATT.PrintName = "A2 Upper Receiver"
 ATT.CompactName = "A2 TOP"
 ATT.Icon = Material("entities/bo1_atts/other/select_fire.png")
@@ -2163,6 +2181,7 @@ ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 
 ATT.Category = {"retro_ar15_upper"}
 ATT.ActivateElements = {"a2_top"}
+ATT.ExcludeElements = {"handguard_famas", "is_patriot"}
 
 ARC9.LoadAttachment(ATT, "retro_ar15_upper_a2")
 
@@ -2178,6 +2197,7 @@ ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 
 ATT.Category = {"retro_ar15_upper"}
 ATT.ActivateElements = {"a4_top"}
+ATT.ExcludeElements = {"is_patriot"}
 
 ATT.Attachments = {
     {
@@ -2188,6 +2208,8 @@ ATT.Attachments = {
         Pos = Vector(-1, 0, -0.52),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(1.5, 0, 1),
+        Installed = "retro_ar15_iron_carry",
+        Integral = true,
         MergeSlots = {2},
     },
     {
