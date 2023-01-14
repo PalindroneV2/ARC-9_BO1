@@ -1197,8 +1197,9 @@ ATT.SortOrder = 5
 ATT.MenuCategory = "ARC-9 - MWC Attachments"
 ATT.Free = false
 ATT.Folder = "AR-15 IRONS"
+ATT.Ingore = true
 
-ATT.Category = {"retro_ar15_iron"}
+ATT.Category = {"retro_ar15_iron_scar"}
 -- ATT.ActivateElements = {"bo1_rail_riser","mw2_m4_top", "mw2_m4_irons"}
 ATT.Model = "models/weapons/arc9/atts/bo2_scariron.mdl"
 -- ATT.Scale = Vector(0.375, 0.375, 0.375)
