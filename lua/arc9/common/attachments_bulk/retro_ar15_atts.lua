@@ -1189,6 +1189,36 @@ ARC9.LoadAttachment(ATT, "retro_ar15_iron_a2rear")
 
 ATT = {}
 
+ATT.PrintName = [[SCAR Rear Sight]]
+ATT.CompactName = [[SCAR]]
+ATT.Icon = Material("entities/bo1_atts/optics/retro_ar15/carry_side.png")
+ATT.Description = [[Rear rion sight from the FN SCAR platform.]]
+ATT.SortOrder = 5
+ATT.MenuCategory = "ARC-9 - MWC Attachments"
+ATT.Free = false
+ATT.Folder = "AR-15 IRONS"
+
+ATT.Category = {"retro_ar15_iron"}
+-- ATT.ActivateElements = {"bo1_rail_riser","mw2_m4_top", "mw2_m4_irons"}
+ATT.Model = "models/weapons/arc9/atts/bo2_scariron.mdl"
+-- ATT.Scale = Vector(0.375, 0.375, 0.375)
+ATT.ModelOffset = Vector(-3.5, 0, -0.1)
+ATT.ModelAngleOffset = Angle(0,0,0)
+ATT.RequireElements = {"a4_top"}
+
+-- ATT.Sights = {
+--     {
+--         Pos = Vector(0, 12, -1.6),
+--         Ang = Angle(0, 0.1, 0),
+--         ViewModelFOV = 60,
+--         IsIronSight = true,
+--     }
+-- }
+
+ARC9.LoadAttachment(ATT, "retro_ar15_scar_iron")
+
+ATT = {}
+
 ATT.PrintName = [[TMM-4 S-System Rail]]
 ATT.CompactName = [[S-SYSTEM]]
 ATT.Icon = Material("entities/bo1_atts/optics/retro_ar15/carry_side.png")
