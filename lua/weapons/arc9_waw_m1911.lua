@@ -167,9 +167,13 @@ SWEP.IronSights = {
     Ang = Angle(-0.1, 0.3, 0),
     Magnification = 1.1,
     ViewModelFOV = 60,
-    --AssociatedSlot = 9,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
+}
+
+SWEP.SightMidPoint = { -- Where the gun should be at the middle of it's irons
+    Pos = Vector(-1.1, 1.5, 0.825),
+    Ang = Angle(-0.05, -0.15, -2.5),
 }
 
 SWEP.HoldTypeHolstered = "passive"
@@ -191,14 +195,14 @@ SWEP.MovingMidPoint = {
     Ang = SWEP.ActiveAng
 }
 
-SWEP.CrouchPos = Vector(0, 0, -1)
-SWEP.CrouchAng = Angle(0, 0, -5)
+SWEP.CrouchPos = SWEP.ActivePos + Vector(0,-1,-1)
+SWEP.CrouchAng = SWEP.ActiveAng
 
-SWEP.RestPos = Vector(0.532, -6, 0)
-SWEP.RestAng = Angle(-4.633, 36.881, 0)
+SWEP.RestPos = SWEP.ActivePos
+SWEP.RestAng = SWEP.ActiveAng
 
 SWEP.SprintVerticalOffset = false
-SWEP.SprintPos = Vector(0, -1, -1)
+SWEP.SprintPos = Vector(0, 0, -1)
 SWEP.SprintAng = Angle(20, 0, -10)
 
 SWEP.CustomizePos = Vector(15, 25, 4)

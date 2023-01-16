@@ -183,10 +183,16 @@ SWEP.IronSights = {
     Pos = Vector(-3.45, -3, 0.2),
     Ang = Angle(0.03, -0.25, 0),
     Magnification = 1.1,
-    -- AssociatedSlot = 9,
+    ViewModelFOV = 60,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
 }
+
+SWEP.SightMidPoint = { -- Where the gun should be at the middle of it's irons
+    Pos = Vector(-1.75, -2.5, -0.6),
+    Ang = Angle(0.015, -0.125, -2.5),
+}
+
 SWEP.Bipod = true -- This weapon comes with a bipod.
 SWEP.RecoilMultBipod = 0.25
 -- SWEP.SpreadMultBipod = 0.25
@@ -212,21 +218,21 @@ SWEP.MovingMidPoint = {
     Ang = SWEP.ActiveAng
 }
 
-SWEP.BipodPos = Vector(-3.45, -3, -2.5)
-SWEP.BipodAng = Angle(0.03, -0.25, 0)
-
-SWEP.CrouchPos = SWEP.ActivePos
+SWEP.CrouchPos = SWEP.ActivePos + Vector(0,-1,-1)
 SWEP.CrouchAng = SWEP.ActiveAng
+
+SWEP.RestPos = SWEP.ActivePos
+SWEP.RestAng = SWEP.ActiveAng
 
 SWEP.SprintVerticalOffset = false
 SWEP.SprintPos = SWEP.ActivePos
 SWEP.SprintAng = SWEP.ActiveAng
 
+SWEP.BipodPos = Vector(-3.45, -3, -2.5)
+SWEP.BipodAng = Angle(0.03, -0.25, 0)
+
 SWEP.CustomizePos = Vector(17, 50, 4)
 SWEP.CustomizeAng = Angle(90, 0, 0)
-
-SWEP.RestPos = Vector(0, 0, -1)
-SWEP.RestAng = Angle(0, 0, -5)
 
 SWEP.BarrelLength = 0 -- = 25
 
@@ -291,7 +297,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(5, 0, 4.65),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_rail_optic"},
+        Category = {"cod_rail_optic"},
         InstalledElements = {"mount"},
     },
     {

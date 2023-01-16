@@ -11,7 +11,7 @@ ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 -- ATT.Folder = "SCOPE"
 
-ATT.Category = {"bo1_optic_aug"}
+ATT.Category = {"cod_optic_aug"}
 ATT.ActivateElements = {"swarovski"}
 
 ATT.Model = "models/weapons/arc9/atts/bo1_swarovski.mdl"

@@ -71,7 +71,7 @@ if SERVER then
 
             EffectData():SetOrigin(self:GetPos())
             EffectData():SetNormal(self:GetForward())
-            ParticleEffect("Explosion", self:GetPos(), self.StuckAngle or self:GetAngles())
+            util.Effect( "Explosion", EffectData())
             self:EmitSound("phx/kaboom.wav")
             self:Remove()
         elseif self.GunshipCheck or 0 < CurTime() then

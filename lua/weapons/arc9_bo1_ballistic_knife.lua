@@ -206,7 +206,7 @@ SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_KNIFE
 SWEP.AnimDraw = ACT_HL2MP_GESTURE_RANGE_ATTACK_KNIFE
 
 SWEP.ActivePos = Vector(0, 0, -1)
-SWEP.ActiveAng = Angle(0, 0, -5)
+SWEP.ActiveAng = Angle(0, 0, 0)
 
 SWEP.MovingPos = SWEP.ActivePos
 SWEP.MovingAng = SWEP.ActiveAng
@@ -216,21 +216,21 @@ SWEP.MovingMidPoint = {
     Ang = SWEP.ActiveAng
 }
 
-SWEP.CrouchPos = Vector(0, 0, -1)
-SWEP.CrouchAng = Angle(0, 0, -5)
+SWEP.CrouchPos = SWEP.ActivePos + Vector(0,-1,-1)
+SWEP.CrouchAng = SWEP.ActiveAng
+
+SWEP.RestPos = SWEP.ActivePos
+SWEP.RestAng = SWEP.ActiveAng
 
 SWEP.SprintVerticalOffset = false
-SWEP.SprintPos = Vector(0, 0, -1)
-SWEP.SprintAng = Angle(0, 0, 0)
+SWEP.SprintPos = SWEP.ActivePos
+SWEP.SprintAng = SWEP.ActiveAng
 
 SWEP.CustomizePos = Vector(18.5, 20, -32.5)
 SWEP.CustomizeAng = Angle(0, 90, 0)
 SWEP.CustomizeSnapshotPos = Vector(-15, 20, 32.5 / 2)
 SWEP.CustomizeSnapshotAng = Angle(0, 0, 0)
 SWEP.CustomizeNoRotate = true
-
-SWEP.RestPos = Vector(0, 0, 0)
-SWEP.RestAng = Angle(0, 0, 0)
 
 SWEP.BarrelLength = 0 -- = 25
 
@@ -342,7 +342,7 @@ end
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
-        Time = 1 / 35,
+        Time = 10,
     },
     ["draw"] = {
         Source = "draw",

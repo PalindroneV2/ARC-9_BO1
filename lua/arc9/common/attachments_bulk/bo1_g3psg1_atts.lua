@@ -155,7 +155,7 @@ ATT.Attachments = {
         Bone = "j_gun",
         Pos = Vector(-4, 0, 2.1),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_rail_underbarrel"},
+        Category = {"cod_rail_underbarrel"},
     },
 }
 

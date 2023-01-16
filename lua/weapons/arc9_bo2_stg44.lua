@@ -177,6 +177,11 @@ SWEP.IronSights = {
     SwitchToSound = "", -- sound that plays when switching to this sight
 }
 
+SWEP.SightMidPoint = { -- Where the gun should be at the middle of it's irons
+    Pos = Vector(-1.4, -1.5, -0.35),
+    Ang = Angle(0, 0.15, -2.5),
+}
+
 SWEP.HoldTypeHolstered = "passive"
 SWEP.HoldType = "ar2"
 SWEP.HoldTypeSights = "ar2"
@@ -196,8 +201,11 @@ SWEP.MovingMidPoint = {
     Ang = SWEP.ActiveAng
 }
 
-SWEP.CrouchPos = SWEP.ActivePos
+SWEP.CrouchPos = SWEP.ActivePos + Vector(0,-1,-1)
 SWEP.CrouchAng = SWEP.ActiveAng
+
+SWEP.RestPos = SWEP.ActivePos
+SWEP.RestAng = SWEP.ActiveAng
 
 SWEP.SprintVerticalOffset = false
 SWEP.SprintPos = SWEP.ActivePos
@@ -205,9 +213,6 @@ SWEP.SprintAng = SWEP.ActiveAng
 
 SWEP.CustomizePos = Vector(20.5, 40, 6)
 SWEP.CustomizeAng = Angle(90, 0, 0)
-
-SWEP.RestPos = Vector(0, 0, -1)
-SWEP.RestAng = Angle(0, 0, -5)
 
 SWEP.BarrelLength = 0 -- = 25
 
@@ -379,7 +384,7 @@ SWEP.Attachments = {
         Pos = Vector(11, 0, 1.2),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(-2, 0, 0),
-        Category = {"bo1_rail_underbarrel"},
+        Category = {"cod_rail_underbarrel"},
     },
     {
         PrintName = "Stock",

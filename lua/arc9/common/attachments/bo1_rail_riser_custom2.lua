@@ -6,8 +6,8 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 
-ATT.Category = {"bo1_rail_riser"}
-ATT.ActivateElements = {"bo1_rail_riser"}
+ATT.Category = {"cod_rail_riser"}
+ATT.ActivateElements = {"cod_rail_riser"}
 ATT.Model = "models/weapons/arc9/item/bo2_custom_riser.mdl"
 ATT.Scale = 1.1
 ATT.ModelOffset = Vector(0, 0, -0.15)
@@ -22,6 +22,6 @@ ATT.Attachments = {
         Pos = Vector(0, 0, -0.625),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 1.5),
-        Category = {"bo1_optic", "bo1_rail_riser"},
+        Category = {"cod_optic", "cod_rail_riser"},
     }
 }

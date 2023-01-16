@@ -118,8 +118,8 @@ SWEP.SpeedMultMelee = 1
 SWEP.SpeedMultCrouch = 1
 SWEP.SpeedMultBlindFire = 1
 
-SWEP.AimDownSightsTime = 0.11
-SWEP.SprintToFireTime = 0.14
+SWEP.AimDownSightsTime = 0.25
+SWEP.SprintToFireTime = 0.25
 
 SWEP.RPM = 750
 SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
@@ -187,6 +187,10 @@ SWEP.IronSights = {
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
 }
+SWEP.SightMidPoint = { -- Where the gun should be at the middle of it's irons
+    Pos = Vector(-1.25, -2.5, -0.5),
+    Ang = Angle(-0.012, -0.05, -2.5),
+}
 
 SWEP.HoldTypeHolstered = "passive"
 SWEP.HoldType = "ar2"
@@ -207,21 +211,21 @@ SWEP.MovingMidPoint = {
     Ang = SWEP.ActiveAng
 }
 
-SWEP.CrouchPos = Vector(0, 0, -1)
-SWEP.CrouchAng = Angle(0, 0, -5)
+SWEP.CrouchPos = SWEP.ActivePos + Vector(0,-1,-1)
+SWEP.CrouchAng = SWEP.ActiveAng
+
+SWEP.RestPos = SWEP.ActivePos
+SWEP.RestAng = SWEP.ActiveAng
 
 SWEP.SprintVerticalOffset = false
-SWEP.SprintPos = Vector(0, 0, -1)
-SWEP.SprintAng = Angle(0, 0, -5)
+SWEP.SprintPos = SWEP.ActivePos
+SWEP.SprintAng = SWEP.ActiveAng
 
 SWEP.BipodPos = Vector(0, 10,-4)
 SWEP.BipodAng = Angle(0, 0, 10)
 
 SWEP.CustomizePos = Vector(12.5, 40, 4)
 SWEP.CustomizeAng = Angle(90, 0, 0)
-
-SWEP.RestPos = Vector(0, 0, 0)
-SWEP.RestAng = Angle(0, 0, 0)
 
 SWEP.BarrelLength = 0 -- = 25
 
@@ -365,7 +369,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_aug_top", "bo1_optic_aug"},
+        Category = {"bo1_aug_top", "cod_optic_aug"},
         Icon_Offset = Vector(4, 0, 3),
         Installed = "bo1_optic_aug",
         Integral = true,

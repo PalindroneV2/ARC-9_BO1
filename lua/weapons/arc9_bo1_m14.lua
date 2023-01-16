@@ -177,9 +177,14 @@ SWEP.IronSights = {
     Pos = Vector(-3.73, -3, 1.2),
     Ang = Angle(0.05, -0.625, 0),
     Magnification = 1.1,
-    -- AssociatedSlot = 9,
+    ViewModelFOV = 60,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
+}
+
+SWEP.SightMidPoint = { -- Where the gun should be at the middle of it's irons
+    Pos = Vector(-1.7, -2, 0.75),
+    Ang = Angle(0.025, -0.05, 0),
 }
 
 SWEP.HoldTypeHolstered = "passive"
@@ -196,6 +201,9 @@ SWEP.AnimDraw = ACT_HL2MP_GESTURE_RANGE_ATTACK_KNIFE
 SWEP.ActivePos = Vector(0, 0, -1)
 SWEP.ActiveAng = Angle(0, 0, -5)
 
+SWEP.BipodPos = Vector(-3.73, 0, -1.5)
+SWEP.BipodAng = Angle(0, 0, 0)
+
 SWEP.MovingPos = SWEP.ActivePos
 SWEP.MovingAng = SWEP.ActiveAng
 
@@ -204,21 +212,19 @@ SWEP.MovingMidPoint = {
     Ang = SWEP.ActiveAng
 }
 
-SWEP.BipodPos = Vector(-3.73, 0, -1.5)
-SWEP.BipodAng = Angle(0, 0, 0)
+SWEP.CrouchPos = SWEP.ActivePos + Vector(0,-1,-1)
+SWEP.CrouchAng = SWEP.ActiveAng
 
-SWEP.CrouchPos = Vector(0, 0, -1)
-SWEP.CrouchAng = Angle(0, 0, -5)
+SWEP.RestPos = SWEP.ActivePos
+SWEP.RestAng = SWEP.ActiveAng
 
 SWEP.SprintVerticalOffset = false
-SWEP.SprintPos = Vector(0, 0, -1)
-SWEP.SprintAng = Angle(0, 0, -5)
+SWEP.SprintPos = SWEP.ActivePos
+SWEP.SprintAng = SWEP.ActiveAng
 
 SWEP.CustomizePos = Vector(12.5, 40, 4)
 SWEP.CustomizeAng = Angle(90, 0, 0)
-
-SWEP.RestPos = Vector(0, 0, -1)
-SWEP.RestAng = Angle(0, 0, -5)
+SWEP.CustomizeSnapshotPos = Vector(3.5, 0, 0)
 
 SWEP.BarrelLength = 0 -- = 25
 
@@ -354,7 +360,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(5.25, 0.125, 1.85),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic", "bo1_rail_riser"},
+        Category = {"cod_optic", "cod_rail_riser"},
         InstalledElements = {"mount"},
     },
     {
@@ -371,7 +377,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(11, 0.1, -0.5),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_rail_underbarrel", "bo1_m203", "bo1_mk", "bo1_igrip"},
+        Category = {"cod_rail_underbarrel", "bo1_m203", "bo1_mk", "bo1_igrip"},
     },
     {
         PrintName = "Bipod",
@@ -389,7 +395,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(15, -0.4, 0.25),
         Ang = Angle(0, 0, 90),
-        Category = "bo1_rail_tactical",
+        Category = "cod_rail_tactical",
     },
     {
         PrintName = "Tactical Right",
@@ -397,7 +403,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(15, 0.65, 0.25),
         Ang = Angle(0, 0, -90),
-        Category = "bo1_rail_tactical",
+        Category = "cod_rail_tactical",
     },
     {
         PrintName = "Stock",

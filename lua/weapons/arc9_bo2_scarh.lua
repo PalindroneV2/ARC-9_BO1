@@ -182,7 +182,7 @@ SWEP.IronSights = {
     Pos = Vector(-2.19, -1, -0.1),
     Ang = Angle(0.05, 0.2, 0),
     Magnification = 1.1,
-    -- AssociatedSlot = 9,
+    ViewModelFOV = 60,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
 }
@@ -206,18 +206,18 @@ SWEP.MovingMidPoint = {
     Ang = SWEP.ActiveAng
 }
 
-SWEP.CrouchPos = Vector(0, 0, -1)
-SWEP.CrouchAng = Angle(0, 0, -5)
+SWEP.CrouchPos = SWEP.ActivePos + Vector(0,-1,-1)
+SWEP.CrouchAng = SWEP.ActiveAng
+
+SWEP.RestPos = SWEP.ActivePos
+SWEP.RestAng = SWEP.ActiveAng
 
 SWEP.SprintVerticalOffset = false
-SWEP.SprintPos = Vector(0, 0, -1)
-SWEP.SprintAng = Angle(0, 0, -5)
+SWEP.SprintPos = SWEP.ActivePos
+SWEP.SprintAng = SWEP.ActiveAng
 
 SWEP.CustomizePos = Vector(12.5, 40, 4)
 SWEP.CustomizeAng = Angle(90, 0, 0)
-
-SWEP.RestPos = Vector(0, 0, -1)
-SWEP.RestAng = Angle(0, 0, -5)
 
 SWEP.BarrelLength = 0 -- = 25
 
@@ -303,7 +303,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(2, 0.05, 3.175),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic", "bo1_rail_riser"},
+        Category = {"cod_optic", "cod_rail_riser"},
         InstalledElements = {"mount"},
     },
     {
@@ -319,7 +319,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(10, 0.1, 0.6),
         Ang = Angle(0, 0, 0),
-        Category = {"bo2_m320", "bo1_grips"},
+        Category = {"bo2_m320", "cod_grips"},
     },
     {
         PrintName = "Tactical Right",
@@ -327,7 +327,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(11, 0.75, 1.325),
         Ang = Angle(0, 0, -90),
-        Category = {"bo1_tactical"},
+        Category = {"cod_tactical"},
     },
     {
         PrintName = "Tactical Left",
@@ -335,7 +335,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(11, -0.75, 1.325),
         Ang = Angle(0, 0, 90),
-        Category = {"bo1_tactical"},
+        Category = {"cod_tactical"},
     },
     {
         PrintName = "Tactical Top",
@@ -343,7 +343,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(10.25, 0, 2.9),
         Ang = Angle(0, 0, 180),
-        Category = {"bo1_tactical_top"},
+        Category = {"cod_tactical_top"},
         ExcludeElements = {"mw3_psrscope"},
     },
     {

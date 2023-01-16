@@ -173,9 +173,14 @@ SWEP.IronSights = {
     Pos = Vector(-3.14, -3, 1.1),
     Ang = Angle(0, 0, 0),
     Magnification = 1.1,
-    AssociatedSlot = 9,
+    ViewModelFOV = 60,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
+}
+
+SWEP.SightMidPoint = { -- Where the gun should be at the middle of it's irons
+    Pos = Vector(-1.55, -1.5, 0.55),
+    Ang = Angle(0, 0, 0),
 }
 
 SWEP.HoldTypeHolstered = "passive"
@@ -197,18 +202,18 @@ SWEP.MovingMidPoint = {
     Ang = SWEP.ActiveAng
 }
 
-SWEP.CrouchPos = Vector(0, 0, -1)
-SWEP.CrouchAng = Angle(0, 0, -5)
+SWEP.CrouchPos = SWEP.ActivePos + Vector(0,-1,-1)
+SWEP.CrouchAng = SWEP.ActiveAng
+
+SWEP.RestPos = SWEP.ActivePos
+SWEP.RestAng = SWEP.ActiveAng
 
 SWEP.SprintVerticalOffset = false
-SWEP.SprintPos = Vector(0, 0, -1)
-SWEP.SprintAng = Angle(0, 0, -5)
+SWEP.SprintPos = SWEP.ActivePos
+SWEP.SprintAng = SWEP.ActiveAng
 
 SWEP.CustomizePos = Vector(12.5, 40, 4)
 SWEP.CustomizeAng = Angle(90, 0, 0)
-
-SWEP.RestPos = Vector(0, 0, 0)
-SWEP.RestAng = Angle(0, 0, 0)
 
 SWEP.BarrelLength = 0 -- = 25
 
@@ -293,7 +298,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(-4, 0, 3),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic_lp", "bo1_rail_riser"},
+        Category = {"cod_optic_lp", "cod_rail_riser"},
         -- CorrectiveAng = Angle(0.025, 0.05, 0),
         InstalledElements = {"mount"},
     },
@@ -319,7 +324,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(5, 0, 0.2),
         Ang = Angle(0, 0, 0),
-        Category = "bo1_rail_underbarrel",
+        Category = "cod_rail_underbarrel",
     },
     {
         PrintName = "Tactical Left",
@@ -327,8 +332,8 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(4.25, -0.6, 1),
         Ang = Angle(0, 0, 90),
-        Category = "bo1_rail_tactical",
-        RequireElements = {"bo1_grips"},
+        Category = "cod_rail_tactical",
+        RequireElements = {"cod_grips"},
     },
     {
         PrintName = "Tactical Right",
@@ -336,8 +341,8 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(4.25, 0.6, 1),
         Ang = Angle(0, 0, -90),
-        Category = "bo1_rail_tactical",
-        RequireElements = {"bo1_grips"},
+        Category = "cod_rail_tactical",
+        RequireElements = {"cod_grips"},
     },
     {
         PrintName = "Stock",

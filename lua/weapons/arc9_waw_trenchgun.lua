@@ -120,8 +120,8 @@ SWEP.SpeedMultMelee = 1
 SWEP.SpeedMultCrouch = 1
 SWEP.SpeedMultBlindFire = 1
 
-SWEP.AimDownSightsTime = 0.11
-SWEP.SprintToFireTime = 0.14
+SWEP.AimDownSightsTime = 0.25
+SWEP.SprintToFireTime = 0.25
 
 SWEP.RPM = 312
 SWEP.Num = 8
@@ -181,7 +181,13 @@ SWEP.IronSights = {
     Pos = Vector(-0.5, -7.5, 0.25),
     Ang = Angle(0, 0.5, 0),
     Magnification = 1.1,
+    ViewModelFOV = 60,
     SwitchToSound = "", -- sound that plays when switching to this sight
+}
+
+SWEP.SightMidPoint = { -- Where the gun should be at the middle of it's irons
+    Pos = Vector(0.75, -6.75, -0.375),
+    Ang = Angle(0, 0.25, -2.5),
 }
 
 SWEP.HoldTypeHolstered = "passive"
@@ -203,20 +209,20 @@ SWEP.MovingMidPoint = {
     Ang = SWEP.ActiveAng
 }
 
-SWEP.CrouchPos = Vector(2, -6, -1)
-SWEP.CrouchAng = Angle(0, 0, -5)
+SWEP.CrouchPos = SWEP.ActivePos + Vector(0,-1,-1)
+SWEP.CrouchAng = SWEP.ActiveAng
+
+SWEP.RestPos = SWEP.ActivePos
+SWEP.RestAng = SWEP.ActiveAng
 
 SWEP.SprintVerticalOffset = false
-SWEP.SprintPos = Vector(10, -4, -2)
-SWEP.SprintAng = Angle(30, -7, 0)
+SWEP.SprintPos = SWEP.ActivePos + Vector(9, 2, -1)
+SWEP.SprintAng = SWEP.ActiveAng + Angle(40, 0, 0)
 
 SWEP.CustomizePos = Vector(20.5, 40, 5)
 SWEP.CustomizeAng = Angle(90, 0, 0)
 SWEP.CustomizeSnapshotPos = Vector(1, 12, 0)
 SWEP.CustomizeSnapshotAng = Angle(0, 0, 0)
-
-SWEP.RestPos = Vector(0, 0, 0)
-SWEP.RestAng = Angle(0, 0, 0)
 
 SWEP.BarrelLength = 0 -- = 25
 
@@ -286,7 +292,7 @@ SWEP.Attachments = {
         Bone = "j_pump",
         Pos = Vector(-0.5, 0, -0.4),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_grips"},
+        Category = {"cod_grips"},
     },
     {
         PrintName = "Ammunition",

@@ -175,7 +175,7 @@ SWEP.IronSights = {
     Pos = Vector(-2.75, -1, 0.75),
     Ang = Angle(-0.175, 0.25, 0),
     Magnification = 1.1,
-    --AssociatedSlot = 9,
+    ViewModelFOV = 60,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
 }
@@ -199,11 +199,11 @@ SWEP.MovingMidPoint = {
     Ang = SWEP.ActiveAng
 }
 
-SWEP.CrouchPos = SWEP.ActivePos
+SWEP.CrouchPos = SWEP.ActivePos + Vector(0,-1,-1)
 SWEP.CrouchAng = SWEP.ActiveAng
 
-SWEP.RestPos = Vector(0.532, -6, 0)
-SWEP.RestAng = Angle(-4.633, 36.881, 0)
+SWEP.RestPos = SWEP.ActivePos
+SWEP.RestAng = SWEP.ActiveAng
 
 SWEP.SprintVerticalOffset = false
 SWEP.SprintPos = SWEP.ActivePos
@@ -259,7 +259,7 @@ SWEP.Attachments = {
         Scale = Vector(1, 1, 1),
         Pos = Vector(2, 0, 2.6),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic"},
+        Category = {"cod_optic"},
         CorrectiveAng = Angle(0.05, 0.3, 0),
     },
     {
@@ -278,7 +278,7 @@ SWEP.Attachments = {
         Scale = Vector(1, 1, 1),
         Pos = Vector(6.5, -0.8, -0.75),
         Ang = Angle(0, 0, 90),
-        Category = {"bo1_tactical"},
+        Category = {"cod_tactical"},
     },
     {
         PrintName = "Tactical Left",
@@ -287,7 +287,7 @@ SWEP.Attachments = {
         Scale = Vector(1, 1, 1),
         Pos = Vector(6.5, 0.8, -0.75),
         Ang = Angle(0, 0, -90),
-        Category = {"bo1_tactical"},
+        Category = {"cod_tactical"},
     },
     {
         PrintName = "Tactical Bottom",
@@ -296,7 +296,7 @@ SWEP.Attachments = {
         Scale = Vector(1, 1, 1),
         Pos = Vector(6.5, 0, -1.4),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_tactical"},
+        Category = {"cod_tactical"},
     },
     {
         PrintName = "Magazine",

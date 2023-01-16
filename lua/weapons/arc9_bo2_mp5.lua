@@ -171,12 +171,17 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(-3.19, 2, 1),
+    Pos = Vector(-3.19, -1, 1),
     Ang = Angle(0.025, 0, 0),
     Magnification = 1.1,
     AssociatedSlot = 9,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
+}
+
+SWEP.SightMidPoint = { -- Where the gun should be at the middle of it's irons
+    Pos = Vector(-1.6, -0.5, 0),
+    Ang = Angle(0.0125, 0, -2.5),
 }
 
 SWEP.HoldTypeHolstered = "passive"
@@ -198,19 +203,19 @@ SWEP.MovingMidPoint = {
     Ang = SWEP.ActiveAng
 }
 
-SWEP.CrouchPos = Vector(0, 0, -1)
-SWEP.CrouchAng = Angle(0, 0, -5)
+SWEP.CrouchPos = SWEP.ActivePos + Vector(0,-1,-1)
+SWEP.CrouchAng = SWEP.ActiveAng
+
+SWEP.RestPos = SWEP.ActivePos
+SWEP.RestAng = SWEP.ActiveAng
 
 SWEP.SprintVerticalOffset = false
-SWEP.SprintPos = Vector(0, 0, 0)
-SWEP.SprintAng = Angle(0, 0, 0)
+SWEP.SprintPos = SWEP.ActivePos
+SWEP.SprintAng = SWEP.ActiveAng
 
 SWEP.CustomizePos = Vector(12, 35, 6)
 SWEP.CustomizeAng = Angle(90, 0, 0)
 SWEP.CustomizeSnapshotFOV = 90
-
-SWEP.RestPos = Vector(0, 0, 0)
-SWEP.RestAng = Angle(0, 0, 0)
 
 SWEP.BarrelLength = 0 -- = 25
 
@@ -273,7 +278,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local vm = data.model
     local attached = data.elements
 
-    if attached["mount"] or attached["bo1_optic"] then
+    if attached["mount"] or attached["cod_optic"] then
         vm:SetBodygroup(3,1)
     end
 
@@ -296,7 +301,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     end
 
     if attached["bo1_mp5_barrel_kurz"] then
-        if attached["mount"] or attached["bo1_optic"] then
+        if attached["mount"] or attached["cod_optic"] then
             vm:SetBodygroup(3,3)
             if attached["mp5k_mw2"] then
                 vm:SetBodygroup(3,0)
@@ -324,6 +329,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         Pos = newpos,
         Ang = newang,
         Magnification = 1.1,
+        ViewModelFOV = 60,
         CrosshairInSights = false,
     }
 
@@ -422,7 +428,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(-3.5, 0.1, 3.35),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic", "bo1_rail_riser"},
+        Category = {"cod_optic", "cod_rail_riser"},
         InstalledElements = {"mount"},
         ExcludeElements = {"mp5k_mw2_ris"},
     },
@@ -449,8 +455,8 @@ SWEP.Attachments = {
         Scale = Vector(1,1,1),
         Pos = Vector(6, 0.2, 0.5),
         Ang = Angle(0, 0, 0),
-        -- Category = {"bo1_rail_underbarrel","bo1_uni_gls"},
-        Category = {"bo1_rail_underbarrel"},
+        -- Category = {"cod_rail_underbarrel","bo1_uni_gls"},
+        Category = {"cod_rail_underbarrel"},
         ExcludeElements = {"mp5k", "mp5_ris", "mp5sd"},
     },
     {

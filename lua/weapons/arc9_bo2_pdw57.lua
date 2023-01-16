@@ -177,9 +177,14 @@ SWEP.IronSights = {
     Pos = Vector(-2.835, -3, 0.85),
     Ang = Angle(0, 1, 0),
     Magnification = 1.1,
-    AssociatedSlot = 9,
+    ViewModelFOV = true,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
+}
+
+SWEP.SightMidPoint = { -- Where the gun should be at the middle of it's irons
+    Pos = Vector(-1.425, -1.5, 0.425),
+    Ang = Angle(0, 1, -2.5),
 }
 
 SWEP.HoldTypeHolstered = "passive"
@@ -201,18 +206,18 @@ SWEP.MovingMidPoint = {
     Ang = SWEP.ActiveAng
 }
 
-SWEP.CrouchPos = Vector(0, 0, -1)
-SWEP.CrouchAng = Angle(0, 0, -5)
+SWEP.CrouchPos = SWEP.ActivePos + Vector(0,-1,-1)
+SWEP.CrouchAng = SWEP.ActiveAng
+
+SWEP.RestPos = SWEP.ActivePos
+SWEP.RestAng = SWEP.ActiveAng
 
 SWEP.SprintVerticalOffset = false
-SWEP.SprintPos = Vector(0, 0, 0)
-SWEP.SprintAng = Angle(0, 0, 0)
+SWEP.SprintPos = SWEP.ActivePos
+SWEP.SprintAng = SWEP.ActiveAng
 
 SWEP.CustomizePos = Vector(12.5, 25, 6)
 SWEP.CustomizeAng = Angle(90, 0, 0)
-
-SWEP.RestPos = Vector(0, 0, 0)
-SWEP.RestAng = Angle(0, 0, 0)
 
 SWEP.BarrelLength = 0 -- = 25
 
@@ -279,7 +284,7 @@ SWEP.Attachments = {
         Pos = Vector(1.5, -0.025, 2.925),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 1.25),
-        Category = {"bo1_optic", "bo1_rail_riser", "mw3e_deagle_tactical"},
+        Category = {"cod_optic", "cod_rail_riser", "mw3e_deagle_tactical"},
         InstalledElements = {"mount"},
     },
     {
@@ -297,7 +302,7 @@ SWEP.Attachments = {
         Pos = Vector(6.5, -0.95, 1.15),
         Ang = Angle(0, 0, 90),
         Icon_Offset = Vector(0, 0, 0),
-        Category = {"bo1_tactical"},
+        Category = {"cod_tactical"},
     },
     {
         PrintName = "Tactical Right",
@@ -306,7 +311,7 @@ SWEP.Attachments = {
         Pos = Vector(6.5, 0.95, 1.15),
         Ang = Angle(0, 0, -90),
         Icon_Offset = Vector(0, 0, 0),
-        Category = {"bo1_tactical"},
+        Category = {"cod_tactical"},
     },
     {
         PrintName = "Firing Group",

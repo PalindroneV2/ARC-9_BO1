@@ -42,7 +42,7 @@ ATT.SortOrder = 4
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 
-ATT.Category = {"bo1_grips"}
+ATT.Category = {"cod_grips"}
 
 ATT.Model = "models/weapons/arc9/atts/bo1_ub_foregrip.mdl"
 ATT.Scale = 1
@@ -74,7 +74,7 @@ ATT.SortOrder = 4
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 
-ATT.Category = {"bo1_grips"}
+ATT.Category = {"cod_grips"}
 
 ATT.Model = "models/weapons/arc9/atts/bo2_angledgrip.mdl"
 ATT.Scale = 1
@@ -107,7 +107,7 @@ ATT.SortOrder = 4
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 
-ATT.Category = {"bo1_grips"}
+ATT.Category = {"cod_grips"}
 
 ATT.Model = "models/weapons/arc9/atts/bo2_verticalpk.mdl"
 ATT.Scale = 1
@@ -142,7 +142,7 @@ ATT.SortOrder = 4
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 
-ATT.Category = {"bo1_grips"}
+ATT.Category = {"cod_grips"}
 
 ATT.Model = "models/weapons/arc9/atts/bo2_heavygrip.mdl"
 ATT.Scale = 1
@@ -177,7 +177,7 @@ ATT.SortOrder = 4
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 
-ATT.Category = {"bo1_grips"}
+ATT.Category = {"cod_grips"}
 
 ATT.Model = "models/weapons/arc9/atts/bo2_grip.mdl"
 ATT.Scale = 1
@@ -211,7 +211,7 @@ ATT.SortOrder = 4
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 
-ATT.Category = {"bo1_grips"}
+ATT.Category = {"cod_grips"}
 ATT.ActivateElements = {"griplamp"}
 
 ATT.Model = "models/weapons/arc9/atts/bo2_taclight_grip.mdl"
@@ -246,7 +246,7 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 
-ATT.Category = {"bo1_grips"}
+ATT.Category = {"cod_grips"}
 
 ATT.Model = "models/weapons/arc9/atts/bocw_foregrip_nato.mdl"
 ATT.Scale = 1
@@ -278,7 +278,7 @@ ATT.SortOrder = 6
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 
-ATT.Category = {"bo1_grips"}
+ATT.Category = {"cod_grips"}
 
 ATT.Model = "models/weapons/arc9/atts/bocw_foregrip_nato_pro.mdl"
 ATT.Scale = 1
@@ -312,7 +312,7 @@ ATT.SortOrder = 2
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 
-ATT.Category = {"bo1_grips"}
+ATT.Category = {"cod_grips"}
 
 ATT.Model = "models/weapons/arc9/atts/bocw_mixgrip_nato.mdl"
 ATT.Scale = 1
@@ -345,7 +345,7 @@ ATT.SortOrder = 8
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 
-ATT.Category = {"bo1_grips"}
+ATT.Category = {"cod_grips"}
 
 ATT.Model = "models/weapons/arc9/atts/bocw_mixgrip_nato_pro.mdl"
 ATT.Scale = 1
@@ -380,7 +380,7 @@ ATT.SortOrder = 4
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 
-ATT.Category = {"bo1_grips"}
+ATT.Category = {"cod_grips"}
 
 ATT.Model = "models/weapons/arc9/atts/bocw_speedgrip_nato.mdl"
 ATT.Scale = 1
@@ -415,7 +415,7 @@ ATT.SortOrder = 10
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 
-ATT.Category = {"bo1_grips"}
+ATT.Category = {"cod_grips"}
 
 ATT.Model = "models/weapons/arc9/atts/bocw_speedgrip_nato_pro.mdl"
 ATT.Scale = 1
@@ -451,7 +451,7 @@ ATT.SortOrder = 1
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 
-ATT.Category = {"bo1_grips"}
+ATT.Category = {"cod_grips"}
 
 ATT.Model = "models/weapons/arc9/atts/bocw_foregrip_warsaw.mdl"
 ATT.Scale = 1
@@ -483,7 +483,7 @@ ATT.SortOrder = 7
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 
-ATT.Category = {"bo1_grips"}
+ATT.Category = {"cod_grips"}
 
 ATT.Model = "models/weapons/arc9/atts/bocw_foregrip_warsaw_pro.mdl"
 ATT.Scale = 1
@@ -517,7 +517,7 @@ ATT.SortOrder = 3
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 
-ATT.Category = {"bo1_grips"}
+ATT.Category = {"cod_grips"}
 
 ATT.Model = "models/weapons/arc9/atts/bocw_mixgrip_warsaw.mdl"
 ATT.Scale = 1
@@ -550,7 +550,7 @@ ATT.SortOrder = 9
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 
-ATT.Category = {"bo1_grips"}
+ATT.Category = {"cod_grips"}
 
 ATT.Model = "models/weapons/arc9/atts/bocw_mixgrip_warsaw_pro.mdl"
 ATT.Scale = 1
@@ -585,7 +585,7 @@ ATT.SortOrder = 5
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 
-ATT.Category = {"bo1_grips"}
+ATT.Category = {"cod_grips"}
 
 ATT.Model = "models/weapons/arc9/atts/bocw_speedgrip_warsaw.mdl"
 ATT.Scale = 1
@@ -620,7 +620,7 @@ ATT.SortOrder = 11
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 
-ATT.Category = {"bo1_grips"}
+ATT.Category = {"cod_grips"}
 
 ATT.Model = "models/weapons/arc9/atts/bocw_speedgrip_warsaw_pro.mdl"
 ATT.Scale = 1

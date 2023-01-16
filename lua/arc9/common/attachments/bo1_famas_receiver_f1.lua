@@ -19,7 +19,7 @@ ATT.Attachments = {
         Bone = "j_gun",
         Pos = Vector(-3.25, 0.5, -1.7),
         Ang = Angle(0, 0, -90),
-        Category =  {"bo1_rail_tactical"}
+        Category =  {"cod_rail_tactical"}
     },
     {
         PrintName = "Tactical Right",
@@ -27,6 +27,6 @@ ATT.Attachments = {
         Bone = "j_gun",
         Pos = Vector(-3.25, -0.5, -1.7),
         Ang = Angle(0, 0, 90),
-        Category =  {"bo1_rail_tactical"}
+        Category =  {"cod_rail_tactical"}
     },
 }

@@ -111,8 +111,8 @@ SWEP.SpeedMultMelee = 1
 SWEP.SpeedMultCrouch = 1
 SWEP.SpeedMultBlindFire = 1
 
-SWEP.AimDownSightsTime = 0.12
-SWEP.SprintToFireTime = 0.15
+SWEP.AimDownSightsTime = 0.25
+SWEP.SprintToFireTime = 0.25
 
 SWEP.RPM = 600
 SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
@@ -171,13 +171,15 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(-2.427, -2, 0.835),
-    Ang = Angle(0, 0, 0),
-    Midpoint = { -- Where the gun should be at the middle of it's irons
-        Pos = Vector(0, 15, -4),
-        Ang = Angle(0, 0, -45),
-    },
+    Pos = Vector(-2.425, -2, 0.65),
+    Ang = Angle(0.05, 0.4, 0),
     Magnification = 1.1,
+    ViewModelFOV = 60,
+}
+
+SWEP.SightMidPoint = { -- Where the gun should be at the middle of it's irons
+    Pos = Vector(-1.25, -1, 0.5),
+    Ang = Angle(-1, 0.5, 0),
 }
 
 SWEP.HoldTypeHolstered = "passive"
@@ -199,23 +201,23 @@ SWEP.MovingMidPoint = {
     Ang = SWEP.ActiveAng
 }
 
-SWEP.BipodPos = Vector(-2.427, 0, -1.5)
-SWEP.BipodAng = Angle(0, 0, 0)
+SWEP.CrouchPos = SWEP.ActivePos + Vector(0,-1,-1)
+SWEP.CrouchAng = SWEP.ActiveAng
 
-SWEP.CrouchPos = Vector(0, 0, -1)
-SWEP.CrouchAng = Angle(-2, 1, -3)
+SWEP.RestPos = SWEP.ActivePos
+SWEP.RestAng = SWEP.ActiveAng
 
 SWEP.SprintVerticalOffset = false
-SWEP.SprintPos = Vector(0, 0, -1)
-SWEP.SprintAng = Angle(-2, 1, -3)
+SWEP.SprintPos = SWEP.ActivePos
+SWEP.SprintAng = SWEP.ActiveAng
+
+SWEP.BipodPos = Vector(-2.427, 0, -1.5)
+SWEP.BipodAng = Angle(0, 0, 0)
 
 SWEP.CustomizePos = Vector(12.5, 40, 4)
 SWEP.CustomizeAng = Angle(90, 0, 0)
 SWEP.CustomizeSnapshotPos = Vector(0, 0, 0)
 SWEP.CustomizeSnapshotAng = Angle(0, 0, 0)
-
-SWEP.RestPos = Vector(0, 0, 0)
-SWEP.RestAng = Angle(0, 0, 0)
 
 SWEP.BarrelLength = 0 -- = 25
 
@@ -408,7 +410,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local newang = Angle(0.05, 0.4, 0)
     local NewBipodPos = Vector(-2.427, 0, -1.5)
     local NewBipodAng = Angle(0, 0, 0)
-    local newCustPose = Vector(0, 0, 0)
+    local newCustPose = Vector(2, 0, 0)
     local newCustAng = Angle(0, 0, 0)
 
     if attached["bo1_alternate_irons"] then
@@ -455,7 +457,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     end
 
     if attached["barrel_rpk"] then
-        newCustPose = Vector(7, 10, 0.5)
+        newCustPose = Vector(9, 15, 0.5)
         newCustAng = Angle(0, 0, 0)
     end
 
@@ -621,7 +623,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(1.5, 0, 2.6),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic_ak", "bo1_alt_irons", "bo1_svd_scope"},
+        Category = {"cod_optic_ak", "bo1_alt_irons", "bo1_svd_scope"},
     },
     {
         PrintName = "Receiver",
@@ -654,7 +656,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(11, 0, 0.2),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_gp25", "bo1_mk","bo1_grips"},
+        Category = {"bo1_gp25", "bo1_mk","cod_grips"},
         ExcludeElements = {"barrel_krinkov", "barrel_rpk", "barrel_asval"},
     },
     {
@@ -737,6 +739,14 @@ SWEP.Attachments = {
         Category = {"universal_camo"},
         CosmeticOnly = true,
     },
+}
+
+SWEP.StandardPresets = {
+    "[AKS-74u]XQAAAQAxAQAAAAAAAAA9iIIiM7tupQCpjtobRJEkdYYzR6F4P3FJEqy9RUyheUZp1zOtKLbpg01RZUWsivdsVPWjLZFxwYEsO8zw3m0uMO55ITN9vhmlE+VBG5c430Rq8O9peitsaybRdNj8JHbIS2Bj84AAAapez9U7gHNWnVLmJ0KywWtf2kmg1+D3gifRM+zVnGdqU0aXnb6wLMhicw==",
+    "[Modern]XQAAAQBkAQAAAAAAAAA9iIIiM7tuo1AtTygaX+tE5owxGjnImCY2npSaEHAbihOm7vWqDCE4uXCzOHSP3sZlCCizujfBISP+i3vvn2c69G7mxEGNh5vcdI3GCFPJzR7GJXRzVUIOJCKd5LLG7+XBFPq86VWBU04q2LXvS4U4Agely+UTKKPPQ9C9DaipZb1mbGi3QEEuWcywek2rQmwiS4WMgsmSbeYVSh6T",
+    "[RPK-74]XQAAAQB9AQAAAAAAAAA9iIIiM7tupQCpjtobRJEkdYYzR6F4P3FJEqy9RUyheUZp1zOtKLbpg01RZUWsivdsVPWjLa0syyf1fmLHm20GEJBgLFz7nafEVkn3IJns5hQJp4qBYnlyK/vqlNMomjNdQJGJq0sgpAJef7YfL+DY26Wycz752P9gAAir3HsvfzUR+5EVd9XUiOHCGrqxxxmGsqL/wBLJVd2ol9j+W4+Bdd0vPjw/csujGAA=",
+    "[Chinese]XQAAAQAjAQAAAAAAAAA9iIIiM7tupQCpjtobRJEkdevdtSFsYEW0WR7PXlS+8JMBy2yiomGzXKaJCIzfqW4TDPuHlM58exfO53jHmGkL8Ogd2ysWRMV1yAe2z7TJuOs2Y3BZAJP1rvlf3tXsDIwu5e9+UMKpWA6GxlwRfP5EgzrRzuzP6Epa6kjWWXVW+6+rAA==",
+    "[Vintorez]XQAAAQB6AQAAAAAAAAA9iIIiM7tupQCpjtobRJEkdZ1fP0HAirxuJaFi++OSkQRS4d7M0DlDU2KQsq5E55bbZFTMSOHmh1B1MTAWaZHHwy0PlDLbXStPNXcKOCsyBKNvP0uns3lCA8q+TPhmIBWpF7+guB5W1X2TwNftbVNwoXbJWZFGolA8izBepNzitqkfV8JfiEOkGa4swNp3o2EsxXYOcg/0DZY3Pvs4MjB2us/3p5OhhUQ/KpFFM2UA",
 }
 
 SWEP.HideBones = {

@@ -76,7 +76,7 @@ SWEP.ReloadTime = 1
 SWEP.Crosshair = true
 SWEP.CanBlindFire = false
 
-SWEP.Recoil = 0.5
+SWEP.Recoil = 0.75
 SWEP.RecoilSide = 0.35
 SWEP.RecoilUp = 0.5
 
@@ -120,8 +120,8 @@ SWEP.SpeedMultMelee = 1
 SWEP.SpeedMultCrouch = 1
 SWEP.SpeedMultBlindFire = 1
 
-SWEP.AimDownSightsTime = 0.11
-SWEP.SprintToFireTime = 0.14
+SWEP.AimDownSightsTime = 0.25
+SWEP.SprintToFireTime = 0.25
 
 SWEP.RPM = 650
 SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
@@ -182,12 +182,17 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(-2.205, 0, 0.15),
+    Pos = Vector(-2.205, -0.5, 0.15),
     Ang = Angle(0.05, 0, 0),
     Magnification = 1.1,
-    -- AssociatedSlot = 9,
+    ViewModelFOV = 60,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
+}
+
+SWEP.SightMidPoint = { -- Where the gun should be at the middle of it's irons
+    Pos = Vector(-1.1, -0.25, 0.075),
+    Ang = Angle(0.025, 0, 0),
 }
 
 SWEP.HoldTypeHolstered = "passive"
@@ -209,18 +214,20 @@ SWEP.MovingMidPoint = {
     Ang = SWEP.ActiveAng
 }
 
-SWEP.CrouchPos = Vector(0, 0, -1)
-SWEP.CrouchAng = Angle(0, 0, -5)
+SWEP.CrouchPos = SWEP.ActivePos + Vector(0,-1,-1)
+SWEP.CrouchAng = SWEP.ActiveAng
+
+SWEP.RestPos = SWEP.ActivePos
+SWEP.RestAng = SWEP.ActiveAng
 
 SWEP.SprintVerticalOffset = false
-SWEP.SprintPos = Vector(0, 0, -1)
-SWEP.SprintAng = Angle(0, 0, -5)
+SWEP.SprintPos = SWEP.ActivePos
+SWEP.SprintAng = SWEP.ActiveAng
 
 SWEP.CustomizePos = Vector(12.5, 40, 4)
 SWEP.CustomizeAng = Angle(90, 0, 0)
-
-SWEP.RestPos = Vector(0, 0, -1)
-SWEP.RestAng = Angle(0, 0, -5)
+SWEP.CustomizeSnapshotPos = Vector(2.5, 0, 0)
+SWEP.CustomizeSnapshotAng = Angle(0, 0, 0)
 
 SWEP.BarrelLength = 0 -- = 25
 
@@ -289,13 +296,13 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local vm = data.model
     -- local CUSTSTATE = self:GetCustomize()
     local attached = data.elements
-    local newpos = Vector(-2.205, 0, 0.15)
+    local newpos = Vector(-2.205, -0.5, 0.15)
     local newang = Angle(0.05, 0, 0)
 
     if attached["barrel_osw"] then
-        newpos = Vector(-2.22, 0, 0.25)
+        newpos = Vector(-2.22, -0.5, 0.25)
         newang = Angle(0.025, 0.1, 0)
-        if attached["bo1_optic"] then
+        if attached["cod_optic"] then
             vm:SetBodygroup(2,2)
         end
     end
@@ -315,7 +322,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         Pos = newpos,
         Ang = newang,
         Magnification = 1.1,
-        -- AssociatedSlot = 9,
+        ViewModelFOV = 60,
         CrosshairInSights = false,
         SwitchToSound = "", -- sound that plays when switching to this sight
     }
@@ -379,7 +386,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(0.5, 0.1, 3.85),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic", "bo1_rail_riser"},
+        Category = {"cod_optic", "cod_rail_riser"},
         InstalledElements = {"mount"},
     },
     {
@@ -404,7 +411,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(10.5, 0.1, 1.65),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_rail_underbarrel", "bo1_m203", "bo1_mk"},
+        Category = {"cod_rail_underbarrel", "bo1_m203", "bo1_mk"},
         ExcludeElements = {"barrel_osw"},
     },
     {

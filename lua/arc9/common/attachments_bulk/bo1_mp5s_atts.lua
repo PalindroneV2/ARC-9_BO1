@@ -23,7 +23,7 @@ ATT.Attachments = {
         Bone = "j_gun",
         Pos = Vector(9.25, 0.1, -0.1),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic", "bo1_rail_riser"},
+        Category = {"cod_optic", "cod_rail_riser"},
         InstalledElements = {"mount"},
         ExcludeElements = {"mp5k_mw2_ris"},
     },
@@ -106,7 +106,7 @@ ATT.Attachments = {
         Bone = "j_gun",
         Pos = Vector(0, 0.2, 2.9),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_grips"},
+        Category = {"cod_grips"},
     },
     {
         PrintName = "Tactical Right",
@@ -115,7 +115,7 @@ ATT.Attachments = {
         Pos = Vector(2, 1, 1.8),
         Ang = Angle(0, 0, -90),
         Icon_Offset = Vector(0, 0, 0),
-        Category =  {"bo1_tactical"}
+        Category =  {"cod_tactical"}
     },
     {
         PrintName = "Tactical Left",
@@ -124,7 +124,7 @@ ATT.Attachments = {
         Pos = Vector(2, -1, 1.8),
         Ang = Angle(0, 0, 90),
         Icon_Offset = Vector(0, 0, 0),
-        Category =  {"bo1_tactical"}
+        Category =  {"cod_tactical"}
     },
 }
 
@@ -158,7 +158,7 @@ ATT.Attachments = {
         Scale = Vector(1,1,1),
         Pos = Vector(0, 0.2, 3),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_rail_underbarrel"},
+        Category = {"cod_rail_underbarrel"},
     },
 }
 
@@ -352,7 +352,7 @@ ATT.Attachments = {
         Pos = Vector(4.9, 0, -2),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 1.5),
-        Category = {"bo1_optic", "bo1_rail_riser"},
+        Category = {"cod_optic", "cod_rail_riser"},
         InstalledElements = {"mount"},
     },
     {
@@ -361,7 +361,7 @@ ATT.Attachments = {
         Pos = Vector(-1, 0.1, 1),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, -0.5),
-        Category = {"bo1_grips"},
+        Category = {"cod_grips"},
         InstalledElements = {"mp5k_foregrip"},
     },
     {
@@ -371,7 +371,7 @@ ATT.Attachments = {
         Pos = Vector(0, 1, 0),
         Ang = Angle(0, 0, -90),
         Icon_Offset = Vector(0, 0, 0),
-        Category =  {"bo1_tactical"},
+        Category =  {"cod_tactical"},
         RequireElements = {"mp5k_foregrip"},
     },
     {
@@ -381,7 +381,7 @@ ATT.Attachments = {
         Pos = Vector(0, -1, 0),
         Ang = Angle(0, 0, 90),
         Icon_Offset = Vector(0, 0, 0),
-        Category =  {"bo1_tactical"},
+        Category =  {"cod_tactical"},
         RequireElements = {"mp5k_foregrip"},
     },
 
@@ -427,7 +427,7 @@ ATT.Attachments = {
         Pos = Vector(0.75, 0, 1.4),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, -0.5),
-        Category = {"bo1_rail_underbarrel"},
+        Category = {"cod_rail_underbarrel"},
     },
 }
 

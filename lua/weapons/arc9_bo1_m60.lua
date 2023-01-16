@@ -167,18 +167,17 @@ SWEP.ProceduralViewQCA = 1
 SWEP.CamQCA = 4
 
 SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
-     [0] = "j_bullets0",
-     [1] = "j_bullets1",
-     [2] = "j_bullets2",
-     [3] = "j_bullets3",
-     [4] = "j_bullets4",
-     [5] = "j_bullets5",
-     [6] = "j_bullets6",
-     [7] = "j_bullets7",
-     [8] = "j_bullets8",
-     [9] = "j_bullets9",
-     [10] = "j_bullets10",
-     [11] = "j_bullets11",
+    [0] = "j_bullets0",
+    [1] = "j_bullets1",
+    [2] = "j_bullets2",
+    [3] = "j_bullets3",
+    [4] = "j_bullets4",
+    [5] = "j_bullets5",
+    [6] = "j_bullets6",
+    [7] = "j_bullets7",
+    [8] = "j_bullets8",
+    [9] = "j_bullets9",
+    [10] = "j_bullets10",
 }
 
 SWEP.ProceduralRegularFire = false
@@ -190,9 +189,14 @@ SWEP.IronSights = {
     Pos = Vector(-3.245, -5, 0.6),
     Ang = Angle(0.05, 0.4, 0),
     Magnification = 1.1,
-    -- AssociatedSlot = 9,
+    ViewModelFOV = 60,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
+}
+
+SWEP.SightMidPoint = { -- Where the gun should be at the middle of it's irons
+    Pos = Vector(-1.75, -2.5, 0.3),
+    Ang = Angle(0.025, 0.2, 0),
 }
 
 SWEP.HoldTypeHolstered = "passive"
@@ -206,6 +210,9 @@ SWEP.AnimDraw = ACT_HL2MP_GESTURE_RANGE_ATTACK_KNIFE
 SWEP.ActivePos = Vector(0, -3, -1)
 SWEP.ActiveAng = Angle(0, 0, -5)
 
+SWEP.BipodPos = Vector(-3.245, 0, -1.5)
+SWEP.BipodAng = Angle(0,0,0)
+
 SWEP.MovingPos = SWEP.ActivePos
 SWEP.MovingAng = SWEP.ActiveAng
 
@@ -214,21 +221,19 @@ SWEP.MovingMidPoint = {
     Ang = SWEP.ActiveAng
 }
 
-SWEP.BipodPos = Vector(-3.245, 0, -1.5)
-SWEP.BipodAng = Angle(0,0,0)
+SWEP.CrouchPos = SWEP.ActivePos + Vector(0,-1,-1)
+SWEP.CrouchAng = SWEP.ActiveAng
 
-SWEP.CrouchPos = Vector(0, -3, -1)
-SWEP.CrouchAng = Angle(0, 0, -5)
+SWEP.RestPos = SWEP.ActivePos
+SWEP.RestAng = SWEP.ActiveAng
 
 SWEP.SprintVerticalOffset = false
-SWEP.SprintPos = Vector(0, -3, -1)
-SWEP.SprintAng = Angle(0, 0, -5)
+SWEP.SprintPos = SWEP.ActivePos
+SWEP.SprintAng = SWEP.ActiveAng
 
-SWEP.CustomizePos = Vector(12.5, 40, 4)
+SWEP.CustomizePos = Vector(16.5, 40, 4)
 SWEP.CustomizeAng = Angle(90, 0, 0)
-
-SWEP.RestPos = Vector(0, 0, -1)
-SWEP.RestAng = Angle(0, 0, -5)
+SWEP.CustomizeSnapshotPos = Vector(5.5, 15, 0)
 
 SWEP.BarrelLength = 0 -- = 25
 
@@ -308,7 +313,7 @@ SWEP.Attachments = {
         Bone = "j_reload_cover",
         Pos = Vector(-2.125, 0.1, 0.85),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic", "bo1_rail_riser", "bo1_alt_irons"},
+        Category = {"cod_optic", "cod_rail_riser", "bo1_alt_irons"},
         InstalledElements = {"mount"},
     },
     {
@@ -325,7 +330,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(7, 0, 0),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_rail_underbarrel"},
+        Category = {"cod_rail_underbarrel"},
     },
     {
         PrintName = "Bipod",
@@ -438,19 +443,19 @@ SWEP.Animations = {
     },
     ["reload"] = {
         Source = "reload",
-        Time = 281 / 40,
-        LastClip1OutTime = 110 / 40,
+        Time = 281 / 30,
+        LastClip1OutTime = 110 / 30,
         EventTable = {
-            {s = "ARC9_BO1.M60_Charge", t = 17 / 35},
-            {s = "ARC9_BO1.M60_Charge", t = 20 / 35},
-            {s = "ARC9_BO1.M60_Open", t = 57 / 35},
-            {s = "ARC9_BO1.M60_BoxOff", t = 95 / 35},
-            {s = "ARC9_BO1.M60_BoxOn", t = 130 / 35},
-            {s = "ARC9_BO1.M60_BeltPull", t = 160 / 35},
-            {s = "ARC9_BO1.M60_BeltPlace", t = 175 / 35},
-            {s = "ARC9_BO1.M60_Close", t = 200 / 35},
-            {s = "ARC9_BO1.M60_LidClose", t = 205 / 35},
-            {s = "ARC9_BO1.M60_Bonk", t = 210 / 35},
+            {s = "ARC9_BO1.M60_Charge", t = 17 / 30},
+            {s = "ARC9_BO1.M60_Charge", t = 20 / 30},
+            {s = "ARC9_BO1.M60_Open", t = 75 / 30},
+            {s = "ARC9_BO1.M60_BoxOff", t = 100 / 30},
+            {s = "ARC9_BO1.M60_BoxOn", t = 140 / 30},
+            {s = "ARC9_BO1.M60_BeltPull", t = 160 / 30},
+            {s = "ARC9_BO1.M60_BeltPlace", t = 175 / 30},
+            {s = "ARC9_BO1.M60_Close", t = 200 / 30},
+            {s = "ARC9_BO1.M60_LidClose", t = 205 / 30},
+            {s = "ARC9_BO1.M60_Bonk", t = 210 / 30},
         },
         IKTimeLine = {
             {
@@ -477,19 +482,19 @@ SWEP.Animations = {
     },
     ["reload_empty"] = {
         Source = "reload",
-        Time = 281 / 40,
-        LastClip1OutTime = 110 / 40,
+        Time = 281 / 30,
+        LastClip1OutTime = 110 / 30,
         EventTable = {
-            {s = "ARC9_BO1.M60_Charge", t = 17 / 35},
-            {s = "ARC9_BO1.M60_Charge", t = 20 / 35},
-            {s = "ARC9_BO1.M60_Open", t = 57 / 35},
-            {s = "ARC9_BO1.M60_BoxOff", t = 95 / 35},
-            {s = "ARC9_BO1.M60_BoxOn", t = 130 / 35},
-            {s = "ARC9_BO1.M60_BeltPull", t = 160 / 35},
-            {s = "ARC9_BO1.M60_BeltPlace", t = 175 / 35},
-            {s = "ARC9_BO1.M60_Close", t = 200 / 35},
-            {s = "ARC9_BO1.M60_LidClose", t = 205 / 35},
-            {s = "ARC9_BO1.M60_Bonk", t = 210 / 35},
+            {s = "ARC9_BO1.M60_Charge", t = 17 / 30},
+            {s = "ARC9_BO1.M60_Charge", t = 20 / 30},
+            {s = "ARC9_BO1.M60_Open", t = 75 / 30},
+            {s = "ARC9_BO1.M60_BoxOff", t = 100 / 30},
+            {s = "ARC9_BO1.M60_BoxOn", t = 140 / 30},
+            {s = "ARC9_BO1.M60_BeltPull", t = 160 / 30},
+            {s = "ARC9_BO1.M60_BeltPlace", t = 175 / 30},
+            {s = "ARC9_BO1.M60_Close", t = 200 / 30},
+            {s = "ARC9_BO1.M60_LidClose", t = 205 / 30},
+            {s = "ARC9_BO1.M60_Bonk", t = 210 / 30},
         },
         IKTimeLine = {
             {
@@ -520,7 +525,7 @@ SWEP.Animations = {
     },
     ["idle_sprint"] = {
         Source = "sprint_loop",
-        Time = 30 / 40
+        Time = 30 / 30
     },
     ["exit_sprint"] = {
         Source = "sprint_out",

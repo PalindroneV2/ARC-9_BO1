@@ -154,7 +154,7 @@ SWEP.AnimDraw = ACT_HL2MP_GESTURE_RANGE_ATTACK_KNIFE
 SWEP.AnimMelee = ACT_HL2MP_GESTURE_RANGE_ATTACK_MELEE
 
 SWEP.ActivePos = Vector(0, 0, -1)
-SWEP.ActiveAng = Angle(0, 0, -5)
+SWEP.ActiveAng = Angle(0, 0, 0)
 
 SWEP.MovingPos = SWEP.ActivePos
 SWEP.MovingAng = SWEP.ActiveAng
@@ -164,8 +164,11 @@ SWEP.MovingMidPoint = {
     Ang = SWEP.ActiveAng
 }
 
-SWEP.CrouchPos = SWEP.ActivePos
+SWEP.CrouchPos = SWEP.ActivePos + Vector(0,-1,-1)
 SWEP.CrouchAng = SWEP.ActiveAng
+
+SWEP.RestPos = SWEP.ActivePos
+SWEP.RestAng = SWEP.ActiveAng
 
 SWEP.SprintVerticalOffset = false
 SWEP.SprintPos = SWEP.ActivePos
@@ -176,9 +179,6 @@ SWEP.CustomizeAng = Angle(0, 90, 0)
 SWEP.CustomizeSnapshotPos = Vector(-15, 20, 32.5 / 2)
 SWEP.CustomizeSnapshotAng = Angle(0, 0, 0)
 SWEP.CustomizeNoRotate = true
-
-SWEP.RestPos = Vector(0, 0, 0)
-SWEP.RestAng = Angle(0, 0, 0)
 
 SWEP.BarrelLength = 0 -- = 0
 

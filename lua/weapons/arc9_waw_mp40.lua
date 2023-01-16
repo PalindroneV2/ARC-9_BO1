@@ -162,7 +162,7 @@ SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556_steel"
 SWEP.MuzzleEffectQCA = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectQCA = 2 -- which attachment to put the case effect on
 SWEP.ProceduralViewQCA = 1
-SWEP.CamQCA = 4
+SWEP.CamQCA = 3
 
 SWEP.BulletBones = {
 }
@@ -176,9 +176,15 @@ SWEP.IronSights = {
     Pos = Vector(-1.85, -6.5, 0),
     Ang = Angle(-1.1, 1.55, 0),
     Magnification = 1.1,
-    AssociatedSlot = 9,
+    -- AssociatedSlot = 1,
+    ViewModelFOV = 60,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
+}
+
+SWEP.SightMidPoint = { -- Where the gun should be at the middle of it's irons
+    Pos = Vector(0.125, -5.25, -1),
+    Ang = Angle(-0.55, 0.775, -2.5),
 }
 
 SWEP.HoldTypeHolstered = "passive"
@@ -200,18 +206,18 @@ SWEP.MovingMidPoint = {
     Ang = SWEP.ActiveAng
 }
 
-SWEP.CrouchPos = Vector(2, -4, -2)
-SWEP.CrouchAng = Angle(0, 0, -5)
+SWEP.CrouchPos = SWEP.ActivePos + Vector(0,-1,-1)
+SWEP.CrouchAng = SWEP.ActiveAng
+
+SWEP.RestPos = SWEP.ActivePos
+SWEP.RestAng = SWEP.ActiveAng
 
 SWEP.SprintVerticalOffset = false
-SWEP.SprintPos = Vector(10, 0, -2)
-SWEP.SprintAng = Angle(45, -7, 0)
+SWEP.SprintPos = SWEP.ActivePos + Vector(10, 0, -1)
+SWEP.SprintAng = SWEP.ActiveAng + Angle(40, 0, 0)
 
 SWEP.CustomizePos = Vector(20.5, 40, 6)
 SWEP.CustomizeAng = Angle(90, 0, 0)
-
-SWEP.RestPos = Vector(0, 0, 0)
-SWEP.RestAng = Angle(0, 0, 0)
 
 SWEP.BarrelLength = 0 -- = 25
 

@@ -39,12 +39,12 @@ SWEP.ViewModelFOVBase = 75
 
 SWEP.DefaultBodygroups = "00000000000"
 
-SWEP.DamageMax = 75
-SWEP.DamageMin = 50 -- damage done at maximum range
+SWEP.DamageMax = 100
+SWEP.DamageMin = 50
 SWEP.RangeMax = 10000
 SWEP.RangeMin = 2500
 SWEP.Penetration = 20
-SWEP.ImpactForce = 25
+SWEP.ImpactForce = 10
 SWEP.ArmorPiercing = 1
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEnt = nil -- entity to fire, if any
@@ -53,7 +53,7 @@ SWEP.EntityMuzzleVelocity = 10000
 SWEP.PhysBulletMuzzleVelocity = 2500 * 39.37
 
 SWEP.BodyDamageMults = {
-    [HITGROUP_HEAD] = 3,
+    [HITGROUP_HEAD] = 2,
     [HITGROUP_CHEST] = 1,
     [HITGROUP_LEFTARM] = 1,
     [HITGROUP_RIGHTARM] = 1,
@@ -75,7 +75,7 @@ SWEP.CanBlindFire = false
 
 SWEP.Recoil = 2
 SWEP.RecoilSide = 0.7
-SWEP.RecoilUp = 2
+SWEP.RecoilUp = 1
 
 SWEP.RecoilRandomUp = 1
 SWEP.RecoilRandomSide = 0.6
@@ -84,7 +84,7 @@ SWEP.RecoilDissipationRate = 40 -- How much recoil dissipates per second.
 SWEP.RecoilResetTime = 0.01 -- How long the gun must go before the recoil pattern starts to reset.
 
 SWEP.RecoilAutoControl = 0.3
-SWEP.RecoilKick = 4
+SWEP.RecoilKick = 2
 
 SWEP.Spread = math.rad(2.3 / 37.5)
 SWEP.SpreadMultRecoil = 1.25
@@ -120,11 +120,79 @@ SWEP.SprintToFireTime = 0.3
 
 SWEP.RPM = 600
 SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
+
+SWEP.NextBeepTime = 0
+SWEP.ChargedShot = 1
+SWEP.TriggerDelayTime = 0
+SWEP.TriggerDelay = true
+SWEP.TriggerDelayTime = 0
+SWEP.TriggerDelayCancellable = true
+
 SWEP.Firemodes = {
     {
+        PrintName = "Charge 1",
         Mode = 1,
     },
+    {
+        PrintName = "Charge 2",
+        Mode = 1,
+        AmmoPerShot = 2,
+        DamageMinMult = 2,
+        DamageMaxMult = 2,
+        PenetrationMult = 2,
+        ImpactForceMult = 2,
+        TriggerDelay = true,
+        TriggerDelayTime = 1,
+        TriggerDelayCancellable = true,
+    },
+    {
+        PrintName = "Charge 3",
+        Mode = 1,
+        AmmoPerShot = 3,
+        DamageMinMult = 3,
+        DamageMaxMult = 3,
+        PenetrationMult = 3,
+        ImpactForceMult = 3,
+        TriggerDelay = true,
+        TriggerDelayTime = 2,
+        TriggerDelayCancellable = true,
+    },
+    {
+        PrintName = "Charge 4",
+        Mode = 1,
+        AmmoPerShot = 4,
+        DamageMinMult = 4,
+        DamageMaxMult = 4,
+        ImpactForceMult = 4,
+        PenetrationMult = 4,
+        TriggerDelay = true,
+        TriggerDelayTime = 3,
+        TriggerDelayCancellable = true,
+    },
+    {
+        PrintName = "Charge 5",
+        Mode = 1,
+        AmmoPerShot = 5,
+        DamageMaxMult = 5,
+        DamageMinMult = 5,
+        PenetrationMult = 5,
+        ImpactForceMult = 5,
+        TriggerDelay = true,
+        TriggerDelayTime = 4,
+        TriggerDelayCancellable = true,
+    },
 }
+SWEP.Hook_Think = function(self)
+    if self.NextBeepTime > CurTime() then return end
+    local beeptime = math.Clamp(CurTime() - self.TriggerDelayTime, 0, 1)
+    if beeptime >= 0.75 and self:GetPrimedAttack() then
+        if CLIENT then
+            self:EmitSound("ARC9_BO2.Storm_Charge", 75, 100)
+        end
+        self.NextBeepTime = CurTime() + 0.85
+    end
+end
+
 SWEP.ARC9WeaponCategory = 5
 SWEP.NPCWeight = 100
 
@@ -170,9 +238,15 @@ SWEP.IronSights = {
     Pos = Vector(-2.225, 0, 1),
     Ang = Angle(0.05, 0.1, 0),
     Magnification = 1.1,
-    -- AssociatedSlot = 9,
+    ViewModelFOV = 60,
+    AssociatedSlot = 1,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
+}
+
+SWEP.SightMidPoint = { -- Where the gun should be at the middle of it's irons
+    Pos = Vector(-1.125, -2.5, 0),
+    Ang = Angle(0.025, 0.05, -2.5),
 }
 
 SWEP.HoldTypeHolstered = "passive"
@@ -194,22 +268,19 @@ SWEP.MovingMidPoint = {
     Ang = SWEP.ActiveAng
 }
 
-SWEP.BipodPos = Vector(-2.225, 1, -3)
-SWEP.BipodAng = Angle(0.05, 0, 0)
+SWEP.CrouchPos = SWEP.ActivePos + Vector(0,-1,-1)
+SWEP.CrouchAng = SWEP.ActiveAng
 
-SWEP.CrouchPos = Vector(0, 0, -1)
-SWEP.CrouchAng = Angle(0, 0, -5)
+SWEP.RestPos = SWEP.ActivePos
+SWEP.RestAng = SWEP.ActiveAng
 
 SWEP.SprintVerticalOffset = false
-SWEP.SprintPos = Vector(0, 0, -1)
-SWEP.SprintAng = Angle(0, 0, -5)
+SWEP.SprintPos = SWEP.ActivePos
+SWEP.SprintAng = SWEP.ActiveAng
 
-SWEP.CustomizePos = Vector(17.5, 40, 4)
+SWEP.CustomizePos = Vector(22, 40, 4)
 SWEP.CustomizeAng = Angle(90, 0, 0)
 SWEP.CustomizeSnapshotFOV = 100
-
-SWEP.RestPos = Vector(0, 0, -1)
-SWEP.RestAng = Angle(0, 0, -5)
 
 SWEP.BarrelLength = 0 -- = 25
 
@@ -344,7 +415,7 @@ SWEP.Animations = {
         },
     },
     ["fire_iron"] = {
-        Source = "fire",
+        Source = "fire_ads",
         Time = 13 / 35,
         EventTable = {
             {s = "ARC9_BO2.Storm_Spin", t = 1 / 60},

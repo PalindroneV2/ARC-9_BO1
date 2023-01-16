@@ -7,7 +7,7 @@ ATT.MenuCategory = "ARC-9 - WAW Attachments"
 ATT.Free = true
 ATT.Folder = "REFLEX"
 
-ATT.Category = {"waw_aperture", "bo1_optic", "bo1_optic_pistol", "bo1_optic_lp"}
+ATT.Category = {"waw_aperture", "cod_optic", "cod_optic_pistol", "cod_optic_lp"}
 ATT.ActivateElements = {"waw_aptrs"}
 -- ATT.RequireElements = {"waw_aperture_univ"}
 

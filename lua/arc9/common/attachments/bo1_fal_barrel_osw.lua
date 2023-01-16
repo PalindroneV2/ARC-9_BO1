@@ -26,7 +26,7 @@ ATT.Attachments = {
         Bone = "j_gun",
         Pos = Vector(-2, 0, 1.3),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_m203", "bo1_mk", "bo1_grips"},
+        Category = {"bo1_m203", "bo1_mk", "cod_grips"},
         ExcludeElements = {"ar15_ris"}
     },
     {
@@ -35,7 +35,7 @@ ATT.Attachments = {
         Bone = "j_gun",
         Pos = Vector(-3.25, 0.7, 0),
         Ang = Angle(0, 0, -90),
-        Category =  {"bo1_tactical"}
+        Category =  {"cod_tactical"}
     },
     {
         PrintName = "Tactical Right",
@@ -43,7 +43,7 @@ ATT.Attachments = {
         Bone = "j_gun",
         Pos = Vector(-3.25, -0.7, 0),
         Ang = Angle(0, 0, 90),
-        Category =  {"bo1_tactical"}
+        Category =  {"cod_tactical"}
     },
     {
         PrintName = "Tactical Top",
@@ -52,7 +52,7 @@ ATT.Attachments = {
         Pos = Vector(-3.25, 0, -0.5),
         Ang = Angle(0, 0, 180),
         Icon_Offset = Vector(0, 0, -1),
-        Category =  {"bo1_tactical_top"},
+        Category =  {"cod_tactical_top"},
     },
 }
 

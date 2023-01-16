@@ -61,7 +61,7 @@ ATT.Attachments = {
         Bone = "j_gun",
         Pos = Vector(0, 0, 2),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_grips"},
+        Category = {"cod_grips"},
     },
 }
 
@@ -113,7 +113,7 @@ ATT.Attachments = {
         Bone = "j_gun",
         Pos = Vector(2, 0, 2.1),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_tishina","bo1_grips"},
+        Category = {"bo1_tishina","cod_grips"},
     },
 }
 
@@ -167,7 +167,7 @@ ATT.Attachments = {
         Bone = "j_gun",
         Pos = Vector(3.5, 0, 1.9),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_rail_underbarrel"},
+        Category = {"cod_rail_underbarrel"},
     },
 }
 
@@ -317,7 +317,7 @@ ATT.Attachments = {
     {
         PrintName = "Optic LP",
         DefaultCompactName = "LPO",
-        Category = {"bo1_optic", "bo1_rail_riser"},
+        Category = {"cod_optic", "cod_rail_riser"},
         Bone = "j_gun",
         InstalledElements = {"nobacksight"},
         Pos = Vector(-3.75, 0, -1.75),
@@ -723,7 +723,7 @@ ATT.Attachments = {
         Pos = Vector(0, 0, -1),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0,0,1),
-        Category = {"bo1_optic", "bo1_rail_riser"},
+        Category = {"cod_optic", "cod_rail_riser"},
         ExcludeElements = {"nobacksight"},
     }
 }
@@ -754,7 +754,7 @@ ATT.Attachments = {
         Pos = Vector(0, 0, -1),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0,0,1),
-        Category = {"bo1_optic", "bo1_rail_riser"},
+        Category = {"cod_optic", "cod_rail_riser"},
         ExcludeElements = {"nobacksight"},
     }
 }

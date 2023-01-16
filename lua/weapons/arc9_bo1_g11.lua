@@ -194,6 +194,11 @@ SWEP.IronSights = {
     SwitchToSound = "", -- sound that plays when switching to this sight
 }
 
+SWEP.SightMidPoint = { -- Where the gun should be at the middle of it's irons
+    Pos = Vector(-1.1, -1.5, 0.125),
+    Ang = Angle(0.035, -0.05, 0),
+}
+
 SWEP.HoldTypeHolstered = "passive"
 SWEP.HoldType = "ar2"
 SWEP.HoldTypeSights = "ar2"
@@ -213,21 +218,18 @@ SWEP.MovingMidPoint = {
     Ang = SWEP.ActiveAng
 }
 
-SWEP.CrouchPos = Vector(0, 0, -1)
-SWEP.CrouchAng = Angle(0, 0, -5)
+SWEP.CrouchPos = SWEP.ActivePos + Vector(0,-1,-1)
+SWEP.CrouchAng = SWEP.ActiveAng
+
+SWEP.RestPos = SWEP.ActivePos
+SWEP.RestAng = SWEP.ActiveAng
 
 SWEP.SprintVerticalOffset = false
-SWEP.SprintPos = Vector(0, 0, -1)
-SWEP.SprintAng = Angle(0, 0, -5)
-
-SWEP.BipodPos = Vector(0, 10,-4)
-SWEP.BipodAng = Angle(0, 0, 10)
+SWEP.SprintPos = SWEP.ActivePos
+SWEP.SprintAng = SWEP.ActiveAng
 
 SWEP.CustomizePos = Vector(12.5, 40, 4)
 SWEP.CustomizeAng = Angle(90, 0, 0)
-
-SWEP.RestPos = Vector(0, 0, 0)
-SWEP.RestAng = Angle(0, 0, 0)
 
 SWEP.BarrelLength = 0 -- = 25
 
@@ -279,7 +281,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(1, 0.08, 5.94),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic", "bo1_rail_riser", "bo1_g11_optic"},
+        Category = {"cod_optic", "cod_rail_riser", "bo1_g11_optic"},
         InstalledElements = {"mount"},
         Installed = "bo1_optic_g11",
     },
@@ -296,7 +298,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(9, 0.08, 1.05),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_rail_underbarrel"},
+        Category = {"cod_rail_underbarrel"},
     },
     {
         PrintName = "Fire Control Group",
@@ -320,7 +322,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(12, -0.85, 2.05),
         Ang = Angle(0, 0, 90),
-        Category = "bo1_rail_tactical",
+        Category = "cod_rail_tactical",
     },
     {
         PrintName = "Tactical Right",
@@ -328,7 +330,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(12, 0.85, 2.05),
         Ang = Angle(0, 0, -90),
-        Category = "bo1_rail_tactical",
+        Category = "cod_rail_tactical",
     },
     {
         PrintName = "Perk-a-Cola",

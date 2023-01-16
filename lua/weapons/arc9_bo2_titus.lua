@@ -11,11 +11,11 @@ SWEP.Description = [[
     It includes an underbarrel two-round burst shotgun with a 10-round magazine.
 ]]
 SWEP.Trivia = {
-    Manufacturer = "DSA",
-    Calibre = ".308 Winchester",
+    Manufacturer = "Unknown",
+    Projectile = "Explosive Flechettes/12 Gauge #00 Buckshot",
     Mechanism = "Gas-Operated",
-    Country = "Russia",
-    Year = 2009,
+    Country = "Unknown",
+    Year = 2025,
     Games = [[Call of Duty: Black Ops II]]
 }
 SWEP.Credits = {
@@ -46,7 +46,8 @@ SWEP.RangeMax = 8000
 SWEP.RangeMin = 2000
 SWEP.Penetration = 8
 SWEP.DamageType = DMG_BULLET
-SWEP.ShootEnt = nil
+-- SWEP.ShootEnt = nil
+SWEP.ShootEnt = "arc9_bo2_titus_flechette"
 SWEP.EntityMuzzleVelocity = 10000
 
 SWEP.PhysBulletMuzzleVelocity = 960 * 39.37
@@ -122,44 +123,6 @@ SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
         Mode = 3,
-        ShootEnt = "arc9_bo2_titus_flechette",
-        Hook_Think = function(self)
-            if self:Clip1() > 3 then
-                self:SetClip1(3)
-            end
-        end
-    },
-    {
-        Mode = 2,
-        PostBurstDelay = 0.15,
-        ShootEnt = nil,
-        HasSights = false,
-        Ammo = "Buckshot",
-        ShootSound = "ARC9_BO2.1216_Fire",
-        ShootSoundSilenced = "ARC9_BO2.S12_Sil",
-        DistantShootSound = {"^weapons/arc9/bo2_generic_shotgun/dist/0.wav", "^weapons/arc9/bo2_generic_shotgun/dist/1.wav"},
-        Recoil = 1,
-        RecoilSide = 0.75,
-        RecoilUp = 1.6,
-        ClipSize = 10,
-        RecoilRandomUp = 0.6,
-        RecoilRandomSide = 0.4,
-        Num = 8,
-        RecoilDissipationRate = 40,
-        RecoilResetTime = 0.01,
-        RecoilAutoControl = 0.5,
-        RecoilKick = 2,
-        Spread = 0.03,
-        SpreadMultRecoil = 1.25,
-        SpreadMultSights = 0.9,
-        SpreadAddHipFire = math.rad(150 / 37.5),
-        SpreadAddMove = math.rad(0 / 37.5),
-        SpreadAddMidAir = 0,
-        UsePelletSpread = true,
-        PelletSpread = 0.2,
-        Hook_TranslateAnimation = function(swep, anim)
-            return anim .. "_mk"
-        end,
     },
 }
 SWEP.RunawayBurst = true
@@ -189,6 +152,39 @@ SWEP.DistantShootSound = {
     "^weapons/ARC9/bo2_generic_ar/dist/3.wav"
 }
 
+SWEP.UBGL = true
+SWEP.UBGLAmmo = "buckshot"
+SWEP.UBGLClipSize = 10
+SWEP.UBGLFiremode = 2
+SWEP.UBGLFiremodeName = "MKEY"
+SWEP.UBGLChamberSize = 0
+
+SWEP.FirstShootSoundUBGL = false
+SWEP.ShootSoundUBGL = "ARC9_BO2.1216_Fire"
+SWEP.DistantShootSoundUBGL = false
+SWEP.HasSightsUBGL = false
+
+SWEP.EnterUBGLSound = "ARC9_BO1.MK_Back"
+SWEP.ExitUBGLSound = "ARC9_BO1.MK_Fwd"
+
+SWEP.MuzzleParticleUBGL = "muzzleflash_m3"
+
+SWEP.SpreadUBGL = math.rad(39 / 37.5)
+SWEP.NumUBGL = 8
+
+SWEP.RecoilUBGL = 2
+SWEP.RecoilKickUBGL = 1
+
+SWEP.DamageMaxUBGL = 35
+SWEP.DamageMinUBGL = 15
+SWEP.RangeUBGL = 500
+SWEP.PenetrationUBGL = 2
+SWEP.DamageTypeUBGL = DMG_BUCKSHOT
+SWEP.PhysBulletMuzzleVelocityUBGL = 9000
+SWEP.RPMUBGL = 600
+SWEP.ShootVolumeUBGL = 110
+SWEP.ShootEntUBGL = nil
+
 --SWEP.MuzzleEffect = "muzzleflash_4"
 SWEP.MuzzleParticle = "muzzleflash_m14" -- Used for some muzzle effects.
 
@@ -199,7 +195,7 @@ SWEP.ShellScale = 1.4
 SWEP.MuzzleEffectQCA = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectQCA = 2 -- which attachment to put the case effect on
 SWEP.ProceduralViewQCA = 1
-SWEP.CamQCA = 4
+SWEP.CamQCA = 3
 
 SWEP.BulletBones = {
 }
@@ -210,11 +206,17 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(-2.425, 0, 0.5),
-    Ang = Angle(0, 0.03, 0),
+    Pos = Vector(-2.625, -3, -0.1),
+    Ang = Angle(0, 0, 0),
     Magnification = 1.1,
+    ViewModelFOV = 60,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
+}
+
+SWEP.SightMidPoint = { -- Where the gun should be at the middle of it's irons
+    Pos = Vector(-1.3125, -1.5, -0.55),
+    Ang = Angle(0, 0, -2.5),
 }
 
 SWEP.HoldTypeHolstered = "passive"
@@ -236,8 +238,11 @@ SWEP.MovingMidPoint = {
     Ang = SWEP.ActiveAng
 }
 
-SWEP.CrouchPos = SWEP.ActivePos
+SWEP.CrouchPos = SWEP.ActivePos + Vector(0,-1,-1)
 SWEP.CrouchAng = SWEP.ActiveAng
+
+SWEP.RestPos = SWEP.ActivePos
+SWEP.RestAng = SWEP.ActiveAng
 
 SWEP.SprintVerticalOffset = false
 SWEP.SprintPos = SWEP.ActivePos
@@ -245,9 +250,6 @@ SWEP.SprintAng = SWEP.ActiveAng
 
 SWEP.CustomizePos = Vector(12.5, 40, 4)
 SWEP.CustomizeAng = Angle(90, 0, 0)
-
-SWEP.RestPos = Vector(0, 0, -1)
-SWEP.RestAng = Angle(0, 0, -5)
 
 SWEP.BarrelLength = 0 -- = 25
 
@@ -341,6 +343,19 @@ SWEP.Attachments = {
     },
 }
 
+SWEP.Hook_TranslateAnimation = function (self, anim)
+    -- local attached = self:GetElements()
+
+    local suffix = ""
+    if self:GetUBGL() then
+        suffix = "_mk"
+    end
+    if self:Clip2() == 0 and anim == "reload_ubgl_mk" then
+        return "reload_empty_ubgl_mk"
+    end
+    return anim .. suffix
+end
+
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
@@ -409,11 +424,11 @@ SWEP.Animations = {
 
     -- FIREMODE
 
-    ["firemode_1"] = {
+    ["enter_ubgl"] = {
         Source = "mksetup_in",
         Time = 0.8,
     },
-    ["firemode_2"] = {
+    ["exit_ubgl"] = {
         Source = "mksetup_out",
         Time = 0.8,
     },
@@ -445,7 +460,7 @@ SWEP.Animations = {
         Time = 5 / 30,
         ShellEjectAt = 0,
     },
-    ["reload_mk"] = {
+    ["reload_ubgl"] = {
         Source = "reload_mk",
         Time = 2.6,
         EventTable = {
@@ -453,7 +468,7 @@ SWEP.Animations = {
             {s = "ARC9_BO2.AR_MagIn", t = 1.5},
         },
     },
-    ["reload_empty_mk"] = {
+    ["reload_empty_ubgl"] = {
         Source = "reload_empty_mk",
         Time = 3.2,
         EventTable = {

@@ -118,7 +118,7 @@ SWEP.VisualRecoilCenter = Vector(0, 0, 0)
 SWEP.VisualRecoilPunch = 0
 SWEP.VisualRecoilMultSights = 0
 
-SWEP.Speed = 1
+SWEP.Speed = 0.7
 
 SWEP.ShootWhileSprint = true
 SWEP.ReloadInSights = false
@@ -188,6 +188,11 @@ SWEP.IronSights = {
     SwitchToSound = "", -- sound that plays when switching to this sight
 }
 
+SWEP.SightMidPoint = { -- Where the gun should be at the middle of it's irons
+    Pos = Vector(1.5, 0, 6),
+    Ang = Angle(0, 0, -5),
+}
+
 SWEP.HoldTypeHolstered = "passive"
 SWEP.HoldType = "rpg"
 SWEP.HoldTypeSights = "rpg"
@@ -196,7 +201,7 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_RPG
 SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_RPG
 SWEP.AnimDraw = ACT_HL2MP_GESTURE_RANGE_ATTACK_KNIFE
 
-SWEP.ActivePos = Vector(3, 0, 4)
+SWEP.ActivePos = Vector(0, 0, 5)
 SWEP.ActiveAng = Angle(0, 0, -10)
 
 SWEP.MovingPos = SWEP.ActivePos
@@ -207,20 +212,20 @@ SWEP.MovingMidPoint = {
     Ang = SWEP.ActiveAng
 }
 
-SWEP.CrouchPos = SWEP.ActivePos
+SWEP.CrouchPos = SWEP.ActivePos + Vector(0,-1,-1)
 SWEP.CrouchAng = SWEP.ActiveAng
 
+SWEP.RestPos = SWEP.ActivePos
+SWEP.RestAng = SWEP.ActiveAng
+
 SWEP.SprintVerticalOffset = false
-SWEP.SprintPos = Vector(0, 0, -1)
-SWEP.SprintAng = Angle(0, 0, -5)
+SWEP.SprintPos = SWEP.ActivePos + Vector(5, 0, -1)
+SWEP.SprintAng = SWEP.ActiveAng + Angle(40, 0, 0)
 
 SWEP.CustomizePos = Vector(5, 50, 13.5)
 SWEP.CustomizeAng = Angle(90, 0, -1)
 SWEP.CustomizeSnapshotPos = Vector(5, 10, 1.5)
 SWEP.CustomizeSnapshotAng = Angle(0, 0, 0)
-
-SWEP.RestPos = Vector(0, 0, 0)
-SWEP.RestAng = Angle(0, 0, 0)
 
 SWEP.BarrelLength = 0 -- = 25
 

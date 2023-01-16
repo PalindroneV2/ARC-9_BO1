@@ -6,7 +6,7 @@ ATT.Description = [[None
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
-ATT.Free = false
+ATT.Free = true
 
 ATT.Category = {"bocw_ak5_intgrip"}
 ATT.ActivateElements = {"barrel_osw"}

@@ -6,8 +6,8 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 
-ATT.Category = {"bo1_rail_underbarrel"}
-ATT.ActivateElements = {"bo1_rail_underbarrel"}
+ATT.Category = {"cod_rail_underbarrel"}
+ATT.ActivateElements = {"cod_rail_underbarrel"}
 ATT.Model = "models/weapons/arc9/item/bo2_rail.mdl"
 ATT.Scale = Vector(.5,.5,.5)
 ATT.ModelOffset = Vector(0, 0, 0)
@@ -25,7 +25,7 @@ ATT.Attachments = {
         Ang = Angle(0, 0, 0),
         Scale = Vector(1, 1, 1),
         Icon_Offset = Vector(0, 0, -2),
-        Category = {"bo1_grips"},
+        Category = {"cod_grips"},
         ExcludeElements = {"no_ub_rail"},
     }
 }

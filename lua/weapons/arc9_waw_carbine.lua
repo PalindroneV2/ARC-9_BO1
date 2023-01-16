@@ -169,9 +169,14 @@ SWEP.IronSights = {
     Pos = Vector (-1.56, -9, -0.25),
     Ang = Angle(0.025, 0.15, 0),
     Magnification = 1.1,
-    AssociatedSlot = 9,
+    ViewModelFOV = 60,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
+}
+
+SWEP.SightMidPoint = { -- Where the gun should be at the middle of it's irons
+    Pos = Vector(-0.78, -7.5, -0.5),
+    Ang = Angle(0.0125, 0.075, -2.5),
 }
 
 SWEP.HoldTypeHolstered = "passive"
@@ -193,18 +198,18 @@ SWEP.MovingMidPoint = {
     Ang = SWEP.ActiveAng
 }
 
-SWEP.CrouchPos = Vector(0, -2, -1)
-SWEP.CrouchAng = Angle(0, 0, -5)
+SWEP.CrouchPos = SWEP.ActivePos + Vector(0,-1,-1)
+SWEP.CrouchAng = SWEP.ActiveAng
+
+SWEP.RestPos = SWEP.ActivePos
+SWEP.RestAng = SWEP.ActiveAng
 
 SWEP.SprintVerticalOffset = false
-SWEP.SprintPos = Vector(10, 0, -2)
-SWEP.SprintAng = Angle(45, -7, 0)
+SWEP.SprintPos = SWEP.ActivePos + Vector(9, 0, -1)
+SWEP.SprintAng = SWEP.ActiveAng + Angle(40, 0, 0)
 
 SWEP.CustomizePos = Vector(20.5, 40, 6)
 SWEP.CustomizeAng = Angle(90, 0, 0)
-
-SWEP.RestPos = Vector(0, 0, -1)
-SWEP.RestAng = Angle(0, 0, -5)
 
 SWEP.BarrelLength = 0 -- = 25
 
@@ -292,7 +297,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(7, 0, -0.65),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_rail_underbarrel"},
+        Category = {"cod_rail_underbarrel"},
     },
     {
         PrintName = "Firing Group",

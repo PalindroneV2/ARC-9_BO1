@@ -175,9 +175,14 @@ SWEP.IronSights = {
     Pos = Vector(-3.8, 0, 1.6),
     Ang = Angle(0.01, -0.85, 0),
     Magnification = 1.1,
-    -- AssociatedSlot = 9,
+    ViewModelFOV = 60,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
+}
+
+SWEP.SightMidPoint = { -- Where the gun should be at the middle of it's irons
+    Pos = Vector(-1.875, 0, 0.9),
+    Ang = Angle(0.005, -0.425, -2.5),
 }
 
 SWEP.HoldTypeHolstered = "passive"
@@ -191,6 +196,9 @@ SWEP.AnimDraw = ACT_HL2MP_GESTURE_RANGE_ATTACK_KNIFE
 SWEP.ActivePos = Vector(0, 0, -1)
 SWEP.ActiveAng = Angle(0, 0, -5)
 
+SWEP.BipodPos = Vector(-4.115, 0, -3)
+SWEP.BipodAng = Angle(0.015, 0, 0)
+
 SWEP.MovingPos = SWEP.ActivePos
 SWEP.MovingAng = SWEP.ActiveAng
 
@@ -199,22 +207,19 @@ SWEP.MovingMidPoint = {
     Ang = SWEP.ActiveAng
 }
 
-SWEP.BipodPos = Vector(-4.115, 0, -3)
-SWEP.BipodAng = Angle(0.015, 0, 0)
+SWEP.CrouchPos = SWEP.ActivePos + Vector(0,-1,-1)
+SWEP.CrouchAng = SWEP.ActiveAng
 
-SWEP.CrouchPos = Vector(0, 0, -1)
-SWEP.CrouchAng = Angle(0, 0, -5)
+SWEP.RestPos = SWEP.ActivePos
+SWEP.RestAng = SWEP.ActiveAng
 
 SWEP.SprintVerticalOffset = false
-SWEP.SprintPos = Vector(0, 0, -1)
-SWEP.SprintAng = Angle(0, 0, -5)
+SWEP.SprintPos = SWEP.ActivePos
+SWEP.SprintAng = SWEP.ActiveAng
 
 SWEP.CustomizePos = Vector(17.5, 40, 4)
 SWEP.CustomizeAng = Angle(90, 0, 0)
 SWEP.CustomizeSnapshotFOV = 100
-
-SWEP.RestPos = Vector(0, 0, -1)
-SWEP.RestAng = Angle(0, 0, -5)
 
 SWEP.BarrelLength = 0 -- = 25
 
@@ -308,7 +313,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(0, 0, 3.225),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic"},
+        Category = {"cod_optic"},
         InstalledElements = {"mount"},
         MergeSlots = {2}
     },
@@ -336,7 +341,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(13, 0, -0.1),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_grips"},
+        Category = {"cod_grips"},
     },
     {
         PrintName = "Bipod",

@@ -175,6 +175,11 @@ SWEP.IronSights = {
     SwitchToSound = "", -- sound that plays when switching to this sight
 }
 
+SWEP.SightMidPoint = { -- Where the gun should be at the middle of it's irons
+    Pos = Vector(-1.5, -1.5, 0.325),
+    Ang = Angle(0.05, 0, -2.5),
+}
+
 SWEP.HoldTypeHolstered = "passive"
 SWEP.HoldType = "revolver"
 SWEP.HoldTypeSights = "revolver"

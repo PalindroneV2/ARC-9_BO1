@@ -176,8 +176,15 @@ SWEP.IronSights = {
     Pos = Vector(-2.535, 0, 0.775),
     Ang = Angle(0.025, 0.2, 0),
     Magnification = 1.1,
+    AssociatedSlot = 1,
+    ViewModelFOV = 60,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
+}
+
+SWEP.SightMidPoint = { -- Where the gun should be at the middle of it's irons
+    Pos = Vector(-1.255, 0, -0.1),
+    Ang = Angle(0.0125, 0.1, -2.5),
 }
 
 SWEP.HoldTypeHolstered = "passive"
@@ -199,18 +206,18 @@ SWEP.MovingMidPoint = {
     Ang = SWEP.ActiveAng
 }
 
-SWEP.CrouchPos = Vector(0, 0, -1)
-SWEP.CrouchAng = Angle(0, 0, -5)
+SWEP.CrouchPos = SWEP.ActivePos + Vector(0,-1,-1)
+SWEP.CrouchAng = SWEP.ActiveAng
+
+SWEP.RestPos = SWEP.ActivePos
+SWEP.RestAng = SWEP.ActiveAng
 
 SWEP.SprintVerticalOffset = false
-SWEP.SprintPos = Vector(0, 0, -1)
-SWEP.SprintAng = Angle(0, 0, -5)
+SWEP.SprintPos = SWEP.ActivePos
+SWEP.SprintAng = SWEP.ActiveAngs
 
 SWEP.CustomizePos = Vector(12.5, 40, 4)
 SWEP.CustomizeAng = Angle(90, 0, 0)
-
-SWEP.RestPos = Vector(0, 0, -1)
-SWEP.RestAng = Angle(0, 0, -5)
 
 SWEP.BarrelLength = 0 -- = 25
 
@@ -320,7 +327,7 @@ SWEP.Attachments = {
         Scale = Vector(1, 1, 1),
         Pos = Vector(-1, 0, 3.85),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic", "bo1_rail_riser"},
+        Category = {"cod_optic", "cod_rail_riser"},
         InstalledElements = {"mount"},
     },
     {
@@ -337,7 +344,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(6.5, 0, -0.75),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_grips", "bo2_m320"},
+        Category = {"cod_grips", "bo2_m320"},
     },
     {
         PrintName = "Tactical Right",
@@ -345,7 +352,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(6.75, 0.85, 1),
         Ang = Angle(0, 0, -90),
-        Category = {"bo1_tactical"},
+        Category = {"cod_tactical"},
         InstalledElements = {"cover_r"},
     },
     {
@@ -354,7 +361,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(6.75, -0.85, 1),
         Ang = Angle(0, 0, 90),
-        Category = {"bo1_tactical"},
+        Category = {"cod_tactical"},
         InstalledElements = {"cover_l"},
     },
     {

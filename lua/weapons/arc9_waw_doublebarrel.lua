@@ -194,7 +194,13 @@ SWEP.IronSights = {
     Pos = Vector(-2.6, -12, 1.9),
     Ang = Angle(0.05, 0.5, 0),
     Magnification = 1.1,
+    ViewModelFOV = 60,
     SwitchToSound = "", -- sound that plays when switching to this sight
+}
+
+SWEP.SightMidPoint = { -- Where the gun should be at the middle of it's irons
+    Pos = Vector(-1.3, -10.5, 0.5),
+    Ang = Angle(0.025, 0.25, -2.5),
 }
 
 SWEP.HoldTypeHolstered = "passive"
@@ -216,18 +222,18 @@ SWEP.MovingMidPoint = {
     Ang = SWEP.ActiveAng
 }
 
-SWEP.CrouchPos = SWEP.ActivePos
+SWEP.CrouchPos = SWEP.ActivePos + Vector(0,-1,-1)
 SWEP.CrouchAng = SWEP.ActiveAng
 
+SWEP.RestPos = SWEP.ActivePos
+SWEP.RestAng = SWEP.ActiveAng
+
 SWEP.SprintVerticalOffset = false
-SWEP.SprintPos = Vector(10, -4, -2)
-SWEP.SprintAng = Angle(30, -7, 0)
+SWEP.SprintPos = SWEP.ActivePos + Vector(9, 0, -1)
+SWEP.SprintAng = SWEP.ActiveAng + Angle(40, 0, 0)
 
 SWEP.CustomizePos = Vector(20.5, 40, 6)
 SWEP.CustomizeAng = Angle(90, 0, 0)
-
-SWEP.RestPos = Vector(0, 0, 0)
-SWEP.RestAng = Angle(0, 0, 0)
 
 SWEP.BarrelLength = 0 -- = 25
 
@@ -296,6 +302,8 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     if attached["ssg"] then
         newactpos = Vector(-2.6, -12, -1)
         newactang = Angle(0, 0, 0)
+        self.SprintPos = newactpos
+        self.SprintAng = newactang
     end
     self.ActivePos = newactpos
     self.ActiveAng = newactang
@@ -305,10 +313,10 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         Pos = newactpos,
         Ang = newactang
     }
+    self.SprintPos = self.ActivePos + Vector(9, 0, -1)
+    self.SprintAng = self.ActiveAng + Angle(40, 0, 0)
     self.CrouchPos = newactpos
     self.CrouchAng = newactang
-    self.SprintPos = newactpos
-    self.SprintAng = newactang
 end
 
 SWEP.Hook_TranslateAnimation = function (self, anim)

@@ -312,8 +312,14 @@ SWEP.IronSights = {
     Pos = Vector(-3.25, -12, -3.57),
     Ang = Angle(-5, 15, 0),
     Magnification = 1.25,
+    ViewModelFOV = 60,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
+}
+
+SWEP.SightMidPoint = { -- Where the gun should be at the middle of it's irons
+    Pos = Vector(-1.65, -6, -2),
+    Ang = Angle(-2.5, 7.5, -2.5),
 }
 
 SWEP.HoldTypeHolstered = "passive"

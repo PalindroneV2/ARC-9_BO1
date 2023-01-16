@@ -166,12 +166,17 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(-2.15, 4, 0.95),
+    Pos = Vector(-2.15, 0, 0.95),
     Ang = Angle(0, -0.5, 0),
     Magnification = 1.1,
-    --AssociatedSlot = 9,
+    ViewModelFOV = 60,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
+}
+
+SWEP.SightMidPoint = { -- Where the gun should be at the middle of it's irons
+    Pos = Vector(-1.15, -1, 0.475),
+    Ang = Angle(0, -0.25, 0),
 }
 
 SWEP.HoldTypeHolstered = "passive"
@@ -193,15 +198,15 @@ SWEP.MovingMidPoint = {
     Ang = SWEP.ActiveAng
 }
 
-SWEP.CrouchPos = Vector(0, -2, -2)
-SWEP.CrouchAng = Angle(0, 0, -5)
+SWEP.CrouchPos = SWEP.ActivePos + Vector(0,-1,-1)
+SWEP.CrouchAng = SWEP.ActiveAng
 
-SWEP.RestPos = Vector(0.532, -6, 0)
-SWEP.RestAng = Angle(-4.633, 36.881, 0)
+SWEP.RestPos = SWEP.ActivePos
+SWEP.RestAng = SWEP.ActiveAng
 
 SWEP.SprintVerticalOffset = false
-SWEP.SprintPos = Vector(0, -2, -2)
-SWEP.SprintAng = Angle(0, 0, 0)
+SWEP.SprintPos = SWEP.ActivePos
+SWEP.SprintAng = SWEP.ActiveAng
 
 SWEP.CustomizePos = Vector(17.5, 25, 4.25)
 SWEP.CustomizeAng = Angle(90, 0, 0)
@@ -262,7 +267,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(3, 0.1, 3),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic"},
+        Category = {"cod_optic"},
         Icon_Offset = Vector(0, 0, 1),
         CorrectiveAng = Angle(0, 0.25, 0),
     },
@@ -282,7 +287,7 @@ SWEP.Attachments = {
         Scale = Vector(1, 1, 1),
         Pos = Vector(10, 0.075, 1.5),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_tactical"},
+        Category = {"cod_tactical"},
         ExcludeElements = {"snubnose"}
     },
     {

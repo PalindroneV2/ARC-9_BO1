@@ -188,6 +188,11 @@ SWEP.IronSights = {
     SwitchToSound = "", -- sound that plays when switching to this sight
 }
 
+SWEP.SightMidPoint = { -- Where the gun should be at the middle of it's irons
+    Pos = Vector(-1.375, -1, -0.375),
+    Ang = Angle(0, 0, -2.5),
+}
+
 SWEP.HoldTypeHolstered = "passive"
 SWEP.HoldType = "ar2"
 SWEP.HoldTypeSights = "ar2"
@@ -207,12 +212,15 @@ SWEP.MovingMidPoint = {
     Ang = SWEP.ActiveAng
 }
 
-SWEP.CrouchPos = Vector(0, 0, -1)
-SWEP.CrouchAng = Angle(0, 0, -5)
+SWEP.CrouchPos = SWEP.ActivePos + Vector(0,-1,-1)
+SWEP.CrouchAng = SWEP.ActiveAng
+
+SWEP.RestPos = SWEP.ActivePos
+SWEP.RestAng = SWEP.ActiveAng
 
 SWEP.SprintVerticalOffset = false
-SWEP.SprintPos = Vector(0, 0, -1)
-SWEP.SprintAng = Angle(0, 0, -5)
+SWEP.SprintPos = SWEP.ActivePos
+SWEP.SprintAng = SWEP.ActiveAng
 
 SWEP.BipodPos = Vector(-2.765, 0, -1.5)
 SWEP.BipodAng = Angle(0, 0, 0)
@@ -222,12 +230,27 @@ SWEP.CustomizeAng = Angle(90, 0, 0)
 SWEP.CustomizeSnapshotPos = Vector(0, 0, 0)
 SWEP.CustomizeSnapshotAng = Angle(0, 0, 0)
 
-SWEP.RestPos = Vector(0, 0, 0)
-SWEP.RestAng = Angle(0, 0, 0)
-
 SWEP.BarrelLength = 0 -- = 25
 
 SWEP.ExtraSightDist = 5
+
+SWEP.StandardPresets = {
+    "[A- M16A2]XQAAAQBFAQAAAAAAAAA9iIIiM7hMNz0dhIkbkvJZHs6N4cERAS1EIUwLaB+vDp8XCL30711xZT7xm2o2gbIC/0oJ21+4dnvvBkhco+ofeBf3qlqSkNTpqDQz0Nf8iESWMw90kXgZGRIQCbg95KbrAF1eaUOpemDRncYCN6aSebl+crzv0/1B+FXbhAQe0qLEKC53/jHHkEMA",
+    "[B- M16A4]XQAAAQDNAQAAAAAAAAA9iIIiM7hMNz0dhIkbkvJZHs6N4cERAS1EIUwLaB+vDp8XCL0VyBP1c786RpKeImE3ppvtZ9VSH6D2vEJ/lZpKWa/NUZkYq9pj0f6i80BrKcP/5yQtdQoo7F04Gzlf7a00GDLvS5ylx7B5qQL0YRu8nbmja654VEWMBPB7VewvZBLkyYctLizEQz6K4YoYGtyG2w1NiqdP/Wt7B8Xe80Ka3R1vOt4eXb/OfA==",
+    "[C- M607a]XQAAAQBrAQAAAAAAAAA9iIIiM7hMNz0dhIkbkvLjTdErcFqoUCHbZoheMDsp+rQZLEf6L7Ry2kYDhnMROXx2buSpLLEaSYVmj35kqGIct333a/2YEZy4+jTdwsJ50mXem+JmDgKoS6HIWt6q3BcJY3HCENu4G3jh5F4GvbdNBrIncwe9+X47yG8wUFCHcntbkDvVR+7X9xlV/XwLUpxtNjxMAkw=",
+    "[D- XM177E2]XQAAAQB9AQAAAAAAAAA9iIIiM7hMNz0dhIkbkvLjTdErcFqoUCHbZoheMDsp+rQZLEf6L7Ry2kYDhnMROXx2bwPv0AD7jf16tWNayFi91rHo6DItEyJwAAEs1YW4UBPbnGKrRWC3G0Cut4GlOk+UYyEJVJQ7RhK+ogQhz1eHpsb/RfWdCDIUU7q0A5lZVhykt7GxQbWfodZeR3W/e5mqxDgWVjm7VgaAaxaU",
+    "[E- XM4]XQAAAQB6AQAAAAAAAAA9iIIiM7hMNz0dhIkbkvJZHs6N4cERAS1EIUwLaB+vDp8XCL30711xZT7xm2o2gbIC/0oJ21+4dnvvBkhco+oguG2bmVG9YZJILdGSw6o5t6nYpSFEZMkSl0dMD4T4fzUw9EtGWvlzmWgGNO84gugDTCoHQ75NB8vONyfKju/z1zX4jVOn29bFf5mSW2NVfSQ5+ZF5VgA=",
+    "[F- Commando]XQAAAQC9AQAAAAAAAAA9iIIiM7hMNz0dhIkbkvJZHs6N4cERAS1EIUwLaB+vDp8XCL0VyBP1c786RpKeImE3pliuYxXDMiQfLWpzMPpXZT8zqVNh9Y8eNrLjZVJChXEMDGmzN/SYnR8FNxEvJk1L8uSiUsIp+fDSUYyTx/HIoNTdQVTTtxIx+I+M4QZJ5QXVvHPGPohix/zBbrImgrRy7ynhxy/q+mslgsalZSFlYqzBA3jeHrwljT1ePJHoh38qAkR6qMbQwLCOgbc3RKTbSwA=",
+    "[G- M4A1]XQAAAQALAgAAAAAAAAA9iIIiM7hMNz0dhIkbkvJZHs6N4cERAS1EIUwLaB+vDp8XCL0VyBP1c786RpKeImE3ppvtZ9VSH6D2vEJ/lZpKWa/NUZkYq9phPLY4qGpT2mVHcf8TR6rlZYODdokPL1FVMQEwE/R5bQoggoqDARHx7ym6yMPiP9YS4F0zWx8PaFNBmuvzGoCm2uUyFuGxc+sDIlMuXvVeL9QyrVg57h1fZPbI74GAiM5NIRG//Bt7nakC6YJYnMQtUYmSZBTH0Vu9VVYG0g==",
+    "[H- Ranger]XQAAAQAzAgAAAAAAAAA9iIIiM7hMNz0dhIkbkvJZHs6N4cERAS1EIUwLaB+vDp8XCL0VyBP1c786RpKnotsRDta8QJXNzP58z/MSJlIAy8NWdhCydvVMcgYtb3L1S+3OLs2Zc12CW/ZR5lbJ4IIsVVUNNvBI1Cy3/Mj5YHCA70yq47ZLW3Ez1ANZJaVLAFuvgPmdTS3vpQaZbUO4fcfnKQ1S9GXmN2tPsc3WSHxff5qnoNW7CyfbwvegN7I8pwGP3pjPMOdZX3eRLen8ouIJQnCwH80GhnO1BVv0apgX5Q==",
+    "[I- Delta]XQAAAQD/AQAAAAAAAAA9iIIiM7hMNz0dhIkbkvJZHs6N4cERAS1EIUwLaB+vDp8XCL0VyBP1c785T278jfAs/SblA5daRFdlaFrx4ILwkKrzza1UejrxUVgZcXivyuYi81sybqQwqg1F8SCtMo3ngJ4D3GxNAFyyDcp0JBZGwKPbUiCaXlqlwWCTDt5WAdqjmhHfF/XG508z3Mupl+ZN1hZDpgUc0qdEsbKFp+kMbWZBSFHS84VjQ0j2Nki3jw0qVV+0mvgw7tktuznuKIg2AA==",
+    "[J- Bravo]XQAAAQAmAgAAAAAAAAA9iIIiM7hMNz0dhIkbkvJZHs6N4cERAS1EIUwLaB+vDp8XCL0VyBP1c786RpKeImE3pqqAdaHCBGeqBO07MrJqW1dI3FkrF3xrkZwh9hGrY6pZ3Uhk0EBt3IjlaOSTzIP3Q6yEDOq1pxTsIrEtkhdvUa8eNRROicf7B2woMqrolmmHAK1INpH9IZp8/00PrdlJDcScXMAebeF4BgcRPT3w8ZUIvqne4DQukG5G4LMYvtxHUlbrO99nYj9ciLKqsldyaN/ExNXjmUGhEgWa",
+    "[K- Vaquero]XQAAAQBTAgAAAAAAAAA9iIIiM7hMNz0dhIkbkvJZHs6N4cERAS1EIUwLaB+vDp8XCL0VyBP1c786RpKeImE3pqqAdaHCBGeqBO07MrJqW1dI3FkrF3xrkZwh9hGrY6pZ3Uhk0EBt3IjlaOSTzIP3Q6yEDOPGcckGNnasDU2Cm6P7pwD9cWjUT/cpr2awH7++i0gBn3VaXpM+y7DCAJdEunF/4ffEeHmdiWy+u+pKObSovXzllCpn6T1nW5XSOHXYiLusbF9tmi6xzuBu/ZT9eSgD5hrAox1lMupCTq9Cl5Z4B92iAA==",
+    "[L- My Little Friend]XQAAAQBVAQAAAAAAAAA9iIIiM7hMNz0dhIkbkvLjTdErcFqoUCHbZojaPfcTkj3fjKehjdIOVIZDiA9j6hAHtIkFF9mmvuZ/ps6S9y5RgcWy7YEFyMUg+QkeHhQ9AbZx0Bj4yJnpU5zdmsaDsi+9bRPOJcanY0b/oO7Z/AHhda+DH4XPoa8ormMUAdU36gfa1X8L4b96VF/0cNX4s1D2IwA=",
+    "[M- HECU]XQAAAQCgAQAAAAAAAAA9iIIiM7hMNz0dhIkbkvJZHs6N4cERAS1EIUwLaB+vDp8XCL30711xZT7xm2o2gbH+qJxZwTXZOPAsSZpNr/SP1fX8cuf/cxv8JsjJIRZKbIZaZ+UFdauwIORHueQcgh38RqmwIxICdM5KpArJYhEek0W9hi1W7ivbS7gk0WU8wrFXT51FGjhSb91tGEP2VsY3yIIet8sBMSGVz4l+7cJ2AQA=",
+    "[N- SOPMOD]XQAAAQA+AgAAAAAAAAA9iIIiM7hMNz0dhIkbkvJZHs6N4cERAS1EIUwLaB+vDp8XCL0VyBP1c786BrvuOw3g56kujvgRv1Ta7qdRsNGN4/CsGx5IF1icsfmAw4fJea2x9NEj9G22nfFipswM0jCfOye9DCbkwwJAisE/Q0KHTz1Kf/USqNzV1B/ltjhrdP54rBpKQnZS6Km8iDJrH97wYfKLHDc4z4hSsN9vTdNWBAwIfJT0qlUxLTVujTS+w4fw5oicwh3mK94+SCWyx4wN6LNX0yndd3iQ+nPTOx5bnh7bX8eXeQ73/E+hM/CIuh7aNKUA",
+    "[O- FPW]XQAAAQDZAQAAAAAAAAA9iIIiM7hMNz0dhIkbkvLjTdErcFqoUCAoqlx+DzP3J38q3lk9/nuJTGYJWHvTnJBAN06vkv+QsGXSNnbFj9XP7Ljgt8sizNhRP102VM7mAivurlLolzUfuiLxPROwH1qmOxUiFcdOYUv+bRQ0rlZcy0B3NjeM44kpN5plD/aHbWPx8KjiJT9Qv15CFM1MBrh4kQRfueu7kUKOk/1STCx1r4/iSSPAb/XpYlkF9g1BdV7oBXslybGOmU9H/F50wKvsbXMRBrw9t4mPRSlHKmGB",
+}
 
 SWEP.AttachmentElements = {
     ["40_mag"] = {
@@ -431,7 +454,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         hand = 9
         gasblock = 4
         frontsight = 5
-        if attached["bo1_optic"] then
+        if attached["cod_optic"] then
             frontsight = 6
         end
         newCustPose = Vector(-3, 0, 0)
@@ -852,7 +875,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(3.5, 0, 5.025),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic", "bo1_rail_riser"},
+        Category = {"cod_optic", "cod_rail_riser"},
         InstalledElements = {"classicrail"},
         ExcludeElements = {"a4_top", "handguard_famas", "is_patriot"},
     },
@@ -900,7 +923,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(11, 0, 1.35), --(-4, 0, -0.4)
         Ang = Angle(0, 0, 0),
-        Category = {"cde_m203", "bo1_mk", "bo1_rail_underbarrel"},
+        Category = {"cde_m203", "bo1_mk", "cod_rail_underbarrel"},
         ExcludeElements = {"no_ub_rail", "mlok", "carbine_hg", "is_patriot"},
         InstalledElements = {"allowtac"},
     },

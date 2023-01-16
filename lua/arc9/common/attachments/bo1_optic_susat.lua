@@ -11,7 +11,7 @@ ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 ATT.Folder = "SCOPE"
 
-ATT.Category = {"bo1_optic", "bo1_optic_alt", "bo1_susat"}
+ATT.Category = {"cod_optic", "cod_optic_alt", "bo1_susat"}
 
 ATT.Model = "models/weapons/arc9/atts/bo1_susat.mdl"
 ATT.Scale = 1

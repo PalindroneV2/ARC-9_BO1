@@ -173,12 +173,17 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(-2.4, 3, 0.4),
+    Pos = Vector(-2.4, 0, 0.4),
     Ang = Angle(0, 0, 0),
     Magnification = 1.1,
-    --AssociatedSlot = 9,
+    ViewModelFOV = 60,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
+}
+
+SWEP.SightMidPoint = { -- Where the gun should be at the middle of it's irons
+    Pos = Vector(-1.2, 0, 0.2),
+    Ang = Angle(0, 0, 0),
 }
 
 SWEP.HoldTypeHolstered = "passive"
@@ -220,7 +225,7 @@ SWEP.BarrelLength = 0 -- = 9
 SWEP.ExtraSightDist = 15
 
 SWEP.AttachmentElements = {
-    ["bo1_optic_lp"] = {
+    ["cod_optic_lp"] = {
         Bodygroups = {
             {2,1}
         },
@@ -272,7 +277,7 @@ SWEP.Attachments = {
         Scale = Vector(1, 1, 1),
         Pos = Vector(0.4, 0.075, 0.5),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic_pistol"},
+        Category = {"cod_optic_pistol"},
     },
     {
         PrintName = "Muzzle",
@@ -289,7 +294,7 @@ SWEP.Attachments = {
         Scale = Vector(1, 1, 1),
         Pos = Vector(5.5, 0.075, -0.5),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_tactical"},
+        Category = {"cod_tactical"},
         -- CorrectiveAng = Angle(0.05, 0.1, 0),
     },
     {
