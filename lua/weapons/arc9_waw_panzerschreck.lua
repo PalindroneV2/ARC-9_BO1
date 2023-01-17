@@ -212,7 +212,7 @@ SWEP.MovingMidPoint = {
     Ang = SWEP.ActiveAng
 }
 
-SWEP.CrouchPos = SWEP.ActivePos + Vector(0,-1,-1)
+SWEP.CrouchPos = SWEP.ActivePos + Vector(0, 0, 2)
 SWEP.CrouchAng = SWEP.ActiveAng
 
 SWEP.RestPos = SWEP.ActivePos
