@@ -71,7 +71,7 @@ function ENT:Detonate()
 end
 
 hook.Add("EntityTakeDamage", "ARC9_M202", function(ent, dmginfo)
-    if ent ~= dmginfo:GetInflictor() and dmginfo:GetInflictor():GetClass() == "arc9_bo1_rocket_m202" and not ent:IsPlayer() then
+    if IsValid(dmginfo:GetInflictor()) and ent ~= dmginfo:GetInflictor() and dmginfo:GetInflictor():GetClass() == "arc9_bo1_rocket_m202" and !ent:IsPlayer() then
         ent:Ignite(math.Clamp(dmginfo:GetDamage() / 200, 0.25, 1) * 12)
     end
 end)
