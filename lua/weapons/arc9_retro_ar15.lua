@@ -248,7 +248,7 @@ SWEP.StandardPresets = {
     "[M- HECU]XQAAAQCgAQAAAAAAAAA9iIIiM7hMNz0dhIkbkvJZHs6N4cERAS1EIUwLaB+vDp8XCL30711xZT7xm2o2gbH+qJxZwTXZOPAsSZpNr/SP1fX8cuf/cxv8JsjJIRZKbIZaZ+UFdauwIORHueQcgh38RqmwIxICdM5KpArJYhEek0W9hi1W7ivbS7gk0WU8wrFXT51FGjhSb91tGEP2VsY3yIIet8sBMSGVz4l+7cJ2AQA=",
     "[N- SOPMOD]XQAAAQA+AgAAAAAAAAA9iIIiM7hMNz0dhIkbkvJZHs6N4cERAS1EIUwLaB+vDp8XCL0VyBP1c786BrvuOw3g56kujvgRv1Ta7qdRsNGN4/CsGx5IF1icsfmAw4fJea2x9NEj9G22nfFipswM0jCfOye9DCbkwwJAisE/Q0KHTz1Kf/USqNzV1B/ltjhrdP54rBpKQnZS6Km8iDJrH97wYfKLHDc4z4hSsN9vTdNWBAwIfJT0qlUxLTVujTS+w4fw5oicwh3mK94+SCWyx4wN6LNX0yndd3iQ+nPTOx5bnh7bX8eXeQ73/E+hM/CIuh7aNKUA",
     "[O- FPW]XQAAAQDZAQAAAAAAAAA9iIIiM7hMNz0dhIkbkvLjTdErcFqoUCAoqlx+DzP3J38q3lk9/nuJTGYJWHvTnJBAN06vkv+QsGXSNnbFj9XP7Ljgt8sizNhRP102VM7mAivurlLolzUfuiLxPROwH1qmOxUiFcdOYUv+bRQ0rlZcy0B3NjeM44kpN5plD/aHbWPx8KjiJT9Qv15CFM1MBrh4kQRfueu7kUKOk/1STCx1r4/iSSPAb/XpYlkF9g1BdV7oBXslybGOmU9H/F50wKvsbXMRBrw9t4mPRSlHKmGB",
-    "[P - Badger]XQAAAQBNAgAAAAAAAAA9iIIiM7hMNz0dhIkbkvJZHs6N4cERAS1EIUwLaB+vDp8XCL0VyBP1c786RpKeImE3p2VAqeWrSwXe7hpzEqlAzG1BVGYZWecTkoKWcymMiswxSQAdXE14Lv9F8x22Q5OUib6LGqX6otdtiNTGuRaa6arRqX2aJyTuxLaNvVdX0o2nx0tTMo/JXygIct2EywbKzmHvA3rwi6JQlRlBkXn/PB2DOOLFgZj2e6TeRRNilKLqKS/fJiW5T3iM0gZbTa/ga6H9L6Ah1Q1R+pzmX8mMT7EVVoatUXus/n0B6EmDwFxvNngKnIgu",
+    "[P- Badger]XQAAAQBNAgAAAAAAAAA9iIIiM7hMNz0dhIkbkvJZHs6N4cERAS1EIUwLaB+vDp8XCL0VyBP1c786RpKeImE3p2VAqeWrSwXe7hpzEqlAzG1BVGYZWecTkoKWcymMiswxSQAdXE14Lv9F8x22Q5OUib6LGqX6otdtiNTGuRaa6arRqX2aJyTuxLaNvVdX0o2nx0tTMo/JXygIct2EywbKzmHvA3rwi6JQlRlBkXn/PB2DOOLFgZj2e6TeRRNilKLqKS/fJiW5T3iM0gZbTa/ga6H9L6Ah1Q1R+pzmX8mMT7EVVoatUXus/n0B6EmDwFxvNngKnIgu",
 }
 
 SWEP.AttachmentElements = {
@@ -474,7 +474,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
             frontsight = 6
         end
         if attached["mlok"] then
-            length = 10
+            length = 8
             frontsight = 0
         end
         newCustPose = Vector(-3, 0, 0)
@@ -829,6 +829,9 @@ SWEP.HookP_NameChange = function(self, name)
     if ((model .. alt) == "M633") and attached["woodcamo"] then gunname = "Service SMG" end
     if attached["handguard_famas"] then
         gunname = "FAMAS M4"
+    end
+    if attached["300blk"] and attached["barrel_7"] then
+        gunname = "AAC Honey Badger"
     end
 
     if attached["bo1_pap"] then gunname = "Skullpiercer"

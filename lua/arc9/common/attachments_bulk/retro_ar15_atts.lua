@@ -16,7 +16,7 @@ ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Category = {"retro_ar15_barrel"}
-ATT.ActivateElements = {"carbine","barrel_9mm", "carbine_hg"}
+ATT.ActivateElements = {"carbine","barrel_9mm", "barrel_7", "carbine_hg"}
 -- ATT.RequireElements = {"9mm_mag"}
 -- ATT.ExcludeElements = {"bo1_mk"}
 
@@ -29,6 +29,7 @@ ATT.Attachments = {
         Bone = "j_gun",
         Pos = Vector(0, 0, -2),
         Ang = Angle(0, 0, 0),
+        ExcludeElements = {"is_patriot"},
     },
     {
         PrintName = "Muzzle",
@@ -38,6 +39,15 @@ ATT.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"bo1_muzzle"},
         ExcludeElements = {"is_patriot"},
+    },
+    {
+        PrintName = "Underbarrel",
+        DefaultCompactName = "UB",
+        Bone = "j_gun",
+        Pos = Vector(-2, 0, 0.35),
+        Ang = Angle(0, 0, 0),
+        Category = {"cod_rail_underbarrel"},
+        ExcludeElements = {"ar15_ris", "mlok", "is_patriot"}
     },
 }
 
@@ -74,10 +84,11 @@ ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 4
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
-ATT.Free = false
+ATT.Free = 0
+ATT.Ignore = true
 
 ATT.Category = {"retro_ar15_barrel"}
-ATT.ActivateElements = {"carbine","barrel_9mm", "carbine_hg"}
+ATT.ActivateElements = {"carbine", "barrel_9mm", "carbine_hg"}
 ATT.RequireElements = {"9mm_mag"}
 -- ATT.ExcludeElements = {"bo1_mk"}
 
