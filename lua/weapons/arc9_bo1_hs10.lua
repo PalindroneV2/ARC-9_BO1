@@ -6,10 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "HS10"
 SWEP.Class = "Combat Shotgun"
-SWEP.Description = [[
-    The High Standard Model 10 is a bullpup semi-automatic shotgun which was sold to law enforcement agencies.
-    Due to many shortcomings in reliability and quality the weapon was swiftly abandoned by police in favor of more traditional pump shotguns.
-]]
+SWEP.Description = [[The High Standard Model 10 is a bullpup semi-automatic shotgun which was sold to law enforcement agencies.
+Due to many shortcomings in reliability and quality, the weapon was swiftly abandoned by police in favor of more traditional pump shotguns.]]
 SWEP.Trivia = {
     Manufacturer = "High Standard",
     Calibre = "12 Gauge",

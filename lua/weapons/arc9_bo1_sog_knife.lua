@@ -6,9 +6,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = [[S.O.G. Knife]]
 SWEP.Class = "Knife"
-SWEP.Description = [[
-    Knife used by the legendary special forces unit MACV-SOG.
-]]
+SWEP.Description = [[Knife used by the legendary special forces unit, MACV-SOG.]]
 SWEP.Trivia = {
     Manufacturer = "[REDACTED]",
     Mechanism = "Slashing",

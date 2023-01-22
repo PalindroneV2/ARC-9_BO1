@@ -6,9 +6,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "SVU-AS"
 SWEP.Class = "Designated Marskman Rifle"
-SWEP.Description = [[
-    A modern bullpup configuration of the classic Dragunov SVD.
-]]
+SWEP.Description = [[A modern bullpup configuration of the classic Dragunov SVD.]]
 SWEP.Trivia = {
     Manufacturer = "KPB Instrument Design Bureau",
     Calibre = "7.62x54mmR",

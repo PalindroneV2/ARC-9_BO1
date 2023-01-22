@@ -6,9 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "M2 Flamethrower"
 SWEP.Class = "Flamethrower"
-SWEP.Description = [[
-    American man-portable flamethrower seen across the Pacific Teather and finally decommissioned at the end of the 70s after the Korean and Vietnam wars.
-]]
+SWEP.Description = [[American man-portable flamethrower seen across the Pacific Theater.
+Finally decommissioned at the end of the 70s after the Korean and Vietnam wars.]]
 SWEP.Trivia = {
     Manufacturer = "US Army Chemical Warfare Service",
     Calibre = "Napalm/Gasoline",

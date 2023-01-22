@@ -6,11 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "SIG 556"
 SWEP.Class = "Assault Rifle"
-SWEP.Description = [[
-    Import version of the SG 550 series of rifles with modifications that allow them to take STANAG magazines.
-
-    Equipped with a Magpul MOE Stock and modified for military use with a 3 round burst mode.
-]]
+SWEP.Description = [[Import version of the SG 550 series of rifles with modifications that allow them to take STANAG magazines.
+Equipped with a Magpul MOE Stock and modified for military use with a 3 round burst mode.]]
 SWEP.Trivia = {
     Manufacturer = "SIG-Sauer",
     Calibre = "5.56x45mm NATO",

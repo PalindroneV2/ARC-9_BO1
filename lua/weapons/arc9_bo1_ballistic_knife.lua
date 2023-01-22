@@ -6,9 +6,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = [[Ballistic Knife]]
 SWEP.Class = "Ballistic Knife"
-SWEP.Description = [[
-    Soviet device that uses a spring mechanism to propel forward special throwing knives.
-]]
+SWEP.Description = [[Soviet device that uses a spring mechanism to propel forward special throwing knives.]]
 SWEP.Trivia = {
     Manufacturer = "Unknown",
     Projetcile = "Ballistic Knives",

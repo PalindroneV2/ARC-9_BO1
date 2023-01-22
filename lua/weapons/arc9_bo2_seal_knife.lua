@@ -6,9 +6,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = [[SEAL Knife]]
 SWEP.Class = "Melee Weapon"
-SWEP.Description = [[
-    Knife used by the legendary special forces unit SEAL Team Six.
-]]
+SWEP.Description = [[Knife used by the legendary special forces unit SEAL Team Six.]]
 SWEP.Trivia = {
     Manufacturer = "[REDACTED]",
     Mechanism = "Slashing",

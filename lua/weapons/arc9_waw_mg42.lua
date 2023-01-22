@@ -6,13 +6,10 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "MG42"
 SWEP.Class = "General Purpose Machine Gun"
-SWEP.Description = [[
-Light machine gun that fires 7.92mm Mauser at an obscene 1200 rounds per minute.
-This rugged machien gun design replaced the MG34 in service. The simpler design allowed for easier manufacture along with a quick change barrel making replacing hot barrels in battle much easier.
+SWEP.Description = [[Light machine gun that fires 7.92mm Mauser at an obscene 1200 rounds per minute.
+This rugged machine gun design replaced the MG34 in service. The simpler design allowed for easier manufacture along with a quick change barrel making replacing hot barrels in battle much easier.
 This design is so good that it has far outlasted the conflict that saw its birth. Now chambered in the NATO standard 7.62mm, the weapon still servers the German Armed Forces as well as many other countries.
-
-Once nicknamed "Hitler's Buzzsaw".
-]]
+Once nicknamed "Hitler's Buzzsaw".]]
 SWEP.Trivia = {
     Manufacturer = "Numerous",
     Calibre = "7.92x57mm Mauser",

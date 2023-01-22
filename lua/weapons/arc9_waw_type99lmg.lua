@@ -6,10 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "Type 99 LMG"
 SWEP.Class = "Light Machine Gun"
-SWEP.Description = [[
-    The standard light machine gun for the Imperial Japanese Army during World War 2.
-    It, like the previous Type 96, is based on the design of the Bren LMG.
-]]
+SWEP.Description = [[The standard light machine gun for the Imperial Japanese Army during WW2.
+Like the previous Type 96, it was based on the design of the Bren LMG.]]
 SWEP.Trivia = {
     Manufacturer = "Nagoya Arsenal",
     Calibre = "7.7x58mm Arisaka",

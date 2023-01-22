@@ -6,10 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "M1918A2 BAR"
 SWEP.Class = "Light Machine Gun"
-SWEP.Description = [[
-    Automatic Rifle developed by the legendary John Moses Browning for use with the "walking-fire" doctrine of the Great War but entered too late to make an appreciable difference.
-    The rifle saw a role shift to a light machine gun during the Second World War, though many complained that this new A2 variant was too heavy thanks to the non-removable bipod.
-]]
+SWEP.Description = [[Automatic Rifle developed by the legendary John Moses Browning for use with the "walking-fire" doctrine of the Great War, but entered too late to make an appreciable difference.
+The rifle saw a role shift to a light machine gun during the WW2. Though many complained that this new A2 variant was too heavy, thanks to its non-removable bipod.]]
 SWEP.Trivia = {
     Manufacturer = "U.S. Ordnance",
     Calibre = ".30-06 Springfield",

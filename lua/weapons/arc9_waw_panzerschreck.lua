@@ -6,10 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "Panzerschreck"
 SWEP.Class = "Rocket Launcher"
-SWEP.Description = [[
-    A german man-portable, reusable, unguided, shoulder-launched, anti-tank rocket-propelled grenade launcher.
-    It was based on captured Lend-Lease Act M1 Bazookas captured from the Soviets.
-]]
+SWEP.Description = [[A german man-portable, reusable, unguided, shoulder-launched, anti-tank rocket-propelled grenade launcher.
+It was based on captured Lend-Lease Act M1 Bazookas captured from the Soviets.]]
 SWEP.Trivia = {
     Manufacturer = "Rheinmetall",
     Calibre = "88mm Rocket",

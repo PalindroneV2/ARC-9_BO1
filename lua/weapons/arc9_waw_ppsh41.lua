@@ -6,8 +6,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "PPSh-41"
 SWEP.Class = "Submachine Gun"
-SWEP.Description = [[Russian submachine gun with an obscene rate of fire and a drum magazine.
-]]
+SWEP.Description = [[Russian submachine gun with an obscene rate of fire and a drum magazine.]]
 SWEP.Trivia = {
     Manufacturer = "Tula Arms Plant",
     Calibre = "7.62x25mm Tokarev",

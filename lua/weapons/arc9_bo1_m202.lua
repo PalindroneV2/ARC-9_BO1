@@ -6,10 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "M202A1 FLASH"
 SWEP.Class = "Rocket Launcher"
-SWEP.Description = [[
-    An American design to replace World War II era flamethrowers that had remained the standard incendiary devices for the US Military until well into the 60s.
-    It can carry 4 rockets.
-]]
+SWEP.Description = [[An American design to replace WW2 era flamethrowers that had remained the standard incendiary devices for the US Military until well into the 60s.
+It can carry 4 rockets.]]
 SWEP.Trivia = {
     Manufacturer = "Ordnance Development Division",
     Calibre = "66mm Incendiary Rockets",

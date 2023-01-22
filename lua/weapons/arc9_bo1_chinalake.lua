@@ -6,10 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = [[China Lake]]
 SWEP.Class = "Grenade Launcher"
-SWEP.Description = [[
-    American experimental pump-action 40mm grenade launcher used only by the Navy SEALs.
-    Due to its experimental nature very few of these launchers were manufactured.
-]]
+SWEP.Description = [[American experimental pump-action 40mm grenade launcher used only by the Navy SEALs.
+Due to its experimental nature very few of these launchers were manufactured.]]
 SWEP.Trivia = {
     Manufacturer = "NAWS",
     Calibre = "40x46mm HE",

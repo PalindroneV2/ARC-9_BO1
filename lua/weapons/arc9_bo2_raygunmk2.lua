@@ -6,9 +6,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "Ray Gun Mark II"
 SWEP.Class = "Wonder Weapon"
-SWEP.Description = [[
-    Second iteration of the classic Ray Gun, now in the format of a first fire SMG.
-]]
+SWEP.Description = [[Second iteration of the classic Ray Gun, now in the format of a first fire SMG.]]
 SWEP.Trivia = {
     Manufacturer = "Group 935",
     Calibre = "Atomic Cold Cells",

@@ -6,10 +6,9 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "HK MP7A1"
 SWEP.Class = "Personal Defense Weapon"
-SWEP.Description = [[
-    Heckler & Koch's answer to FN's P90 PDW.
-    It entered NATO trials to become a standard PDW but was rejected in favor of the P90, though the P90 was vetoed by Germany. Thus the MP7 found itself in service use by German armed forces since 2001.
-]]
+SWEP.Description = [[Heckler & Koch's answer to FN's P90 PDW.
+It entered NATO trials to become a standard PDW but was rejected in favor of the P90, though the P90 was vetoed by Germany.
+Thus the MP7 found itself in service use by German armed forces since 2001.]]
 SWEP.Trivia = {
     Manufacturer = "Heckler & Koch",
     Calibre = "5.7x28mm",

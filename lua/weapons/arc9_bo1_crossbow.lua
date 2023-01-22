@@ -6,9 +6,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = [[Crossbow]]
 SWEP.Class = "Grenade Launcher"
-SWEP.Description = [[
-    Compound crossbow used for specialist roles with special explosive tips.
-]]
+SWEP.Description = [[Compound crossbow used for specialist roles with special explosive tips.]]
 SWEP.Trivia = {
     Manufacturer = "Unknown",
     Calibre = "Bolts",

@@ -6,8 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "Peacekeeper"
 SWEP.Class = "Personal Defense Weapon"
-SWEP.Description = [[A PDW based on the AAC Honey Badger chambered in 5.7x28mm to have a compact, lightweight and low-recoil system that still has the ergonomics of a carbine and more range and penetrative power than regular SMGs.
-]]
+SWEP.Description = [[A PDW based on the AAC Honey Badger chambered in 5.7x28mm.
+Designed to have a compact, lightweight, and low-recoil system that still has the ergonomics of a carbine and more range and penetrative power than regular SMGs.]]
 SWEP.Trivia = {
     Manufacturer = "SDW",
     Calibre = "5.7x28mm",

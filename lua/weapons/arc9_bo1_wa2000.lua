@@ -6,10 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "WA 2000"
 SWEP.Class = "Designated Marskman Rifle"
-SWEP.Description = [[
-    German semi-automatic precision rifle created in response to the 1972 Summer Olympics Massacre in Munich.
-    Only 176 were ever built due to high production cost.
-]]
+SWEP.Description = [[German semi-automatic precision rifle created in response to the 1972 Summer Olympics Massacre in Munich.
+Only 176 were ever built due to high production cost.]]
 SWEP.Trivia = {
     Manufacturer = "Kalashnikov Concern",
     Calibre = "7.62x51mm NATO",

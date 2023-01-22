@@ -6,10 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "Enfield XL64E5"
 SWEP.Class = "Assault Rifle"
-SWEP.Description = [[
-    Experimental Bullpup rifle of british design build around the AR-18 firing an experimental intermediate cartridge. This design would eventually become
-    the standard british rifle and adopted as the L85A1, though chambered in the more common 5.56mm NATO.
-]]
+SWEP.Description = [[Experimental British bullpup rifle. The design build around the AR-18 and firing an experimental intermediate cartridge. 
+This design would eventually become the standard British rifle and adopted as the L85A1, though chambered in the more common 5.56mm NATO.]]
 SWEP.Trivia = {
     Manufacturer = "Enfield",
     Calibre = "4.85x49mm",

@@ -7,7 +7,7 @@ SWEP.AdminOnly = false
 SWEP.PrintName = "MAC-11"
 SWEP.Class = "Machine Pistol"
 SWEP.Description = [[American machine pistol made as a subcompact variant of the MAC-10.
-Has an absurdly high fire rate. Very powerful, but only in close quarters.]]
+Has an absurdly high fire rate. Very powerful, but only in close-quarters.]]
 SWEP.Trivia = {
     Manufacturer = "Military Armament Corporation",
     Calibre = ".380 ACP",

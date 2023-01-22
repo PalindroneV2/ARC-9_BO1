@@ -6,9 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "R870 MCS"
 SWEP.Class = "Shotgun"
-SWEP.Description = [[
-    12 gauge pump-action shotgun widely used by civilians, law enforcement and even militaries. It's incredibly reliable operation makes it incredibly popular.
-]]
+SWEP.Description = [[12 gauge pump-action shotgun widely used by civilians, law enforcement, and even militaries.
+It's incredibly reliable operation makes it incredibly popular.]]
 SWEP.Trivia = {
     Manufacturer = "Remington",
     Calibre = "12 Gauge",

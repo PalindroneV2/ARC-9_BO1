@@ -6,9 +6,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "FAMAS Valorisé"
 SWEP.Class = "Assault Rifle"
-SWEP.Description = [[
-    A french assault rifle firing the 5.56mm NATO round Using a bullpup configuration to keep it a compact size.
-]]
+SWEP.Description = [[A French assault rifle firing the 5.56mm NATO round Using a bullpup configuration to keep it a compact size.]]
 SWEP.Trivia = {
     Manufacturer = "GIAT Industries",
     Calibre = "5.56x45mm NATO",

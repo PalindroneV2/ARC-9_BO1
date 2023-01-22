@@ -6,9 +6,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "Olympia"
 SWEP.Class = "Shotgun"
-SWEP.Description = [[
-    12 gauge sporting and hunting purpose made double-barrel shotgun by Beretta that uses the Over and Under design.
-]]
+SWEP.Description = [[12 gauge sporting and hunting purpose made double-barrel shotgun by Beretta that uses the Over Design (OD) and Under Design (UD).]]
 SWEP.Trivia = {
     Manufacturer = "Beretta",
     Calibre = "12 Gauge",

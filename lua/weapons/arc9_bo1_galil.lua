@@ -6,9 +6,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "IMI Galil"
 SWEP.Class = "Assault Rifle"
-SWEP.Description = [[
-    An  assault rifle from Israel based on the AK/Valmet platform firing 5.56mm NATO rounds.
-]]
+SWEP.Description = [[An assault rifle from Israel based on the AK/Valmet platform firing 5.56mm NATO rounds.]]
 SWEP.Trivia = {
     Manufacturer = "IMI",
     Calibre = "5.56x45mm NATO",

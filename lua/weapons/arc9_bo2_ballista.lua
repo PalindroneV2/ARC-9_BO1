@@ -6,9 +6,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "FN Ballista"
 SWEP.Class = "Sniper Rifle"
-SWEP.Description = [[
-    A belgian high-caliber sniper rifle designed as a competitor to the Remington MSR and the AWM.
-]]
+SWEP.Description = [[A belgian high-caliber sniper rifle designed as a competitor to Remington MSR and AWM.]]
 SWEP.Trivia = {
     Manufacturer = "FN Herstal",
     Calibre = ".338 Lapua",

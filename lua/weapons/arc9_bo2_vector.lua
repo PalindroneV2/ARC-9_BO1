@@ -6,9 +6,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "TDI Vector"
 SWEP.Class = "Submachine Gun"
-SWEP.Description = [[
-    American SMG with a unique recoil absorption system.
-]]
+SWEP.Description = [[American SMG with a unique recoil absorption system.]]
 SWEP.Trivia = {
     Manufacturer = "TDI",
     Calibre = "9x19mm Parabellum",

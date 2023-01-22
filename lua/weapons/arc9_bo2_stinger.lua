@@ -6,11 +6,9 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "FIM-92 Stinger"
 SWEP.Class = "Missile Launcher"
-SWEP.Description = [[
-    American MANPADS that fires infrared homing surface-to-air missiles.
-
-    A lock does not need to be kept after firing. For use mainly with slow targets, such as helicopters. The ideal angle for shooting is from directly behind the target. It is unreliable against jets. The infrared seeker can get confused if the target is surrounded by clutter - fire towards targets in the sky.
-]]
+SWEP.Description = [[American MANPADS that fires infrared homing surface-to-air missiles.
+A lock does not need to be kept after firing. For use mainly with slow targets, such as helicopters. The ideal angle for shooting is from directly behind the target.
+It is unreliable against jets. The infrared seeker can get confused if the target is surrounded by clutter-fire towards targets in the sky.]]
 SWEP.Trivia = {
     Manufacturer = "Raytheon Missile Systems",
     Calibre = "40x46mm HE",

@@ -6,9 +6,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "Blundergat"
 SWEP.Class = "Wonder Weapon"
-SWEP.Description = [[
-    Custom made quad-barrel break-action shotgun with massive horizontal spread.
-]]
+SWEP.Description = [[Custom made quad-barrel break-action shotgun with massive horizontal spread.]]
 SWEP.Trivia = {
     Manufacturer = "Unknown",
     Calibre = "12 Gauge",

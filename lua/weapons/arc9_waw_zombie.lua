@@ -6,9 +6,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = [[BRAAAINS...]]
 SWEP.Class = "Melee Weapon"
-SWEP.Description = [[
-    You've become infected with 115! Now you're nothing but a brainless puppet in search of flesh to devour.
-]]
+SWEP.Description = [[You've become infected with 115! Now you're nothing but a brainless puppet in search of flesh to devour.]]
 SWEP.Trivia = {
     Origin = "Apothicons",
     Mechanism = "Clawing",

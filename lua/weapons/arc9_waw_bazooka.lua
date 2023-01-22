@@ -6,13 +6,9 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "M9A1 \"Bazooka\""
 SWEP.Class = "Rocket Launcher"
-SWEP.Description = [[
-    An american man-portable, reusable, unguided, shoulder-launched, anti-tank rocket-propelled grenade launcher.
-
-    It's vague resemblance to an instrument called "bazooka" created by a popular comedian earned it its nickname.
-
-    This was the basis for the German Panzerschreck.
-]]
+SWEP.Description = [[An american man-portable, reusable, unguided, shoulder-launched, anti-tank rocket-propelled grenade launcher.
+It's vague resemblance to an instrument called "bazooka" created by a popular comedian earned it its nickname.
+This was the basis for the German Panzerschreck.]]
 SWEP.Trivia = {
     Manufacturer = "US Army Ordnance",
     Calibre = "60mm M6A3 Rocket",

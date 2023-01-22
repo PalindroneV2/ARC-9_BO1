@@ -6,9 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "Walther P38"
 SWEP.Class = "Pistol"
-SWEP.Description = [[
-    9mm german pistol. Replaced the Luger P08 as the standard issue for german officers during WW2 and like it was an item sought after by allied soldiers as war souvenirs.
-]]
+SWEP.Description = [[9mm German pistol. Replaced the Luger P08 as the standard issue for German officers during WW2.
+It was an item sought after by Allied soldiers as war souvenirs.]]
 SWEP.Trivia = {
     Manufacturer = "Walther GMBH",
     Calibre = "9x19mm Parabellum",

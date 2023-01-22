@@ -6,9 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "SRM 1216"
 SWEP.Class = "Combat Shotgun"
-SWEP.Description = [[
-12 gauge automatic combat shotgun with a detachable cylindrical magazine containing four tubes that hold 4 shells each. Manual operation is needed to switch from one tube to another.
-]]
+SWEP.Description = [[12 gauge automatic combat shotgun with a detachable cylindrical magazine containing four tubes that hold 4 shells each.
+Manual operation is needed to switch from one tube to another.]]
 SWEP.Trivia = {
     Manufacturer = "SRM Arms",
     Calibre = "12 Gauge",

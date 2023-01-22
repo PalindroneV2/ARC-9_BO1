@@ -6,9 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "Double-Barrel Shotgun"
 SWEP.Class = "Shotgun"
-SWEP.Description = [[
-    Dating back to the old west, still in use today, two barrels of buckshot. A classic through and through.
-]]
+SWEP.Description = [[Dating back to the old west, still in use today, two barrels of buckshot.
+A classic through and through.]]
 SWEP.Trivia = {
     Manufacturer = "Does it matter?",
     Calibre = "12 Gauge",

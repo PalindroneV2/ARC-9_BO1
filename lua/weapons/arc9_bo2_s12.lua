@@ -6,10 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "Saiga 12K"
 SWEP.Class = "Combat Shotgun"
-SWEP.Description = [[
-    12 gauge semi automatic combat shotgun based on the AK platform.
-    Unlike many self loading shotguns which run into feeding issues, the Saiga manages to be reliable due to the looser tolerances of the AK platform.
-]]
+SWEP.Description = [[12 gauge semi automatic combat shotgun based on the AK platform.
+Unlike many self loading shotguns which run into feeding issues, the Saiga manages to be reliable due to the looser tolerances of the AK platform.]]
 SWEP.Trivia = {
     Manufacturer = "Lone Star Arms",
     Calibre = "12 Gauge",

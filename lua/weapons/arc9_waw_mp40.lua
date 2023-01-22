@@ -6,12 +6,10 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "MP40"
 SWEP.Class = "Submachine Gun"
-SWEP.Description = [[
-    "Picture this scene. Europe, World War II. A band of plucky heores captured by the germans, but they've got a cunning plan. Darkness falls and they make their escape. Nazi guards firing fruitlessly into the night and the weapon they're using...
-    ... It's the MP40."
+SWEP.Description = [["Picture this scene. Europe, World War II. A band of plucky heores captured by the Germans, but they've got a cunning plan. Darkness falls and they make their escape. Nazi guards firing fruitlessly into the night and the weapon they're using...
+... It's the MP40."
 
-    German submachine gun in 9mm. The weight and slower rate of fire allow for a weapon with very little recoil.
-]]
+German submachine gun in 9mm. The weight and slower rate of fire allow for a weapon with very little recoil.]]
 SWEP.Trivia = {
     Manufacturer = "Erma Werke",
     Calibre = "9x19mm Parabellum",

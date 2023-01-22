@@ -6,11 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "Springfield M1903A1"
 SWEP.Class = "Rifle"
-SWEP.Description = [[
-    American bolt action rifle rifle using that was used as the standard infantry rifle in the Great War and remained in specialized roles such as snipers during World War II.
-
-    This variant specifically saw much more use by the US Marines during the second world war rather than the more modern M1903A4.
-]]
+SWEP.Description = [[American bolt action rifle that was used as the standard infantry rifle in the Great War and remained in specialized roles such as snipers during WW2.
+This variant specifically saw much more use by the US Marines during the WW2 rather than the more modern M1903A4.]]
 SWEP.Trivia = {
     Manufacturer = "Springfield",
     Calibre = ".30-06 Springfield",

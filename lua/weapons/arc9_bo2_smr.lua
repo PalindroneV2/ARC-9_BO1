@@ -6,9 +6,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "SMI Saritch 308"
 SWEP.Class = "Battle Rifle"
-SWEP.Description = [[
-    Russian bullpup rifle in .308 Winchester and 7.62mm NATO for the civilian market.
-]]
+SWEP.Description = [[Russian bullpup rifle in .308 Winchester and 7.62mm NATO for the civilian market.]]
 SWEP.Trivia = {
     Manufacturer = "DSA",
     Calibre = ".308 Winchester",

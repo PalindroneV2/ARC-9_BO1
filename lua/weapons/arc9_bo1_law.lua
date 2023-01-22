@@ -6,9 +6,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "M72 LAW"
 SWEP.Class = "Rocket Launcher"
-SWEP.Description = [[
-    American 1-use rocket launcher that shoots unguided 66mm anti-tank payloads.
-]]
+SWEP.Description = [[American single-use rocket launcher that shoots unguided 66mm anti-tank payloads.]]
 SWEP.Trivia = {
     Manufacturer = "NAMMO",
     Calibre = "66mm",

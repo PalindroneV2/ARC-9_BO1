@@ -6,9 +6,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = [[Machete]]
 SWEP.Class = "Melee Weapon"
-SWEP.Description = [[
-    Knife used by the legendary special forces unit MACV-SOG.
-]]
+SWEP.Description = [[Knife used by the legendary special forces unit MACV-SOG.]]
 SWEP.Trivia = {
     Manufacturer = "Many",
     Mechanism = "Slashing",

@@ -6,9 +6,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = [[Pulwar]]
 SWEP.Class = "Melee Weapon"
-SWEP.Description = [[
-    Single-handed curved sword from Afghanistan
-]]
+SWEP.Description = [[Single-handed curved sword from Afghanistan.]]
 SWEP.Trivia = {
     Manufacturer = "Many",
     Mechanism = "Slashing",

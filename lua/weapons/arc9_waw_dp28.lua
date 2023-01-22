@@ -6,10 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "DP-27"
 SWEP.Class = "Light Machine Gun"
-SWEP.Description = [[
-    World War 2 era Soviet Light Machine Gun. Though it had issues it had a reputation as an effective light support weapon.
-    Nicknamed "Record Player" by soldiers due to its disc-shaped magazine that was fed from the top and rotated while firing.
-]]
+SWEP.Description = [[WW2 era Soviet light machine gun. Though it had some issues, also held a reputation as an effective light support weapon.
+Nicknamed "Record Player" by soldiers due to its disc-shaped magazine that was fed from the top and rotated while firing.]]
 SWEP.Trivia = {
     Manufacturer = "Tula Arms",
     Calibre = "7.62x54mmR",

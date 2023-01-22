@@ -6,9 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "Gewehr 43"
 SWEP.Class = "Battle Rifle"
-SWEP.Description = [[
-    World War 2 era German Semi-Automatic rifle successor of the G41(W) made to catch up with the SVT-38 and subsequently the SVT-40.
-]]
+SWEP.Description = [[WW2 era German semi-automatic rifle successor of the G41(W).
+Made to catch up with the SVT-38 and subsequently the SVT-40.]]
 SWEP.Trivia = {
     Manufacturer = "Walther",
     Calibre = "7.92x57mm Mauser",

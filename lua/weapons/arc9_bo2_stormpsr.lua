@@ -6,9 +6,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "Storm PSR"
 SWEP.Class = "Anti-Materiel Precision Rifle"
-SWEP.Description = [[
-    Multi-barrel piercing shot rifle based on metal storm technology.
-]] --This one seems to be modified for a set charge count instead of the default operation mode of holding trigger to charge.
+SWEP.Description = [[Multi-barrel piercing shot rifle based on metal storm technology.]] --This one seems to be modified for a set charge count instead of the default operation mode of holding trigger to charge.
 SWEP.Trivia = {
     Manufacturer = "MetalStorm",
     Calibre = "7.62x51mm NATO",

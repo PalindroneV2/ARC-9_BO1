@@ -6,9 +6,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "Executioner"
 SWEP.Class = "Shotgun Revolver"
-SWEP.Description = [[
-    5-shot Revolver chambered in .410 bore shotshell.
-]]
+SWEP.Description = [[5-shot Revolver chambered in .410 bore shotshell.]]
 SWEP.Trivia = {
     Manufacturer = "Taurus",
     Calibre = ".410 Bore",

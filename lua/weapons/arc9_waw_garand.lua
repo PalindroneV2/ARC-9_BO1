@@ -6,11 +6,9 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "M1 Garand"
 SWEP.Class = "Battle Rifle"
-SWEP.Description = [[
-    "What does a battle rifle have in common with a microwave? They both go 'ping' when they're done."
-    
-    American semi-automatic battle rifle using an en-bloc 8-round magazine which gave US Troops an advantage against the more commonplace bolt-action rifles wielded by their enemies during World War 2.
-]]
+SWEP.Description = [["What does a battle rifle have in common with a microwave? They both go 'ping' when they're done."
+
+American semi-automatic battle rifle using an en-bloc 8 round magazine, which gave US Troops an advantage against the more commonplace bolt-action rifles wielded by their enemies during WW2.]]
 SWEP.Trivia = {
     Manufacturer = "U.S. Ordnance",
     Calibre = ".30-06 Springfield",

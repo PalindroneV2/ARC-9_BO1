@@ -6,8 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "Colt M1911"
 SWEP.Class = "Pistol"
-SWEP.Description = [[A staple of firearm design, in service with military forces, law enforcement agencies and civilians for over 100 years. A pistol that forgot to become obsolete.
-Fires a powerful cartridge, but is let down by its single stack magazine.]]
+SWEP.Description = [[A staple of firearm design, in service with military forces, law enforcement agencies, and civilians for over 100 years.
+A pistol that forgot to become obsolete. Fires a powerful cartridge, but is let down by its single stack magazine.]]
 SWEP.Trivia = {
     Manufacturer = "Colt",
     Calibre = ".45 ACP",

@@ -6,9 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "Tokarev TT-33"
 SWEP.Class = "Pistol"
-SWEP.Description = [[
-    A soviet pistol designed shortly before World War II, and served as the standard issue pistol for the Soviets during the war until it was replaced by the Makarov PM.
-]]
+SWEP.Description = [[A Soviet pistol designed shortly before WW2.
+Served as the standard issue pistol for the Soviets during the war until it was replaced by the Makarov PM.]]
 SWEP.Trivia = {
     Manufacturer = "Walther GMBH",
     Calibre = "9x19mm Parabellum",

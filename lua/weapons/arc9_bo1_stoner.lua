@@ -6,11 +6,9 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "Stoner 63"
 SWEP.Class = "Assault Rifle"
-SWEP.Description = [[
-    Modular weapons platform designed by the same man as the AR-15. 
-    With possible conversions from a full length rifle to carbine and even belt-fed light machine gun, the Stoner is a versatile rugged weapon.
-    It however did not earn the same favor with militaries as the AR-15.
-]]
+SWEP.Description = [[Modular weapons platform designed by the same man as the AR-15. 
+With possible conversions from a full length rifle to carbine and even belt-fed light machine gun, the Stoner is a versatile rugged weapon.
+However, it didn't earn the same favor with militaries as the AR-15.]]
 SWEP.Trivia = {
     Manufacturer = "Knight's Armament Company",
     Calibre = "5.56x45mm NATO",

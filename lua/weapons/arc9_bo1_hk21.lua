@@ -6,10 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "HK21"
 SWEP.Class = "General-Purpose Machine Gun"
-SWEP.Description = [[
-    German Army standard issue rifle chambered in 7.62mm NATO. The power of the cardtridge makes it difficult to control in full-auto.
-    Machine gun variant.
-]]
+SWEP.Description = [[German Army standard issue rifle chambered in 7.62mm NATO. The power of the cartridge makes it difficult to control in full-auto.
+Machine gun variant.]]
 SWEP.Trivia = {
     Manufacturer = "Heckler & Koch",
     Calibre = "7.62x51mm NATO",

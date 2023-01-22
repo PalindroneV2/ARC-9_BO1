@@ -6,12 +6,10 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "SVT-40"
 SWEP.Class = "Battle Rifle"
-SWEP.Description = [[
-    World War 2 era Soviet Semi-Automatic Rifle, which began use as the SVT-38 during the Winter War.
-    It was notable for being one of the most wide-spread semi-automatic rifles of the war, second only to the M1 Garand.
-    The rather extensive use of this rifle prompted the development of German produced self-loading rifles, such as the G-41(W) and the G-43.
-    An select-fire version, the AVT-40, saw development to supplement the Red Army's shortage of machine guns.
-]]
+SWEP.Description = [[WW2 era Soviet semi-automatic rifle, which began use as the SVT-38 during the Winter War.
+It was notable for being one of the most wide-spread semi-automatic rifles of the war, second only to the M1 Garand.
+The rather extensive use of this rifle prompted the development of German produced self-loading rifles, such as the G-41(W) and the G-43.
+An select-fire version, the AVT-40, saw development to supplement the Red Army's shortage of machine guns.]]
 SWEP.Trivia = {
     Manufacturer = "Tula Arms",
     Calibre = "7.62x54mmR",

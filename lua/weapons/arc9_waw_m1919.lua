@@ -6,9 +6,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "Browning M1919A4"
 SWEP.Class = "Light Machine Gun"
-SWEP.Description = [[
-    Belt-fed light machine gun in .30-06 variant of the .50 BMG M2 machine gun designed by the legendary John Browning.
-]]
+SWEP.Description = [[Belt-fed light machine gun in .30-06 variant of the .50 BMG M2 machine gun designed by the legendary John Browning.]]
 SWEP.Trivia = {
     Manufacturer = "U.S. Ordnance",
     Calibre = ".30-06 Springfield",

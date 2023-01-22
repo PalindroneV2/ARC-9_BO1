@@ -6,10 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "PTRS-41"
 SWEP.Class = "Anti-Materiel Precision Rifle"
-SWEP.Description = [[
-    Russian anti-materiel rifle made for destroying armored vehicles and tanks.
-    It's devastating anti-tank power comes at the cost of a massive 2 meter length and weight that makes it unable to be fired from the shoulder.
-]]
+SWEP.Description = [[Russian anti-materiel rifle made for destroying armored vehicles and tanks.
+It's a devastating anti-tank power comes at the cost of a massive 2 meter length and weight that makes it unable to be fired from the shoulder.]]
 SWEP.Trivia = {
     Manufacturer = "Many",
     Calibre = "14.5x144mm",

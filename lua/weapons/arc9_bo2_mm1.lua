@@ -6,9 +6,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = [[War Machine]]
 SWEP.Class = "Grenade Launcher"
-SWEP.Description = [[
-    American revolver grenade launcher using 40mm High Explosive rounds developed from the Manville Machine Projector.
-]]
+SWEP.Description = [[American revolver grenade launcher using 40mm High Explosive rounds developed from the Manville Machine Projector.]]
 SWEP.Trivia = {
     Manufacturer = "Hawk Engineering Company",
     Calibre = "40x46mm HE",

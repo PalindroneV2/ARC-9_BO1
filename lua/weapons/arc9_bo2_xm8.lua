@@ -6,11 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "HK XM8"
 SWEP.Class = "Assault Rifle"
-SWEP.Description = [[
-    German assault rifle. Remnant of HK's OICW prototype. Tried for replacement of the US army's standard M4 carbines but the project was canceled.
-
-    In some alternate timeline the US Army may have adopted this rifle.
-]]
+SWEP.Description = [[German assault rifle. Remnant of HK's OICW prototype. Tried for replacement of the US army's standard M4 carbines, but the project was canceled.
+In an alternate timeline, the US Army may have adopted this rifle.]]
 SWEP.Trivia = {
     Manufacturer = "Heckler & Koch",
     Calibre = "5.56x45mm NATO",

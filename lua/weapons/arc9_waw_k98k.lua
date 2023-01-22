@@ -6,10 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "Kar98k"
 SWEP.Class = "Rifle"
-SWEP.Description = [[
-    Carbine version of the famous Mauser rifle model of 1898 with a shorter barrel.
-    It served as the standard arm for German armed forces during World War II.
-]]
+SWEP.Description = [[Carbine version of the famous Mauser rifle model of 1898 with a shorter barrel.
+It served as the standard arm for German armed forces during WW2.]]
 SWEP.Trivia = {
     Manufacturer = "Mauser",
     Calibre = "7.92x57mm Mauser",

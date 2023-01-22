@@ -6,10 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "Arisaka Type 99"
 SWEP.Class = "Rifle"
-SWEP.Description = [[
-    The standard infantry rifle of the Imperial Japanese Army and Navy during the second World War.
-    Compared to other rifles of the time, it is relatively lightweight and fires a smaller cartridge.
-]]
+SWEP.Description = [[The standard infantry rifle of the Imperial Japanese Army and Navy during the WW2.
+Compared to other rifles of the time, it is relatively lightweight and fires a smaller cartridge.]]
 SWEP.Trivia = {
     Manufacturer = "Nagoya Arsenal",
     Calibre = "7.7x58mm Arisaka",

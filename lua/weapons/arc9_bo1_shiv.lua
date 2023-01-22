@@ -6,9 +6,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = [[Shiv]]
 SWEP.Class = "Knife"
-SWEP.Description = [[
-    Crude makeshift knife made from a piece of rusted metal in a russian prison camp.
-]]
+SWEP.Description = [[Crude makeshift knife made from a piece of rusted metal in a Russian prison camp.]]
 SWEP.Trivia = {
     Manufacturer = "[REDACTED]",
     Mechanism = "Slashing",

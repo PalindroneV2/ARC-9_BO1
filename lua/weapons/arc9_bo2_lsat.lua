@@ -6,10 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "LSAT"
 SWEP.Class = "Light Machine Gun"
-SWEP.Description = [[
-    Belgian light machine gun. Scaled up version of the Mk 46 Mod 0 and fires the more powerful 7.62x51mm NATO.
-    In use by US Naval Forces, USSOCOM and Indian Special Forces.
-]]
+SWEP.Description = [[Belgian light machine gun. Scaled up version of the MK 46 Mod 0 and fires the more powerful 7.62x51mm NATO.
+Used by US Naval Forces, USSOCOM, and Indian Special Forces.]]
 SWEP.Trivia = {
     Manufacturer = "FN Herstal",
     Calibre = "5.56x45mm Caseless",

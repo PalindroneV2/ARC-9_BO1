@@ -6,10 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "S&W Model 27"
 SWEP.Class = "Revolver"
-SWEP.Description = [[
-    Magnum revolver with a one hell of a kick.
-    US General George Patton carried one as his personal sidearm.
-]]
+SWEP.Description = [[Magnum revolver with a one hell of a kick.
+US General George Patton carried one as his personal sidearm.]]
 SWEP.Trivia = {
     Manufacturer = "Smith & Wesson",
     Calibre = ".357 Magnum",

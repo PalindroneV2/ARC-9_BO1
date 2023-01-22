@@ -6,10 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "KS-23"
 SWEP.Class = "Shotgun"
-SWEP.Description = [[
-    Soviet pump-action shotgun designed to be fitted with 23mm barrels originally for aircraft guns that were rejected due to manufacturing flaws.
-    Used as riot shotguns in prisons, it is devestating in close range combat.
-]]
+SWEP.Description = [[Soviet pump-action shotgun designed to be fitted with 23mm barrels, originally for aircraft guns that were rejected due to manufacturing flaws.
+Used as riot shotguns in prisons, it's devastating in close range combat.]]
 SWEP.Trivia = {
     Manufacturer = "Tula Arms",
     Calibre = "23×75mmR",

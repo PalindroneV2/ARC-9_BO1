@@ -6,9 +6,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "Type 25"
 SWEP.Class = "Assault Rifle"
-SWEP.Description = [[
-    Chinese bullpup rifle standard for the People's Liberation Army.
-]]
+SWEP.Description = [[Chinese bullpup rifle standard for the People's Liberation Army.]]
 SWEP.Trivia = {
     Manufacturer = "Norinco",
     Calibre = "5.8x42mm DBP10",

@@ -6,9 +6,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "Scorpion Evo 3 A1"
 SWEP.Class = "Submachine Gun"
-SWEP.Description = [[
-    Excelent Czech SMG with a high rate of fire.
-]]
+SWEP.Description = [[Excellent Czech SMG with a high rate of fire.]]
 SWEP.Trivia = {
     Manufacturer = "CZUB",
     Calibre = "9x19mm Parabellum",

@@ -6,11 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "MSMC"
 SWEP.Class = "Personal Defense Weapon"
-SWEP.Description = [[
-    The Joint Venture Point Carbine is an indian PDW with a design akin to the IMI Uzi. It has been declared ready for active service in 2020.
-
-    It was known as the Mordern Sub Machine Carbine (MSMC) prior to 2014.
-]]
+SWEP.Description = [[The Joint Venture Point Carbine is an indian PDW with a design akin to the IMI Uzi. It has been declared ready for active service in 2020.
+It was known as the Mordern Sub Machine Carbine (MSMC) prior to 2014.]]
 SWEP.Trivia = {
     Manufacturer = "Ordnance Factories Board",
     Calibre = "5.56x30mm MINSAS",

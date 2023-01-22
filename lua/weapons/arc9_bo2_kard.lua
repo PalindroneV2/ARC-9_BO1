@@ -6,9 +6,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "KAP-40"
 SWEP.Class = "Machine Pistol"
-SWEP.Description = [[
-    American Pistol that forgoes the common use of a slide and a tilting barrel, instead using a weight with a bolt actuator.
-]]
+SWEP.Description = [[American Pistol that forgoes the common use of a slide and a tilting barrel, instead using a weight with a bolt actuator.]]
 SWEP.Trivia = {
     Manufacturer = "KRISS",
     Calibre = ".45 ACP",

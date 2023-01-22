@@ -6,8 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "Makarov PM"
 SWEP.Class = "Pistol"
-SWEP.Description = [[A soviet pistol designed shortly after World War II, standard for all branches of police and military, still used by the Russian Armed Forces to this day.
-Owing to its compact size and weight, it is very accurate, but its calibre and magazine capacity limits its firepower.]]
+SWEP.Description = [[A Soviet pistol designed shortly after WW2. Standard for all branches of police and military and still being used by the Russian Armed Forces to this day.
+Owing to its compact size and weight, it is very accurate, but its caliber and magazine capacity limits its firepower.]]
 SWEP.Trivia = {
     Manufacturer = "Tula Arms Plant",
     Calibre = "9x18mm Russian",

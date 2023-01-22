@@ -6,11 +6,9 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "Strela-3"
 SWEP.Class = "Missile Launcher"
-SWEP.Description = [[
-    Man-portable air defense system developed in the Soviet Union.
-
-    After firing, a lock must be maintained while the missile is in flight. More powerful missiles than the Stinger, but harder to use. Due to ground clutter confusing the sensor, it will not reliably track ground targets.
-]]
+SWEP.Description = [[Man-portable air defense system developed in the Soviet Union.
+After firing, a lock must be maintained while the missile is in flight. More powerful missiles than the Stinger, but harder to use.
+Due to ground clutter confusing the sensor, it will not reliably track ground targets.]]
 SWEP.Trivia = {
     Manufacturer = "KBM Kolomna",
     Calibre = "72mm Missiles",

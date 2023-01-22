@@ -6,7 +6,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "OTS-02 Kiparis"
 SWEP.Class = "Submachine Gun"
-SWEP.Description = [[Russian submachine Gun designed in the 70s intended for internal security and police units, but didn't see use until the 90s.
+SWEP.Description = [[Russian submachine gun designed in the 70s intended for internal security and police units, but didn't see use until the 90s.
 A forgiving firearm with high fire rate and capacity to back it up with.]]
 SWEP.Trivia = {
     Manufacturer = "KBP",

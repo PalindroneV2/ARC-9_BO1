@@ -6,9 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "Type 100/44"
 SWEP.Class = "Submachine Gun"
-SWEP.Description = [[
-    Japanese SMG with close resemblance to the WW1 era Bergman MP18. This is the late war model with a fire rate of 800 RPM
-]]
+SWEP.Description = [[Japanese submachine gun with close resemblance to the WW1 era Bergman MP18.
+This is the late war model with a fire rate of 800 RPM.]]
 SWEP.Trivia = {
     Manufacturer = "Nagoya Arsenal",
     Calibre = "8x22mm Nambu",

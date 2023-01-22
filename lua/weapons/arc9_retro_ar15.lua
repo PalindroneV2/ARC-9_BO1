@@ -6,10 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "Colt AR-15"
 SWEP.Class = "Assault Rifle"
-SWEP.Description = [[
-    The AR-15 is a family of rifles originally created by Arma-Lite, subsquently picked up by Colt and the standard United States infantry rifle since the 1960s.
-    Despite its poor start, this rifle has a long carreer of excellent and reliable performance and its versatility as a weapons platform has kept it in service for over 50 years.
-]]
+SWEP.Description = [[The AR-15 is a family of rifles originally created by Arma-Lite, subsquently picked up by Colt and the standard United States infantry rifle since the 60s.
+Despite its poor start, this rifle has a long carreer of excellent and reliable performance and its versatility as a weapons platform has kept it in service for over 50 years.]]
 SWEP.Trivia = {
     Manufacturer = "Colt",
     Calibre = "5.56x45mm NATO",

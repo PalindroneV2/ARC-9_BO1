@@ -5,9 +5,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "Ak 5"
 SWEP.Class = "Assault Rifle"
-SWEP.Description = [[
-    Swedish variant of the FN FNC.
-]]
+SWEP.Description = [[Swedish variant of the FN FNC.]]
 SWEP.Trivia = {
     Manufacturer = "Bofors",
     Calibre = "5.56x45mm NATO",
