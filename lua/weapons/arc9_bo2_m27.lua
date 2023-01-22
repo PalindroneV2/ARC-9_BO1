@@ -398,6 +398,7 @@ SWEP.Attachments = {
         Pos = Vector(12, 0.105, 3.2),
         Ang = Angle(0, 0, 0),
         Category = {"bo2_m27_barrel"},
+    },
     {
         PrintName = "Underbarrel",
         Bone = "j_gun",
@@ -405,7 +406,6 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"bo2_m320", "cod_grips"},
         -- MergeSlots = {11},
-    },
     },
     {
         PrintName = "Muzzle",
