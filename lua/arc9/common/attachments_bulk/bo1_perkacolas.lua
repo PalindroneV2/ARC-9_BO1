@@ -11,7 +11,7 @@ ATT.Description = [[
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Category = {"bo1_perkacola"}
@@ -31,7 +31,7 @@ ATT.Description = [[
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Category = {"bo1_perkacola"}
@@ -51,7 +51,7 @@ ATT.Description = [[
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Category = {"bo1_perkacola"}
@@ -72,7 +72,7 @@ ATT.Description = [[
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Category = {"bo1_perkacola"}
@@ -93,7 +93,7 @@ ATT.Description = [[
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Category = {"bo1_perkacola"}
@@ -117,7 +117,7 @@ ATT.Pros = {
 }
 ATT.Cons = {}
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Category = {"bo1_perkacola"}
@@ -138,7 +138,7 @@ ATT.Pros = {
 }
 ATT.Cons = {}
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Category = {"bo1_perkacola"}
@@ -159,7 +159,7 @@ ATT.Pros = {
 }
 ATT.Cons = {}
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Category = {"bo1_perkacola"}

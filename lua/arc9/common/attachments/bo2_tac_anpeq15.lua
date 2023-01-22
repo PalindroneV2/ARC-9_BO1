@@ -6,7 +6,7 @@ Tighter aim when firing from hip.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 1
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
 -- ATT.Folder = "RDS"
 

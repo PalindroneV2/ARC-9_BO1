@@ -13,7 +13,7 @@ ATT.Description = [[
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Category = {"bo1_g3_barrel"}
@@ -50,7 +50,7 @@ ATT.Description = [[
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Category = {"bo1_g3_barrel"}
@@ -87,7 +87,7 @@ ATT.Description = [[
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Category = {"bo1_g3_barrel"}
@@ -141,7 +141,7 @@ ATT.Description = [[
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Category = {"bo1_g3_hg"}
@@ -174,7 +174,7 @@ ATT.Description = [[
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Category = {"bo1_g3_mag"}
@@ -232,7 +232,7 @@ ATT.Description = [[
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Category = {"bo1_g3_mag"}
@@ -266,7 +266,7 @@ ATT.Description = [[
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Category = {"bo1_hk21_mag"}

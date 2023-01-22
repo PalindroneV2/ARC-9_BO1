@@ -12,7 +12,7 @@ ATT.Pros = {}
 ATT.Cons = {
 }
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = true
 
 ATT.Category = {"bo1_fcg_auto", "bo1_fcgs"}
@@ -47,7 +47,7 @@ ATT.Pros = {}
 ATT.Cons = {
 }
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = true
 
 ATT.Category = {"bo1_fcg_bst", "bo1_fcgs"}
@@ -84,7 +84,7 @@ ATT.Pros = {}
 ATT.Cons = {
 }
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = true
 
 ATT.Category = {"bo1_fcg"}
@@ -109,7 +109,7 @@ ATT.Pros = {}
 ATT.Cons = {
 }
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = true
 
 ATT.Category = {"bo1_fcg_semi", "bo1_fcgs"}
@@ -143,7 +143,7 @@ ATT.Pros = {}
 ATT.Cons = {
 }
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = true
 
 ATT.Category = {"bo1_mpl_fcg"}
@@ -169,7 +169,7 @@ ATT.Pros = {}
 ATT.Cons = {
 }
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = true
 
 ATT.Category = {"waw_stinger"}
@@ -195,7 +195,7 @@ ATT.Pros = {}
 ATT.Cons = {
 }
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = true
 
 ATT.Category = {"bo2_fcg_mg08"}
@@ -219,7 +219,7 @@ ATT.Pros = {}
 ATT.Cons = {
 }
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = true
 
 ATT.Category = {"bo1_cz75_fcg"}

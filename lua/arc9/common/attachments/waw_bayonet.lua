@@ -7,7 +7,7 @@ ATT.Description = [[
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - WAW Attachments"
+ATT.MenuCategory = "ARC9 - WAW Attachments"
 ATT.Free = false
 
 ATT.Category = {"waw_bayonet"}

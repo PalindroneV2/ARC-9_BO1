@@ -18,6 +18,7 @@
 
     $detailblendmode 4
     $detailblendfactor 1
+	$detail "models/weapons/arc9/bo1/black_detail"
 	Proxies {
 		CustomCamo {
 			camoTexture $detail

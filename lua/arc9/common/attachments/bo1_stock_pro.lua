@@ -5,7 +5,7 @@ ATT.Description = [[A stock that provides a balance between mobility and recoil 
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 1
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Category = {"bo1_stock_pro"}

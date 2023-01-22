@@ -3,7 +3,7 @@ ATT.CompactName = [[CH RAIL]]
 ATT.Icon = Material("entities/bo1_atts/barrel/barrel.png")
 ATT.Description = [[Three-Rail RIS Handguard allows for attachment of underbarrels.]]
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Category = {"bo1_ar15_toprail"}

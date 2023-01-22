@@ -1,0 +1,33 @@
+"VertexLitGeneric"
+{
+    "$basetexture" "models/weapons/arc9/cde/hyper_hb/hb"
+    "$bumpmap" "models/weapons/arc9/cde/hyper_hb/hbn"
+    "$phongexponenttexture" "models/weapons/arc9/cde/hyper_hb/hbg"
+
+    "$phong" 1
+    "$phongboost" 1
+    "$phongfresnelranges" "[2 5 4]"
+    "$phongalbedotint" "1"
+    "$phongalbedoboost" "38"
+
+    "$envmap" "env_cubemap"
+    "$envmaptint" "[0.01 0.01 0.01]"
+    "$normalmapalphaenvmapmask" 1
+    "$envmapfresnel" "0.1"
+
+    // "$rimlight" "1"
+    // "$rimlightexponent" "88"
+    // "$rimlightboost""2"
+    // "$rimmask" "1"
+
+	$detail "models/weapons/arc9/bo1/black_detail"
+	$detailblendmode 4
+	$detailblendfactor 0.65
+	Proxies {
+		CustomCamo {
+			camoTexture $detail
+			camoScale $detailscale
+            blend $detailblendfactor
+		}
+	}
+}

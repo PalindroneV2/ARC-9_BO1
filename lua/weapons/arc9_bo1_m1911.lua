@@ -229,6 +229,13 @@ SWEP.AttachmentElements = {
             },
         },
     },
+    ["rail_lamp"] = {
+        AttPosMods = {
+            [6] = {
+                Pos = Vector(2.75, 0.175, 0.175),
+            }
+        },
+    },
     ["newhammer"] = {
         Bodygroups = {
             {3,1},
@@ -263,7 +270,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local vm = data.model
     local attached = data.elements
     local newpos = Vector(-2.56, 0, 1)
-    local newang = Angle(-0.15, 0.1, 0)
+    local newang = Angle(-0.2, 0.075, 0)
     local snappos = Vector(1, -10, 0)
     local slide = 0
     local finish = 0
@@ -456,23 +463,24 @@ SWEP.Attachments = {
         DefaultIcon = Material("materials/entities/bo1_atts/cosmetic/waw_1911.png", "mips smooth"),
     },
     {
+        PrintName = "Pistol Rail",
+        DefaultCompactName = "RAIL",
+        Bone = "j_gun",
+        Scale = Vector(0.75,0.75,0.75),
+        Pos = Vector(3.5, 0.175, 0.3),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_pistol_rail"},
+        Icon_Offset = Vector(-2,0,1),
+        CorrectiveAng = Angle(0.05, 0.2, 0),
+    },
+    {
         PrintName = "Tactical",
         DefaultCompactName = "TAC",
         Bone = "j_gun",
-        Scale = 1,
+        Scale = .9,
         Pos = Vector(2.75, 0.175, 0.175),
         Ang = Angle(0, 0, 0),
-        Category = {"cod_tactical"},
-        MergeSlots = {7},
-    },
-    {
-        Hidden = true,
-        Bone = "j_gun",
-        Scale = Vector(0.75,0.75,0.75),
-        Pos = Vector(2.75, 0.175, 0.175),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_pistol_rail"},
-        CorrectiveAng = Angle(0.05, 0.2, 0),
+        Category = {"cod_tactical_pistols"},
     },
     {
         PrintName = "Ammunition",

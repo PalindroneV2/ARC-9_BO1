@@ -3,7 +3,7 @@ ATT.CompactName = "APTR"
 ATT.Icon = Material("entities/bo1_atts/optics/waw_aperture.png")
 ATT.Description = [[Simple optic with a crosshair drawn on it.]]
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - WAW Attachments"
+ATT.MenuCategory = "ARC9 - WAW Attachments"
 ATT.Free = true
 ATT.Folder = "REFLEX"
 

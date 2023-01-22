@@ -11,7 +11,7 @@ ATT.Description = [[Weapon exclusive compensator.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Category = {"bo1_m1911_compensator"}
@@ -42,7 +42,7 @@ ATT.Description = [[An opulent golden gun.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = true
 
 ATT.Category = {"bo1_m1911_cosmetics", "waw_pistol_cosmetic"}
@@ -59,7 +59,7 @@ ATT.Description = [[Fancy and shiny nickel finish for your weapon. Gives you no 
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = true
 
 ATT.Category = {"bo1_m1911_cosmetics"}
@@ -76,7 +76,7 @@ ATT.Description = [[The blued finish of your weapon has been worn down by years 
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = true
 
 ATT.Category = {"bo1_m1911_cosmetics"}
@@ -95,7 +95,7 @@ ATT.Description = [[M1911 assets from Black Ops Cold War.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = true
 ATT.Ignore = true
 
@@ -113,7 +113,7 @@ ATT.Description = [[Modern M1911 platform Frame with improved ambidextrous safet
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = true
 
 ATT.Category = {"bo1_m1911_frames"}
@@ -130,7 +130,7 @@ ATT.Description = [[Notched Ring Hammer that improves grip by increasing frictio
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = true
 
 ATT.Category = {"bo1_m1911_hammer"}
@@ -147,7 +147,7 @@ ATT.Description = [[Longer improved trigger with reduced pull.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = true
 
 ATT.Category = {"bo1_m1911_trigger"}
@@ -166,7 +166,7 @@ ATT.Description = [[Modern M1911 platform slide with angled serrations and repla
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = true
 
 ATT.Category = {"bo1_m1911_slides"}
@@ -183,7 +183,7 @@ ATT.Description = [[Compact 1911 slide with that improves handling and sprint ti
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 1
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 
 ATT.RangeMaxMult = 0.75
 ATT.PhysBulletMuzzleVelocityMult = 0.9
@@ -216,7 +216,7 @@ ATT.SpreadAdd = math.rad(3 / 37.5)
 ATT.SpreadAddHipFire = -math.rad(30 / 37.5)
 ATT.SpreadAddMove = -math.rad(15 / 37.5)
 
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 
 ATT.InvAtt = "bo1_m1911_slides_short"
 ATT.Category = {"bo1_m1911_slides"}
@@ -233,7 +233,7 @@ ATT.Description = [[Longer 1911 slide and barrel with improved rifling and impro
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 2
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 
 ATT.RangeMaxMult = 1.25
 ATT.PhysBulletMuzzleVelocityMult = 1.15
@@ -260,7 +260,7 @@ ATT.Description = [[
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 2
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 
 ATT.RangeMaxMult = 1.25
 ATT.PhysBulletMuzzleVelocityMult = 1.15
@@ -288,7 +288,7 @@ ATT.Description = [[
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 2
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = true
 
 ATT.ShootSound = "ARC9_WAW.M1911_Fire"
@@ -309,7 +309,7 @@ ATT.Description = [[
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 2
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = true
 
 ATT.ShootSound = "ARC9_BO2.M1911_Fire"

@@ -10,7 +10,7 @@ ATT.Icon = Material("entities/bo1_atts/barrel/barrel.png")
 ATT.Description = [[Shortened barrel and handguard used on the MP5K model. Handguard comes with an integrated foregrip.
 Increases fire rate and hip fire accuracy, but range and recoil is worse.]]
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Category = {"bo1_mp5_barrel"}
@@ -92,7 +92,7 @@ ATT.CompactName = [[RIS]]
 ATT.Icon = Material("entities/bo1_atts/barrel/barrel.png")
 ATT.Description = [[Three-rail RIS Handguard grants additional attachment points.]]
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.RecoilAutoControlMult = 0.95
@@ -137,7 +137,7 @@ ATT.CompactName = [[SD]]
 ATT.Icon = Material("entities/bo1_atts/barrel/barrel.png")
 ATT.Description = [[Round ribbed handguard for the MP5SD.]]
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Category = {"bo1_mp5_barrel"}
@@ -175,7 +175,7 @@ ATT.Description = [[10mm Conversion for the MP5. 35 round mag.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Category = {"bo1_mp5_mag"}
@@ -220,7 +220,7 @@ ATT.Description = [[10mm Conversion for the MP5. 25 round mag.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Category = {"bo1_mp5_mag"}
@@ -265,7 +265,7 @@ ATT.Description = [[Extended Magazine for the MP5.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Category = {"bo1_mp5_mag", "bo1_mp5k_mag"}
@@ -286,7 +286,7 @@ The pistol cartridge reduces long range stopping power significantly, but has le
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Category = {"bo1_mp5_mag"}
@@ -307,7 +307,7 @@ ATT.Description = [[A stock that provides a balance between mobility and recoil 
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 1
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Category = {"bo1_mp5_stock"}
@@ -334,7 +334,7 @@ ATT.Description = [[Rail Attachment System with 4 rails allows for attachment of
 Due to hand placement, side rails are only accessible if a foregrip is attached.
 Removal of integrated foregrip increases recoil.]]
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Category = {"bo1_mp5k_mw2_rail"}
@@ -402,7 +402,7 @@ ATT.Pros = {
 }
 ATT.Cons = {}
 ATT.SortOrder = 4
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Category = {"bo1_mp5k_nogrip"}
@@ -444,7 +444,7 @@ ATT.Description = [[
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Category = {"bo1_mp5_sd"}

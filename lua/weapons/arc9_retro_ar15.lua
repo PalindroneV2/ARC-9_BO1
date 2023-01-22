@@ -250,6 +250,7 @@ SWEP.StandardPresets = {
     "[M- HECU]XQAAAQCgAQAAAAAAAAA9iIIiM7hMNz0dhIkbkvJZHs6N4cERAS1EIUwLaB+vDp8XCL30711xZT7xm2o2gbH+qJxZwTXZOPAsSZpNr/SP1fX8cuf/cxv8JsjJIRZKbIZaZ+UFdauwIORHueQcgh38RqmwIxICdM5KpArJYhEek0W9hi1W7ivbS7gk0WU8wrFXT51FGjhSb91tGEP2VsY3yIIet8sBMSGVz4l+7cJ2AQA=",
     "[N- SOPMOD]XQAAAQA+AgAAAAAAAAA9iIIiM7hMNz0dhIkbkvJZHs6N4cERAS1EIUwLaB+vDp8XCL0VyBP1c786BrvuOw3g56kujvgRv1Ta7qdRsNGN4/CsGx5IF1icsfmAw4fJea2x9NEj9G22nfFipswM0jCfOye9DCbkwwJAisE/Q0KHTz1Kf/USqNzV1B/ltjhrdP54rBpKQnZS6Km8iDJrH97wYfKLHDc4z4hSsN9vTdNWBAwIfJT0qlUxLTVujTS+w4fw5oicwh3mK94+SCWyx4wN6LNX0yndd3iQ+nPTOx5bnh7bX8eXeQ73/E+hM/CIuh7aNKUA",
     "[O- FPW]XQAAAQDZAQAAAAAAAAA9iIIiM7hMNz0dhIkbkvLjTdErcFqoUCAoqlx+DzP3J38q3lk9/nuJTGYJWHvTnJBAN06vkv+QsGXSNnbFj9XP7Ljgt8sizNhRP102VM7mAivurlLolzUfuiLxPROwH1qmOxUiFcdOYUv+bRQ0rlZcy0B3NjeM44kpN5plD/aHbWPx8KjiJT9Qv15CFM1MBrh4kQRfueu7kUKOk/1STCx1r4/iSSPAb/XpYlkF9g1BdV7oBXslybGOmU9H/F50wKvsbXMRBrw9t4mPRSlHKmGB",
+    "[P - Badger]XQAAAQBNAgAAAAAAAAA9iIIiM7hMNz0dhIkbkvJZHs6N4cERAS1EIUwLaB+vDp8XCL0VyBP1c786RpKeImE3p2VAqeWrSwXe7hpzEqlAzG1BVGYZWecTkoKWcymMiswxSQAdXE14Lv9F8x22Q5OUib6LGqX6otdtiNTGuRaa6arRqX2aJyTuxLaNvVdX0o2nx0tTMo/JXygIct2EywbKzmHvA3rwi6JQlRlBkXn/PB2DOOLFgZj2e6TeRRNilKLqKS/fJiW5T3iM0gZbTa/ga6H9L6Ah1Q1R+pzmX8mMT7EVVoatUXus/n0B6EmDwFxvNngKnIgu",
 }
 
 SWEP.AttachmentElements = {
@@ -413,6 +414,11 @@ SWEP.AttachmentElements = {
             {5,11}
         },
     },
+    ["aac_stock"] = {
+        Bodygroups = {
+            {5,15}
+        },
+    },
 }
 
 SWEP.Hook_ModifyBodygroups = function(self, data)
@@ -434,21 +440,33 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     if attached["barrel_16"] then
         length = 1
         newCustPose = Vector(-1.5, 0, 0)
+        if attached["handguard_mlok_short"] then
+            gasblock = 3
+        end
     elseif attached["barrel_14"] then
         length = 2
         hand = 4
         gasblock = 1
         newCustPose = Vector(-1.5, 0, 0)
+        if attached["mlok"] then
+            gasblock = 3
+        end
     elseif attached["barrel_11"] then
         length = 3
         hand = 4
         gasblock = 1
         newCustPose = Vector(-1.5, 0, 0)
+        if attached["mlok"] then
+            gasblock = 3
+        end
     elseif attached["barrel_10"] then
         length = 4
         hand = 4
         gasblock = 1
         newCustPose = Vector(-3, 0, 0)
+        if attached["mlok"] then
+            gasblock = 3
+        end
     elseif attached["barrel_9mm"] then
         length = 8
         hand = 9
@@ -456,6 +474,10 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         frontsight = 5
         if attached["cod_optic"] then
             frontsight = 6
+        end
+        if attached["mlok"] then
+            length = 10
+            frontsight = 0
         end
         newCustPose = Vector(-3, 0, 0)
     end
@@ -506,10 +528,8 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         covers = 1
     elseif attached["handguard_mlok"] then
         hand = 11
-        -- gasblock = 4
     elseif attached["handguard_mlok_short"] then
         hand = 12
-        gasblock = 1
     end
     if attached["removecovers"] then covers = 0 end
 
@@ -533,15 +553,11 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         end
         if hand == 11 then
             frontsight = 1
-            gasblock = 4
+            gasblock = 2
         end
         if hand == 12 then
-            gasblock = 4
+            gasblock = 3
             frontsight = 7
-        end
-        if hand == 13 then
-            frontsight = 7
-            gasblock = 4
         end
         if hand == 10 then
             gasblock = 4
@@ -571,11 +587,11 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         end
         if hand == 11 then
             frontsight = 3
-            gasblock = 4
+            gasblock = 2
         end
         if hand == 12 then
             frontsight = 8
-            gasblock = 4
+            gasblock = 3
         end
         if hand == 13 then
             frontsight = 8
@@ -596,10 +612,9 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         if hand >= 11 then
             gasblock = 4
         end
-        -- if length <= 2 and hand == 3 then
-        --     frontsight = 0
-        --     gasblock = 2
-        -- end
+    end
+    if attached["barrel_9mm"] then
+        gasblock = 4
     end
     self.BipodPos = NewBipodPos
     self.BipodAng = NewBipodAng

@@ -217,6 +217,13 @@ SWEP.BarrelLength = 0 -- = 9
 SWEP.ExtraSightDist = 15
 
 SWEP.AttachmentElements = {
+    ["rail_lamp"] = {
+        AttPosMods = {
+            [1] = {
+                Pos = Vector(3.65, 0, 0),
+            }
+        },
+    },
 }
 
 SWEP.Hook_ModifyBodygroups = function(self, data)
@@ -262,6 +269,17 @@ end
 
 SWEP.Attachments = {
     {
+        PrintName = "Pistol Rail",
+        DefaultCompactName = "Irons",
+        Bone = "j_gun",
+        Scale = Vector(1, 1, 1),
+        Pos = Vector(4.75, 0, 0.2),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_pistol_rail"},
+        Icon_Offset = Vector(-3,0,1),
+        CorrectiveAng = Angle(0.05, 0.3, 0),
+    },
+    {
         PrintName = "Muzzle",
         DefaultCompactName = "MUZZ",
         Bone = "j_gun",
@@ -274,10 +292,10 @@ SWEP.Attachments = {
         DefaultCompactName = "TAC",
         Bone = "j_gun",
         Scale = Vector(1, 1, 1),
-        Pos = Vector(5.75, 0, 0.2),
+        Pos = Vector(3.5, 0, 0),
         Ang = Angle(0, 0, 0),
-        Category = {"cod_tactical", "bo1_pistol_rail"},
-        CorrectiveAng = Angle(0.05, 0.3, 0),
+        Category = {"cod_tactical_pistols"},
+        ExcludeElements = {"rail_lamp"},
     },
     {
         PrintName = "Magazine",

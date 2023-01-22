@@ -13,7 +13,7 @@ ATT.Cons = {
     "- Low profile. Front sights might block it."
 }
 ATT.SortOrder = 1
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
 ATT.Folder = "REFLEX"
 

@@ -11,7 +11,7 @@ ATT.Description = [[
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Model = "models/weapons/arc9/atts/bo1_suppressor.mdl"
@@ -52,7 +52,7 @@ ATT.Description = [[
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Model = "models/weapons/arc9/atts/bo1_suppressor.mdl"
@@ -93,7 +93,7 @@ ATT.Description = [[
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Model = "models/weapons/arc9/atts/bo1_soviet_supp.mdl"
@@ -134,7 +134,7 @@ ATT.Description = [[
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Model = "models/weapons/arc9/atts/bo2_suppressor_80s_1.mdl"
@@ -175,11 +175,11 @@ ATT.Description = [[
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Model = "models/weapons/arc9/atts/bo2_suppressor_80s_2.mdl"
-ATT.Scale = Vector(1, 1, 1)
+ATT.Scale = Vector(1, 0.9, 0.9)
 
 ATT.Category = {"bo1_muzzle"}
 ATT.MuzzleDevice = true
@@ -215,11 +215,11 @@ ATT.Description = [[
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Model = "models/weapons/arc9/atts/bo2_suppressor_80s_3.mdl"
-ATT.Scale = Vector(1, 1, 1)
+ATT.Scale = Vector(1, 0.9, 0.9)
 
 ATT.Category = {"bo1_muzzle"}
 ATT.MuzzleDevice = true
@@ -255,11 +255,11 @@ ATT.Description = [[
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Model = "models/weapons/arc9/atts/bo2_suppressor_ar1.mdl"
-ATT.Scale = Vector(1, 1, 1)
+ATT.Scale = Vector(1, 0.8, 0.8)
 
 ATT.Category = {"bo1_muzzle"}
 ATT.MuzzleDevice = true
@@ -295,11 +295,11 @@ ATT.Description = [[
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Model = "models/weapons/arc9/atts/bo2_suppressor_ar2.mdl"
-ATT.Scale = Vector(1, 1, 1)
+ATT.Scale = Vector(1, 0.8, 0.8)
 
 ATT.Category = {"bo1_muzzle"}
 ATT.MuzzleDevice = true
@@ -335,11 +335,11 @@ ATT.Description = [[
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Model = "models/weapons/arc9/atts/bo2_suppressor_ar3.mdl"
-ATT.Scale = Vector(1, 1, 1)
+ATT.Scale = Vector(1, 0.8, 0.8)
 
 ATT.Category = {"bo1_muzzle"}
 ATT.MuzzleDevice = true
@@ -375,11 +375,11 @@ ATT.Description = [[
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Model = "models/weapons/arc9/atts/bo2_suppressor_ar4.mdl"
-ATT.Scale = Vector(1, 1, 1)
+ATT.Scale = Vector(1, 0.9, 0.9)
 
 ATT.Category = {"bo1_muzzle"}
 ATT.MuzzleDevice = true
@@ -415,7 +415,7 @@ ATT.Description = [[
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Model = "models/weapons/arc9/atts/bo2_suppressor_shotty1.mdl"
@@ -455,11 +455,11 @@ ATT.Description = [[
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Model = "models/weapons/arc9/atts/bo2_suppressor_smg1.mdl"
-ATT.Scale = Vector(1, 1, 1)
+ATT.Scale = Vector(1, 0.9, 0.9)
 ATT.ModelOffset = Vector(-0.28, 0, 0)
 
 ATT.Category = {"bo1_muzzle_pistol", "bo1_muzzle_smg"}
@@ -496,7 +496,7 @@ ATT.Description = [[
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - WAW Attachments"
+ATT.MenuCategory = "ARC9 - WAW Attachments"
 ATT.Free = false
 
 ATT.Model = "models/weapons/arc9/atts/bo1_suppressor.mdl"

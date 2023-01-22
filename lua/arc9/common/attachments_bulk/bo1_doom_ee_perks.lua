@@ -10,7 +10,7 @@ In the first age, in the first battle, when the shadows first lengthened, one st
 ]]
 
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Category = {"waw_perk_ssg"}
@@ -60,7 +60,7 @@ He chose the path of perpetual torment.
 ]]
 
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Category = {"bo1_perk_rpg7"}
@@ -100,7 +100,7 @@ In his ravenous hatred he found no peace...
 ]]
 
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Category = {"bo1_ks23_doom"}
@@ -139,7 +139,7 @@ ATT.Description = [[
 ]]
 
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Category = {"bo1_minigun_doom"}

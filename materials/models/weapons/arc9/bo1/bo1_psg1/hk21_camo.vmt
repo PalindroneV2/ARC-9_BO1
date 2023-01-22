@@ -18,6 +18,7 @@ VertexlitGeneric
 
     $detailblendmode 0
     $detailblendfactor 1.2
+	$detail "models/weapons/arc9/bo1/black_detail"
 	Proxies {
 		CustomCamo {
 			camoTexture $detail
