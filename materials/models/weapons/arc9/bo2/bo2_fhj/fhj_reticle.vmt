@@ -1,0 +1,7 @@
+"UnlitGeneric"
+{
+	"$basetexture" "models/weapons/arc9/bo2/bo2_fhj/fhj_reticle"
+    $color2 "[0.1 0.5 0.5]"
+	"$translucent" "1"
+	// "$additive" "1"
+}
