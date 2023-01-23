@@ -7,8 +7,7 @@ SWEP.AdminOnly = false
 SWEP.PrintName = "AN-94"
 SWEP.Class = "Assault Rifle"
 SWEP.Description = [[A Russian assault rifle with a design derived from the classic Kalashnikov.
-It has a few quirks that make it unique, such as the hyperburst, reciprocating barrel, tilted magazine, and counterweight pulley system. All part of the weapon's are extremely complicated function.
-It was proposed as the replacement for the AK-74, but it's extreme complexity would have made costs too high for mass production. Though it still remains in service in limited numbers.]]
+Fully automatic assault rifle. Moderate recoil and power.]]
 SWEP.Trivia = {
     Manufacturer = "Izhmash",
     Calibre = "5.45x39mm",

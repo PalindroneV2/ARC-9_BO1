@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Black Ops" -- edit this if you like
 SWEP.SubCategory = "Specials/Explosives"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = [[Pulwar]]
+SWEP.PrintName = [[Pulwar Sword]]
 SWEP.Class = "Melee Weapon"
 SWEP.Description = [[Single-handed curved sword from Afghanistan.]]
 SWEP.Trivia = {

@@ -6,7 +6,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = [[War Machine II]]
 SWEP.Class = "Grenade Launcher"
-SWEP.Description = [[Patterson fire a warning shot!]]
+SWEP.Description = [[6 round semi-automatic grenade launcher.]]
 SWEP.Trivia = {
     Manufacturer = "Milkor",
     Calibre = "40x46mm HE",

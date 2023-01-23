@@ -4,10 +4,10 @@ SWEP.Category = "ARC9 - Black Ops II" -- edit this if you like
 SWEP.SubCategory = "Assault Rifles"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "HK XM8"
+SWEP.PrintName = "M8A1"
 SWEP.Class = "Assault Rifle"
-SWEP.Description = [[German assault rifle. Remnant of HK's OICW prototype. Tried for replacement of the US army's standard M4 carbines, but the project was canceled.
-In an alternate timeline, the US Army may have adopted this rifle.]]
+SWEP.Description = [[German 4 round burst assault rifle. Bursts can be fired in quick succession.
+Remnant of HK's OICW prototype.]]
 SWEP.Trivia = {
     Manufacturer = "Heckler & Koch",
     Calibre = "5.56x45mm NATO",
@@ -280,7 +280,7 @@ SWEP.HookP_NameChange = function(self, name)
 
     local attached = self:GetElements()
 
-    local gunname = "HK XM8"
+    local gunname = "M8A1"
 
     if attached["bo1_pap"] then
         gunname = "Micro Aerator"

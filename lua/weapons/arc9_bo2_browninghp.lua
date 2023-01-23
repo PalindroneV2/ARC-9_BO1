@@ -6,8 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "Browning HP"
 SWEP.Class = "Pistol"
-SWEP.Description = [[Pistol designed for the French "high power" trials, innovating with a staggered double-stack magazine design to increase capacity.
-A well-rounded pistol whose only downside is its poor hip fire performance.]]
+SWEP.Description = [[Pistol designed for the French "high power" trials, innovating with a staggered double-stack magazine design.
+Semi-automatic with medium capacity and power. Effective at close range.]]
 SWEP.Trivia = {
     Manufacturer = "FN Herstal",
     Calibre = "9x19mm Parabellum",

@@ -6,7 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "QBB LSW"
 SWEP.Class = "Light Machine Gun"
-SWEP.Description = [[Chinese bullpup rifle in Light Squad Weapon configuration standard for the People's Liberation Army.]]
+SWEP.Description = [[Chinese fully automatic LMG in Light Squad Weapon configuration standard for the People's Liberation Army.
+Highest rate of fire in class.]]
 SWEP.Trivia = {
     Manufacturer = "Norinco",
     Calibre = "5.8x42mm DBP10",

@@ -6,8 +6,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "B23R"
 SWEP.Class = "Pistol"
-SWEP.Description = [[Burst-fire pistol based on the Beretta 92.
-Fast rate of fire, poor range, and moderate damage.]]
+SWEP.Description = [[3 round burst pistol. High rate of fire with moderate recoil, poor range, and moderate damage.]]
 SWEP.Trivia = {
     Manufacturer = "Beretta",
     Calibre = "9x19mm Parabellum",

@@ -6,7 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "DSR-50"
 SWEP.Class = "Sniper Rifle"
-SWEP.Description = [[Anti-material sniper rifle designed in Germany. Much more stable and precise than other .50 BMG rifles.]]
+SWEP.Description = [[Anti-material bolt-action sniper rifle designed in Germany. Much more stable and precise than other .50 BMG rifles.
+Deadly from the waist up.]]
 SWEP.Trivia = {
     Manufacturer = "FN Herstal",
     Calibre = ".50 BMG",

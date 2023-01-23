@@ -4,9 +4,10 @@ SWEP.Category = "ARC9 - Black Ops" -- edit this if you like
 SWEP.SubCategory = "Sniper Rifles"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Barrett M82"
+SWEP.PrintName = "Barrett M82A1"
 SWEP.Class = "Anti-Materiel Precision Rifle"
-SWEP.Description = [[American .50 caliber precision rifle. Very heavy, very powerful and extremely dangerous in the right hands.]]
+SWEP.Description = [[American semi-automatic, high caliber sniper rifle. Effective at long range. 
+Very heavy, very powerful, and extremely dangerous in the right hands.]]
 SWEP.Trivia = {
     Manufacturer = "Barrett",
     Calibre = ".50 BMG",

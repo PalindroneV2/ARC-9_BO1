@@ -6,7 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "Chicom CQB"
 SWEP.Class = "Personal Defense Weapon"
-SWEP.Description = [[A Chinese PDW that operatres in 4-round bursts.]]
+SWEP.Description = [[A Chinese PDW submachine gun that operatres in 4-round bursts.
+High cyclic fire rate allows for fast consecutive bursts.]]
 SWEP.Trivia = {
     Manufacturer = "Jianshe",
     Calibre = "5.7x28mm",
