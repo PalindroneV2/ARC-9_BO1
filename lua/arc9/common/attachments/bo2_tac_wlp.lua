@@ -13,6 +13,7 @@ ATT.Free = false
 -- ATT.Folder = "RDS"
 
 ATT.Category = {"cod_tactical_pistols"}
+ATT.ActivateElements = {"bo2_wlp"}
 
 ATT.Model = "models/weapons/arc9/atts/bo2_wlp.mdl"
 ATT.Scale = 1

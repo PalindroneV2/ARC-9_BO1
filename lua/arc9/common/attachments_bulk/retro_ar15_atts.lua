@@ -23,7 +23,7 @@ ATT.ActivateElements = {"carbine","barrel_9mm", "barrel_7", "carbine_hg"}
 ATT.Attachments = {
     {
         PrintName = "Handguard",
-        DefaultCompactName = "M-LOK",
+        DefaultCompactName = "D.O.E.",
         DefaultIcon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m4.png", "mips smooth"),
         Category = {"retro_ar15_handguard_mloks"},
         Bone = "j_gun",
@@ -35,9 +35,23 @@ ATT.Attachments = {
         PrintName = "Muzzle",
         DefaultCompactName = "None",
         Bone = "j_gun",
-        Pos = Vector(-4.7, 0, -0.5),
+        Scale = 0.9,
+        Pos = Vector(-4.9, 0, -0.57),
+        Icon_Offset = Vector(3, 0, 0),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_muzzle"},
+        ExcludeElements = {"is_patriot","9mm_mag"},
+    },
+    {
+        PrintName = "Muzzle",
+        DefaultCompactName = "None",
+        Bone = "j_gun",
+        Scale = 0.9,
+        Pos = Vector(-5.25, 0, -0.57),
+        Icon_Offset = Vector(3, 0, 0),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_muzzle_pistol","bo1_muzzle_smg"},
+        RequireElements = {"9mm_mag"},
         ExcludeElements = {"is_patriot"},
     },
     {
@@ -66,9 +80,9 @@ ATT.SpeedMultSights = 1.15
 ATT.AimDownSightsTimeMult = 0.7
 ATT.SprintToFireTimeMult = 0.75
 
-ATT.RangeMaxMult = 0.55
-ATT.RangeMinMult = 0.55
-ATT.PhysBulletMuzzleVelocityMult = 0.55
+ATT.RangeMaxMult = 0.5
+ATT.RangeMinMult = 0.5
+ATT.PhysBulletMuzzleVelocityMult = 0.50
 
 ARC9.LoadAttachment(ATT, "retro_ar15_barrel_7")
 
@@ -517,6 +531,25 @@ ARC9.LoadAttachment(ATT, "retro_ar15_front_matech")
 
 ATT = {}
 
+ATT.PrintName = "Magpul Masada Flip-Up Front Sight"
+ATT.CompactName = "Masada"
+ATT.Icon = Material("entities/bo1_atts/optics/retro_ar15/matech_side.png")
+ATT.Description = [[Front folding sight produced by Magpul for the Masada rifle.
+
+Functions identically to other iron sights.]]
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
+ATT.Free = true
+
+ATT.Category = {"retro_ar15_front_iron"}
+ATT.ActivateElements = {"masada_front"}
+ATT.ExcludeElements = {"mw2_m4_irons"}
+-- ATT.ExcludeElements = {"cod_rail_riser", "mw2_m4_irons"}
+
+ARC9.LoadAttachment(ATT, "retro_ar15_front_masada")
+
+ATT = {}
+
 ATT.PrintName = "Flattened cut-down Gasblock"
 ATT.CompactName = "FLAT"
 ATT.Icon = Material("entities/bo1_atts/optics/retro_ar15/troy_side.png")
@@ -723,7 +756,8 @@ ATT.Attachments = {
         Bone = "j_gun",
         Pos = Vector(-4, 0, 2.4),
         Ang = Angle(0, 0, 0),
-        Category = {"cde_m203", "bo1_mk", "cod_rail_underbarrel"},
+        Category = {"cde_m203", "bo1_mk", "cod_grips"},
+        InstalledElements = {"mlok_rails"},
     },
     {
         PrintName = "Tactical Right",
@@ -731,7 +765,8 @@ ATT.Attachments = {
         Bone = "j_gun",
         Pos = Vector(-9, 0.9, 1.5),
         Ang = Angle(0, 0, -90),
-        Category =  {"cod_tactical"}
+        Category =  {"cod_tactical"},
+        InstalledElements = {"mlok_rails"},
     },
     {
         PrintName = "Tactical Left",
@@ -739,7 +774,8 @@ ATT.Attachments = {
         Bone = "j_gun",
         Pos = Vector(-9, -0.9, 1.5),
         Ang = Angle(0, 0, 90),
-        Category =  {"cod_tactical"}
+        Category =  {"cod_tactical"},
+        InstalledElements = {"mlok_rails"},
     },
     {
         PrintName = "Tactical Top",
@@ -757,7 +793,8 @@ ATT.Attachments = {
         Pos = Vector(-9, 0, 2.3),
         Ang = Angle(0, 0, 0),
         Category = {"cod_tactical", "bo1_bipod"},
-        ExcludeElements = {"cde_m203", "bo1_mk"}
+        ExcludeElements = {"cde_m203", "bo1_mk"},
+        InstalledElements = {"mlok_rails"},
     },
     {
         PrintName = "Backup Optic Left",
@@ -766,6 +803,7 @@ ATT.Attachments = {
         Pos = Vector(-1.75, -0.9, 0.4),
         Ang = Angle(0, 0, -37.5),
         Category =  {"cod_optic_lp", "cod_rail_riser"},
+        InstalledElements = {"mlok_rails"},
         KeepBaseIrons = true,
         RejectAttachments = { ["cod_rail_hk_riser"] = true },
     },
@@ -776,6 +814,7 @@ ATT.Attachments = {
         Pos = Vector(-1.75, 0.9, 0.4),
         Ang = Angle(0, 0, 37.5),
         Category =  {"cod_optic_lp", "cod_rail_riser"},
+        InstalledElements = {"mlok_rails"},
         KeepBaseIrons = true,
         RejectAttachments = { ["cod_rail_hk_riser"] = true },
     },
@@ -1067,7 +1106,7 @@ ATT.Attachments = {
         Pos = Vector(-4, 0, 2.55),
         Ang = Angle(0, 0, 0),
         Category = {"cde_m203", "bo1_mk", "cod_grips"},
-        InstalledElements = {"allowtac"},
+        InstalledElements = {"allowtac","mlok_rails"},
     },
     {
         PrintName = "Tactical Right",
@@ -1076,7 +1115,7 @@ ATT.Attachments = {
         Pos = Vector(-4.5, 0.9, 1.6),
         Ang = Angle(0, 0, -90),
         Category =  {"cod_tactical"},
-        InstalledElements = {"removecovers"},
+        InstalledElements = {"removecovers","mlok_rails"},
         RequireElements = {"allowtac"},
     },
     {
@@ -1086,7 +1125,7 @@ ATT.Attachments = {
         Pos = Vector(-4.5, -0.9, 1.6),
         Ang = Angle(0, 0, 90),
         Category =  {"cod_tactical"},
-        InstalledElements = {"removecovers"},
+        InstalledElements = {"removecovers","mlok_rails"},
         RequireElements = {"allowtac"},
     },
     {
@@ -1106,6 +1145,7 @@ ATT.Attachments = {
         Pos = Vector(-1.75, -0.9, 0.55),
         Ang = Angle(0, 0, -37.5),
         Category =  {"cod_optic_lp", "cod_rail_riser"},
+        InstalledElements = {"mlok_rails"},
         KeepBaseIrons = true,
         RejectAttachments = { ["cod_rail_hk_riser"] = true },
     },
@@ -1116,6 +1156,7 @@ ATT.Attachments = {
         Pos = Vector(-1.75, 0.9, 0.55),
         Ang = Angle(0, 0, 37.5),
         Category =  {"cod_optic_lp", "cod_rail_riser"},
+        InstalledElements = {"mlok_rails"},
         KeepBaseIrons = true,
         RejectAttachments = { ["cod_rail_hk_riser"] = true },
     },
@@ -1439,6 +1480,26 @@ ATT.IconOffset = Vector(-5, 0, 0)
 ATT.ActivateElements = {"troy_iron"}
 
 ARC9.LoadAttachment(ATT, "retro_ar15_iron_troy")
+
+ATT = {}
+
+ATT.PrintName = "Magpul Masada Rear Folding Sight"
+ATT.CompactName = "Masada"
+ATT.Icon = Material("entities/bo1_atts/optics/retro_ar15/3arc_side.png")
+ATT.Description = [[Rear folding sight produced by Magpul for the Masada rifle.
+
+Functions identically to other iron sights.]]
+ATT.SortOrder = 4
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
+ATT.Free = true
+ATT.Folder = "AR-15 IRONS"
+
+-- ATT.InvAtt = "retro_ar15_upper_a4"
+ATT.Category = {"retro_ar15_iron"}
+ATT.IconOffset = Vector(-5, 0, 0)
+ATT.ActivateElements = {"masada_iron"}
+
+ARC9.LoadAttachment(ATT, "retro_ar15_iron_masada")
 
 ATT = {}
 
@@ -1978,7 +2039,7 @@ ATT.RangeMinMult = 0.7
 ATT.RecoilUpMult = 0.9
 ATT.RecoilSideMult = 0.9
 ATT.PenetrationMult = 0.8
-ATT.PhysBulletMuzzleVelocityAdd = -150 * 39.37
+ATT.PhysBulletMuzzleVelocityAdd = -175 * 39.37
 ATT.RPM = 800
 ATT.Trivia = {
     Manufacturer = "Advanced Armament Corporation",
@@ -2455,8 +2516,8 @@ ARC9.LoadAttachment(ATT, "retro_ar15_stock_wire")
 
 ATT = {}
 
-ATT.PrintName = "AAC Collapsible Stock Assembly"
-ATT.CompactName = "AAC"
+ATT.PrintName = "AAC PDW Collapsible Stock"
+ATT.CompactName = "PDW"
 ATT.Icon = Material("entities/bo1_atts/other/stock.png")
 ATT.Description = [[Retractible 2-postion stock produced in the after-market for subcompact AR-15s.
 

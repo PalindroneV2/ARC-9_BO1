@@ -52,7 +52,7 @@ SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
 SWEP.EntityMuzzleVelocity = 10000
 
-SWEP.PhysBulletMuzzleVelocity = 960 * 39.37
+SWEP.PhysBulletMuzzleVelocity = 800 * 39.37
 
 SWEP.BodyDamageMults = {
     [HITGROUP_HEAD] = 2,
@@ -248,7 +248,7 @@ SWEP.StandardPresets = {
     "[M- HECU]XQAAAQCgAQAAAAAAAAA9iIIiM7hMNz0dhIkbkvJZHs6N4cERAS1EIUwLaB+vDp8XCL30711xZT7xm2o2gbH+qJxZwTXZOPAsSZpNr/SP1fX8cuf/cxv8JsjJIRZKbIZaZ+UFdauwIORHueQcgh38RqmwIxICdM5KpArJYhEek0W9hi1W7ivbS7gk0WU8wrFXT51FGjhSb91tGEP2VsY3yIIet8sBMSGVz4l+7cJ2AQA=",
     "[N- SOPMOD]XQAAAQA+AgAAAAAAAAA9iIIiM7hMNz0dhIkbkvJZHs6N4cERAS1EIUwLaB+vDp8XCL0VyBP1c786BrvuOw3g56kujvgRv1Ta7qdRsNGN4/CsGx5IF1icsfmAw4fJea2x9NEj9G22nfFipswM0jCfOye9DCbkwwJAisE/Q0KHTz1Kf/USqNzV1B/ltjhrdP54rBpKQnZS6Km8iDJrH97wYfKLHDc4z4hSsN9vTdNWBAwIfJT0qlUxLTVujTS+w4fw5oicwh3mK94+SCWyx4wN6LNX0yndd3iQ+nPTOx5bnh7bX8eXeQ73/E+hM/CIuh7aNKUA",
     "[O- FPW]XQAAAQDZAQAAAAAAAAA9iIIiM7hMNz0dhIkbkvLjTdErcFqoUCAoqlx+DzP3J38q3lk9/nuJTGYJWHvTnJBAN06vkv+QsGXSNnbFj9XP7Ljgt8sizNhRP102VM7mAivurlLolzUfuiLxPROwH1qmOxUiFcdOYUv+bRQ0rlZcy0B3NjeM44kpN5plD/aHbWPx8KjiJT9Qv15CFM1MBrh4kQRfueu7kUKOk/1STCx1r4/iSSPAb/XpYlkF9g1BdV7oBXslybGOmU9H/F50wKvsbXMRBrw9t4mPRSlHKmGB",
-    "[P- Badger]XQAAAQBNAgAAAAAAAAA9iIIiM7hMNz0dhIkbkvJZHs6N4cERAS1EIUwLaB+vDp8XCL0VyBP1c786RpKeImE3p2VAqeWrSwXe7hpzEqlAzG1BVGYZWecTkoKWcymMiswxSQAdXE14Lv9F8x22Q5OUib6LGqX6otdtiNTGuRaa6arRqX2aJyTuxLaNvVdX0o2nx0tTMo/JXygIct2EywbKzmHvA3rwi6JQlRlBkXn/PB2DOOLFgZj2e6TeRRNilKLqKS/fJiW5T3iM0gZbTa/ga6H9L6Ah1Q1R+pzmX8mMT7EVVoatUXus/n0B6EmDwFxvNngKnIgu",
+    "[P- Badger]XQAAAQBDAgAAAAAAAAA9iIIiM7hMNz0dhIkbkvJZHs6N4cERAS1EIUwLaB+vDp8XCL0VyBP1c786RpKeImE3pqqAc7GS8+IqPu9bh4UpWjLsYAAipNt+dVXSfoZQ/15iWbI/NgONtmTPgFkr3Ea53Pg0Y8Xn9SKTMF8LvecfqA8Oq7KBx8VWn2MNDYMN6N0l/P8pSd+6V/ttPGJU3+l5KMTrrKAv7YzAVmz/5akZuGCITj77Rxv+ZsMZ8jMz+1RADviosIwqIyzUVFRlmPfGQ+O+AeM6acZut13JPfgNFSfPrbslYuiBMVf0eXN6bQK1Bp9dx+4fWEGN",
 }
 
 SWEP.AttachmentElements = {
@@ -325,6 +325,11 @@ SWEP.AttachmentElements = {
     ["irons_a2"] = {
         Bodygroups = {
             {6,7},
+        },
+    },
+    ["masada_iron"] = {
+        Bodygroups = {
+            {6,8},
         },
     },
     ["a2_top"] = {
@@ -407,14 +412,9 @@ SWEP.AttachmentElements = {
             {5,12}
         },
     },
-    ["magpul_extended"] = {
-        Bodygroups = {
-            {5,11}
-        },
-    },
     ["aac_stock"] = {
         Bodygroups = {
-            {5,15}
+            {5,14}
         },
     },
 }
@@ -469,9 +469,9 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         length = 8
         hand = 9
         gasblock = 4
-        frontsight = 5
+        frontsight = 10
         if attached["cod_optic"] then
-            frontsight = 6
+            frontsight = 11
         end
         if attached["mlok"] then
             length = 8
@@ -530,6 +530,14 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         hand = 12
     end
     if attached["removecovers"] then covers = 0 end
+    if attached["mlok_rails"] then
+        if attached["handguard_mlok"] then
+            covers = 2
+        end
+        if attached["handguard_mlok_short"] then
+            covers = 3
+        end
+    end
 
     if attached["troy_front"] then
         frontsight = 1
@@ -554,24 +562,24 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
             gasblock = 2
         end
         if hand == 12 then
+            frontsight = 3
             gasblock = 3
-            frontsight = 7
         end
         if hand == 10 then
             gasblock = 4
-            frontsight = 7
+            frontsight = 3
         end
     elseif attached["matech_front"] then
-        frontsight = 3
+        frontsight = 4
         gasblock = 2
         if attached["carbine"] then
-            frontsight = 4
+            frontsight = 5
             if hand == 5 then
                 gasblock = 3
             end
         end
         if hand == 3 then
-            frontsight = 3
+            frontsight = 4
             if length < 2 then
                 gasblock = 2
             end
@@ -581,19 +589,45 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         end
         if hand == 10 then
             gasblock = 4
-            frontsight = 8
+            frontsight = 6
         end
         if hand == 11 then
-            frontsight = 3
+            frontsight = 4
             gasblock = 2
         end
         if hand == 12 then
-            frontsight = 8
+            frontsight = 6
             gasblock = 3
         end
-        if hand == 13 then
+    elseif attached["masada_front"] then
+        frontsight = 7
+        gasblock = 2
+        if attached["carbine"] then
             frontsight = 8
+            if hand == 5 then
+                gasblock = 3
+            end
+        end
+        if hand == 3 then
+            frontsight = 7
+            if length < 2 then
+                gasblock = 2
+            end
+            if length == 2 then
+                gasblock = 4
+            end
+        end
+        if hand == 10 then
             gasblock = 4
+            frontsight = 9
+        end
+        if hand == 11 then
+            frontsight = 7
+            gasblock = 2
+        end
+        if hand == 12 then
+            frontsight = 9
+            gasblock = 3
         end
     elseif attached["gasblock_flat"] then
         gasblock = 2
@@ -763,6 +797,14 @@ SWEP.HookP_NameChange = function(self, name)
         alt = ""
     end
 
+    if attached["barrel_7"] then
+        model = "M16"
+        alt = " SBR"
+        if attached["fcg_semi"] then
+            model = "AR-15"
+        end
+    end
+
     if attached["9mm_mag"] then
         model = "M"
         alt = "635"
@@ -830,8 +872,11 @@ SWEP.HookP_NameChange = function(self, name)
     if attached["handguard_famas"] then
         gunname = "FAMAS M4"
     end
-    if attached["300blk"] and attached["barrel_7"] then
-        gunname = "AAC Honey Badger"
+    if attached["300blk"] then
+        gunname = gunname .. " .300BLK"
+        if attached["barrel_7"] then
+            gunname = "AAC Honey Badger"
+        end
     end
 
     if attached["bo1_pap"] then gunname = "Skullpiercer"
@@ -840,12 +885,20 @@ SWEP.HookP_NameChange = function(self, name)
         if attached["carbine"] then gunname = "Predator"
             if attached["a2_top"] then gunname = "Xeno Matter 4000" end
         end
+        if attached["300blk"] and attached["barrel_7"] then gunname = "MVP Wolverine" end
         if (model .. alt) == "Mk. 12 SPR" then gunname = "Lone Survivor" end
     end
 
     return gunname
 end
 
+SWEP.HookP_DescriptionChange = function(self, desc)
+    local attached = self:GetElements()
+    if attached["300blk"] and attached["barrel_7"] then
+        desc = "Sub-compact AR-15 variant produced by AAC and chambered in the sub-sonic .300 Blackout. Often times with a suppressor included."
+    end
+    return desc
+end
 
 SWEP.Hook_TranslateAnimation = function (self, anim)
     local attached = self:GetElements()
