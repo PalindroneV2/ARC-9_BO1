@@ -4,10 +4,9 @@ SWEP.Category = "ARC9 - Black Ops II" -- edit this if you like
 SWEP.SubCategory = "Assault Rifles"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "HK416"
+SWEP.PrintName = "M27"
 SWEP.Class = "Assault Rifle"
-SWEP.Description = [[An improved modification of the M4A1 Carbine by HK. Used by the USMC as a replacement for the M4A1 and M16A4 assault rifles.
-And also as a machine gun configuration with heavier and longer barrel to replace the belt-fed M249 SAW.]]
+SWEP.Description = [[Fully automatic assault rifle. Reduced recoil provides higher accuracy.]]
 SWEP.Trivia = {
     Manufacturer = "Heckler & Koch",
     Calibre = "5.56x45mm NATO",

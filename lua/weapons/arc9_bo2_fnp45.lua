@@ -6,7 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "FNP-45"
 SWEP.Class = "Pistol"
-SWEP.Description = [[.45 Caliber semi-automatic pistol produced in Belgium that currently sees service with Spanish Navy Marines and in few police forces.]]
+SWEP.Description = [[.45 Caliber semi-automatic pistol. High damage at close range. 
+Produced in Belgium that currently sees service with Spanish Navy Marines and in few police forces.]]
 SWEP.Trivia = {
     Manufacturer = "FN Herstal",
     Calibre = ".45 ACP",

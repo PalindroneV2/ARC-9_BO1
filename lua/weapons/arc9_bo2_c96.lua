@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Black Ops II" -- edit this if you like
 SWEP.SubCategory = "Handguns"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Mauser M712"
+SWEP.PrintName = "Mauser C96"
 SWEP.Class = "Pistol"
 SWEP.Description = [[One of the first successful semi-automatic pistol designs. Being used in WW1 and even beyond WW2 in limited capacity.
 This is, the "Schnellfeuer" variant, comes with a detachable box magazine and select-fire between semi and full auto.]]

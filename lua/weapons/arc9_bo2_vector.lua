@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Black Ops II" -- edit this if you like
 SWEP.SubCategory = "Submachine Guns"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "TDI Vector"
+SWEP.PrintName = "Vector K10"
 SWEP.Class = "Submachine Gun"
 SWEP.Description = [[American SMG with a unique recoil absorption system.]]
 SWEP.Trivia = {
@@ -295,7 +295,7 @@ SWEP.HookP_NameChange = function(self, name)
 
     local attached = self:GetElements()
 
-    local gunname = "TDI Vector"
+    local gunname = "Vector K10"
 
     if attached["bo1_pap"] then
         gunname = "Polygon K115"

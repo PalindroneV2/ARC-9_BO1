@@ -6,9 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "KSG"
 SWEP.Class = "Shotgun"
-SWEP.Description = [[Unconventional 12 gauge pump-action shotgun with a bullpup design.
-It has two magazine tubes that hold 7 rounds each, which gives this shotgun a massive advantage in ammo count.
-By default use slugs rather than buckshot.]]
+SWEP.Description = [[Unconventional 12 gauge pump action slug shotgun with a bullpup design. Fires a single slug for high damage at longer ranges.
+It has two magazine tubes that hold 7 rounds each, which gives this shotgun a massive advantage in ammo count.]]
 SWEP.Trivia = {
     Manufacturer = "Kel-Tec",
     Calibre = "12 Gauge",

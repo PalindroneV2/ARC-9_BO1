@@ -4,11 +4,9 @@ SWEP.Category = "ARC9 - Black Ops II" -- edit this if you like
 SWEP.SubCategory = "Specials/Explosives"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Ballistic Shield"
+SWEP.PrintName = "Assault Shield"
 SWEP.Class = "Melee Weapon"
-SWEP.Description = [[
-    Anti-Ballistic Shield
-]]
+SWEP.Description = [[Ballistic-proof blunt shield weapon. Can be deployed on the ground as cover.]]
 SWEP.Trivia = {
     Mechanism = "Bashing",
     Materials = "AR500 Anti-Ballistic Steel, Translucent Polycarbonate",

@@ -6,7 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "PDW-57"
 SWEP.Class = "Personal Defense Weapon"
-SWEP.Description = [[A PDW in 5.7x28mm successor to FN's P90, with a magazine that pivots to the left instead of being pulled from the top.]]
+SWEP.Description = [[A PDW in 5.7x28mm successor to FN's P90, with a magazine that pivots to the left instead of being pulled from the top.
+Fully automatic, with increased range and largest ammo capacity in its class.]]
 SWEP.Trivia = {
     Manufacturer = "IH Armament",
     Calibre = "5.7x28mm",

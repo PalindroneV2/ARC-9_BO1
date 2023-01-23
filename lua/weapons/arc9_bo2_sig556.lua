@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Black Ops II" -- edit this if you like
 SWEP.SubCategory = "Assault Rifles"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "SIG 556"
+SWEP.PrintName = "SWAT-556"
 SWEP.Class = "Assault Rifle"
 SWEP.Description = [[Import version of the SG 550 series of rifles with modifications that allow them to take STANAG magazines.
 Equipped with a Magpul MOE Stock and modified for military use with a 3 round burst mode.]]

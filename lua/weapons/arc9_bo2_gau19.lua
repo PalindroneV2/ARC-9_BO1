@@ -4,9 +4,9 @@ SWEP.Category = "ARC9 - Black Ops II" -- edit this if you like
 SWEP.SubCategory = "Specials/Explosives"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "GAU-19"
+SWEP.PrintName = "Death Machine"
 SWEP.Class = "Heavy Machine Gun"
-SWEP.Description = [[How you are able to carry this death machine and shoot it standing is of no importance. What is important is what you will destroy with it's delivery of .50 BMG rounds at 1666 rounds per minute.]]
+SWEP.Description = [[High capacity, multi-barreled Gatling gun with an extremely high rate of fire.]]
 
 SWEP.Trivia = {
     Manufacturer = "U.S. Ordnance/General Electric",

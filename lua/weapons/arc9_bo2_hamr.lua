@@ -6,7 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "FN HAMR"
 SWEP.Class = "Light Machine Gun"
-SWEP.Description = [[Heat Adaptive Modular Rifle. Proposed light machine gun version of the FN SCAR-L.]]
+SWEP.Description = [[Heat Adaptive Modular Rifle.
+Fully automatic LMG. Reduces recoil during sustained fire.]]
 SWEP.Trivia = {
     Manufacturer = "FN Herstal",
     Calibre = "5.56x45mm NATO",

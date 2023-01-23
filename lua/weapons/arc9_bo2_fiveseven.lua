@@ -6,7 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "FN Five-SeveN"
 SWEP.Class = "Pistol"
-SWEP.Description = [[Belgian pistol designed in conjunction with the FN P90 platform using the same cartridge.
+SWEP.Description = [[Belgian semi-automatic pistol. Versatile and strong overall with a large magazine.
+Designed in conjunction with the FN P90 platform using the same cartridge.
 It is incredibly popular with police and military, as well as civilians.]]
 SWEP.Trivia = {
     Manufacturer = "FN Herstal",

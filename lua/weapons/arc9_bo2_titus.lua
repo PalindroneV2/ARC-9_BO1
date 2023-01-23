@@ -6,7 +6,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "Titus-6"
 SWEP.Class = "Special Weapon"
-SWEP.Description = [[Bullpup special weapon that fires flechette projectiles that stick to surfaces before exploding.
+SWEP.Description = [[Bullpup special weapon that fires multi-shot explosive flechette that stick to surfaces before exploding.
 It includes an underbarrel two-round burst shotgun with a 10-round magazine.]]
 SWEP.Trivia = {
     Manufacturer = "Unknown",

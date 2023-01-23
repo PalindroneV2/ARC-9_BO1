@@ -6,7 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "MTAR-21"
 SWEP.Class = "Assault Rifle"
-SWEP.Description = [[Israeli bullpup carbine in 5.56mm NATO.]]
+SWEP.Description = [[Israeli fully automatic assault rifle in 5.56mm NATO.
+Versatile and strong overall.]]
 SWEP.Trivia = {
     Manufacturer = "IWI",
     Calibre = "5.56x45mm NATO",
