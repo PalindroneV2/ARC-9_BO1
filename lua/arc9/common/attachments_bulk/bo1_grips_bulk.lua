@@ -5,11 +5,8 @@ ATT = {}
 ATT.PrintName = "Integral Foregrip"
 ATT.CompactName = [[I. GRIP]]
 ATT.Icon = Material("entities/bo1_atts/ubs/bo1_foregrip.png", "mips smooth")
-ATT.Description = [[
-    Vertical foregrip that goes under the weapon's handguard.
-
-    Belongs to Black Ops.
-]]
+ATT.Description = [[Vertical foregrip that goes under the weapon's handguard.
+Belongs to Black Ops.]]
 ATT.Pros = {
 }
 ATT.Cons = {}
@@ -30,11 +27,8 @@ ATT = {}
 ATT.PrintName = "Vertical Foregrip"
 ATT.CompactName = [[VERT]]
 ATT.Icon = Material("entities/bo1_atts/ubs/bo1_foregrip.png", "mips smooth")
-ATT.Description = [[
-    Vertical foregrip that goes under the weapon's handguard.
-
-    Belongs to Black Ops I.
-]]
+ATT.Description = [[Vertical foregrip that goes under the weapon's handguard.
+Belongs to Black Ops.]]
 ATT.Pros = {
 }
 ATT.Cons = {}
@@ -60,11 +54,8 @@ ATT = {}
 ATT.PrintName = "Angled Foregrip"
 ATT.CompactName = [[ANGLED]]
 ATT.Icon = Material("entities/bo1_atts/ubs/bo2_foregrip.png", "mips smooth")
-ATT.Description = [[
-    Vertical foregrip that goes under the weapon's handguard.
-
-    Belongs to Black Ops II.
-]]
+ATT.Description = [[Vertical foregrip that goes under the weapon's handguard.
+Belongs to Black Ops II.]]
 
 ATT.Folder = "BO2"
 ATT.Pros = {
@@ -93,11 +84,8 @@ ATT = {}
 ATT.PrintName = "Ergonomic Foregrip"
 ATT.CompactName = [[ERGO]]
 ATT.Icon = Material("entities/bo1_atts/ubs/bo2_foregrip.png", "mips smooth")
-ATT.Description = [[
-    Vertical foregrip with all around goodd ergonomics provides average recoil control.
-
-    Belongs to Black Ops II.
-]]
+ATT.Description = [[Vertical foregrip with all around goodd ergonomics provides average recoil control.
+Belongs to Black Ops II.]]
 
 ATT.Folder = "BO2"
 ATT.Pros = {
@@ -128,11 +116,8 @@ ATT = {}
 ATT.PrintName = "Grippod Foregrip"
 ATT.CompactName = [[GRIPPOD]]
 ATT.Icon = Material("entities/bo1_atts/ubs/bo2_foregrip.png", "mips smooth")
-ATT.Description = [[
-    Vertical foregrip that goes under the weapon's handguard.
-
-    Belongs to Black Ops II.
-]]
+ATT.Description = [[Vertical foregrip that goes under the weapon's handguard.
+Belongs to Black Ops II.]]
 
 ATT.Folder = "BO2"
 ATT.Pros = {
@@ -163,11 +148,8 @@ ATT = {}
 ATT.PrintName = "Stub Foregrip"
 ATT.CompactName = [[STUB]]
 ATT.Icon = Material("entities/bo1_atts/ubs/bo2_foregrip.png", "mips smooth")
-ATT.Description = [[
-    Short foregrip that provides better mobility.
-
-    Belongs to Black Ops II.
-]]
+ATT.Description = [[Short foregrip that provides better mobility.
+Belongs to Black Ops II.]]
 
 ATT.Folder = "BO2"
 ATT.Pros = {
@@ -197,11 +179,8 @@ ATT = {}
 ATT.PrintName = "Tac-Light Foregrip"
 ATT.CompactName = [[TACLIGHT]]
 ATT.Icon = Material("entities/bo1_atts/ubs/bo2_foregrip.png", "mips smooth")
-ATT.Description = [[
-    Vertical foregrip that goes under the weapon's handguard.
-
-    Belongs to Black Ops II.
-]]
+ATT.Description = [[Vertical foregrip that goes under the weapons handguard.
+Belongs to Black Ops II.]]
 
 ATT.Folder = "BO2"
 ATT.Pros = {
@@ -232,11 +211,8 @@ ATT = {}
 ATT.PrintName = "Hollow Vertical Foregrip"
 ATT.CompactName = [[VERTICAL]]
 ATT.Icon = Material("entities/bo1_atts/ubs/bo1_foregrip.png", "mips smooth")
-ATT.Description = [[
-    Vertical foregrip that goes under the weapon's handguard.
-
-    Belongs to Black Ops Cold War.
-]]
+ATT.Description = [[Vertical foregrip that goes under the weapon's handguard.
+Belongs to Black Ops Cold War.]]
 
 ATT.Folder = "BOCW/NATO"
 ATT.Pros = {
@@ -264,11 +240,8 @@ ATT = {}
 ATT.PrintName = "Field Agent Grip"
 ATT.CompactName = [[AGENT]]
 ATT.Icon = Material("entities/bo1_atts/ubs/bo1_foregrip.png", "mips smooth")
-ATT.Description = [[
-    Vertical foregrip that goes under the weapon's handguard.
-
-    Belongs to Black Ops Cold War.
-]]
+ATT.Description = [[Vertical foregrip that goes under the weapon's handguard.
+Belongs to Black Ops Cold War.]]
 
 ATT.Folder = "BOCW/NATO"
 ATT.Pros = {
@@ -298,11 +271,8 @@ ATT = {}
 ATT.PrintName = "Patrol Grip (NATO)"
 ATT.CompactName = [[PATROL (W)]]
 ATT.Icon = Material("entities/bo1_atts/ubs/bo1_foregrip.png", "mips smooth")
-ATT.Description = [[
-    Short foregrip that provides minor mobility bonuses.
-
-    Belongs to Black Ops Cold War.
-]]
+ATT.Description = [[Short foregrip that provides minor mobility bonuses.
+Belongs to Black Ops Cold War.]]
 
 ATT.Folder = "BOCW/NATO"
 ATT.Pros = {
@@ -331,11 +301,8 @@ ATT = {}
 ATT.PrintName = "SFOD Speedgrip"
 ATT.CompactName = [[SFOD]]
 ATT.Icon = Material("entities/bo1_atts/ubs/bo1_foregrip.png", "mips smooth")
-ATT.Description = [[
-    Vertical foregrip that goes under the weapon's handguard.
-
-    Belongs to Black Ops Cold War.
-]]
+ATT.Description = [[Vertical foregrip that goes under the weapon's handguard.
+Belongs to Black Ops Cold War.]]
 
 ATT.Folder = "BOCW/NATO"
 ATT.Pros = {
@@ -366,11 +333,8 @@ ATT = {}
 ATT.PrintName = "Bruiser Grip (NATO)"
 ATT.CompactName = [[BRUISER (W)]]
 ATT.Icon = Material("entities/bo1_atts/ubs/bo1_foregrip.png", "mips smooth")
-ATT.Description = [[
-    Short foregrip that provides minor mobility bonuses.
-
-    Belongs to Black Ops Cold War.
-]]
+ATT.Description = [[Short foregrip that provides minor mobility bonuses.
+Belongs to Black Ops Cold War.]]
 
 ATT.Folder = "BOCW/NATO"
 ATT.Pros = {
@@ -401,11 +365,8 @@ ATT = {}
 ATT.PrintName = "Infiltrator Grip (NATO)"
 ATT.CompactName = [[INFIL (W)]]
 ATT.Icon = Material("entities/bo1_atts/ubs/bo1_foregrip.png", "mips smooth")
-ATT.Description = [[
-    Short foregrip that provides minor mobility bonuses.
-
-    Belongs to Black Ops Cold War.
-]]
+ATT.Description = [[Short foregrip that provides minor mobility bonuses.
+Belongs to Black Ops Cold War.]]
 
 ATT.Folder = "BOCW/NATO"
 ATT.Pros = {
@@ -437,11 +398,8 @@ ATT = {}
 ATT.PrintName = "Dong Foregrip"
 ATT.CompactName = [[DONG]]
 ATT.Icon = Material("entities/bo1_atts/ubs/bo1_foregrip.png", "mips smooth")
-ATT.Description = [[
-    Vertical foregrip that goes under the weapon's handguard.
-
-    Belongs to Black Ops Cold War.
-]]
+ATT.Description = [[Vertical foregrip that goes under the weapon's handguard.
+Belongs to Black Ops Cold War.]]
 
 ATT.Folder = "BOCW/WARSAW"
 ATT.Pros = {
@@ -469,11 +427,8 @@ ATT = {}
 ATT.PrintName = "Spetsnaz Grip"
 ATT.CompactName = [[SPETSNAZ]]
 ATT.Icon = Material("entities/bo1_atts/ubs/bo1_foregrip.png", "mips smooth")
-ATT.Description = [[
-    Vertical foregrip that goes under the weapon's handguard.
-
-    Belongs to Black Ops Cold War.
-]]
+ATT.Description = [[Vertical foregrip that goes under the weapon's handguard.
+Belongs to Black Ops Cold War.]]
 
 ATT.Folder = "BOCW/WARSAW"
 ATT.Pros = {
@@ -503,11 +458,8 @@ ATT = {}
 ATT.PrintName = "Patrol Grip (WARSAW)"
 ATT.CompactName = [[PATROL (E)]]
 ATT.Icon = Material("entities/bo1_atts/ubs/bo1_foregrip.png", "mips smooth")
-ATT.Description = [[
-    Short foregrip that provides minor mobility bonuses.
-
-    Belongs to Black Ops Cold War.
-]]
+ATT.Description = [[Short foregrip that provides minor mobility bonuses.
+Belongs to Black Ops Cold War.]]
 
 ATT.Folder = "BOCW/WARSAW"
 ATT.Pros = {
@@ -536,11 +488,8 @@ ATT = {}
 ATT.PrintName = "VDV Speedgrip"
 ATT.CompactName = [[VDV]]
 ATT.Icon = Material("entities/bo1_atts/ubs/bo1_foregrip.png", "mips smooth")
-ATT.Description = [[
-    Vertical foregrip that goes under the weapon's handguard.
-
-    Belongs to Black Ops Cold War.
-]]
+ATT.Description = [[Vertical foregrip that goes under the weapon's handguard.
+Belongs to Black Ops Cold War.]]
 
 ATT.Folder = "BOCW/WARSAW"
 ATT.Pros = {
@@ -571,11 +520,8 @@ ATT = {}
 ATT.PrintName = "Bruiser Grip (WARSAW)"
 ATT.CompactName = [[BRUISER (E)]]
 ATT.Icon = Material("entities/bo1_atts/ubs/bo1_foregrip.png", "mips smooth")
-ATT.Description = [[
-    Short foregrip that provides minor mobility bonuses.
-
-    Belongs to Black Ops Cold War.
-]]
+ATT.Description = [[Short foregrip that provides minor mobility bonuses.
+Belongs to Black Ops Cold War.]]
 
 ATT.Folder = "BOCW/WARSAW"
 ATT.Pros = {
@@ -606,11 +552,8 @@ ATT = {}
 ATT.PrintName = "Infiltrator Grip (WARSAW)"
 ATT.CompactName = [[INFIL (E)]]
 ATT.Icon = Material("entities/bo1_atts/ubs/bo1_foregrip.png", "mips smooth")
-ATT.Description = [[
-    Short foregrip that provides minor mobility bonuses.
-
-    Belongs to Black Ops Cold War.
-]]
+ATT.Description = [[Short foregrip that provides minor mobility bonuses.
+Belongs to Black Ops Cold War.]]
 
 ATT.Folder = "BOCW/WARSAW"
 ATT.Pros = {

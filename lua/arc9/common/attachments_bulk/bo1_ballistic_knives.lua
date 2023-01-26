@@ -5,9 +5,7 @@ ATT = {}
 ATT.PrintName = [[Bowie Knife]]
 ATT.CompactName = [[BOWIE]]
 ATT.Icon = Material("entities/bo1_atts/ubs/bowie_knife.png")
-ATT.Description = [[
-    Large fuck-off knife specialized in slicing up meat-bags and maggot-addicts.
-]]
+ATT.Description = [[Large fuck-off knife specialized in slicing up meat-bags and maggot-addicts.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 5
@@ -27,9 +25,8 @@ ATT = {}
 ATT.PrintName = [[American Bayonet]]
 ATT.CompactName = [[USA]]
 ATT.Icon = Material("entities/bo1_atts/barrel/bayonet.png")
-ATT.Description = [[
-    United States Army and Marine Corps standard issue bayonet. It's supposed to be fixed to the end of your rifle, but handling it like a knife works too.
-]]
+ATT.Description = [[United States Army and Marine Corps standard issue bayonet.
+It's supposed to be fixed to the end of your rifle, but handling it like a knife works too.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 5
@@ -49,9 +46,8 @@ ATT = {}
 ATT.PrintName = [[German Bayonet]]
 ATT.CompactName = [[GERMAN]]
 ATT.Icon = Material("entities/bo1_atts/barrel/bayonet.png")
-ATT.Description = [[
-    The standard issue bayonet for most German ground forces including the Heer and the Waffen-SS. It's supposed to be fixed to the end of your rifle, but handling it like a knife works too.
-]]
+ATT.Description = [[The standard issue bayonet for most German ground forces including the Heer and the Waffen-SS.
+It's supposed to be fixed to the end of your rifle, but handling it like a knife works too.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 5
@@ -72,9 +68,8 @@ ATT = {}
 ATT.PrintName = [[Japanese Bayonet]]
 ATT.CompactName = [[JAPAN]]
 ATT.Icon = Material("entities/bo1_atts/barrel/bayonet.png")
-ATT.Description = [[
-    A bayonet with a slight resemblance to a traditional shoto (short sword) used by the Imperial Japanese Army. It's supposed to be fixed to the end of your rifle, but handling it like a knife works too.
-]]
+ATT.Description = [[A bayonet with a slight resemblance to a traditional shoto (short sword) used by the Imperial Japanese Army.
+It's supposed to be fixed to the end of your rifle, but handling it like a knife works too.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 5
@@ -95,9 +90,7 @@ ATT = {}
 ATT.PrintName = [[Pack-A-Punched]]
 ATT.CompactName = [[PAP]]
 ATT.Icon = Material("entities/bo1_atts/ammo/pack_a_punch.png", "mips smooth")
-ATT.Description = [[
-Putting your weapon through a strange machine infuses it with the power of element 115.
-]]
+ATT.Description = [[Putting your weapon through a strange machine infuses it with the power of element 115.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 5

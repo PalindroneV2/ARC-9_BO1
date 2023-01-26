@@ -1,9 +1,7 @@
 ATT.PrintName = [[Heatshield]]
 ATT.CompactName = [[HS]]
 ATT.Icon = Material("entities/bo1_atts/ammo/dual_mag.png")
-ATT.Description = [[
-    Improves cycle-speed. Only available for the Ithaca.
-]]
+ATT.Description = [[Improves cycling speed. Only available for the Ithaca.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0

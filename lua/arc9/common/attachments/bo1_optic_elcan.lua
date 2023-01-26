@@ -1,11 +1,8 @@
 ATT.PrintName = "ELCAN C79 (2x)"
 ATT.CompactName = [[ELCAN 2x]]
 ATT.Icon = Material("entities/bo1_atts/optics/bocw_elcan.png", "mips smooth")
-ATT.Description = [[
-    Medium range combat scope for improved precision at longer ranges.
-
-    bo.desc
-]]
+ATT.Description = [[Medium range combat scope for improved precision at longer ranges.
+Belongs to Black Ops.]]
 ATT.Pros = {
     "+ 2x Zoom",
     "+ Clearer sight picture"

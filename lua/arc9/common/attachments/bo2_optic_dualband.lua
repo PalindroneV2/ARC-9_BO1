@@ -1,9 +1,8 @@
 ATT.PrintName = "Dual-Band Thermal Scope"
 ATT.CompactName = [[Dual-Band]]
 ATT.Icon = Material("entities/bo1_atts/optics/bo2_dual_band.png", "mips smooth")
-ATT.Description = [[
-    Black Ops 2 Thermal Sight. Low magnification optical sight that highlights enemies in white in a blue background.
-]]
+ATT.Description = [[Black Ops II Thermal Sight.
+Low magnification optical sight that highlights enemies in white in a blue background.]]
 ATT.Pros = {
     "+ 2x Zoom",
     "+ Clearer sight picture",

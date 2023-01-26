@@ -1,9 +1,7 @@
 ATT.PrintName = [[Snub-Nose Barrel]]
 ATT.CompactName = [[Snub]]
 ATT.Icon = Material("entities/bo1_atts/barrel/snubnose.png", "mips smooth")
-ATT.Description = [[
-The shorter barrel length reduces muzzle velocity and effective range but increases handling in close spaces.
-]]
+ATT.Description = [[The shorter barrel length reduces muzzle velocity and effective range but increases handling in close spaces.]]
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - BO1 Attachments"

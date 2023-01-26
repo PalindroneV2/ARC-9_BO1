@@ -1,10 +1,8 @@
 ATT.PrintName = "Barret Optical Ranging System"
 ATT.CompactName = [[BCPU]]
 ATT.Icon = Material("entities/bo1_atts/optics/bo2_bcpu.png", "mips smooth")
-ATT.Description = [[
-    Electronic ballistics computer that assists user's shot placement.
-    Belongs to Black Ops 2.
-]]
+ATT.Description = [[Electronic ballistics computer that assists user's shot placement.
+Belongs to Black Ops II.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 4

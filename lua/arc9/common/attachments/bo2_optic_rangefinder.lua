@@ -1,10 +1,13 @@
 ATT.PrintName = "Range Finder"
 ATT.CompactName = [[R. FINDER]]
 ATT.Icon = Material("entities/bo1_atts/optics/bo2_tfinder.png", "mips smooth")
-ATT.Description = [[
-    Black Ops 2 Electronic Sight. Provides an electronic crosshair for the user as well as providing range data in real time.
-]]
-ATT.Pros = {"+ 2x Zoom", "+ Clearer sight picture", "+ Marks targets"}
+ATT.Description = [[Black Ops II Electronic Sight.
+Provides an electronic crosshair for the user as well as providing range data in real time.]]
+ATT.Pros = {
+    "+ 2x Zoom",
+    "+ Clearer sight picture",
+    "+ Marks targets"
+}
 ATT.Cons = {}
 ATT.SortOrder = 4
 ATT.MenuCategory = "ARC9 - BO1 Attachments"

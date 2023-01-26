@@ -1,9 +1,7 @@
 ATT.PrintName = [[Medium Barrel]]
 ATT.CompactName = [[MID]]
 ATT.Icon = Material("entities/bo1_atts/bocw/atts_ak5/barrels/heavy_pro.png", "mips smooth")
-ATT.Description = [[
-    Short barrel
-]]
+ATT.Description = [[Medium frame tube for the Ak5.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0

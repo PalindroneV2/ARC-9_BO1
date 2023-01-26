@@ -1,11 +1,8 @@
 ATT.PrintName = "FN Ballista Scope"
 ATT.CompactName = [[BALLISTA]]
 ATT.Icon = Material("entities/bo1_atts/optics/bo1_vzoom.png", "mips smooth")
-ATT.Description = [[
-    Long range combat scope with variable zoom.
-
-    Belongs to Black Ops II
-]]
+ATT.Description = [[Long range combat scope with variable zoom.
+Belongs to Black Ops II.]]
 ATT.Pros = {
     "+ 3x Zoom",
     "+ Clearer sight picture"

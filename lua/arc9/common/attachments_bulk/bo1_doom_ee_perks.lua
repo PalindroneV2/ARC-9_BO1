@@ -5,9 +5,7 @@ ATT = {}
 ATT.PrintName = [[You got the Super Shotgun!]]
 ATT.CompactName = [[SUPER SHOTGUN]]
 ATT.Icon = Material("entities/bo1_atts/perks/doom_ee.png", "mips smooth")
-ATT.Description = [[
-In the first age, in the first battle, when the shadows first lengthened, one stood...
-]]
+ATT.Description = [[In the first age, in the first battle, when the shadows first lengthened, one stood...]]
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
@@ -55,9 +53,7 @@ ATT = {}
 ATT.PrintName = [[You got the Rocket Launcher!]]
 ATT.CompactName = [[ROCKET LAUNCHER]]
 ATT.Icon = Material("entities/bo1_atts/perks/doom_ee.png", "mips smooth")
-ATT.Description = [[
-He chose the path of perpetual torment.
-]]
+ATT.Description = [[He chose the path of perpetual torment.]]
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
@@ -95,9 +91,7 @@ ATT = {}
 ATT.PrintName = [[You got the Shotgun!]]
 ATT.CompactName = [[SHOTGUN]]
 ATT.Icon = Material("entities/bo1_atts/perks/doom_ee.png", "mips smooth")
-ATT.Description = [[
-In his ravenous hatred he found no peace...
-]]
+ATT.Description = [[In his ravenous hatred he found no peace...]]
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
@@ -134,9 +128,7 @@ ATT = {}
 ATT.PrintName = [[You got the Chaingun!]]
 ATT.CompactName = [[CHAINGUN]]
 ATT.Icon = Material("entities/bo1_atts/perks/doom_ee.png", "mips smooth")
-ATT.Description = [[
-...And with boiling blood he scoured the umbral plains, seeking vengeance against the dark lords who had wronged him...
-]]
+ATT.Description = [[...And with boiling blood he scoured the umbral plains, seeking vengeance against the dark lords who had wronged him...]]
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - BO1 Attachments"

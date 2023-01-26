@@ -5,10 +5,8 @@ ATT = {}
 ATT.PrintName = [[ASP]]
 ATT.CompactName = [[ASP]]
 ATT.Icon = Material("entities/bo1_atts/bocw/atts_ak5/barrels/heavy_pro.png", "mips smooth")
-ATT.Description = [[
-    Much more compact barrel custom made by Paris Theodore for better conceal carry.
-    Sports unique gutternsipe irons that become narrower from back to front and painted in bright yellow for faster target aquisition.
-]]
+ATT.Description = [[Much more compact barrel custom made by Paris Theodore for better conceal carry.
+Sports unique gutternsipe irons that become narrower from back to front and painted in bright yellow for faster target aquisition.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0

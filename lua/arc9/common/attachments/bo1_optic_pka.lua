@@ -1,11 +1,8 @@
 ATT.PrintName = "PK-AV (4x)"
 ATT.CompactName = [[PK-AV (4x)]]
 ATT.Icon = Material("entities/bo1_atts/optics/bo1_coltscope.png", "mips smooth")
-ATT.Description = [[
-    Medium range combat scope for improved precision at longer ranges.
-
-    bo.desc
-]]
+ATT.Description = [[Medium range combat scope for improved precision at longer ranges.
+Belongs to Black Ops.]]
 ATT.Pros = {
     "+ 4x Zoom",
     "+ Clearer sight picture"

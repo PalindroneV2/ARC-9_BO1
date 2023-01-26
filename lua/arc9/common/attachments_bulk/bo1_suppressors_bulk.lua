@@ -5,9 +5,7 @@ ATT = {}
 ATT.PrintName = [[Pistol Suppressor (NATO)]]
 ATT.CompactName = [[SUPP US]]
 ATT.Icon = Material("materials/entities/bo1_atts/barrel/bo1_suppressor.png")
-ATT.Description = [[
-    Lightweight can cools and disperses gases leaving the barrel, muffling the firearm's audible report.
-]]
+ATT.Description = [[Lightweight can cools and disperses gases leaving the barrel, muffling the firearm's audible report.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -46,9 +44,7 @@ ATT = {}
 ATT.PrintName = [[AR Suppressor (NATO)]]
 ATT.CompactName = [[SUPP NATO]]
 ATT.Icon = Material("materials/entities/bo1_atts/barrel/bo1_suppressor.png")
-ATT.Description = [[
-    Lightweight can cools and disperses gases leaving the barrel, muffling the firearm's audible report.
-]]
+ATT.Description = [[Lightweight can cools and disperses gases leaving the barrel, muffling the firearm's audible report.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -87,9 +83,7 @@ ATT = {}
 ATT.PrintName = [[AR Suppressor (USSR)]]
 ATT.CompactName = [[SUPP USSR]]
 ATT.Icon = Material("materials/entities/bo1_atts/barrel/bo1_suppressor.png")
-ATT.Description = [[
-    Lightweight can cools and disperses gases leaving the barrel, muffling the firearm's audible report.
-]]
+ATT.Description = [[Lightweight can cools and disperses gases leaving the barrel, muffling the firearm's audible report.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -128,9 +122,7 @@ ATT = {}
 ATT.PrintName = [[Pistol 80s Suppressor]]
 ATT.CompactName = [[SUPP 80s]]
 ATT.Icon = Material("materials/entities/bo1_atts/barrel/bo2_suppressor.png")
-ATT.Description = [[
-    Lightweight can cools and disperses gases leaving the barrel, muffling the firearm's audible report.
-]]
+ATT.Description = [[Lightweight can cools and disperses gases leaving the barrel, muffling the firearm's audible report.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -169,9 +161,7 @@ ATT = {}
 ATT.PrintName = [[AR 80s Suppressor]]
 ATT.CompactName = [[SUPP 80s]]
 ATT.Icon = Material("materials/entities/bo1_atts/barrel/bo2_suppressor.png")
-ATT.Description = [[
-    Lightweight can cools and disperses gases leaving the barrel, muffling the firearm's audible report.
-]]
+ATT.Description = [[Lightweight can cools and disperses gases leaving the barrel, muffling the firearm's audible report.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -209,9 +199,7 @@ ATT = {}
 ATT.PrintName = [[AR 80s Suppressor 2]]
 ATT.CompactName = [[SUPP 80s 2]]
 ATT.Icon = Material("materials/entities/bo1_atts/barrel/bo2_suppressor.png")
-ATT.Description = [[
-    Lightweight can cools and disperses gases leaving the barrel, muffling the firearm's audible report.
-]]
+ATT.Description = [[Lightweight can cools and disperses gases leaving the barrel, muffling the firearm's audible report.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -249,9 +237,7 @@ ATT = {}
 ATT.PrintName = [[AR Suppressor 1]]
 ATT.CompactName = [[SUPP 1]]
 ATT.Icon = Material("materials/entities/bo1_atts/barrel/bo2_suppressor.png")
-ATT.Description = [[
-    Lightweight can cools and disperses gases leaving the barrel, muffling the firearm's audible report.
-]]
+ATT.Description = [[Lightweight can cools and disperses gases leaving the barrel, muffling the firearm's audible report.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -289,9 +275,7 @@ ATT = {}
 ATT.PrintName = [[AR Suppressor 2]]
 ATT.CompactName = [[SUPP 2]]
 ATT.Icon = Material("materials/entities/bo1_atts/barrel/bo2_suppressor.png")
-ATT.Description = [[
-    Lightweight can cools and disperses gases leaving the barrel, muffling the firearm's audible report.
-]]
+ATT.Description = [[Lightweight can cools and disperses gases leaving the barrel, muffling the firearm's audible report.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -329,9 +313,7 @@ ATT = {}
 ATT.PrintName = [[AR Suppressor 3]]
 ATT.CompactName = [[SUPP 3]]
 ATT.Icon = Material("materials/entities/bo1_atts/barrel/bo2_suppressor.png")
-ATT.Description = [[
-    Lightweight can cools and disperses gases leaving the barrel, muffling the firearm's audible report.
-]]
+ATT.Description = [[Lightweight can cools and disperses gases leaving the barrel, muffling the firearm's audible report.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -369,9 +351,7 @@ ATT = {}
 ATT.PrintName = [[AR Suppressor 4]]
 ATT.CompactName = [[SUPP 4]]
 ATT.Icon = Material("materials/entities/bo1_atts/barrel/bo2_suppressor.png")
-ATT.Description = [[
-    Lightweight can cools and disperses gases leaving the barrel, muffling the firearm's audible report.
-]]
+ATT.Description = [[Lightweight can cools and disperses gases leaving the barrel, muffling the firearm's audible report.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -409,9 +389,7 @@ ATT = {}
 ATT.PrintName = [[Shotgun Suppressor]]
 ATT.CompactName = [[SUPP]]
 ATT.Icon = Material("materials/entities/bo1_atts/barrel/bo2_suppressor.png")
-ATT.Description = [[
-    Lightweight can cools and disperses gases leaving the barrel, muffling the firearm's audible report.
-]]
+ATT.Description = [[Lightweight can cools and disperses gases leaving the barrel, muffling the firearm's audible report.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -449,9 +427,7 @@ ATT = {}
 ATT.PrintName = [[SMG Suppressor]]
 ATT.CompactName = [[SUPP]]
 ATT.Icon = Material("materials/entities/bo1_atts/barrel/bo1_suppressor.png")
-ATT.Description = [[
-    Lightweight can cools and disperses gases leaving the barrel, muffling the firearm's audible report.
-]]
+ATT.Description = [[Lightweight can cools and disperses gases leaving the barrel, muffling the firearm's audible report.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -490,9 +466,7 @@ ATT = {}
 ATT.PrintName = [[UNCLE Barrel Extension]]
 ATT.CompactName = [[UNCLE]]
 ATT.Icon = Material("materials/entities/bo1_atts/barrel/bo1_suppressor.png")
-ATT.Description = [[
-    Extended barrel used by special agent unit UNCLE.
-]]
+ATT.Description = [[Extended barrel used by special agent unit UNCLE.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0

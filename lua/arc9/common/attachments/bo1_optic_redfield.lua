@@ -1,11 +1,8 @@
 ATT.PrintName = "Redfield Variable Zoom Scope"
 ATT.CompactName = [[VZOOM]]
 ATT.Icon = Material("entities/bo1_atts/optics/bo1_vzoom.png", "mips smooth")
-ATT.Description = [[
-    Long range combat scope with variable zoom.
-
-    bo.desc
-]]
+ATT.Description = [[Long range combat scope with variable zoom.
+Belongs to Black Ops.]]
 ATT.Pros = {
     "+ 3x Zoom",
     "+ Clearer sight picture"

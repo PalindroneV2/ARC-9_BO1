@@ -1,9 +1,8 @@
 ATT.PrintName = "AN/PVS-3A Night Vision Sight"
 ATT.CompactName = [[IR Scope]]
 ATT.Icon = Material("entities/bo1_atts/optics/bo1_thermal.png", "mips smooth")
-ATT.Description = [[
-    Black Ops 1 Thermal Sight. Low magnification optical sight that highlights enemies in white in a blue background.
-]]
+ATT.Description = [[Black Ops Thermal Sight.
+Low magnification optical sight that highlights enemies in white in a blue background.]]
 ATT.Pros = {
     "+ 2x Zoom",
     "+ Clearer sight picture",

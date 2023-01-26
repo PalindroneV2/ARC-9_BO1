@@ -1,11 +1,8 @@
 ATT.PrintName = "Barrett Scope"
 ATT.CompactName = [[BARRETT]]
 ATT.Icon = Material("entities/bo1_atts/optics/bo1_vzoom.png", "mips smooth")
-ATT.Description = [[
-    American high powered scope for the Barret M82.
-
-    Belongs to Black Ops II
-]]
+ATT.Description = [[American high powered scope for the Barret M82.
+Belongs to Black Ops II.]]
 ATT.Pros = {
     "+ 3x Zoom",
     "+ Clearer sight picture"

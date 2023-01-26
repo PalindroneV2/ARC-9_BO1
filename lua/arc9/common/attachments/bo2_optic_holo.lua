@@ -1,11 +1,8 @@
 ATT.PrintName = "EOTech EXPS3"
 ATT.CompactName = [[HOLO]]
 ATT.Icon = Material("entities/bo1_atts/optics/bo2_holo.png", "mips smooth")
-ATT.Description = [[
-    Typical holograpic sight which uses a holographic reticle for faster sight aqusition.
-
-    Belongs to Black Ops II.
-]]
+ATT.Description = [[Typical holograpic sight which uses a holographic reticle for faster sight aqusition.
+Belongs to Black Ops II.]]
 ATT.Pros = {
     "+ Clearer sight picture"
 }

@@ -5,10 +5,8 @@ ATT = {}
 ATT.PrintName = [[GP-25 Grenade Launcher]]
 ATT.CompactName = [[GP-25]]
 ATT.Icon = Material("materials/entities/bo1_atts/ubs/gp25.png")
-ATT.Description = [[
-    Underbarrel grenade launcher that fires 40mm High Explosive rounds.
-    Reduced handling.
-]]
+ATT.Description = [[Underbarrel grenade launcher that fires 40mm High Explosive rounds.
+Reduced handling.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -52,10 +50,8 @@ ATT = {}
 ATT.PrintName = [[M203 Grenade Launcher]]
 ATT.CompactName = [[M203]]
 ATT.Icon = Material("materials/entities/bo1_atts/ubs/m203.png")
-ATT.Description = [[
-    Underbarrel grenade launcher that fires 40mm High Explosive rounds.
-    Reduced handling.
-]]
+ATT.Description = [[Underbarrel grenade launcher that fires 40mm High Explosive rounds.
+Reduced handling.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -99,10 +95,8 @@ ATT = {}
 ATT.PrintName = [[Tishina Grenade Launcher]]
 ATT.CompactName = [[Tishina]]
 ATT.Icon = Material("materials/entities/bo1_atts/ubs/gp25.png")
-ATT.Description = [[
-    Underbarrel grenade launcher that fires 40mm High Explosive rounds.
-    Reduced handling.
-]]
+ATT.Description = [[Underbarrel grenade launcher that fires 40mm High Explosive rounds.
+Reduced handling.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -146,10 +140,8 @@ ATT = {}
 ATT.PrintName = [[M320 Grenade Launcher]]
 ATT.CompactName = [[M320]]
 ATT.Icon = Material("materials/entities/bo1_atts/ubs/m320.png")
-ATT.Description = [[
-    Modern modular underbarrel grenade launcher that fires 40mm High Explosive rounds.
-    Reduced handling.
-]]
+ATT.Description = [[Modern modular underbarrel grenade launcher that fires 40mm High Explosive rounds.
+Reduced handling.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -193,10 +185,8 @@ ATT = {}
 ATT.PrintName = [[Combine SMG Grenade Launcher]]
 ATT.CompactName = [[COMBINE]]
 ATT.Icon = Material("materials/entities/bo1_atts/ubs/m320.png")
-ATT.Description = [[
-    Modern modular underbarrel grenade launcher that fires 40mm High Explosive rounds.
-    Reduced handling.
-]]
+ATT.Description = [[Modern modular underbarrel grenade launcher that fires 40mm High Explosive rounds.
+Reduced handling.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -241,10 +231,8 @@ ATT = {}
 ATT.PrintName = [[Masterkey Underbarrel Shotgun]]
 ATT.CompactName = [[MKEY]]
 ATT.Icon = Material("entities/bo1_atts/ubs/masterkey.png")
-ATT.Description = [[
-    Underbarrel shotgun that holds 4 12 gauge shells.
-    Reduced handling.
-]]
+ATT.Description = [[Underbarrel shotgun that holds 4 12 gauge shells.
+Reduced handling.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -299,10 +287,8 @@ ATT = {}
 ATT.PrintName = [[Flamethrower]]
 ATT.CompactName = [[FLAMER]]
 ATT.Icon = Material("materials/entities/bo1_atts/ubs/flamer.png")
-ATT.Description = [[
-    Very powerful underbarrel flamethrower with somewhat poor range.
-    Fuel runs out fast.
-]]
+ATT.Description = [[Very powerful underbarrel flamethrower with somewhat poor range.
+Fuel runs out fast.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -347,9 +333,7 @@ ATT = {}
 ATT.PrintName = [[Rifle Grenade]]
 ATT.CompactName = [[GRENADIER]]
 ATT.Icon = Material("entities/bo1_atts/ubs/rifle_grenade.png", "mips smooth")
-ATT.Description = [[
-    Grenade launching contraption affixed to the muzzle of your rifle.
-]]
+ATT.Description = [[Grenade launching contraption affixed to the muzzle of your rifle.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -393,10 +377,8 @@ ATT = {}
 ATT.PrintName = [[M203A1 Grenade Launcher]]
 ATT.CompactName = [[M203A1]]
 ATT.Icon = Material("materials/entities/bo1_atts/ubs/m203.png")
-ATT.Description = [[
-    Underbarrel grenade launcher that fires 40mm High Explosive rounds.
-    Reduced handling.
-]]
+ATT.Description = [[Underbarrel grenade launcher that fires 40mm High Explosive rounds.
+Reduced handling.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0

@@ -1,9 +1,7 @@
 ATT.PrintName = [[Bayonet]]
 ATT.CompactName = [[BAYONET]]
 ATT.Icon = Material("entities/bo1_atts/barrel/bayonet.png", "mips smooth")
-ATT.Description = [[
-    Short barrel
-]]
+ATT.Description = [[Adds a knife at the end of the barrel of the gun.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0

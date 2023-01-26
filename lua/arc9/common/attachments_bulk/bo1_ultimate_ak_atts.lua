@@ -7,11 +7,8 @@ ATT = {}
 ATT.PrintName = [[RPK-74 590mm Barrel]]
 ATT.CompactName = [[RPK]]
 ATT.Icon = Material("entities/bo1_atts/barrel/barrel.png")
-ATT.Description = [[
-    The longer and heavier machine gun barrel offers best possible precision and recoil control.
-
-    Its weight makes handling slower though.
-]]
+ATT.Description = [[The longer and heavier machine gun barrel offers best possible precision and recoil control.
+Its weight makes handling slower though.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 2
@@ -72,8 +69,8 @@ ATT = {}
 ATT.PrintName = [[AKS-74u 206.5mm Barrel]]
 ATT.CompactName = [[KRINKOV]]
 ATT.Icon = Material("entities/bo1_atts/barrel/barrel.png")
-ATT.Description = [[Barrel belonging to the affectionately named "Krinkov", a short carbine version of the AK-74 made for helicopter pilots, tank crew members and vehicle drivers.
-]]
+ATT.Description = [[Barrel belonging to the affectionately named "Krinkov".
+A short carbine version of the AK-74 made for helicopter pilots, tank crew members, and vehicle drivers.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 2
@@ -116,8 +113,7 @@ ATT = {}
 ATT.PrintName = [[AS Val Integrally Suppressed Barrel]]
 ATT.CompactName = [[AS Val]]
 ATT.Icon = Material("entities/bo1_atts/barrel/barrel.png")
-ATT.Description = [[Integrally suppressed barrel from the AS Val, a weapon used mostly by special forces.
-]]
+ATT.Description = [[Integrally suppressed barrel from the AS Val, a weapon used mostly by special forces.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 2
@@ -170,13 +166,9 @@ ATT = {}
 ATT.PrintName = [[RPD Dragoon 420mm Barrel]]
 ATT.CompactName = [[RPD]]
 ATT.Icon = Material("entities/bo1_atts/barrel/barrel.png")
-ATT.Description = [[
-    Perhaps custom Chinese-made barrel for the AK-47 seeming come from an RPD.
-
-    The heavier machine gun barrel offers slightly better precision and recoil control.
-
-    Its weight makes handling slightly slower though.
-]]
+ATT.Description = [[Perhaps custom Chinese-made barrel for the AK-47 seeming come from an RPD.
+The heavier machine gun barrel offers slightly better precision and recoil control.
+Its weight makes handling slightly slower though.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 2
@@ -214,10 +206,8 @@ ATT = {}
 ATT.PrintName = "Gold Plating"
 ATT.CompactName = "GOLD"
 ATT.Icon = Material("materials/entities/bo1_generic.png")
-ATT.Description = [[
-    24 karat run of bad luck.
-    Gold plating gives no advantage but the gun is shiny and nice.
-]]
+ATT.Description = [[24 karat run of bad luck.
+Gold plating gives no advantage but the gun is shiny and nice.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -235,10 +225,8 @@ ATT = {}
 ATT.PrintName = "RPD Handguard"
 ATT.CompactName = "RPD"
 ATT.Icon = Material("materials/entities/bo1_generic.png")
-ATT.Description = [[
-    Grip taken off the RPD Machine Gun and modified to fit the barrel assembly of the AK platform.
-    Improves recoil control at the cost of handling.
-]]
+ATT.Description = [[Grip taken off from the RPD machine gun and modified to fit the barrel assembly of the AK platform.
+Improves recoil control at the cost of handling.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -257,10 +245,8 @@ ATT = {}
 ATT.PrintName = "Worn Bakelite"
 ATT.CompactName = "WORN"
 ATT.Icon = Material("materials/entities/bo1_generic.png")
-ATT.Description = [[
-    Bakelite furniture worn down by use.
-    Lighter than the original wooden furniture improves handling but recoil is increased slightly.
-]]
+ATT.Description = [[Bakelite furniture worn down by use.
+Lighter than the original wooden furniture improves handling but recoil is increased slightly.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -279,11 +265,9 @@ ATT = {}
 ATT.PrintName = "Modern Furniture"
 ATT.CompactName = "MODERN"
 ATT.Icon = Material("materials/entities/from_mwc/mw2_generic.png")
-ATT.Description = [[
-    Modern polymer-based furniture featuring picatinny rails..
-    Lighter than the original wooden furniture improves handling but recoil is increased slightly.
-    You can attach a low magnification optic on the top rail.
-]]
+ATT.Description = [[Modern polymer-based furniture featuring picatinny rails..
+Lighter than the original wooden furniture improves handling but recoil is increased slightly.
+You can attach a low magnification optic on the top rail.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -327,10 +311,8 @@ ATT = {}
 ATT.PrintName = [[RPK-74 5.45mm 45rnd Mag]]
 ATT.CompactName = [[DUAL]]
 ATT.Icon = Material("entities/bo1_atts/ammo/ext_mag.png")
-ATT.Description = [[
-    Two taped-together 45 round magazines used by RPK-74s in mobile light machine gun roles.
-    Reduces handling.
-]]
+ATT.Description = [[Two taped-together 45 round magazines used by RPK-74s in mobile light machine gun roles.
+Reduces handling.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -350,10 +332,8 @@ ATT = {}
 ATT.PrintName = [[RPK-74 5.45mm 80rnd Drum Mag]]
 ATT.CompactName = [[DRUM]]
 ATT.Icon = Material("entities/bo1_atts/ammo/drum.png")
-ATT.Description = [[
-    80 round drum magazine used by RPK-74s in more stationary roles.
-    Greatly reduces handling.
-]]
+ATT.Description = [[80 round drum magazine used by RPK-74s in more stationary roles.
+Greatly reduces handling.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -373,10 +353,8 @@ ATT = {}
 ATT.PrintName = [[7.62x39mm M43 45rnd Mag]]
 ATT.CompactName = [[45 RND]]
 ATT.Icon = Material("entities/bo1_atts/ammo/ext_mag.png")
-ATT.Description = [[
-    Modern polymer magazine that holds 45 rounds.
-    Reduces handling.
-]]
+ATT.Description = [[Modern polymer magazine that holds 45 rounds.
+Reduces handling.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -399,9 +377,7 @@ ATT = {}
 ATT.PrintName = [[AK-74 Receiver]]
 ATT.CompactName = [[AK-74]]
 ATT.Icon = Material("entities/bo1_atts/barrel/barrel.png")
-ATT.Description = [[
-    Updated AKM receiver firing 5.45x39mm rounds.
-]]
+ATT.Description = [[Updated AKM receiver firing 5.45x39mm rounds.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 2
@@ -446,11 +422,8 @@ ATT = {}
 ATT.PrintName = [[RPK-74 Receiver]]
 ATT.CompactName = [[RPK]]
 ATT.Icon = Material("entities/bo1_atts/barrel/barrel.png")
-ATT.Description = [[
-Updated RPK receiver firing 5.45x39mm rounds.
-
-Its ability for more efficient sustained fire lets it get an effective cyclic rate of 750 rounds per minute.
-]]
+ATT.Description = [[Updated RPK receiver firing 5.45x39mm rounds.
+Its ability for more efficient sustained fire lets it get an effective cyclic rate of 750 rounds per minute.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 2
@@ -510,9 +483,7 @@ ATT = {}
 ATT.PrintName = "VSS Sniper Stock"
 ATT.CompactName = "VSS"
 ATT.Icon = Material("entities/bo1_atts/other/stock.png")
-ATT.Description = [[
-    Offers best possible recoil control but handling and mobility are hindered.
-]]
+ATT.Description = [[Offers best possible recoil control but handling and mobility are hindered.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -541,9 +512,7 @@ ATT = {}
 ATT.PrintName = "RPK Light Machine Gun Stock"
 ATT.CompactName = "RPK"
 ATT.Icon = Material("entities/bo1_atts/other/stock.png")
-ATT.Description = [[
-    Offers best possible recoil control but handling and mobility are hindered.
-]]
+ATT.Description = [[Offers best possible recoil control but handling and mobility are hindered.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -572,9 +541,7 @@ ATT = {}
 ATT.PrintName = "Side-folding Stock"
 ATT.CompactName = "SIDE"
 ATT.Icon = Material("entities/bo1_atts/other/stock.png")
-ATT.Description = [[
-    Lightweight stock that doesn't provide as much recoil control but helps mobility.
-]]
+ATT.Description = [[Lightweight stock that doesn't provide as much recoil control but helps mobility.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 2
@@ -603,7 +570,6 @@ ATT.PrintName = "M4-Style Collapsible stock"
 ATT.CompactName = "TAC"
 ATT.Icon = Material("entities/bo1_atts/other/stock.png")
 ATT.Description = [[Modern retractible six-position stock made for with improved ergonomics and surface area.
-
 Has excellent handling, but provides weaker recoil control compared to a full stock.]]
 ATT.Pros = {}
 ATT.Cons = {}
@@ -631,9 +597,7 @@ ATT = {}
 ATT.PrintName = "Type-2 Wooden Stock"
 ATT.CompactName = "TYPE-2"
 ATT.Icon = Material("entities/bo1_atts/other/stock.png")
-ATT.Description = [[
-    Middle ground in mobility and recoil control.
-]]
+ATT.Description = [[Middle ground in mobility and recoil control.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 1
@@ -663,7 +627,6 @@ ATT.PrintName = "Underfolder Stock"
 ATT.CompactName = "UNDER"
 ATT.Icon = Material("entities/bo1_atts/other/stock.png")
 ATT.Description = [[Lightweight underfolder stock.
-
 Very lightweight and reduces hip fire spread, but barely provides any recoil control.]]
 ATT.Pros = {}
 ATT.Cons = {}

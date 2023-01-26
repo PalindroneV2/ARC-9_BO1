@@ -1,11 +1,8 @@
 ATT.PrintName = "Royal Kross 4x"
 ATT.CompactName = [[RK 4x]]
 ATT.Icon = Material("entities/bo1_atts/optics/bo1_coltscope.png", "mips smooth")
-ATT.Description = [[
-    Medium range combat scope for improved precision at longer ranges.
-
-    Belongs to Black Ops Cold War.
-]]
+ATT.Description = [[Medium range combat scope for improved precision at longer ranges.
+Belongs to Black Ops Cold War.]]
 ATT.Pros = {
     "+ 3x Zoom",
     "+ Clearer sight picture"

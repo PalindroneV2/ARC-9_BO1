@@ -253,10 +253,8 @@ ATT = {}
 ATT.PrintName = "Springfield Armory Modern Longslide"
 ATT.CompactName = "7\" S.A."
 ATT.Icon = Material("materials/entities/bo1_atts/cosmetic/bo3_1911.png")
-ATT.Description = [[
-    Modern M1911 platform slide with angled serrations and replaceable Novak iron sights with tritium.
-    Longer barrel that improves range andd muzzle velocity.
-]]
+ATT.Description = [[Modern M1911 platform slide with angled serrations and replaceable Novak iron sights with tritium.
+Longer barrel that improves range andd muzzle velocity.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 2
@@ -282,9 +280,7 @@ ATT = {}
 ATT.PrintName = "World at War"
 ATT.CompactName = "WaW"
 ATT.Icon = Material("materials/entities/waw_generic.png")
-ATT.Description = [[
-    The weapon as it sounds in Call of Duty: World at War.
-]]
+ATT.Description = [[The weapon as it sounds in Call of Duty: World at War.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 2
@@ -303,9 +299,7 @@ ATT = {}
 ATT.PrintName = "Black Ops II"
 ATT.CompactName = "BO2"
 ATT.Icon = Material("materials/entities/bo2_generic.png")
-ATT.Description = [[
-    The weapon as it sounds in Call of Duty: Black Ops II.
-]]
+ATT.Description = [[The weapon as it sounds in Call of Duty: Black Ops II.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 2

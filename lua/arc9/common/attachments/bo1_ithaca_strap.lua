@@ -1,9 +1,7 @@
 ATT.PrintName = [[Shell Strap]]
 ATT.CompactName = [[FAST]]
 ATT.Icon = Material("entities/bo1_atts/ammo/dual_mag.png")
-ATT.Description = [[
-    Improves reload-speed. Only available for certain weapons.
-]]
+ATT.Description = [[Improves reloading speed. Only available for certain weapons.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0

@@ -1,11 +1,8 @@
 ATT.PrintName = "XPR-50 Scope"
 ATT.CompactName = [[XPR-50]]
 ATT.Icon = Material("entities/bo1_atts/optics/bo1_vzoom.png", "mips smooth")
-ATT.Description = [[
-    High-Powered Sniper Scope for the XPR-50.
-
-    Belongs to Black Ops II
-]]
+ATT.Description = [[High-Powered Sniper Scope for the XPR-50.
+Belongs to Black Ops II.]]
 ATT.Pros = {
     "+ 3x Zoom",
     "+ Clearer sight picture"

@@ -1,11 +1,8 @@
 ATT.PrintName = "ZF4 (4x)"
 ATT.CompactName = [[ZF4 4x]]
 ATT.Icon = Material("entities/bo1_atts/optics/waw_telescopic.png", "mips smooth")
-ATT.Description = [[
-    Medium range combat scope for improved precision at longer ranges.
-
-    Belongs to World at War
-]]
+ATT.Description = [[Medium range combat scope for improved precision at longer ranges.
+Belongs to World at War.]]
 ATT.Pros = {
     "+ 4x Zoom",
     "+ Clearer sight picture"

@@ -1,11 +1,8 @@
 ATT.PrintName = "Colt 3x20 Carry Handle Scope (3x)"
 ATT.CompactName = [[Colt 3x]]
 ATT.Icon = Material("entities/bo1_atts/optics/bo1_coltscope.png", "mips smooth")
-ATT.Description = [[
-    Medium range combat scope for improved precision at longer ranges.
-
-    bo.desc
-]]
+ATT.Description = [[Medium range combat scope for improved precision at longer ranges.
+Belongs to Black Ops.]]
 ATT.Pros = {
     "+ 3x Zoom",
     "+ Clearer sight picture"

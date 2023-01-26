@@ -1,11 +1,8 @@
 ATT.PrintName = "Burris Mini"
 ATT.CompactName = [[RDS LP]]
 ATT.Icon = Material("entities/bo1_atts/optics/bo2_rds.png", "mips smooth")
-ATT.Description = [[
-    Small, low profile optic mainly used by pistols. Provides a small electronic dot reticle which speeds up target acquisition by eliminating the need to line up irons.
-
-    Belongs to Black Ops II.
-]]
+ATT.Description = [[Small, low profile optic mainly used by pistols. Provides a small electronic dot reticle which speeds up target acquisition by eliminating the need to line up irons.
+Belongs to Black Ops II.]]
 ATT.Pros = {
     "+ Clearer sight picture"
 }

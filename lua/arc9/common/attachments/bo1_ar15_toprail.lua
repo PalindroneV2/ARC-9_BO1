@@ -1,7 +1,7 @@
 ATT.PrintName = [[AR-15 Carry Handle Rail]]
 ATT.CompactName = [[CH RAIL]]
 ATT.Icon = Material("entities/bo1_atts/barrel/barrel.png")
-ATT.Description = [[Three-Rail RIS Handguard allows for attachment of underbarrels.]]
+ATT.Description = [[Three-rail RIS handguard allows for attachment of underbarrels.]]
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false

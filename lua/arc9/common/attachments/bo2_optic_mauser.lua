@@ -1,11 +1,8 @@
 ATT.PrintName = "Mauser Carbine Scope"
 ATT.CompactName = [[C.SCOPE]]
 ATT.Icon = Material("entities/bo1_atts/optics/waw_telescopic.png", "mips smooth")
-ATT.Description = [[
-    Medium range combat scope for improved precision at longer ranges.
-
-    Belongs to Black Ops II.
-]]
+ATT.Description = [[Medium range combat scope for improved precision at longer ranges.
+Belongs to Black Ops II.]]
 ATT.Pros = {
     "+ 3x Zoom",
     "+ Clearer sight picture"

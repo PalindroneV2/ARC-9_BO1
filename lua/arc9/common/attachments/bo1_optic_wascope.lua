@@ -1,11 +1,8 @@
 ATT.PrintName = "Schmidt & Bender 2.5–10× Scope"
 ATT.CompactName = [[WA2000]]
 ATT.Icon = Material("entities/bo1_atts/optics/bo1_vzoom.png", "mips smooth")
-ATT.Description = [[
-    Long range combat scope with variable zoom.
-
-    bo.desc
-]]
+ATT.Description = [[Long range combat scope with variable zoom.
+Belongs to Black Ops.]]
 ATT.Pros = {
     "+ Variable Zoom",
     "+ Clearer sight picture"

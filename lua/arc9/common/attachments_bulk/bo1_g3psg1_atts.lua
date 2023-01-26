@@ -7,9 +7,7 @@ ATT = {}
 ATT.PrintName = [[HK33 Barrel]]
 ATT.CompactName = [[HK33]]
 ATT.Icon = Material("entities/bo1_atts/bocw/atts_ak5/barrels/long_pro.png", "mips smooth")
-ATT.Description = [[
-    Short barrel
-]]
+ATT.Description = [[HK33 frame tube.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -44,9 +42,7 @@ ATT = {}
 ATT.PrintName = [[HK53 Barrel]]
 ATT.CompactName = [[HK53]]
 ATT.Icon = Material("entities/bo1_atts/bocw/atts_ak5/barrels/mix_pro.png", "mips smooth")
-ATT.Description = [[
-    Short barrel
-]]
+ATT.Description = [[HK53 frame tube.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -81,9 +77,7 @@ ATT = {}
 ATT.PrintName = [[PSG1 Barrel]]
 ATT.CompactName = [[PSG1]]
 ATT.Icon = Material("entities/bo1_atts/bocw/atts_ak5/barrels/long_pro.png", "mips smooth")
-ATT.Description = [[
-    Precision sniper barrel. Increases precision but reduces handling.
-]]
+ATT.Description = [[Precision sniper barrel. Increases precision but reduces handling.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -135,9 +129,7 @@ ATT = {}
 ATT.PrintName = [[HK21 Handguard]]
 ATT.CompactName = [[HK21]]
 ATT.Icon = Material("entities/bo1_atts/bocw/atts_ak5/barrels/long_pro.png", "mips smooth")
-ATT.Description = [[
-    HK21 Handguard.
-]]
+ATT.Description = [[HK21 handguard.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -168,9 +160,7 @@ ATT = {}
 ATT.PrintName = [[30 Round 5.56mm NATO Magazine]]
 ATT.CompactName = [[5.56mm/30 RND]]
 ATT.Icon = Material("entities/bo1_atts/ammo/ext_mag.png")
-ATT.Description = [[
-    Shorter magazine loaded with special marksman ammunition.
-]]
+ATT.Description = [[Shorter magazine loaded with special marksman ammunition.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -226,9 +216,7 @@ ATT = {}
 ATT.PrintName = [[10 Round Marksman Magazine]]
 ATT.CompactName = [[10 RND]]
 ATT.Icon = Material("entities/bo1_atts/ammo/ext_mag.png")
-ATT.Description = [[
-    Shorter magazine loaded with special marksman ammunition.
-]]
+ATT.Description = [[Shorter magazine loaded with special marksman ammunition.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -260,9 +248,7 @@ ATT = {}
 ATT.PrintName = [[20 Round Standard Magazine]]
 ATT.CompactName = [[20 RND]]
 ATT.Icon = Material("entities/bo1_atts/ammo/ext_mag.png")
-ATT.Description = [[
-    Standard shorter magazine improves handling and reload times.
-]]
+ATT.Description = [[Standard shorter magazine improves handling and reload speeds.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0

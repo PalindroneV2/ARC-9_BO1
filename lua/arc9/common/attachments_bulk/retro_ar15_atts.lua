@@ -6,9 +6,7 @@ ATT = {}
 ATT.PrintName = [[7" AAC Barrel]]
 ATT.CompactName = [[7" AAC]]
 ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m4.png", "mips smooth")
-ATT.Description = [[
-    Super short SBR barrel made made for pistol-style AR-15s.
-]]
+ATT.Description = [[Super short SBR barrel made made for pistol-style AR-15s.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 4
@@ -91,9 +89,7 @@ ATT = {}
 ATT.PrintName = [[7" Department of Energy Barrel]]
 ATT.CompactName = [[7" DOE]]
 ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m4.png", "mips smooth")
-ATT.Description = [[
-    Super short SMG barrel made specifically for Department of Energy models of the 9mm Colt SMG.
-]]
+ATT.Description = [[Super short SMG barrel made specifically for Department of Energy models of the 9mm Colt SMG.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 4
@@ -153,9 +149,8 @@ ATT = {}
 ATT.PrintName = [[10.5" Commando Barrel]]
 ATT.CompactName = [[10.5" Commando]]
 ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m4.png", "mips smooth")
-ATT.Description = [[
-    Even shorter Carbine-length 10.5" Barrel. It's use mainly by special forces groups earned it the nickname "Commando". Attached by default with a standard round, ribbed handguard.
-]]
+ATT.Description = [[Even shorter Carbine-length 10.5" Barrel. It's use mainly by special forces groups earned it the nickname "Commando".
+Attached by default with a standard round, ribbed handguard.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 3
@@ -241,7 +236,6 @@ ATT.PrintName = [[11.5" XM177E2 Barrel]]
 ATT.CompactName = [[11.5" SOG]]
 ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m4.png", "mips smooth")
 ATT.Description = [[Short carbine-length barrel that belonged to the XM177E2, an early M16 carbine made for the MACV-SOG.
-
 Comes attached with a muzzle devices that reduces both recoil and audible rapport, but cannot fit other muzzle attachments as a result.]]
 
 ATT.SortOrder = 2
@@ -325,9 +319,7 @@ ATT.PrintName = [[XM177 4.5" Moderator]]
 ATT.CompactName = [[SOG Moderator]]
 ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m4.png", "mips smooth")
 ATT.Description = [[Short carbine-length barrel that belonged to the XM177E2, an early M16 carbine made for the MACV-SOG.
-
 Comes attached with a muzzle devices that reduces both recoil and audible rapport, but cannot fit other muzzle attachments as a result.]]
-
 ATT.SortOrder = 2
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
@@ -347,9 +339,7 @@ ATT.PrintName = [[14.5" Carbine Barrel]]
 ATT.CompactName = [[14.5" GOV'T]]
 ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m4.png", "mips smooth")
 ATT.Description = [[Carbine-length 14.5" barrel, standard for M4 rifles.
-
 The shorter barrel length reduces muzzle velocity and effective range. Despite this, its compact form made it overshadow the 20 inch barrel in the modern day.]]
-
 ATT.SortOrder = 1
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
@@ -431,9 +421,7 @@ ATT.PrintName = [[16" Sporter Barrel]]
 ATT.CompactName = [[16" SPORTER]]
 ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m4.png", "mips smooth")
 ATT.Description = [[16" barrel compliant with several states' minimum rifle barrel length laws.
-
 The shorter barrel length reduces muzzle velocity and effective range. Despite this, its compact form made it overshadow the 20 inch barrel in the modern day.]]
-
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
@@ -497,7 +485,6 @@ ATT.PrintName = "Troy Flip-Up Front Battle Sight"
 ATT.CompactName = "Troy"
 ATT.Icon = Material("entities/bo1_atts/optics/retro_ar15/troy_side.png")
 ATT.Description = [[Aftermarket Troy flip-up front sight.
-
 Functions identically to other iron sights.]]
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
@@ -516,7 +503,6 @@ ATT.PrintName = "MaTech Flip-Up Front Sight"
 ATT.CompactName = "MaTech"
 ATT.Icon = Material("entities/bo1_atts/optics/retro_ar15/matech_side.png")
 ATT.Description = [[United States General Issue front sight.
-
 Functions identically to other iron sights.]]
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
@@ -535,7 +521,6 @@ ATT.PrintName = "Magpul Masada Flip-Up Front Sight"
 ATT.CompactName = "Masada"
 ATT.Icon = Material("entities/bo1_atts/optics/retro_ar15/matech_side.png")
 ATT.Description = [[Front folding sight produced by Magpul for the Masada rifle.
-
 Functions identically to other iron sights.]]
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
@@ -573,9 +558,7 @@ ATT = {}
 ATT.PrintName = [[M203 Heatshield Handguard]]
 ATT.CompactName = [[HEAT]]
 ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m16.png", "mips smooth")
-ATT.Description = [[
-    Heatshield for an M16 barrel, you're not actually supposed to grab it and it is meant to have an M203 attached.
-]]
+ATT.Description = [[Heatshield for an M16 barrel, you're not actually supposed to grab it and it is meant to have an M203 attached.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 1
@@ -613,9 +596,8 @@ ATT = {}
 ATT.PrintName = [[A2 Handguard]]
 ATT.CompactName = [[A2]]
 ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m16.png", "mips smooth")
-ATT.Description = [[
-    Round, ribbed handguard standard for the M16A2. Heavier and ergonomically better than the A1 triangular handguard.
-]]
+ATT.Description = [[Round and ribbed handguard standard for the M16A2.
+Heavier and ergonomically better than the A1 triangular handguard.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -646,9 +628,7 @@ ATT.PrintName = [[A4 Handguard]]
 ATT.CompactName = [[A4]]
 ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m16.png", "mips smooth")
 ATT.Description = [[A long handguard with quad-rail RIS mounts. While usually used for 20" barrels, it can fit a 14.5" barrel with a low profile gas block.
-
 Allows for the attachment of alternative front sights and tactical attachments on all of the 4 rails.
-
 Stats identical to other handguards.]]
 ATT.SortOrder = 2
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
@@ -724,9 +704,7 @@ ATT.PrintName = [[M-LOK Handguard]]
 ATT.CompactName = [[MLOK]]
 ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m16.png", "mips smooth")
 ATT.Description = [[A long handguard with M-LOK mounts.
-
 Allows for the attachment of alternative front sights and tactical attachments on all 4 sides, plus a canted mounted rail for a backup optic.
-
 Stats identical to other handguards.]]
 ATT.SortOrder = 2
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
@@ -828,9 +806,7 @@ ATT = {}
 ATT.PrintName = [[CAR-15 Carbine Handguard]]
 ATT.CompactName = [[CAR-15]]
 ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m607.png", "mips smooth")
-ATT.Description = [[
-    Short, round, ribbed handguard used on M16 carbines.
-]]
+ATT.Description = [[Short, round, and ribbed handguard used on M16 carbines.]]
 ATT.Pros = {}
 ATT.Cons = {
 }
@@ -881,11 +857,9 @@ ATT = {}
 ATT.PrintName = [[M607a Barrel Assembly]]
 ATT.CompactName = [[M607a]]
 ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m607.png", "mips smooth")
-ATT.Description = [[
-    Rare M607a parts that fit an 11.5 barrel.
-    The M607a was a very early carbine version of the M16 marketed as an SMG, not for its caliber, but instead for its role as a compact weapon for rear echelon troops, vehicle drives and tank crews.
-    Ergonomics aren't the best and it makes controlling the weapon's recoil a bit harder, though it is lighter than the ribbed handguard.
-]]
+ATT.Description = [[Rare M607a parts that fit an 11.5 barrel.
+The M607a was a very early carbine version of the M16 marketed as an SMG, not for its caliber, but instead for its role as a compact weapon for rear echelon troops, vehicle drives, and tank crews.
+Ergonomics aren't the best and it makes controlling the weapon's recoil a bit harder, though it is lighter than the ribbed handguard.]]
 ATT.Pros = {}
 ATT.Cons = {
     "-Cannot attach UBGLs",
@@ -918,10 +892,8 @@ ATT = {}
 ATT.PrintName = [[FAMAS F1 Front Assembly]]
 ATT.CompactName = [[F1]]
 ATT.Icon = Material("entities/bo1_atts/barrel/barrel.png")
-ATT.Description = [[
-    Hollowed out front end of a FAMAS F1 makes up the weapon's handguard and sights now. The weight reduces recoil but slows down sight time.
-    It also blocks upper receivers.
-]]
+ATT.Description = [[Hollowed out front end of a FAMAS F1 makes up the weapon's handguard and sights now. The weight reduces recoil but slows down sight time.
+It also blocks upper receivers.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -962,12 +934,9 @@ ATT = {}
 ATT.PrintName = [[M231 Firing Port Weapon]]
 ATT.CompactName = [[FPW]]
 ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m607.png", "mips smooth")
-ATT.Description = [[
-    Rare Vietnam-era parts for an M231 that fit an 11.5" Barrel.
-    The M321 FPW was a special made M16 variant, which as the name implies, was used for the firing ports of armored vehicles. as such it lacks a front sight.
-    
-    Because the handguard is smooth it's not as easy to hold on to as the ribbed or traingular, but it's lighter than either.
-]]
+ATT.Description = [[Rare Vietnam-era parts for an M231 that fit an 11.5" Barrel.
+The M321 FPW was a special made M16 variant, which as the name implies, was used for the firing ports of armored vehicles. as such it lacks a front sight.
+Because the handguard is smooth it's not as easy to hold on to as the ribbed or traingular, but it's lighter than either.]]
 ATT.Pros = {
     "+Improves sight picture of low profile optics.",
 }
@@ -1005,9 +974,7 @@ ATT.PrintName = [[Carbine RIS Handguard]]
 ATT.CompactName = [[RIS]]
 ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m4.png", "mips smooth")
 ATT.Description = [[RIS Quad-Rail Handguard fitting a carbine barrel, common in modern AR-15s.
-
-Allows for the attachment of alternative front sights and a low profile laser pointer on top, but is otherwise identical to a regular handguard.
-]]
+Allows for the attachment of alternative front sights and a low profile laser pointer on top, but is otherwise identical to a regular handguard.]]
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
@@ -1076,9 +1043,7 @@ ATT.PrintName = [[M-LOK Short Handguard]]
 ATT.CompactName = [[MLOK S]]
 ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m16.png", "mips smooth")
 ATT.Description = [[A carbine-length handguard with M-LOK mounts.
-
 Allows for the attachment of alternative front sights and tactical attachments on all 4 sides, plus a canted mounted rail for a backup optic.
-
 Stats identical to other handguards.]]
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
@@ -1169,10 +1134,8 @@ ATT = {}
 ATT.PrintName = [[FSS 9" RIS Hanguard]]
 ATT.CompactName = [[FSS 9"]]
 ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m4.png", "mips smooth")
-ATT.Description = [[RIS Quad-Rail Handguard fitting a carbine barrels with low profile gas systems, common in modern AR-15s.
-
-Allows for the attachment of alternative front sights and a low profile laser pointer on top, but is otherwise identical to a regular handguard.
-]]
+ATT.Description = [[RIS quad-rail handguard fitting a carbine barrels with low profile gas systems, common in modern AR-15s.
+Allows for the attachment of alternative front sights and a low profile laser pointer on top, also identical to a regular handguard.]]
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
@@ -1242,7 +1205,6 @@ ATT.PrintName = "Carry Handle Rear Sight"
 ATT.CompactName = "Carry"
 ATT.Icon = Material("entities/bo1_atts/optics/retro_ar15/carry_side.png")
 ATT.Description = [[M16A4 carry handle iron sight.
-
 Functions identically to other iron sights.]]
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
@@ -1273,7 +1235,6 @@ ATT.PrintName = "A2 Removable Rear Sight"
 ATT.CompactName = "A2 REAR"
 ATT.Icon = Material("entities/bo1_atts/optics/retro_ar15/carry_side.png")
 ATT.Description = [[AR-15 back-up iron sight.
-
 Functions identically to other iron sights.]]
 ATT.SortOrder = 1
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
@@ -1467,7 +1428,6 @@ ATT.PrintName = "Troy Flip-Up Rear Battle Sight"
 ATT.CompactName = "Troy"
 ATT.Icon = Material("entities/bo1_atts/optics/retro_ar15/troy_side.png")
 ATT.Description = [[Aftermarket Troy flip-up rear sight.
-
 Functions identically to other iron sights.]]
 ATT.SortOrder = 3
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
@@ -1487,7 +1447,6 @@ ATT.PrintName = "Magpul Masada Rear Folding Sight"
 ATT.CompactName = "Masada"
 ATT.Icon = Material("entities/bo1_atts/optics/retro_ar15/3arc_side.png")
 ATT.Description = [[Rear folding sight produced by Magpul for the Masada rifle.
-
 Functions identically to other iron sights.]]
 ATT.SortOrder = 4
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
@@ -1506,8 +1465,8 @@ ATT = {}
 ATT.PrintName = "III-ARC MP Folding Sight"
 ATT.CompactName = "III-ARC"
 ATT.Icon = Material("entities/bo1_atts/optics/retro_ar15/3arc_side.png")
-ATT.Description = [[Aftermarket MP flip-up rear si- Wait...
-Is that just a Troy sight put on backwards?
+ATT.Description = [["Aftermarket MP flip-up rear si- Wait...
+Is that just a Troy sight put on backwards?"
 
 Functions identically to other iron sights.]]
 ATT.SortOrder = 4
@@ -1528,7 +1487,6 @@ ATT.PrintName = "MaTech Flip-Up Rear Sight"
 ATT.CompactName = "MaTech"
 ATT.Icon = Material("entities/bo1_atts/optics/retro_ar15/matech_side.png")
 ATT.Description = [[United States General Issue rear sight.
-
 Functions identically to other iron sights.]]
 ATT.SortOrder = 2
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
@@ -1549,7 +1507,6 @@ ATT.PrintName = "M645 S-1-3 FCG"
 ATT.CompactName = "BURST"
 ATT.Icon = Material("entities/bo1_atts/other/select_fire.png")
 ATT.Description = [[Standard 3-round burst fire control group used since 1983 for the M16 in all branches of the US military. Except for the Navy, of course.
-
 Greatly improves recoil control and reduces spread.]]
 ATT.Pros = {}
 ATT.Cons = {
@@ -1587,7 +1544,6 @@ ATT.PrintName = "R6000 Sporting FCG"
 ATT.CompactName = "SEMI"
 ATT.Icon = Material("entities/bo1_atts/other/select_fire.png")
 ATT.Description = [[Competition grade semi-automatic fire group.
-
 Its high quality, finely machined parts make this the best option for marksmanship.]]
 ATT.Pros = {}
 ATT.Cons = {
@@ -1623,7 +1579,6 @@ ATT.PrintName = "Skullsplitter S-1-6 FCG"
 ATT.CompactName = "SKLSPLT"
 ATT.Icon = Material("entities/bo1_atts/other/select_fire.png")
 ATT.Description = [[6-round burst fire control group obtained through means unknown.
-
 Improves recoil control and reduces spread.]]
 ATT.Pros = {}
 ATT.Cons = {
@@ -1693,14 +1648,12 @@ ARC9.LoadAttachment(ATT, "retro_ar15_lower_fpw")
 
 ATT = {}
 
-ATT.PrintName = [[AR-15 10 round STANAG]]
+ATT.PrintName = [[AR-15 10 Round STANAG]]
 ATT.CompactName = [[STANAG 10]]
 ATT.Icon = Material("entities/bo1_atts/ammo/ext_mag.png")
-ATT.Description = [[
-    Original aluminum STANAG magazine that only holds 10 rounds due to old Californian gun control measures.
-    Though it has worse capacity it has been loaded with special hand-loaded round that increase performance for target shooting.
-    Marginally increases handling.
-]]
+ATT.Description = [[Original aluminium STANAG magazine that only holds 10 rounds due to old Californian gun control measures.
+Though it has worse capacity, it has been loaded with special hand-loaded round that increase performance for target shooting.
+Marginally increases handling.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 1
@@ -1735,13 +1688,11 @@ ARC9.LoadAttachment(ATT, "retro_ar15_mag_10")
 
 ATT = {}
 
-ATT.PrintName = [[AR-15 20 round STANAG]]
+ATT.PrintName = [[AR-15 20 Round STANAG]]
 ATT.CompactName = [[STANAG 20]]
 ATT.Icon = Material("entities/bo1_atts/ammo/ext_mag.png")
-ATT.Description = [[
-    Original aluminum STANAG magazine that only holds 20 rounds.
-    Marginally increases handling.
-]]
+ATT.Description = [[Original aluminium STANAG magazine that only holds 20 rounds.
+Marginally increases handling.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 1
@@ -1760,13 +1711,11 @@ ARC9.LoadAttachment(ATT, "retro_ar15_mag_20")
 
 ATT = {}
 
-ATT.PrintName = [[AR-15 40 round STANAG]]
+ATT.PrintName = [[AR-15 40 Round STANAG]]
 ATT.CompactName = [[STANAG 40]]
 ATT.Icon = Material("entities/bo1_atts/ammo/ext_mag.png")
-ATT.Description = [[
-    Modern polymer PMAG that holds 4 rounds.
-    Marginally reduces handling.
-]]
+ATT.Description = [[Original aluminium STANAG magazine that holds 40 rounds.
+Marginally increases handling.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 2
@@ -1785,13 +1734,11 @@ ARC9.LoadAttachment(ATT, "retro_ar15_mag_40")
 
 ATT = {}
 
-ATT.PrintName = [[AR-15 60 round Quad-Stack STANAG]]
+ATT.PrintName = [[AR-15 60 Round Quad-Stack STANAG]]
 ATT.CompactName = [[STANAG 60]]
 ATT.Icon = Material("entities/bo1_atts/ammo/ext_mag.png")
-ATT.Description = [[
-    Modern polymer PMAG that holds 4 rounds.
-    Marginally reduces handling.
-]]
+ATT.Description = [[Original aluminium STANAG quad-stack magazine that holds 60 rounds.
+Marginally increases handling.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 4
@@ -1810,13 +1757,11 @@ ARC9.LoadAttachment(ATT, "retro_ar15_mag_60")
 
 ATT = {}
 
-ATT.PrintName = [[AR-15 30 round P-Mag]]
-ATT.CompactName = [[P-MAG 30]]
+ATT.PrintName = [[AR-15 30 Round PMAG]]
+ATT.CompactName = [[PMAG 30]]
 ATT.Icon = Material("entities/bo1_atts/ammo/ext_mag.png")
-ATT.Description = [[
-    Modern polymer PMAG that holds 4 rounds.
-    Marginally reduces handling.
-]]
+ATT.Description = [[Modern polymer PMAG that holds 30 rounds.
+Marginally reduces handling.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 1
@@ -1832,13 +1777,11 @@ ARC9.LoadAttachment(ATT, "retro_ar15_mag_pul")
 
 ATT = {}
 
-ATT.PrintName = [[AR-15 40 round P-Mag]]
-ATT.CompactName = [[P-MAG 40]]
+ATT.PrintName = [[AR-15 40 round PMAG]]
+ATT.CompactName = [[PMAG 40]]
 ATT.Icon = Material("entities/bo1_atts/ammo/ext_mag.png")
-ATT.Description = [[
-    Modern polymer PMAG that holds 4 rounds.
-    Marginally reduces handling.
-]]
+ATT.Description = [[Modern polymer PMAG that holds 40 rounds.
+Marginally reduces handling.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 3
@@ -1860,8 +1803,7 @@ ATT = {}
 ATT.PrintName = [[M635 32 round 9mm Mag]]
 ATT.CompactName = [[32 9MM]]
 ATT.Icon = Material("entities/bo1_atts/ammo/ext_mag.png")
-ATT.Description = [[9x19mm conversion for the AR-15 using 32-round box magazines.
-
+ATT.Description = [[9x19mm conversion for the AR-15 using 32 round magazines.
 The pistol cartridge reduces long range stopping power significantly, but has less recoil and can be fired much faster.]]
 ATT.Pros = {}
 ATT.Cons = {}
@@ -1919,9 +1861,7 @@ ATT = {}
 ATT.PrintName = [[10 Round .50 Beowulf Mag]]
 ATT.CompactName = [[BEOWULF]]
 ATT.Icon = Material("entities/bo1_atts/ammo/ext_mag.png")
-ATT.Description = [[
-    10 round magazine holds powerful .50 Beowulf rounds made for stopping vehicles that try to run military checkpoints.
-]]
+ATT.Description = [[10 round magazine holds powerful .50 Beowulf rounds made for stopping vehicles that try to run military checkpoints.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 5
@@ -1972,13 +1912,11 @@ ARC9.LoadAttachment(ATT, "retro_ar15_mag_beowulf")
 
 ATT = {}
 
-ATT.PrintName = [[.300 Blackout 30 round STANAG]]
+ATT.PrintName = [[.300 Blackout 30 Round STANAG]]
 ATT.CompactName = [[.300BLK 30]]
 ATT.Icon = Material("entities/bo1_atts/ammo/ext_mag.png")
-ATT.Description = [[
-    30 round STANAG magazine loaded with .300 Blackout rounds.
-    Bullets no longer super-sonic.
-]]
+ATT.Description = [[30 round STANAG magazine loaded with .300 Blackout rounds.
+Bullets no longer super-sonic.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 1
@@ -2011,13 +1949,11 @@ ARC9.LoadAttachment(ATT, "retro_ar15_mag_300blk_30")
 
 ATT = {}
 
-ATT.PrintName = [[.300 Blackout 20 round STANAG]]
+ATT.PrintName = [[.300 Blackout 20 Round STANAG]]
 ATT.CompactName = [[.300BLK 20]]
 ATT.Icon = Material("entities/bo1_atts/ammo/ext_mag.png")
-ATT.Description = [[
-    Original aluminum STANAG magazine that only holds 20 rounds.
-    Marginally increases handling.
-]]
+ATT.Description = [[20 round STANAG magazine loaded with .300 Blackout rounds.
+Bullets no longer super-sonic.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 1
@@ -2054,13 +1990,11 @@ ARC9.LoadAttachment(ATT, "retro_ar15_mag_300blk_20")
 
 ATT = {}
 
-ATT.PrintName = [[.300 Blackout 40 round STANAG]]
+ATT.PrintName = [[.300 Blackout 40 Round STANAG]]
 ATT.CompactName = [[.300BLK 40]]
 ATT.Icon = Material("entities/bo1_atts/ammo/ext_mag.png")
-ATT.Description = [[
-    Modern polymer PMAG that holds 4 rounds.
-    Marginally reduces handling.
-]]
+ATT.Description = [[40 round STANAG magazine loaded with .300 Blackout rounds.
+Bullets no longer super-sonic.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 2
@@ -2097,13 +2031,11 @@ ARC9.LoadAttachment(ATT, "retro_ar15_mag_300blk_40")
 
 ATT = {}
 
-ATT.PrintName = [[.300 Blackout 60 round Quad-Stack STANAG]]
+ATT.PrintName = [[.300 Blackout 60 Round Quad-Stack STANAG]]
 ATT.CompactName = [[.300BLK 60]]
 ATT.Icon = Material("entities/bo1_atts/ammo/ext_mag.png")
-ATT.Description = [[
-    Modern polymer PMAG that holds 4 rounds.
-    Marginally reduces handling.
-]]
+ATT.Description = [[60 round STANAG quad-stack magazine loaded with .300 Blackout rounds.
+Bullets no longer super-sonic.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 4
@@ -2140,13 +2072,11 @@ ARC9.LoadAttachment(ATT, "retro_ar15_mag_300blk_60")
 
 ATT = {}
 
-ATT.PrintName = [[.300 Blackout 30 round P-Mag]]
-ATT.CompactName = [[.300BLK P-MAG 30]]
+ATT.PrintName = [[.300 Blackout 30 Round PMAG]]
+ATT.CompactName = [[.300BLK PMAG 30]]
 ATT.Icon = Material("entities/bo1_atts/ammo/ext_mag.png")
-ATT.Description = [[
-    Modern polymer PMAG that holds 4 rounds.
-    Marginally reduces handling.
-]]
+ATT.Description = [[30 round PMAG magazine loaded with .300 Blackout rounds.
+Bullets no longer super-sonic.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 1
@@ -2180,13 +2110,11 @@ ARC9.LoadAttachment(ATT, "retro_ar15_mag_300blk_pul")
 
 ATT = {}
 
-ATT.PrintName = [[.300 Blackout 40 round P-Mag]]
-ATT.CompactName = [[.300BLK P-MAG 40]]
+ATT.PrintName = [[.300 Blackout 40 Round PMAG]]
+ATT.CompactName = [[.300BLK PMAG 40]]
 ATT.Icon = Material("entities/bo1_atts/ammo/ext_mag.png")
-ATT.Description = [[
-    Modern polymer PMAG that holds 4 rounds.
-    Marginally reduces handling.
-]]
+ATT.Description = [[40 round PMAG magazine loaded with .300 Blackout rounds.
+Bullets no longer super-sonic.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 3
@@ -2223,13 +2151,11 @@ ARC9.LoadAttachment(ATT, "retro_ar15_mag_300blk_pul_40")
 
 ATT = {}
 
-ATT.PrintName = [[.300 Blackout 100 round C-Mag]]
+ATT.PrintName = [[.300 Blackout 100 Round C-Mag]]
 ATT.CompactName = [[.300BLK DRUM]]
 ATT.Icon = Material("entities/bo1_atts/ammo/drum.png")
-ATT.Description = [[
-    Rare 100 round drum magazine.
-    Greatly reduces handling.
-]]
+ATT.Description = [[Rare 100 round drum magazine loaded with .300 Blackout rounds.
+Greatly reduces handling.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 6
@@ -2269,10 +2195,8 @@ ATT = {}
 ATT.PrintName = [[AR-15 100 round C-Mag]]
 ATT.CompactName = [[DRUM]]
 ATT.Icon = Material("entities/bo1_atts/ammo/drum.png")
-ATT.Description = [[
-    Rare 100 round drum magazine.
-    Greatly reduces handling.
-]]
+ATT.Description = [[Rare 100 round drum magazine.
+Greatly reduces handling.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 6
@@ -2294,9 +2218,7 @@ ATT = {}
 ATT.PrintName = [[Patriot Magazine]]
 ATT.CompactName = [[PATRIOT]]
 ATT.Icon = Material("entities/bo1_atts/ammo/drum.png")
-ATT.Description = [[
-It gives you infinite ammo because the internal feeding mechanism is shaped like an infinity symbol.
-]]
+ATT.Description = [[It gives you infinite ammo because the internal feeding mechanism is shaped like an infinity symbol.]]
 ATT.Pros = {}
 ATT.Cons = {
 "Disables Most Attachments"
@@ -2333,7 +2255,6 @@ ATT.PrintName = "M16 Fixed Rifle Stock"
 ATT.CompactName = "FULL"
 ATT.Icon = Material("entities/bo1_atts/other/stock.png")
 ATT.Description = [[Standard M16 fixed stock.
-
 Provides very good recoil reduction compared to other stock options.]]
 ATT.Pros = {}
 ATT.Cons = {}
@@ -2364,7 +2285,6 @@ ATT.PrintName = "Generation 1 Collapsible Stock"
 ATT.CompactName = "GEN1"
 ATT.Icon = Material("entities/bo1_atts/other/stock.png")
 ATT.Description = [[Early production retractible two-position stock.
-
 Provides slightly better handling than a fixed stock, but with slightly less recoil control.]]
 ATT.Pros = {}
 ATT.Cons = {}
@@ -2394,7 +2314,6 @@ ATT.PrintName = "Generation 2 Collapsible Stock"
 ATT.CompactName = "GEN2"
 ATT.Icon = Material("entities/bo1_atts/other/stock.png")
 ATT.Description = [[Retractible four-position stock made for Vietnam-era M16 Carbines such as the XM177E2, kept in use until the mid 2000s.
-
 Reduces spread from moving and recoil accumulation, but doesn't reduce recoil as much as a full stock.]]
 ATT.Pros = {}
 ATT.Cons = {}
@@ -2426,7 +2345,6 @@ ATT.PrintName = "Generation 3 Collapsible Stock"
 ATT.CompactName = "GEN3"
 ATT.Icon = Material("entities/bo1_atts/other/stock.png")
 ATT.Description = [[Retractible six-position stock made for the M4 platform after being adopted oficially by the US military.
-
 Reduces spread from moving and recoil accumulation, but doesn't reduce recoil as much as a full stock.]]
 ATT.Pros = {}
 ATT.Cons = {}
@@ -2458,7 +2376,6 @@ ATT.PrintName = "B5 Systems Bravo Stock"
 ATT.CompactName = "BRAVO"
 ATT.Icon = Material("entities/bo1_atts/other/stock.png")
 ATT.Description = [[Modern retractible six-position stock made for with improved ergonomics and surface area.
-
 Has excellent handling, but provides weaker recoil control compared to a full stock.]]
 ATT.Pros = {}
 ATT.Cons = {}
@@ -2488,7 +2405,6 @@ ATT.PrintName = "Wire Stock"
 ATT.CompactName = "WIRE"
 ATT.Icon = Material("entities/bo1_atts/other/stock.png")
 ATT.Description = [[Wire stock produced for M16 carbines in SMG roles. Made to be specially lightweight.
-
 Very lightweight and reduces hip fire spread, but barely provides any recoil control.]]
 ATT.Pros = {}
 ATT.Cons = {}
@@ -2520,7 +2436,6 @@ ATT.PrintName = "AAC PDW Collapsible Stock"
 ATT.CompactName = "PDW"
 ATT.Icon = Material("entities/bo1_atts/other/stock.png")
 ATT.Description = [[Retractible 2-postion stock produced in the after-market for subcompact AR-15s.
-
 Very lightweight and reduces hip fire spread, but barely provides any recoil control.]]
 ATT.Pros = {}
 ATT.Cons = {}
@@ -2552,7 +2467,6 @@ ATT.PrintName = "Magpul MOE Stock"
 ATT.CompactName = "MOE"
 ATT.Icon = Material("entities/bo1_atts/other/stock.png")
 ATT.Description = [[Modern retractible six-position stock made for with improved ergonomics and surface area.
-
 Has excellent handling, but provides weaker recoil control compared to a full stock.]]
 ATT.Pros = {}
 ATT.Cons = {}
@@ -2582,7 +2496,6 @@ ATT.PrintName = "Magpul PSR Marksman Stock"
 ATT.CompactName = "SNIPER"
 ATT.Icon = Material("entities/bo1_atts/other/stock.png")
 ATT.Description = [[Slightly adjustable marksman stock for DMRs produced by Magpul.
-
 Provides very good recoil control, but is heavy and hard to use when not still and aiming.]]
 ATT.Pros = {}
 ATT.Cons = {}
@@ -2718,10 +2631,8 @@ ATT = {}
 ATT.PrintName = [[M203 Grenade Launcher]]
 ATT.CompactName = [[M203]]
 ATT.Icon = Material("materials/entities/bo1_atts/ubs/m203.png")
-ATT.Description = [[
-    Underbarrel grenade launcher that fires 40mm High Explosive rounds.
-    Reduced handling.
-]]
+ATT.Description = [[Underbarrel grenade launcher that fires 40mm High Explosive rounds.
+Reduced handling.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0

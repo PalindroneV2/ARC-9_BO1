@@ -1,11 +1,8 @@
 ATT.PrintName = "PSO-1 Sniper Scope"
 ATT.CompactName = [[PSO-1]]
 ATT.Icon = Material("entities/bo1_atts/optics/bo1_vzoom.png", "mips smooth")
-ATT.Description = [[
-    Medium range combat scope for improved precision at longer ranges.
-
-    Belongs to Black Ops.
-]]
+ATT.Description = [[Medium range combat scope for improved precision at longer ranges.
+Belongs to Black Ops.]]
 ATT.Pros = {
     "+ 3x Zoom",
     "+ Clearer sight picture"

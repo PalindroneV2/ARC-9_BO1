@@ -1,10 +1,8 @@
 ATT.PrintName = "Maria"
 ATT.CompactName = "Maria"
 ATT.Icon = Material("materials/entities/bo1_generic.png")
-ATT.Description = [[
-    A special engraved 9mm Pistol that once belonged to a man wearing a checkered suit.
-    The Virgin Mary is engraved on the grips.
-]]
+ATT.Description = [[A special engraved 9mm Pistol that once belonged to a man wearing a checkered suit.
+The Virgin Mary is engraved on the grips.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0

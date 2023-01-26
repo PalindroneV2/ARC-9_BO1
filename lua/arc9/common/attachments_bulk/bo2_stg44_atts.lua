@@ -20,9 +20,7 @@ ATT = {}
 ATT.PrintName = [[Integral Suppressor]]
 ATT.CompactName = [[INT.SUP.]]
 ATT.Icon = Material("materials/entities/bo1_atts/barrel/bo1_suppressor.png")
-ATT.Description = [[
-    Lightweight can cools and disperses gases leaving the barrel, muffling the firearm's audible report.
-]]
+ATT.Description = [[Lightweight can cools and disperses gases leaving the barrel, muffling the firearm's audible report.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -57,9 +55,7 @@ ATT = {}
 ATT.PrintName = [[Short Barrel]]
 ATT.CompactName = [[SHORT]]
 ATT.Icon = Material("entities/bo1_atts/bocw/atts_ak5/barrels/mix_pro.png", "mips smooth")
-ATT.Description = [[
-    Short barrel
-]]
+ATT.Description = [[Short frame tube for the STG.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -92,8 +88,7 @@ ATT = {}
 ATT.PrintName = [[MP40 32 Round 9mm Mag]]
 ATT.CompactName = [[32 9MM]]
 ATT.Icon = Material("entities/bo1_atts/ammo/ext_mag.png")
-ATT.Description = [[Inexplicable 9x19mm conversion for the StG-44 using 32-round box magazines from the MP40.
-
+ATT.Description = [[Inexplicable 9x19mm conversion for the StG-44 using 32 round magazines from the MP40.
 The pistol cartridge reduces long range stopping power significantly, but has less recoil and can be fired much faster.]]
 ATT.Pros = {}
 ATT.Cons = {}

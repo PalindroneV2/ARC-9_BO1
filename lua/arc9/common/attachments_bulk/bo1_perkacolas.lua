@@ -5,9 +5,7 @@ ATT = {}
 ATT.PrintName = [[Speed Cola]]
 ATT.CompactName = [[SPEED]]
 ATT.Icon = Material("entities/bo1_atts/perkacola/speed_cola.png")
-ATT.Description = [[
-    Reload speed is halved.
-]]
+ATT.Description = [[Halves the reload speed of all guns.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -25,9 +23,7 @@ ATT = {}
 ATT.PrintName = [[Stamin-Up]]
 ATT.CompactName = [[STAMINA]]
 ATT.Icon = Material("entities/bo1_atts/perkacola/stamin_up.png")
-ATT.Description = [[
-    10% Higher Overall Speed.
-]]
+ATT.Description = [[10% higher overall speed.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -45,9 +41,7 @@ ATT = {}
 ATT.PrintName = [[Double Tap I]]
 ATT.CompactName = [[DT I]]
 ATT.Icon = Material("entities/bo1_atts/perkacola/double_tap1.png")
-ATT.Description = [[
-    33% Fire Rate increase.
-]]
+ATT.Description = [[33% fire rate increase.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -66,9 +60,7 @@ ATT = {}
 ATT.PrintName = [[Double Tap II]]
 ATT.CompactName = [[DT II]]
 ATT.Icon = Material("entities/bo1_atts/perkacola/double_tap2.png")
-ATT.Description = [[
-    Double damage dealt from firing twice the bullets.
-]]
+ATT.Description = [[Double the damage dealt from firing twice the bullets.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -87,9 +79,7 @@ ATT = {}
 ATT.PrintName = [[Deadshot Daiquiri]]
 ATT.CompactName = [[DEADSHOT]]
 ATT.Icon = Material("entities/bo1_atts/perkacola/deadshot.png")
-ATT.Description = [[
-    Double damage dealt from firing twice the bullets.
-]]
+ATT.Description = [[Increases hipfire accuracy.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -109,9 +99,7 @@ ATT = {}
 ATT.PrintName = [[Juggernog]]
 ATT.CompactName = [[JUG]]
 ATT.Icon = Material("entities/bo1_atts/perkacola/juggernog.png")
-ATT.Description = [[
-    Gain 60% resistance to damage.
-]]
+ATT.Description = [[Gain 60% resistance to damage.]]
 ATT.Pros = {
     "+ 60% Resistance to all damage."
 }
@@ -130,9 +118,8 @@ ATT = {}
 ATT.PrintName = [[PhD Flopper]]
 ATT.CompactName = [[PHD]]
 ATT.Icon = Material("entities/bo1_atts/perkacola/phd_flopper.png")
-ATT.Description = [[
-    Gain complete resistance to explosives and fall damage. Falling from any height that would damage the player triggers an explosion.
-]]
+ATT.Description = [[Gain complete resistance to explosives and fall damage.
+Falling from any height that would damage the player triggers an explosion.]]
 ATT.Pros = {
     "+ Immunity to explosive damage."
 }
@@ -151,9 +138,7 @@ ATT = {}
 ATT.PrintName = [[Vulture Aid]]
 ATT.CompactName = [[VULTURE]]
 ATT.Icon = Material("entities/bo1_atts/perkacola/vulture_aid.png")
-ATT.Description = [[
-    Enemies drop ammo pack on death.
-]]
+ATT.Description = [[Enemies drop ammo pack on death.]]
 ATT.Pros = {
     "+ Immunity to explosive damage."
 }

@@ -1,11 +1,8 @@
 ATT.PrintName = "M32 Rangefinder Optic"
 ATT.CompactName = [[M32 RF]]
 ATT.Icon = Material("entities/bo1_atts/optics/bo2_tfinder.png", "mips smooth")
-ATT.Description = [[
-    Typical holograpic sight which uses a holographic reticle for faster sight aqusition.
-
-    Belongs to Black Ops II.
-]]
+ATT.Description = [[Typical holograpic sight which uses a holographic reticle for faster sight aqusition.
+Belongs to Black Ops II.]]
 ATT.Pros = {
     "+ Clearer sight picture"
 }

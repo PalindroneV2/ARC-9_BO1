@@ -5,9 +5,7 @@ ATT = {}
 ATT.PrintName = [[40mm NATO DUD]]
 ATT.CompactName = [[DUD]]
 ATT.Icon = Material("entities/bo1_atts/ammo/FMJ.png")
-ATT.Description = [[
-    A dud?!
-]]
+ATT.Description = [[A dud?!]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0

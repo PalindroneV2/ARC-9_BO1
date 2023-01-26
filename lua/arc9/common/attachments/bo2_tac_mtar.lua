@@ -1,11 +1,8 @@
 ATT.PrintName = "MTAR Laser Pointer"
 ATT.CompactName = [[MTAR]]
 ATT.Icon = Material("entities/bo1_atts/tactical/bo2_laser.png", "mips smooth")
-ATT.Description = [[
-    Tacical laser pointer. Tighter aim when firing from hip, less dispersion when moving.
-
-    Belongs to Black Ops II.
-]]
+ATT.Description = [[Tacical laser pointer. Tighter aim when firing from hip, less dispersion when moving.
+Belongs to Black Ops II.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 1

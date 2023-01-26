@@ -90,7 +90,7 @@ ATT = {}
 ATT.PrintName = [[RIS Handguard]]
 ATT.CompactName = [[RIS]]
 ATT.Icon = Material("entities/bo1_atts/barrel/barrel.png")
-ATT.Description = [[Three-rail RIS Handguard grants additional attachment points.]]
+ATT.Description = [[Three-rail RIS handguard grants additional attachment points.]]
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
@@ -171,7 +171,7 @@ ATT = {}
 ATT.PrintName = [[10x25mm 30 Round Magazine]]
 ATT.CompactName = [[10mm 30RND]]
 ATT.Icon = Material("entities/bo1_atts/ammo/ext_mag.png")
-ATT.Description = [[10mm Conversion for the MP5. 35 round mag.]]
+ATT.Description = [[10mm Conversion for the MP5 with 35 rounds.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -216,7 +216,7 @@ ATT = {}
 ATT.PrintName = [[10x25mm 20 Round Magaizne]]
 ATT.CompactName = [[10mm 20 RND]]
 ATT.Icon = Material("entities/bo1_atts/ammo/ext_mag.png")
-ATT.Description = [[10mm Conversion for the MP5. 25 round mag.]]
+ATT.Description = [[10mm Conversion for the MP5 with 25 rounds.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -280,8 +280,7 @@ ATT = {}
 ATT.PrintName = [[9x19mm 25 Round Magazine]]
 ATT.CompactName = [[25 RND]]
 ATT.Icon = Material("entities/bo1_atts/ammo/ext_mag.png")
-ATT.Description = [[9x19mm conversion for the AR-15 using 32-round box magazines.
-
+ATT.Description = [[9x19mm conversion for the AR-15 using 25 round magazine.
 The pistol cartridge reduces long range stopping power significantly, but has less recoil and can be fired much faster.]]
 ATT.Pros = {}
 ATT.Cons = {}
@@ -438,9 +437,7 @@ ATT = {}
 ATT.PrintName = [[Integral MP5 Suppressor]]
 ATT.CompactName = [[MP5SD]]
 ATT.Icon = Material("materials/entities/bo1_atts/barrel/bo1_suppressor.png")
-ATT.Description = [[
-    Lightweight can cools and disperses gases leaving the barrel, muffling the firearm's audible report.
-]]
+ATT.Description = [[Lightweight can cools and disperses gases leaving the barrel, muffling the firearm's audible report.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0

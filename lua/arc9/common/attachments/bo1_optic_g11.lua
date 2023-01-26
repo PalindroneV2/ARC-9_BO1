@@ -1,11 +1,8 @@
 ATT.PrintName = "G11 Optic (4x)"
 ATT.CompactName = [[G11 Scope]]
 ATT.Icon = Material("entities/bo1_atts/optics/bo1_g11scope.png", "mips smooth")
-ATT.Description = [[
-    Medium range combat scope for improved precision at longer ranges.
-
-    bo.desc
-]]
+ATT.Description = [[Medium range combat scope for improved precision at longer ranges.
+Belongs to Black Ops.]]
 ATT.Pros = {
     "+ 3x Zoom",
     "+ Clearer sight picture"

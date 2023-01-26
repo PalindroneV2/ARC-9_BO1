@@ -1,8 +1,7 @@
-ATT.PrintName = [[AK5 INTERNAL GRIP]]
+ATT.PrintName = [[Ak5 Internal Grip]]
 ATT.CompactName = [[GRIP]]
 ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m4.png", "mips smooth")
-ATT.Description = [[None
-]]
+ATT.Description = [[None]]
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - BO1 Attachments"

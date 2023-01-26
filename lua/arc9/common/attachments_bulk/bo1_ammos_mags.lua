@@ -5,9 +5,7 @@ ATT = {}
 ATT.PrintName = [[Extended Magazine]]
 ATT.CompactName = [[EXT MAG]]
 ATT.Icon = Material("entities/bo1_atts/ammo/ext_mag.png")
-ATT.Description = [[
-Extended magazine holds 50%  more ammunition.
-]]
+ATT.Description = [[Holds 50% more ammunition.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 5
@@ -27,9 +25,7 @@ ATT = {}
 ATT.PrintName = [[Fast Mags]]
 ATT.CompactName = [[FAST]]
 ATT.Icon = Material("entities/bo1_atts/ammo/dual_mag.png")
-ATT.Description = [[
-    Improves reload-speed. Only available for certain weapons.
-]]
+ATT.Description = [[Improves reloading speed. Only available for certain weapons.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -49,7 +45,7 @@ ATT.PrintName = [[PM-63 32 Round Magazine]]
 ATT.CompactName = [[32 RND]]
 ATT.Icon = Material("entities/bo1_atts/ammo/ext_mag.png")
 ATT.Description = [[Long stick magazine that more than doubles capacity.
-Hinders the weapon's handling somewhat.]]
+Hinders the weapons handling somewhat.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 5
@@ -136,9 +132,7 @@ ATT = {}
 ATT.PrintName = [[50 Round Drum Magazine]]
 ATT.CompactName = [[DRUM]]
 ATT.Icon = Material("entities/bo1_atts/ammo/ext_mag.png")
-ATT.Description = [[
-Extended magazine holds 50%  more ammunition.
-]]
+ATT.Description = [[High-capacity magazine that hold 50 rounds.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 5
@@ -158,7 +152,8 @@ ATT = {}
 ATT.PrintName = [[PPSh-41 35rnd Stick Magazine]]
 ATT.CompactName = [[35 RND]]
 ATT.Icon = Material("entities/bo1_atts/ammo/ext_mag.png")
-ATT.Description = [[Lightweight stick magazine. Dramatically improves the weapon's handling.]]
+ATT.Description = [[Lightweight stick magazine.
+Dramatically improves the weapons handling.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 5
@@ -177,12 +172,10 @@ ARC9.LoadAttachment(ATT, "waw_ppsh_mag_stick")
 
 ATT = {}
 
-ATT.PrintName = [[Speed Loader]]
+ATT.PrintName = [[Speedloader]]
 ATT.CompactName = [[FAST]]
 ATT.Icon = Material("entities/bo1_atts/ammo/speed_loader.png")
-ATT.Description = [[
-Reliably use speed-loader during all reloads.
-]]
+ATT.Description = [[Reliably use speedloader during all reloads.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -201,10 +194,8 @@ ATT = {}
 ATT.PrintName = [[12 Gauge 00 Buckshot]]
 ATT.CompactName = [[00 BUCK]]
 ATT.Icon = Material("entities/bo1_atts/ammo/FMJ.png")
-ATT.Description = [[
-    Improves hit probability on shotguns by increasing the ammount of projectiles insidde the shells. Each of the pellets does reduced damage by itself.
-    Range is greatly reduced and spread is increased.
-]]
+ATT.Description = [[Improves hit probability on shotguns by increasing the ammount of projectiles insidde the shells. Each of the pellets does reduced damage by itself.
+Range is greatly reduced and spread is increased.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -227,9 +218,8 @@ ATT = {}
 ATT.PrintName = [[12 Gauge Slug]]
 ATT.CompactName = [[SLUG]]
 ATT.Icon = Material("entities/bo1_atts/ammo/FMJ.png")
-ATT.Description = [[
-    Improves accuracy and stopping power at the cost of hit probability from buckshot. Less effective in close quarters if you don't aim properly.
-]]
+ATT.Description = [[Improves accuracy and stopping power at the cost of hit probability from buckshot.
+Less effective in close quarters if you don't aim properly.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -252,9 +242,7 @@ ATT = {}
 ATT.PrintName = [[Pack-A-Punched]]
 ATT.CompactName = [[PAP]]
 ATT.Icon = Material("entities/bo1_atts/ammo/pack_a_punch.png", "mips smooth")
-ATT.Description = [[
-Putting your weapon through a strange machine infuses it with the power of element 115.
-]]
+ATT.Description = [[Putting your weapon through a strange machine infuses it with the power of element 115.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 5
@@ -294,9 +282,7 @@ ATT = {}
 ATT.PrintName = [[Pack-A-Punched]]
 ATT.CompactName = [[PAP]]
 ATT.Icon = Material("entities/bo1_atts/ammo/pack_a_punch.png", "mips smooth")
-ATT.Description = [[
-Putting your weapon through a strange machine infuses it with the power of element 115.
-]]
+ATT.Description = [[Putting your weapon through a strange machine infuses it with the power of element 115.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 5
@@ -332,9 +318,7 @@ ATT = {}
 ATT.PrintName = [[Pack-A-Punched]]
 ATT.CompactName = [[PAP]]
 ATT.Icon = Material("entities/bo1_atts/ammo/pack_a_punch.png", "mips smooth")
-ATT.Description = [[
-Putting your weapon through a strange machine infuses it with the power of element 115.
-]]
+ATT.Description = [[Putting your weapon through a strange machine infuses it with the power of element 115.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 5
@@ -371,9 +355,7 @@ ATT = {}
 ATT.PrintName = [[Pack-A-Punched]]
 ATT.CompactName = [[PAP]]
 ATT.Icon = Material("entities/bo1_atts/ammo/pack_a_punch.png", "mips smooth")
-ATT.Description = [[
-Putting your weapon through a strange machine infuses it with the power of element 115.
-]]
+ATT.Description = [[Putting your weapon through a strange machine infuses it with the power of element 115.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 5
@@ -410,9 +392,7 @@ ATT = {}
 ATT.PrintName = [[Acid Gat Kit]]
 ATT.CompactName = [[ACID]]
 ATT.Icon = Material("entities/bo1_atts/ammo/acid_kit.png")
-ATT.Description = [[
-    Crossbow bolts fitted with custom electronic high-explosive warheads.
-]]
+ATT.Description = [[Crossbow bolts fitted with custom electronic high-explosive warheads.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -443,9 +423,7 @@ ATT = {}
 ATT.PrintName = [[Explosive Crossbow Bolt]]
 ATT.CompactName = [[EXPL]]
 ATT.Icon = Material("entities/bo1_atts/ammo/FMJ.png")
-ATT.Description = [[
-    Crossbow bolts fitted with custom electronic high-explosive warheads.
-]]
+ATT.Description = [[Crossbow bolts fitted with custom electronic high-explosive warheads.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -463,9 +441,7 @@ ATT = {}
 ATT.PrintName = [[40mm NATO DUD]]
 ATT.CompactName = [[DUD]]
 ATT.Icon = Material("entities/bo1_atts/ammo/FMJ.png")
-ATT.Description = [[
-    A dud?!
-]]
+ATT.Description = [[A dud?!]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -483,9 +459,7 @@ ATT = {}
 ATT.PrintName = [[M67 Fragmentation Grenade]]
 ATT.CompactName = [[M67 Frag]]
 ATT.Icon = Material("entities/bo1_atts/ammo/FMJ.png")
-ATT.Description = [[
-    Somehow fire a standard fragmentation grenade.
-]]
+ATT.Description = [[Somehow fire a standard fragmentation grenade.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0

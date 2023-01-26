@@ -6,7 +6,6 @@ ATT.PrintName = "S-1-F FCG"
 ATT.CompactName = "AUTO"
 ATT.Icon = Material("entities/bo1_atts/other/select_fire.png")
 ATT.Description = [[Fully Automatic fire control group.
-
 Recoil control and spread increases.]]
 ATT.Pros = {}
 ATT.Cons = {
@@ -41,7 +40,6 @@ ATT.PrintName = "S-1-3 FCG"
 ATT.CompactName = "BURST"
 ATT.Icon = Material("entities/bo1_atts/other/select_fire.png")
 ATT.Description = [[Standard 3-round burst fire control group.
-
 Greatly improves recoil control and reduces spread.]]
 ATT.Pros = {}
 ATT.Cons = {
@@ -78,8 +76,7 @@ ATT.PrintName = "Rapid Fire"
 ATT.CompactName = "RAPID"
 ATT.Icon = Material("entities/bo1_atts/other/rapid_fire.png")
 ATT.Description = [[Fire Control Group modification that allows for faster rate of fire.
-
-Imrpoves rate of fire but recoil control suffers.]]
+Improves rate of fire but recoil control suffers.]]
 ATT.Pros = {}
 ATT.Cons = {
 }
@@ -103,8 +100,7 @@ ATT.PrintName = "Sporting FCG"
 ATT.CompactName = "SEMI"
 ATT.Icon = Material("entities/bo1_atts/other/select_fire.png")
 ATT.Description = [[Competition grade semi-automatic fire group.
-
-Its high quality, finely machined parts make this the best option for marksmanship.]]
+It's high quality, finely machined parts make this the best option for marksmanship.]]
 ATT.Pros = {}
 ATT.Cons = {
 }
@@ -163,7 +159,6 @@ ATT.PrintName = "AN/M2 Stinger"
 ATT.CompactName = "STINGER"
 ATT.Icon = Material("entities/bo1_atts/other/rapid_fire.png")
 ATT.Description = [[Built from the remains of an aircraft machine gun, an M1 Garand and a BAR. Storm the beaches of Iwo Jima in style.
-
 However now that it isn't airborne, sustained fire may heat up the weapon too much.]]
 ATT.Pros = {}
 ATT.Cons = {
@@ -187,10 +182,8 @@ ATT = {}
 ATT.PrintName = "Group 935 Rapid Fire Modification"
 ATT.CompactName = "G935"
 ATT.Icon = Material("entities/bo1_atts/other/rapid_fire.png")
-ATT.Description = [[
-Group 935 has learned much from the manipulation of matter through element 115.
-This modification allows the MG-08 to fire 50% faster than base RPM.
-]]
+ATT.Description = [[Group 935 has learned much from the manipulation of matter through element 115.
+This modification allows the MG-08 to fire 50% faster than base RPM.]]
 ATT.Pros = {}
 ATT.Cons = {
 }

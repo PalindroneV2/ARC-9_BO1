@@ -1,9 +1,7 @@
 ATT.PrintName = [[Short Barrel]]
 ATT.CompactName = [[SHORT]]
 ATT.Icon = Material("entities/bo1_atts/bocw/atts_ak5/barrels/long_pro.png", "mips smooth")
-ATT.Description = [[
-    Short barrel
-]]
+ATT.Description = [[Short frame tube for the M27.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0

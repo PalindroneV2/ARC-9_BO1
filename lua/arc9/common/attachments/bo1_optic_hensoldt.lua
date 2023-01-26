@@ -1,11 +1,8 @@
 ATT.PrintName = "Hensoldt Sniper Scope"
 ATT.CompactName = [[PSG-1]]
 ATT.Icon = Material("entities/bo1_atts/optics/bo1_vzoom.png", "mips smooth")
-ATT.Description = [[
-    Long range combat scope with variable zoom.
-
-    bo.desc
-]]
+ATT.Description = [[Long range combat scope with variable zoom.
+Belongs to Black Ops.]]
 ATT.Pros = {
     "+ 3x Zoom",
     "+ Clearer sight picture"

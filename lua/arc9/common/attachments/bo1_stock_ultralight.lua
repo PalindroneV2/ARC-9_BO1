@@ -1,8 +1,7 @@
 ATT.PrintName = "Ultralight Stock"
 ATT.CompactName = "UL Stock"
 ATT.Icon = Material("entities/bo1_atts/other/stock.png")
-ATT.Description = [[
-Very lightweight and reduces hip fire spread, but barely provides any recoil control.]]
+ATT.Description = [[Very lightweight and reduces hip fire spread, but barely provides any recoil control.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 4
