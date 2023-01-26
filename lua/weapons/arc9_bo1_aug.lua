@@ -384,7 +384,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(15, 0, 3.15),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_muzzle"},
+        Category = {"cod_muzzle"},
         Icon_Offset = Vector(2, 0, 0.35)
     },
     {

@@ -362,7 +362,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
 
     if attached["ak74"] and barrel == 0 then
         vm:SetBodygroup(8, 1)
-        if attached["bo1_muzzle"] then
+        if attached["cod_muzzle"] then
             vm:SetBodygroup(8, 0)
         end
     end
@@ -666,7 +666,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(21.7, 0, 1),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_muzzle"},
+        Category = {"cod_muzzle"},
         ExcludeElements = {"barrel_krinkov", "barrel_rpk", "barrel_asval"},
     },
     {

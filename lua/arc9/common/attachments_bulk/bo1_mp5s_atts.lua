@@ -34,7 +34,7 @@ ATT.Attachments = {
         Scale = Vector(1,1,1),
         Pos = Vector(0, 0.15, 2.2),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_muzzle_pistol", "bo1_muzzle_smg"},
+        Category = {"cod_muzzle_pistol", "cod_muzzle_smg"},
     },
     {
         PrintName = "Magazine",
@@ -150,7 +150,7 @@ ATT.Attachments = {
         Scale = Vector(1,1,1),
         Pos = Vector(-4, 0.15, 2.05),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_muzzle_smg", "bo1_muzzle_pistol", "bo1_mp5_sd"},
+        Category = {"cod_muzzle_smg", "cod_muzzle_pistol", "bo1_mp5_sd"},
     },
     {
         PrintName = "Underbarrel",

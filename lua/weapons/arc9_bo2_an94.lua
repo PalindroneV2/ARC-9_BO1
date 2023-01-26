@@ -318,7 +318,7 @@ SWEP.Attachments = {
         Bone = "j_barrel",
         Pos = Vector(8, 0, -1),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_muzzle"},
+        Category = {"cod_muzzle"},
     },
     {
         PrintName = "Underbarrel",

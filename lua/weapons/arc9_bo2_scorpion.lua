@@ -304,7 +304,7 @@ SWEP.Attachments = {
         Scale = Vector(1.2,1.2,1.2),
         Pos = Vector(15.7, 0, 1.65),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_muzzle_pistol"},
+        Category = {"cod_muzzle_pistol"},
     },
     {
         PrintName = "Underbarrel",

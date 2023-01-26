@@ -16,7 +16,7 @@ ATT.Model = "models/weapons/arc9/atts/bo1_suppressor.mdl"
 ATT.Scale = Vector(1, 0.75, 0.75)
 ATT.ModelOffset = Vector(0, 0, 0)
 
-ATT.Category = {"bo1_muzzle_pistol"}
+ATT.Category = {"cod_muzzle_pistol"}
 ATT.MuzzleDevice = true
 ATT.Silencer = true
 ATT.MuzzleParticle = "muzzleflash_suppressed"
@@ -37,7 +37,7 @@ ATT.RangeMaxMult = 1.1
 ATT.RangeMinMult = 0.9
 ATT.PhysBulletMuzzleVelocityMult = 1.1
 
-ARC9.LoadAttachment(ATT, "bo1_muzzle_suppressor_pistol_us")
+ARC9.LoadAttachment(ATT, "cod_muzzle_suppressor_pistol_us")
 
 ATT = {}
 
@@ -55,7 +55,7 @@ ATT.Model = "models/weapons/arc9/atts/bo1_suppressor.mdl"
 ATT.Scale = Vector(1.25, 1, 1)
 ATT.ModelOffset = Vector(0.4, 0, 0)
 
-ATT.Category = {"bo1_muzzle"}
+ATT.Category = {"cod_muzzle"}
 ATT.MuzzleDevice = true
 ATT.Silencer = true
 ATT.MuzzleParticle = "muzzleflash_suppressed"
@@ -76,7 +76,7 @@ ATT.RangeMaxMult = 1.1
 ATT.RangeMinMult = 0.9
 ATT.PhysBulletMuzzleVelocityMult = 1.1
 
-ARC9.LoadAttachment(ATT, "bo1_muzzle_suppressor_us")
+ARC9.LoadAttachment(ATT, "cod_muzzle_suppressor_us")
 
 ATT = {}
 
@@ -94,7 +94,7 @@ ATT.Model = "models/weapons/arc9/atts/bo1_soviet_supp.mdl"
 ATT.Scale = Vector(1.25, 1.15, 1.15)
 ATT.ModelOffset = Vector(0.4, 0, 0.025)
 
-ATT.Category = {"bo1_muzzle"}
+ATT.Category = {"cod_muzzle"}
 ATT.MuzzleDevice = true
 ATT.Silencer = true
 ATT.MuzzleParticle = "muzzleflash_suppressed"
@@ -115,7 +115,7 @@ ATT.RangeMaxMult = 1.1
 ATT.RangeMinMult = 0.9
 ATT.PhysBulletMuzzleVelocityMult = 1.1
 
-ARC9.LoadAttachment(ATT, "bo1_muzzle_suppressor_ussr")
+ARC9.LoadAttachment(ATT, "cod_muzzle_suppressor_ussr")
 
 ATT = {}
 
@@ -133,7 +133,7 @@ ATT.Model = "models/weapons/arc9/atts/bo2_suppressor_80s_1.mdl"
 ATT.Scale = Vector(1, 1, 1)
 ATT.ModelOffset = Vector(-0.25, 0, 0)
 
-ATT.Category = {"bo1_muzzle_pistol"}
+ATT.Category = {"cod_muzzle_pistol"}
 ATT.MuzzleDevice = true
 ATT.Silencer = true
 ATT.MuzzleParticle = "muzzleflash_suppressed"
@@ -171,7 +171,7 @@ ATT.Free = false
 ATT.Model = "models/weapons/arc9/atts/bo2_suppressor_80s_2.mdl"
 ATT.Scale = Vector(1, 0.9, 0.9)
 
-ATT.Category = {"bo1_muzzle"}
+ATT.Category = {"cod_muzzle"}
 ATT.MuzzleDevice = true
 ATT.Silencer = true
 ATT.MuzzleParticle = "muzzleflash_suppressed"
@@ -209,7 +209,7 @@ ATT.Free = false
 ATT.Model = "models/weapons/arc9/atts/bo2_suppressor_80s_3.mdl"
 ATT.Scale = Vector(1, 0.9, 0.9)
 
-ATT.Category = {"bo1_muzzle"}
+ATT.Category = {"cod_muzzle"}
 ATT.MuzzleDevice = true
 ATT.Silencer = true
 ATT.MuzzleParticle = "muzzleflash_suppressed"
@@ -247,7 +247,7 @@ ATT.Free = false
 ATT.Model = "models/weapons/arc9/atts/bo2_suppressor_ar1.mdl"
 ATT.Scale = Vector(1, 0.8, 0.8)
 
-ATT.Category = {"bo1_muzzle"}
+ATT.Category = {"cod_muzzle"}
 ATT.MuzzleDevice = true
 ATT.Silencer = true
 ATT.MuzzleParticle = "muzzleflash_suppressed"
@@ -285,7 +285,7 @@ ATT.Free = false
 ATT.Model = "models/weapons/arc9/atts/bo2_suppressor_ar2.mdl"
 ATT.Scale = Vector(1, 0.8, 0.8)
 
-ATT.Category = {"bo1_muzzle"}
+ATT.Category = {"cod_muzzle"}
 ATT.MuzzleDevice = true
 ATT.Silencer = true
 ATT.MuzzleParticle = "muzzleflash_suppressed"
@@ -323,7 +323,7 @@ ATT.Free = false
 ATT.Model = "models/weapons/arc9/atts/bo2_suppressor_ar3.mdl"
 ATT.Scale = Vector(1, 0.8, 0.8)
 
-ATT.Category = {"bo1_muzzle"}
+ATT.Category = {"cod_muzzle"}
 ATT.MuzzleDevice = true
 ATT.Silencer = true
 ATT.MuzzleParticle = "muzzleflash_suppressed"
@@ -361,7 +361,7 @@ ATT.Free = false
 ATT.Model = "models/weapons/arc9/atts/bo2_suppressor_ar4.mdl"
 ATT.Scale = Vector(1, 0.9, 0.9)
 
-ATT.Category = {"bo1_muzzle"}
+ATT.Category = {"cod_muzzle"}
 ATT.MuzzleDevice = true
 ATT.Silencer = true
 ATT.MuzzleParticle = "muzzleflash_suppressed"
@@ -399,7 +399,7 @@ ATT.Free = false
 ATT.Model = "models/weapons/arc9/atts/bo2_suppressor_shotty1.mdl"
 ATT.Scale = Vector(1, 1, 1)
 
-ATT.Category = {"bo1_muzzle_shotty"}
+ATT.Category = {"cod_muzzle_shotty"}
 ATT.MuzzleDevice = true
 ATT.Silencer = true
 ATT.MuzzleParticle = "muzzleflash_suppressed"
@@ -438,7 +438,7 @@ ATT.Model = "models/weapons/arc9/atts/bo2_suppressor_smg1.mdl"
 ATT.Scale = Vector(1, 0.9, 0.9)
 ATT.ModelOffset = Vector(-0.28, 0, 0)
 
-ATT.Category = {"bo1_muzzle_pistol", "bo1_muzzle_smg"}
+ATT.Category = {"cod_muzzle_pistol", "cod_muzzle_smg"}
 ATT.MuzzleDevice = true
 ATT.Silencer = true
 ATT.MuzzleParticle = "muzzleflash_suppressed"

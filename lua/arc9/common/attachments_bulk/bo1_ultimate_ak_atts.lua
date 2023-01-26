@@ -42,7 +42,7 @@ ATT.Attachments = {
         Scale = Vector(1.5, 1.5, 1.5),
         Pos = Vector(-12.5, 0, 0.8),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_muzzle"},
+        Category = {"cod_muzzle"},
     },
     {
         PrintName = "Bipod",
@@ -102,7 +102,7 @@ ATT.Attachments = {
         Bone = "j_gun",
         Pos = Vector(-2.3, 0, 0.95),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_muzzle"},
+        Category = {"cod_muzzle"},
     },
 }
 

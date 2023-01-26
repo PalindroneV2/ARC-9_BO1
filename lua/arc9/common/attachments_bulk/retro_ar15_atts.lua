@@ -37,7 +37,7 @@ ATT.Attachments = {
         Pos = Vector(-4.9, 0, -0.57),
         Icon_Offset = Vector(3, 0, 0),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_muzzle"},
+        Category = {"cod_muzzle"},
         ExcludeElements = {"is_patriot","9mm_mag"},
     },
     {
@@ -48,7 +48,7 @@ ATT.Attachments = {
         Pos = Vector(-5.25, 0, -0.57),
         Icon_Offset = Vector(3, 0, 0),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_muzzle_pistol","bo1_muzzle_smg"},
+        Category = {"cod_muzzle_pistol","cod_muzzle_smg"},
         RequireElements = {"9mm_mag"},
         ExcludeElements = {"is_patriot"},
     },
@@ -109,7 +109,7 @@ ATT.Attachments = {
         Bone = "j_gun",
         Pos = Vector(-4.7, 0, -0.5),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_muzzle_pistol"},
+        Category = {"cod_muzzle_pistol"},
         ExcludeElements = {"is_patriot"},
     },
     {
@@ -177,7 +177,7 @@ ATT.Attachments = {
         Bone = "j_gun",
         Pos = Vector(-7, 0, -0.5),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_muzzle"},
+        Category = {"cod_muzzle"},
         ExcludeElements = {"is_patriot"},
     },
     {
@@ -261,7 +261,7 @@ ATT.Attachments = {
         Bone = "j_gun",
         Pos = Vector(-8.1, 0, -0.5),
         Ang = Angle(0, 0, 0),
-        Category = {"retro_ar15_muzzle", "bo1_muzzle"},
+        Category = {"retro_ar15_muzzle", "cod_muzzle"},
     },
     {
         PrintName = "Cosmetic II",
@@ -363,7 +363,7 @@ ATT.Attachments = {
         Bone = "j_gun",
         Pos = Vector(-10.75, 0, -0.5),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_muzzle"},
+        Category = {"cod_muzzle"},
     },
     {
         PrintName = "Cosmetic II",
@@ -445,7 +445,7 @@ ATT.Attachments = {
         Bone = "j_gun",
         Pos = Vector(-12.75, 0, -0.5),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_muzzle"},
+        Category = {"cod_muzzle"},
     },
     {
         PrintName = "Gasblock",
@@ -2238,7 +2238,7 @@ ATT.ExcludeElements = {
     "retro_ar15_upper",
     "cod_rail_underbarrel",
     "cod_rail_riser",
-    "bo1_muzzle",
+    "cod_muzzle",
     "cod_optic",
     -- "retro_ar15_lower",
 }

@@ -60,7 +60,7 @@ ATT.Attachments = {
         Scale = Vector(1,0.8,0.8),
         Pos = Vector(-4.7, 0, -0.05),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_muzzle_pistol"},
+        Category = {"cod_muzzle_pistol"},
     },
 }
 
