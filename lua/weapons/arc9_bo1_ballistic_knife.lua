@@ -199,6 +199,7 @@ SWEP.NoShellEject = true
 SWEP.HoldTypeHolstered = "passive"
 SWEP.HoldType = "fist"
 SWEP.HoldTypeSights = "knife"
+SWEP.HoldTypeSprint = "fist"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SHOTGUN
 SWEP.NonTPIKAnimReload = ACT_HL2MP_GESTURE_RELOAD_KNIFE
