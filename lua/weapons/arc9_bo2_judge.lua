@@ -27,7 +27,7 @@ SWEP.ViewModel = "models/weapons/arc9/c_bo2_judge.mdl"
 SWEP.WorldModel = "models/weapons/arc9/w_bo2_judge.mdl"
 SWEP.MirrorVMWM = true
 SWEP.NoTPIKVMPos = true
-SWEP.WorldModelMirror = "models/weapons/arc9/w_bo2_judge.mdl"
+SWEP.WorldModelMirror = "models/weapons/arc9/c_bo2_judge.mdl"
 SWEP.WorldModelOffset = {
     Pos        =    Vector(-8.5, 3.25, -4.5),
     Ang        =    Angle(-10, -3, 180),
@@ -188,8 +188,8 @@ SWEP.HoldTypeHolstered = "passive"
 SWEP.HoldType = "revolver"
 SWEP.HoldTypeSights = "revolver"
 
-SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_PISTOL
-SWEP.NonTPIKAnimReload = ACT_HL2MP_GESTURE_RELOAD_PISTOL
+SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_REVOLVER
+SWEP.NonTPIKAnimReload = ACT_HL2MP_GESTURE_RELOAD_REVOLVER
 
 SWEP.ActivePos = Vector(0, -2, -2)
 SWEP.ActiveAng = Angle(0, 0, -5)
@@ -354,6 +354,15 @@ SWEP.Attachments = {
     },
 }
 
+SWEP.HideBones = {
+    "tag_clip_full",
+    "tag_speedloader",
+}
+SWEP.ReloadHideBoneTables = {
+    [1] = {"tag_clip_full"},
+    [2] = {"tag_speedloader"},
+}
+
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
@@ -430,28 +439,28 @@ SWEP.Animations = {
             {s = "ARC9_BO1.Python_Close", t = 80 / 40},
         },
     },
-    ["reload_start_speed"] = {
-        Source = "reload_in_speed",
-        Time = 2.4 * (30 / 40),
-        RestoreAmmo = 5,
-        MinProgress = 1,
-        EventTable = {
-            {s = "ARC9_BO1.Python_Open", t = 20 / 40},
-            {s = "ARC9_BO2.Judge_Empty", t = 40 / 40},
-            {s = "ARC9_BO1.Python_Load", t = 60 / 40},
-        },
-    },
-    ["reload_insert_speed"] = {
-        Source = "reload_loop_speed",
-        Time = .033 * (30 / 40),
-    },
-    ["reload_finish_speed"] = {
-        Source = "reload_out_speed",
-        Time = 1.6 * (30 / 40),
-        EventTable = {
-            {s = "ARC9_BO1.Python_Close", t = 0.75 * (30 / 40)},
-        },
-    },
+    -- ["reload_start_speed"] = {
+    --     Source = "reload_in_speed",
+    --     Time = 2.4 * (30 / 40),
+    --     RestoreAmmo = 5,
+    --     MinProgress = 1,
+    --     EventTable = {
+    --         {s = "ARC9_BO1.Python_Open", t = 20 / 40},
+    --         {s = "ARC9_BO2.Judge_Empty", t = 40 / 40},
+    --         {s = "ARC9_BO1.Python_Load", t = 60 / 40},
+    --     },
+    -- },
+    -- ["reload_insert_speed"] = {
+    --     Source = "reload_loop_speed",
+    --     Time = .033 * (30 / 40),
+    -- },
+    -- ["reload_finish_speed"] = {
+    --     Source = "reload_out_speed",
+    --     Time = 1.6 * (30 / 40),
+    --     EventTable = {
+    --         {s = "ARC9_BO1.Python_Close", t = 0.75 * (30 / 40)},
+    --     },
+    -- },
     ["enter_sprint"] = {
         Source = "sprint_in",
         Time = 1,

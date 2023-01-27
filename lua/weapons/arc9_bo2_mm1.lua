@@ -288,6 +288,15 @@ SWEP.Attachments = {
     },
 }
 
+SWEP.HideBones = {
+    "j_ammo",
+    "j_round",
+}
+SWEP.ReloadHideBoneTables = {
+    [1] = {"j_ammo"},
+    [2] = {"j_round"},
+}
+
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",

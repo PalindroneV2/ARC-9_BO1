@@ -296,16 +296,11 @@ end
 
 SWEP.Hook_TranslateAnimation = function (self, anim)
     local attached = self:GetElements()
-
-    if (self:GetFiremodeName() == "SLAM") and (anim == "cycle") then
-        nanim = anim .. "_iron"
-    end
-
+    local animla = anim
     if attached["bo1_igrip"] then
-        nanim = anim .. "_grip"
+        animla = anim .. "_grip"
     end
-
-    return nanim
+    return animla
 end
 
 SWEP.Attachments = {
@@ -439,11 +434,23 @@ SWEP.Animations = {
         ShellEjectAt = 0.3,
         MinProgress = 22 / 35,
         EventTable = {
-            {s = "ARC9_BO1.MK_Back", t = 10 / 30},
-            {s = "ARC9_BO1.MK_Fwd", t = 14 / 30},
+            {s = "ARC9_BO1.MK_Back", t = 5 / 30},
+            {s = "ARC9_BO1.MK_Fwd", t = 10 / 30},
         },
     },
     ["cycle_iron"] = {
+        Source = {
+            "pump_ads",
+        },
+        Time = 20 / 25,
+        ShellEjectAt = 0.3,
+        MinProgress = 22 / 35,
+        EventTable = {
+            {s = "ARC9_BO1.MK_Back", t = 2 / 25},
+            {s = "ARC9_BO1.MK_Fwd", t = 9 / 25},
+        },
+    },
+    ["cycle_slam"] = {
         Source = {
             "pump_ads",
         },
@@ -561,11 +568,23 @@ SWEP.Animations = {
         ShellEjectAt = 10 / 35,
         MinProgress = 22 / 35,
         EventTable = {
-            {s = "ARC9_BO1.MK_Back", t = 10 / 30},
-            {s = "ARC9_BO1.MK_Fwd", t = 14 / 30},
+            {s = "ARC9_BO1.MK_Back", t = 5 / 30},
+            {s = "ARC9_BO1.MK_Fwd", t = 10 / 30},
         },
     },
     ["cycle_iron_grip"] = {
+        Source = {
+            "pump_ads_grip",
+        },
+        Time = 20 / 25,
+        ShellEjectAt = 5 / 35,
+        MinProgress = 22 / 35,
+        EventTable = {
+            {s = "ARC9_BO1.MK_Back", t = 2 / 25},
+            {s = "ARC9_BO1.MK_Fwd", t = 9 / 25},
+        },
+    },
+    ["cycle_grip_slam"] = {
         Source = {
             "pump_ads_grip",
         },

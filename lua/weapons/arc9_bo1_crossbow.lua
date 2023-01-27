@@ -323,6 +323,13 @@ SWEP.Attachments = {
     },
 }
 
+-- SWEP.HideBones = {
+--     "tag_clip",
+-- }
+SWEP.ReloadHideBoneTables = {
+    [1] = {"tag_clip"},
+}
+
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
