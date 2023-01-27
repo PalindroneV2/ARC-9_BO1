@@ -5,7 +5,7 @@ SWEP.SubCategory = "Shotguns"
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "KSG"
-SWEP.Class = "Shotgun"
+SWEP.Class = "Combat Shotgun"
 SWEP.Description = [[Unconventional 12 gauge pump action slug shotgun with a bullpup design. Fires a single slug for high damage at longer ranges.
 It has two magazine tubes that hold 7 rounds each, which gives this shotgun a massive advantage in ammo count.]]
 SWEP.Trivia = {
@@ -13,8 +13,8 @@ SWEP.Trivia = {
     Calibre = "12 Gauge",
     Mechanism = "Pump-Action",
     Country = "USA",
-    Year = 1950,
-    Games = [[Call of Duty: Black Ops II]]
+    Year = 2011,
+    Games = [[MW3,BO2]]
 }
 SWEP.Credits = {
     Author = "Palindrone"
@@ -263,7 +263,7 @@ SWEP.HookP_NameChange = function(self, name)
 
     local attached = self:GetElements()
 
-    local gunname = "Kel-Tec KSG-12"
+    local gunname = "KSG-12"
 
     if attached["bo1_pap"] then
         gunname = "Mist Maker"
@@ -319,6 +319,14 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"cod_optic"},
         InstalledElements = {"mount"}
+    },
+    {
+        PrintName = "Muzzle",
+        Bone = "j_gun",
+        Scale = Vector(1,1.15,1.15),
+        Pos = Vector(13.75, 0, 2.5),
+        Ang = Angle(0, 0, 0),
+        Category = {"cod_muzzle_shotty"},
     },
     {
         PrintName = "Underbarrel",
