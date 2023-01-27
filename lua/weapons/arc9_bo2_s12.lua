@@ -28,6 +28,7 @@ SWEP.ViewModel = "models/weapons/arc9/c_bo2_s12.mdl"
 SWEP.WorldModel = "models/weapons/arc9/w_bo2_s12.mdl"
 SWEP.WorldModelMirror = "models/weapons/arc9/w_bo2_s12.mdl"
 SWEP.MirrorVMWM = true
+SWEP.NoTPIKVMPos = false
 SWEP.WorldModelOffset = {
     Pos        =    Vector(-3.3, 4, -5.8),
     Ang        =    Angle(-7, 1, 180),

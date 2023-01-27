@@ -27,6 +27,7 @@ SWEP.ViewModel = "models/weapons/arc9/c_bo2_blundergat.mdl"
 SWEP.WorldModel = "models/weapons/arc9/w_bo2_blundergat.mdl"
 SWEP.MirrorWorldModel = "models/weapons/arc9/w_bo2_blundergat.mdl"
 SWEP.MirrorVMWM = true
+SWEP.NoTPIKVMPos = false
 SWEP.WorldModelOffset = {
     Pos        =    Vector(-3, 4.5, -4.1),
     Ang        =    Angle(-15, 1, 180),

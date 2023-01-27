@@ -27,6 +27,7 @@ SWEP.ViewModel = "models/weapons/arc9/c_bo1_ballistic_knife.mdl"
 SWEP.WorldModel = "models/weapons/arc9/c_bo1_ballistic_knife.mdl"
 SWEP.WorldModelMirror = "models/weapons/arc9/c_bo1_ballistic_knife.mdl"
 SWEP.MirrorVMWM = true
+SWEP.NoTPIKVMPos = false
 SWEP.WorldModelOffset = {
     TPIKPos        =    Vector(-3, 5, -7.5),
     TPIKAng        =    Angle(5, 7, 180),
