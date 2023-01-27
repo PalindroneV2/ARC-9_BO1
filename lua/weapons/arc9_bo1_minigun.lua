@@ -185,8 +185,7 @@ SWEP.HoldType = "crossbow"
 SWEP.HoldTypeSights = "crossbow"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
-SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_AR2
-SWEP.AnimDraw = ACT_HL2MP_GESTURE_RANGE_ATTACK_KNIFE
+SWEP.NonTPIKAnimReload = ACT_HL2MP_GESTURE_RELOAD_AR2
 
 SWEP.ActivePos = Vector(0, -2, -1)
 SWEP.ActiveAng = Angle(0, 0, 0)
