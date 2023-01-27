@@ -181,10 +181,11 @@ SWEP.IronSights = {
 }
 
 SWEP.HoldTypeHolstered = "passive"
-SWEP.HoldType = "revolver"
+SWEP.HoldType = "pistol"
 SWEP.HoldTypeSights = "revolver"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_PISTOL
+SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_PISTOL
 SWEP.NonTPIKAnimReload = ACT_HL2MP_GESTURE_RELOAD_PISTOL
 
 SWEP.ActivePos = Vector(0, 0, -1)

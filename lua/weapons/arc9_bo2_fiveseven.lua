@@ -185,6 +185,7 @@ SWEP.HoldType = "pistol"
 SWEP.HoldTypeSights = "pistol"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_PISTOL
+SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_PISTOL
 SWEP.NonTPIKAnimReload = ACT_HL2MP_GESTURE_RELOAD_PISTOL
 
 SWEP.ActivePos = Vector(0, 0, -1)

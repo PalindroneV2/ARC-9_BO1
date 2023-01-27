@@ -180,10 +180,11 @@ SWEP.SightMidPoint = { -- Where the gun should be at the middle of it's irons
 }
 
 SWEP.HoldTypeHolstered = "passive"
-SWEP.HoldType = "revolver"
-SWEP.HoldTypeSights = "revolver"
+SWEP.HoldType = "pistol"
+SWEP.HoldTypeSights = "pistol"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_REVOLVER
+SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_REVOLVER
 SWEP.NonTPIKAnimReload = ACT_HL2MP_GESTURE_RANGE_ATTACK_REVOLVER
 
 SWEP.ActivePos = Vector(0, -1, -1)

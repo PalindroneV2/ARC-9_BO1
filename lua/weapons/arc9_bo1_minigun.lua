@@ -182,7 +182,7 @@ SWEP.IronSights = {
 SWEP.HasSights = false
 
 SWEP.HoldTypeHolstered = "passive"
-SWEP.HoldType = "crossbow"
+SWEP.HoldType = "physgun"
 SWEP.HoldTypeSights = "crossbow"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
