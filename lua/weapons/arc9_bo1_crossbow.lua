@@ -186,7 +186,7 @@ SWEP.NoShellEject = true
 
 SWEP.HoldTypeHolstered = "passive"
 SWEP.HoldType = "crossbow"
-SWEP.HoldTypeSights = "crossbow"
+SWEP.HoldTypeSights = "ar2"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_CROSSBOW
 SWEP.NonTPIKAnimReload = ACT_HL2MP_GESTURE_RELOAD_CROSSBOW

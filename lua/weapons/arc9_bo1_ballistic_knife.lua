@@ -197,11 +197,12 @@ SWEP.HasSights = false
 SWEP.NoShellEject = true
 
 SWEP.HoldTypeHolstered = "passive"
-SWEP.HoldType = "knife"
+SWEP.HoldType = "fist"
 SWEP.HoldTypeSights = "knife"
 
-SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_KNIFE
+SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SHOTGUN
 SWEP.NonTPIKAnimReload = ACT_HL2MP_GESTURE_RELOAD_KNIFE
+SWEP.AnimMelee = ACT_HL2MP_GESTURE_RANGE_ATTACK_KNIFE
 
 SWEP.ActivePos = Vector(0, 0, -1)
 SWEP.ActiveAng = Angle(0, 0, 0)

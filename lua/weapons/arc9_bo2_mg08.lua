@@ -199,8 +199,8 @@ SWEP.SwayMultBipod = 0.25
 SWEP.FreeAimRadiusMultBipod = 0
 
 SWEP.HoldTypeHolstered = "passive"
-SWEP.HoldType = "shotgun"
-SWEP.HoldTypeSights = "ar2"
+SWEP.HoldType = "ar2"
+SWEP.HoldTypeSights = "rpg"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 SWEP.NonTPIKAnimReload = ACT_HL2MP_GESTURE_RELOAD_AR2
