@@ -194,7 +194,7 @@ SWEP.SightMidPoint = { -- Where the gun should be at the middle of it's irons
 
 SWEP.HoldTypeHolstered = "passive"
 SWEP.HoldType = "ar2"
-SWEP.HoldTypeSights = "rpg"
+SWEP.HoldTypeSights = "ar2"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 SWEP.NonTPIKAnimReload = ACT_HL2MP_GESTURE_RELOAD_AR2
@@ -560,6 +560,9 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         if hand == 11 then
             frontsight = 1
             gasblock = 2
+            if length >= 2 then
+                gasblock = 3
+            end
         end
         if hand == 12 then
             frontsight = 3
@@ -594,6 +597,9 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         if hand == 11 then
             frontsight = 4
             gasblock = 2
+            if length >= 2 then
+                gasblock = 3
+            end
         end
         if hand == 12 then
             frontsight = 6
@@ -624,6 +630,9 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         if hand == 11 then
             frontsight = 7
             gasblock = 2
+            if length >= 2 then
+                gasblock = 3
+            end
         end
         if hand == 12 then
             frontsight = 9
