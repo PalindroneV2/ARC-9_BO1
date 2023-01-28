@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Black Ops" -- edit this if you like
 SWEP.SubCategory = "Machine Guns"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "M60E3"
+SWEP.PrintName = "M60"
 SWEP.Class = "General Purpose Machine Gun"
 SWEP.Description = [[The U.S. Military's standard general purpose machine gun adopted in 1957.
 Nicknamed "The Pig" due to it's huge size and appetite for ammo.]]
@@ -241,17 +241,22 @@ SWEP.ExtraSightDist = 5
 SWEP.AttachmentElements = {
     ["mount"] = {
         Bodygroups = {
-            {2,2}
+            {3,2}
+        },
+    },
+    ["barrel_short"] = {
+        Bodygroups = {
+            {1,1}
         },
     },
     ["bo1_irons_alt"] = {
         Bodygroups = {
-            {2,1}
+            {3,1}
         },
     },
     ["bo1_bipod"] = {
         Bodygroups = {
-            {3,1}
+            {4,1}
         },
     },
 }
@@ -288,7 +293,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     vm:SetSkin(camo)
 
     if self:GetBipod() then
-        vm:SetBodygroup(3,2)
+        vm:SetBodygroup(4,2)
     end
 
 end
@@ -297,7 +302,11 @@ SWEP.HookP_NameChange = function(self, name)
 
     local attached = self:GetElements()
 
-    local gunname = "M60E3"
+    local gunname = "M60"
+
+    if attached["barrel_short"] then
+        gunname = "M60E3"
+    end
 
     if attached["bo1_pap"] then
         gunname = "Slow Burn"
@@ -318,7 +327,7 @@ SWEP.Attachments = {
     {
         PrintName = "Muzzle",
         Bone = "j_gun",
-        Pos = Vector(24, 0, 2.35),
+        Pos = Vector(27, 0, 2.35),
         Ang = Angle(0, 0, 0),
         Category = {"cod_muzzle"},
         ExcludeElements = {"newbarrel"},
