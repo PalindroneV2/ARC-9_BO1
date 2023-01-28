@@ -261,13 +261,27 @@ SWEP.ReloadHideBoneTables = {
     [1] = {"tag_clip_full"},
 }
 
+
+SWEP.Hook_TranslateAnimation = function (self, anim)
+    local attached = self:GetElements()
+
+    if attached["bo2_fastmag"] then
+        if anim == "reload" then
+            return "fast"
+        end
+        if anim == "reload_empty" then
+            return "fast_empty"
+        end
+    end
+end
+
 SWEP.Attachments = {
     {
         PrintName = "Optic",
         DefaultCompactName = "IRONS",
         Bone = "j_bolt",
         Scale = Vector(1, 1, 1),
-        Pos = Vector(-1, 0.1, 0.1),
+        Pos = Vector(-1, 0, 0.1),
         Ang = Angle(0, 0, 0),
         Category = {"cod_optic_pistol"},
         CorrectiveAng = Angle(0.05, 0.3, 0),
@@ -277,7 +291,7 @@ SWEP.Attachments = {
         DefaultCompactName = "Muzz",
         Bone = "j_gun",
         Scale = Vector(1,1,1),
-        Pos = Vector(5.775, 0.1, 1.1),
+        Pos = Vector(5.775, 0, 1.2),
         Ang = Angle(0, 0, 0),
         Category = {"cod_muzzle_pistol"},
     },
@@ -286,9 +300,9 @@ SWEP.Attachments = {
         DefaultCompactName = "TAC",
         Bone = "j_gun",
         Scale = 1,
-        Pos = Vector(4, 0.1, 0.5),
+        Pos = Vector(4, 0, 0.5),
         Ang = Angle(0, 0, 0),
-        Category = {"cod_tactical"},
+        Category = {"cod_tactical_pistols"},
     },
     {
         PrintName = "Magazine",
@@ -399,10 +413,10 @@ SWEP.Animations = {
     },
     ["reload"] = {
         Source = "reload",
-        Time = 1.5,
+        Time = 1.66,
         EventTable = {
             {s = "ARC9_BO2.Pistol_MagOut", t = 0.25},
-            {s = "ARC9_BO2.Pistol_MagIn", t = 1}
+            {s = "ARC9_BO2.Pistol_MagIn", t = 0.8}
         },
     },
     ["reload_empty"] = {
@@ -410,8 +424,25 @@ SWEP.Animations = {
         Time = 2,
         EventTable = {
             {s = "ARC9_BO2.Pistol_MagOut", t = 0.25},
-            {s = "ARC9_BO2.Pistol_MagIn", t = 1},
+            {s = "ARC9_BO2.Pistol_MagIn", t = 0.8},
             {s = "ARC9_BO2.Pistol_SlideFwd", t = 1.5}
+        },
+    },
+    ["fast"] = {
+        Source = "fast",
+        Time = 1.6,
+        EventTable = {
+            {s = "ARC9_BO2.Pistol_MagOut", t = 0.25},
+            {s = "ARC9_BO2.Pistol_MagIn", t = 0.8}
+        },
+    },
+    ["fast_empty"] = {
+        Source = "fast_empty",
+        Time = 1.73,
+        EventTable = {
+            {s = "ARC9_BO2.Pistol_MagOut", t = 0.25},
+            {s = "ARC9_BO2.Pistol_MagIn", t = 0.8},
+            {s = "ARC9_BO2.Pistol_SlideFwd", t = 1.3}
         },
     },
     ["enter_sprint"] = {

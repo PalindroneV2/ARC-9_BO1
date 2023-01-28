@@ -1,8 +1,6 @@
-"VertexlitGeneric"
+"UnlitGeneric"
 {
 	"$basetexture" "models/weapons/arc9/bo2/bo2_trit/tritium_green"
 	"$bumpmap" "models/weapons/arc9/bo2/bo2_trit/tritium_n"
-	
-	$"$selfillum" "1"
-	$"$translucent" "1"
+	"$translucent" "1"
 }
