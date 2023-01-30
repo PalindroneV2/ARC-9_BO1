@@ -5,22 +5,22 @@
 	"$phongexponenttexture" "models/weapons/arc9/bo2/bo2_mg08/mg08_s"
 	"$envmapmask" "models/weapons/arc9/bo2/bo2_mg08/mg08_s"
 	$normalmapalphaenvmapmask 1
-
-	//"$color2" "[ .4 .4 .4 ]"
-	"$blendtintbybasealpha" "1"
-	"$phong" "1"
-	"$phongboost" "1"
-	"$phongalbedotint" "2"
-	"$PhongFresnelRanges" "[ 2 5 4 ]"
-	"$envmap" "env_cubemap"
-	$envmapfresnel "0.01"
-	$envmaptint "[ .01 .01 .01 ]"
+	
+	$phong "1"
+	$phongboost "2.5"
+	$phongfresnelranges "[2 5 4]"
+	$phongtint "[.3 .3 .4]"
+	$phongalbedotint "1"
+	
+	$envmap "env_cubemap"
+	$envmaptint "[.03 .03 .04]"
+	$envmapfresnel "[.2 .5 .4]"
 	"$nocull" "1"
 
-	$detail	"models/weapons/arc9/pap/pap_bo2_crystal"
-	$detailscale 1
+	$detail	"models/weapons/arc9/pap/origins/mystic_ember"
+	$detailscale 5
 	$detailblendmode 2
-	$detailblendfactor 2
-	"$selfillummask" "models/weapons/arc9/pap/pap_bo2_crystal"
+	$detailblendfactor 1
+	"$selfillummask" "models/weapons/arc9/pap/origins/mystic_ember_si1"
 	$selfillum 1
 }

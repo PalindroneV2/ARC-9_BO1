@@ -359,12 +359,8 @@ SWEP.Animations = {
         Time = 0.5,
     },
     ["ready"] = {
-        Source = "first_draw",
+        Source = "draw",
         Time = 1,
-        EventTable = {
-            {s = "ARC9_BO2.Pistol_SlideBack", t = 0.2},
-            {s = "ARC9_BO2.Pistol_SlideFwd", t = 0.7}
-        }
     },
     ["fire"] = {
         Source = {"fire"},
@@ -388,43 +384,21 @@ SWEP.Animations = {
     },
     ["reload"] = {
         Source = "reload",
-        Time = 1.5,
+        Time = 2,
         EventTable = {
-            {s = "ARC9_BO2.Pistol_MagOut", t = 0.25},
-            {s = "ARC9_BO2.Pistol_MagIn", t = 1}
+            {s = "ARC9_WAW.P38_Out", t = 0.25},
+            {s = "ARC9_WAW.P38_Futz", t = 1.15},
+            {s = "ARC9_WAW.P38_In", t = 1.25}
         },
     },
     ["reload_empty"] = {
         Source = "reload_empty",
-        Time = 2,
+        Time = 2.333,
         EventTable = {
-            {s = "ARC9_BO2.Pistol_MagOut", t = 0.25},
-            {s = "ARC9_BO2.Pistol_MagIn", t = 1},
-            {s = "ARC9_BO2.Pistol_SlideFwd", t = 1.5}
+            {s = "ARC9_WAW.P38_Out", t = 0.25},
+            {s = "ARC9_WAW.P38_Futz", t = 1.15},
+            {s = "ARC9_WAW.P38_In", t = 1.25},
+            {s = "ARC9_WAW.P38_Slide", t = 1.8}
         },
-    },
-    ["enter_sprint"] = {
-        Source = "sprint_in",
-        Time = 1,
-    },
-    ["idle_sprint"] = {
-        Source = "sprint_loop",
-        Time = 30 / 40
-    },
-    ["exit_sprint"] = {
-        Source = "sprint_out",
-        Time = 1,
-    },
-    ["enter_sprint_empty"] = {
-        Source = "sprint_in_empty",
-        Time = 1,
-    },
-    ["idle_sprint_empty"] = {
-        Source = "sprint_loop_empty",
-        Time = 30 / 40
-    },
-    ["exit_sprint_empty"] = {
-        Source = "sprint_out_empty",
-        Time = 1,
     },
 }

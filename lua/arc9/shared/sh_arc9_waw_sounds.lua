@@ -1646,6 +1646,8 @@ sound.Add( {
     sound = {"^weapons/arc9/bo1_m1911/mech_last_waw.wav"}
 } )
 
+-- TT33 MAIN --
+
 sound.Add( {
     name = "ARC9_WAW.TT33_Fire",
     channel = CHAN_STATIC,
@@ -1666,6 +1668,30 @@ sound.Add( {
         "^weapons/arc9/waw_tt33/fire_dist.wav",
     }
 } )
+sound.Add({
+    name = "ARC9_WAW.TT33_In",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "^weapons/arc9/waw_TT33/in.wav"
+})
+sound.Add({
+    name = "ARC9_WAW.TT33_Out",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "^weapons/arc9/waw_TT33/out.wav"
+})
+sound.Add({
+    name = "ARC9_WAW.TT33_Slide",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "^weapons/arc9/waw_TT33/slide.wav"
+})
+sound.Add({
+    name = "ARC9_WAW.TT33_Futz",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "^weapons/arc9/waw_TT33/futz.wav"
+})
 
 -- P38 MAIN ---
 
@@ -1681,19 +1707,56 @@ sound.Add({
     level = 70,
     sound = "^weapons/arc9/waw_p38/in.wav"
 })
-
 sound.Add({
     name = "ARC9_WAW.P38_Out",
     channel = CHAN_ITEM,
     level = 70,
     sound = "^weapons/arc9/waw_p38/out.wav"
 })
-
 sound.Add({
     name = "ARC9_WAW.P38_Slide",
     channel = CHAN_ITEM,
     level = 70,
     sound = "^weapons/arc9/waw_p38/slide.wav"
+})
+sound.Add({
+    name = "ARC9_WAW.P38_Futz",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "^weapons/arc9/waw_p38/futz.wav"
+})
+
+-- Nambu MAIN ---
+
+sound.Add({
+    name = "ARC9_WAW.Nambu_Fire",
+    channel = CHAN_STATIC,
+    level = 100,
+    sound = "^weapons/arc9/waw_Nambu/fire.wav"
+})
+sound.Add({
+    name = "ARC9_WAW.Nambu_In",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "^weapons/arc9/waw_Nambu/in.wav"
+})
+sound.Add({
+    name = "ARC9_WAW.Nambu_Out",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "^weapons/arc9/waw_Nambu/out.wav"
+})
+sound.Add({
+    name = "ARC9_WAW.Nambu_Slide",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "^weapons/arc9/waw_Nambu/slide.wav"
+})
+sound.Add({
+    name = "ARC9_WAW.Nambu_Futz",
+    channel = CHAN_ITEM,
+    level = 70,
+    sound = "^weapons/arc9/waw_Nambu/futz.wav"
 })
 
 sound.Add({

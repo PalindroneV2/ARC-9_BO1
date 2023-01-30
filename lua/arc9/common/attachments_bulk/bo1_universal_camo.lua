@@ -622,21 +622,6 @@ ARC9.LoadAttachment(ATT, "bo1_camo_bumpmap")
 
 ATT = {}
 
-ATT.PrintName = "Circuits"
-ATT.FullColorIcon = true
-ATT.CompactName = "PAP I"
-ATT.Icon = Material("entities/bo1_camos/circuit.png")
-ATT.Category = "universal_camo"
-ATT.Description = [[Discount BO1 PAP camo.]]
-ATT.MenuCategory = "ARC9 - Camos"
-ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/circuit"
-ATT.Folder = "GAMER"
-ATT.CustomCamoScale = 2.5
-
-ARC9.LoadAttachment(ATT, "bo1_camo_pap1")
-
-ATT = {}
-
 ATT.PrintName = "Benjamins"
 ATT.FullColorIcon = true
 ATT.CompactName = "$100"
@@ -649,3 +634,245 @@ ATT.Folder = "GAMER"
 ATT.CustomCamoScale = 2.5
 
 ARC9.LoadAttachment(ATT, "bo1_camo_benjamins")
+
+-- PAP CAMOS --
+
+ATT = {}
+
+ATT.PrintName = "Etching I"
+ATT.FullColorIcon = true
+ATT.CompactName = "ETCHING I"
+ATT.Icon = Material("entities/bo1_camos/engravings.png")
+ATT.Category = "universal_camo"
+ATT.Description = [[Discount WAW 'Etching' PAP camo.]]
+ATT.MenuCategory = "ARC9 - Camos"
+ATT.CustomCamoTexture = "models/weapons/arc9/pap/pap_blue_burn"
+ATT.Folder = "PAP"
+ATT.CustomCamoScale = 2.5
+ATT.SortOrder = 1
+
+ARC9.LoadAttachment(ATT, "bo1_camo_pap1")
+
+ATT = {}
+
+ATT.PrintName = "Circuits"
+ATT.FullColorIcon = true
+ATT.CompactName = "CIRCUITS"
+ATT.Icon = Material("entities/bo1_camos/circuit.png")
+ATT.Category = "universal_camo"
+ATT.Description = [[Discount BO1 'Circuits' PAP camo.]]
+ATT.MenuCategory = "ARC9 - Camos"
+ATT.CustomCamoTexture = "models/weapons/arc9/pap/pap_bo1"
+ATT.Folder = "PAP"
+ATT.CustomCamoScale = 2.5
+ATT.SortOrder = 2
+
+ARC9.LoadAttachment(ATT, "bo1_camo_pap2")
+
+ATT = {}
+
+ATT.PrintName = "Hellscape"
+ATT.FullColorIcon = true
+ATT.CompactName = "HELL"
+ATT.Icon = Material("entities/bo1_camos/hellscape.png")
+ATT.Category = "universal_camo"
+ATT.Description = [[Discount BO2 'Mob of the Dead' PAP camo.]]
+ATT.MenuCategory = "ARC9 - Camos"
+ATT.CustomCamoTexture = "models/weapons/arc9/pap/mob/hellscape"
+ATT.Folder = "PAP"
+ATT.CustomCamoScale = 5
+ATT.SortOrder = 4
+
+ARC9.LoadAttachment(ATT, "bo1_camo_pap3")
+
+ATT = {}
+
+ATT.PrintName = "Afterlife"
+ATT.FullColorIcon = true
+ATT.CompactName = "HEAVEN"
+ATT.Icon = Material("entities/bo1_camos/Afterlife.png")
+ATT.Category = "universal_camo"
+ATT.Description = [[Discount BO2 'Afterlife' PAP camo.]]
+ATT.MenuCategory = "ARC9 - Camos"
+ATT.CustomCamoTexture = "models/weapons/arc9/pap/mob/Afterlife"
+ATT.Folder = "PAP"
+ATT.CustomCamoScale = 5
+ATT.SortOrder = 5
+
+ARC9.LoadAttachment(ATT, "bo1_camo_pap4")
+
+ATT = {}
+
+ATT.PrintName = "Weaponized 115"
+ATT.FullColorIcon = true
+ATT.CompactName = "115"
+ATT.Icon = Material("entities/bo1_camos/wp115.png")
+ATT.Category = "universal_camo"
+ATT.Description = [[Discount BO2 'Weaponized 115' camo.]]
+ATT.MenuCategory = "ARC9 - Camos"
+ATT.CustomCamoTexture = "models/weapons/arc9/pap/pap_wp115_1"
+ATT.Folder = "PAP"
+ATT.CustomCamoScale = 5
+ATT.SortOrder = 8
+
+ARC9.LoadAttachment(ATT, "bo1_camo_pap5")
+
+ATT = {}
+
+ATT.PrintName = "Mystic Ember"
+ATT.FullColorIcon = true
+ATT.CompactName = "Mystic"
+ATT.Icon = Material("entities/bo1_camos/mystic_ember.png")
+ATT.Category = "universal_camo"
+ATT.Description = [[Discount BO2 'Origins' camo.]]
+ATT.MenuCategory = "ARC9 - Camos"
+ATT.CustomCamoTexture = "models/weapons/arc9/pap/origins/mystic_ember"
+ATT.Folder = "PAP"
+ATT.CustomCamoScale = 5
+ATT.SortOrder = 6
+
+ARC9.LoadAttachment(ATT, "bo1_camo_pap6")
+
+ATT = {}
+
+ATT.PrintName = "Dieselpunk"
+ATT.FullColorIcon = true
+ATT.CompactName = "DIESEL"
+ATT.Icon = Material("entities/bo1_camos/diesel.png")
+ATT.Category = "universal_camo"
+ATT.Description = [[Discount BO2 'Origins' support camo.]]
+ATT.MenuCategory = "ARC9 - Camos"
+ATT.CustomCamoTexture = "models/weapons/arc9/pap/origins/diesel"
+ATT.Folder = "PAP"
+ATT.CustomCamoScale = 5
+ATT.SortOrder = 7
+
+ARC9.LoadAttachment(ATT, "bo1_camo_pap7")
+
+ATT = {}
+
+ATT.PrintName = "Etching II"
+ATT.FullColorIcon = true
+ATT.CompactName = "ETCHING II"
+ATT.Icon = Material("entities/bo1_camos/etching2.png")
+ATT.Category = "universal_camo"
+ATT.Description = [[Discount BO2 'Etching' camo.]]
+ATT.MenuCategory = "ARC9 - Camos"
+ATT.CustomCamoTexture = "models/weapons/arc9/bo2/camos/etching2/col"
+ATT.Folder = "PAP"
+ATT.CustomCamoScale = 2.5
+ATT.SortOrder = 9
+
+ARC9.LoadAttachment(ATT, "bo1_camo_pap8")
+
+ATT = {}
+
+ATT.PrintName = "Molten Alloys"
+ATT.FullColorIcon = true
+ATT.CompactName = "ALLOYS"
+ATT.Icon = Material("entities/bo1_camos/victis.png")
+ATT.Category = "universal_camo"
+ATT.Description = [[Discount BO2 'Victis' camo.]]
+ATT.MenuCategory = "ARC9 - Camos"
+ATT.CustomCamoTexture = "models/weapons/arc9/pap/victis/victis"
+ATT.Folder = "PAP"
+ATT.CustomCamoScale = 5
+ATT.SortOrder = 3
+
+ARC9.LoadAttachment(ATT, "bo1_camo_pap9")
+
+ATT = {}
+
+ATT.PrintName = "Etching III"
+ATT.FullColorIcon = true
+ATT.CompactName = "ETCHING III"
+ATT.Icon = Material("entities/bo1_camos/engravings3.png")
+ATT.Category = "universal_camo"
+ATT.Description = [[Discount BO3 'The Giant' PAP camo.]]
+ATT.MenuCategory = "ARC9 - Camos"
+ATT.CustomCamoTexture = "models/weapons/arc9/pap/pap_bo3"
+ATT.Folder = "PAP"
+ATT.CustomCamoScale = 2.5
+ATT.SortOrder = 10
+
+ARC9.LoadAttachment(ATT, "bo1_camo_pap10")
+
+ATT = {}
+
+ATT.PrintName = "Emerald"
+ATT.FullColorIcon = true
+ATT.CompactName = "EMERALD"
+ATT.Icon = Material("entities/bo1_camos/emerald.png")
+ATT.Category = "universal_camo"
+ATT.Description = [[Discount BO3 'Emerald' PAP camo.]]
+ATT.MenuCategory = "ARC9 - Camos"
+ATT.CustomCamoTexture = "models/weapons/arc9/pap/pap_eme"
+ATT.Folder = "PAP"
+ATT.CustomCamoScale = 5
+ATT.SortOrder = 11
+
+ARC9.LoadAttachment(ATT, "bo1_camo_pap11")
+
+ATT = {}
+
+ATT.PrintName = "Garnet"
+ATT.FullColorIcon = true
+ATT.CompactName = "GARNET"
+ATT.Icon = Material("entities/bo1_camos/magma_ruby.png")
+ATT.Category = "universal_camo"
+ATT.Description = [[Discount BO3 'Garnet' PAP camo.]]
+ATT.MenuCategory = "ARC9 - Camos"
+ATT.CustomCamoTexture = "models/weapons/arc9/pap/pap_ruby"
+ATT.Folder = "PAP"
+ATT.CustomCamoScale = 5
+ATT.SortOrder = 12
+
+ARC9.LoadAttachment(ATT, "bo1_camo_pap12")
+
+ATT = {}
+
+ATT.PrintName = "Sapphire"
+ATT.FullColorIcon = true
+ATT.CompactName = "SAPPHIRE"
+ATT.Icon = Material("entities/bo1_camos/sapphire.png")
+ATT.Category = "universal_camo"
+ATT.Description = [[Discount BO3 'Sapphire' PAP camo.]]
+ATT.MenuCategory = "ARC9 - Camos"
+ATT.CustomCamoTexture = "models/weapons/arc9/pap/pap_saph"
+ATT.Folder = "PAP"
+ATT.CustomCamoScale = 5
+ATT.SortOrder = 13
+
+ARC9.LoadAttachment(ATT, "bo1_camo_pap13")
+
+ATT = {}
+
+ATT.PrintName = "Amethyst"
+ATT.FullColorIcon = true
+ATT.CompactName = "AMETHYST"
+ATT.Icon = Material("entities/bo1_camos/amethyst.png")
+ATT.Category = "universal_camo"
+ATT.Description = [[Discount BO3 'Amethyst' PAP camo.]]
+ATT.MenuCategory = "ARC9 - Camos"
+ATT.CustomCamoTexture = "models/weapons/arc9/pap/pap_ame"
+ATT.Folder = "PAP"
+ATT.CustomCamoScale = 5
+ATT.SortOrder = 14
+
+ARC9.LoadAttachment(ATT, "bo1_camo_pap14")
+
+ATT = {}
+
+ATT.PrintName = "Topaz"
+ATT.FullColorIcon = true
+ATT.CompactName = "TOPAZ"
+ATT.Icon = Material("entities/bo1_camos/topaz.png")
+ATT.Category = "universal_camo"
+ATT.Description = [[Discount BO3 'Topaz' PAP camo.]]
+ATT.MenuCategory = "ARC9 - Camos"
+ATT.CustomCamoTexture = "models/weapons/arc9/pap/pap_topaz"
+ATT.Folder = "PAP"
+ATT.CustomCamoScale = 5
+ATT.SortOrder = 15
+
+ARC9.LoadAttachment(ATT, "bo1_camo_pap15")
