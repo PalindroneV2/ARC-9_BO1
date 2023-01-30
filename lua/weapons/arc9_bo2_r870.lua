@@ -322,8 +322,8 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Underbarrel",
-        Bone = "j_pump",
-        Pos = Vector(6.2, 0, 0.125),
+        Bone = "tag_pump",
+        Pos = Vector(-1, 0, 2.5),
         Ang = Angle(0, 0, 0),
         Category = {"cod_grips"},
     },
