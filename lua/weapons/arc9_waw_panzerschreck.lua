@@ -180,15 +180,16 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(-0.28, 0, 7.9),
+    Pos = Vector(-0.28, -2, 7.9),
     Ang = Angle(0, 0, 0),
     Magnification = 1.25,
+    ViewModelFOV = 50,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
 }
 
 SWEP.SightMidPoint = { -- Where the gun should be at the middle of it's irons
-    Pos = Vector(1.5, 0, 6),
+    Pos = Vector(-0.14, -2, 6),
     Ang = Angle(0, 0, -5),
 }
 
@@ -199,7 +200,7 @@ SWEP.HoldTypeSights = "rpg"
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_RPG
 SWEP.NonTPIKAnimReload = ACT_HL2MP_GESTURE_RELOAD_RPG
 
-SWEP.ActivePos = Vector(0, 0, 5)
+SWEP.ActivePos = Vector(0, -2, 5)
 SWEP.ActiveAng = Angle(0, 0, -10)
 
 SWEP.MovingPos = SWEP.ActivePos
@@ -210,7 +211,7 @@ SWEP.MovingMidPoint = {
     Ang = SWEP.ActiveAng
 }
 
-SWEP.CrouchPos = SWEP.ActivePos + Vector(0, 0, 2)
+SWEP.CrouchPos = SWEP.ActivePos + Vector(0, 0, -2)
 SWEP.CrouchAng = SWEP.ActiveAng
 
 SWEP.RestPos = SWEP.ActivePos
@@ -334,11 +335,11 @@ SWEP.Animations = {
         EventTable = {{s = "ARC9_WAW.Launcher_Mech", t = 0.01},},
     },
     ["idle_iron"] = {
-        Source = {"idle"},
+        Source = {"idle_sights"},
         Time = 1 / 35,
     },
     ["fire_iron"] = {
-        Source = {"fire",},
+        Source = {"fire_sights",},
         Time = 15 / 35,
         EventTable = {{s = "ARC9_WAW.Launcher_Mech", t = 0.01},},
     },

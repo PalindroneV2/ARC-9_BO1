@@ -6,15 +6,15 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "M1 Carbine"
 SWEP.Class = "Assault Rifle"
-SWEP.Description = [[The father of all modern assault rifles.
-It is one of the most common weapons to appear across the Call of Duty series, tied with the MP40 and second only to the M1911.]]
+SWEP.Description = [[During World War 2 the US Army requested a lightweight weapon for rear echelon troops with greater range than a pistol but lighter than the M1 Garand or M1A1 Thompson. What they came up with was the M1 Carbine, with a new caliber desinged specially for this weapon.
+Despite not being designed for frontline combat, the M1 Carbine soon found itself serving in the line of battle wielded by officers, paratroopers, NCOs and the like.]]
 SWEP.Trivia = {
-    Manufacturer = "C.G. Haenel",
-    Calibre = "7.92x33mm Kurz",
+    Manufacturer = "Springfield Armory",
+    Calibre = ".30 Carbine",
     Mechanism = "Gas-Operated",
-    Country = "Nazi Germany",
+    Country = "USA",
     Year = 1942,
-    Games = [[COD2, COD3, COD4, WAW, BO1, BO2, AW, BO3, WWII, VG]]
+    Games = [[COD1, COD2, COD3, COD4, WAW, BO1, WWII, VG]]
 }
 SWEP.Credits = {
     Author = "Palindrone"
@@ -164,10 +164,10 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector (-1.56, -9, -0.25),
-    Ang = Angle(0.025, 0.15, 0),
+    Pos = Vector (-2.19, -9, 1.75),
+    Ang = Angle(0.02, -0.75, 0),
     Magnification = 1.1,
-    ViewModelFOV = 60,
+    ViewModelFOV = 50,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
 }

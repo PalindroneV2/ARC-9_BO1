@@ -106,7 +106,7 @@ SWEP.MeleeMissSound = "ARC9_BO1.Knife_Swing"
 SWEP.MeleeHitSound = "ARC9_BO1.Knife_HitObject"
 SWEP.MeleeHitNPCSound = "ARC9_BO1.Knife_Slash"
 
-SWEP.MuzzleEffectQCA = 1 -- which attachment to put the muzzle on
+SWEP.MuzzleEffectQCA = nil -- which attachment to put the muzzle on
 SWEP.CaseEffectQCA = nil -- which attachment to put the case effect on
 SWEP.ProceduralViewQCA = 1
 SWEP.CamQCA = 1

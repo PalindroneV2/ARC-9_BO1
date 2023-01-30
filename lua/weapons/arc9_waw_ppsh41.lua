@@ -282,7 +282,7 @@ SWEP.Attachments = {
         PrintName = "Optic",
         DefaultCompactName = "Irons",
         Bone = "j_gun",
-        Pos = Vector(-2.2, 0, 2.2),
+        Pos = Vector(-2.2, 0.095, 2.2),
         Ang = Angle(0, 0, 0),
         Category = {"waw_aperture"},
     },

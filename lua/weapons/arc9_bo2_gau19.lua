@@ -152,7 +152,7 @@ SWEP.ShootSoundLooping = "ARC9_BO2.GAU19_Fire_Loop"
 SWEP.ShootSoundTail = "ARC9_BO2.GAU19_Spool_Stop"
 
 --SWEP.MuzzleEffect = "muzzleflash_1"
-SWEP.MuzzleParticle = "muzzleflash_minimi" -- Used for some muzzle effects.
+SWEP.MuzzleParticle = "muzzleflash_M82" -- Used for some muzzle effects.
 
 SWEP.ShellModel = "models/shells/shell_556.mdl"
 SWEP.ShellPitch = 90

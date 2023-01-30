@@ -181,7 +181,7 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(-1.42, 0, 5.75),
+    Pos = Vector(-1.42, -2, 5.75),
     Ang = Angle(-2.6, -0.65, -14),
     Magnification = 1.25,
     ViewModelFOV = 60,
@@ -190,7 +190,7 @@ SWEP.IronSights = {
 }
 
 SWEP.SightMidPoint = { -- Where the gun should be at the middle of it's irons
-    Pos = Vector(1.25, 0, -2.5),
+    Pos = Vector(0.25, -1, 3.25),
     Ang = Angle(-1.3, -0.325, -7),
 }
 
@@ -201,7 +201,7 @@ SWEP.HoldTypeSights = "rpg"
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_RPG
 SWEP.NonTPIKAnimReload = ACT_HL2MP_GESTURE_RELOAD_RPG
 
-SWEP.ActivePos = Vector(3, 4, -1)
+SWEP.ActivePos = Vector(2, 0, 1)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
 SWEP.MovingPos = SWEP.ActivePos
