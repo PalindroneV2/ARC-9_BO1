@@ -336,6 +336,15 @@ SWEP.Attachments = {
     },
 }
 
+SWEP.HideBones = {
+    "tag_speedloader",
+    "tag_bullets",
+}
+SWEP.ReloadHideBoneTables = {
+    [1] = {"tag_speedloader"},
+    [2] = {"tag_bullets"},
+}
+
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",

@@ -289,9 +289,9 @@ SWEP.Attachments = {
         DefaultCompactName = "TAC",
         Bone = "j_gun",
         Scale = Vector(1, 1, 1),
-        Pos = Vector(5.5, 0.075, -0.5),
+        Pos = Vector(5, 0.075, -0.5),
         Ang = Angle(0, 0, 0),
-        Category = {"cod_tactical"},
+        Category = {"cod_tactical_pistols"},
         -- CorrectiveAng = Angle(0.05, 0.1, 0),
     },
     {
