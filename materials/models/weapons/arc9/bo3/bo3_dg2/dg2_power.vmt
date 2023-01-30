@@ -1,7 +1,0 @@
-"UnlitGeneric"
-{
-	$model 1
-	"$basetexture" "models/weapons/arc9/bo3/bo3_dg2/dg2_power"
-	"$bumpmap" "models/weapons/arc9/bo3/bo3_dg2/dg2_power_n"
-	$translucent 0
-}
