@@ -790,17 +790,17 @@ SWEP.Animations = {
     },
     ["fire"] = {
         Source = {"fire"},
-        Time = 0.5,
+        Time = 0.16,
         ShellEjectAt = 0,
     },
     ["fire_iron"] = {
         Source = {"fire_ads"},
-        Time = 0.5,
+        Time = 0.16,
         ShellEjectAt = 0,
     },
     ["fire_bipod"] = {
         Source = {"fire_ads"},
-        Time = 0.5,
+        Time = 0.16,
         ShellEjectAt = 0,
     },
     ["reload"] = {

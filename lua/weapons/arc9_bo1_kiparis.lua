@@ -420,36 +420,36 @@ SWEP.Animations = {
     },
     ["reload"] = {
         Source = "reload",
-        Time = 90 / 35,
+        Time = 90 / 40,
         EventTable = {
-            {s = "ARC9_BO1.Kiparis_MagOut", t = 10 / 35},
-            {s = "ARC9_BO1.Kiparis_MagIn", t = 50 / 35}
+            {s = "ARC9_BO1.Kiparis_MagOut", t = 10 / 40},
+            {s = "ARC9_BO1.Kiparis_MagIn", t = 50 / 40}
         },
     },
     ["reload_empty"] = {
         Source = "reload_empty",
-        Time = 120 / 35,
+        Time = 120 / 40,
         EventTable = {
-            {s = "ARC9_BO1.Kiparis_MagOut", t = 10 / 35},
-            {s = "ARC9_BO1.Kiparis_MagIn", t = 50 / 35},
-            {s = "ARC9_BO1.Kiparis_Bolt", t = 75 / 35},
+            {s = "ARC9_BO1.Kiparis_MagOut", t = 10 / 40},
+            {s = "ARC9_BO1.Kiparis_MagIn", t = 50 / 40},
+            {s = "ARC9_BO1.Kiparis_Bolt", t = 79 / 40},
         },
     },
     ["ext"] = {
         Source = "reload_ext",
-        Time = 90 / 35,
+        Time = 90 / 40,
         EventTable = {
-            {s = "ARC9_BO1.Kiparis_MagOut", t = 10 / 35},
-            {s = "ARC9_BO1.Kiparis_MagIn", t = 50 / 35}
+            {s = "ARC9_BO1.Kiparis_MagOut", t = 10 / 40},
+            {s = "ARC9_BO1.Kiparis_MagIn", t = 50 / 40}
         },
     },
     ["ext_empty"] = {
         Source = "reload_empty_ext",
-        Time = 120 / 35,
+        Time = 120 / 40,
         EventTable = {
-            {s = "ARC9_BO1.Kiparis_MagOut", t = 10 / 35},
-            {s = "ARC9_BO1.Kiparis_MagIn", t = 50 / 35},
-            {s = "ARC9_BO1.Kiparis_Bolt", t = 75 / 35},
+            {s = "ARC9_BO1.Kiparis_MagOut", t = 10 / 40},
+            {s = "ARC9_BO1.Kiparis_MagIn", t = 50 / 40},
+            {s = "ARC9_BO1.Kiparis_Bolt", t = 79 / 40},
         },
     },
     ["enter_sprint"] = {

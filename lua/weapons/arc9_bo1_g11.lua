@@ -476,11 +476,11 @@ SWEP.Animations = {
     },
     ["reload"] = {
         Source = "reload",
-        Time = 125 / 35,
+        Time = 125 / 40,
         EventTable = {
-            {s = "ARC9_BO1.G11_MagOut", t = 15 / 35},
-            {s = "ARC9_BO1.G11_Futz", t = 78 / 35},
-            {s = "ARC9_BO1.G11_MagIn", t = 89 / 35},
+            {s = "ARC9_BO1.G11_MagOut", t = 15 / 40},
+            {s = "ARC9_BO1.G11_Futz", t = 78 / 40},
+            {s = "ARC9_BO1.G11_MagIn", t = 89 / 40},
         },
         IKTimeLine = {
             {
@@ -507,18 +507,18 @@ SWEP.Animations = {
     },
     ["reload_empty"] = {
         Source = "reload_empty",
-        Time = 194 / 35,
+        Time = 194 / 40,
         EventTable = {
-            {s = "ARC9_BO1.G11_MagOut", t = 15 / 35},
-            {s = "ARC9_BO1.G11_Futz", t = 78 / 35},
-            {s = "ARC9_BO1.G11_MagIn", t = 93 / 35},
-            {s = "ARC9_BO1.G11_Spin1", t = 123 / 35},
-            {s = "ARC9_BO1.G11_Spin2", t = 126 / 35},
-            {s = "ARC9_BO1.G11_Spin3", t = 129 / 35},
-            {s = "ARC9_BO1.G11_Spin1", t = 143 / 35},
-            {s = "ARC9_BO1.G11_Spin2", t = 146 / 35},
-            {s = "ARC9_BO1.G11_Spin3", t = 149 / 35},
-            {s = "ARC9_BO1.G11_Tap", t = 162 / 35},
+            {s = "ARC9_BO1.G11_MagOut", t = 15 / 40},
+            {s = "ARC9_BO1.G11_Futz", t = 78 / 40},
+            {s = "ARC9_BO1.G11_MagIn", t = 93 / 40},
+            {s = "ARC9_BO1.G11_Spin1", t = 123 / 40},
+            {s = "ARC9_BO1.G11_Spin2", t = 126 / 40},
+            {s = "ARC9_BO1.G11_Spin3", t = 129 / 40},
+            {s = "ARC9_BO1.G11_Spin1", t = 143 / 40},
+            {s = "ARC9_BO1.G11_Spin2", t = 146 / 40},
+            {s = "ARC9_BO1.G11_Spin3", t = 149 / 40},
+            {s = "ARC9_BO1.G11_Tap", t = 162 / 40},
         },
         IKTimeLine = {
             {

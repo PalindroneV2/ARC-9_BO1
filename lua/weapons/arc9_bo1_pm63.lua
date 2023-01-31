@@ -449,38 +449,38 @@ SWEP.Animations = {
     },
     ["reload"] = {
         Source = "reload",
-        Time = 90 / 35,
+        Time = 90 / 40,
         EventTable = {
-            {s = "ARC9_BO1.PM63_MagOut", t = 15 / 35},
-            {s = "ARC9_BO1.PM63_MagIn", t = 56 / 35}
+            {s = "ARC9_BO1.PM63_MagOut", t = 15 / 40},
+            {s = "ARC9_BO1.PM63_MagIn", t = 56 / 40}
         },
     },
     ["reload_empty"] = {
         Source = "reload_empty",
-        Time = 120 / 35,
+        Time = 120 / 40,
         EventTable = {
-            {s = "ARC9_BO1.PM63_MagOut", t = 16 / 35},
-            {s = "ARC9_BO1.PM63_MagIn", t = 56 / 35},
-            {s = "ARC9_BO1.PM63_BoltBack", t = 75 / 35},
-            {s = "ARC9_BO1.PM63_BoltFwd", t = 81 / 35},
+            {s = "ARC9_BO1.PM63_MagOut", t = 16 / 40},
+            {s = "ARC9_BO1.PM63_MagIn", t = 56 / 40},
+            {s = "ARC9_BO1.PM63_BoltBack", t = 75 / 40},
+            {s = "ARC9_BO1.PM63_BoltFwd", t = 84 / 40},
         },
     },
     ["reload_ext"] = {
         Source = "reload_ext",
-        Time = 90 / 35,
+        Time = 90 / 40,
         EventTable = {
-            {s = "ARC9_BO1.PM63_MagOut", t = 15 / 35},
-            {s = "ARC9_BO1.PM63_MagIn", t = 56 / 35}
+            {s = "ARC9_BO1.PM63_MagOut", t = 15 / 40},
+            {s = "ARC9_BO1.PM63_MagIn", t = 56 / 40}
         },
     },
     ["reload_empty_ext"] = {
         Source = "reload_empty_ext",
-        Time = 120 / 35,
+        Time = 120 / 40,
         EventTable = {
-            {s = "ARC9_BO1.PM63_MagOut", t = 16 / 35},
-            {s = "ARC9_BO1.PM63_MagIn", t = 56 / 35},
-            {s = "ARC9_BO1.PM63_BoltBack", t = 75 / 35},
-            {s = "ARC9_BO1.PM63_BoltFwd", t = 81 / 35},
+            {s = "ARC9_BO1.PM63_MagOut", t = 16 / 40},
+            {s = "ARC9_BO1.PM63_MagIn", t = 56 / 40},
+            {s = "ARC9_BO1.PM63_BoltBack", t = 75 / 40},
+            {s = "ARC9_BO1.PM63_BoltFwd", t = 84 / 40},
         },
     },
     ["enter_sprint"] = {

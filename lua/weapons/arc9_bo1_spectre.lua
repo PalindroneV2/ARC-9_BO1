@@ -451,18 +451,18 @@ SWEP.Animations = {
         Source = "reload",
         Time = 80 / 35,
         EventTable = {
-            {s = "ARC9_BO1.Spectre_MagOut", t = 16 / 30},
-            {s = "ARC9_BO1.Spectre_Futz", t = 45 / 30},
-            {s = "ARC9_BO1.Spectre_MagIn", t = 51 / 30}
+            {s = "ARC9_BO1.Spectre_MagOut", t = 16 / 35},
+            {s = "ARC9_BO1.Spectre_Futz", t = 45 / 35},
+            {s = "ARC9_BO1.Spectre_MagIn", t = 51 / 35}
         },
     },
     ["ext"] = {
         Source = "reload_ext",
         Time = 80 / 35,
         EventTable = {
-            {s = "ARC9_BO1.Spectre_MagOut", t = 16 / 30},
-            {s = "ARC9_BO1.Spectre_Futz", t = 45 / 30},
-            {s = "ARC9_BO1.Spectre_MagIn", t = 51 / 30}
+            {s = "ARC9_BO1.Spectre_MagOut", t = 16 / 35},
+            {s = "ARC9_BO1.Spectre_Futz", t = 45 / 35},
+            {s = "ARC9_BO1.Spectre_MagIn", t = 51 / 35}
         },
     },
     ["reload_empty"] = {
@@ -470,7 +470,7 @@ SWEP.Animations = {
         Time = 108 / 35,
         EventTable = {
             {s = "ARC9_BO1.Spectre_MagOut", t = 16 / 35},
-            {s = "ARC9_BO1.Spectre_Futz", t = 45 / 30},
+            {s = "ARC9_BO1.Spectre_Futz", t = 45 / 35},
             {s = "ARC9_BO1.Spectre_MagIn", t = 51 / 35},
             {s = "ARC9_BO1.Spectre_BoltBack", t = 74 / 35},
             {s = "ARC9_BO1.Spectre_BoltFwd", t = 80 / 35},
@@ -481,7 +481,7 @@ SWEP.Animations = {
         Time = 108 / 35,
         EventTable = {
             {s = "ARC9_BO1.Spectre_MagOut", t = 16 / 35},
-            {s = "ARC9_BO1.Spectre_Futz", t = 45 / 30},
+            {s = "ARC9_BO1.Spectre_Futz", t = 45 / 35},
             {s = "ARC9_BO1.Spectre_MagIn", t = 51 / 35},
             {s = "ARC9_BO1.Spectre_BoltBack", t = 74 / 35},
             {s = "ARC9_BO1.Spectre_BoltFwd", t = 80 / 35},

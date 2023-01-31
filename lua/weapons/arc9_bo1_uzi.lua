@@ -455,10 +455,10 @@ SWEP.Animations = {
     },
     ["reload"] = {
         Source = "reload",
-        Time = 90 / 35,
+        Time = 90 / 40,
         EventTable = {
-            {s = "ARC9_BO1.Uzi_MagOut", t = 15 / 35},
-            {s = "ARC9_BO1.Uzi_MagIn", t = 56 / 35}
+            {s = "ARC9_BO1.Uzi_MagOut", t = 15 / 40},
+            {s = "ARC9_BO1.Uzi_MagIn", t = 56 / 40}
         },
         IKTimeLine = {
             {
@@ -485,12 +485,12 @@ SWEP.Animations = {
     },
     ["reload_empty"] = {
         Source = "reload_empty",
-        Time = 120 / 35,
+        Time = 120 / 40,
         EventTable = {
-            {s = "ARC9_BO1.Uzi_MagOut", t = 16 / 35},
-            {s = "ARC9_BO1.Uzi_MagIn", t = 56 / 35},
-            {s = "ARC9_BO1.Uzi_BoltBack", t = 75 / 35},
-            {s = "ARC9_BO1.Uzi_BoltFwd", t = 81 / 35},
+            {s = "ARC9_BO1.Uzi_MagOut", t = 16 / 40},
+            {s = "ARC9_BO1.Uzi_MagIn", t = 56 / 40},
+            {s = "ARC9_BO1.Uzi_BoltBack", t = 79 / 40},
+            {s = "ARC9_BO1.Uzi_BoltFwd", t = 87 / 40},
         },
         IKTimeLine = {
             {
@@ -517,10 +517,10 @@ SWEP.Animations = {
     },
     ["ext"] = {
         Source = "ext",
-        Time = 90 / 35,
+        Time = 90 / 40,
         EventTable = {
-            {s = "ARC9_BO1.Uzi_MagOut", t = 15 / 35},
-            {s = "ARC9_BO1.Uzi_MagIn", t = 56 / 35}
+            {s = "ARC9_BO1.Uzi_MagOut", t = 15 / 40},
+            {s = "ARC9_BO1.Uzi_MagIn", t = 56 / 40}
         },
         IKTimeLine = {
             {
@@ -547,12 +547,12 @@ SWEP.Animations = {
     },
     ["ext_empty"] = {
         Source = "ext_empty",
-        Time = 120 / 35,
+        Time = 120 / 40,
         EventTable = {
-            {s = "ARC9_BO1.Uzi_MagOut", t = 16 / 35},
-            {s = "ARC9_BO1.Uzi_MagIn", t = 56 / 35},
-            {s = "ARC9_BO1.Uzi_BoltBack", t = 75 / 35},
-            {s = "ARC9_BO1.Uzi_BoltFwd", t = 81 / 35},
+            {s = "ARC9_BO1.Uzi_MagOut", t = 16 / 40},
+            {s = "ARC9_BO1.Uzi_MagIn", t = 56 / 40},
+            {s = "ARC9_BO1.Uzi_BoltBack", t = 79 / 40},
+            {s = "ARC9_BO1.Uzi_BoltFwd", t = 87 / 40},
         },
         IKTimeLine = {
             {
