@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Black Ops" -- edit this if you like
 SWEP.SubCategory = "Assault Rifles"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Famas"
+SWEP.PrintName = "FAMAS" --it's an acronym so idk why you shouldn't have it capitalzied. BO1 had it weird
 SWEP.Class = "Assault Rifle"
 SWEP.Description = [[A French assault rifle firing the 5.56mm NATO round Using a bullpup configuration to keep it a compact size.]]
 SWEP.Trivia = {

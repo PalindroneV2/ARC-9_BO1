@@ -1,10 +1,10 @@
 SWEP.Base = "arc9_base"
 SWEP.Spawnable = true -- this obviously has to be set to true
-SWEP.Category = "ARC9 - Black Ops II" -- edit this if you like
+SWEP.Category = "ARC9 - Black Ops" -- DO NOT EDIT THIS
 SWEP.SubCategory = "Specials/Explosives"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = [[MM1 Grenade Launcher]]
+SWEP.PrintName = [[War Machine]]
 SWEP.Class = "Grenade Launcher"
 SWEP.Description = [[American revolver grenade launcher using 40mm High Explosive rounds developed from the Manville Machine Projector.]]
 SWEP.Trivia = {

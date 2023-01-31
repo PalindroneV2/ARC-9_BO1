@@ -1,7 +1,7 @@
 SWEP.Base = "arc9_base"
 SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ARC9 - World at War" -- edit this if you like
-SWEP.SubCategory = "Machine Guns"
+SWEP.SubCategory = "Rifles" -- Bothers me immensely that this is put on the machine gun class in WAW
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "FG 42"

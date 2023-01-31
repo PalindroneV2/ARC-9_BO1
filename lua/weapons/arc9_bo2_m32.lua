@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Black Ops II" -- edit this if you like
 SWEP.SubCategory = "Specials/Explosives"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = [[War Machine]]
+SWEP.PrintName = [[War Machine II]]
 SWEP.Class = "Grenade Launcher"
 SWEP.Description = [[6 round semi-automatic grenade launcher.]]
 SWEP.Trivia = {

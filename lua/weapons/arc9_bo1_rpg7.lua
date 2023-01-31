@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Black Ops" -- edit this if you like
 SWEP.SubCategory = "Specials/Explosives"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "RPG"
+SWEP.PrintName = "RPG-7" --small change makes no real difference
 SWEP.Class = "Rocket Launcher"
 SWEP.Description = [[A Russian portable, reusable, unguided, shoulder-launched, anti-tank rocket-propelled grenade launcher.
 The ruggedness, simplicity, low cost, and effectiveness of the RPG-7 has made it the most widely used anti-armor weapon in the world.]]

@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Black Ops" -- edit this if you like
 SWEP.SubCategory = "Specials/Explosives"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Death Machine"
+SWEP.PrintName = "Death Machine" --tbh I don't like that it's DEATH MACHINE here because thats the pap name, but fuck it, synergy with the BO2 one.
 SWEP.Class = "Heavy Machine Gun"
 SWEP.Description = [[How you are able to carry this deadly machine and shoot it while standing is no importance.
 What you're gonna carry are with it's delivery of 7.62x51mm NATO rounds at 1750 rounds per minute.]]
@@ -263,7 +263,12 @@ SWEP.HookP_NameChange = function(self, name)
 
     local attached = self:GetElements()
 
-    local gunname = "Death Machine"
+    --dont change this again istg
+    local gunname = "M134 Minigun"
+
+    if attached["bo1_pap"] then
+        gunname = "Death Machine"
+    end
 
     if attached["doom_ee"] then
         gunname = "Chaingun"

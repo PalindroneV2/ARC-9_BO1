@@ -5,7 +5,7 @@ SWEP.SubCategory = "Light Machine Guns"
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "MG08/15"
-SWEP.Class = "General Purpose Machine Gun"
+SWEP.Class = "Machine Gun"
 SWEP.Description = [[A machine gun used widely by the German Empire during WW1.
 Being a water-cooled squad weapon, it is extremely heavy and near-unusable from the shoulder.]]
 SWEP.Trivia = {

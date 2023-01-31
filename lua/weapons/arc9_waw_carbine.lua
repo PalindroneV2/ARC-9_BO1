@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - World at War" -- edit this if you like
 SWEP.SubCategory = "Rifles"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "M1A1 Carbine"
+SWEP.PrintName = "M1 Carbine" --M1A1 Carbine had a wire stock and pistol grip
 SWEP.Class = "Assault Rifle"
 SWEP.Description = [[During World War 2 the US Army requested a lightweight weapon for rear echelon troops with greater range than a pistol but lighter than the M1 Garand or M1A1 Thompson. What they came up with was the M1 Carbine, with a new caliber desinged specially for this weapon.
 Despite not being designed for frontline combat, the M1 Carbine soon found itself serving in the line of battle wielded by officers, paratroopers, NCOs and the like.]]
@@ -242,7 +242,7 @@ SWEP.HookP_NameChange = function(self, name)
 
     local attached = self:GetElements()
 
-    local gunname = "M1A1 Carbine"
+    local gunname = "M1 Carbine"
 
     if attached["auto"] then
         gunname = "M2 Carbine"

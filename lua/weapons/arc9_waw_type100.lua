@@ -240,7 +240,7 @@ SWEP.HookP_NameChange = function(self, name)
 
     local attached = self:GetElements()
 
-    local gunname = "Type 100"
+    local gunname = "Type 100/44"
 
     if attached["bo1_pap"] then
         gunname = "1001 Samurais"

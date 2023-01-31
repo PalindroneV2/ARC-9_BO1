@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Black Ops II" -- edit this if you like
 SWEP.SubCategory = "Specials/Explosives"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Death Machine"
+SWEP.PrintName = "Death Machine II"
 SWEP.Class = "Heavy Machine Gun"
 SWEP.Description = [[Multi-barreled Gatling gun with high capacity and extremely high rate of fire.]]
 

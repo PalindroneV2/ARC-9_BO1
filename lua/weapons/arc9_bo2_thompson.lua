@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Black Ops II" -- edit this if you like
 SWEP.SubCategory = "Submachine Guns"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "M1927"
+SWEP.PrintName = "M1921AC Thompson" --dont think it makes much of a difference if this just stays as was
 SWEP.Class = "Submachine Gun"
 SWEP.Description = [[Interwar American submachine Gun in .45 ACP. The design was finalized too late for the Great War, but it found commercial success in the civilian market and infamy due to it's use by gangsters.
 
