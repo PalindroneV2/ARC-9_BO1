@@ -94,7 +94,7 @@ SWEP.RecoilResetTime = 0.1 -- How long the gun must go before the recoil pattern
 SWEP.UseVisualRecoil = false
 
 SWEP.Spread = math.rad(3 / 37.5)
-SWEP.SpreadMultRecoil = 1.25
+SWEP.SpreadMultShooting = 1.25
 
 SWEP.SpreadMultSights = 0.1
 SWEP.SpreadAddHipFire = math.rad(50 / 37.5)

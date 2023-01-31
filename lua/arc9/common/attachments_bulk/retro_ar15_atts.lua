@@ -69,7 +69,7 @@ ATT.SpreadMult = 1.55
 ATT.RecoilMult = 1.3
 ATT.SpreadMultHipFire = 0.575
 -- ATT.SpreadAddShooting = math.rad(25 / 37.5)
-ATT.SpreadMultRecoil = 1.55
+ATT.SpreadMultShooting = 1.55
 ATT.RPMAdd = 50
 
 ATT.SpeedMult = 1.05
@@ -129,7 +129,7 @@ ATT.SpreadMult = 1.55
 ATT.RecoilMult = 1.3
 ATT.SpreadMultHipFire = 0.575
 -- ATT.SpreadAddShooting = math.rad(25 / 37.5)
-ATT.SpreadMultRecoil = 1.55
+ATT.SpreadMultShooting = 1.55
 ATT.RPMAdd = 50
 
 ATT.SpeedMult = 1.05
@@ -213,7 +213,7 @@ ATT.Attachments = {
 ATT.MuzzleEffectQCA = 1
 
 ATT.SpreadMult = 1.5
-ATT.SpreadMultRecoil = 1.5
+ATT.SpreadMultShooting = 1.5
 ATT.RecoilMult = 1.25
 ATT.SpreadMultHipFire = 0.7
 -- ATT.SpreadAddShooting = math.rad(20 / 37.5)
@@ -299,7 +299,7 @@ ATT.RecoilMult = 1.15
 ATT.SpreadMult = 1.3
 ATT.SpreadMultHipFire = 0.8
 -- ATT.SpreadAddShooting = math.rad(17.5 / 37.5)
-ATT.SpreadMultRecoil = 1.3
+ATT.SpreadMultShooting = 1.3
 
 ATT.SpeedMult = 1.015
 ATT.SpeedMultSights = 1.075
@@ -401,7 +401,7 @@ ATT.SpreadMult = 1.15
 ATT.RecoilMult = 1.1
 ATT.SpreadMultHipFire = 0.9
 -- ATT.SpreadAddShooting = math.rad(12.5 / 37.5)
-ATT.SpreadMultRecoil = 1.15
+ATT.SpreadMultShooting = 1.15
 
 ATT.SpeedMult = 1.01
 ATT.SpeedMultSights = 1.05
@@ -464,7 +464,7 @@ ATT.SpreadMult = 1.1
 ATT.RecoilMult = 1.075
 ATT.SpreadMultHipFire = 0.95
 -- ATT.SpreadAddShooting = math.rad(10 / 37.5)
-ATT.SpreadMultRecoil = 1.1
+ATT.SpreadMultShooting = 1.1
 
 ATT.SpeedMult = 1.01
 ATT.SpeedMultSights = 1.025
@@ -732,7 +732,7 @@ ATT.Attachments = {
         PrintName = "Underbarrel",
         DefaultCompactName = "UB",
         Bone = "j_gun",
-        Pos = Vector(-4, 0, 2.4),
+        Pos = Vector(-4, 0, 2.35),
         Ang = Angle(0, 0, 0),
         Category = {"cde_m203", "bo1_mk", "cod_grips"},
         InstalledElements = {"mlok_rails"},
@@ -1531,7 +1531,7 @@ ATT.RunawayBurstOverride = true
 ATT.PostBurstDelayOverride = 0.2
 
 ATT.SpreadMult = 0.9
-ATT.SpreadMultRecoil = 0.8
+ATT.SpreadMultShooting = 0.8
 ATT.RecoilMult = 0.8
 ATT.RecoilUpMult = 0.9
 ATT.RecoilSideMult = 0.9
@@ -1564,7 +1564,7 @@ ATT.FiremodesOverride = {
 
 ATT.RangeMaxMult = 1.25
 ATT.SpreadMult = 0.75
-ATT.SpreadMultRecoil = 0.75
+ATT.SpreadMultShooting = 0.75
 ATT.RecoilMult = 0.75
 ATT.RecoilUpMult = 0.85
 ATT.RecoilSideMult = 0.85
@@ -1605,7 +1605,7 @@ ATT.PostBurstDelayOverride = 0.2
 
 ATT.RPMMult = 1.1
 ATT.SpreadMult = 0.95
-ATT.SpreadMultRecoil = 0.9
+ATT.SpreadMultShooting = 0.9
 ATT.RecoilMult = 0.9
 ATT.RecoilUpMult = 0.95
 ATT.RecoilSideMult = 0.95
@@ -1637,7 +1637,7 @@ ATT.FiremodesOverride = {
 
 ATT.RPMOverride = 1225
 ATT.SpreadMult = 1.1
-ATT.SpreadMultRecoil = 1.15
+ATT.SpreadMultShooting = 1.15
 ATT.RecoilMult = 1.1
 ATT.RecoilUpMult = 1.05
 ATT.RecoilSideMult = 1.05
@@ -1675,7 +1675,7 @@ ATT.PenetrationMult = 1.25
 ATT.PhysBulletMuzzleVelocityMult = 1.25
 ATT.SpreadMult = 0.3
 ATT.SpreadMultHipFire = 2
-ATT.SpreadMultRecoil = 3
+ATT.SpreadMultShooting = 3
 ATT.RecoilMult = 1.5
 ATT.RecoilUpMult = 1.5
 ATT.RecoilKickMult = 1.5
@@ -1819,7 +1819,7 @@ ATT.ClipSize = 32
 
 ATT.DamageMax = 25
 ATT.DamageMin = 12
-ATT.SpreadMultRecoil = 0.85
+ATT.SpreadMultShooting = 0.85
 
 ATT.SpreadMult = 1.5
 ATT.RangeMaxMult = 0.7
@@ -1927,7 +1927,7 @@ ATT.Folder = ".300BLK/STANAG"
 ATT.Category = {"retro_ar15_mag"}
 ATT.ActivateElements = {"300blk"}
 
-ATT.SpreadMultRecoil = 1.1
+ATT.SpreadMultShooting = 1.1
 ATT.SpreadMult = 1.1
 ATT.RangeMaxMult = 0.7
 ATT.RangeMinMult = 0.7
@@ -1968,7 +1968,7 @@ ATT.ClipSize = 20
 ATT.AimDownSightsTimeMult = 0.975
 ATT.SprintToFireTimeMult = 0.975
 
-ATT.SpreadMultRecoil = 1.1
+ATT.SpreadMultShooting = 1.1
 ATT.SpreadMult = 1.1
 ATT.RangeMaxMult = 0.7
 ATT.RangeMinMult = 0.7
@@ -2009,7 +2009,7 @@ ATT.ClipSize = 40
 ATT.AimDownSightsTimeMult = 1.025
 ATT.SprintToFireTimeMult = 1.025
 
-ATT.SpreadMultRecoil = 1.1
+ATT.SpreadMultShooting = 1.1
 ATT.SpreadMult = 1.1
 ATT.RangeMaxMult = 0.7
 ATT.RangeMinMult = 0.7
@@ -2050,7 +2050,7 @@ ATT.ClipSize = 60
 ATT.AimDownSightsTimeMult = 1.15
 ATT.SprintToFireTimeMult = 1.15
 
-ATT.SpreadMultRecoil = 1.1
+ATT.SpreadMultShooting = 1.1
 ATT.SpreadMult = 1.1
 ATT.RangeMaxMult = 0.7
 ATT.RangeMinMult = 0.7
@@ -2088,7 +2088,7 @@ ATT.Category = {"retro_ar15_mag", "mwc_ar15_mag"}
 ATT.ActivateElements = {"pul_mag", "300blk"}
 ATT.ReloadTimeMult = 0.9
 
-ATT.SpreadMultRecoil = 1.1
+ATT.SpreadMultShooting = 1.1
 ATT.SpreadMult = 1.1
 ATT.RangeMaxMult = 0.7
 ATT.RangeMinMult = 0.7
@@ -2129,7 +2129,7 @@ ATT.ClipSize = 40
 ATT.AimDownSightsTimeMult = 1.025
 ATT.SprintToFireTimeMult = 1.025
 
-ATT.SpreadMultRecoil = 1.1
+ATT.SpreadMultShooting = 1.1
 ATT.SpreadMult = 1.1
 ATT.RangeMaxMult = 0.7
 ATT.RangeMinMult = 0.7
@@ -2170,7 +2170,7 @@ ATT.ClipSize = 100
 ATT.AimDownSightsTimeMult = 1.25
 ATT.SprintToFireTimeMult = 1.25
 
-ATT.SpreadMultRecoil = 1.1
+ATT.SpreadMultShooting = 1.1
 ATT.SpreadMult = 1.1
 ATT.RangeMaxMult = 0.7
 ATT.RangeMinMult = 0.7
@@ -2275,7 +2275,7 @@ ATT.AimDownSightsTimeAdd = 0.22
 ATT.SprintToFireTimeAdd = 0.25
 ATT.SpeedAddSights = -0.2
 ATT.SpreadMultHipFire = 1.25
-ATT.SpreadMultRecoil = 0.65
+ATT.SpreadMultShooting = 0.65
 
 ARC9.LoadAttachment(ATT, "retro_ar15_stock_full")
 
@@ -2299,7 +2299,7 @@ ATT.RecoilMult = 0.75
 ATT.RecoilUpMult = 0.5
 ATT.RecoilRandomSideMult = 0.6
 ATT.RecoilAutoControlMult = 1.8
-ATT.SpreadMultRecoil = 0.8
+ATT.SpreadMultShooting = 0.8
 
 ATT.SpeedMult = 0.96
 ATT.AimDownSightsTimeAdd = 0.17
@@ -2330,7 +2330,7 @@ ATT.RecoilRandomSideMult = 0.6
 ATT.RecoilAutoControlMult = 1.75
 
 ATT.SpreadMultHipFire = 0.95
-ATT.SpreadMultRecoil = 0.8
+ATT.SpreadMultShooting = 0.8
 
 ATT.SpeedMult = 0.97
 ATT.AimDownSightsTimeAdd = 0.12
@@ -2361,7 +2361,7 @@ ATT.RecoilRandomSideMult = 0.6
 ATT.RecoilAutoControlMult = 1.75
 
 ATT.SpreadMultHipFire = 0.95
-ATT.SpreadMultRecoil = 0.75
+ATT.SpreadMultShooting = 0.75
 
 ATT.SpeedMult = 0.97
 ATT.AimDownSightsTimeAdd = 0.12
@@ -2390,7 +2390,7 @@ ATT.RecoilMult = 0.8
 ATT.RecoilUpMult = 0.5
 ATT.RecoilRandomSideMult = 0.6
 ATT.RecoilAutoControlMult = 1.75
-ATT.SpreadMultRecoil = 0.75
+ATT.SpreadMultShooting = 0.75
 
 ATT.SpeedMult = 0.97
 ATT.AimDownSightsTimeAdd = 0.09
@@ -2421,7 +2421,7 @@ ATT.RecoilRandomSideMult = 0.75
 ATT.RecoilAutoControlMult = 1.5
 
 ATT.SpreadMultHipFire = 0.8
-ATT.SpreadMultRecoil = 0.975
+ATT.SpreadMultShooting = 0.975
 
 ATT.SpeedMult = 0.995
 ATT.AimDownSightsTimeAdd = 0.05
@@ -2452,7 +2452,7 @@ ATT.RecoilRandomSideMult = 0.75
 ATT.RecoilAutoControlMult = 1.5
 
 ATT.SpreadMultHipFire = 0.8
-ATT.SpreadMultRecoil = 0.975
+ATT.SpreadMultShooting = 0.975
 
 ATT.SpeedMult = 0.995
 ATT.AimDownSightsTimeAdd = 0.05
@@ -2481,7 +2481,7 @@ ATT.RecoilMult = 0.8
 ATT.RecoilUpMult = 0.5
 ATT.RecoilRandomSideMult = 0.6
 ATT.RecoilAutoControlMult = 1.75
-ATT.SpreadMultRecoil = 0.75
+ATT.SpreadMultShooting = 0.75
 
 ATT.SpeedMult = 0.97
 ATT.AimDownSightsTimeAdd = 0.09
@@ -2510,7 +2510,7 @@ ATT.RecoilMult = 0.65
 ATT.RecoilUpMult = 0.5
 ATT.RecoilRandomSideMult = 0.25
 ATT.RecoilAutoControlMult = 2.5
-ATT.SpreadMultRecoil = 0.55
+ATT.SpreadMultShooting = 0.55
 
 ATT.SpeedMult = 0.9
 ATT.AimDownSightsTimeAdd = 0.25
@@ -2547,7 +2547,7 @@ ATT.AimDownSightsTimeAdd = 0.22
 ATT.SprintToFireTimeAdd = 0.25
 ATT.SpeedAddSights = -0.2
 ATT.SpreadMultHipFire = 1.25
-ATT.SpreadMultRecoil = 0.65
+ATT.SpreadMultShooting = 0.65
 
 ARC9.LoadAttachment(ATT, "retro_ar15_stock_famas")
 

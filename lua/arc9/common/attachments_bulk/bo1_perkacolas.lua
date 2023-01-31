@@ -90,7 +90,7 @@ ATT.Category = {"bo1_perkacola"}
 ATT.ActivateElements = {"deadshot"}
 ATT.HeadshotDamageMult = 2
 ATT.SpreadMultHipFire = 0.7
-ATT.SpreadMultRecoil = 0.7
+ATT.SpreadMultShooting = 0.7
 
 ARC9.LoadAttachment(ATT, "bo1_perkacola_deadshot")
 
