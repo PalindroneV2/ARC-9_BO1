@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - World at War" -- edit this if you like
 SWEP.SubCategory = "Bolt-Action Rifles"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Springfield M1903A1"
+SWEP.PrintName = "Springfield"
 SWEP.Class = "Rifle"
 SWEP.Description = [[American bolt action rifle that was used as the standard infantry rifle in the Great War and remained in specialized roles such as snipers during WW2.
 This variant specifically saw much more use by the US Marines during the WW2 rather than the more modern M1903A4.]]

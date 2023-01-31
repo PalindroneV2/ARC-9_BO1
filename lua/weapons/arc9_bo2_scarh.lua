@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Black Ops II" -- edit this if you like
 SWEP.SubCategory = "Assault Rifles"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "FN SCAR-H"
+SWEP.PrintName = "SCAR-H"
 SWEP.Class = "Battle Rifle"
 SWEP.Description = [[The FN SCAR is a rifle platform designed to be a light, modular, and highly customizable system.
 The SCAR has found favor with many special forces groups around the world.

@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Black Ops" -- edit this if you like
 SWEP.SubCategory = "Specials/Explosives"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = [[S.O.G. Knife]]
+SWEP.PrintName = [[SOG Knife]]
 SWEP.Class = "Knife"
 SWEP.Description = [[Knife used by the legendary special forces unit, MACV-SOG.]]
 SWEP.Trivia = {
@@ -12,7 +12,7 @@ SWEP.Trivia = {
     Mechanism = "Slashing",
     Country = "USA",
     Year = 1968,
-    Games = [[BO1,BO2]]
+    Games = [[BO1, BO2]]
 }
 SWEP.Credits = {
     Author = "Palindrone"

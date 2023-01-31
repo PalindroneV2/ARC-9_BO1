@@ -1,7 +1,7 @@
 SWEP.Base = "arc9_base"
 SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ARC9 - Black Ops" -- edit this if you like
-SWEP.SubCategory = "Machine Guns"
+SWEP.SubCategory = "Light Machine Guns"
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "HK21"
@@ -14,7 +14,7 @@ SWEP.Trivia = {
     Mechanism = "Roller-Delayed Blowback",
     Country = "Germany",
     Year = 1958,
-    Games = [[COD4:MW, Black Ops]]
+    Games = [[COD4:MW, BO1]]
 }
 SWEP.Credits = {
     Author = "Palindrone"

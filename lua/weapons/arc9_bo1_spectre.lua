@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Black Ops" -- edit this if you like
 SWEP.SubCategory = "Submachine Guns"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Spectre M4"
+SWEP.PrintName = "Spectre"
 SWEP.Class = "Submachine Gun"
 SWEP.Description = [[Italian SMG used by Swiss and Italian Special Forces.
 High damage and fire rate, but recoil and spread are punishing.]]

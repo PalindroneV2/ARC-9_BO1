@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Black Ops II" -- edit this if you like
 SWEP.SubCategory = "Sniper Rifles"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "FN Ballista"
+SWEP.PrintName = "Ballista"
 SWEP.Class = "Sniper Rifle"
 SWEP.Description = [[A belgian high-caliber bolt-action sniper rifle designed as a competitor to Remington MSR and AWM.
 Deadly from the chest up, with faster handling speeds.]]

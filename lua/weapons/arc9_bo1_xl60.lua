@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Black Ops" -- edit this if you like
 SWEP.SubCategory = "Assault Rifles"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Enfield XL64E5"
+SWEP.PrintName = "Enfield"
 SWEP.Class = "Assault Rifle"
 SWEP.Description = [[Experimental British bullpup rifle. The design build around the AR-18 and firing an experimental intermediate cartridge. 
 This design would eventually become the standard British rifle and adopted as the L85A1, though chambered in the more common 5.56mm NATO.]]
@@ -14,7 +14,7 @@ SWEP.Trivia = {
     Mechanism = "Gas-Operated",
     Country = "United Kingdom",
     Year = 1964,
-    Games = [[BO1]]
+    Games = [[Call of Duty: Black Ops]]
 }
 SWEP.Credits = {
     Author = "Palindrone"

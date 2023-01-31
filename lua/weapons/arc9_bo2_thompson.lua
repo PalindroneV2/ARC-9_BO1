@@ -4,9 +4,9 @@ SWEP.Category = "ARC9 - Black Ops II" -- edit this if you like
 SWEP.SubCategory = "Submachine Guns"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "M1921AC Thompson"
+SWEP.PrintName = "M1927"
 SWEP.Class = "Submachine Gun"
-SWEP.Description = [[Interwar American Submachine Gun in .45 ACP. The design was finalized too late for the Great War, but it found commercial success in the civilian market and infamy due to it's use by gangsters.
+SWEP.Description = [[Interwar American submachine Gun in .45 ACP. The design was finalized too late for the Great War, but it found commercial success in the civilian market and infamy due to it's use by gangsters.
 
 "Part sinner, part saint. An incredible gun that spits unbelievable tales. But the most amazing thing is, that they're all true."]]
 SWEP.Trivia = {

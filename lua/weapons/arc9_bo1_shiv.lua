@@ -12,7 +12,7 @@ SWEP.Trivia = {
     Mechanism = "Slashing",
     Country = "USSR",
     Year = 1963,
-    Games = [[BO1]]
+    Games = [[Call of Duty: Black Ops]]
 }
 SWEP.Credits = {
     Author = "Palindrone"

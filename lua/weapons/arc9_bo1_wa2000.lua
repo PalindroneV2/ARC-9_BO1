@@ -14,7 +14,7 @@ SWEP.Trivia = {
     Mechanism = "Gas Operated, Rotating Bolt",
     Country = "West Germany",
     Year = 1982,
-    Games = [[MW2, BO1, MW3(CUT), COD:O]]
+    Games = [[MW2, BO1, MW3 (Cut), COD:O]]
 }
 SWEP.Credits = {
     Author = "Palindrone"
@@ -266,7 +266,7 @@ SWEP.HookP_NameChange = function(self, name)
 
     local attached = self:GetElements()
 
-    local gunname = "WA 2000"
+    local gunname = "Walther WA 2000"
 
     if attached["bo1_pap"] then
         gunname = "Wound Agreggator 20k"

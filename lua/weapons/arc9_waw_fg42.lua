@@ -1,12 +1,12 @@
 SWEP.Base = "arc9_base"
 SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ARC9 - World at War" -- edit this if you like
-SWEP.SubCategory = "Rifles"
+SWEP.SubCategory = "Machine Guns"
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "FG 42"
 SWEP.Class = "Automatic Rifle"
-SWEP.Description = [[German fully automatic rifle intended for paratrooper use, as the name "Fallschirmjägergewehr 42" (or Paratrooper Rifle 42), suggests.
+SWEP.Description = [[German fully automatic machine gun intended for paratrooper use, as the name "Fallschirmjägergewehr 42" (or Paratrooper Rifle 42), suggests.
 Due to it's full sized rifle round and its relatively low weight, the recoil on fully automatic is quite atrocious.]]
 SWEP.Trivia = {
     Manufacturer = "Rheinmetall",

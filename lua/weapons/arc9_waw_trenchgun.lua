@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - World at War" -- edit this if you like
 SWEP.SubCategory = "Shotguns"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "M1897 Trenchgun"
+SWEP.PrintName = "M1897 \"Trench Gun\""
 SWEP.Class = "Shotgun"
 SWEP.Description = [[12 gauge pump-action shotgun widely used by civilians, law enforcement, and even militaries.
 It's incredibly reliable operation makes it incredibly popular.]]

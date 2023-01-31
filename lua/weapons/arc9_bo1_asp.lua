@@ -14,7 +14,7 @@ SWEP.Trivia = {
     Mechanism = "Short Recoil",
     Country = "USA",
     Year = 1954,
-    Games = [[BO1]]
+    Games = [[Call of Duty: Black Ops]]
 }
 SWEP.Credits = {
     Author = "Palindrone"

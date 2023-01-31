@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - World at War" -- edit this if you like
 SWEP.SubCategory = "Bolt-Action Rifles"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Arisaka Type 99"
+SWEP.PrintName = "Arisaka"
 SWEP.Class = "Rifle"
 SWEP.Description = [[The standard infantry rifle of the Imperial Japanese Army and Navy during the WW2.
 Compared to other rifles of the time, it is relatively lightweight and fires a smaller cartridge.]]
@@ -270,7 +270,7 @@ SWEP.HookP_NameChange = function(self, name)
 
     local attached = self:GetElements()
 
-    local gunname = "Arisaka Type 99"
+    local gunname = "Type 99 \"Arisaka\""
 
     if attached["bo1_pap"] then gunname = "Shoto"
         if attached["arisaka_scope"] then gunname = "Daito" end

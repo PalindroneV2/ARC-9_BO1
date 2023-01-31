@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - World at War" -- edit this if you like
 SWEP.SubCategory = "Submachine Guns"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Type 100/44"
+SWEP.PrintName = "Type 100"
 SWEP.Class = "Submachine Gun"
 SWEP.Description = [[Japanese submachine gun with close resemblance to the WW1 era Bergman MP18.
 This is the late war model with a fire rate of 800 RPM.]]
@@ -240,7 +240,7 @@ SWEP.HookP_NameChange = function(self, name)
 
     local attached = self:GetElements()
 
-    local gunname = "Type 100/44"
+    local gunname = "Type 100"
 
     if attached["bo1_pap"] then
         gunname = "1001 Samurais"

@@ -4,8 +4,8 @@ SWEP.Category = "ARC9 - World at War" -- edit this if you like
 SWEP.SubCategory = "Machine Guns"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Browning M1919A4"
-SWEP.Class = "Light Machine Gun"
+SWEP.PrintName = "Browning M1919"
+SWEP.Class = "General Purpose Machine Gun"
 SWEP.Description = [[Belt-fed light machine gun in .30-06 variant of the .50 BMG M2 machine gun designed by the legendary John Browning.]]
 SWEP.Trivia = {
     Manufacturer = "U.S. Ordnance",

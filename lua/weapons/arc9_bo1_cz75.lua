@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Black Ops" -- edit this if you like
 SWEP.SubCategory = "Handguns"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "CZ 75"
+SWEP.PrintName = "CZ-75"
 SWEP.Class = "Pistol"
 SWEP.Description = [[A Czech pistol known for being one of the original "wonder nine"s. It is exported widely and remains the most common pistol in the Czech Republic today.
 Boasts a generous double-stack magazine and good stopping power, but is not the best when hip-fired.]]
@@ -14,7 +14,7 @@ SWEP.Trivia = {
     Mechanism = "Short Recoil",
     Country = "Czechoslovakia",
     Year = 1975,
-    Games = [[BO1]]
+    Games = [[Call of Duty: Black Ops]]
 }
 SWEP.Credits = {
     Author = "Palindrone"
@@ -252,13 +252,13 @@ SWEP.HookP_NameChange = function(self, name)
 
     local attached = self:GetElements()
 
-    local gunname = "CZ 75"
+    local gunname = "CZ-75"
 
     if attached["bo1_pap"] then
         gunname = "Calamity"
     end
     if attached["auto"] then
-        gunname = "CZ 75 Auto"
+        gunname = "CZ-75 Auto"
         if attached["bo1_pap"] then
             gunname = "Calamity Jane"
         end

@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Black Ops" -- edit this if you like
 SWEP.SubCategory = "Assault Rifles"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "M14E2"
+SWEP.PrintName = "M14"
 SWEP.Class = "Assault Rifle"
 SWEP.Description = [[A traditional battle rifle designed by the United States for its military. Based on the M1 Garand, the M14 now uses detachable 20 round box magazines. 
 Was soon replaced by the M16 rifle, which offered much better performance in full-auto and was much lighter.]]
@@ -14,7 +14,7 @@ SWEP.Trivia = {
     Mechanism = "Gas-Operated",
     Country = "USA",
     Year = 1959,
-    Games = [[BOCW]]
+    Games = [[Call of Duty: Black Ops Cold War]]
 }
 SWEP.Credits = {
     Author = "Palindrone"

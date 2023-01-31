@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Black Ops" -- edit this if you like
 SWEP.SubCategory = "Sniper Rifles"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "HK PSG1"
+SWEP.PrintName = "PSG1"
 SWEP.Class = "Battle Rifle"
 SWEP.Description = [[German Army standard issue rifle chambered in 7.62mm NATO. The power of the cardtridge makes it difficult to control in full-auto.]]
 SWEP.Trivia = {
@@ -13,7 +13,7 @@ SWEP.Trivia = {
     Mechanism = "Roller-Delayed Blowback",
     Country = "Germany",
     Year = 1958,
-    Games = [[COD4:MW, Black Ops]]
+    Games = [[COD4:MW, BO1]]
 }
 SWEP.Credits = {
     Author = "Palindrone"

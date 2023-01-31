@@ -14,7 +14,7 @@ SWEP.Trivia = {
     Mechanism = "Blowback",
     Country = "United States",
     Year = 1950,
-    Games = [[BO1]]
+    Games = [[Call of Duty: Black Ops]]
 }
 SWEP.Credits = {
     Author = "Palindrone"

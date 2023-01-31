@@ -15,7 +15,7 @@ SWEP.Trivia = {
     Mechanism = "Missile",
     Country = "USSR",
     Year = 1974,
-    Games = [[BO1]]
+    Games = [[Call of Duty: Black Ops]]
 }
 SWEP.Credits = {
     Author = "Palindrone, Arctic"

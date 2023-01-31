@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Black Ops II" -- edit this if you like
 SWEP.SubCategory = "Submachine Guns"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Skorpion EVO III"
+SWEP.PrintName = "Skorpion EVO"
 SWEP.Class = "Submachine Gun"
 SWEP.Description = [[Excellent Czech fully automatic submachine gun.
 Highest rate of fire in class.]]

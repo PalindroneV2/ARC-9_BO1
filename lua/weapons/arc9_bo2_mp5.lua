@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Black Ops" -- edit this if you like
 SWEP.SubCategory = "Submachine Guns"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "HK MP5A3"
+SWEP.PrintName = "MP5"
 SWEP.Class = "Submachine Gun"
 SWEP.Description = [[A submachine gun derivative of the G3 design chambered in 9mm. Known for its use by the British SAS.
 Low recoil and accurate, but not the best at hip firing. Very customizable.]]

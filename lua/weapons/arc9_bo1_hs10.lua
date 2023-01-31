@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Black Ops" -- edit this if you like
 SWEP.SubCategory = "Shotguns"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "HS10"
+SWEP.PrintName = "HS-10"
 SWEP.Class = "Combat Shotgun"
 SWEP.Description = [[The High Standard Model 10 is a bullpup semi-automatic shotgun which was sold to law enforcement agencies.
 Due to many shortcomings in reliability and quality, the weapon was swiftly abandoned by police in favor of more traditional pump shotguns.]]
@@ -247,7 +247,7 @@ SWEP.HookP_NameChange = function(self, name)
 
     local attached = self:GetElements()
 
-    local gunname = "HS10"
+    local gunname = "HS-10"
 
     if attached["bo1_pap"] then
         gunname = "Typhoid Mary"

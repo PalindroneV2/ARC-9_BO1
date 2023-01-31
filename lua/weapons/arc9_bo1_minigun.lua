@@ -4,9 +4,10 @@ SWEP.Category = "ARC9 - Black Ops" -- edit this if you like
 SWEP.SubCategory = "Specials/Explosives"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "M134 Minigun"
+SWEP.PrintName = "Death Machine"
 SWEP.Class = "Heavy Machine Gun"
-SWEP.Description = [[How you are able to carry this death machine and shoot it standing is of no importance. What is is what you will destroy with it's delivery of 7.62x51mm NATO rounds at 1750 rounds per minute.]]
+SWEP.Description = [[How you are able to carry this deadly machine and shoot it while standing is no importance.
+What you're gonna carry are with it's delivery of 7.62x51mm NATO rounds at 1750 rounds per minute.]]
 
 SWEP.Trivia = {
     Manufacturer = "U.S. Ordnance/General Electric",
@@ -262,11 +263,7 @@ SWEP.HookP_NameChange = function(self, name)
 
     local attached = self:GetElements()
 
-    local gunname = "M134 Minigun"
-
-    if attached["bo1_pap"] then
-        gunname = "Death Machine"
-    end
+    local gunname = "Death Machine"
 
     if attached["doom_ee"] then
         gunname = "Chaingun"

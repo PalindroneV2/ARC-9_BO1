@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Black Ops" -- edit this if you like
 SWEP.SubCategory = "Assault Rifles"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "IMI Galil"
+SWEP.PrintName = "Galil"
 SWEP.Class = "Assault Rifle"
 SWEP.Description = [[An assault rifle from Israel based on the AK/Valmet platform firing 5.56mm NATO rounds.]]
 SWEP.Trivia = {

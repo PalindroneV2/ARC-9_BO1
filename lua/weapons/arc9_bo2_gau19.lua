@@ -6,7 +6,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "Death Machine"
 SWEP.Class = "Heavy Machine Gun"
-SWEP.Description = [[High capacity, multi-barreled Gatling gun with an extremely high rate of fire.]]
+SWEP.Description = [[Multi-barreled Gatling gun with high capacity and extremely high rate of fire.]]
 
 SWEP.Trivia = {
     Manufacturer = "U.S. Ordnance/General Electric",

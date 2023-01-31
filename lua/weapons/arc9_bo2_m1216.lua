@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Black Ops II" -- edit this if you like
 SWEP.SubCategory = "Shotguns"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "SRM 1216"
+SWEP.PrintName = "M1216"
 SWEP.Class = "Combat Shotgun"
 SWEP.Description = [[12 gauge fully automatic shotgun with a detachable cylindrical magazine containing a rechamber every 4 rounds.
 Manual operation is needed to switch from one tube to another.]]

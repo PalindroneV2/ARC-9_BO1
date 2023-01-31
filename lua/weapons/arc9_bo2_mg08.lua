@@ -1,11 +1,11 @@
 SWEP.Base = "arc9_base"
 SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ARC9 - Black Ops II" -- edit this if you like
-SWEP.SubCategory = "Machine Guns"
+SWEP.SubCategory = "Light Machine Guns"
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "MG08/15"
-SWEP.Class = "Heavy Machine Gun"
+SWEP.Class = "General Purpose Machine Gun"
 SWEP.Description = [[A machine gun used widely by the German Empire during WW1.
 Being a water-cooled squad weapon, it is extremely heavy and near-unusable from the shoulder.]]
 SWEP.Trivia = {
@@ -280,7 +280,7 @@ SWEP.HookP_NameChange = function(self, name)
 
     local attached = self:GetElements()
 
-    local gunname = "MG-08/15"
+    local gunname = "MG08/15"
 
     if attached["bo1_pap"] then
         gunname = "Magna Collider"

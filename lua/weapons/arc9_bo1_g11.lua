@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Black Ops" -- edit this if you like
 SWEP.SubCategory = "Assault Rifles"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "HK G11"
+SWEP.PrintName = "G11"
 SWEP.Class = "Assault Rifle"
 SWEP.Description = [[Experimental German assault rifle for special operations which fired caseless rounds.
 Research into the weapons system was dropped in 1990 in favor of the more conventional G36 rifle.]]
@@ -14,7 +14,7 @@ SWEP.Trivia = {
     Mechanism = "Gas-Operated",
     Country = "West Germany",
     Year = 1968,
-    Games = [[BO1]]
+    Games = [[Call of Duty: Black Ops]]
 }
 SWEP.Credits = {
     Author = "Palindrone"

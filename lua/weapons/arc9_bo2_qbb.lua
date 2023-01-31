@@ -1,11 +1,11 @@
 SWEP.Base = "arc9_base"
 SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ARC9 - Black Ops II" -- edit this if you like
-SWEP.SubCategory = "Machine Guns"
+SWEP.SubCategory = "Light Machine Guns"
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "QBB LSW"
-SWEP.Class = "Light Machine Gun"
+SWEP.Class = "General Purpose Machine Gun"
 SWEP.Description = [[Chinese fully automatic LMG in Light Squad Weapon configuration standard for the People's Liberation Army.
 Highest rate of fire in class.]]
 SWEP.Trivia = {

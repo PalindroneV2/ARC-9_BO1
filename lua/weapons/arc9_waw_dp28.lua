@@ -4,8 +4,8 @@ SWEP.Category = "ARC9 - World at War" -- edit this if you like
 SWEP.SubCategory = "Machine Guns"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "DP-27"
-SWEP.Class = "Light Machine Gun"
+SWEP.PrintName = "DP-28"
+SWEP.Class = "General Purpose Machine Gun"
 SWEP.Description = [[WW2 era Soviet light machine gun. Though it had some issues, also held a reputation as an effective light support weapon.
 Nicknamed "Record Player" by soldiers due to its disc-shaped magazine that was fed from the top and rotated while firing.]]
 SWEP.Trivia = {
@@ -255,7 +255,7 @@ SWEP.HookP_NameChange = function(self, name)
 
     local attached = self:GetElements()
 
-    local gunname = "DP-27"
+    local gunname = "Degtyarev DP-28"
 
     if attached["bo1_pap"] then
         gunname = "Emma"

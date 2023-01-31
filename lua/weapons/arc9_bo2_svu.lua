@@ -5,7 +5,7 @@ SWEP.SubCategory = "Sniper Rifles"
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "SVU-AS"
-SWEP.Class = "Designated Marskman Rifle"
+SWEP.Class = "Designated Marksman Rifle"
 SWEP.Description = [[A modern bullpup configuration of the classic Dragunov SVD.
 Semi-automatic sniper rifle. High fire rate with low recoil.]]
 SWEP.Trivia = {

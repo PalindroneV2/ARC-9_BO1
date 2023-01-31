@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Black Ops" -- edit this if you like
 SWEP.SubCategory = "Submachine Guns"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "OTS-02 Kiparis"
+SWEP.PrintName = "Kiparis"
 SWEP.Class = "Submachine Gun"
 SWEP.Description = [[Russian submachine gun designed in the 70s intended for internal security and police units, but didn't see use until the 90s.
 A forgiving firearm with high fire rate and capacity to back it up with.]]

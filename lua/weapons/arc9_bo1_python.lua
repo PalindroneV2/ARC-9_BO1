@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Black Ops" -- edit this if you like
 SWEP.SubCategory = "Handguns"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Colt Python"
+SWEP.PrintName = "Python"
 SWEP.Class = "Revolver"
 SWEP.Description = [[American revolver regarded as one of the finest of its kind.
 The bore gets tighter towards the end, aiding in accuracy.]]

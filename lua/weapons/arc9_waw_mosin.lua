@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - World at War" -- edit this if you like
 SWEP.SubCategory = "Bolt-Action Rifles"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Mosin-Nagant M38"
+SWEP.PrintName = "Mosin-Nagant"
 SWEP.Class = "Rifle"
 SWEP.Description = [[Known oficially as the 3-line Rifle M1891, it was the standard Soviet infantry rifle for 54 years before being fully replaced by the SKS and subsequently the AK-47.
 For some time, there weren't enough issued to supply the whole army during the WW2 due to German intervention.]]

@@ -1,7 +1,7 @@
 SWEP.Base = "arc9_base"
 SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ARC9 - World at War" -- edit this if you like
-SWEP.SubCategory = "Explosive/Special"
+SWEP.SubCategory = "Explosive/Specials"
 SWEP.AdminOnly = false
 
 SWEP.PrintName = [[BRAAAINS...]]
@@ -11,7 +11,7 @@ SWEP.Trivia = {
     Origin = "Apothicons",
     Mechanism = "Clawing",
     Year = "Time immemorial",
-    Games = [[WAW,BO1,BO2,AW,BO3,IW,BO4,BOCW,VG]]
+    Games = [[WAW, BO1, BO2, AW, BO3, IW, BO4, BOCW, VG]]
 }
 SWEP.Credits = {
     Author = "Palindrone"

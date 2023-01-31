@@ -13,7 +13,7 @@ SWEP.Trivia = {
     Mechanism = "Double-Action Revolver",
     Country = "Brazil/USA",
     Year = 2006,
-    Games = [[BO2]]
+    Games = [[Call of Duty: Black Ops II]]
 }
 SWEP.Credits = {
     Author = "Palindrone"

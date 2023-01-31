@@ -1,11 +1,11 @@
 SWEP.Base = "arc9_base"
 SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ARC9 - Black Ops II" -- edit this if you like
-SWEP.SubCategory = "Machine Guns"
+SWEP.SubCategory = "Light Machine Guns"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "FN HAMR"
-SWEP.Class = "Light Machine Gun"
+SWEP.PrintName = "HAMR"
+SWEP.Class = "General Purpose Machine Gun"
 SWEP.Description = [[Heat Adaptive Modular Rifle.
 Fully automatic LMG. Reduces recoil during sustained fire.]]
 SWEP.Trivia = {

@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Black Ops II" -- edit this if you like
 SWEP.SubCategory = "Assault Rifles"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "SMI Saritch 308"
+SWEP.PrintName = "SMR"
 SWEP.Class = "Battle Rifle"
 SWEP.Description = [[Russian semi-automatic assault rifle in .308 Winchester and 7.62mm NATO for the civilian market.
 Highest damage per round in class.]]

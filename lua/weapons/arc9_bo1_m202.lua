@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Black Ops" -- edit this if you like
 SWEP.SubCategory = "Specials/Explosives"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "M202A1 FLASH"
+SWEP.PrintName = "Grim Reaper"
 SWEP.Class = "Rocket Launcher"
 SWEP.Description = [[An American design to replace WW2 era flamethrowers that had remained the standard incendiary devices for the US Military until well into the 60s.
 It can carry 4 rockets.]]
@@ -14,7 +14,7 @@ SWEP.Trivia = {
     Mechanism = "Rocket Propelled Grenade",
     Country = "USA",
     Year = 1978,
-    Games = [[BO1]]
+    Games = [[Call of Duty: Black Ops II]]
 }
 SWEP.Credits = {
     Author = "Palindrone"
@@ -246,7 +246,7 @@ SWEP.HookP_NameChange = function(self, name)
 
     local attached = self:GetElements()
 
-    local gunname = "M202A1 FLASH"
+    local gunname = "M202 Flash \"Grim Reaper\""
 
     if attached["bo1_pap"] then gunname = "Grim Reaper" end
 

@@ -13,7 +13,7 @@ SWEP.Trivia = {
     Mechanism = "Spring-Loaded",
     Country = "USSR",
     Year = 1970,
-    Games = [[BO1,BO2,BO4,BOCW]]
+    Games = [[BO1, BO2, BO4, BOCW]]
 }
 SWEP.Credits = {
     Author = "Palindrone"

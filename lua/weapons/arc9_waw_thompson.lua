@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - World at War" -- edit this if you like
 SWEP.SubCategory = "Submachine Guns"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "M1A1 Thompson"
+SWEP.PrintName = "Thompson"
 SWEP.Class = "Submachine Gun"
 SWEP.Description = [[Interwar American submachine gun in .45 ACP. The design was finalized too late for the Great War, but it found commercial success in the civilian market and infamy due to it's use by gangsters.
 

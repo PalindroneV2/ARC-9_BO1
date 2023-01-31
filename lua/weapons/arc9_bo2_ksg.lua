@@ -14,7 +14,7 @@ SWEP.Trivia = {
     Mechanism = "Pump-Action",
     Country = "USA",
     Year = 2011,
-    Games = [[MW3,BO2]]
+    Games = [[MW3, BO2]]
 }
 SWEP.Credits = {
     Author = "Palindrone"

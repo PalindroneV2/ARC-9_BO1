@@ -13,7 +13,7 @@ SWEP.Trivia = {
     Mechanism = "Rocket Propelled Grenade",
     Country = "USA",
     Year = 1963,
-    Games = [[BO1]]
+    Games = [[Call of Duty: Black Ops]]
 }
 SWEP.Credits = {
     Author = "Palindrone"

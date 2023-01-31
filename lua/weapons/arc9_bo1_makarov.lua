@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Black Ops" -- edit this if you like
 SWEP.SubCategory = "Handguns"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Makarov PM"
+SWEP.PrintName = "Makarov"
 SWEP.Class = "Pistol"
 SWEP.Description = [[A Soviet pistol designed shortly after WW2. Standard for all branches of police and military and still being used by the Russian Armed Forces to this day.
 Owing to its compact size and weight, it is very accurate, but its caliber and magazine capacity limits its firepower.]]

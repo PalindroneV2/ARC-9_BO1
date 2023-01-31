@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Black Ops II" -- edit this if you like
 SWEP.SubCategory = "Handguns"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "FNP-45"
+SWEP.PrintName = "Tac-45"
 SWEP.Class = "Pistol"
 SWEP.Description = [[.45 Caliber semi-automatic pistol. High damage at close range. 
 Produced in Belgium that currently sees service with Spanish Navy Marines and in few police forces.]]

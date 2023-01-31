@@ -1,11 +1,11 @@
 SWEP.Base = "arc9_base"
 SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ARC9 - Black Ops II" -- edit this if you like
-SWEP.SubCategory = "Machine Guns"
+SWEP.SubCategory = "Light Machine Guns"
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "LSAT"
-SWEP.Class = "Light Machine Gun"
+SWEP.Class = "General Purpose Machine Gun"
 SWEP.Description = [[Belgian fully automatic LMG. Versatile and strong overall.
 Scaled up version of the MK 46 Mod 0 and fires the more powerful 7.62x51mm NATO.
 Used by US Naval Forces, USSOCOM, and Indian Special Forces.]]
@@ -15,7 +15,7 @@ SWEP.Trivia = {
     Mechanism = "Short-stroke gas piston",
     Country = "USA",
     Year = 2010,
-    Games = [[BO2]]
+    Games = [[Call of Duty: Black Ops II]]
 }
 SWEP.Credits = {
     Author = "Palindrone"

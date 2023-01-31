@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - World at War" -- edit this if you like
 SWEP.SubCategory = "Handguns"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "S&W Model 27"
+SWEP.PrintName = ".357 Magnum"
 SWEP.Class = "Revolver"
 SWEP.Description = [[Magnum revolver with a one hell of a kick.
 US General George Patton carried one as his personal sidearm.]]

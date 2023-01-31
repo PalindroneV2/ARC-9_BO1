@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Black Ops" -- edit this if you like
 SWEP.SubCategory = "Handguns"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Colt M1911A1"
+SWEP.PrintName = "M1911"
 SWEP.Class = "Pistol"
 SWEP.Description = [[A staple of firearm design, in service with military forces, law enforcement agencies and civilians for over 100 years. A pistol that forgot to become obsolete.
 Fires a powerful cartridge, but is let down by its single stack magazine.]]

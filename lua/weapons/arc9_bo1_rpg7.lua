@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Black Ops" -- edit this if you like
 SWEP.SubCategory = "Specials/Explosives"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "RPG-7"
+SWEP.PrintName = "RPG"
 SWEP.Class = "Rocket Launcher"
 SWEP.Description = [[A Russian portable, reusable, unguided, shoulder-launched, anti-tank rocket-propelled grenade launcher.
 The ruggedness, simplicity, low cost, and effectiveness of the RPG-7 has made it the most widely used anti-armor weapon in the world.]]
@@ -14,7 +14,7 @@ SWEP.Trivia = {
     Mechanism = "Rocket Propelled Grenade",
     Country = "USSR",
     Year = 1958,
-    Games = [[COD4, MW2, BO1, MW3, BO1, AW, ]]
+    Games = [[COD4, MW2, BO1, MW3, BO1, AW]]
 }
 SWEP.Credits = {
     Author = "Palindrone"

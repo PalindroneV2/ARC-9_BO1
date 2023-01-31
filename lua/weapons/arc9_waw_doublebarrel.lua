@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - World at War" -- edit this if you like
 SWEP.SubCategory = "Shotguns"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Double-Barrel Shotgun"
+SWEP.PrintName = "Double-Barrel"
 SWEP.Class = "Shotgun"
 SWEP.Description = [[Dating back to the old west, still in use today, two barrels of buckshot.
 A classic through and through.]]
@@ -267,7 +267,7 @@ SWEP.HookP_NameChange = function(self, name)
 
     local attached = self:GetElements()
 
-    local gunname = "Double-Barrel Shotgun"
+    local gunname = "Double-Barreled Shotgun"
 
     if attached["sawed-off"] then
         gunname = "Sawed-Off " .. gunname

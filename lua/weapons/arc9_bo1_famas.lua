@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Black Ops" -- edit this if you like
 SWEP.SubCategory = "Assault Rifles"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "FAMAS Valorisé"
+SWEP.PrintName = "Famas"
 SWEP.Class = "Assault Rifle"
 SWEP.Description = [[A French assault rifle firing the 5.56mm NATO round Using a bullpup configuration to keep it a compact size.]]
 SWEP.Trivia = {

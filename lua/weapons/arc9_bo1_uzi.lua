@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Black Ops" -- edit this if you like
 SWEP.SubCategory = "Submachine Guns"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "IMI Uzi"
+SWEP.PrintName = "Uzi"
 SWEP.Class = "Submachine Gun"
 SWEP.Description = [[Israeli SMG chambered in 9mm, designed to be compact and easy to manufacture. Made famous by it's use in most Hollywood films.
 A balanced weapon providing good firepower and hip fire accuracy.]]

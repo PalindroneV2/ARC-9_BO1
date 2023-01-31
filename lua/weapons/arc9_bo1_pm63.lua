@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Black Ops" -- edit this if you like
 SWEP.SubCategory = "Submachine Guns"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "PM-63 RAK"
+SWEP.PrintName = "PM-63"
 SWEP.Class = "Machine Pistol"
 SWEP.Description = [[Polish submachine gun designed for rear echelon soldiers.
 While lacking in firepower and range, it makes up for it with unparalleled handling characteristics.]]

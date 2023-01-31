@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Black Ops II" -- edit this if you like
 SWEP.SubCategory = "Assault Rifles"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "MTAR-21"
+SWEP.PrintName = "MTAR"
 SWEP.Class = "Assault Rifle"
 SWEP.Description = [[Israeli fully automatic assault rifle in 5.56mm NATO.
 Versatile and strong overall.]]

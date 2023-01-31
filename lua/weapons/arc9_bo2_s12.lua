@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Black Ops II" -- edit this if you like
 SWEP.SubCategory = "Shotguns"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Saiga 12K"
+SWEP.PrintName = "S12"
 SWEP.Class = "Combat Shotgun"
 SWEP.Description = [[12 gauge semi-automatic shotgun that was based on the AK platform. Deadly at short range. 
 Unlike many self loading shotguns which run into feeding issues, the Saiga manages to be reliable due to the looser tolerances of the AK platform.]]
@@ -278,7 +278,7 @@ SWEP.HookP_NameChange = function(self, name)
 
     local attached = self:GetElements()
 
-    local gunname = "Saiga 12k"
+    local gunname = "Saiga-12"
 
     if attached["bo1_pap"] then
         gunname = "Synthetic Dozen"
