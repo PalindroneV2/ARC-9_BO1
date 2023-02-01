@@ -25,3 +25,4 @@ ATT.SprintToFireTimeMult = 0.95
 ATT.RangeMaxMult = 0.9
 ATT.RangeMinMult = 0.9
 ATT.PhysBulletMuzzleVelocityMult = 0.9
+ATT.ShootSound = "ARC9_WAW.SawnOff_Fire"
