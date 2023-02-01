@@ -596,7 +596,7 @@ SWEP.Animations = {
     },
     ["enter_sprint"] = {
         Source = "sprint_in",
-        Time = 10 / 30
+        Time = 1,
     },
     ["idle_sprint"] = {
         Source = "sprint_loop",
@@ -604,7 +604,7 @@ SWEP.Animations = {
     },
     ["exit_sprint"] = {
         Source = "sprint_out",
-        Time = 10 / 30
+        Time = 1,
     },
 
 -- UBGL OUT ANIMS ---------------------------------------------------------------
@@ -663,7 +663,7 @@ SWEP.Animations = {
     },
     ["enter_sprint_m203"] = {
         Source = "sprint_in_gl",
-        Time = 10 / 30
+        Time = 1,
     },
     ["idle_sprint_m203"] = {
         Source = "sprint_loop_gl",
@@ -671,7 +671,7 @@ SWEP.Animations = {
     },
     ["exit_sprint_m203"] = {
         Source = "sprint_out_gl",
-        Time = 10 / 30
+        Time = 1,
     },
 
 -- UBGL IN ANIMS -----------------------------------------------------------------
@@ -711,7 +711,7 @@ SWEP.Animations = {
     },
     ["enter_sprint_glsetup"] = {
         Source = "sprint_in_glsetup",
-        Time = 10 / 30
+        Time = 1,
     },
     ["idle_sprint_glsetup"] = {
         Source = "sprint_loop_glsetup",
@@ -719,7 +719,7 @@ SWEP.Animations = {
     },
     ["exit_sprint_glsetup"] = {
         Source = "sprint_out_glsetup",
-        Time = 10 / 30
+        Time = 1,
     },
 
     -- UBGL OUT ANIMS ---------------------------------------------------------------
@@ -778,7 +778,7 @@ SWEP.Animations = {
     },
     ["enter_sprint_mk"] = {
         Source = "sprint_in_mk",
-        Time = 10 / 30
+        Time = 1,
     },
     ["idle_sprint_mk"] = {
         Source = "sprint_loop_mk",
@@ -786,7 +786,7 @@ SWEP.Animations = {
     },
     ["exit_sprint_mk"] = {
         Source = "sprint_out_mk",
-        Time = 10 / 30
+        Time = 1,
     },
 
     -- MK IN ANIMS --

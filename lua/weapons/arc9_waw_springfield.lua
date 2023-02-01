@@ -510,7 +510,7 @@ SWEP.Animations = {
     },
     ["exit_ubgl_empty"] = {
         Source = "glsetup_out_empty",
-        Time = 10 / 30,
+        Time = 1,,
     },
     ["fire_ubgl"] = {
         Source = "fire_glsetup",
