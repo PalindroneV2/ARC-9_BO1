@@ -158,6 +158,45 @@ ARC9.LoadAttachment(ATT, "bo2_muzzle_suppressor_80s_1")
 
 ATT = {}
 
+ATT.PrintName = [[Pistol Suppressor]]
+ATT.CompactName = [[SUPP 2025]]
+ATT.Icon = Material("materials/entities/bo1_atts/barrel/bo2_suppressor.png")
+ATT.Description = [[Lightweight can cools and disperses gases leaving the barrel, muffling the firearm's audible report.]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
+ATT.Free = false
+
+ATT.Model = "models/weapons/arc9/atts/bo2_suppressor_pistol.mdl"
+ATT.Scale = Vector(1, 1, 1)
+ATT.ModelOffset = Vector(-0.25, 0, 0)
+
+ATT.Category = {"cod_muzzle_pistol"}
+ATT.MuzzleDevice = true
+ATT.Silencer = true
+ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.DistantShootSoundOverride = ""
+ATT.FirstDistantShootSoundOverride = ""
+
+ATT.ShootVolumeMult = 4 / 5
+ATT.ShootPitchMult = 1.1
+
+ATT.SpreadMult = 0.99
+ATT.RecoilMult = 0.975
+ATT.RecoilUpMult = 0.975
+ATT.AimDownSightsTimeMult = 1.025
+ATT.SprintToFireTimeMult = 1.05
+ATT.SpreadMultHipFire = 1.05
+--ATT.SpreadMultMove = 1.05
+ATT.RangeMaxMult = 1.1
+ATT.RangeMinMult = 0.9
+ATT.PhysBulletMuzzleVelocityMult = 1.1
+
+ARC9.LoadAttachment(ATT, "bo2_muzzle_suppressor_pistol_2025")
+
+ATT = {}
+
 ATT.PrintName = [[AR 80s Suppressor]]
 ATT.CompactName = [[SUPP 80s]]
 ATT.Icon = Material("materials/entities/bo1_atts/barrel/bo2_suppressor.png")
@@ -501,3 +540,117 @@ ATT.RangeMinMult = 0.9
 ATT.PhysBulletMuzzleVelocityMult = 1.1
 
 ARC9.LoadAttachment(ATT, "waw_p38_muzzle_uncle")
+
+ATT = {}
+
+ATT.PrintName = [[Sniper Suppressor 1]]
+ATT.CompactName = [[SUPP 1]]
+ATT.Icon = Material("materials/entities/bo1_atts/barrel/bo2_suppressor.png")
+ATT.Description = [[Heavy can cools and disperses gases leaving the barrel, muffling the firearm's audible report.]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
+ATT.Free = false
+
+ATT.Model = "models/weapons/arc9/atts/bo2_suppressor_sniper1.mdl"
+ATT.Scale = Vector(1, 1, 1)
+
+ATT.Category = {"cod_muzzle_sniper"}
+ATT.MuzzleDevice = true
+ATT.Silencer = true
+ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.DistantShootSoundOverride = ""
+ATT.FirstDistantShootSoundOverride = ""
+
+ATT.ShootVolumeMult = 4 / 5
+ATT.ShootPitchMult = 1.1
+
+ATT.SpreadMult = 0.95
+ATT.RecoilMult = 0.975
+ATT.RecoilUpMult = 0.975
+ATT.AimDownSightsTimeMult = 1.1
+ATT.SprintToFireTimeMult = 1.15
+ATT.SpreadMultHipFire = 1.15
+--ATT.SpreadMultMove = 1.05
+ATT.RangeMaxMult = 1.1
+ATT.RangeMinMult = 0.9
+ATT.PhysBulletMuzzleVelocityMult = 1.1
+
+ARC9.LoadAttachment(ATT, "bo2_muzzle_suppressor_sniper_1")
+
+ATT = {}
+
+ATT.PrintName = [[Sniper Suppressor 2]]
+ATT.CompactName = [[SVU SUPP]]
+ATT.Icon = Material("materials/entities/bo1_atts/barrel/bo2_suppressor.png")
+ATT.Description = [[Heavy can cools and disperses gases leaving the barrel, muffling the firearm's audible report.]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
+ATT.Free = false
+
+ATT.Model = "models/weapons/arc9/atts/bo2_suppressor_sniper2.mdl"
+ATT.Scale = Vector(1, 1, 1)
+
+ATT.Category = {"cod_muzzle_sniper"}
+ATT.MuzzleDevice = true
+ATT.Silencer = true
+ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.DistantShootSoundOverride = ""
+ATT.FirstDistantShootSoundOverride = ""
+
+ATT.ShootVolumeMult = 4 / 5
+ATT.ShootPitchMult = 1.1
+
+ATT.SpreadMult = 0.95
+ATT.RecoilMult = 0.975
+ATT.RecoilUpMult = 0.975
+ATT.AimDownSightsTimeMult = 1.1
+ATT.SprintToFireTimeMult = 1.15
+ATT.SpreadMultHipFire = 1.15
+--ATT.SpreadMultMove = 1.05
+ATT.RangeMaxMult = 1.1
+ATT.RangeMinMult = 0.9
+ATT.PhysBulletMuzzleVelocityMult = 1.1
+
+ARC9.LoadAttachment(ATT, "bo2_muzzle_suppressor_sniper_2")
+
+ATT = {}
+
+ATT.PrintName = [[Sniper Suppressor 2]]
+ATT.CompactName = [[SVU SUPP]]
+ATT.Icon = Material("materials/entities/bo1_atts/barrel/bo2_suppressor.png")
+ATT.Description = [[Heavy can cools and disperses gases leaving the barrel, muffling the firearm's audible report.]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
+ATT.Free = false
+
+ATT.Model = "models/weapons/arc9/atts/bo2_suppressor_sniper2.mdl"
+ATT.Scale = Vector(1 / 1.35, 1 / 1.15, 1 / 1.15)
+
+ATT.Category = {"cod_muzzle_svu"}
+ATT.MuzzleDevice = true
+ATT.Silencer = true
+ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.DistantShootSoundOverride = ""
+ATT.FirstDistantShootSoundOverride = ""
+
+ATT.ShootVolumeMult = 4 / 5
+ATT.ShootPitchMult = 1.1
+
+ATT.SpreadMult = 0.95
+ATT.RecoilMult = 0.975
+ATT.RecoilUpMult = 0.975
+ATT.AimDownSightsTimeMult = 1.1
+ATT.SprintToFireTimeMult = 1.15
+ATT.SpreadMultHipFire = 1.15
+--ATT.SpreadMultMove = 1.05
+ATT.RangeMaxMult = 1.1
+ATT.RangeMinMult = 0.9
+ATT.PhysBulletMuzzleVelocityMult = 1.1
+
+ARC9.LoadAttachment(ATT, "bo2_muzzle_suppressor_sniper_svu")
