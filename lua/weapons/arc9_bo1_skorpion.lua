@@ -266,8 +266,13 @@ end
 SWEP.Hook_TranslateAnimation = function (self, anim)
     local attached = self:GetElements()
 
-    if attached["bo1_mag_ext"] and (anim == "draw" or anim == "first_draw") then
-        return anim .. "_stock"
+    if attached["stock_l"] then
+        if anim == "ready" then
+            return anim .. "_stock"
+        end
+        if anim == "draw" then
+            return anim .. "_stock"
+        end
     end
 
     if attached["bo1_mag_ext"] then
@@ -390,16 +395,16 @@ SWEP.Animations = {
         Source = "first_draw_stock",
         Time = 1,
         EventTable = {
-            {s = "ARC9_BO1.Skorpion_Futz", t = 6 / 30},
-            {s = "ARC9_BO1.Skorpion_BoltFwd", t = 12 / 30},
+            {s = "ARC9_BO1.Skorpion_Futz", t = 3 / 30},
+            {s = "ARC9_BO1.MAC11_Stock", t = 6 / 30},
         },
     },
     ["draw_stock_ext"] = {
         Source = "first_draw_stock",
         Time = 1,
         EventTable = {
-            {s = "ARC9_BO1.Skorpion_Futz", t = 6 / 30},
-            {s = "ARC9_BO1.Skorpion_BoltFwd", t = 12 / 30},
+            {s = "ARC9_BO1.Skorpion_Futz", t = 3 / 30},
+            {s = "ARC9_BO1.MAC11_Stock", t = 6 / 30},
         },
     },
     ["ready"] = {
@@ -410,16 +415,16 @@ SWEP.Animations = {
         Source = "first_draw_stock",
         Time = 1,
         EventTable = {
-            {s = "ARC9_BO1.Skorpion_Futz", t = 6 / 30},
-            {s = "ARC9_BO1.Skorpion_BoltFwd", t = 12 / 30},
+            {s = "ARC9_BO1.Skorpion_Futz", t = 3 / 30},
+            {s = "ARC9_BO1.MAC11_Stock", t = 6 / 30},
         },
     },
     ["ready_stock_ext"] = {
         Source = "first_draw_stock",
         Time = 1,
         EventTable = {
-            {s = "ARC9_BO1.Skorpion_Futz", t = 6 / 30},
-            {s = "ARC9_BO1.Skorpion_BoltFwd", t = 12 / 30},
+            {s = "ARC9_BO1.Skorpion_Futz", t = 3 / 30},
+            {s = "ARC9_BO1.MAC11_Stock", t = 6 / 30},
         },
     },
     ["fire"] = {

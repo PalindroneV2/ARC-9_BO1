@@ -576,7 +576,7 @@ SWEP.Animations = {
         Source = "first_draw_stock",
         Time = 1,
         EventTable = {
-            {s = "ARC9_BO1.MP5_BoltFwd", t = 15 / 30},
+            {s = "ARC9_BO1.MP5_BoltFwd", t = 10 / 30},
         },
         IKTimeLine = {
             {
@@ -873,7 +873,7 @@ SWEP.Animations = {
         Source = "first_draw_sil_stock",
         Time = 30 / 30,
         EventTable = {
-            {s = "ARC9_BO1.MP5_BoltFwd", t = 12 / 30}
+            {s = "ARC9_BO1.MP5_BoltFwd", t = 10 / 30},
         },
         IKTimeLine = {
             {
@@ -1073,7 +1073,7 @@ SWEP.Animations = {
         Source = "first_draw_stock",
         Time = 30 / 30,
         EventTable = {
-            {s = "ARC9_BO1.MP5_BoltFwd", t = 15 / 30},
+            {s = "ARC9_BO1.MP5_BoltFwd", t = 10 / 30},
         },
         IKTimeLine = {
             {
@@ -1174,7 +1174,7 @@ SWEP.Animations = {
         Source = "draw_sil",
         Time = 1,
         EventTable = {
-            {s = "ARC9_BO1.MP5_BoltFwd", t = 15 / 30}
+            {s = "ARC9_BO1.MP5_BoltFwd", t = 10 / 30},
         },
         IKTimeLine = {
             {
@@ -1320,7 +1320,7 @@ SWEP.Animations = {
         Source = "first_draw_sil_stock",
         Time = 1,
         EventTable = {
-            {s = "ARC9_BO1.MP5_BoltFwd", t = 15 / 30},
+            {s = "ARC9_BO1.MP5_BoltFwd", t = 10 / 30},
         },
         IKTimeLine = {
             {

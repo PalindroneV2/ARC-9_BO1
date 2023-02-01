@@ -272,10 +272,13 @@ end
 SWEP.Hook_TranslateAnimation = function (self, anim)
     local attached = self:GetElements()
 
-    local suffix = ""
-
     if attached["stock_m"] then
-        suffix = "_stock"
+        if anim == "ready" then
+            return anim .. "_stock"
+        end
+        if anim == "draw" then
+            return anim .. "_stock"
+        end
     end
 
     if attached["bo1_mag_ext"] then
@@ -286,8 +289,6 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
             return "ext_empty"
         end
     end
-
-    return anim .. suffix
 end
 
 --TEST 3
@@ -435,7 +436,7 @@ SWEP.Animations = {
             {s = "ARC9_BO1.Uzi_BoltFwd", t = 18 / 30}
         },
     },
-    ["ready_grip"] = {
+    ["ready_stock"] = {
         Source = "first_draw_stock",
         Time = 1.5,
         EventTable = {

@@ -242,8 +242,8 @@ ATT.PenetrationMult = 0.75
 ATT.PhysBulletMuzzleVelocity = 300 * 39.37
 
 ATT.Ammo = "pistol"
-ATT.ShootSoundOverride = "ARC9_WAW.Thompson_Fire"
-ATT.DistantShootSoundOverride = "^weapons/arc9/waw_dist/waw_rifle.wav"
+ATT.ShootSound = "ARC9_WAW.Thompson_Fire"
+ATT.DistantShootSound = "^weapons/arc9/waw_dist/waw_rifle.wav"
 
 ATT.Trivia = {
     Manufacturer = "Heckler & Koch",

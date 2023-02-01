@@ -272,7 +272,9 @@ end
 SWEP.Hook_TranslateAnimation = function (self, anim)
     local attached = self:GetElements()
 
-    local suffix = ""
+    -- if attached["stock_l"] and anim == "ready" then
+    --     return anim .. "_stock"
+    -- end
 
     if attached["bo1_mag_ext"] then
         if anim == "reload" then
@@ -282,8 +284,6 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
             return "ext_empty"
         end
     end
-
-    return anim .. suffix
 end
 
 --TEST 3
