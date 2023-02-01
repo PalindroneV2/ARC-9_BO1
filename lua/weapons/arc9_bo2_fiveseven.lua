@@ -218,9 +218,6 @@ SWEP.BarrelLength = 0 -- = 9
 
 SWEP.ExtraSightDist = 15
 
-SWEP.AttachmentElements = {
-}
-
 SWEP.Hook_ModifyBodygroups = function(self, data)
 
     local vm = data.model
@@ -261,7 +258,6 @@ SWEP.ReloadHideBoneTables = {
     [1] = {"tag_clip_full"},
 }
 
-
 SWEP.Hook_TranslateAnimation = function (self, anim)
     local attached = self:GetElements()
 
@@ -274,6 +270,16 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
         end
     end
 end
+
+SWEP.AttachmentElements = {
+    ["cod4_peq6"] = {
+        AttPosMods = {
+            [3] = {
+                Pos = Vector(3.5,0,0.25),
+            },
+        },
+    },
+}
 
 SWEP.Attachments = {
     {
@@ -300,7 +306,7 @@ SWEP.Attachments = {
         DefaultCompactName = "TAC",
         Bone = "j_gun",
         Scale = 1,
-        Pos = Vector(4, 0, 0.5),
+        Pos = Vector(3.5, 0, 0.25),
         Ang = Angle(0, 0, 0),
         Category = {"cod_tactical_pistols"},
     },

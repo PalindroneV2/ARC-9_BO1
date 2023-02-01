@@ -275,7 +275,7 @@ SWEP.Attachments = {
         Scale = Vector(1, 1, 1),
         Pos = Vector(4.75, 0, 0.2),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_pistol_rail"},
+        Category = {"cod_pistol_rail"},
         Icon_Offset = Vector(-3,0,1),
         CorrectiveAng = Angle(0.05, 0.3, 0),
     },

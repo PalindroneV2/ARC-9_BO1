@@ -172,12 +172,17 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(-2.75, -1, 0.75),
-    Ang = Angle(-0.175, 0.25, 0),
+    Pos = Vector(-2.74, -3, 0.8),
+    Ang = Angle(-0.2, 0.1, 0),
     Magnification = 1.1,
     ViewModelFOV = 60,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
+}
+
+SWEP.SightMidPoint = { -- Where the gun should be at the middle of it's irons
+    Pos = Vector(-1.358, -3, -0.1),
+    Ang = Angle(-0.1, 0.05, -2.5),
 }
 
 SWEP.HoldTypeHolstered = "passive"
@@ -188,7 +193,7 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_PISTOL
 SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_PISTOL
 SWEP.NonTPIKAnimReload = ACT_HL2MP_GESTURE_RELOAD_PISTOL
 
-SWEP.ActivePos = Vector(0, 0, -1)
+SWEP.ActivePos = Vector(0, -3, -1)
 SWEP.ActiveAng = Angle(0, 0, -5)
 
 SWEP.MovingPos = SWEP.ActivePos

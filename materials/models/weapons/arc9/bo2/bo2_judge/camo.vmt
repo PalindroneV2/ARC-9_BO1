@@ -26,4 +26,5 @@
             blend $detailblendfactor
 		}
 	}
+	"$nocull" "1"
 }

@@ -294,10 +294,10 @@ SWEP.Attachments = {
         PrintName = "Tactical",
         DefaultCompactName = "TAC",
         Bone = "j_gun",
-        Scale = Vector(1, 1, 1),
-        Pos = Vector(4.125, 0, 0.15),
+        Scale = Vector(1.5, 1.5, 1.5),
+        Pos = Vector(10, 0, 1.8),
         Ang = Angle(0, 0, 0),
-        Category = {"cod_tactical"},
+        Category = {"cod_tactical_revolver"},
         ExcludeElements = {"snubnose"}
     },
     {

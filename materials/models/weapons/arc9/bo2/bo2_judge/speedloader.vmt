@@ -1,7 +1,6 @@
 "VertexlitGeneric"
 {
 	"$basetexture" "models/weapons/arc9/bo2/bo2_fastmag/speedloader"
-	
 	"$bumpmap" "models/weapons/arc9/bo2/bo2_fastmag/speedloader_n"
 
 	
