@@ -472,12 +472,12 @@ SWEP.Animations = {
     },
     ["reload"] = {
         Source = "reload",
-        Time = 120 / 30,
+        Time = 120 / 40,
         EventTable = {
-            {s = "ARC9_BO2.Sniper_ClipOut", t = 27 / 30},
-            {s = "ARC9_BO2.Sniper_ClipIn", t = 80 / 30},
+            {s = "ARC9_BO2.Sniper_ClipOut", t = 27 / 40},
+            {s = "ARC9_BO2.Sniper_ClipIn", t = 80 / 40},
         },
-        MinProgress = 90 / 30,
+        MinProgress = 90 / 40,
         IKTimeLine = {
             {
                 t = 0,
@@ -503,16 +503,16 @@ SWEP.Animations = {
     },
     ["reload_empty"] = {
         Source = "reload_empty",
-        Time = 173 / 30,
+        Time = 173 / 40,
         EventTable = {
-            {s = "ARC9_BO2.Sniper_BoltUp", t = 9 / 30},
-            {s = "ARC9_BO2.Sniper_BoltBack", t = 13 / 30},
-            {s = "ARC9_BO2.Sniper_ClipOut", t = 60 / 30},
-            {s = "ARC9_BO2.Sniper_ClipIn", t = 113 / 30},
-            {s = "ARC9_BO2.Sniper_BoltFwd", t = 155 / 30},
-            {s = "ARC9_BO2.Sniper_BoltDown", t = 159 / 30},
+            {s = "ARC9_BO2.Sniper_BoltUp", t = 9 / 40},
+            {s = "ARC9_BO2.Sniper_BoltBack", t = 13 / 40},
+            {s = "ARC9_BO2.Sniper_ClipOut", t = 60 / 40},
+            {s = "ARC9_BO2.Sniper_ClipIn", t = 113 / 40},
+            {s = "ARC9_BO2.Sniper_BoltFwd", t = 145 / 40},
+            {s = "ARC9_BO2.Sniper_BoltDown", t = 149 / 40},
         },
-        MinProgress = 160 / 30,
+        MinProgress = 160 / 40,
         IKTimeLine = {
             {
                 t = 0,
@@ -538,12 +538,12 @@ SWEP.Animations = {
     },
     ["fast"] = {
         Source = "fast",
-        Time = 120 / 35,
+        Time = 120 / 40,
         EventTable = {
-            {s = "ARC9_BO2.Sniper_ClipOut", t = 27 / 35},
-            {s = "ARC9_BO2.Sniper_ClipIn", t = 80 / 35},
+            {s = "ARC9_BO2.Sniper_ClipOut", t = 27 / 40},
+            {s = "ARC9_BO2.Sniper_ClipIn", t = 80 / 40},
         },
-        MinProgress = 90 / 35,
+        MinProgress = 90 / 40,
         IKTimeLine = {
             {
                 t = 0,
@@ -569,16 +569,16 @@ SWEP.Animations = {
     },
     ["fast_empty"] = {
         Source = "fast_empty",
-        Time = 173 / 35,
+        Time = 173 / 40,
         EventTable = {
-            {s = "ARC9_BO2.Sniper_BoltUp", t = 9 / 35},
-            {s = "ARC9_BO2.Sniper_BoltBack", t = 13 / 35},
-            {s = "ARC9_BO2.Sniper_ClipOut", t = 60 / 35},
-            {s = "ARC9_BO2.Sniper_ClipIn", t = 121 / 35},
-            {s = "ARC9_BO2.Sniper_BoltFwd", t = 155 / 35},
-            {s = "ARC9_BO2.Sniper_BoltDown", t = 159 / 35},
+            {s = "ARC9_BO2.Sniper_BoltUp", t = 9 / 40},
+            {s = "ARC9_BO2.Sniper_BoltBack", t = 13 / 40},
+            {s = "ARC9_BO2.Sniper_ClipOut", t = 60 / 40},
+            {s = "ARC9_BO2.Sniper_ClipIn", t = 121 / 40},
+            {s = "ARC9_BO2.Sniper_BoltFwd", t = 145 / 40},
+            {s = "ARC9_BO2.Sniper_BoltDown", t = 149 / 40},
         },
-        MinProgress = 160 / 35,
+        MinProgress = 160 / 40,
         IKTimeLine = {
             {
                 t = 0,
