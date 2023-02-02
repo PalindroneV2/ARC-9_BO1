@@ -1,7 +1,7 @@
-ATT.PrintName = [[Picattiny Rail]]
-ATT.CompactName = [[PICATINNY]]
+ATT.PrintName = [[Picatinny Rail]]
+ATT.CompactName = [[PIC BOC]]
 ATT.Icon = Material("entities/bo1_atts/barrel/barrel.png")
-ATT.Description = [[Three-rail RIS handguard allows for attachment of underbarrels.]]
+ATT.Description = [[Standard rail system that allows for attachment of optics.]]
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false

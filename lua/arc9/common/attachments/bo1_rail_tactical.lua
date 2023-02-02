@@ -1,5 +1,5 @@
-ATT.PrintName = [[Picattiny Rail]]
-ATT.CompactName = [[PICATINNY]]
+ATT.PrintName = [[Picatinny Rail]]
+ATT.CompactName = [[PIC BOC]]
 ATT.Icon = Material("entities/bo1_atts/barrel/barrel.png")
 ATT.Description = [[Standard rail system that allows for attachment of tactical attachments such as flashlights or laser pointers.]]
 ATT.SortOrder = 0
