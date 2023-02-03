@@ -249,15 +249,15 @@ SWEP.Animations = {
     },
     ["draw"] = {
         Source = "draw",
-        Time = 0.6,
+        Time = 0.75,
     },
     ["ready"] = {
         Source = "first_draw",
-        Time = 1.6,
+        Time = 1,
     },
     ["holster"] = {
         Source = "holster",
-        Time = 0.3,
+        Time = 0.5,
     },
     ["bash"] = {
         Source = {"swipe2","swipe3","swipe4","swipe5"},

@@ -231,6 +231,61 @@ SWEP.SprintVerticalOffset = false
 SWEP.SprintPos = SWEP.ActivePos + Vector(9, 0, -1)
 SWEP.SprintAng = SWEP.ActiveAng + Angle(40, 0, 0)
 
+SWEP.ActivePosHook = function(self)
+    local attached = self:GetElements()
+    if attached["ssg"] then
+        return Vector(-2.6, -12, -1)
+    end
+end
+SWEP.ActiveAngHook = function(self)
+    local attached = self:GetElements()
+    if attached["ssg"] then
+        return Angle(0,0,0)
+    end
+end
+SWEP.MovingPosHook = function(self)
+    local attached = self:GetElements()
+    if attached["ssg"] then
+        return Vector(-2.6, -12, -1)
+    end
+end
+SWEP.MovingAngHook = function(self)
+    local attached = self:GetElements()
+    if attached["ssg"] then
+        return Angle(0,0,0)
+    end
+end
+SWEP.MovingMidPointHook = function(self)
+    local attached = self:GetElements()
+    if attached["ssg"] then
+        return {Pos = self.ActivePos, Ang = self.ActiveAng}
+    end
+end
+SWEP.CrouchPosHook = function(self)
+    local attached = self:GetElements()
+    if attached["ssg"] then
+        return Vector(-2.6, -12, -1)
+    end
+end
+SWEP.CrouchAngHook = function(self)
+    local attached = self:GetElements()
+    if attached["ssg"] then
+        return Angle(0,0,0)
+    end
+end
+SWEP.SprintPosHook = function(self)
+    local attached = self:GetElements()
+    if attached["ssg"] then
+        return Vector(-2.6, -12, -1)
+    end
+end
+SWEP.SprintAngHook = function(self)
+    local attached = self:GetElements()
+    if attached["ssg"] then
+        return Angle(0,0,0)
+    end
+end
+
 SWEP.CustomizePos = Vector(20.5, 40, 6)
 SWEP.CustomizeAng = Angle(90, 0, 0)
 
@@ -295,27 +350,6 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         camo = camo + 1
     end
     vm:SetSkin(camo)
-
-    local newactpos = Vector(0, -8.5, -1)
-    local newactang = Angle(0, 0, -5)
-    if attached["ssg"] then
-        newactpos = Vector(-2.6, -12, -1)
-        newactang = Angle(0, 0, 0)
-        self.SprintPos = newactpos
-        self.SprintAng = newactang
-    end
-    self.ActivePos = newactpos
-    self.ActiveAng = newactang
-    self.MovingPos = newactpos
-    self.MovingAng = newactang
-    self.MovingMidPoint = {
-        Pos = newactpos,
-        Ang = newactang
-    }
-    self.SprintPos = self.ActivePos + Vector(9, 0, -1)
-    self.SprintAng = self.ActiveAng + Angle(40, 0, 0)
-    self.CrouchPos = newactpos
-    self.CrouchAng = newactang
 end
 
 SWEP.Hook_TranslateAnimation = function (self, anim)

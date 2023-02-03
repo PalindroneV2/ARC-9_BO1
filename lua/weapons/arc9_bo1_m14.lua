@@ -199,6 +199,34 @@ SWEP.NonTPIKAnimReload = ACT_HL2MP_GESTURE_RELOAD_AR2
 SWEP.ActivePos = Vector(0, 0, -1)
 SWEP.ActiveAng = Angle(0, 0, -5)
 
+SWEP.ReloadPos = SWEP.ActivePos
+SWEP.ReloadAng = SWEP.ActiveAng
+
+SWEP.ActivePosHook = function(self)
+    local attached = self:GetElements()
+    if attached["bo1_mk"] and self:GetUBGL() then
+        return Vector(0,-3,-1)
+    end
+end
+SWEP.ActiveAngHook = function(self)
+    local attached = self:GetElements()
+    if attached["bo1_mk"] and self:GetUBGL() then
+        return Angle(0,0,0)
+    end
+end
+SWEP.ReloadPosHook = function(self)
+    local attached = self:GetElements()
+    if attached["bo1_mk"] and self:GetUBGL() then
+        return Vector(0,-3,-1)
+    end
+end
+SWEP.ReloadAngHook = function(self)
+    local attached = self:GetElements()
+    if attached["bo1_mk"] and self:GetUBGL() then
+        return Angle(0,0,0)
+    end
+end
+
 SWEP.BipodPos = Vector(-3.73, 0, -1.5)
 SWEP.BipodAng = Angle(0, 0, 0)
 
@@ -890,6 +918,7 @@ SWEP.Animations = {
     ["reload_ubgl_start_mksetup"] = {
         Source = "reload_in_mksetup",
         Time = 35 / 30,
+        RestoreAmmo = 1,
     },
     ["reload_ubgl_insert_mksetup"] = {
         Source = "reload_loop_mksetup",

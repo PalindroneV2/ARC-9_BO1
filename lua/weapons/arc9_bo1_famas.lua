@@ -197,6 +197,19 @@ SWEP.NonTPIKAnimReload = ACT_HL2MP_GESTURE_RELOAD_AR2
 SWEP.ActivePos = Vector(0, 0, -1)
 SWEP.ActiveAng = Angle(0, 0, -5)
 
+SWEP.ActivePosHook = function(self)
+    local attached = self:GetElements()
+    if attached["bo1_mk"] and self:GetUBGL() then
+        return Vector(0,-1.5,-1)
+    end
+end
+SWEP.ActiveAngHook = function(self)
+    local attached = self:GetElements()
+    if attached["bo1_mk"] and self:GetUBGL() then
+        return Angle(0,0,0)
+    end
+end
+
 SWEP.MovingPos = SWEP.ActivePos
 SWEP.MovingAng = SWEP.ActiveAng
 
@@ -242,6 +255,13 @@ SWEP.AttachmentElements = {
                 Pos = Vector(2, 0.1, 6.4)
             },
         },
+        IronSights = {
+            Pos = Vector(-2.895, -3, 0.3),
+            Ang = Angle(0.025, 0.25, 0),
+            Magnification = 1.1,
+            ViewModelFOV = 60,
+            CrosshairInSights = false,
+        },
     },
 }
 
@@ -249,8 +269,6 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
 
     local vm = data.model
     local attached = data.elements
-    local newpos = Vector(-2.895, -5, 0.3)
-    local newang = Angle(0.025, -0.15, 0)
 
     if attached["mount"] then
         vm:SetBodygroup(2,1)
@@ -262,8 +280,6 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         if attached["mount"] then
             vm:SetBodygroup(2,2)
         end
-        newpos = Vector(-2.895, -3, 0.3)
-        newang = Angle(0.025, 0.25, 0)
     end
 
     if self:GetBipod() then
@@ -281,14 +297,6 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         camo = camo + 2
     end
     vm:SetSkin(camo)
-
-    self.IronSights = {
-        Pos = newpos,
-        Ang = newang,
-        Magnification = 1.1,
-        ViewModelFOV = 60,
-        CrosshairInSights = false,
-    }
 
 end
 

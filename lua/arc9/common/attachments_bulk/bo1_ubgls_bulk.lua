@@ -15,7 +15,7 @@ ATT.Free = false
 
 ATT.Category = {"bo1_gp25"}
 ATT.ActivateElements = {"bo1_gp25"}
-ATT.ExcludeElements = {"no_ubgl"}
+ATT.ExcludeElements = {"no_ubgl","barrel_krinkov"}
 
 ATT.AimDownSightsTimeMult = 1.1
 ATT.SprintToFireTimeMult = 1.1
@@ -241,7 +241,7 @@ ATT.Free = false
 
 ATT.Category = {"bo1_mk"}
 ATT.ActivateElements = {"bo1_mk"}
-ATT.ExcludeElements = {"no_ubgl", "barrel_10"}
+ATT.ExcludeElements = {"no_ubgl", "barrel_10", "barrel_krinkov"}
 ATT.AimDownSightsTimeMult = 1.1
 ATT.SprintToFireTimeMult = 1.1
 

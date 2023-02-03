@@ -202,6 +202,34 @@ SWEP.NonTPIKAnimReload = ACT_HL2MP_GESTURE_RELOAD_AR2
 SWEP.ActivePos = Vector(0, 0, -1)
 SWEP.ActiveAng = Angle(0, 0, -5)
 
+SWEP.ReloadPos = SWEP.ActivePos
+SWEP.ReloadAng = SWEP.ActiveAng
+
+SWEP.ActivePosHook = function(self)
+    local attached = self:GetElements()
+    if attached["bo1_mk"] and self:GetUBGL() then
+        return Vector(0,-1,-1)
+    end
+end
+SWEP.ActiveAngHook = function(self)
+    local attached = self:GetElements()
+    if attached["bo1_mk"] and self:GetUBGL() then
+        return Angle(0,0,0)
+    end
+end
+SWEP.ReloadPosHook = function(self)
+    local attached = self:GetElements()
+    if attached["bo1_mk"] and self:GetUBGL() then
+        return Vector(0,-3,-1)
+    end
+end
+SWEP.ReloadAngHook = function(self)
+    local attached = self:GetElements()
+    if attached["bo1_mk"] and self:GetUBGL() then
+        return Angle(0,0,0)
+    end
+end
+
 SWEP.MovingPos = SWEP.ActivePos
 SWEP.MovingAng = SWEP.ActiveAng
 
@@ -640,13 +668,8 @@ SWEP.Animations = {
     ["reload_ft"] = {
         Source = "reload_ft",
         Time = 2.6,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
-        Framerate = 30,
-        Checkpoints = {28, 38, 69},
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
         EventTable = {
+            {hide = 1, t = 1 / 35,},
             {s = "ARC9_BO1.XL60_MagOut", t = 18 / 35},
             {s = "ARC9_BO1.XL60_Futz", t = 50 / 35},
             {s = "ARC9_BO1.XL60_MagIn", t = 58 / 35},
@@ -655,13 +678,8 @@ SWEP.Animations = {
     ["reload_empty_ft"] = {
         Source = "reload_empty_ft",
         Time = 3.2,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
-        Framerate = 30,
-        Checkpoints = {28, 38, 69},
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
         EventTable = {
+            {hide = 1, t = 1 / 35,},
             {s = "ARC9_BO1.XL60_MagOut", t = 18 / 35},
             {s = "ARC9_BO1.XL60_Futz", t = 50 / 35},
             {s = "ARC9_BO1.XL60_MagIn", t = 58 / 35},
@@ -759,6 +777,7 @@ SWEP.Animations = {
         Source = "reload_mk",
         Time = 2.6,
         EventTable = {
+            {hide = 1, t = 1 / 35,},
             {s = "ARC9_BO1.XL60_MagOut", t = 18 / 35},
             {s = "ARC9_BO1.XL60_Futz", t = 50 / 35},
             {s = "ARC9_BO1.XL60_MagIn", t = 58 / 35},
@@ -768,6 +787,7 @@ SWEP.Animations = {
         Source = "reload_empty_mk",
         Time = 3.2,
         EventTable = {
+            {hide = 1, t = 1 / 35,},
             {s = "ARC9_BO1.XL60_MagOut", t = 18 / 35},
             {s = "ARC9_BO1.XL60_Futz", t = 50 / 35},
             {s = "ARC9_BO1.XL60_MagIn", t = 58 / 35},

@@ -194,6 +194,22 @@ SWEP.NonTPIKAnimReload = ACT_HL2MP_GESTURE_RELOAD_AR2
 SWEP.ActivePos = Vector(0, 0, -1)
 SWEP.ActiveAng = Angle(-2, 1, -3)
 
+SWEP.ReloadPos = SWEP.ActivePos
+SWEP.ReloadAng = SWEP.ActiveAng
+
+SWEP.ReloadPosHook = function(self)
+    local attached = self:GetElements()
+    if attached["bo1_mk"] and self:GetUBGL() then
+        return Vector(0,-3,-1)
+    end
+end
+SWEP.ReloadAngHook = function(self)
+    local attached = self:GetElements()
+    if attached["bo1_mk"] and self:GetUBGL() then
+        return Angle(0,0,0)
+    end
+end
+
 SWEP.MovingPos = SWEP.ActivePos
 SWEP.MovingAng = SWEP.ActiveAng
 
@@ -755,8 +771,8 @@ SWEP.HideBones = {
     "tag_ammo2",
 }
 SWEP.ReloadHideBoneTables = {
-    [1] = {"j_grenade_ammo"},
-    [2] = {"tag_ammo2"},
+    [1] = {"tag_ammo2"},
+    [2] = {"j_grenade_ammo"},
 }
 
 SWEP.Animations = {
@@ -1289,6 +1305,7 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_MAGIC,
         TPAnimStartTime = 0.1,
         EventTable = {
+            {hide = 2, t = 1 / 30},
             {s = "ARC9_BO1.MK_Back", t = 20 / 30 },
             {s = "ARC9_BO1.MK_Fwd", t = 25 / 30 },
         }

@@ -174,7 +174,7 @@ SWEP.SprintAng = SWEP.ActiveAng
 
 SWEP.CustomizePos = Vector(18.5, 20, -32.5)
 SWEP.CustomizeAng = Angle(0, 90, 0)
-SWEP.CustomizeSnapshotPos = Vector(-15, 20, 32.5 / 2)
+-- SWEP.CustomizeSnapshotPos = Vector(-15, 20, 32.5 / 2)
 SWEP.CustomizeSnapshotAng = Angle(0, 0, 0)
 SWEP.CustomizeNoRotate = true
 
@@ -203,10 +203,10 @@ SWEP.HookP_NameChange = function(self, name)
 
     local attached = self:GetElements()
 
-    local gunname = "pulwar_sword"
+    local gunname = "Pulwar Sword"
 
     if attached["bo1_pap"] then
-        gunname = "Trejo's Troubleshooter"
+        gunname = "Old Wound"
     end
 
     return gunname
@@ -249,15 +249,15 @@ SWEP.Animations = {
     },
     ["draw"] = {
         Source = "draw",
-        Time = 0.6,
+        Time = 0.75,
     },
     ["ready"] = {
         Source = "first_draw",
-        Time = 1.6,
+        Time = 1,
     },
     ["holster"] = {
         Source = "holster",
-        Time = 0.3,
+        Time = 0.5,
     },
     ["bash"] = {
         Source = {"swipe2","swipe3","swipe4","swipe5"},
