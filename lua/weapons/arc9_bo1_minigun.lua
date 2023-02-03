@@ -56,7 +56,7 @@ SWEP.AmmoPerShot = 1
 SWEP.PushBackForce = 1
 SWEP.ArmorPiercing = 0.1 -- Between 0-1. A proportion of damage that is done as direct damage, ignoring protection.
 
-SWEP.PhysBulletMuzzleVelocity = 1200 * 39.37 -- IN HU (INCHES)
+SWEP.PhysBulletMuzzleVelocity = 1000 * 39.37 -- IN HU (INCHES)
 
 SWEP.BodyDamageMults = {
     [HITGROUP_HEAD] = 2,

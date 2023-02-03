@@ -51,7 +51,7 @@ SWEP.DamageType = DMG_BUCKSHOT
 SWEP.ShootEntity = nil -- entity to fire, if any
 SWEP.EntityMuzzleVelocity = 10000
 
-SWEP.PhysBulletMuzzleVelocity = 1000 * 39.37
+SWEP.PhysBulletMuzzleVelocity = 400 * 39.37
 
 SWEP.BodyDamageMults = {
     [HITGROUP_HEAD] = 2,
@@ -338,7 +338,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Strap",
-        DefaultCompactName = "00 BUCK",
+        DefaultCompactName = "NO STRAP",
         Bone = "j_gun",
         Pos = Vector(-4, 0, 0.5),
         Ang = Angle(0, 0, 0),

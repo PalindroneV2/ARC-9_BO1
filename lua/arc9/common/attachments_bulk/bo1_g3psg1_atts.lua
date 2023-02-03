@@ -184,7 +184,7 @@ ATT.RecoilKickMult = 0.35
 ATT.RangeMaxMult = 0.75
 ATT.RangeMinMult = 0.75
 ATT.PenetrationMult = 0.75
-ATT.PhysBulletMuzzleVelocityMult = 0.75
+ATT.PhysBulletMuzzleVelocity = 900 * 39.37
 
 ATT.ShootSound = "ARC9_BO1.AUG_Fire"
 ATT.ShootSoundSilenced = "ARC9_BO1.AUG_Sil"

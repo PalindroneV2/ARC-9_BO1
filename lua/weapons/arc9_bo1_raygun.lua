@@ -54,7 +54,7 @@ SWEP.ShootEntForce = 10000
 
 SWEP.ArmorPiercing = 1 -- Between 0-1. A proportion of damage that is done as direct damage, ignoring protection.
 
-SWEP.PhysBulletMuzzleVelocity = 150 * 39.37
+SWEP.PhysBulletMuzzleVelocity = 250 * 39.37
 SWEP.PhysBulletDrag = 0 -- Drag multiplier
 SWEP.PhysBulletGravity = 0 -- Gravity multiplier
 SWEP.RicochetChance = 0

@@ -51,7 +51,7 @@ SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
 SWEP.EntityMuzzleVelocity = 10000
 
-SWEP.PhysBulletMuzzleVelocity = 960 * 39.37
+SWEP.PhysBulletMuzzleVelocity = 600 * 39.37
 
 SWEP.BodyDamageMults = {
     [HITGROUP_HEAD] = 1.5,
@@ -301,7 +301,7 @@ SWEP.Attachments = {
         Category = {"cod_optic_lp", "cod_rail_riser"},
         -- CorrectiveAng = Angle(0.025, 0.05, 0),
         InstalledElements = {"mount"},
-        RequireElements = {"stock_l"}
+        ExcludeElements = {"stock_ul"}
     },
     {
         PrintName = "Muzzle",
@@ -437,43 +437,39 @@ SWEP.Animations = {
         Time = 90 / 40,
         EventTable = {
             {s = "ARC9_BO1.MAC11_MagOut", t = 15 / 40},
+            {s = "ARC9_BO1.MAC11_Futz", t = 59 / 40},
             {s = "ARC9_BO1.MAC11_MagIn", t = 64 / 40}
         },
     },
     ["reload_empty"] = {
         Source = "reload_empty",
-        Time = 120 / 40,
+    Time = 120 / 40,
         EventTable = {
             {s = "ARC9_BO1.MAC11_MagOut", t = 16 / 40},
+            {s = "ARC9_BO1.MAC11_Futz", t = 59 / 40},
             {s = "ARC9_BO1.MAC11_MagIn", t = 64 / 40},
             {s = "ARC9_BO1.MAC11_BoltBack", t = 85 / 40},
             {s = "ARC9_BO1.MAC11_BoltFwd", t = 91 / 40},
-        },
-    },
-    ["reload_ext"] = {
-        Source = "reload_ext",
-        Time = 90 / 40,
-        EventTable = {
-            {s = "ARC9_BO1.MAC11_MagOut", t = 15 / 40},
-            {s = "ARC9_BO1.MAC11_MagIn", t = 64 / 40}
         },
     },
     ["ext"] = {
         Source = "ext",
-        Time = 120 / 40,
+        Time = 90 / 40,
         EventTable = {
-            {s = "ARC9_BO1.MAC11_MagOut", t = 16 / 40},
-            {s = "ARC9_BO1.MAC11_MagIn", t = 64 / 40},
-            {s = "ARC9_BO1.MAC11_BoltBack", t = 85 / 40},
-            {s = "ARC9_BO1.MAC11_BoltFwd", t = 91 / 40},
+            {s = "ARC9_BO1.MAC11_MagOut", t = 15 / 40},
+            {s = "ARC9_BO1.MAC11_Futz", t = 59 / 40},
+            {s = "ARC9_BO1.MAC11_MagIn", t = 64 / 40}
         },
     },
     ["ext_empty"] = {
         Source = "ext_empty",
-        Time = 90 / 40,
+        Time = 120 / 40,
         EventTable = {
-            {s = "ARC9_BO1.MAC11_MagOut", t = 15 / 40},
-            {s = "ARC9_BO1.MAC11_MagIn", t = 64 / 40}
+            {s = "ARC9_BO1.MAC11_MagOut", t = 16 / 40},
+            {s = "ARC9_BO1.MAC11_Futz", t = 59 / 40},
+            {s = "ARC9_BO1.MAC11_MagIn", t = 64 / 40},
+            {s = "ARC9_BO1.MAC11_BoltBack", t = 85 / 40},
+            {s = "ARC9_BO1.MAC11_BoltFwd", t = 91 / 40},
         },
     },
     ["enter_sprint"] = {

@@ -49,7 +49,7 @@ SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
 SWEP.EntityMuzzleVelocity = 10000
 
-SWEP.PhysBulletMuzzleVelocity = 960 * 39.37
+SWEP.PhysBulletMuzzleVelocity = 500 * 39.37
 
 SWEP.BodyDamageMults = {
     [HITGROUP_HEAD] = 2,
@@ -317,7 +317,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(-1, 0, -3),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_ammo", "bo1_pap", "bo1_pap_1911"},
+        Category = {"bo1_ammo", "bo1_pap"},
     },
     {
         PrintName = "Perk-a-Cola",

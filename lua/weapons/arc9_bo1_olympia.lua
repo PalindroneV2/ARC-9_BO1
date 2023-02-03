@@ -50,7 +50,7 @@ SWEP.DamageType = DMG_BUCKSHOT
 SWEP.ShootEntity = nil -- entity to fire, if any
 SWEP.EntityMuzzleVelocity = 10000
 
-SWEP.PhysBulletMuzzleVelocity = 1000 * 39.37
+SWEP.PhysBulletMuzzleVelocity = 400 * 39.37
 
 SWEP.BodyDamageMults = {
     [HITGROUP_HEAD] = 2.25,
@@ -298,20 +298,12 @@ SWEP.Attachments = {
         Installed = "bo1_stock_heavy",
     },
     {
-        PrintName = "Shells",
-        DefaultCompactName = "00 BUCK",
-        Bone = "j_gun",
-        Pos = Vector(-2, 0, 1),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_shot_slug", "bo1_shot_dragon"},
-    },
-    {
         PrintName = "Ammunition",
         DefaultCompactName = "AMMO",
         Bone = "j_gun",
         Pos = Vector(-2, 0, -3),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_shot_slug", "bo1_pap"},
+        Category = {"bo1_shot_slug", "bo1_shot_dragon", "bo1_pap"},
     },
     {
         PrintName = "Perk-a-Cola",

@@ -52,7 +52,7 @@ SWEP.ShootEntity = nil -- entity to fire, if any
 SWEP.EntityMuzzleVelocity = 10000
 SWEP.ImpactForce = 10
 
-SWEP.PhysBulletMuzzleVelocity = 1000 * 39.37
+SWEP.PhysBulletMuzzleVelocity = 400 * 39.37
 
 SWEP.BodyDamageMults = {
     [HITGROUP_HEAD] = 2,
@@ -323,14 +323,6 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"bo1_stock_lm"},
         Installed = "bo1_stock_light",
-    },
-    {
-        PrintName = "Shells",
-        DefaultCompactName = "00 BUCK",
-        Bone = "j_gun",
-        Pos = Vector(5, 0, 0),
-        Ang = Angle(0, 0, 0),
-        Category = "bo1_shot_slug",
     },
     {
         PrintName = "Ammunition",

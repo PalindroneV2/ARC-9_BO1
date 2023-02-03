@@ -53,7 +53,7 @@ SWEP.ShootEnt = "arc9_bo1_flames"
 SWEP.ShootEntForce = 1200
 SWEP.ShootEntInheritPlayerVelocity = true
 
-SWEP.PhysBulletMuzzleVelocity = 960 * 39.37
+SWEP.PhysBulletMuzzleVelocity = 100 * 39.37
 
 SWEP.BodyDamageMults = {
     [HITGROUP_HEAD] = 2,

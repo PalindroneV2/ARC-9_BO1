@@ -254,6 +254,8 @@ SWEP.Animations = {
     ["ready"] = {
         Source = "first_draw",
         Time = 1,
+        MinProgress = 75 / 100,
+        FireASAP = true,
     },
     ["holster"] = {
         Source = "holster",

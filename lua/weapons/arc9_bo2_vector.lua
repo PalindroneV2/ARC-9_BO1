@@ -9,7 +9,7 @@ SWEP.Class = "Submachine Gun"
 SWEP.Description = [[American SMG with a unique recoil absorption system.]]
 SWEP.Trivia = {
     Manufacturer = "TDI",
-    Calibre = "9x19mm Parabellum",
+    Calibre = ".45 ACP",
     Mechanism = "Gas-Operated",
     Country = "USA",
     Year = 2006,
@@ -42,7 +42,7 @@ SWEP.CustomBlendFactor = 1
 
 SWEP.DefaultBodygroups = "00000000000000"
 
-SWEP.DamageMax = 25
+SWEP.DamageMax = 33
 SWEP.DamageMin = 13 -- damage done at maximum range
 SWEP.RangeMax = 6000
 SWEP.RangeMin = 1000
@@ -51,7 +51,7 @@ SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
 SWEP.EntityMuzzleVelocity = 10000
 
-SWEP.PhysBulletMuzzleVelocity = 960 * 39.37
+SWEP.PhysBulletMuzzleVelocity = 600 * 39.37
 
 SWEP.BodyDamageMults = {
     [HITGROUP_HEAD] = 2,

@@ -389,6 +389,37 @@ ARC9.LoadAttachment(ATT, "bo1_ammo_rayun_pap")
 
 ATT = {}
 
+ATT.PrintName = [[Sally's Revenge]]
+ATT.CompactName = [[Sally]]
+ATT.Icon = Material("entities/bo1_atts/ammo/pack_a_punch.png", "mips smooth")
+ATT.Description = [[Putting your weapon through a strange machine infuses it with the power of element 115. Now you can fire deadly explosive projectiles!]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 6
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
+ATT.Free = false
+
+ATT.Category = {"bo1_pap_1911"}
+ATT.ActivateElements = {"bo1_pap","sally"}
+ATT.ClipSize = 6
+
+ATT.PhysBulletMuzzleVelocityMult = 1.75
+ATT.FirstShootSound = "ARC9_COD.PAP_Fire"
+ATT.ShootSound = "ARC9_COD.PAP_Fire"
+ATT.DistantShootSound = {
+    "ARC9_COD.PAP_Flux_Left",
+    "ARC9_COD.PAP_Flux_Right",
+}
+
+ATT.MuzzleParticle = "rgmk2_pap_flash"
+ATT.TracerColor = Color(233, 34, 93)
+ATT.TracerSizeAdd = 2.5
+ATT.ShootEnt = "arc9_bo1_mustangsally"
+
+ARC9.LoadAttachment(ATT, "bo1_ammo_pap_mustangsally")
+
+ATT = {}
+
 ATT.PrintName = [[Acid Gat Kit]]
 ATT.CompactName = [[ACID]]
 ATT.Icon = Material("entities/bo1_atts/ammo/acid_kit.png")

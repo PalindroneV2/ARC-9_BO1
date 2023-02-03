@@ -194,7 +194,7 @@ ATT.RecoilUpMult = 1.15
 ATT.RecoilSideMult = 1.1
 
 ATT.PenetrationMult = 0.75
-ATT.PhysBulletMuzzleVelocity = 300 * 39.37
+ATT.PhysBulletMuzzleVelocity = 600 * 39.37
 
 ATT.Ammo = "pistol"
 ATT.ShootSound = "ARC9_WAW.Thompson_Fire"
@@ -239,7 +239,7 @@ ATT.RecoilUpMult = 1.15
 ATT.RecoilSideMult = 1.1
 
 ATT.PenetrationMult = 0.75
-ATT.PhysBulletMuzzleVelocity = 300 * 39.37
+ATT.PhysBulletMuzzleVelocity = 600 * 39.37
 
 ATT.Ammo = "pistol"
 ATT.ShootSound = "ARC9_WAW.Thompson_Fire"

@@ -57,7 +57,7 @@ SWEP.AmmoPerShot = 1
 SWEP.PushBackForce = 1
 SWEP.ArmorPiercing = 1 -- Between 0-1. A proportion of damage that is done as direct damage, ignoring protection.
 
-SWEP.PhysBulletMuzzleVelocity = 1200 * 39.37 -- IN HU (INCHES)
+SWEP.PhysBulletMuzzleVelocity = 1750 * 39.37 -- IN HU (INCHES)
 
 SWEP.BodyDamageMults = {
     [HITGROUP_HEAD] = 2,
@@ -152,7 +152,7 @@ SWEP.ShootSoundLooping = "ARC9_BO2.GAU19_Fire_Loop"
 SWEP.ShootSoundTail = "ARC9_BO2.GAU19_Spool_Stop"
 
 --SWEP.MuzzleEffect = "muzzleflash_1"
-SWEP.MuzzleParticle = "muzzleflash_M82" -- Used for some muzzle effects.
+SWEP.MuzzleParticle = "muzzleflash_minimi" -- Used for some muzzle effects.
 
 SWEP.ShellModel = "models/shells/shell_556.mdl"
 SWEP.ShellPitch = 90
@@ -297,9 +297,14 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         vm:SetBodygroup(0,0)
     end
 
-    if attached["bo1_pap"] then
-        vm:SetSkin(2)
+    local camo = 0
+    if attached["camo_gold"] then
+        camo = 1
     end
+    if attached["bo1_pap"] then
+        camo = camo + 2
+    end
+    vm:SetSkin(camo)
 end
 
 SWEP.Hook_TranslateAnimation = function (self, anim)
@@ -362,6 +367,14 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = "mwc_proficiency",
         ExcludeElements = {"bo1_perkacola"},
+    },
+    {
+        PrintName = "Cosmetic",
+        Bone = "j_gun",
+        Pos = Vector(0, 0, 2),
+        Ang = Angle(0, 0, 0),
+        Category = {"camo_gold"},
+        CosmeticOnly = true,
     },
 }
 

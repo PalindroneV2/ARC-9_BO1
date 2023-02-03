@@ -10,7 +10,7 @@ SWEP.Description = [[A Soviet pistol designed shortly before WW2.
 Served as the standard issue pistol for the Soviets during the war until it was replaced by the Makarov PM.]]
 SWEP.Trivia = {
     Manufacturer = "Walther GMBH",
-    Calibre = "9x19mm Parabellum",
+    Calibre = "7.62×25mm Tokarev",
     Mechanism = "Short Recoil",
     Country = "Nazi Germany",
     Year = 1938,
@@ -49,7 +49,7 @@ SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
 SWEP.EntityMuzzleVelocity = 10000
 
-SWEP.PhysBulletMuzzleVelocity = 960 * 39.37
+SWEP.PhysBulletMuzzleVelocity = 625 * 39.37
 
 SWEP.BodyDamageMults = {
     [HITGROUP_HEAD] = 2,

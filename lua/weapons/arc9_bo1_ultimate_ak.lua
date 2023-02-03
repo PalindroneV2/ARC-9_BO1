@@ -784,7 +784,7 @@ SWEP.Attachments = {
         Bone = "tag_clip",
         Pos = Vector(2, 0, -4),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_ammo", "bo1_pap", "bo1_pap_1911"},
+        Category = {"bo1_ammo", "bo1_pap"},
     },
     {
         PrintName = "Perk-a-Cola",

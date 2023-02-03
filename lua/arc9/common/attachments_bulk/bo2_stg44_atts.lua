@@ -114,7 +114,7 @@ ATT.RecoilUpMult = 0.5
 ATT.RecoilSideMult = 0.8
 
 ATT.PenetrationMult = 0.5
-ATT.PhysBulletMuzzleVelocityAdd = -360 * 39.37
+ATT.PhysBulletMuzzleVelocity = 700 * 39.37
 ATT.RPMAdd = 50
 
 ATT.ShellModel = "models/shells/shell_9mm.mdl"

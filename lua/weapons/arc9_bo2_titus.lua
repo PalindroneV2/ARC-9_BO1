@@ -45,11 +45,11 @@ SWEP.RangeMax = 8000
 SWEP.RangeMin = 2000
 SWEP.Penetration = 8
 SWEP.DamageType = DMG_BULLET
--- SWEP.ShootEnt = nil
+SWEP.ShootEnt = nil
 SWEP.ShootEnt = "arc9_bo2_titus_flechette"
 SWEP.EntityMuzzleVelocity = 10000
 
-SWEP.PhysBulletMuzzleVelocity = 960 * 39.37
+SWEP.PhysBulletMuzzleVelocity = 400 * 39.37
 
 SWEP.BodyDamageMults = {
     [HITGROUP_HEAD] = 2.5,
@@ -179,7 +179,7 @@ SWEP.DamageMinUBGL = 15
 SWEP.RangeUBGL = 500
 SWEP.PenetrationUBGL = 2
 SWEP.DamageTypeUBGL = DMG_BUCKSHOT
-SWEP.PhysBulletMuzzleVelocityUBGL = 9000
+SWEP.PhysBulletMuzzleVelocityUBGL = 400 * 39.37
 SWEP.RPMUBGL = 600
 SWEP.ShootVolumeUBGL = 110
 SWEP.ShootEntUBGL = nil
@@ -257,7 +257,6 @@ SWEP.AttachmentElements = {
 }
 
 SWEP.Hook_ModifyBodygroups = function(self, data)
-
     local vm = data.model
     local CUSTSTATE = self:GetCustomize()
     local attached = data.elements
@@ -290,7 +289,6 @@ SWEP.HookP_NameChange = function(self, name)
     if attached["bo1_pap"] then
         gunname = "Titanicus-666"
     end
-
     return gunname
 end
 

@@ -51,7 +51,7 @@ SWEP.DamageType = DMG_BUCKSHOT
 SWEP.ShootEntity = nil -- entity to fire, if any
 SWEP.EntityMuzzleVelocity = 10000
 
-SWEP.PhysBulletMuzzleVelocity = 1000 * 39.37
+SWEP.PhysBulletMuzzleVelocity = 650 * 39.37
 
 SWEP.BodyDamageMults = {
     [HITGROUP_HEAD] = 2,
@@ -341,7 +341,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(6, 0, 1),
         Ang = Angle(0, 0, 0),
-        Category = {"bo2_fastmag", "bo2_extmag", "bo1_shot_buck"},
+        Category = {"bo2_fastmag", "bo2_extmag"},
     },
     {
         PrintName = "Ammunition",

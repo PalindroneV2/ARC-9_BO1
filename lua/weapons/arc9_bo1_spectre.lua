@@ -9,12 +9,12 @@ SWEP.Class = "Submachine Gun"
 SWEP.Description = [[Italian SMG used by Swiss and Italian Special Forces.
 High damage and fire rate, but recoil and spread are punishing.]]
 SWEP.Trivia = {
-    Manufacturer = "IMI",
+    Manufacturer = "SITES",
     Calibre = "9x19mm Parabellum",
     Mechanism = "Blowback",
-    Country = "Israel",
-    Year = 1950,
-    Games = [[BO1, BO2]]
+    Country = "Italy",
+    Year = 1980,
+    Games = [[Call of Duty: Black Ops]]
 }
 SWEP.Credits = {
     Author = "Palindrone"
@@ -51,7 +51,7 @@ SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
 SWEP.EntityMuzzleVelocity = 10000
 
-SWEP.PhysBulletMuzzleVelocity = 960 * 39.37
+SWEP.PhysBulletMuzzleVelocity = 700 * 39.37
 
 SWEP.BodyDamageMults = {
     [HITGROUP_HEAD] = 2,
@@ -76,10 +76,10 @@ SWEP.CanBlindFire = false
 
 SWEP.Recoil = 0.7
 SWEP.RecoilSide = 0.5
-SWEP.RecoilUp = 0.3
+SWEP.RecoilUp = 0.7
 
-SWEP.RecoilRandomUp = 0.25
-SWEP.RecoilRandomSide = 0.4
+SWEP.RecoilRandomUp = 0.5
+SWEP.RecoilRandomSide = 0.3
 
 SWEP.RecoilDissipationRate = 40 -- How much recoil dissipates per second.
 SWEP.RecoilResetTime = 0.01 -- How long the gun must go before the recoil pattern starts to reset.

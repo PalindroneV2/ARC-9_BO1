@@ -47,7 +47,7 @@ SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
 SWEP.EntityMuzzleVelocity = 10000
 
-SWEP.PhysBulletMuzzleVelocity = 960 * 39.37
+SWEP.PhysBulletMuzzleVelocity = 500 * 39.37
 
 SWEP.BodyDamageMults = {
     [HITGROUP_HEAD] = 2,
@@ -338,30 +338,35 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         snappos = Vector(2.5, -10, 0)
     end
 
+
+    if attached["bo1_pap"] then
+        finish = 4
+    end
     if attached["nickel"] then
         finish = 1
-    elseif attached["worn"] then
+        if attached["bo1_pap"] then
+            finish = 3
+        end
+    end
+    if attached["worn"] then
         finish = 2
-    elseif attached["gold"] then
+        if attached["bo1_pap"] then
+            finish = 4
+        end
+    end
+    if attached["gold"] then
         finish = 5
+        if attached["bo1_pap"] then
+            finish = 6
+        end
+    end
+    if attached["sally"] then
+        finish = 3
     end
 
     vm:SetBodygroup(1,slide)
     vm:SetBodygroup(2,slide)
     vm:SetBodygroup(5, comp)
-
-    if attached["bo1_pap"] then
-        finish = finish + 4
-        if finish == 5 then
-            finish = finish - 1
-        end
-        if finish == 6 then
-            finish = finish - 2
-        end
-        if finish == 9 then
-            finish = finish - 5
-        end
-    end
     vm:SetSkin(finish)
 
     self.IronSights = {
@@ -397,6 +402,9 @@ SWEP.HookP_NameChange = function(self, name)
         if attached["longbarrel"] then
             gunname = "Agent XLVII"
         end
+    end
+    if attached["sally"] then
+        gunname = "C-3000 B1at-ch35"
     end
 
     return gunname

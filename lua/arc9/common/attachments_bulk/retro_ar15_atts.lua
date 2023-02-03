@@ -1829,7 +1829,7 @@ ATT.RecoilUpMult = 0.5
 ATT.RecoilSideMult = 0.8
 
 ATT.PenetrationMult = 0.5
-ATT.PhysBulletMuzzleVelocityAdd = -360 * 39.37
+ATT.PhysBulletMuzzleVelocity = 700 * 39.37
 ATT.RPMAdd = 50
 
 ATT.ShellModel = "models/shells/shell_9mm.mdl"
@@ -1888,7 +1888,7 @@ ATT.RecoilUpMult = 2
 ATT.RecoilSideMult = 1.75
 
 ATT.PenetrationMult = 1.1
-ATT.PhysBulletMuzzleVelocity = 900 * 39.37
+ATT.PhysBulletMuzzleVelocity = 600 * 39.37
 
 ATT.Ammo = "ar2"
 ATT.FirstShootSound = "ARC9_BO1.HK21_Fire"

@@ -48,7 +48,7 @@ SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
 SWEP.EntityMuzzleVelocity = 10000
 
-SWEP.PhysBulletMuzzleVelocity = 960 * 39.37
+SWEP.PhysBulletMuzzleVelocity = 500 * 39.37
 
 SWEP.BodyDamageMults = {
     [HITGROUP_HEAD] = 2,
@@ -262,6 +262,9 @@ SWEP.HookP_NameChange = function(self, name)
     local gunname = "FN FNP-45"
     if attached["bo1_pap"] then
         gunname = "Fatal Necro Puncher"
+    end
+    if attached["sally"] then
+        gunname = "Final Nightmare"
     end
 
     return gunname

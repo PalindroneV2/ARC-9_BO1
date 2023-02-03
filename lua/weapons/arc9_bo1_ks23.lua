@@ -51,7 +51,7 @@ SWEP.DamageType = DMG_BUCKSHOT
 SWEP.ShootEntity = nil -- entity to fire, if any
 SWEP.EntityMuzzleVelocity = 10000
 
-SWEP.PhysBulletMuzzleVelocity = 1000 * 39.37
+SWEP.PhysBulletMuzzleVelocity = 400 * 39.37
 
 SWEP.BodyDamageMults = {
     [HITGROUP_HEAD] = 2,
@@ -288,23 +288,65 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         camo = camo + 2
     end
     vm:SetSkin(camo)
-
-    local newActivePos = Vector(0, 0, -1)
-    local newActiveAng = Angle(0, 0, 0)
-
+end
+local newActivePos = Vector(0, 0, -1)
+SWEP.ActivePosHook = function(self)
+    local attached = self:GetElements()
     if attached["doom_ee"] then
-        vm:SetBodygroup(2,1)
         newActivePos = Vector(-2.175, -1, -2)
-        newActiveAng = Angle(0.05, 0, 0)
     end
-    self.ActivePos = newActivePos
-    self.ActiveAng = newActiveAng
-    self.MovingPos = newActivePos
-    self.MovingAng = newActiveAng
-    self.CrouchPos = newActivePos
-    self.CrouchAng = newActiveAng
-    self.SprintPos = newActivePos
-    self.SprintAng = newActiveAng
+    return newActivePos
+end
+SWEP.ActiveAngHook = function(self)
+    local attached = self:GetElements()
+    if attached["doom_ee"] then
+        return Angle(0,0,0)
+    end
+end
+SWEP.MovingPosHook = function(self)
+    local attached = self:GetElements()
+    if attached["doom_ee"] then
+        newActivePos = Vector(-2.175, -1, -2)
+    end
+    return newActivePos
+end
+SWEP.MovingAngHook = function(self)
+    local attached = self:GetElements()
+    if attached["doom_ee"] then
+        return Angle(0,0,0)
+    end
+end
+SWEP.MovingMidPointHook = function(self)
+    local attached = self:GetElements()
+    if attached["doom_ee"] then
+        return {Pos = self.ActivePos, Ang = self.ActiveAng}
+    end
+end
+SWEP.CrouchPosHook = function(self)
+    local attached = self:GetElements()
+    if attached["doom_ee"] then
+        newActivePos = Vector(-2.175, -1, -2)
+    end
+    return newActivePos
+end
+SWEP.CrouchAngHook = function(self)
+    local attached = self:GetElements()
+    if attached["doom_ee"] then
+        return Angle(0,0,0)
+    end
+end
+SWEP.SprintPosHook = function(self)
+    local attached = self:GetElements()
+    if attached["doom_ee"] then
+        newActivePos = Vector(-2.175, -1, -2)
+    end
+    return newActivePos
+end
+SWEP.SprintAngHook = function(self)
+    local attached = self:GetElements()
+    if attached["doom_ee"] then
+        return Angle(0,0,0)
+    end
 end
 
 SWEP.Attachments = {
@@ -326,15 +368,6 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"bo1_stock_h"},
         Installed = "bo1_stock_heavy",
-        ExcludeElements = {"doom_ee"},
-    },
-    {
-        PrintName = "Ammo Type",
-        DefaultCompactName = "OO BUCK",
-        Bone = "j_gun",
-        Pos = Vector(2, 0, -2),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_shot_slug"},
         ExcludeElements = {"doom_ee"},
     },
     {
