@@ -178,6 +178,63 @@ SWEP.IronSights = {
     Magnification = 1.1,
     ViewModelFOV = 60,
 }
+SWEP.IronSightsHook = function(self)
+    local attached = self:GetElements()
+
+    local newpos = Vector(-2.425, -2, 0.65)
+    local newang = Angle(0.05, 0.4, 0)
+
+    if attached["bo1_alternate_irons"] then
+        newpos = Vector(-2.425, -2, 0.835)
+        newang = Angle(0.025, 0, 0)
+    end
+    if attached["bo1_tishina"] then
+        newpos = Vector(-2.42, -2, 1)
+        newang = Angle(0, 0.25, 0)
+        if attached["bo1_alternate_irons"] then
+            newpos = Vector(-2.4175, -2, 1.09)
+            newang = Angle(0, 0, 0)
+        end
+    end
+    if attached["barrel_krinkov"] then
+        newpos = Vector(-2.43, -2, 1)
+        newang = Angle(0.02, 0, 0)
+        if attached["bo1_alternate_irons"] then
+            newpos = Vector(-2.43, -2, 0.8)
+            newang = Angle(0.02, 0.5, 0)
+        end
+        if attached["bo1_tishina"] then
+            newpos = Vector(-2.42, -2, 1.2)
+            newang = Angle(0, 0, 0)
+            if attached["bo1_alternate_irons"] then
+                newpos = Vector(-2.415, -2, 1.05)
+                newang = Angle(0, 0.5, 0)
+            end
+        end
+    end
+    if attached["barrel_asval"] then
+        newpos = Vector(-2.425, -2, 1)
+        newang = Angle(0.05, 0, 0)
+    end
+    if attached["rpk"] then
+        newpos = Vector(-2.065, -2, 0.65)
+        newang = Angle(0.05, 0, 0)
+        if attached["bo1_alternate_irons"] then
+            newpos = Vector(-2.065, -2, 0.665)
+            newang = Angle(0.05, 0, 0)
+        end
+        if attached["barrel_krinkov"] then
+            newpos = Vector(-2.065, -2, 0.8)
+            newang = Angle(0.025, 0, 0)
+            if attached["bo1_alternate_irons"] then
+                newpos = Vector(-2.065, -2, 0.625)
+                newang = Angle(0.05, 0.5, 0)
+            end
+        end
+    end
+
+    return {Pos = newpos, Ang = newang, Magnification = 1.1, ViewModelFOV = 60, CrosshairInSights = false,}
+end
 
 SWEP.SightMidPoint = { -- Where the gun should be at the middle of it's irons
     Pos = Vector(-1.25, -1, 0.5),
@@ -193,6 +250,19 @@ SWEP.NonTPIKAnimReload = ACT_HL2MP_GESTURE_RELOAD_AR2
 
 SWEP.ActivePos = Vector(0, 0, -1)
 SWEP.ActiveAng = Angle(-2, 1, -3)
+
+SWEP.ActivePosHook = function(self)
+    local attached = self:GetElements()
+    if attached["bo1_mk"] and self:GetUBGL() then
+        return Vector(0,-3,-1)
+    end
+end
+SWEP.ActiveAngHook = function(self)
+    local attached = self:GetElements()
+    if attached["bo1_mk"] and self:GetUBGL() then
+        return Angle(0,0,0)
+    end
+end
 
 SWEP.ReloadPos = SWEP.ActivePos
 SWEP.ReloadAng = SWEP.ActiveAng
@@ -213,13 +283,46 @@ end
 SWEP.MovingPos = SWEP.ActivePos
 SWEP.MovingAng = SWEP.ActiveAng
 
+SWEP.MovingPosHook = function(self)
+    local attached = self:GetElements()
+    if attached["bo1_mk"] and self:GetUBGL() then
+        return Vector(0,-3,-1)
+    end
+end
+SWEP.MovingAngHook = function(self)
+    local attached = self:GetElements()
+    if attached["bo1_mk"] and self:GetUBGL() then
+        return Angle(0,0,0)
+    end
+end
+
 SWEP.MovingMidPoint = {
     Pos = SWEP.ActivePos,
     Ang = SWEP.ActiveAng
 }
 
+SWEP.MovingMidPointHook = function(self)
+    local attached = self:GetElements()
+    if attached["bo1_mk"] and self:GetUBGL() then
+        return {Pos = self.ActivePos, Ang = self.ActiveAng}
+    end
+end
+
 SWEP.CrouchPos = SWEP.ActivePos + Vector(-1, 0, -1)
 SWEP.CrouchAng = SWEP.ActiveAng
+
+SWEP.CrouchPosHook = function(self)
+    local attached = self:GetElements()
+    if attached["bo1_mk"] and self:GetUBGL() then
+        return Vector(0,-3,-1)
+    end
+end
+SWEP.CrouchAngHook = function(self)
+    local attached = self:GetElements()
+    if attached["bo1_mk"] and self:GetUBGL() then
+        return Angle(0,0,0)
+    end
+end
 
 SWEP.RestPos = SWEP.ActivePos
 SWEP.RestAng = SWEP.ActiveAng
@@ -228,13 +331,54 @@ SWEP.SprintVerticalOffset = false
 SWEP.SprintPos = SWEP.ActivePos
 SWEP.SprintAng = SWEP.ActiveAng
 
+SWEP.SprintPosHook = function(self)
+    local attached = self:GetElements()
+    if attached["bo1_mk"] and self:GetUBGL() then
+        return Vector(0,-3,-1)
+    end
+end
+SWEP.SprintAngHook = function(self)
+    local attached = self:GetElements()
+    if attached["bo1_mk"] and self:GetUBGL() then
+        return Angle(0,0,0)
+    end
+end
+
 SWEP.BipodPos = Vector(-2.427, 0, -1.5)
 SWEP.BipodAng = Angle(0, 0, 0)
+
+SWEP.BipodPosHook = function(self)
+    local attached = self:GetElements()
+    local NewBipodPos = Vector(-2.427, 0, -1.5)
+    if attached["rpk"] then
+        NewBipodPos = Vector(-2.065, 0, -1.65)
+    end
+    return NewBipodPos
+end
 
 SWEP.CustomizePos = Vector(12.5, 40, 4)
 SWEP.CustomizeAng = Angle(90, 0, 0)
 SWEP.CustomizeSnapshotPos = Vector(0, 0, 0)
 SWEP.CustomizeSnapshotAng = Angle(0, 0, 0)
+
+SWEP.CustomizePosHook = function(self)
+    local attached = self:GetElements()
+    local newCustPose = Vector(0, 0, 0)
+    if attached["barrel_rpk"] then
+        newCustPose = Vector(9, 15, 0.5)
+    end
+    self.CustomizeSnapshotPos = newCustPose
+    return Vector(12.5, 40, 4)
+end
+
+-- SWEP.CustomizeSnapshotPosHook = function(self)
+--     local attached = self:GetElements()
+--     local newCustPose = Vector(0, 0, 0)
+--     if attached["barrel_rpk"] then
+--         newCustPose = Vector(9, 15, 0.5)
+--     end
+--     return newCustPose
+-- end
 
 SWEP.BarrelLength = 0 -- = 25
 
@@ -422,75 +566,6 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     vm:SetBodygroup(2, irons)
     vm:SetBodygroup(4, hand)
     vm:SetBodygroup(5, grip)
-
-    local newpos = Vector(-2.425, -2, 0.65)
-    local newang = Angle(0.05, 0.4, 0)
-    local NewBipodPos = Vector(-2.427, 0, -1.5)
-    local NewBipodAng = Angle(0, 0, 0)
-    local newCustPose = Vector(2, 0, 0)
-    local newCustAng = Angle(0, 0, 0)
-
-    if attached["bo1_alternate_irons"] then
-        newpos = Vector(-2.425, -2, 0.835)
-        newang = Angle(0.025, 0, 0)
-    end
-    if barrel == 1 then
-        newpos = Vector(-2.425, -2, 1)
-        newang = Angle(0.06, 0, 0)
-        if attached["bo1_alternate_irons"] then
-            newpos = Vector(-2.425, -2, 0.8)
-            newang = Angle(0.06, 0.5, 0)
-        end
-    end
-    if barrel == 3 then
-        newpos = Vector(-2.425, -2, 1)
-        newang = Angle(0.05, 0, 0)
-    end
-    if attached["rpk"] then
-        newpos = Vector(-2.065, -2, 0.65)
-        newang = Angle(0.05, 0, 0)
-        if attached["bo1_alternate_irons"] then
-            newpos = Vector(-2.065, -2, 0.665)
-            newang = Angle(0.05, 0, 0)
-        end
-        if barrel == 1 then
-            newpos = Vector(-2.065, -2, 0.8)
-            newang = Angle(0.025, 0, 0)
-            if attached["bo1_alternate_irons"] then
-                newpos = Vector(-2.065, -2, 0.625)
-                newang = Angle(0.05, 0.5, 0)
-            end
-        end
-        NewBipodPos = Vector(-2.065, 0, -1.65)
-        NewBipodAng = Angle(0.05, 0, 0)
-    end
-    if attached["bo1_tishina"] then
-        newpos = Vector(-2.425, -2, 1.35)
-        newang = Angle(0.025, -0.35, 0)
-        if attached["bo1_alternate_irons"] then
-            newpos = Vector(-2.415, -2, 1.05)
-            newang = Angle(0.05, 0.5, 0)
-        end
-    end
-
-    if attached["barrel_rpk"] then
-        newCustPose = Vector(9, 15, 0.5)
-        newCustAng = Angle(0, 0, 0)
-    end
-
-    self.IronSights = {
-        Pos = newpos,
-        Ang = newang,
-        Magnification = 1.1,
-        ViewModelFOV = 60,
-        CrosshairInSights = false,
-    }
-
-    self.CustomizeSnapshotPos = newCustPose
-    self.CustomizeSnapshotAng = newCustAng
-
-    self.BipodPos = NewBipodPos
-    self.BipodAng = NewBipodAng
 end
 
 SWEP.HookP_NameChange = function(self, name)

@@ -207,6 +207,24 @@ SWEP.ActiveAng = Angle(0, 0, -5)
 SWEP.ReloadPos = SWEP.ActivePos
 SWEP.ReloadAng = SWEP.ActiveAng
 
+SWEP.MovingPos = SWEP.ActivePos
+SWEP.MovingAng = SWEP.ActiveAng
+
+SWEP.MovingMidPoint = {
+    Pos = SWEP.ActivePos,
+    Ang = SWEP.ActiveAng
+}
+
+SWEP.CrouchPos = SWEP.ActivePos + Vector(-1, 0, -1)
+SWEP.CrouchAng = SWEP.ActiveAng
+
+SWEP.RestPos = SWEP.ActivePos
+SWEP.RestAng = SWEP.ActiveAng
+
+SWEP.SprintVerticalOffset = false
+SWEP.SprintPos = SWEP.ActivePos
+SWEP.SprintAng = SWEP.ActiveAng
+
 SWEP.ActivePosHook = function(self)
     local attached = self:GetElements()
     if attached["bo1_mk"] and self:GetUBGL() then
@@ -231,24 +249,48 @@ SWEP.ReloadAngHook = function(self)
         return Angle(0,0,0)
     end
 end
-
-SWEP.MovingPos = SWEP.ActivePos
-SWEP.MovingAng = SWEP.ActiveAng
-
-SWEP.MovingMidPoint = {
-    Pos = SWEP.ActivePos,
-    Ang = SWEP.ActiveAng
-}
-
-SWEP.CrouchPos = SWEP.ActivePos + Vector(-1, 0, -1)
-SWEP.CrouchAng = SWEP.ActiveAng
-
-SWEP.RestPos = SWEP.ActivePos
-SWEP.RestAng = SWEP.ActiveAng
-
-SWEP.SprintVerticalOffset = false
-SWEP.SprintPos = SWEP.ActivePos
-SWEP.SprintAng = SWEP.ActiveAng
+SWEP.MovingPosHook = function(self)
+    local attached = self:GetElements()
+    if attached["bo1_mk"] and self:GetUBGL() then
+        return Vector(0,-3,-1)
+    end
+end
+SWEP.MovingAngHook = function(self)
+    local attached = self:GetElements()
+    if attached["bo1_mk"] and self:GetUBGL() then
+        return Angle(0,0,0)
+    end
+end
+SWEP.MovingMidPointHook = function(self)
+    local attached = self:GetElements()
+    if attached["bo1_mk"] and self:GetUBGL() then
+        return {Pos = self.ActivePos, Ang = self.ActiveAng}
+    end
+end
+SWEP.CrouchPosHook = function(self)
+    local attached = self:GetElements()
+    if attached["bo1_mk"] and self:GetUBGL() then
+        return Vector(0,-3,-1)
+    end
+end
+SWEP.CrouchAngHook = function(self)
+    local attached = self:GetElements()
+    if attached["bo1_mk"] and self:GetUBGL() then
+        return Angle(0,0,0)
+    end
+end
+SWEP.SprintPosHook = function(self)
+    local attached = self:GetElements()
+    if attached["bo1_mk"] and self:GetUBGL() then
+        return Vector(0,-3,-1)
+    end
+end
+SWEP.SprintAngHook = function(self)
+    local attached = self:GetElements()
+    if attached["bo1_mk"] and self:GetUBGL() then
+        return Angle(0,0,0)
+    end
+end
 
 SWEP.CustomizePos = Vector(12.5, 40, 4)
 SWEP.CustomizeAng = Angle(90, 0, 0)

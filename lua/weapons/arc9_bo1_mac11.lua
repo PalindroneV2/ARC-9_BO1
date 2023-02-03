@@ -111,7 +111,7 @@ SWEP.ShootWhileSprint = true
 SWEP.ReloadInSights = false
 
 SWEP.SpeedMultSights = 0.8
-SWEP.SpeedMultShooting = 0.75
+SWEP.SpeedMultShooting = 0.9
 SWEP.SpeedMultMelee = 1
 SWEP.SpeedMultCrouch = 1
 SWEP.SpeedMultBlindFire = 1
@@ -219,14 +219,14 @@ SWEP.BarrelLength = 0 -- = 25
 SWEP.ExtraSightDist = 5
 
 SWEP.AttachmentElements = {
-    ["stock_l"] = {
+    ["stock_ul"] = {
         Bodygroups = {
             {3,1}
         },
     },
-    ["stock_m"] = {
+    ["stock_l"] = {
         Bodygroups = {
-            {3,1}
+            {3,2}
         },
     },
     ["extmag"] = {
@@ -301,6 +301,7 @@ SWEP.Attachments = {
         Category = {"cod_optic_lp", "cod_rail_riser"},
         -- CorrectiveAng = Angle(0.025, 0.05, 0),
         InstalledElements = {"mount"},
+        RequireElements = {"stock_l"}
     },
     {
         PrintName = "Muzzle",
@@ -323,7 +324,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(-8, 0, 1.5),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_stock_l"},
+        Category = {"bo1_stock_ul","bo1_stock_l"},
         Installed = "bo1_stock_light"
     },
     {

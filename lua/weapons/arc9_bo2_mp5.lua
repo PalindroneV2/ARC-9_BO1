@@ -270,6 +270,13 @@ SWEP.AttachmentElements = {
             {3,2},
             {6,1},
         },
+        IronSights = {
+            Pos = Vector(-3.175, -1, 0.85),
+            Ang = Angle(0.025, 0.1, 0),
+            Magnification = 1.1,
+            ViewModelFOV = 60,
+            CrosshairInSights = false,
+        }
     },
 }
 
@@ -290,10 +297,6 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     end
     vm:SetBodygroup(4,stock)
 
-    -- IRON SIGHT POSITION CHANGES
-    local newpos = Vector(-3.19, -1, 1)
-    local newang = Angle(0.025, 0, 0)
-
     if attached["25rnd"] then
         vm:SetBodygroup(1,3)
     elseif attached["45rnd"] then
@@ -308,8 +311,6 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
             end
         end
         vm:SetBodygroup(4,stock + 5)
-        newpos = Vector(-3.175, -1, 0.85)
-        newang = Angle(0.025, 0.1, 0)
     end
 
     if attached["mp5k_nogrip"] then
@@ -324,15 +325,6 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         camo = camo + 2
     end
     vm:SetSkin(camo)
-
-    self.IronSights = {
-        Pos = newpos,
-        Ang = newang,
-        Magnification = 1.1,
-        ViewModelFOV = 60,
-        CrosshairInSights = false,
-    }
-
 end
 
 SWEP.HookP_NameChange = function(self, name)

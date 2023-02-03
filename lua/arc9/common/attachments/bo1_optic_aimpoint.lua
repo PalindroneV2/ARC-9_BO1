@@ -17,8 +17,18 @@ ATT.Folder = "REFLEX"
 ATT.Category = {"cod_optic", "cod_optic_alt", "cod_optic_lp", "cod_optic_rds"}
 
 ATT.Model = "models/weapons/arc9/atts/bo1_reflex.mdl"
+ATT.WorldModel = "models/weapons/arc9/atts/bo1_reflex_w.mdl"
 ATT.Scale = 1
 ATT.ModelOffset = Vector(-0.25, 0, 0)
+
+ATT.DrawFunc = function(swep, model, wm)
+    local CUSTSTATE = swep:GetCustomize()
+    if CUSTSTATE then
+        model:SetBodygroup(0, 1)
+    else
+        model:SetBodygroup(0, 0)
+    end
+end
 
 ATT.Sights = {
     {
