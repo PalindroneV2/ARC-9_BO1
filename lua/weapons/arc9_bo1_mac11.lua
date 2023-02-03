@@ -282,10 +282,10 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
 
     if attached["extmag"] then
         if anim == "reload" then
-            return "reload_ext"
+            return "ext"
         end
         if anim == "reload_empty" then
-            return "reload_empty_ext"
+            return "ext_empty"
         end
     end
 end
@@ -410,27 +410,11 @@ SWEP.Animations = {
             {s = "ARC9_BO1.MAC11_Stock", t = 12 / 30},
         },
     },
-    ["draw_stock_ext"] = {
-        Source = "first_draw_stock",
-        Time = 1,
-        EventTable = {
-            {s = "ARC9_BO1.MAC11_Futz", t = 6 / 30},
-            {s = "ARC9_BO1.MAC11_Stock", t = 12 / 30},
-        },
-    },
     ["ready"] = {
         Source = "draw",
         Time = 1,
     },
     ["ready_stock"] = {
-        Source = "first_draw_stock",
-        Time = 1.5,
-        EventTable = {
-            {s = "ARC9_BO1.MAC11_Futz", t = 12 / 30},
-            {s = "ARC9_BO1.MAC11_Stock", t = 18 / 30},
-        },
-    },
-    ["ready_stock_ext"] = {
         Source = "first_draw_stock",
         Time = 1.5,
         EventTable = {
@@ -474,8 +458,8 @@ SWEP.Animations = {
             {s = "ARC9_BO1.MAC11_MagIn", t = 64 / 40}
         },
     },
-    ["reload_empty_ext"] = {
-        Source = "reload_empty_ext",
+    ["ext"] = {
+        Source = "ext",
         Time = 120 / 40,
         EventTable = {
             {s = "ARC9_BO1.MAC11_MagOut", t = 16 / 40},
@@ -484,22 +468,12 @@ SWEP.Animations = {
             {s = "ARC9_BO1.MAC11_BoltFwd", t = 91 / 40},
         },
     },
-    ["reload_stock_ext"] = {
-        Source = "reload_ext",
+    ["ext_empty"] = {
+        Source = "ext_empty",
         Time = 90 / 40,
         EventTable = {
             {s = "ARC9_BO1.MAC11_MagOut", t = 15 / 40},
             {s = "ARC9_BO1.MAC11_MagIn", t = 64 / 40}
-        },
-    },
-    ["reload_empty_stock_ext"] = {
-        Source = "reload_empty_ext",
-        Time = 120 / 40,
-        EventTable = {
-            {s = "ARC9_BO1.MAC11_MagOut", t = 16 / 40},
-            {s = "ARC9_BO1.MAC11_MagIn", t = 64 / 40},
-            {s = "ARC9_BO1.MAC11_BoltBack", t = 85 / 40},
-            {s = "ARC9_BO1.MAC11_BoltFwd", t = 91 / 40},
         },
     },
     ["enter_sprint"] = {
