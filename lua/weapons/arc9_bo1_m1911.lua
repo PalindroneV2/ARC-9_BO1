@@ -246,7 +246,7 @@ SWEP.AttachmentElements = {
     ["rail_lamp"] = {
         AttPosMods = {
             [7] = {
-                Pos = Vector(2.75, 0, 0.175),
+                Pos = Vector(3.5, 0, 0.2),
             }
         },
     },
