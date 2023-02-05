@@ -164,7 +164,7 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(-2.44, -3, 0.675),
+    Pos = Vector(-2.44, -1, 0.675),
     Ang = Angle(-0.1, 0.1, 0),
     Magnification = 1.1,
     --AssociatedSlot = 9,
@@ -262,7 +262,7 @@ SWEP.AttachmentElements = {
     },
     ["irons_novak"] = {
         IronSights = {
-            Pos = Vector(-2.44, -3, 0.625),
+            Pos = Vector(-2.44, -1, 0.625),
             Ang = Angle(-0.1, 0.05, 0),
             Magnification = 1.1,
             ViewModelFOV = 60,
