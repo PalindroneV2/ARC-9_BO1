@@ -166,10 +166,10 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(-2.2, -1, 1.95),
+    Pos = Vector(-2.2, -3, 1.95),
     Ang = Angle(-0.1, -1.25, 0),
     Magnification = 1.1,
-    --AssociatedSlot = 9,
+    ViewModelFOV = 60,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
 }
@@ -216,36 +216,25 @@ SWEP.BarrelLength = 0 -- = 9
 SWEP.ExtraSightDist = 15
 
 SWEP.AttachmentElements = {
+    ["extmag"] = {
+        Bodygroups = {{2,1},},
+    },
+    ["auto"] = {
+        Bodygroups = {{3,1},},
+    },
+    ["newirons"] = {
+        Bodygroups = {{4,1},},
+    },
 }
 
 SWEP.Hook_ModifyBodygroups = function(self, data)
-
     local vm = data.model
     local attached = data.elements
     local camo = 0
-    local newpos = Vector(-2.2, -1, 1.95) -- M39
-    local newang = Angle(-0.1, -1.5, 0) -- M39
-
-    if attached["extmag"] then
-        vm:SetBodygroup(2,1)
-    end
-    if attached["auto"] then
-        vm:SetBodygroup(3,1)
-    end
-    if attached["newirons"] then
-        vm:SetBodygroup(4,1)
-    end
     if attached["bo1_pap"] then
         camo = camo + 2
     end
-
     vm:SetSkin(camo)
-
-    self.IronSights = {
-        Pos = newpos,
-        Ang = newang,
-        Magnification = 1.1,
-    }
 end
 
 SWEP.HookP_NameChange = function(self, name)

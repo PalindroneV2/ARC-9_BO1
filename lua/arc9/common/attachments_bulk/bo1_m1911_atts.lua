@@ -155,6 +155,8 @@ ATT.Free = true
 
 ATT.Category = {"bo1_m1911_hammer"}
 ATT.ActivateElements = {"newhammer"}
+ATT.RangeMaxMult = 1.05
+ATT.PhysBulletMuzzleVelocityMult = 1.05
 
 ARC9.LoadAttachment(ATT, "bo1_m1911_hammer_ring")
 
@@ -172,6 +174,8 @@ ATT.Free = true
 
 ATT.Category = {"bo1_m1911_trigger"}
 ATT.ActivateElements = {"newtrigger"}
+ATT.SpreadMult = 1.1
+ATT.RPMMult = 1.1
 
 ARC9.LoadAttachment(ATT, "bo1_m1911_trigger_fast")
 

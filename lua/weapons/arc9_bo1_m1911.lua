@@ -116,7 +116,7 @@ SWEP.SpeedMultBlindFire = 1
 SWEP.AimDownSightsTime = 0.2
 SWEP.SprintToFireTime = 0.2
 
-SWEP.RPM = 500
+SWEP.RPM = 400
 SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
@@ -164,7 +164,7 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(-2.44, -3, 1),
+    Pos = Vector(-2.44, -3, 0.675),
     Ang = Angle(-0.1, 0.1, 0),
     Magnification = 1.1,
     --AssociatedSlot = 9,
@@ -224,7 +224,7 @@ SWEP.AttachmentElements = {
     ["longbarrel"] = {
         AttPosMods = {
             [3] = {
-                Pos = Vector(7.3, 0, 1.05)
+                Pos = Vector(8.65, 0, 1.25),
             },
         },
         Bodygroups = {
@@ -235,7 +235,7 @@ SWEP.AttachmentElements = {
     ["shortbarrel"] = {
         AttPosMods = {
             [3] = {
-                Pos = Vector(4.65, 0, 1.05)
+                Pos = Vector(5.85, 0, 1.25),
             },
         },
         Bodygroups = {
@@ -262,7 +262,7 @@ SWEP.AttachmentElements = {
     },
     ["irons_novak"] = {
         IronSights = {
-            Pos = Vector(-2.44, -3, 0.95),
+            Pos = Vector(-2.44, -3, 0.625),
             Ang = Angle(-0.1, 0.05, 0),
             Magnification = 1.1,
             ViewModelFOV = 60,
@@ -314,14 +314,14 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
             finish = 6
         end
     end
+    if attached["sally"] then
+        finish = 4
+    end
     if attached["gold"] then
         finish = 3
         if attached["bo1_pap"] then
             finish = 7
         end
-    end
-    if attached["sally"] then
-        finish = 3
     end
     vm:SetBodygroup(2,irons)
     vm:SetSkin(finish)
@@ -376,7 +376,6 @@ SWEP.Attachments = {
         PrintName = "Slide",
         DefaultCompactName = "5\" G.I.",
         Bone = "j_bolt",
-        Scale = Vector(1,1,1),
         Pos = Vector(2, 0, 0),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_m1911_slides"},
@@ -386,8 +385,7 @@ SWEP.Attachments = {
         PrintName = "Irons",
         DefaultCompactName = "G.I. Irons",
         Bone = "j_bolt",
-        Scale = Vector(1,1,1),
-        Pos = Vector(2, 0, 0),
+        Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_m1911_sights"},
         DefaultIcon = Material("materials/entities/bo1_atts/cosmetic/waw_1911.png", "mips smooth"),
@@ -396,8 +394,8 @@ SWEP.Attachments = {
         PrintName = "Muzzle",
         DefaultCompactName = "Muzz",
         Bone = "j_gun",
-        Scale = Vector(1,1,1),
-        Pos = Vector(5.66, 0, 1.05),
+        Scale = Vector(1.19,1.19,1.19),
+        Pos = Vector(6.8, 0, 1.25),
         Ang = Angle(0, 0, 0),
         Category = {"cod_muzzle_pistol"},
     },
@@ -432,7 +430,7 @@ SWEP.Attachments = {
         PrintName = "Pistol Rail",
         DefaultCompactName = "RAIL",
         Bone = "j_gun",
-        Scale = Vector(0.75,0.75,0.75),
+        Scale = Vector(0.9,0.9,0.9),
         Pos = Vector(3.5, 0, 0.3),
         Ang = Angle(0, 0, 0),
         Category = {"cod_pistol_rail"},
@@ -443,10 +441,11 @@ SWEP.Attachments = {
         PrintName = "Tactical",
         DefaultCompactName = "TAC",
         Bone = "j_gun",
-        Scale = .9,
-        Pos = Vector(2.75, 0, 0.175),
+        Scale = 1.07,
+        Pos = Vector(3.25, 0, 0.175),
         Ang = Angle(0, 0, 0),
         Category = {"cod_tactical_pistols"},
+        ExcludeElements = {"rail_lamp"}
     },
     {
         PrintName = "Ammunition",
