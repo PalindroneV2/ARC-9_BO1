@@ -164,17 +164,18 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(-2.56, 0, 1),
-    Ang = Angle(-0.15, 0.1, 0),
+    Pos = Vector(-2.44, -3, 1),
+    Ang = Angle(-0.1, 0.1, 0),
     Magnification = 1.1,
     --AssociatedSlot = 9,
+    ViewModelFOV = 60,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
 }
 
 SWEP.SightMidPoint = { -- Where the gun should be at the middle of it's irons
-    Pos = Vector(-1.255, 0, 0.5),
-    Ang = Angle(-0.075, 0.05, 0),
+    Pos = Vector(-1.225, -1.5, 0.5),
+    Ang = Angle(-0.05, 0.05, 0),
 }
 
 SWEP.HoldTypeHolstered = "passive"
@@ -215,46 +216,59 @@ SWEP.BarrelLength = 0 -- = 9
 SWEP.ExtraSightDist = 15
 
 SWEP.AttachmentElements = {
+    ["1911_frame_modern"] = {
+        Bodygroups = {
+            {0,1},
+        },
+    },
     ["longbarrel"] = {
         AttPosMods = {
-            [2] = {
-                Pos = Vector(7.875, 0.175, 1.05)
+            [3] = {
+                Pos = Vector(7.3, 0, 1.05)
             },
+        },
+        Bodygroups = {
+            {1,2},
+            {2,2},
         },
     },
     ["shortbarrel"] = {
         AttPosMods = {
-            [2] = {
-                Pos = Vector(4.65, 0.175, 1.05)
+            [3] = {
+                Pos = Vector(4.65, 0, 1.05)
             },
+        },
+        Bodygroups = {
+            {1,1},
+            {2,1},
         },
     },
     ["rail_lamp"] = {
         AttPosMods = {
-            [6] = {
-                Pos = Vector(2.75, 0.175, 0.175),
+            [7] = {
+                Pos = Vector(2.75, 0, 0.175),
             }
         },
     },
     ["newhammer"] = {
         Bodygroups = {
-            {3,1},
-        },
-    },
-    ["hdhammer"] = {
-        Bodygroups = {
-            {3,2},
+            {4,1},
         },
     },
     ["newtrigger"] = {
         Bodygroups = {
-            {4,1},
+            {3,2},
         },
     },
-    ["hdtrigger"] = {
-        Bodygroups = {
-            {4,2},
-        },
+    ["irons_novak"] = {
+        IronSights = {
+            Pos = Vector(-2.44, -3, 0.95),
+            Ang = Angle(-0.1, 0.05, 0),
+            Magnification = 1.1,
+            ViewModelFOV = 60,
+            CrosshairInSights = false,
+            SwitchToSound = "", -- sound that plays when switching to this sight
+        }
     },
 }
 
@@ -269,114 +283,48 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
 
     local vm = data.model
     local attached = data.elements
-    local newpos = Vector(-2.56, 0, 1)
-    local newang = Angle(-0.2, 0.075, 0)
-    local snappos = Vector(1, -10, 0)
-    local slide = 0
+    local irons = 0
     local finish = 0
-    local comp = 0
 
-
-    if attached["m1911_comp"] then
-        comp = 1
+    if attached["shortbarrel"] then
+        irons = 1
     end
-
-    if attached["1911_frame_modern"] then
-        vm:SetBodygroup(0,1)
+    if attached["longbarrel"] then
+        irons = 2
     end
-    if attached["1911_frame_hd"] then
-        vm:SetBodygroup(0,2)
-        if !attached["newhammer"] then
-            vm:SetBodygroup(3,2)
-        end
-        if !attached["newtrigger"] then
-            vm:SetBodygroup(4,2)
-        end
-        slide = 6
+    if attached["irons_improved"] then
+        irons = irons + 3
     end
-    if attached["1911_slide_modern"] then
-        slide = 1
-        newpos = Vector(-2.53, 0, 0.925)
-        newang = Angle(-0.1, 0, 0)
+    if attached["irons_novak"] then
+        irons = irons + 6
     end
-    if attached["1911_slide_short"] then
-        slide = 2
-        if attached["m1911_comp"] then
-            comp = 2
-        end
-        if attached["1911_frame_hd"] then
-            slide = 7
-        end
-        snappos = Vector(-1, -10, 0)
-    end
-    if attached["1911_slide_short_modern"] then
-        slide = 3
-        newpos = Vector(-2.53, 0, 0.925)
-        newang = Angle(-0.1, 0, 0)
-        if attached["m1911_comp"] then
-            comp = 2
-        end
-        snappos = Vector(-1, -10, 0)
-    end
-    if attached["1911_slide_baller"] then
-        slide = 4
-        if attached["m1911_comp"] then
-            comp = 3
-        end
-        if attached["1911_frame_hd"] then
-            slide = 8
-        end
-        snappos = Vector(2.5, -10, 0)
-    end
-    if attached["1911_slide_baller_modern"] then
-        slide = 5
-        newpos = Vector(-2.53, 0, 0.925)
-        newang = Angle(-0.1, 0, 0)
-        if attached["m1911_comp"] then
-            comp = 3
-        end
-        snappos = Vector(2.5, -10, 0)
-    end
-
 
     if attached["bo1_pap"] then
         finish = 4
     end
-    if attached["nickel"] then
+    if attached["worn"] then
         finish = 1
         if attached["bo1_pap"] then
-            finish = 3
+            finish = 5
         end
     end
-    if attached["worn"] then
+    if attached["nickel"] then
         finish = 2
         if attached["bo1_pap"] then
-            finish = 4
+            finish = 6
         end
     end
     if attached["gold"] then
-        finish = 5
+        finish = 3
         if attached["bo1_pap"] then
-            finish = 6
+            finish = 7
         end
     end
     if attached["sally"] then
         finish = 3
     end
-
-    vm:SetBodygroup(1,slide)
-    vm:SetBodygroup(2,slide)
-    vm:SetBodygroup(5, comp)
+    vm:SetBodygroup(2,irons)
     vm:SetSkin(finish)
-
-    self.IronSights = {
-        Pos = newpos,
-        Ang = newang,
-        ViewModelFOV = 60,
-        Magnification = 1.1,
-    }
-
-    self.CustomizeSnapshotPos = snappos
 end
 
 SWEP.HookP_NameChange = function(self, name)
@@ -435,13 +383,23 @@ SWEP.Attachments = {
         DefaultIcon = Material("materials/entities/bo1_atts/cosmetic/waw_1911.png", "mips smooth"),
     },
     {
+        PrintName = "Irons",
+        DefaultCompactName = "G.I. Irons",
+        Bone = "j_bolt",
+        Scale = Vector(1,1,1),
+        Pos = Vector(2, 0, 0),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_m1911_sights"},
+        DefaultIcon = Material("materials/entities/bo1_atts/cosmetic/waw_1911.png", "mips smooth"),
+    },
+    {
         PrintName = "Muzzle",
         DefaultCompactName = "Muzz",
         Bone = "j_gun",
         Scale = Vector(1,1,1),
-        Pos = Vector(5.66, 0.175, 1.05),
+        Pos = Vector(5.66, 0, 1.05),
         Ang = Angle(0, 0, 0),
-        Category = {"cod_muzzle_pistol", "bo1_m1911_compensator"},
+        Category = {"cod_muzzle_pistol"},
     },
     {
         PrintName = "Frame",
@@ -456,7 +414,7 @@ SWEP.Attachments = {
         PrintName = "Trigger",
         DefaultCompactName = "G.I. Trigger",
         Bone = "j_gun",
-        Pos = Vector(1, 0, -0.1),
+        Pos = Vector(1, 0, -1),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_m1911_trigger"},
         DefaultIcon = Material("materials/entities/bo1_atts/cosmetic/waw_1911.png", "mips smooth"),
@@ -475,7 +433,7 @@ SWEP.Attachments = {
         DefaultCompactName = "RAIL",
         Bone = "j_gun",
         Scale = Vector(0.75,0.75,0.75),
-        Pos = Vector(3.5, 0.175, 0.3),
+        Pos = Vector(3.5, 0, 0.3),
         Ang = Angle(0, 0, 0),
         Category = {"cod_pistol_rail"},
         Icon_Offset = Vector(-2,0,1),
@@ -486,7 +444,7 @@ SWEP.Attachments = {
         DefaultCompactName = "TAC",
         Bone = "j_gun",
         Scale = .9,
-        Pos = Vector(2.75, 0.175, 0.175),
+        Pos = Vector(2.75, 0, 0.175),
         Ang = Angle(0, 0, 0),
         Category = {"cod_tactical_pistols"},
     },

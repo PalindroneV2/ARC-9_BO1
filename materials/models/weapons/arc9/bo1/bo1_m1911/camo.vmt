@@ -2,8 +2,7 @@
 {
 	"$basetexture" "models/weapons/arc9/bo1/bo1_m1911/1911_c"
 	"$bumpmap" "models/weapons/arc9/bo1/bo1_m1911/1911_n"
-	
-	
+
 	//"$color2" "[ .4 .4 .4 ]"
 	"$blendtintbybasealpha" "1"
 	"$phong" "1"
