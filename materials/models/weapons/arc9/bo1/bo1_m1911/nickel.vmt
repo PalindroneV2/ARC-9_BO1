@@ -6,10 +6,10 @@
 	"$envmapmask" "models/weapons/arc9/bo1/bo1_m1911/1911_s"
 	$normalmapalphaenvmapmask 1
 
-	"$detail" "models/weapons/arc9/bo1/bo1_m1911/1911_s"
+	"$detail" "models/weapons/arc9/bo1/bo1_m1911/1911_mp_s"
 	$detailscale "1"
 	$detailblendmode 1
-	$detailblendfactor "0.1"
+	$detailblendfactor "0.05"
 	
 	$phong "1"
 	$phongexponent	"4"
@@ -19,7 +19,7 @@
 	$phongalbedotint "1"
 
 	$envmap "env_cubemap"
-	$envmaptint "[0.5 0.5 0.75]"
+	$envmaptint "[0.2 0.2 0.3]"
 	$envmapfresnel "0.1"
 	"$nocull" "1"
 }
