@@ -23,7 +23,7 @@ SWEP.Slot = 0
 SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arc9/c_bo2_machete.mdl"
-SWEP.WorldModel = "models/weapons/arc9/c_bo2_machete.mdl"
+SWEP.WorldModel = "models/weapons/arc9/w_bo2_machete.mdl"
 SWEP.WorldModelMirror = "models/weapons/arc9/c_bo2_machete.mdl"
 SWEP.MirrorVMWM = true
 SWEP.NoTPIKVMPos = true
@@ -50,7 +50,7 @@ SWEP.CanLean = false
 SWEP.Ammo = "" -- What ammo type this gun uses.
 
 SWEP.ChamberSize = 0 -- The amount of rounds this gun can chamber.
-SWEP.ClipSize = -1 -- Self-explanatory.
+SWEP.ClipSize = 0 -- Self-explanatory.
 SWEP.SupplyLimit = 0 -- Amount of magazines of ammo this gun can take from an ARC9 supply crate.
 SWEP.SecondarySupplyLimit = 0 -- Amount of reserve UBGL magazines you can take.
 
@@ -245,7 +245,7 @@ SWEP.Attachments = {
 SWEP.Animations = {
     ["idle"] = {
         Source = {"idle"},
-        Time = 10,
+        -- Time = 10,
     },
     ["draw"] = {
         Source = "draw",
@@ -253,9 +253,9 @@ SWEP.Animations = {
     },
     ["ready"] = {
         Source = "first_draw",
-        Time = 1,
-        MinProgress = 75 / 100,
-        FireASAP = true,
+        -- Time = 1.6,
+        -- MinProgress = 0.1,
+        -- FireASAP = true,
     },
     ["holster"] = {
         Source = "holster",

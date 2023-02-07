@@ -23,7 +23,7 @@ SWEP.Slot = 0
 SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arc9/c_bo2_pulwar_sword.mdl"
-SWEP.WorldModel = "models/weapons/arc9/c_bo2_pulwar_sword.mdl"
+SWEP.WorldModel = "models/weapons/arc9/w_bo2_pulwar_sword.mdl"
 SWEP.WorldModelMirror = "models/weapons/arc9/c_bo2_pulwar_sword.mdl"
 SWEP.MirrorVMWM = true
 SWEP.NoTPIKVMPos = true
@@ -245,7 +245,7 @@ SWEP.Attachments = {
 SWEP.Animations = {
     ["idle"] = {
         Source = {"idle"},
-        Time = 10,
+        -- Time = 10,
     },
     ["draw"] = {
         Source = "draw",
@@ -253,7 +253,9 @@ SWEP.Animations = {
     },
     ["ready"] = {
         Source = "first_draw",
-        Time = 1,
+        -- Time = 1.6,
+        -- MinProgress = 0.1,
+        -- FireASAP = true,
     },
     ["holster"] = {
         Source = "holster",

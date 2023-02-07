@@ -244,8 +244,7 @@ SWEP.Attachments = {
 
 SWEP.Animations = {
     ["idle"] = {
-        Source = {"idle"},
-        Time = 450 / 30,
+        Source = {"idle_long"},
     },
     ["draw"] = {
         Source = "draw",
