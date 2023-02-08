@@ -186,7 +186,7 @@ SWEP.CaseBones = {}
 
 SWEP.IronSights = {
     Pos = Vector(-2.7125, -3, 0.25),
-    Ang = Angle(0.025, 0.3, 0),
+    Ang = Angle(0, 0.3, 0),
     Magnification = 1.1,
     ViewModelFOV = 60,
     CrosshairInSights = false,
@@ -195,7 +195,7 @@ SWEP.IronSights = {
 
 SWEP.SightMidPoint = { -- Where the gun should be at the middle of it's irons
     Pos = Vector(-1.8, -1.5, -0.4),
-    Ang = Angle(0.0125, 0.15, 0),
+    Ang = Angle(0, 0.15, 0),
 }
 
 SWEP.HoldTypeHolstered = "passive"
@@ -385,7 +385,8 @@ SWEP.Attachments = {
         Pos = Vector(-3, 0, 2.65),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_stock_m"},
-        Installed = "bo1_stock_medium"
+        Installed = "bo1_stock_medium",
+        Integral = true,
     },
 }
 

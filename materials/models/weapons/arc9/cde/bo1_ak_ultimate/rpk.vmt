@@ -10,7 +10,6 @@ VertexlitGeneric
 	$detailblendmode 0
 	"$detailblendfactor" "1"
 	
-	
 	//"$color2" "[ .4 .4 .4 ]"
 	"$blendtintbybasealpha" "1"
 	"$phong" "1"
@@ -21,4 +20,5 @@ VertexlitGeneric
 //	"$basemapalphaenvmapmask" "1"
 	$envmapfresnel "0.01"
 	$envmaptint "[ .01 .01 .01 ]"
+	"$nocull" "1"
 }

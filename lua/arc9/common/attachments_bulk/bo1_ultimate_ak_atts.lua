@@ -17,6 +17,7 @@ ATT.Free = false
 
 ATT.Category = {"bo1_ultimate_ak_barrel"}
 ATT.ActivateElements = {"barrel_rpk"}
+-- ATT.ExcludeElements = {"ak12"}
 
 ATT.SpreadMult = 0.85
 ATT.RecoilMult = 0.85
@@ -35,20 +36,20 @@ ATT.RangeMinMult = 1.25
 ATT.PhysBulletMuzzleVelocityMult = 1.15
 
 ATT.Attachments = {
-    {
-        PrintName = "Muzzle",
-        DefaultCompactName = "Default",
-        Bone = "j_gun",
-        Scale = Vector(1.5, 1.5, 1.5),
-        Pos = Vector(-12.5, 0, 0.8),
-        Ang = Angle(0, 0, 0),
-        Category = {"cod_muzzle"},
-    },
+    -- {
+    --     PrintName = "Muzzle",
+    --     DefaultCompactName = "Default",
+    --     Bone = "j_gun",
+    --     Scale = Vector(1.5, 1.5, 1.5),
+    --     Pos = Vector(-12.5, 0, 0.8),
+    --     Ang = Angle(0, 0, 0),
+    --     Category = {"cod_muzzle"},
+    -- },
     {
         PrintName = "Bipod",
         DefaultCompactName = "None",
         Bone = "j_gun",
-        Pos = Vector(-16.5, 0, 1.2),
+        Pos = Vector(-13.5, 0, 1.2),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_bipod"},
     },
@@ -95,16 +96,16 @@ ATT.RangeMaxMult = 0.6
 ATT.RangeMinMult = 0.6
 ATT.PhysBulletMuzzleVelocityMult = 0.6
 
-ATT.Attachments = {
-    {
-        PrintName = "Muzzle",
-        DefaultName = "Default",
-        Bone = "j_gun",
-        Pos = Vector(-2.3, 0, 0.95),
-        Ang = Angle(0, 0, 0),
-        Category = {"cod_muzzle"},
-    },
-}
+-- ATT.Attachments = {
+--     {
+--         PrintName = "Muzzle",
+--         DefaultName = "Default",
+--         Bone = "j_gun",
+--         Pos = Vector(-2.3, 0, 0.95),
+--         Ang = Angle(0, 0, 0),
+--         Category = {"cod_muzzle"},
+--     },
+-- }
 
 ARC9.LoadAttachment(ATT, "bo1_ultimate_ak_barrel_short")
 
@@ -160,6 +161,42 @@ ATT.Attachments = {
 }
 
 ARC9.LoadAttachment(ATT, "bo1_ultimate_ak_barrel_asval")
+
+ATT = {}
+
+ATT.PrintName = [[100 Series 420mm Carbine Barrel]]
+ATT.CompactName = [[AK-102]]
+ATT.Icon = Material("entities/bo1_atts/barrel/barrel.png")
+ATT.Description = [[Carbine length barrel made for the 100 series AK variants.]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 2
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
+ATT.Free = false
+
+ATT.Category = {"bo1_ultimate_ak_barrel"}
+ATT.ActivateElements = {"barrel_102"}
+
+ATT.SpreadMult = 1.1
+ATT.RecoilMult = 1.1
+ATT.SpreadMultHipFire = 0.95
+ATT.SpreadMultShooting = 0.975
+--ATT.SpreadMultMove = 1.1
+
+ATT.SpeedMult = 1.05
+ATT.SpeedMultSights = 1.05
+
+ATT.AimDownSightsTimeMult = 0.95
+ATT.SprintToFireTimeMult = 0.95
+
+ATT.RangeMaxMult = 0.95
+ATT.RangeMinMult = 0.95
+ATT.PhysBulletMuzzleVelocityMult = 0.95
+
+-- ATT.Attachments = {
+-- }
+
+ARC9.LoadAttachment(ATT, "bo1_ultimate_ak_barrel_102")
 
 ATT = {}
 
@@ -308,7 +345,7 @@ ARC9.LoadAttachment(ATT, "bo1_ultimate_ak_furniture_modern")
 
 ATT = {}
 
-ATT.PrintName = [[RPK-74 5.45mm 45rnd Mag]]
+ATT.PrintName = [[RPK 45rnd Mag]]
 ATT.CompactName = [[DUAL]]
 ATT.Icon = Material("entities/bo1_atts/ammo/ext_mag.png")
 ATT.Description = [[Two taped-together 45 round magazines used by RPK-74s in mobile light machine gun roles.
@@ -329,7 +366,7 @@ ARC9.LoadAttachment(ATT, "bo1_ultimate_ak_mag_45_dual")
 
 ATT = {}
 
-ATT.PrintName = [[RPK-74 5.45mm 80rnd Drum Mag]]
+ATT.PrintName = [[RPK 80rnd Drum Mag]]
 ATT.CompactName = [[DRUM]]
 ATT.Icon = Material("entities/bo1_atts/ammo/drum.png")
 ATT.Description = [[80 round drum magazine used by RPK-74s in more stationary roles.
@@ -374,6 +411,23 @@ ARC9.LoadAttachment(ATT, "bo1_ultimate_ak_mag_ext")
 
 ATT = {}
 
+ATT.PrintName = [[AK-47 Smooth Dust Cover Receiver]]
+ATT.CompactName = [[AK-47]]
+ATT.Icon = Material("entities/bo1_atts/barrel/barrel.png")
+ATT.Description = [[Identical to the base AK-47 receiver in performance. Only cosmetic.]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 1
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
+ATT.Free = false
+
+ATT.Category = {"bo1_ultimate_ak_receiver"}
+ATT.ActivateElements = {"smooth","ak47og"}
+
+ARC9.LoadAttachment(ATT, "bo1_ultimate_ak_receiver_ak47_smooth")
+
+ATT = {}
+
 ATT.PrintName = [[AK-74 Receiver]]
 ATT.CompactName = [[AK-74]]
 ATT.Icon = Material("entities/bo1_atts/barrel/barrel.png")
@@ -395,8 +449,8 @@ ATT.RangeMaxMult = 0.9
 ATT.RangeMinMult = 0.9
 ATT.AimDownSightsTimeMult = 0.975
 ATT.SprintToFireTimeMult = 0.975
-ATT.RecoilMult = 0.8
-ATT.RecoilUpMult = 0.8
+ATT.RecoilMult = 0.9
+ATT.RecoilUpMult = 0.9
 ATT.PenetrationMult = 0.8
 ATT.FirstShootSound = "ARC9_BO1.AK74u_Fire"
 ATT.ShootSound = "ARC9_BO1.AK74u_Fire"
@@ -419,19 +473,114 @@ ARC9.LoadAttachment(ATT, "bo1_ultimate_ak_receiver_ak74")
 
 ATT = {}
 
-ATT.PrintName = [[RPK-74 Receiver]]
+ATT.PrintName = [[Pseudo AK-12 Receiver]]
+ATT.CompactName = [[AK-12]]
+ATT.Icon = Material("entities/bo1_atts/barrel/barrel.png")
+ATT.Description = [[Totally legit AK-12 receiver. Fires 5.45x39mm rounds. Identical to the AK-74 receiver.]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 3
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
+ATT.Free = false
+
+ATT.Category = {"bo1_ultimate_ak_receiver"}
+ATT.ActivateElements = {"ak12"}
+
+ATT.ReloadTimeMult = 0.95
+ATT.DamageMax = 30
+ATT.DamageMin = 20
+ATT.SpreadMult = 1.1
+ATT.RangeMaxMult = 0.9
+ATT.RangeMinMult = 0.9
+ATT.AimDownSightsTimeMult = 0.975
+ATT.SprintToFireTimeMult = 0.975
+ATT.RecoilMult = 0.9
+ATT.RecoilUpMult = 0.9
+ATT.PenetrationMult = 0.8
+ATT.FirstShootSound = "ARC9_BO1.AK74u_Fire"
+ATT.ShootSound = "ARC9_BO1.AK74u_Fire"
+ATT.DistantShootSound = "ARC9_BO1.AK74u_Ringoff"
+ATT.Ammo = "smg1"
+ATT.MuzzleParticle = "muzzleflash_ak74"
+
+ATT.Attachments = {
+    {
+        PrintName = "Optic",
+        DefaultName = "Irons",
+        Bone = "j_gun",
+        Pos = Vector(-2.5, 0, -3.2),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0,0,0),
+        Category = {"cod_optic", "cod_rail_riser"},
+        InstalledElements = {"ak12mount"}
+        -- ExcludeElements = {"nobacksight"},
+    }
+}
+
+ATT.Trivia = {
+    Manufacturer = "Izhmash",
+    Calibre = "5.45x39mm",
+    Mechanism = "Gas Piston",
+    Country = "Russia",
+    Year = 2012,
+    Games = [[Ghosts, AW]]
+}
+
+ARC9.LoadAttachment(ATT, "bo1_ultimate_ak_receiver_ak12")
+
+ATT = {}
+
+ATT.PrintName = [[RPK Receiver]]
 ATT.CompactName = [[RPK]]
+ATT.Icon = Material("entities/bo1_atts/barrel/barrel.png")
+ATT.Description = [[Machine Gun Variant of the AKM.
+Its ability for more efficient sustained fire lets it get an effective cyclic rate of 750 rounds per minute.]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 4
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
+ATT.Free = false
+
+ATT.Category = {"bo1_ultimate_ak_receiver"}
+ATT.ActivateElements = {"rpk", "rpkm", "no_ubgl"}
+
+ATT.ClipSize = 45
+ATT.ReloadTimeMult = 1
+ATT.SpreadMult = 1.1
+ATT.RangeMaxMult = 0.9
+ATT.RangeMinMult = 0.9
+ATT.AimDownSightsTimeMult = 1.1
+ATT.SprintToFireTimeMult = 1.1
+ATT.RPM = 750
+
+ATT.Attachments = {
+    {
+        PrintName = "Magazine",
+        DefaultCompactName = "45 RND",
+        Category = "bo1_ultimate_ak_mag_74",
+        Bone = "tag_rpk_clip",
+        Pos = Vector(-5, 0, 2),
+        Ang = Angle(0, 0, 0),
+    },
+}
+
+ARC9.LoadAttachment(ATT, "bo1_ultimate_ak_receiver_rpkm")
+
+ATT = {}
+
+ATT.PrintName = [[RPK-74 Receiver]]
+ATT.CompactName = [[RPK-74]]
 ATT.Icon = Material("entities/bo1_atts/barrel/barrel.png")
 ATT.Description = [[Updated RPK receiver firing 5.45x39mm rounds.
 Its ability for more efficient sustained fire lets it get an effective cyclic rate of 750 rounds per minute.]]
 ATT.Pros = {}
 ATT.Cons = {}
-ATT.SortOrder = 2
+ATT.SortOrder = 5
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Category = {"bo1_ultimate_ak_receiver"}
-ATT.ActivateElements = {"rpk", "no_ubgl"}
+ATT.ActivateElements = {"rpk", "rpk74", "no_ubgl"}
 
 ATT.ClipSize = 45
 ATT.ReloadTimeMult = 1
@@ -442,8 +591,8 @@ ATT.RangeMaxMult = 0.9
 ATT.RangeMinMult = 0.9
 ATT.AimDownSightsTimeMult = 1.1
 ATT.SprintToFireTimeMult = 1.1
-ATT.RecoilMult = 0.75
-ATT.RecoilUpMult = 0.75
+ATT.RecoilMult = 0.9
+ATT.RecoilUpMult = 0.9
 ATT.PenetrationMult = 0.8
 ATT.FirstShootSound = "ARC9_BO1.RPK_Fire"
 ATT.ShootSound = "ARC9_BO1.RPK_Fire"
@@ -475,6 +624,66 @@ ATT.Trivia = {
 }
 
 ARC9.LoadAttachment(ATT, "bo1_ultimate_ak_receiver_rpk")
+
+ATT = {}
+
+ATT.PrintName = [[RPK-12 Receiver]]
+ATT.CompactName = [[RPK-12]]
+ATT.Icon = Material("entities/bo1_atts/barrel/barrel.png")
+ATT.Description = [[Even more updated RPK-12 receiver firing 5.45x39mm rounds.
+Its ability for more efficient sustained fire lets it get an effective cyclic rate of 750 rounds per minute.
+Identical in performance to the regular RPK-74 receiver.]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 6
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
+ATT.Free = false
+
+ATT.Category = {"bo1_ultimate_ak_receiver"}
+ATT.ActivateElements = {"rpk", "rpk12", "no_ubgl"}
+
+ATT.ClipSize = 45
+ATT.ReloadTimeMult = 1
+ATT.DamageMax = 32
+ATT.DamageMin = 22
+ATT.SpreadMult = 1.1
+ATT.RangeMaxMult = 0.9
+ATT.RangeMinMult = 0.9
+ATT.AimDownSightsTimeMult = 1.1
+ATT.SprintToFireTimeMult = 1.1
+ATT.RecoilMult = 0.9
+ATT.RecoilUpMult = 0.9
+ATT.PenetrationMult = 0.8
+ATT.FirstShootSound = "ARC9_BO1.RPK_Fire"
+ATT.ShootSound = "ARC9_BO1.RPK_Fire"
+ATT.DistantShootSound = "ARC9_BO1.AK74u_Ringoff"
+ATT.RPM = 750
+ATT.Ammo = "smg1"
+ATT.MuzzleParticle = "muzzleflash_ak74"
+
+ATT.Attachments = {
+    {
+        PrintName = "Magazine",
+        DefaultCompactName = "45 RND",
+        Category = "bo1_ultimate_ak_mag_74",
+        Bone = "tag_rpk_clip",
+        Pos = Vector(-5, 0, 2),
+        Ang = Angle(0, 0, 0),
+    },
+}
+
+ATT.Trivia = {
+    Manufacturer = "Izhmash",
+    Calibre = "5.45x39mm",
+    Mechanism = "Gas Piston",
+    Country = "USSR",
+    Year = 1974,
+    Games = [[
+        COD4, MW2, BO1, MW3, BO2, AW, BO3, MW19, BOCW
+    ]]
+}
+
+ARC9.LoadAttachment(ATT, "bo1_ultimate_ak_receiver_rpk12")
 
 -- STOCKS
 

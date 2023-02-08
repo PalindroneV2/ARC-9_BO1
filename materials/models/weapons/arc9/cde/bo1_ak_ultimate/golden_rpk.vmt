@@ -20,4 +20,6 @@ VertexlitGeneric
 	
 	$envmap "env_cubemap"
 	$envmaptint "[1 .75 .25]"
-	$envmapfresnel "[.02 .05 .04]"}
+	$envmapfresnel "[.02 .05 .04]"
+	"$nocull" "1"
+}

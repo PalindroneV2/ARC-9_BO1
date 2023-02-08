@@ -75,12 +75,12 @@ SWEP.ReloadTime = 1
 SWEP.Crosshair = true
 SWEP.CanBlindFire = false
 
-SWEP.Recoil = 0.5
+SWEP.Recoil = 0.75
 SWEP.RecoilSide = 0.7
-SWEP.RecoilUp = 1
+SWEP.RecoilUp = 1.1
 
 SWEP.RecoilRandomUp = 0.6
-SWEP.RecoilRandomSide = 0.3
+SWEP.RecoilRandomSide = 0.5
 
 SWEP.RecoilDissipationRate = 40 -- How much recoil dissipates per second.
 SWEP.RecoilResetTime = 0.01 -- How long the gun must go before the recoil pattern starts to reset.
@@ -196,7 +196,7 @@ SWEP.IronSightsHook = function(self)
             newang = Angle(0, 0, 0)
         end
     end
-    if attached["barrel_krinkov"] then
+    if attached["barrel_krinkov"] or attached["barrel_102"] then
         newpos = Vector(-2.43, -2, 1)
         newang = Angle(0.02, 0, 0)
         if attached["bo1_alternate_irons"] then
@@ -216,6 +216,14 @@ SWEP.IronSightsHook = function(self)
         newpos = Vector(-2.425, -2, 1)
         newang = Angle(0.05, 0, 0)
     end
+    if attached["ak12"] then
+        newpos = Vector(-2.435, 0, 0.6)
+        newang = Angle(0, 0.5, 0)
+        if attached["barrel_krinkov"] or attached["barrel_102"] then
+            newpos = Vector(-2.435, 0, 0.5)
+            newang = Angle(0, 1.2, 0)
+        end
+    end
     if attached["rpk"] then
         newpos = Vector(-2.065, -2, 0.65)
         newang = Angle(0.05, 0, 0)
@@ -223,12 +231,20 @@ SWEP.IronSightsHook = function(self)
             newpos = Vector(-2.065, -2, 0.665)
             newang = Angle(0.05, 0, 0)
         end
-        if attached["barrel_krinkov"] then
+        if attached["barrel_krinkov"] or attached["barrel_102"] then
             newpos = Vector(-2.065, -2, 0.8)
             newang = Angle(0.025, 0, 0)
             if attached["bo1_alternate_irons"] then
                 newpos = Vector(-2.065, -2, 0.625)
                 newang = Angle(0.05, 0.5, 0)
+            end
+        end
+        if attached["rpk12"] then
+            newpos = Vector(-2.065, 0, 0.4)
+            newang = Angle(0, 0.45, 0)
+            if attached["barrel_krinkov"] or attached["barrel_102"] then
+                newpos = Vector(-2.065, 0, 0.335)
+                newang = Angle(0, 1.15, 0)
             end
         end
     end
@@ -387,54 +403,80 @@ SWEP.ExtraSightDist = 5
 SWEP.AttachmentElements = {
     ["bo1_irons_alt"] = {
         Bodygroups = {
-            {2,1}
+            {2,2}
         },
     },
     ["rail"] = {
         Bodygroups = {
-            {2,2}
+            {2,4}
         },
     },
     ["stock_l"] = {
         Bodygroups = {
-            {7,1}
+            {8,1}
         },
     },
     ["stock_m"] = {
         Bodygroups = {
-            {7,2}
+            {8,2}
         },
     },
     ["stock_h"] = {
         Bodygroups = {
-            {7,3}
+            {8,3}
         },
     },
     ["stock_tac"] = {
         Bodygroups = {
-            {7,4}
+            {8,4}
         },
     },
     ["stock_underfolder"] = {
         Bodygroups = {
-            {7,5}
+            {8,5}
         },
     },
     ["stock_vss"] = {
         Bodygroups = {
-            {7,6}
+            {6,3},
+            {8,6},
+        },
+    },
+    ["smooth"] = {
+        Bodygroups = {
+            {0,1},
         },
     },
     ["ak74"] = {
         Bodygroups = {
-            {0,1},
-            {1,2}
+            {0,2},
+            {1,2},
         },
     },
     ["rpk"] = {
         Bodygroups = {
-            {0,2},
+            {0,3},
             {1,4},
+        },
+    },
+    ["rpkm"] = {
+        Bodygroups = {
+            {0,4},
+            {1,4},
+        },
+    },
+    ["ak12"] = {
+        Bodygroups = {
+            {0,6},
+            {1,2},
+            {2,3},
+        },
+    },
+    ["rpk12"] = {
+        Bodygroups = {
+            {0,7},
+            {1,4},
+            {2,3},
         },
     },
     ["ext_mag"] = {
@@ -449,22 +491,22 @@ SWEP.AttachmentElements = {
     },
     ["bo1_gp25"] = {
         Bodygroups = {
-            {6,1},
+            {7,1},
         },
     },
     ["bo1_mk"] = {
         Bodygroups = {
-            {6,2},
+            {7,2},
         },
     },
     ["bo1_tishina"] = {
         Bodygroups = {
-            {6,4},
+            {7,4},
         },
     },
     ["bo1_bipod"] = {
         Bodygroups = {
-            {6,5},
+            {7,5},
         },
     },
     ["svd_scope"] = {
@@ -476,8 +518,29 @@ SWEP.AttachmentElements = {
     },
     ["rpdhand"] = {
         AttPosMods = {
+            [6] = {
+                Pos = Vector(11.5, 0, 0.5),
+            }
+        }
+    },
+    ["barrel_rpk"] = {
+        AttPosMods = {
             [7] = {
-                Pos = Vector(11.5, 0, 0.4),
+                Pos = Vector(30.7, 0, 1),
+            }
+        }
+    },
+    ["barrel_102"] = {
+        AttPosMods = {
+            [7] = {
+                Pos = Vector(16.5, 0, 1.025),
+            }
+        }
+    },
+    ["barrel_krinkov"] = {
+        AttPosMods = {
+            [7] = {
+                Pos = Vector(15, 0, 1.025),
             }
         }
     },
@@ -490,28 +553,35 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
 
     local barrel = 0
     local irons = 0
+    local front = 0
     local hand = 0
     local grip = 0
     if attached["barrel_krinkov"] then
         barrel = 1
-        irons = 3
+        irons = 1
+        front = 2
         hand = 0
     elseif attached["barrel_rpk"] then
         barrel = 2
-        irons = 6
+        front = 4
         hand = 4
-    elseif attached["barrel_rpd"] then
-        barrel = 4
-        irons = 12
+    elseif attached["barrel_102"] then
+        barrel = 3
+        front = 6
         hand = 0
     elseif attached["barrel_asval"] then
-        vm:SetBodygroup(0,3)
-        barrel = 3
-        irons = 9
+        vm:SetBodygroup(0,5)
+        barrel = 4
+        irons = 1
+        front = 9
         hand = 9
+    elseif attached["barrel_rpd"] then
+        barrel = 5
+        front = 8
+        hand = 0
     end
     if attached["bo1_irons_alt"] then
-        irons = irons + 1
+        irons = 2
     end
     if attached["bo1_ultimate_ak_mag_45_dual"] then
         vm:SetBodygroup(1, 5)
@@ -520,18 +590,32 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         vm:SetBodygroup(1, 6)
     end
 
-    if attached["ak74"] and barrel == 0 then
-        vm:SetBodygroup(8, 1)
+    if (attached["ak74"] or attached["ak12"]) and barrel == 0 then
+        vm:SetBodygroup(9, 1)
         if attached["cod_muzzle"] then
-            vm:SetBodygroup(8, 0)
+            vm:SetBodygroup(9, 0)
         end
     end
+    if attached["ak12"] or attached["rpk12"] then
+        irons = 3
+        hand = 10
+        grip = 2
+        if attached["ak12mount"] then
+            irons = 4
+        end
+        if barrel == 2 then
+            hand = 11
+        end
+    end
+    -- if attached["mount"] or attached["ak12mount"] then
+    --     front = front + 1
+    -- end
 
     if attached["rail_bo1"] then
-        vm:SetBodygroup(9, 1)
+        vm:SetBodygroup(10, 1)
     end
     if attached["rail_pic"] then
-        vm:SetBodygroup(9, 2)
+        vm:SetBodygroup(10, 2)
     end
 
     if attached["wornhand"] then
@@ -549,6 +633,17 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     if attached["stock_vss"] then
         grip = 3
     end
+    if attached["rpk12"] then
+        irons = 3
+        hand = 10
+        grip = 2
+        if attached["ak12mount"] then
+            irons = 4
+        end
+        if barrel == 2 then
+            hand = 11
+        end
+    end
 
     local camo = 0
     if attached["bo1_ultimate_ak_gold"] then
@@ -562,10 +657,11 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     end
     vm:SetSkin(camo)
 
-    vm:SetBodygroup(3, barrel)
     vm:SetBodygroup(2, irons)
-    vm:SetBodygroup(4, hand)
-    vm:SetBodygroup(5, grip)
+    vm:SetBodygroup(3, front)
+    vm:SetBodygroup(4, barrel)
+    vm:SetBodygroup(5, hand)
+    vm:SetBodygroup(6, grip)
 end
 
 SWEP.HookP_NameChange = function(self, name)
@@ -574,16 +670,20 @@ SWEP.HookP_NameChange = function(self, name)
 
     local gunname = "AK-47"
     local model = "AK"
-    local cal = "-47"
+    local cal = "M"
     local u = ""
     local folding = ""
+    if attached["smooth"] then
+        cal = "-47"
+    end
     if attached["barrel_rpk"] then
         model = "RPK"
         cal = ""
     end
-    if attached["rpk"] or attached["ak74"] then
+    if attached["rpk74"] or attached["ak74"] then
         cal = "-74"
     end
+    if attached["ak12"] or attached["rpk12"] then cal = "-12" end
     if attached["barrel_krinkov"] then
         u = "u"
     end
@@ -592,9 +692,13 @@ SWEP.HookP_NameChange = function(self, name)
     end
 
     gunname = model .. folding .. cal .. u
-    if u == "u" and cal == "-47" then
+    if u == "u" and (cal == "M" or cal == "-47") then
         cal = "M"
         gunname = model .. cal .. folding .. u
+    end
+    if u == "u" and cal == "-12" then
+        u = "U"
+        gunname = model .. u .. cal
     end
 
     if attached["barrel_asval"] then
@@ -622,10 +726,10 @@ SWEP.HookP_NameChange = function(self, name)
         if attached["barrel_asval"] then
             gunname = "Total Silence"
         end
-
         if attached["barrel_rpd"] and attached["rpdhand"] then
             gunname = "Strain 93"
         end
+        if attached["ak12"] then gunname = "Reznov's Reconstruction" end
     end
 
     return gunname
@@ -651,7 +755,7 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
         if self:GetUBGL() then
             suffix = "_mksetup"
         end
-    elseif attached["bo1_ultimate_ak_receiver_rpk"] then
+    elseif attached["rpk"] then
         suffix = "_rpk"
     else
         suffix = ""
@@ -709,6 +813,8 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ultimate_ak_rail"},
         MergeSlots = {2},
+        InstalledElements = {"mount"},
+        ExcludeElements = {"ak12", "rpk12"}
     },
     {
         Hidden = true,
@@ -716,12 +822,14 @@ SWEP.Attachments = {
         Pos = Vector(1.5, 0, 2.6),
         Ang = Angle(0, 0, 0),
         Category = {"cod_optic_ak", "bo1_alt_irons", "bo1_svd_scope"},
+        InstalledElements = {"mount"},
     },
     {
         PrintName = "Receiver",
         DefaultName = "AK-47",
         Bone = "j_gun",
-        Pos = Vector(0, 0, 1),
+        Pos = Vector(0, 0, 0),
+        Icon_Offset = Vector(0, 0, 1),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ultimate_ak_receiver"},
     },
@@ -740,7 +848,7 @@ SWEP.Attachments = {
         Pos = Vector(8, 0, 1.5),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ultimate_ak_handg"},
-        ExcludeElements = {"barrel_asval"},
+        ExcludeElements = {"barrel_asval","ak12","rpk12"},
     },
     {
         PrintName = "Underbarrel",
@@ -755,10 +863,11 @@ SWEP.Attachments = {
         PrintName = "Muzzle",
         DefaultName = "Default",
         Bone = "j_gun",
-        Pos = Vector(21.7, 0, 1),
+        Scale = 1.15,
+        Pos = Vector(21.7, 0, 1.025),
         Ang = Angle(0, 0, 0),
         Category = {"cod_muzzle"},
-        ExcludeElements = {"barrel_krinkov", "barrel_rpk", "barrel_asval"},
+        ExcludeElements = {"barrel_asval"},
     },
     {
         PrintName = "Stock",
@@ -839,6 +948,9 @@ SWEP.StandardPresets = {
     "[RPK-74]XQAAAQB9AQAAAAAAAAA9iIIiM7tupQCpjtobRJEkdYYzR6F4P3FJEqy9RUyheUZp1zOtKLbpg01RZUWsivdsVPWjLa0syyf1fmLHm20GEJBgLFz7nafEVkn3IJns5hQJp4qBYnlyK/vqlNMomjNdQJGJq0sgpAJef7YfL+DY26Wycz752P9gAAir3HsvfzUR+5EVd9XUiOHCGrqxxxmGsqL/wBLJVd2ol9j+W4+Bdd0vPjw/csujGAA=",
     "[Chinese]XQAAAQAjAQAAAAAAAAA9iIIiM7tupQCpjtobRJEkdevdtSFsYEW0WR7PXlS+8JMBy2yiomGzXKaJCIzfqW4TDPuHlM58exfO53jHmGkL8Ogd2ysWRMV1yAe2z7TJuOs2Y3BZAJP1rvlf3tXsDIwu5e9+UMKpWA6GxlwRfP5EgzrRzuzP6Epa6kjWWXVW+6+rAA==",
     "[Vintorez]XQAAAQB6AQAAAAAAAAA9iIIiM7tupQCpjtobRJEkdZ1fP0HAirxuJaFi++OSkQRS4d7M0DlDU2KQsq5E55bbZFTMSOHmh1B1MTAWaZHHwy0PlDLbXStPNXcKOCsyBKNvP0uns3lCA8q+TPhmIBWpF7+guB5W1X2TwNftbVNwoXbJWZFGolA8izBepNzitqkfV8JfiEOkGa4swNp3o2EsxXYOcg/0DZY3Pvs4MjB2us/3p5OhhUQ/KpFFM2UA",
+    "[AK-12]XQAAAQA6AQAAAAAAAAA9iIIiM7tupQCpjtobRJEkdevdtQyXDt2gZ7eB7mIc4XMJKegyvnhNTihJg3a0etGqnAmzznhXOKJQN6xSxLA9M3wcJphYDhO7cjCPXL4pWm8JZIzz7kgwAR16nmfrXjTKGjBpRr0itYp+4e7cNSVtoDAWhmfe0hrzdOnxhcRUJ5lJqGwemf6gMBaFFNFPdj2LH+IA",
+    "[Future Krinkov]XQAAAQBtAQAAAAAAAAA9iIIiM7tupQCpjtobRJEkdevdtQyXDt2gZ7eB7mIc4XMJKegyvnhNTihJg3a0etGqnAmzznhXOKJQN6xSxLA9M3wexlpJGg+YvbrG0HBlCZkBq4TdignpNHsBNgAqKr0DHBcqoNRlUWPRB6ynpOXgroZ6z3Ry54KpXB1xnFrZULvQOv3MeoMs1m6kHOrD6M/rEQJ45w2Ws/PRe+ShUyClAA==",
+    "[Future RPK]XQAAAQCbAQAAAAAAAAA9iIIiM7hMNz0dhJSTKmZ7v8x6r3nGvlWRICsL5cE/ScSVLRoSCHLpxW/GsmdksyYfo2T8yH4tgf7mSKFsU6aH+speQoIVqzmNpt/mm/CWUFc4F4RYgWMJyha0ySJKZXjZ41e2BqWbwiPqDBOBwoBX4N1vp7M+TRKgR31twAzBAlf/XUYNaHlttXVD2jNZJQcdfrDdexnIjZ83ly2H/AdONaXdXds3yJVvwC5m6l8HTgdqF64klWZiFwA=",
 }
 
 SWEP.HideBones = {
@@ -858,23 +970,14 @@ SWEP.Animations = {
     ["draw"] = {
         Source = "draw",
         Time = 1,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 1,
     },
     ["holster"] = {
         Source = "holster",
         Time = 0.75,
-        LHIK = true,
-        LHIKIn = 1,
-        LHIKOut = 1,
     },
     ["ready"] = {
         Source = "first_draw",
         Time = 1.5,
-        LHIK = false,
-        LHIKIn = 1,
-        LHIKOut = 1,
         EventTable = {
             {s = "ARC9_BO1.AK_Charge", t = 22 / 35}
         },
@@ -897,7 +1000,6 @@ SWEP.Animations = {
     ["reload"] = {
         Source = "reload",
         Time = 90 / 35,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         IKTimeLine = {
             {
                 t = 0,
@@ -928,7 +1030,6 @@ SWEP.Animations = {
     ["reload_empty"] = {
         Source = "reload_empty",
         Time = 120 / 35,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         IKTimeLine = {
             {
                 t = 0,
@@ -980,23 +1081,14 @@ SWEP.Animations = {
     ["draw_gp25"] = {
         Source = "draw_gp25",
         Time = 1,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.25,
     },
     ["holster_gp25"] = {
         Source = "holster_gp25",
         Time = 0.75,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.25,
     },
     ["ready_gp25"] = {
         Source = "first_draw_gp25",
         Time = 1,
-        LHIK = true,
-        LHIKIn = 0,
-        LHIKOut = 0.25,
         EventTable = {
             {s = "ARC9_BO1.AK_Charge", t = 22 / 35}
         },
@@ -1066,14 +1158,10 @@ SWEP.Animations = {
     ["fire_gp25setup"] = {
         Source = "fire_gp25setup",
         Time = 0.7,
-        TPAnim = ACT_HL2MP_GESTURE_RANGE_ATTACK_REVOLVER,
-        TPAnimStartTime = 0,
     },
     ["reload_ubgl_gp25setup"] = {
         Source = "reload_gp25setup",
         Time = 3,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_MAGIC,
-        TPAnimStartTime = 0.1,
         EventTable = {
             {s = "ARC9_BO1.M203_40mmOut", t = 18 / 30},
             {s = "ARC9_BO1.M203_40mmIn", t = 60 / 30},
@@ -1083,8 +1171,6 @@ SWEP.Animations = {
     ["reload_ubgl_gp25setup_soh"] = {
         Source = "reload_gp25setup",
         Time = 3 / 2,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_MAGIC,
-        TPAnimStartTime = 0.1,
         EventTable = {
             {s = "ARC9_BO1.M203_40mmOut", t = 18 / 60},
             {s = "ARC9_BO1.M203_40mmIn", t = 60 / 60},
@@ -1113,23 +1199,14 @@ SWEP.Animations = {
     ["draw_tishina"] = {
         Source = "draw_tishina",
         Time = 1,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.25,
     },
     ["holster_tishina"] = {
         Source = "holster_tishina",
         Time = 0.75,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.25,
     },
     ["ready_tishina"] = {
         Source = "first_draw_tishina",
         Time = 1,
-        LHIK = true,
-        LHIKIn = 0,
-        LHIKOut = 0.25,
         EventTable = {
             {s = "ARC9_BO1.AK_Charge", t = 22 / 35}
         },
@@ -1152,7 +1229,6 @@ SWEP.Animations = {
     ["reload_tishina"] = {
         Source = "reload_tishina",
         Time = 90 / 35,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         EventTable = {
             {s = "ARC9_BO1.AK_MagOut", t = 21 / 35},
             {s = "ARC9_BO1.AK_MagIn", t = 63 / 35}
@@ -1161,7 +1237,6 @@ SWEP.Animations = {
     ["reload_empty_tishina"] = {
         Source = "reload_empty_tishina",
         Time = 120 / 35,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         EventTable = {
             {s = "ARC9_BO1.AK_MagOut", t = 21 / 35},
             {s = "ARC9_BO1.AK_MagIn", t = 63 / 35},
@@ -1199,14 +1274,10 @@ SWEP.Animations = {
     ["fire_tishinasetup"] = {
         Source = "fire_tishinasetup",
         Time = 0.7,
-        TPAnim = ACT_HL2MP_GESTURE_RANGE_ATTACK_REVOLVER,
-        TPAnimStartTime = 0,
     },
     ["reload_ubgl_tishinasetup"] = {
         Source = "reload_tishinasetup",
         Time = 3,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_MAGIC,
-        TPAnimStartTime = 0.1,
         EventTable = {
             {s = "ARC9_BO1.M203_40mmOut", t = 18 / 30},
             {s = "ARC9_BO1.M203_40mmIn", t = 60 / 30},
@@ -1216,8 +1287,6 @@ SWEP.Animations = {
     ["reload_ubgl_tishinasetup_soh"] = {
         Source = "reload_tishinasetup",
         Time = 3 / 2,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_MAGIC,
-        TPAnimStartTime = 0.1,
         EventTable = {
             {s = "ARC9_BO1.M203_40mmOut", t = 18 / 60},
             {s = "ARC9_BO1.M203_40mmIn", t = 60 / 60},
@@ -1246,23 +1315,14 @@ SWEP.Animations = {
     ["draw_mk"] = {
         Source = "draw_mk",
         Time = 1,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.25,
     },
     ["holster_mk"] = {
         Source = "holster_mk",
         Time = 0.75,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.25,
     },
     ["ready_mk"] = {
         Source = "first_draw_mk",
         Time = 1,
-        LHIK = true,
-        LHIKIn = 0,
-        LHIKOut = 0.25,
         EventTable = {
             {s = "ARC9_BO1.AK_Charge", t = 22 / 35}
         },
@@ -1285,12 +1345,6 @@ SWEP.Animations = {
     ["reload_mk"] = {
         Source = "reload_mk",
         Time = 90 / 35,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Framerate = 35,
-        Checkpoints = {28, 38, 69},
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
         EventTable = {
             {s = "ARC9_BO1.AK_MagOut", t = 21 / 35},
             {s = "ARC9_BO1.AK_MagIn", t = 63 / 35}
@@ -1299,12 +1353,6 @@ SWEP.Animations = {
     ["reload_empty_mk"] = {
         Source = "reload_empty_mk",
         Time = 120 / 35,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Framerate = 35,
-        Checkpoints = {28, 38, 69},
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
         EventTable = {
             {s = "ARC9_BO1.AK_MagOut", t = 21 / 35},
             {s = "ARC9_BO1.AK_MagIn", t = 63 / 35},
@@ -1342,14 +1390,10 @@ SWEP.Animations = {
     ["fire_mksetup"] = {
         Source = "fire_mksetup",
         Time = 0.7,
-        TPAnim = ACT_HL2MP_GESTURE_RANGE_ATTACK_REVOLVER,
-        TPAnimStartTime = 0,
     },
     ["cycle_mksetup"] = {
         Source = "pump_mksetup",
         Time = 0.75,
-        TPAnim = ACT_HL2MP_GESTURE_RANGE_ATTACK_REVOLVER,
-        TPAnimStartTime = 0,
         EventTable = {
             {s = "ARC9_BO1.MK_Back", t = 5 / 30 },
             {s = "ARC9_BO1.MK_Fwd", t = 10 / 30 },
@@ -1359,8 +1403,6 @@ SWEP.Animations = {
         Source = "reload_in_mksetup",
         Time = 35 / 30,
         RestoreAmmo = 1,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_MAGIC,
-        TPAnimStartTime = 0.1,
         EventTable = {
             {s = "ARC9_BO1.MK_Shell", t = 22 / 30},
         }
@@ -1368,8 +1410,6 @@ SWEP.Animations = {
     ["reload_ubgl_insert_mksetup"] = {
         Source = "reload_loop_mksetup",
         Time = 33 / 30,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_MAGIC,
-        TPAnimStartTime = 0.1,
         EventTable = {
             {s = "ARC9_BO1.MK_Shell", t = 0 / 30},
         }
@@ -1377,8 +1417,6 @@ SWEP.Animations = {
     ["reload_ubgl_finish_mksetup"] = {
         Source = "reload_out_mksetup",
         Time = 50 / 30,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_MAGIC,
-        TPAnimStartTime = 0.1,
         EventTable = {
             {hide = 2, t = 1 / 30},
             {s = "ARC9_BO1.MK_Back", t = 20 / 30 },
@@ -1405,23 +1443,14 @@ SWEP.Animations = {
     ["draw_rpk"] = {
         Source = "draw_rpk",
         Time = 30 / 30,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.2,
     },
     ["holster_rpk"] = {
         Source = "holster_rpk",
         Time = 1,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.25,
     },
     ["ready_rpk"] = {
         Source = "draw_rpk",
         Time = 30 / 30,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.25,
     },
     ["fire_rpk"] = {
         Source = {"fire_rpk"},
@@ -1441,7 +1470,6 @@ SWEP.Animations = {
     ["reload_rpk"] = {
         Source = "reload_rpk",
         Time = 4.76 / 1.25,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         IKTimeLine = {
             {
                 t = 0,
@@ -1474,7 +1502,6 @@ SWEP.Animations = {
     ["reload_empty_rpk"] = {
         Source = "reload_empty_rpk",
         Time = 6.16 / 1.25,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         IKTimeLine = {
             {
                 t = 0,
@@ -1509,7 +1536,6 @@ SWEP.Animations = {
     ["fast_rpk"] = {
         Source = "fast_rpk",
         Time = 3.10,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         IKTimeLine = {
             {
                 t = 0,
@@ -1542,7 +1568,6 @@ SWEP.Animations = {
     ["fast_empty_rpk"] = {
         Source = "fast_empty_rpk",
         Time = 4.49,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         IKTimeLine = {
             {
                 t = 0,
@@ -1577,7 +1602,6 @@ SWEP.Animations = {
     ["drum"] = {
         Source = "drum",
         Time = 4.66,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         IKTimeLine = {
             {
                 t = 0,
@@ -1610,7 +1634,6 @@ SWEP.Animations = {
     ["drum_empty"] = {
         Source = "drum_empty",
         Time = 5.99,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         IKTimeLine = {
             {
                 t = 0,
