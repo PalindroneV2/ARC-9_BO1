@@ -223,6 +223,14 @@ SWEP.IronSightsHook = function(self)
             newpos = Vector(-2.435, 0, 0.5)
             newang = Angle(0, 1.2, 0)
         end
+        if attached["bo1_tishina"] then
+            newpos = Vector(-2.42, 0, 0.8)
+            newang = Angle(0, 0.5, 0)
+            if attached["barrel_krinkov"] or attached["barrel_102"] then
+                newpos = Vector(-2.42, 0, 0.75)
+                newang = Angle(0, 1.2, 0)
+            end
+        end
     end
     if attached["rpk"] then
         newpos = Vector(-2.065, -2, 0.65)
@@ -374,14 +382,17 @@ end
 
 SWEP.CustomizePos = Vector(12.5, 40, 4)
 SWEP.CustomizeAng = Angle(90, 0, 0)
-SWEP.CustomizeSnapshotPos = Vector(0, 0, 0)
+SWEP.CustomizeSnapshotPos = Vector(0, 5, 0)
 SWEP.CustomizeSnapshotAng = Angle(0, 0, 0)
 
 SWEP.CustomizePosHook = function(self)
     local attached = self:GetElements()
-    local newCustPose = Vector(0, 0, 0)
+    local newCustPose = Vector(0, 5, 0)
+    if attached["ak12"] then
+        newCustPose = newCustPose + Vector(2.5, 0, 0)
+    end
     if attached["barrel_rpk"] then
-        newCustPose = Vector(9, 15, 0.5)
+        newCustPose = newCustPose + Vector(9, 10, 0.5)
     end
     self.CustomizeSnapshotPos = newCustPose
     return Vector(12.5, 40, 4)
@@ -596,17 +607,6 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
             vm:SetBodygroup(9, 0)
         end
     end
-    if attached["ak12"] or attached["rpk12"] then
-        irons = 3
-        hand = 10
-        grip = 2
-        if attached["ak12mount"] then
-            irons = 4
-        end
-        if barrel == 2 then
-            hand = 11
-        end
-    end
     -- if attached["mount"] or attached["ak12mount"] then
     --     front = front + 1
     -- end
@@ -633,7 +633,16 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     if attached["stock_vss"] then
         grip = 3
     end
-    if attached["rpk12"] then
+    if attached["ak47og"] then
+        vm:SetBodygroup(0,1)
+    end
+    if attached["rpk74"] then
+        vm:SetBodygroup(0,3)
+    end
+    if attached["rpkm"] then
+        vm:SetBodygroup(0,4)
+    end
+    if attached["ak12"] or attached["rpk12"] then
         irons = 3
         hand = 10
         grip = 2

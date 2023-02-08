@@ -52,7 +52,7 @@ SWEP.DamageType = DMG_BULLET
 SWEP.ShootEnt = "arc9_bo1_raygun_bolt"
 SWEP.ShootEntForce = 10000
 
-SWEP.ArmorPiercing = 1 -- Between 0-1. A proportion of damage that is done as direct damage, ignoring protection.
+SWEP.ArmorPiercing = 0.99 -- Between 0-1. A proportion of damage that is done as direct damage, ignoring protection.
 
 SWEP.PhysBulletMuzzleVelocity = 250 * 39.37
 SWEP.PhysBulletDrag = 0 -- Drag multiplier

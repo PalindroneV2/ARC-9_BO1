@@ -48,14 +48,14 @@ SWEP.RangeMax = 7200
 SWEP.RangeMin = 1800
 SWEP.Penetration = 50
 SWEP.ImpactForce = 25
-SWEP.ArmorPiercing = 1
+SWEP.ArmorPiercing = 0.99
 SWEP.DamageType = DMG_AIRBOAT
 SWEP.ShootEntity = nil -- entity to fire, if any
 SWEP.EntityMuzzleVelocity = 10000
 SWEP.Num = 1
 SWEP.AmmoPerShot = 1
 SWEP.PushBackForce = 1
-SWEP.ArmorPiercing = 1 -- Between 0-1. A proportion of damage that is done as direct damage, ignoring protection.
+SWEP.ArmorPiercing = 0.99 -- Between 0-1. A proportion of damage that is done as direct damage, ignoring protection.
 
 SWEP.PhysBulletMuzzleVelocity = 1750 * 39.37 -- IN HU (INCHES)
 
