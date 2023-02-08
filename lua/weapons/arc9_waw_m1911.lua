@@ -230,24 +230,28 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local attached = data.elements
     local finish = 0
 
-    if attached["nickel"] then
-        finish = 4
-    elseif attached["worn"] then
-        finish = 8
-    elseif attached["gold"] then
-        finish = 12
-    end
-
     if attached["bo1_pap"] then
-        finish = finish + 1
-        if finish == 5 then
-            finish = finish + 1
+        finish = 4
+    end
+    if attached["worn"] then
+        finish = 1
+        if attached["bo1_pap"] then
+            finish = 5
         end
-        if finish == 9 then
-            finish = finish + 1
+    end
+    if attached["nickel"] then
+        finish = 2
+        if attached["bo1_pap"] then
+            finish = 6
         end
-        if finish == 13 then
-            finish = finish + 2
+    end
+    if attached["sally"] then
+        finish = 4
+    end
+    if attached["gold"] then
+        finish = 3
+        if attached["bo1_pap"] then
+            finish = 7
         end
     end
     vm:SetSkin(finish)
