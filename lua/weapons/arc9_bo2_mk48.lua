@@ -76,9 +76,9 @@ SWEP.ReloadTime = 1
 SWEP.Crosshair = true
 SWEP.CanBlindFire = false
 
-SWEP.Recoil = 0.5
-SWEP.RecoilSide = 0.4
-SWEP.RecoilUp = 0.5
+SWEP.Recoil = 0.9
+SWEP.RecoilSide = 0.8
+SWEP.RecoilUp = 1
 
 SWEP.RecoilRandomUp = 0.6
 SWEP.RecoilRandomSide = 0.4
@@ -118,8 +118,8 @@ SWEP.SpeedMultMelee = 1
 SWEP.SpeedMultCrouch = 1
 SWEP.SpeedMultBlindFire = 1
 
-SWEP.AimDownSightsTime = 0.5
-SWEP.SprintToFireTime = 0.5
+SWEP.AimDownSightsTime = 0.35
+SWEP.SprintToFireTime = 0.35
 
 SWEP.RPM = 710
 SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
@@ -239,7 +239,7 @@ SWEP.SprintAng = SWEP.ActiveAng
 SWEP.BipodPos = Vector(-3.735, -1, 1)
 SWEP.BipodAng = Angle(0.02,0,0)
 
-SWEP.CustomizePos = Vector(12.5, 40, 4)
+SWEP.CustomizePos = Vector(18, 40, 4)
 SWEP.CustomizeAng = Angle(90, 0, 0)
 
 SWEP.BarrelLength = 0 -- = 25

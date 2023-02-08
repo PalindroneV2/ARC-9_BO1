@@ -40,8 +40,8 @@ SWEP.DefaultBodygroups = "00000000000000"
 
 SWEP.DamageMax = 42
 SWEP.DamageMin = 25 -- damage done at maximum range
-SWEP.RangeMax = 8000
-SWEP.RangeMin = 2000
+SWEP.RangeMax = 7500
+SWEP.RangeMin = 1500
 SWEP.Penetration = 8
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
@@ -70,29 +70,29 @@ SWEP.ReloadTime = 1
 SWEP.Crosshair = true
 SWEP.CanBlindFire = false
 
-SWEP.Recoil = 0.5
-SWEP.RecoilSide = 0.35
-SWEP.RecoilUp = 0.5
+SWEP.Recoil = 0.9
+SWEP.RecoilSide = 0.9
+SWEP.RecoilUp = 0.8
 
-SWEP.RecoilRandomUp = 0.5
-SWEP.RecoilRandomSide = 0.3
+SWEP.RecoilRandomUp = 0.9
+SWEP.RecoilRandomSide = 0.6
 
 SWEP.RecoilDissipationRate = 40 -- How much recoil dissipates per second.
 SWEP.RecoilResetTime = 0.01 -- How long the gun must go before the recoil pattern starts to reset.
 
 SWEP.RecoilAutoControl = 0.5
-SWEP.RecoilKick = 1
+SWEP.RecoilKick = 1.1
 
-SWEP.Spread = math.rad(1.5 / 37.5)
-SWEP.SpreadMultShooting = 1.25
+SWEP.Spread = math.rad(1.9 / 37.5)
+SWEP.SpreadMultShooting = 1.375
 
 SWEP.SpreadMultSights = 0.1
-SWEP.SpreadAddHipFire = math.rad(150 / 37.5)
+SWEP.SpreadAddHipFire = math.rad(175 / 37.5)
 SWEP.SpreadAddMove = math.rad(0 / 37.5)
 SWEP.SpreadAddMidAir = 0
 -- SWEP.SpreadAddShooting = math.rad(5 / 37.5) -- math.rad(108 / 37.5)
 
-SWEP.RecoilPatternDrift = 20
+SWEP.RecoilPatternDrift = 30
 
 SWEP.VisualRecoilUp = 0
 SWEP.VisualRecoilSide = 0
@@ -101,7 +101,7 @@ SWEP.VisualRecoilCenter = Vector(0, 0, 0)
 SWEP.VisualRecoilPunch = 0
 SWEP.VisualRecoilMultSights = 0
 
-SWEP.Speed = 0.95
+SWEP.Speed = 0.9
 
 SWEP.ShootWhileSprint = true
 SWEP.ReloadInSights = false
@@ -112,8 +112,8 @@ SWEP.SpeedMultMelee = 1
 SWEP.SpeedMultCrouch = 1
 SWEP.SpeedMultBlindFire = 1
 
-SWEP.AimDownSightsTime = 0.11
-SWEP.SprintToFireTime = 0.14
+SWEP.AimDownSightsTime = 0.35
+SWEP.SprintToFireTime = 0.35
 
 SWEP.RPM = 750
 SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.

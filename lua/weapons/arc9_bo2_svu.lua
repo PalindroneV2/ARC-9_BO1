@@ -71,7 +71,7 @@ SWEP.ReloadTime = 1
 SWEP.Crosshair = true
 SWEP.CanBlindFire = false
 
-SWEP.Recoil = 0.7
+SWEP.Recoil = 1
 SWEP.RecoilSide = 0.7
 SWEP.RecoilUp = 1
 
@@ -82,7 +82,7 @@ SWEP.RecoilDissipationRate = 40 -- How much recoil dissipates per second.
 SWEP.RecoilResetTime = 0.01 -- How long the gun must go before the recoil pattern starts to reset.
 
 SWEP.RecoilAutoControl = 0.3
-SWEP.RecoilKick = 0.9
+SWEP.RecoilKick = 1
 
 SWEP.Spread = math.rad(1.05 / 37.5)
 SWEP.SpreadMultShooting = 1.25
@@ -116,6 +116,14 @@ SWEP.SpeedMultBlindFire = 1
 SWEP.AimDownSightsTime = 0.3
 SWEP.SprintToFireTime = 0.3
 
+SWEP.Sway = 0
+SWEP.SwayAddSights = 0.25
+SWEP.HoldBreathTime = 5
+SWEP.RestoreBreathTime = 10
+
+SWEP.FreeAimRadius = 0
+SWEP.FreeAimRadiusMultSights = 0
+
 SWEP.RPM = 600
 SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
@@ -125,13 +133,6 @@ SWEP.Firemodes = {
 }
 SWEP.ARC9WeaponCategory = 5
 SWEP.NPCWeight = 100
-
-SWEP.FreeAimRadius = 0 -- In degrees, how much this gun can free aim in hip fire.
-SWEP.Sway = 0 -- How much the gun sways.
-
-SWEP.FreeAimRadiusMultSights = 0
-
-SWEP.SwayMultSights = 0
 
 SWEP.Ammo = "ar2" -- what ammo type the gun uses
 

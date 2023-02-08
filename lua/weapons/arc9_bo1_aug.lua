@@ -106,19 +106,19 @@ SWEP.VisualRecoilCenter = Vector(0, 0, 0)
 SWEP.VisualRecoilPunch = 0
 SWEP.VisualRecoilMultSights = 0
 
-SWEP.Speed = 0.95
+SWEP.Speed = 0.9
 
 SWEP.ShootWhileSprint = true
 SWEP.ReloadInSights = false
 
-SWEP.SpeedMultSights = 0.8
-SWEP.SpeedMultShooting = 0.75
+SWEP.SpeedMultSights = 0.9
+SWEP.SpeedMultShooting = 0.85
 SWEP.SpeedMultMelee = 1
 SWEP.SpeedMultCrouch = 1
 SWEP.SpeedMultBlindFire = 1
 
-SWEP.AimDownSightsTime = 0.25
-SWEP.SprintToFireTime = 0.25
+SWEP.AimDownSightsTime = 0.2
+SWEP.SprintToFireTime = 0.2
 
 SWEP.RPM = 750
 SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.

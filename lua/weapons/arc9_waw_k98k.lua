@@ -134,9 +134,7 @@ SWEP.NPCWeight = 100
 
 SWEP.FreeAimRadius = 0 -- In degrees, how much this gun can free aim in hip fire.
 SWEP.Sway = 0 -- How much the gun sways.
-
 SWEP.FreeAimRadiusMultSights = 0
-
 SWEP.SwayMultSights = 0
 
 SWEP.Ammo = "ar2" -- what ammo type the gun uses

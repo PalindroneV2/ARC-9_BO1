@@ -239,7 +239,7 @@ SWEP.SprintAng = SWEP.ActiveAng
 SWEP.BipodPos = Vector(-3.735, -1, 1)
 SWEP.BipodAng = Angle(0.02,0,0)
 
-SWEP.CustomizePos = Vector(12.5, 40, 4)
+SWEP.CustomizePos = Vector(19.5, 40, 4)
 SWEP.CustomizeAng = Angle(90, 0, 0)
 
 SWEP.BarrelLength = 0 -- = 25

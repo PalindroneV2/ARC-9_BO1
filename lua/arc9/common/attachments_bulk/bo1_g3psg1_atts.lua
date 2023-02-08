@@ -18,12 +18,12 @@ ATT.Category = {"bo1_g3_barrel"}
 ATT.ActivateElements = {"barrel_hk33", "newbarrel"}
 ATT.ExcludeElements = {}
 
-ATT.RecoilMult = 1.1
-ATT.RecoilUpMult = 1.1
-ATT.RecoilSideMult = 1.1
-ATT.SpreadMult = 1.1
-ATT.SpreadMultHipFire = 1.15
-ATT.SpreadMultShooting = 1.1
+ATT.RecoilMult = 1.2
+ATT.RecoilUpMult = 1.2
+ATT.RecoilSideMult = 1.2
+ATT.SpreadMult = 1.2
+ATT.SpreadMultHipFire = 1.25
+ATT.SpreadMultShooting = 1.2
 ATT.SpeedMult = 1.1
 ATT.SpeedMultShooting = 1.1
 ATT.SpeedMultSights = 1.1
@@ -53,22 +53,22 @@ ATT.Category = {"bo1_g3_barrel"}
 ATT.ActivateElements = {"barrel_hk53", "newbarrel"}
 ATT.ExcludeElements = {}
 
-ATT.RecoilMult = 1.25
-ATT.RecoilUpMult = 1.25
-ATT.RecoilSideMult = 1.25
-ATT.SpreadMult = 1.25
+ATT.RecoilMult = 1.35
+ATT.RecoilUpMult = 1.35
+ATT.RecoilSideMult = 1.35
+ATT.SpreadMult = 1.35
 ATT.SpreadMultHipFire = 1.5
 ATT.SpreadMultShooting = 1.5
-ATT.SpeedMult = 1.3
-ATT.SpeedMultShooting = 1.25
-ATT.SpeedMultSights = 1.25
+ATT.SpeedMult = 1.2
+ATT.SpeedMultShooting = 1.2
+ATT.SpeedMultSights = 1.2
 ATT.SprintToFireTimeMult = 0.75
 
 ATT.AimDownSightsTimeMult = 0.75
-ATT.RangeMaxMult = 0.7
-ATT.RangeMinMult = 0.7
-ATT.PenetrationMult = 0.7
-ATT.PhysBulletMuzzleVelocityMult = 0.7
+ATT.RangeMaxMult = 0.75
+ATT.RangeMinMult = 0.75
+ATT.PenetrationMult = 0.75
+ATT.PhysBulletMuzzleVelocityMult = 0.75
 
 ARC9.LoadAttachment(ATT, "bo1_g3_barrel_hk53")
 
@@ -108,6 +108,9 @@ ATT.SprintToFireTimeMult = 1.25
 ATT.DamageMaxAdd = 5
 ATT.DamageMinAdd = 15
 ATT.RPMAdd = -200
+
+ATT.Sway = 0
+ATT.SwayAddSights = 0.25
 
 ATT.AimDownSightsTimeMult = 1.1
 ATT.RangeMaxMult = 1.25
@@ -176,14 +179,14 @@ ATT.DamageMax = 30
 ATT.DamageMin = 20
 ATT.RPMAdd = 150
 
-ATT.RecoilMult = 0.35
-ATT.RecoilUpMult = 0.35
-ATT.RecoilSideMult = 0.35
-ATT.RecoilKickMult = 0.35
+ATT.RecoilMult = 0.75
+ATT.RecoilUpMult = 0.75
+ATT.RecoilSideMult = 0.75
+ATT.RecoilKickMult = 0.75
 
-ATT.RangeMaxMult = 0.75
-ATT.RangeMinMult = 0.75
-ATT.PenetrationMult = 0.75
+ATT.RangeMaxMult = 0.8
+ATT.RangeMinMult = 0.8
+ATT.PenetrationMult = 0.8
 ATT.PhysBulletMuzzleVelocity = 900 * 39.37
 
 ATT.ShootSound = "ARC9_BO1.AUG_Fire"

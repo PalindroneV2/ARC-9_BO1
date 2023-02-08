@@ -188,7 +188,7 @@ SWEP.IronSights = {
 }
 
 SWEP.SightMidPoint = { -- Where the gun should be at the middle of it's irons
-    Pos = Vector(-12525, -0.5, 0.25),
+    Pos = Vector(-1.2525, -0.5, 0.25),
     Ang = Angle(0.0125, 0.05, -2.5),
 }
 
@@ -223,8 +223,9 @@ SWEP.SprintAng = SWEP.ActiveAng
 SWEP.BipodPos = Vector(-2.335, 1.5, -1.5)
 SWEP.BipodAng = Angle(0.025, 0.1, 0)
 
-SWEP.CustomizePos = Vector(12.5, 40, 4)
+SWEP.CustomizePos = Vector(19, 40, 4)
 SWEP.CustomizeAng = Angle(90, 0, 0)
+SWEP.CustomizeSnapshotPos = Vector(0, 5, 0)
 
 SWEP.BarrelLength = 0 -- = 25
 

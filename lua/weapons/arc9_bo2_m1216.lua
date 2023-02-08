@@ -132,9 +132,9 @@ SWEP.Firemodes = {
         Mode = -1,
     },
 }
-SWEP.ManualActionChamber = 4 -- How many shots we go between needing to cycle again.
 SWEP.ManualAction = true -- Pump/bolt action. Play the "cycle" animation after firing, when the trigger is released.
 SWEP.ManualActionNoLastCycle = true -- Do not cycle on the last shot.
+SWEP.ManualActionChamber = 4 -- How many shots we go between needing to cycle again.
 SWEP.CycleTime = 0.75
 
 SWEP.ARC9WeaponCategory = 2
@@ -186,7 +186,7 @@ SWEP.IronSights = {
 }
 
 SWEP.SightMidPoint = { -- Where the gun should be at the middle of it's irons
-    Pos = Vector(-1.5, -3.25, 0),
+    Pos = Vector(-1.5, -3.5, 0),
     Ang = Angle(0.0125, 0.01, -2.5),
 }
 
@@ -197,7 +197,7 @@ SWEP.HoldTypeSights = "ar2"
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SHOTGUN
 SWEP.NonTPIKAnimReload = ACT_HL2MP_GESTURE_RELOAD_MAGIC
 
-SWEP.ActivePos = Vector(0, -1.5, -1)
+SWEP.ActivePos = Vector(0, -3, -1)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
 SWEP.MovingPos = SWEP.ActivePos

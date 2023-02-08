@@ -69,17 +69,17 @@ SWEP.ReloadTime = 1
 SWEP.Crosshair = true
 SWEP.CanBlindFire = false
 
-SWEP.Recoil = 0.5
-SWEP.RecoilSide = 0.3
-SWEP.RecoilUp = 0.65
+SWEP.Recoil = 1
+SWEP.RecoilSide = 1
+SWEP.RecoilUp = 1
 
-SWEP.RecoilRandomUp = 0.6
-SWEP.RecoilRandomSide = 0.3
+SWEP.RecoilRandomUp = 0.3
+SWEP.RecoilRandomSide = 0.6
 
 SWEP.RecoilDissipationRate = 40 -- How much recoil dissipates per second.
 SWEP.RecoilResetTime = 0.01 -- How long the gun must go before the recoil pattern starts to reset.
 
-SWEP.RecoilAutoControl = 0.25
+SWEP.RecoilAutoControl = 0.5
 SWEP.RecoilKick = 1
 
 SWEP.Spread = math.rad(1.15 / 37.5)
@@ -100,7 +100,7 @@ SWEP.VisualRecoilCenter = Vector(0, 0, 0)
 SWEP.VisualRecoilPunch = 0
 SWEP.VisualRecoilMultSights = 0
 
-SWEP.Speed = 0.95
+SWEP.Speed = 0.9
 
 SWEP.ShootWhileSprint = true
 SWEP.ReloadInSights = false
@@ -111,8 +111,13 @@ SWEP.SpeedMultMelee = 1
 SWEP.SpeedMultCrouch = 1
 SWEP.SpeedMultBlindFire = 1
 
-SWEP.AimDownSightsTime = 0.3
-SWEP.SprintToFireTime = 0.3
+SWEP.AimDownSightsTime = 0.25
+SWEP.SprintToFireTime = 0.25
+
+SWEP.Sway = 0
+SWEP.SwayAddSights = 0
+SWEP.HoldBreathTime = 5
+SWEP.RestoreBreathTime = 10
 
 SWEP.RPM = 600
 SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
@@ -128,13 +133,6 @@ SWEP.Firemodes = {
 }
 SWEP.ARC9WeaponCategory = 4
 SWEP.NPCWeight = 100
-
-SWEP.FreeAimRadius = 0 -- In degrees, how much this gun can free aim in hip fire.
-SWEP.Sway = 0 -- How much the gun sways.
-
-SWEP.FreeAimRadiusMultSights = 0
-
-SWEP.SwayMultSights = 0
 
 SWEP.Ammo = "ar2" -- what ammo type the gun uses
 
@@ -370,10 +368,6 @@ SWEP.HookP_NameChange = function(self, name)
 
     local gunname = "HK G3"
 
-    if attached["bo1_pap"] then
-        gunname = "G115 Perforator"
-    end
-
     local len = "3"
     local cal = "1"
     if attached["556mag"] then
@@ -381,6 +375,15 @@ SWEP.HookP_NameChange = function(self, name)
     end
     if attached["barrel_hk33"] then
         len = "3"
+        if attached["stock_uh"] then
+            gunname = gunname .. "SG/1"
+        end
+        if attached["stock_h"] then
+            gunname = gunname .. "A2"
+        end
+        if attached["stock_l"] or attached["stock_m"] then
+            gunname = gunname .. "A3"
+        end
     end
     if attached["barrel_hk53"] then
         len = "5"
@@ -388,10 +391,25 @@ SWEP.HookP_NameChange = function(self, name)
     gunname = "HK" .. len .. cal
     if gunname == "HK31" then -- len == "3" and cal == "1"
         gunname = "HK G3"
+        if attached["stock_uh"] then
+            gunname = gunname .. "SG/1"
+        end
+        if attached["stock_h"] then
+            gunname = gunname .. "A3"
+        end
+        if attached["stock_l"] or attached["stock_m"] then
+            gunname = gunname .. "A4"
+        end
     end
-
+    if attached["barrel_hk33"] and attached["hg_hk21"] and attached["stock_h"] and attached["556mag"] then gunname = "R-91 Assault Rifle" end
     if attached["barrel_psg1"] and cal != "3" then
         gunname = "HK PSG1"
+    end
+
+    if attached["bo1_pap"] then
+        gunname = "G115 Perforator"
+        if (len == "5") and (cal == "1") then gunname = "Flashbang Dispenser" end
+        if attached["barrel_psg1"] then gunname = "PSG-115 Perforator" end
     end
 
     return gunname
