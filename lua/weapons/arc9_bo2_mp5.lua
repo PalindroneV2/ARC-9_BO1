@@ -74,7 +74,7 @@ SWEP.ReloadTime = 1
 SWEP.Crosshair = true
 SWEP.CanBlindFire = false
 
-SWEP.Recoil = 0.45
+SWEP.Recoil = 0.6
 SWEP.RecoilSide = 0.5
 SWEP.RecoilUp = 0.7
 
@@ -172,8 +172,8 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(-3.19, -1, 1),
-    Ang = Angle(0.025, 0, 0),
+    Pos = Vector(-3.2, -3, 1.1),
+    Ang = Angle(0, -0.2, 0),
     Magnification = 1.1,
     AssociatedSlot = 9,
     CrosshairInSights = false,
@@ -181,8 +181,8 @@ SWEP.IronSights = {
 }
 
 SWEP.SightMidPoint = { -- Where the gun should be at the middle of it's irons
-    Pos = Vector(-1.6, -0.5, 0),
-    Ang = Angle(0.0125, 0, -2.5),
+    Pos = Vector(-1.6, -1.5, 0),
+    Ang = Angle(0, 0, -2.5),
 }
 
 SWEP.HoldTypeHolstered = "passive"
@@ -271,7 +271,7 @@ SWEP.AttachmentElements = {
             {6,1},
         },
         IronSights = {
-            Pos = Vector(-3.175, -1, 0.85),
+            Pos = Vector(-3.175, -3, 0.85),
             Ang = Angle(0.025, 0.1, 0),
             Magnification = 1.1,
             ViewModelFOV = 60,

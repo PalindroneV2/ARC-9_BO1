@@ -39,8 +39,6 @@ SWEP.WorldModelOffset = {
 }
 SWEP.ViewModelFOVBase = 75
 
-SWEP.DefaultBodygroups = "00000000000000"
-
 SWEP.DefaultSkin = 6
 
 SWEP.DamageMax = 32
@@ -168,9 +166,10 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(-3.045, -1, 1.5),
-    Ang = Angle(0.1, 1.35, 0),
+    Pos = Vector(-3.15, -1, 1.65),
+    Ang = Angle(0.025, 1, 0),
     Magnification = 1.1,
+    ViewModelFOV = 60,
     --AssociatedSlot = 9,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
@@ -219,7 +218,27 @@ SWEP.BarrelLength = 0 -- = 9
 
 SWEP.ExtraSightDist = 15
 
+SWEP.DefaultBodygroups = "01000000000000"
+
 SWEP.AttachmentElements = {
+    ["asp"] = {
+        Bodygroups = {{1,0},},
+        IronSights = {
+            Pos = Vector(-3.15, -1, 1.825),
+            Ang = Angle(0, 0, 0),
+            Magnification = 1.1,
+            ViewModelFOV = 60,
+        },
+    },
+    ["hush"] = {
+        Bodygroups = {{1,2},},
+        IronSights = {
+            Pos = Vector(-3.065, -1, 1.5),
+            Ang = Angle(0.325, 1, 0),
+            Magnification = 1.1,
+            ViewModelFOV = 60,
+        },
+    },
 }
 
 SWEP.Hook_ModifyBodygroups = function(self, data)
@@ -227,20 +246,6 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local vm = data.model
     local attached = data.elements
     local camo = 4
-    local newpos = Vector(-3.15, -1, 1.5) -- M39
-    local newang = Angle(0.05, 1.35, 0) -- M39
-
-    vm:SetBodygroup(1,1)
-    if attached["asp"] then
-        vm:SetBodygroup(1,0)
-        newpos = Vector(-3.15, -1, 1.825)
-        newang = Angle(0, 0, 0)
-    end
-    if attached["hush"] then
-        vm:SetBodygroup(1,2)
-        newpos = Vector(-3.065, -1, 1.5)
-        newang = Angle(0.35, 0.9, 0)
-    end
 
     if attached["asp_grip"] then
         camo = 0
