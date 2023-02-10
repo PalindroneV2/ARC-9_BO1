@@ -184,7 +184,7 @@ SWEP.IronSights = {
 }
 
 SWEP.SightMidPoint = { -- Where the gun should be at the middle of it's irons
-    Pos = Vector(-1.5, -1.5, 0),
+    Pos = Vector(-1.5, -3, 0),
     Ang = Angle(0.015, 0, -2.5),
 }
 
@@ -195,7 +195,7 @@ SWEP.HoldTypeSights = "smg"
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SMG1
 SWEP.NonTPIKAnimReload = ACT_HL2MP_GESTURE_RELOAD_SMG1
 
-SWEP.ActivePos = Vector(0, 0, -1)
+SWEP.ActivePos = Vector(0, -3, -1)
 SWEP.ActiveAng = Angle(0, 0, -5)
 
 SWEP.MovingPos = SWEP.ActivePos

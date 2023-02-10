@@ -1,13 +1,8 @@
 "VertexlitGeneric"
 {
 	"$basetexture" "models/weapons/arc9/bo2/bo2_ballista/ballista"
-	
 	"$bumpmap" "models/weapons/arc9/bo2/bo2_ballista/ballista_n"
-
-	$detail "models/weapons/arc9/bo1/tan"
-	$detailblendmode "0"
-	"$detailblendfactor" "1"
-
+	$normalmapalphaenvmapmask 1
 	
 	//"$color2" "[ .4 .4 .4 ]"
 	"$blendtintbybasealpha" "1"

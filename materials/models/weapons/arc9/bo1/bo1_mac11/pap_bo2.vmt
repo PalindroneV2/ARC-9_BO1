@@ -12,8 +12,8 @@ VertexlitGeneric
 	"$phongalbedotint" "2"
 	"$phongtint" "[ 0.5 0.5 2 ]"
 	"$PhongFresnelRanges" "[ 2 5 4 ]"
-	$phongalbedotint "1"
-	
+	// $phongwarptexture "models/weapons/arc9/pap/victis/victis_warp"
+
 	$envmap "env_cubemap"
 	$envmaptint "[.1 .075 .025]"
 	$envmapfresnel "[.2 .5 .4]"

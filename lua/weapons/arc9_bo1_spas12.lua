@@ -441,6 +441,10 @@ SWEP.Animations = {
                 rhik = 1
             },
         },
+        EventTable = {
+            {s = "ARC9_BO1.SPAS_Back", t = 0.15},
+            {s = "ARC9_BO1.SPAS_Fwd", t = 0.4}
+        },
     },
     ["fire"] = {
         Source = {

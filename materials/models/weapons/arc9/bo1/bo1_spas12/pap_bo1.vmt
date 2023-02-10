@@ -2,7 +2,7 @@ VertexlitGeneric
 {
 	$basetexture	"models/weapons/arc9/pap/pap_circuit_c"
 	"$basetexturetransform" "center .5 .5 scale 2 2 rotate 0 translate 0 0"
-	$bumpmap	"models/weapons/arc9/waw/normalmap"
+	$bumpmap	"models/weapons/arc9/pap/pap_circuit_n"
 	"$bumptransform" "center .5 .5 scale 2 2 rotate 0 translate 0 0"
 	"$phongexponenttexture" "models/weapons/arc9/pap/pap_bo1_env"
 	"$envmapmask" "models/weapons/arc9/pap/pap_bo1_env"
@@ -22,4 +22,5 @@ VertexlitGeneric
 	$envmap 	env_cubemap
 	$envmaptint   "[0.01 0.01 0.01]"
 	$envmapfresnel "0.1"
+	"$nocull" "1"
 }

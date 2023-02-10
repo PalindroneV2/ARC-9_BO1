@@ -329,6 +329,7 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"bo1_stock_h"},
         Installed = "bo1_stock_heavy",
+        Integral = true,
     },
     {
         PrintName = "Magazine",

@@ -229,17 +229,12 @@ SWEP.AttachmentElements = {
     },
     ["mount"] = {
         Bodygroups = {
-            {2,2}
+            {2,1}
         },
     },
     ["stock_m"] = {
         Bodygroups = {
             {4,1}
-        },
-    },
-    ["stock_h"] = {
-        Bodygroups = {
-            {4,2}
         },
     },
 }
@@ -261,7 +256,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         camo = 1
     end
     if attached["bo1_pap"] then
-        camo = camo + 3
+        camo = camo + 2
     end
     vm:SetSkin(camo)
 

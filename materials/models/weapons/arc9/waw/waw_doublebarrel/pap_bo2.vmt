@@ -1,13 +1,24 @@
 VertexlitGeneric
 {
-	$basetexture	"models/weapons/arc9/pap/pap_bo3"
-	$bumpmap	"models/weapons/arc9/pap/pap_bo3_n"
-	//$detail	"models/weapons/arc9/pap/pap_bo3"
+	"$basetexture" "models/weapons/arc9/bo1/camos/black_detail"
+	"$basetexturetransform" "center .5 .5 scale 5 5 rotate 0 translate 0 0"
+	$bumpmap	"models/weapons/arc9/pap/pap_wp115_n"
+	"$bumptransform" "center .5 .5 scale 5 5 rotate 0 translate 0 0"
+    
+	$detail	"models/weapons/arc9/pap/pap_wp115_1"
+	$detailscale 5
+	$detailblendmode 2
+	"$selfillum" "1"
+	$selfillummask "models/weapons/arc9/pap/pap_wp115"
 	
-	$phong                      		1
-	$phongboost                         "5"
-	$phongfresnelranges         "[0.5 2.5 2.5]"
-	$phongalbedotint             "1"
-	$normalmapalphaphongmask    	1
-	//$detailblendmode	3
+	Proxies
+	{
+		TextureScroll
+		{
+			texturescrollvar $detailtexturetransform
+			texturescrollrate .01
+			texturescrollangle 30
+		}
+	}
+	"$nocull" "1"	
 }
