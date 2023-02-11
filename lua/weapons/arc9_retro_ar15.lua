@@ -312,7 +312,7 @@ SWEP.StandardPresets = {
     "[H- Ranger]XQAAAQAzAgAAAAAAAAA9iIIiM7hMNz0dhIkbkvJZHs6N4cERAS1EIUwLaB+vDp8XCL0VyBP1c786RpKnotsRDta8QJXNzP58z/MSJlIAy8NWdhCydvVMcgYtb3L1S+3OLs2Zc12CW/ZR5lbJ4IIsVVUNNvBI1Cy3/Mj5YHCA70yq47ZLW3Ez1ANZJaVLAFuvgPmdTS3vpQaZbUO4fcfnKQ1S9GXmN2tPsc3WSHxff5qnoNW7CyfbwvegN7I8pwGP3pjPMOdZX3eRLen8ouIJQnCwH80GhnO1BVv0apgX5Q==",
     "[I- Delta]XQAAAQD/AQAAAAAAAAA9iIIiM7hMNz0dhIkbkvJZHs6N4cERAS1EIUwLaB+vDp8XCL0VyBP1c785T278jfAs/SblA5daRFdlaFrx4ILwkKrzza1UejrxUVgZcXivyuYi81sybqQwqg1F8SCtMo3ngJ4D3GxNAFyyDcp0JBZGwKPbUiCaXlqlwWCTDt5WAdqjmhHfF/XG508z3Mupl+ZN1hZDpgUc0qdEsbKFp+kMbWZBSFHS84VjQ0j2Nki3jw0qVV+0mvgw7tktuznuKIg2AA==",
     "[J- Bravo]XQAAAQAmAgAAAAAAAAA9iIIiM7hMNz0dhIkbkvJZHs6N4cERAS1EIUwLaB+vDp8XCL0VyBP1c786RpKeImE3pqqAdaHCBGeqBO07MrJqW1dI3FkrF3xrkZwh9hGrY6pZ3Uhk0EBt3IjlaOSTzIP3Q6yEDOq1pxTsIrEtkhdvUa8eNRROicf7B2woMqrolmmHAK1INpH9IZp8/00PrdlJDcScXMAebeF4BgcRPT3w8ZUIvqne4DQukG5G4LMYvtxHUlbrO99nYj9ciLKqsldyaN/ExNXjmUGhEgWa",
-    "[K- Vaquero]XQAAAQBTAgAAAAAAAAA9iIIiM7hMNz0dhIkbkvJZHs6N4cERAS1EIUwLaB+vDp8XCL0VyBP1c786RpKeImE3pqqAdaHCBGeqBO07MrJqW1dI3FkrF3xrkZwh9hGrY6pZ3Uhk0EBt3IjlaOSTzIP3Q6yEDOPGcckGNnasDU2Cm6P7pwD9cWjUT/cpr2awH7++i0gBn3VaXpM+y7DCAJdEunF/4ffEeHmdiWy+u+pKObSovXzllCpn6T1nW5XSOHXYiLusbF9tmi6xzuBu/ZT9eSgD5hrAox1lMupCTq9Cl5Z4B92iAA==",
+    "[K- Vaquero]XQAAAQAnAgAAAAAAAAA9iIIiM7hMNz0dhIkbkvJZHs6N4cERAS1EIUwLaB+vDp8XCL0VyBP1c786RpKeImE3pqqAdaHCBGeqBO07MrJqW1dI3FkrF3xrlvhx0ZcyitXkDj3zN1FHkYdmNqWloihXjHW9A8DdPgjHq0E7xFuuDirkg6vnM+Ms2yL/7U90f6dVgoZ/wSnAfTC8M7CcqLQ880mlBqfM9kLI8KREpQ3j086X5v7qyNA2oSC8cLz4OjqZORBpVdlUJByPbXE7b8zRztdIi5KXfTrISMFFb2HrVuyoJpvafA==",
     "[L- My Little Friend]XQAAAQBVAQAAAAAAAAA9iIIiM7hMNz0dhIkbkvLjTdErcFqoUCHbZojaPfcTkj3fjKehjdIOVIZDiA9j6hAHtIkFF9mmvuZ/ps6S9y5RgcWy7YEFyMUg+QkeHhQ9AbZx0Bj4yJnpU5zdmsaDsi+9bRPOJcanY0b/oO7Z/AHhda+DH4XPoa8ormMUAdU36gfa1X8L4b96VF/0cNX4s1D2IwA=",
     "[M- HECU]XQAAAQCgAQAAAAAAAAA9iIIiM7hMNz0dhIkbkvJZHs6N4cERAS1EIUwLaB+vDp8XCL30711xZT7xm2o2gbH+qJxZwTXZOPAsSZpNr/SP1fX8cuf/cxv8JsjJIRZKbIZaZ+UFdauwIORHueQcgh38RqmwIxICdM5KpArJYhEek0W9hi1W7ivbS7gk0WU8wrFXT51FGjhSb91tGEP2VsY3yIIet8sBMSGVz4l+7cJ2AQA=",
     "[N- SOPMOD]XQAAAQA+AgAAAAAAAAA9iIIiM7hMNz0dhIkbkvJZHs6N4cERAS1EIUwLaB+vDp8XCL0VyBP1c786BrvuOw3g56kujvgRv1Ta7qdRsNGN4/CsGx5IF1icsfmAw4fJea2x9NEj9G22nfFipswM0jCfOye9DCbkwwJAisE/Q0KHTz1Kf/USqNzV1B/ltjhrdP54rBpKQnZS6Km8iDJrH97wYfKLHDc4z4hSsN9vTdNWBAwIfJT0qlUxLTVujTS+w4fw5oicwh3mK94+SCWyx4wN6LNX0yndd3iQ+nPTOx5bnh7bX8eXeQ73/E+hM/CIuh7aNKUA",
@@ -988,19 +988,18 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
         if self:GetUBGL() then
             suffix = "_glsetup"
         end
-    elseif attached["bo1_ubgl_mk"] then
+    end
+    if attached["bo1_mk"] then
         suffix = "_mk"
         if self:GetUBGL() then
             suffix = "_mksetup"
         end
-    else
-        suffix = ""
     end
 
-    if anim == "enter_ubgl" and attached["bo1_ubgl_mk"] then
+    if anim == "enter_ubgl" and attached["bo1_mk"] then
         return "enter_ubgl_mksetup"
     end
-    if anim == "exit_ubgl" and attached["bo1_ubgl_mk"] then
+    if anim == "exit_ubgl" and attached["bo1_mk"] then
         return "exit_ubgl_mksetup"
     end
 
