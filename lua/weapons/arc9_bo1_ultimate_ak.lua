@@ -460,32 +460,27 @@ SWEP.AttachmentElements = {
     },
     ["ak74"] = {
         Bodygroups = {
-            {0,2},
             {1,2},
         },
     },
     ["rpk"] = {
         Bodygroups = {
-            {0,3},
             {1,4},
         },
     },
     ["rpkm"] = {
         Bodygroups = {
-            {0,4},
             {1,4},
         },
     },
     ["ak12"] = {
         Bodygroups = {
-            {0,6},
             {1,2},
             {2,3},
         },
     },
     ["rpk12"] = {
         Bodygroups = {
-            {0,7},
             {1,4},
             {2,3},
         },
@@ -567,6 +562,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local front = 0
     local hand = 0
     local grip = 0
+    local aktype = 0
     if attached["barrel_krinkov"] then
         barrel = 1
         irons = 1
@@ -581,7 +577,6 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         front = 6
         hand = 0
     elseif attached["barrel_asval"] then
-        vm:SetBodygroup(0,5)
         barrel = 4
         irons = 1
         front = 9
@@ -601,7 +596,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         vm:SetBodygroup(1, 6)
     end
 
-    if (attached["ak74"] or attached["ak12"]) and barrel == 0 then
+    if (attached["ak74"] or attached["ak12"] or attached["rpk12"] or attached["rpk74"]) and barrel == 0 then
         vm:SetBodygroup(9, 1)
         if attached["cod_muzzle"] then
             vm:SetBodygroup(9, 0)
@@ -634,15 +629,25 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         grip = 3
     end
     if attached["ak47og"] then
-        vm:SetBodygroup(0,1)
+        aktype = 1
+    end
+    if attached["ak74"] then
+        aktype = 2
     end
     if attached["rpk74"] then
-        vm:SetBodygroup(0,3)
+        aktype = 3
     end
     if attached["rpkm"] then
-        vm:SetBodygroup(0,4)
+        aktype = 4
+    end
+    if attached["barrel_asval"] then
+        aktype = 5
     end
     if attached["ak12"] or attached["rpk12"] then
+        aktype = 6
+        if attached["rpk12"] then
+            aktype = 7
+        end
         irons = 3
         hand = 10
         grip = 2
@@ -653,6 +658,13 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
             hand = 11
         end
     end
+
+    vm:SetBodygroup(0, aktype)
+    vm:SetBodygroup(2, irons)
+    vm:SetBodygroup(3, front)
+    vm:SetBodygroup(4, barrel)
+    vm:SetBodygroup(5, hand)
+    vm:SetBodygroup(6, grip)
 
     local camo = 0
     if attached["bo1_ultimate_ak_gold"] then
@@ -665,12 +677,6 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         camo = camo + 2
     end
     vm:SetSkin(camo)
-
-    vm:SetBodygroup(2, irons)
-    vm:SetBodygroup(3, front)
-    vm:SetBodygroup(4, barrel)
-    vm:SetBodygroup(5, hand)
-    vm:SetBodygroup(6, grip)
 end
 
 SWEP.HookP_NameChange = function(self, name)

@@ -234,6 +234,16 @@ SWEP.AttachmentElements = {
             },
         },
     },
+    ["bo1_pap"] = {
+        Firemodes = {
+            {
+                Mode = -1,
+            },
+            {
+                Mode = 1,
+            },
+        }
+    },
 }
 
 SWEP.Hook_ModifyBodygroups = function(self, data)
