@@ -1,26 +1,20 @@
 "VertexlitGeneric"
 {
+	$basetexture	"models/weapons/arc9/bo1/bo1_car15/car15"
+	$bumpmap	"models/weapons/arc9/bo1/bo1_car15/car15_n"
+	$phongexponenttexture "models/weapons/arc9/bo1/bo1_car15/car15_s"
+	$envmapmask "models/weapons/arc9/bo1/bo1_car15/car15_s"
+	$normalmapalphaenvmapmask 1
 
-	"$basetexture" "models/weapons/arc9/cde/kali_ar15/Parts_Carbine_C"
-	"$bumpmap" "models/weapons/arc9/cde/kali_ar15/Parts_Carbine_N"
-	"$halflambert" "1"				
-	"$nocull" 1
-	"$phongexponenttexture" "models/weapons/arc9/cde/kali_ar15/Parts_Carbine_Exp"
-	
-	"$blendtintbybasealpha" "1"
 	"$phong" "1"
 	"$phongboost" "1"
 	"$phongalbedotint" "2"
 	"$PhongFresnelRanges" "[ 2 5 4 ]"
+
 	"$envmap" "env_cubemap"
-//	"$basemapalphaenvmapmask" "1"
 	$envmapfresnel "0.01"
 	$envmaptint "[ .01 .01 .01 ]"
 
-	
-
+	"$halflambert" "1"
+	"$nocull" 1
 }
-
-
-
-
