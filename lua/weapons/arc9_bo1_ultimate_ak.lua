@@ -465,12 +465,12 @@ SWEP.AttachmentElements = {
     },
     ["rpk"] = {
         Bodygroups = {
-            {1,4},
+            {1,5},
         },
     },
     ["rpkm"] = {
         Bodygroups = {
-            {1,4},
+            {1,5},
         },
     },
     ["ak12"] = {
@@ -492,7 +492,7 @@ SWEP.AttachmentElements = {
     },
     ["drum_mag"] = {
         Bodygroups = {
-            {1,6},
+            {1,7},
         },
     },
     ["bo1_gp25"] = {
@@ -558,6 +558,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local attached = data.elements
 
     local barrel = 0
+    local magbg = 0
     local irons = 0
     local front = 0
     local hand = 0
@@ -588,12 +589,6 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     end
     if attached["bo1_irons_alt"] then
         irons = 2
-    end
-    if attached["bo1_ultimate_ak_mag_45_dual"] then
-        vm:SetBodygroup(1, 5)
-    end
-    if attached["bo1_ultimate_ak_mag_drum"] then
-        vm:SetBodygroup(1, 6)
     end
 
     if (attached["ak74"] or attached["ak12"] or attached["rpk12"] or attached["rpk74"]) and barrel == 0 then
@@ -633,20 +628,25 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     end
     if attached["ak74"] then
         aktype = 2
+        magbg = 2
     end
     if attached["rpk74"] then
         aktype = 3
+        magbg = 7
     end
     if attached["rpkm"] then
         aktype = 4
+        magbg = 5
     end
     if attached["barrel_asval"] then
         aktype = 5
     end
     if attached["ak12"] or attached["rpk12"] then
         aktype = 6
+        magbg = 2
         if attached["rpk12"] then
             aktype = 7
+            magbg = 7
         end
         irons = 3
         hand = 10
@@ -658,8 +658,21 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
             hand = 11
         end
     end
+    if attached["ext_mag"] then
+        magbg = 3
+        if attached["ak74"] or attached["ak12"] then
+            magbg = 4
+        end
+    end
+    if attached["45_mag_dual"] then
+        magbg = magbg + 1
+    end
+    if attached["drum_mag"] then
+        magbg = 9
+    end
 
     vm:SetBodygroup(0, aktype)
+    vm:SetBodygroup(1, magbg)
     vm:SetBodygroup(2, irons)
     vm:SetBodygroup(3, front)
     vm:SetBodygroup(4, barrel)
@@ -802,18 +815,18 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
     end
 
     if anim == "reload" then
-        if attached["bo1_ultimate_ak_mag_drum"] then
+        if attached["drum_mag"] then
             return "drum"
         end
-        if attached["bo1_ultimate_ak_mag_45_dual"] then
+        if attached["45_mag_dual"] then
             return "fast_rpk"
         end
     end
     if anim == "reload_empty" then
-        if attached["bo1_ultimate_ak_mag_drum"] then
+        if attached["drum_mag"] then
             return "drum_empty"
         end
-        if attached["bo1_ultimate_ak_mag_45_dual"] then
+        if attached["45_mag_dual"] then
             return "fast_empty_rpk"
         end
     end
@@ -888,7 +901,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Stock",
-        DefaultName = "None",
+        DefaultCompactName = "No Stock",
         Bone = "j_gun",
         Pos = Vector(-5, 0, 1),
         Ang = Angle(0, 0, 0),
@@ -897,12 +910,12 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Magazine",
-        DefaultName = "7.62mm 30",
+        DefaultCompactName = "30rnd",
         Bone = "tag_clip",
         Pos = Vector(0, 0, -2),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ultimate_ak_mag"},
-        ExcludeElements = {"bo1_ultimate_ak_receiver"}
+        ExcludeElements = {"rpk"}
     },
     {
         PrintName = "Ammunition",

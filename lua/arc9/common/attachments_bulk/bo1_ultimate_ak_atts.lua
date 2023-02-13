@@ -345,7 +345,7 @@ ARC9.LoadAttachment(ATT, "bo1_ultimate_ak_furniture_modern")
 
 ATT = {}
 
-ATT.PrintName = [[RPK 45rnd Mag]]
+ATT.PrintName = [[Jungle-Taped RPK 45rnd Mag]]
 ATT.CompactName = [[DUAL]]
 ATT.Icon = Material("entities/bo1_atts/ammo/ext_mag.png")
 ATT.Description = [[Two taped-together 45 round magazines used by RPK-74s in mobile light machine gun roles.
@@ -356,13 +356,13 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
 
-ATT.Category = {"bo1_ultimate_ak_mag_74"}
+ATT.Category = {"bo1_ultimate_ak_mag_rpk"}
 ATT.ActivateElements = {"45_mag_dual"}
 ATT.ReloadTimeMult = 0.75
 ATT.AimDownSightsTimeMult = 1.15
 ATT.SprintToFireTimeMult = 1.15
 
-ARC9.LoadAttachment(ATT, "bo1_ultimate_ak_mag_45_dual")
+ARC9.LoadAttachment(ATT, "bo1_ultimate_ak_mag_rpk_dual")
 
 ATT = {}
 
@@ -377,17 +377,17 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
 
-ATT.Category = {"bo1_ultimate_ak_mag_74"}
+ATT.Category = {"bo1_ultimate_ak_mag_rpk"}
 ATT.ActivateElements = {"drum_mag"}
 ATT.ClipSize = 80
 ATT.AimDownSightsTimeMult = 1.25
 ATT.SprintToFireTimeMult = 1.25
 
-ARC9.LoadAttachment(ATT, "bo1_ultimate_ak_mag_drum")
+ARC9.LoadAttachment(ATT, "bo1_ultimate_ak_mag_rpk_drum")
 
 ATT = {}
 
-ATT.PrintName = [[7.62x39mm M43 45rnd Mag]]
+ATT.PrintName = [[45rnd Extended Magazine]]
 ATT.CompactName = [[45 RND]]
 ATT.Icon = Material("entities/bo1_atts/ammo/ext_mag.png")
 ATT.Description = [[Modern polymer magazine that holds 45 rounds.
@@ -401,9 +401,9 @@ ATT.Free = false
 ATT.Category = {"bo1_ultimate_ak_mag"}
 ATT.ActivateElements = {"ext_mag"}
 ATT.ClipSize = 45
-ATT.ReloadTimeMult = 1.125
-ATT.AimDownSightsTimeMult = 1.05
-ATT.SprintToFireTimeMult = 1.05
+ATT.ReloadTimeMult = 1.2
+ATT.AimDownSightsTimeMult = 1.125
+ATT.SprintToFireTimeMult = 1.125
 
 ARC9.LoadAttachment(ATT, "bo1_ultimate_ak_mag_ext")
 
@@ -514,7 +514,7 @@ ATT.Attachments = {
         Category = {"cod_optic", "cod_rail_riser"},
         InstalledElements = {"ak12mount"}
         -- ExcludeElements = {"nobacksight"},
-    }
+    },
 }
 
 ATT.Trivia = {
@@ -557,7 +557,7 @@ ATT.Attachments = {
     {
         PrintName = "Magazine",
         DefaultCompactName = "45 RND",
-        Category = "bo1_ultimate_ak_mag_74",
+        Category = "bo1_ultimate_ak_mag_rpk",
         Bone = "tag_rpk_clip",
         Pos = Vector(-5, 0, 2),
         Ang = Angle(0, 0, 0),
@@ -605,7 +605,7 @@ ATT.Attachments = {
     {
         PrintName = "Magazine",
         DefaultCompactName = "45 RND",
-        Category = "bo1_ultimate_ak_mag_74",
+        Category = "bo1_ultimate_ak_mag_rpk",
         Bone = "tag_rpk_clip",
         Pos = Vector(-5, 0, 2),
         Ang = Angle(0, 0, 0),
@@ -663,9 +663,20 @@ ATT.MuzzleParticle = "muzzleflash_ak74"
 
 ATT.Attachments = {
     {
+        PrintName = "Optic",
+        DefaultName = "Irons",
+        Bone = "j_gun",
+        Pos = Vector(-2.5, 0, -3.2),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0,0,0),
+        Category = {"cod_optic", "cod_rail_riser"},
+        InstalledElements = {"ak12mount"}
+        -- ExcludeElements = {"nobacksight"},
+    },
+    {
         PrintName = "Magazine",
         DefaultCompactName = "45 RND",
-        Category = "bo1_ultimate_ak_mag_74",
+        Category = "bo1_ultimate_ak_mag_rpk",
         Bone = "tag_rpk_clip",
         Pos = Vector(-5, 0, 2),
         Ang = Angle(0, 0, 0),
