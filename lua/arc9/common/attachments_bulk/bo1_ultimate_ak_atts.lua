@@ -473,6 +473,47 @@ ARC9.LoadAttachment(ATT, "bo1_ultimate_ak_receiver_ak74")
 
 ATT = {}
 
+ATT.PrintName = [[Pseudo AK-15 Receiver 7.62]]
+ATT.CompactName = [[AK-15]]
+ATT.Icon = Material("entities/bo1_atts/barrel/barrel.png")
+ATT.Description = [[Now the government is really running out of money.
+Identical to the base AK-47 receiver in performance. Only cosmetic.]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 3
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
+ATT.Free = false
+
+ATT.Category = {"bo1_ultimate_ak_receiver"}
+ATT.ActivateElements = {"ak12","ak15"}
+
+ATT.Attachments = {
+    {
+        PrintName = "Optic",
+        DefaultName = "Irons",
+        Bone = "j_gun",
+        Pos = Vector(-2.5, 0, -3.2),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0,0,0),
+        Category = {"cod_optic", "cod_rail_riser"},
+        InstalledElements = {"ak12mount"}
+        -- ExcludeElements = {"nobacksight"},
+    },
+}
+
+ATT.Trivia = {
+    Manufacturer = "Izhmash",
+    Calibre = "7.62x39mm",
+    Mechanism = "Gas Piston",
+    Country = "Russia",
+    Year = 2015,
+    Games = [[Ghosts, AW]]
+}
+
+ARC9.LoadAttachment(ATT, "bo1_ultimate_ak_receiver_ak12_hybrid")
+
+ATT = {}
+
 ATT.PrintName = [[Pseudo AK-12 Receiver]]
 ATT.CompactName = [[AK-12]]
 ATT.Icon = Material("entities/bo1_atts/barrel/barrel.png")

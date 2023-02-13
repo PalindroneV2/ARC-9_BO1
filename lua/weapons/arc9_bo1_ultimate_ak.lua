@@ -37,7 +37,7 @@ SWEP.WorldModelOffset = {
 }
 SWEP.ViewModelFOVBase = 75
 
-SWEP.CustomCamoTexture = "models/weapons/arc9/bo1/ak_redwood"
+SWEP.CustomCamoTexture = "models/weapons/arc9/bo1/camos/darkbake"
 SWEP.CustomCamoScale = 1
 SWEP.CustomBlendFactor = 1
 
@@ -615,6 +615,9 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         hand = hand + 2
         if barrel == 2 then hand = 6 end
         grip = 2
+        if magbg == 0 then
+            magbg = 1
+        end
     elseif attached["rpdhand"] then
         hand = hand + 3
         if barrel == 2 then hand = 7 end
@@ -648,6 +651,10 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
             aktype = 7
             magbg = 7
         end
+        if attached["ak15"] then
+            aktype = 8
+            magbg = 1
+        end
         irons = 3
         hand = 10
         grip = 2
@@ -662,6 +669,9 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         magbg = 3
         if attached["ak74"] or attached["ak12"] then
             magbg = 4
+        end
+        if attached["ak15"] then
+            magbg = 3
         end
     end
     if attached["45_mag_dual"] then
@@ -712,6 +722,7 @@ SWEP.HookP_NameChange = function(self, name)
         cal = "-74"
     end
     if attached["ak12"] or attached["rpk12"] then cal = "-12" end
+    if attached["ak15"] then cal = "-15" end
     if attached["barrel_krinkov"] then
         u = "u"
     end
@@ -974,8 +985,9 @@ SWEP.Attachments = {
 
 SWEP.StandardPresets = {
     "[AKS-74u]XQAAAQAxAQAAAAAAAAA9iIIiM7tupQCpjtobRJEkdYYzR6F4P3FJEqy9RUyheUZp1zOtKLbpg01RZUWsivdsVPWjLZFxwYEsO8zw3m0uMO55ITN9vhmlE+VBG5c430Rq8O9peitsaybRdNj8JHbIS2Bj84AAAapez9U7gHNWnVLmJ0KywWtf2kmg1+D3gifRM+zVnGdqU0aXnb6wLMhicw==",
-    "[Modern]XQAAAQBkAQAAAAAAAAA9iIIiM7tuo1AtTygaX+tE5owxGjnImCY2npSaEHAbihOm7vWqDCE4uXCzOHSP3sZlCCizujfBISP+i3vvn2c69G7mxEGNh5vcdI3GCFPJzR7GJXRzVUIOJCKd5LLG7+XBFPq86VWBU04q2LXvS4U4Agely+UTKKPPQ9C9DaipZb1mbGi3QEEuWcywek2rQmwiS4WMgsmSbeYVSh6T",
-    "[RPK-74]XQAAAQB9AQAAAAAAAAA9iIIiM7tupQCpjtobRJEkdYYzR6F4P3FJEqy9RUyheUZp1zOtKLbpg01RZUWsivdsVPWjLa0syyf1fmLHm20GEJBgLFz7nafEVkn3IJns5hQJp4qBYnlyK/vqlNMomjNdQJGJq0sgpAJef7YfL+DY26Wycz752P9gAAir3HsvfzUR+5EVd9XUiOHCGrqxxxmGsqL/wBLJVd2ol9j+W4+Bdd0vPjw/csujGAA=",
+    "[Modern]XQAAAQA4AQAAAAAAAAA9iIIiM7tuo1AtTygaX+tE5owxGjnImCY2npSaEHAbihOm7vWqDCE4uXCzOHSP3sZlCCizujfBISP+i3ftcyEAMNB0yiG+zUvRhsVpe/z54c5yAb++cwcz7mEcWEr03+YTQPaUOKIJwghdLYXDCazJhSkjsXarLXz9H9Tpa0FxoVrr0chb77et1Y14NcRvns7Yn4mL",
+    "[RPK-74]XQAAAQCbAQAAAAAAAAA9iIIiM7tupQCpjtobRJEkdevdtQyXDt2gZ7eB7mIc4XMJKegyvnhNTihJg3a0etGqiqvgl/lQBcL3fbDjHnCq2jxpdECQPZfgozHIRXfOF+icYmvDKnXC2IzKDSstL0XQdLbc+/TyTFHU5BDcNCJzi0GC0IQgbWizWdwk4SZUnWo24immrbv9odw1piq9UipXk/TqtAEYmjLFL/Ukzr2nwaypNHBd2caYAwsQO9+iBRgE",
+    "[RPKM]XQAAAQB9AQAAAAAAAAA9iIIiM7tupQCpjtobRJEkdYYzR6F4P3FJEqy9RUyheUZp1zOtKLbpg01RZUWsivdsVPWjLa0syy9U9GqZ8LmP+q7dbi/IHGgFIVsdt65lGjvaSyhXdk9w2ZQXzi/K84mTbVThEb7Xdn6+XYBjhwVST60bv19b+xyl+RvXzVwjb0DdA7WxNhT2MrS+S24RtazOt9bF9gDO4qC9qGM5Z6tIqoy7kvF8+SQA",
     "[Chinese]XQAAAQAjAQAAAAAAAAA9iIIiM7tupQCpjtobRJEkdevdtSFsYEW0WR7PXlS+8JMBy2yiomGzXKaJCIzfqW4TDPuHlM58exfO53jHmGkL8Ogd2ysWRMV1yAe2z7TJuOs2Y3BZAJP1rvlf3tXsDIwu5e9+UMKpWA6GxlwRfP5EgzrRzuzP6Epa6kjWWXVW+6+rAA==",
     "[Vintorez]XQAAAQB6AQAAAAAAAAA9iIIiM7tupQCpjtobRJEkdZ1fP0HAirxuJaFi++OSkQRS4d7M0DlDU2KQsq5E55bbZFTMSOHmh1B1MTAWaZHHwy0PlDLbXStPNXcKOCsyBKNvP0uns3lCA8q+TPhmIBWpF7+guB5W1X2TwNftbVNwoXbJWZFGolA8izBepNzitqkfV8JfiEOkGa4swNp3o2EsxXYOcg/0DZY3Pvs4MjB2us/3p5OhhUQ/KpFFM2UA",
     "[AK-12]XQAAAQA6AQAAAAAAAAA9iIIiM7tupQCpjtobRJEkdevdtQyXDt2gZ7eB7mIc4XMJKegyvnhNTihJg3a0etGqnAmzznhXOKJQN6xSxLA9M3wcJphYDhO7cjCPXL4pWm8JZIzz7kgwAR16nmfrXjTKGjBpRr0itYp+4e7cNSVtoDAWhmfe0hrzdOnxhcRUJ5lJqGwemf6gMBaFFNFPdj2LH+IA",
