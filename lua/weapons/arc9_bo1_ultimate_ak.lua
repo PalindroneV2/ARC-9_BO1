@@ -796,10 +796,9 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
         if self:GetUBGL() then
             suffix = "_mksetup"
         end
-    elseif attached["rpk"] then
+    end
+    if attached["rpk"] then
         suffix = "_rpk"
-    else
-        suffix = ""
     end
 
     if anim == "enter_ubgl" then
