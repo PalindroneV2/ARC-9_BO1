@@ -207,9 +207,16 @@ SWEP.SprintVerticalOffset = false
 SWEP.SprintPos = SWEP.ActivePos
 SWEP.SprintAng = SWEP.ActiveAng
 
-SWEP.CustomizePos = Vector(15, 27.5, 4.5)
-SWEP.CustomizeAng = Angle(90, 0, 0)
+SWEP.CustomizePos = Vector(15, 27.5, 3.5)
+SWEP.CustomizeAng = Angle(90, 0, -1.5)
 SWEP.CustomizeSnapshotFOV = 75
+SWEP.CustomizeSnapshotPos = Vector(0.5,-5,1)
+SWEP.CustomizePosHook = function(self)
+    local attached = self:GetElements()
+    if attached["extmag"] then
+        return Vector(15, 27.5, 4.5)
+    end
+end
 
 SWEP.BarrelLength = 0 -- = 9
 

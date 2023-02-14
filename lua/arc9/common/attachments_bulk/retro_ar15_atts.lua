@@ -254,7 +254,7 @@ ATT.Attachments = {
         PrintName = "Handguard",
         DefaultCompactName = "CAR-15",
         DefaultIcon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m4.png", "mips smooth"),
-        Category = {"retro_ar15_handguard_carbine", "retro_ar15_handguard_commando", "retro_ar15_handguard_mloks"},
+        Category = {"retro_ar15_handguard_carbine", "retro_ar15_handguard_11","retro_ar15_handguard_commando", "retro_ar15_handguard_mloks"},
         Bone = "j_gun",
         Pos = Vector(0, 0, -2),
         Ang = Angle(0, 0, 0),
@@ -284,7 +284,7 @@ ATT.Attachments = {
         Pos = Vector(-2, 0, 0.35),
         Ang = Angle(0, 0, 0),
         Category = {"cde_m203", "bo1_mk", "cod_rail_underbarrel"},
-        ExcludeElements = {"ar15_ris", "mlok"}
+        ExcludeElements = {"ar15_ris", "mlok","handguard_flamer"}
     },
     {
         PrintName = "Gasblock",
@@ -388,7 +388,7 @@ ATT.Attachments = {
         Pos = Vector(-2, 0, 0.35),
         Ang = Angle(0, 0, 0),
         Category = {"cde_m203", "bo1_mk", "cod_rail_underbarrel"},
-        ExcludeElements = {"ar15_ris", "mlok"}
+        ExcludeElements = {"ar15_ris", "mlok", "handguard_flamer"}
     },
     {
         PrintName = "Gasblock",
@@ -863,6 +863,45 @@ ATT.Attachments = {
 
 ATT = {}
 
+ATT.PrintName = [[Shortened Heatshield Handguard]]
+ATT.CompactName = [[HEAT FT]]
+ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m16.png", "mips smooth")
+ATT.Description = [[Heatshield for an M16 barrel, you're not actually supposed to grab it and it is meant to have an M203 attached.]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 1
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
+ATT.Free = false
+
+ATT.Category = {"retro_ar15_handguard_11","retro_ar15_handguard_14","retro_ar15_handguard_16"}
+ATT.ActivateElements = {"handguard_flamer", "carbine_hg", "nosling"}
+
+ATT.Attachments = {
+    {
+        PrintName = "Gasblock",
+        DefaultCompactName = "G.I.",
+        Bone = "j_gun",
+        Pos = Vector(-6, 0, -0.5),
+        Ang = Angle(0, 0, 0),
+        Category = {"retro_ar15_front_cut"},
+        ExcludeElements = {"ar15_ris", "mlok", "handguard_patriot"}
+    },
+    {
+        PrintName = "Underbarrel",
+        DefaultCompactName = "UB",
+        Bone = "j_gun",
+        Pos = Vector(-3.5, 0, 2.6),
+        Ang = Angle(0, 0, 0),
+        Category = {"cde_m203", "bo1_mk", "bo1_flamer", "cod_rail_underbarrel"},
+        ExcludeElements = {"ar15_ris", "mlok"}
+    },
+}
+
+ARC9.LoadAttachment(ATT, "retro_ar15_handguard_flamer")
+
+
+ATT = {}
+
 ATT.PrintName = [[M607a Barrel Assembly]]
 ATT.CompactName = [[M607a]]
 ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m607.png", "mips smooth")
@@ -1317,7 +1356,7 @@ ATT.Scale = Vector(0.375, 0.375, 0.375)
 ATT.ModelOffset = Vector(1.5 , 0, -0.35)
 ATT.ModelAngleOffset = Angle(0,0,0)
 ATT.RequireElements = {"ar15_ris" and "a4_top"}
-ATT.ExcludeElements = {"barrel_9mm", "handguard_ris_mw19"}
+ATT.ExcludeElements = {"barrel_9mm", "handguard_ris_mw19", "handguard_flamer"}
 
 ATT.DrawFunc = function(swep, model, wm)
     if swep:GetElements()["carbine_hg"] and !swep:GetElements()["handguard_a4"] then
@@ -1401,7 +1440,7 @@ ATT.Folder = "AR-15 IRONS"
 
 ATT.Category = {"bo1_addon_irons_2"}
 ATT.ActivateElements = {"mw2_m4_irons"}
-ATT.ExcludeElements = {"handguard_patriot","cod_tactical", "barrel_9mm", "handguard_ris_mw19"}
+ATT.ExcludeElements = {"handguard_patriot", "barrel_9mm", "handguard_ris_mw19","handguard_flamer"}
 ATT.DrawFunc = function(swep, model, wm)
     if swep:GetElements()["carbine_hg"] then
         model:SetBodygroup(0,1)
@@ -1938,6 +1977,8 @@ ATT.ActivateElements = {"300blk"}
 
 ATT.SpreadMultShooting = 1.1
 ATT.SpreadMult = 1.1
+ATT.DamageMax = 35
+ATT.DamageMin = 15
 ATT.RangeMaxMult = 0.7
 ATT.RangeMinMult = 0.7
 ATT.RecoilUpMult = 0.9
@@ -1979,6 +2020,8 @@ ATT.SprintToFireTimeMult = 0.975
 
 ATT.SpreadMultShooting = 1.1
 ATT.SpreadMult = 1.1
+ATT.DamageMax = 35
+ATT.DamageMin = 15
 ATT.RangeMaxMult = 0.7
 ATT.RangeMinMult = 0.7
 ATT.RecoilUpMult = 0.9
@@ -2020,6 +2063,8 @@ ATT.SprintToFireTimeMult = 1.025
 
 ATT.SpreadMultShooting = 1.1
 ATT.SpreadMult = 1.1
+ATT.DamageMax = 35
+ATT.DamageMin = 15
 ATT.RangeMaxMult = 0.7
 ATT.RangeMinMult = 0.7
 ATT.RecoilUpMult = 0.9
@@ -2061,6 +2106,8 @@ ATT.SprintToFireTimeMult = 1.15
 
 ATT.SpreadMultShooting = 1.1
 ATT.SpreadMult = 1.1
+ATT.DamageMax = 35
+ATT.DamageMin = 15
 ATT.RangeMaxMult = 0.7
 ATT.RangeMinMult = 0.7
 ATT.RecoilUpMult = 0.9
@@ -2099,6 +2146,8 @@ ATT.ReloadTimeMult = 0.9
 
 ATT.SpreadMultShooting = 1.1
 ATT.SpreadMult = 1.1
+ATT.DamageMax = 35
+ATT.DamageMin = 15
 ATT.RangeMaxMult = 0.7
 ATT.RangeMinMult = 0.7
 ATT.RecoilUpMult = 0.9
@@ -2140,6 +2189,8 @@ ATT.SprintToFireTimeMult = 1.025
 
 ATT.SpreadMultShooting = 1.1
 ATT.SpreadMult = 1.1
+ATT.DamageMax = 35
+ATT.DamageMin = 15
 ATT.RangeMaxMult = 0.7
 ATT.RangeMinMult = 0.7
 ATT.RecoilUpMult = 0.9
@@ -2181,6 +2232,8 @@ ATT.SprintToFireTimeMult = 1.25
 
 ATT.SpreadMultShooting = 1.1
 ATT.SpreadMult = 1.1
+ATT.DamageMax = 35
+ATT.DamageMin = 15
 ATT.RangeMaxMult = 0.7
 ATT.RangeMinMult = 0.7
 ATT.RecoilUpMult = 0.9
@@ -2351,37 +2404,37 @@ ATT.SpeedAddSights = -0.12
 
 ARC9.LoadAttachment(ATT, "retro_ar15_stock_gen2")
 
-ATT = {}
+-- ATT = {}
 
-ATT.PrintName = "Generation 3 Collapsible Stock"
-ATT.CompactName = "GEN3"
-ATT.Icon = Material("entities/bo1_atts/other/stock.png")
-ATT.Description = [[Retractible six-position stock made for the M4 platform after being adopted oficially by the US military.
-Reduces spread from moving and recoil accumulation, but doesn't reduce recoil as much as a full stock.]]
-ATT.Pros = {}
-ATT.Cons = {}
-ATT.SortOrder = 2
-ATT.MenuCategory = "ARC9 - BO1 Attachments"
-ATT.Free = false
+-- ATT.PrintName = "Generation 3 Collapsible Stock"
+-- ATT.CompactName = "GEN3"
+-- ATT.Icon = Material("entities/bo1_atts/other/stock.png")
+-- ATT.Description = [[Retractible six-position stock made for the M4 platform after being adopted oficially by the US military.
+-- Reduces spread from moving and recoil accumulation, but doesn't reduce recoil as much as a full stock.]]
+-- ATT.Pros = {}
+-- ATT.Cons = {}
+-- ATT.SortOrder = 2
+-- ATT.MenuCategory = "ARC9 - BO1 Attachments"
+-- ATT.Free = false
 
-ATT.Category = {"retro_ar15_stock"}
-ATT.ActivateElements = {"stock_mw2", "yessling"}
+-- ATT.Category = {"retro_ar15_stock"}
+-- ATT.ActivateElements = {"stock_mw2", "yessling"}
 
-ATT.RecoilMult = 0.8
-ATT.RecoilKickMult = 0.85
-ATT.RecoilUpMult = 0.5
-ATT.RecoilRandomSideMult = 0.6
-ATT.RecoilAutoControlMult = 1.75
+-- ATT.RecoilMult = 0.8
+-- ATT.RecoilKickMult = 0.85
+-- ATT.RecoilUpMult = 0.5
+-- ATT.RecoilRandomSideMult = 0.6
+-- ATT.RecoilAutoControlMult = 1.75
 
-ATT.SpreadMultHipFire = 0.95
-ATT.SpreadMultShooting = 0.75
+-- ATT.SpreadMultHipFire = 0.95
+-- ATT.SpreadMultShooting = 0.75
 
-ATT.SpeedMult = 0.97
-ATT.AimDownSightsTimeAdd = 0.12
-ATT.SprintToFireTimeAdd = 0.15
-ATT.SpeedAddSights = -0.12
+-- ATT.SpeedMult = 0.97
+-- ATT.AimDownSightsTimeAdd = 0.12
+-- ATT.SprintToFireTimeAdd = 0.15
+-- ATT.SpeedAddSights = -0.12
 
-ARC9.LoadAttachment(ATT, "retro_ar15_stock_gen3")
+-- ARC9.LoadAttachment(ATT, "retro_ar15_stock_gen3")
 
 ATT = {}
 
@@ -2660,7 +2713,7 @@ ATT.Free = false
 
 ATT.Category = {"cde_m203"}
 ATT.ActivateElements = {"cde_m203"}
-ATT.ExcludeElements = {"no_ubgl"}
+ATT.ExcludeElements = {"no_ubgl","bo1_fastmag"}
 
 ATT.AimDownSightsTimeMult = 1.1
 ATT.SprintToFireTimeMult = 1.1

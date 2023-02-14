@@ -220,7 +220,7 @@ SWEP.SprintAng = SWEP.ActiveAng + Angle(40, 0, 0)
 
 SWEP.CustomizePos = Vector(20.5, 40, 5)
 SWEP.CustomizeAng = Angle(90, 0, 0)
-SWEP.CustomizeSnapshotPos = Vector(1, 12, 0)
+SWEP.CustomizeSnapshotPos = Vector(1, 20, 0)
 SWEP.CustomizeSnapshotAng = Angle(0, 0, 0)
 
 SWEP.BarrelLength = 0 -- = 25
@@ -357,16 +357,12 @@ SWEP.Animations = {
         },
     },
     ["bash"] = {
-        Source = {
-            "bash",
-        },
-        Time = 35 / 35,
+        Source = {"bash",},
+        Time = 1,
     },
     ["bash_bayo"] = {
-        Source = {
-            "bash_2",
-        },
-        Time = 35 / 35,
+        Source = {"bash_2",},
+        Time = 2,
     },
     ["fire_iron"] = {
         Source = {

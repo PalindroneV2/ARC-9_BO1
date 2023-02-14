@@ -360,23 +360,23 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
 
     local suffix = ""
 
-    if attached["bo1_ubgl_m203"] then
+    if attached["bo1_m203"] then
         suffix = "_m203"
         if self:GetUBGL() then
             suffix = "_glsetup"
         end
-    elseif attached["bo1_ubgl_mk"] then
+    end
+    if attached["bo1_mk"] then
         suffix = "_mk"
         if self:GetUBGL() then
             suffix = "_mksetup"
         end
-    elseif attached["bo1_ubgl_flamer"] then
+    end
+    if attached["bo1_flamer"] then
         suffix = "_ft"
         if self:GetUBGL() then
             suffix = "_flamer"
         end
-    else
-        suffix = ""
     end
 
     if anim == "enter_ubgl" and attached["bo1_ubgl_mk"] then

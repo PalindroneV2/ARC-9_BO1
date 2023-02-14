@@ -15,7 +15,7 @@ ATT.Free = false
 
 ATT.Category = {"bo1_gp25"}
 ATT.ActivateElements = {"bo1_gp25"}
-ATT.ExcludeElements = {"no_ubgl","barrel_krinkov"}
+ATT.ExcludeElements = {"no_ubgl","bo1_fastmag","barrel_krinkov"}
 
 ATT.AimDownSightsTimeMult = 1.1
 ATT.SprintToFireTimeMult = 1.1
@@ -60,7 +60,7 @@ ATT.Free = false
 
 ATT.Category = {"bo1_m203"}
 ATT.ActivateElements = {"bo1_m203"}
-ATT.ExcludeElements = {"no_ubgl"}
+ATT.ExcludeElements = {"no_ubgl","bo1_fastmag"}
 
 ATT.AimDownSightsTimeMult = 1.1
 ATT.SprintToFireTimeMult = 1.1
@@ -105,7 +105,7 @@ ATT.Free = false
 
 ATT.Category = {"bo1_tishina"}
 ATT.ActivateElements = {"bo1_tishina"}
-ATT.ExcludeElements = {"no_ubgl"}
+ATT.ExcludeElements = {"no_ubgl","bo1_fastmag"}
 
 ATT.AimDownSightsTimeMult = 1.1
 ATT.SprintToFireTimeMult = 1.1
@@ -241,7 +241,7 @@ ATT.Free = false
 
 ATT.Category = {"bo1_mk"}
 ATT.ActivateElements = {"bo1_mk"}
-ATT.ExcludeElements = {"no_ubgl", "barrel_10", "barrel_krinkov"}
+ATT.ExcludeElements = {"no_ubgl", "barrel_10", "barrel_krinkov", "bo1_fastmag"}
 ATT.AimDownSightsTimeMult = 1.1
 ATT.SprintToFireTimeMult = 1.1
 
@@ -297,7 +297,7 @@ ATT.Free = false
 
 ATT.Category = {"bo1_flamer"}
 ATT.ActivateElements = {"bo1_flamer"}
-ATT.ExcludeElements = {"no_ubgl"}
+ATT.ExcludeElements = {"no_ubgl","bo1_fastmag"}
 
 ATT.AimDownSightsTimeMult = 1.1
 ATT.SprintToFireTimeMult = 1.1

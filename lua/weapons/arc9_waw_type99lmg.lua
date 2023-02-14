@@ -428,7 +428,7 @@ SWEP.Animations = {
         Source = "swipe",
         Time = 1,
     },
-    ["bash_2"] = {
+    ["bash_bayo"] = {
         Source = "stab",
         Time = 2,
     },

@@ -470,11 +470,11 @@ SWEP.Animations = {
     --BAYONET--
     ["bash"] = {
         Source = "swipe",
-        Time = 30 / 30,
+        Time = 1,
     },
     ["bash_bayo"] = {
         Source = "stab",
-        Time = 30 / 30,
+        Time = 2,
     },
 
     -- M7 GRENADE LAUNCHER --

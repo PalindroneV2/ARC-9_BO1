@@ -158,13 +158,11 @@ SWEP.MeleeHitNPCSound = "ARC9_BO1.Knife_Slash"
 
 SWEP.MuzzleParticle = nil --"muzzleflash_shotgun"
 -- SWEP.ShellModel = nil --"models/shells/shell_12gauge.mdl"
--- SWEP.ShellScale = 1.5
+SWEP.ShellScale = 10
 -- SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556_steel"
 
-SWEP.NoShellEject = true
-
 SWEP.MuzzleEffectQCA = 1 -- which attachment to put the muzzle on
-SWEP.CaseEffectQCA = nil -- which attachment to put the case effect on
+SWEP.CaseEffectQCA = 0 -- which attachment to put the case effect on
 SWEP.ProceduralViewQCA = 1
 SWEP.CamQCA = 2
 
@@ -353,9 +351,7 @@ SWEP.Animations = {
         Time = 25 / 35,
     },
     ["fire"] = {
-        Source = {
-            "fire",
-        },
+        Source = "fire",
         Time = 0.9,
     },
     ["reload"] = {
@@ -371,6 +367,10 @@ SWEP.Animations = {
         Time = 25 / 35,
     },
     ["bash_2"] = {
+        Source = "stab",
+        Time = 1.333,
+    },
+    ["backstab"] = {
         Source = "stab",
         Time = 1.333,
     },

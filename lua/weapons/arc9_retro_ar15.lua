@@ -305,11 +305,11 @@ SWEP.StandardPresets = {
     "[A- M16A2]XQAAAQBFAQAAAAAAAAA9iIIiM7hMNz0dhIkbkvJZHs6N4cERAS1EIUwLaB+vDp8XCL30711xZT7xm2o2gbIC/0oJ21+4dnvvBkhco+ofeBf3qlqSkNTpqDQz0Nf8iESWMw90kXgZGRIQCbg95KbrAF1eaUOpemDRncYCN6aSebl+crzv0/1B+FXbhAQe0qLEKC53/jHHkEMA",
     "[B- M16A4]XQAAAQDNAQAAAAAAAAA9iIIiM7hMNz0dhIkbkvJZHs6N4cERAS1EIUwLaB+vDp8XCL0VyBP1c786RpKeImE3ppvtZ9VSH6D2vEJ/lZpKWa/NUZkYq9pj0f6i80BrKcP/5yQtdQoo7F04Gzlf7a00GDLvS5ylx7B5qQL0YRu8nbmja654VEWMBPB7VewvZBLkyYctLizEQz6K4YoYGtyG2w1NiqdP/Wt7B8Xe80Ka3R1vOt4eXb/OfA==",
     "[C- M607a]XQAAAQBrAQAAAAAAAAA9iIIiM7hMNz0dhIkbkvLjTdErcFqoUCHbZoheMDsp+rQZLEf6L7Ry2kYDhnMROXx2buSpLLEaSYVmj35kqGIct333a/2YEZy4+jTdwsJ50mXem+JmDgKoS6HIWt6q3BcJY3HCENu4G3jh5F4GvbdNBrIncwe9+X47yG8wUFCHcntbkDvVR+7X9xlV/XwLUpxtNjxMAkw=",
-    "[D- XM177E2]XQAAAQB9AQAAAAAAAAA9iIIiM7hMNz0dhIkbkvLjTdErcFqoUCHbZoheMDsp+rQZLEf6L7Ry2kYDhnMROXx2bwPv0AD7jf16tWNayFi91rHo6DItEyJwAAEs1YW4UBPbnGKrRWC3G0Cut4GlOk+UYyEJVJQ7RhK+ogQhz1eHpsb/RfWdCDIUU7q0A5lZVhykt7GxQbWfodZeR3W/e5mqxDgWVjm7VgaAaxaU",
+    "[D- MACV-SOG]XQAAAQBqAQAAAAAAAAA9iIIiM7hMNz0dhIkbkvLjTdErcFqoUCHbZoheMDsp+rQZLEf6L7Ry2kYDhnMROXx2bwPv0AD7jf16tWNayFi91rHo6DItEyJwAAEs1YW4UBPbsLXz+4Cp1SI1SzcHafOSt7ft8GL1Sqefjmdll/YbPwAT298zEs6R//LdVW14/yVcHuw8CSO96Nbh0YIyacBoS1NqKiLv1quTcxYQS4dJDg==",
     "[E- XM4]XQAAAQB6AQAAAAAAAAA9iIIiM7hMNz0dhIkbkvJZHs6N4cERAS1EIUwLaB+vDp8XCL30711xZT7xm2o2gbIC/0oJ21+4dnvvBkhco+oguG2bmVG9YZJILdGSw6o5t6nYpSFEZMkSl0dMD4T4fzUw9EtGWvlzmWgGNO84gugDTCoHQ75NB8vONyfKju/z1zX4jVOn29bFf5mSW2NVfSQ5+ZF5VgA=",
     "[F- Commando]XQAAAQC9AQAAAAAAAAA9iIIiM7hMNz0dhIkbkvJZHs6N4cERAS1EIUwLaB+vDp8XCL0VyBP1c786RpKeImE3pliuYxXDMiQfLWpzMPpXZT8zqVNh9Y8eNrLjZVJChXEMDGmzN/SYnR8FNxEvJk1L8uSiUsIp+fDSUYyTx/HIoNTdQVTTtxIx+I+M4QZJ5QXVvHPGPohix/zBbrImgrRy7ynhxy/q+mslgsalZSFlYqzBA3jeHrwljT1ePJHoh38qAkR6qMbQwLCOgbc3RKTbSwA=",
     "[G- M4A1]XQAAAQALAgAAAAAAAAA9iIIiM7hMNz0dhIkbkvJZHs6N4cERAS1EIUwLaB+vDp8XCL0VyBP1c786RpKeImE3ppvtZ9VSH6D2vEJ/lZpKWa/NUZkYq9phPLY4qGpT2mVHcf8TR6rlZYODdokPL1FVMQEwE/R5bQoggoqDARHx7ym6yMPiP9YS4F0zWx8PaFNBmuvzGoCm2uUyFuGxc+sDIlMuXvVeL9QyrVg57h1fZPbI74GAiM5NIRG//Bt7nakC6YJYnMQtUYmSZBTH0Vu9VVYG0g==",
-    "[H- Ranger]XQAAAQAzAgAAAAAAAAA9iIIiM7hMNz0dhIkbkvJZHs6N4cERAS1EIUwLaB+vDp8XCL0VyBP1c786RpKnotsRDta8QJXNzP58z/MSJlIAy8NWdhCydvVMcgYtb3L1S+3OLs2Zc12CW/ZR5lbJ4IIsVVUNNvBI1Cy3/Mj5YHCA70yq47ZLW3Ez1ANZJaVLAFuvgPmdTS3vpQaZbUO4fcfnKQ1S9GXmN2tPsc3WSHxff5qnoNW7CyfbwvegN7I8pwGP3pjPMOdZX3eRLen8ouIJQnCwH80GhnO1BVv0apgX5Q==",
+    "[H- Ranger]XQAAAQAXAgAAAAAAAAA9iIIiM7hMNz0dhIkbkvJZHs6N4cERAS1EIUwLaB+vDp8XCL0VyBP1c786RpKnotsRDta8QJXNzP58z/MSJlIAy8NWdhCydvVMjMxuoxQOXXYRcUtBu1IJMr5mC8TlQPIQmEih4SEl29N+L3Ynjjv7fxFSHYgOJrgtNNk3zNH0xjsbR7Je8L3kM1mgnWcOIpS6uffJFc884sPJK6+eFa1dnOgL8HoO+lKAuc5pbn2qmiq4RupimPNiyQoYjID+aUN4wV3fd8G6M2BkoLsA",
     "[I- Delta]XQAAAQD/AQAAAAAAAAA9iIIiM7hMNz0dhIkbkvJZHs6N4cERAS1EIUwLaB+vDp8XCL0VyBP1c785T278jfAs/SblA5daRFdlaFrx4ILwkKrzza1UejrxUVgZcXivyuYi81sybqQwqg1F8SCtMo3ngJ4D3GxNAFyyDcp0JBZGwKPbUiCaXlqlwWCTDt5WAdqjmhHfF/XG508z3Mupl+ZN1hZDpgUc0qdEsbKFp+kMbWZBSFHS84VjQ0j2Nki3jw0qVV+0mvgw7tktuznuKIg2AA==",
     "[J- Bravo]XQAAAQAmAgAAAAAAAAA9iIIiM7hMNz0dhIkbkvJZHs6N4cERAS1EIUwLaB+vDp8XCL0VyBP1c786RpKeImE3pqqAdaHCBGeqBO07MrJqW1dI3FkrF3xrkZwh9hGrY6pZ3Uhk0EBt3IjlaOSTzIP3Q6yEDOq1pxTsIrEtkhdvUa8eNRROicf7B2woMqrolmmHAK1INpH9IZp8/00PrdlJDcScXMAebeF4BgcRPT3w8ZUIvqne4DQukG5G4LMYvtxHUlbrO99nYj9ciLKqsldyaN/ExNXjmUGhEgWa",
     "[K- Vaquero]XQAAAQAnAgAAAAAAAAA9iIIiM7hMNz0dhIkbkvJZHs6N4cERAS1EIUwLaB+vDp8XCL0VyBP1c786RpKeImE3pqqAdaHCBGeqBO07MrJqW1dI3FkrF3xrlvhx0ZcyitXkDj3zN1FHkYdmNqWloihXjHW9A8DdPgjHq0E7xFuuDirkg6vnM+Ms2yL/7U90f6dVgoZ/wSnAfTC8M7CcqLQ880mlBqfM9kLI8KREpQ3j086X5v7qyNA2oSC8cLz4OjqZORBpVdlUJByPbXE7b8zRztdIi5KXfTrISMFFb2HrVuyoJpvafA==",
@@ -356,6 +356,12 @@ SWEP.AttachmentElements = {
             {1,7}
         },
     },
+    ["bo1_fastmag"] = {
+        Bodygroups = {
+            {1,8}
+        },
+        ClipSize = 20,
+    },
     ["cde_m203"] = {
         Bodygroups = {
             {4,1},
@@ -369,6 +375,11 @@ SWEP.AttachmentElements = {
     ["bo1_bipod"] = {
         Bodygroups = {
             {4,5},
+        },
+    },
+    ["bo1_flamer"] = {
+        Bodygroups = {
+            {4,7},
         },
     },
     ["matech_iron"] = {
@@ -426,64 +437,49 @@ SWEP.AttachmentElements = {
             {5,1}
         },
     },
-    ["gen2_collapsed"] = {
-        Bodygroups = {
-            {5,2}
-        },
-    },
-    ["gen2_extended"] = {
+    ["gen1_extended"] = {
         Bodygroups = {
             {5,3}
         },
     },
-    ["gen1_collapsed"] = {
+    ["gen2_extended"] = {
         Bodygroups = {
-            {5,4}
-        },
-    },
-    ["gen1_extended"] = {
-        Bodygroups = {
-            {5,5}
-        },
-    },
-    ["wire_collapsed"] = {
-        Bodygroups = {
-            {5,6}
+            {5,2}
         },
     },
     ["wire_extended"] = {
         Bodygroups = {
-            {5,7}
+            {5,4}
         },
     },
-    ["stock_mw2"] = {
-        Bodygroups = {
-            {5,8}
-        },
-    },
+    -- ["stock_mw2"] = {
+    --     Bodygroups = {
+    --         {5,5}
+    --     },
+    -- },
     ["stock_magpul"] = {
         Bodygroups = {
-            {5,9}
+            {5,5}
         },
     },
     ["gen3_extended"] = {
         Bodygroups = {
-            {5,10}
+            {5,6}
         },
     },
     ["sniper_stock"] = {
         Bodygroups = {
-            {5,11}
+            {5,7}
         },
     },
     ["famas_stock"] = {
         Bodygroups = {
-            {5,12}
+            {5,8}
         },
     },
     ["aac_stock"] = {
         Bodygroups = {
-            {5,14}
+            {5,9}
         },
     },
 }
@@ -597,6 +593,9 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         hand = 11
     elseif attached["handguard_mlok_short"] then
         hand = 12
+    elseif attached["handguard_flamer"] then
+        gasblock = 1
+        hand = 13
     end
     if attached["removecovers"] then covers = 0 end
     if attached["mlok_rails"] then
@@ -729,15 +728,18 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     self.BipodPos = NewBipodPos
     self.BipodAng = NewBipodAng
 
+    if !attached["carbine_hg"] and hand != 3 and hand != 11 and hand != 13 and attached["cde_m203"] or attached["bo1_flamer"] then -- FORCIBLY ATTACH M203 HEATSHIELD ON A1/A2 HANDGUARDS
+        hand = 1
+        if attached["handguard_flamer"] then
+            hand = 13
+        end
+    end
+
     vm:SetBodygroup(2, length)
     vm:SetBodygroup(3, hand)
     vm:SetBodygroup(8, gasblock)
     vm:SetBodygroup(9, frontsight)
     vm:SetBodygroup(11, covers)
-
-    if !attached["carbine_hg"] and hand != 3 and hand != 11 and attached["cde_m203"] then -- FORCIBLY ATTACH M203 HEATSHIELD ON A1/A2 HANDGUARDS
-        vm:SetBodygroup(3, 1)
-    end
     if (length == 3 or length == 4 or length == 9) and attached["cde_m203"] then -- SHORTEN M203 ON 10.5 BARREL
         vm:SetBodygroup(4, 2)
     end
@@ -759,6 +761,15 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         vm:SetBodygroup(4,6)
     end
 
+    --SLING
+
+    if attached["bo1_ar15_cosmetic_strap"] then
+        vm:SetBodygroup(7, 1)
+        if attached["retro_ar15_upper_a4"] then
+            vm:SetBodygroup(7, 2)
+        end
+    end
+
     -- COSMETICS
     -- CAMO
 
@@ -773,15 +784,6 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         camo = camo + 3
     end
     vm:SetSkin(camo)
-
-    --SLING
-
-    if attached["bo1_ar15_cosmetic_strap"] then
-        vm:SetBodygroup(7, 1)
-        if attached["retro_ar15_upper_a4"] then
-            vm:SetBodygroup(7, 2)
-        end
-    end
 
 end
 
@@ -995,12 +997,33 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
             suffix = "_mksetup"
         end
     end
+    if attached["bo1_flamer"] then
+        suffix = "_ft"
+        if self:GetUBGL() then
+            suffix = "_flamer"
+        end
+    end
 
     if anim == "enter_ubgl" and attached["bo1_mk"] then
         return "enter_ubgl_mksetup"
     end
     if anim == "exit_ubgl" and attached["bo1_mk"] then
         return "exit_ubgl_mksetup"
+    end
+    if anim == "enter_ubgl" and attached["bo1_ubgl_flamer"] then
+        return "enter_ubgl_flamer"
+    end
+    if anim == "exit_ubgl" and attached["bo1_ubgl_flamer"] then
+        return "exit_ubgl_flamer"
+    end
+
+    if attached["bo1_fastmag"] then
+        if anim == "reload" then
+            return "fast"
+        end
+        if anim == "reload_empty" then
+            return "fast_empty"
+        end
     end
 
     return anim .. suffix
@@ -1069,7 +1092,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(11, 0, 1.35), --(-4, 0, -0.4)
         Ang = Angle(0, 0, 0),
-        Category = {"cde_m203", "bo1_mk", "cod_rail_underbarrel"},
+        Category = {"cde_m203", "bo1_mk", "bo1_flamer","cod_rail_underbarrel"}, -- bo1 flamer one of these days
         ExcludeElements = {"no_ub_rail", "mlok", "carbine_hg", "is_patriot"},
         InstalledElements = {"allowtac"},
     },
@@ -1106,7 +1129,7 @@ SWEP.Attachments = {
         Bone = "tag_clip",
         Pos = Vector(0, 0, -2),
         Ang = Angle(0, 0, 0),
-        Category = {"retro_ar15_mag"},
+        Category = {"retro_ar15_mag","bo1_fastmag"},
     },
     {
         PrintName = "Ammunition",
@@ -1320,6 +1343,86 @@ SWEP.Animations = {
             {s = "^weapons/arc9/cde_m16/boltdrop.ogg", t = 1.75},
             {s = "^weapons/arc9/cde_m16/grab.ogg", t = 1.7},
             {s = "^weapons/arc9/cde_m16/gearhit.ogg", t = 2.15}
+        },
+        MagSwapTime = 1.3,
+        MinProgress = 1.75,
+    },
+    ["fast"] = {
+        Source = "fast",
+        Time = 1.83,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.8,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.9,
+                lhik = 1,
+                rhik = 0
+            },
+        },
+        EventTable = {
+            {s = "^weapons/arc9/cde_m16/raise.ogg", t = 0},
+            {s = "^weapons/arc9/cde_m16/magout.ogg", t = 0.15},
+            {s = "^weapons/arc9/cde_m16/gear1.ogg", t = 0.35},
+            {s = "^weapons/arc9/cde_m16/magpouch.ogg", t = 0.7},
+            {s = "^weapons/arc9/cde_m16/gear2.ogg", t = 1.0},
+            {s = "^weapons/arc9/cde_m16/magin_fail.ogg", t = 0.85},
+            {s = "^weapons/arc9/cde_m16/magin.ogg", t = 1},
+            {s = "^weapons/arc9/cde_m16/grab.ogg", t = 1.45},
+            {s = "^weapons/arc9/cde_m16/gearhit.ogg", t = 1.6}
+        },
+        MagSwapTime = 1.3,
+        MinProgress = 1.5,
+    },
+    ["fast_empty"] = {
+        Source = "fast_empty",
+        Time = 2.33,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.8,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.9,
+                lhik = 1,
+                rhik = 0
+            },
+        },
+        EventTable = {
+            {s = "^weapons/arc9/cde_m16/raise.ogg", t = 0},
+            {s = "^weapons/arc9/cde_m16/magout.ogg", t = 0.15},
+            {s = "^weapons/arc9/cde_m16/gear1.ogg", t = 0.35},
+            {s = "^weapons/arc9/cde_m16/magpouch.ogg", t = 0.7},
+            {s = "^weapons/arc9/cde_m16/gear2.ogg", t = 1.0},
+            {s = "^weapons/arc9/cde_m16/magin_fail.ogg", t = 0.85},
+            {s = "^weapons/arc9/cde_m16/magin.ogg", t = 1},
+            {s = "^weapons/arc9/cde_m16/rattle.ogg", t = 1.1},
+            {s = "^weapons/arc9/cde_m16/boltdrop.ogg", t = 1.5},
+            {s = "^weapons/arc9/cde_m16/grab.ogg", t = 1.4},
+            {s = "^weapons/arc9/cde_m16/gearhit.ogg", t = 2}
         },
         MagSwapTime = 1.3,
         MinProgress = 1.75,
@@ -1924,5 +2027,195 @@ SWEP.Animations = {
                 rhik = 0,
             },
         },
+    },
+    --FLAMER ANIMS
+    ["idle_ft"] = {
+        Source = "idle_ft",
+        Time = 1 / 30,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0,
+            },
+        },
+    },
+    ["draw_ft"] = {
+        Source = "draw_ft",
+        Time = 1,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0,
+            },
+        },
+    },
+    ["holster_ft"] = {
+        Source = "holster_ft",
+        Time = 0.75,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0,
+            },
+        },
+    },
+    ["ready_ft"] = {
+        Source = "first_draw_ft",
+        Time = 1,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0,
+            },
+        },
+    },
+    ["fire_ft"] = {
+        Source = {"fire_ft"},
+        Time = 0.5,
+        ShellEjectAt = 0,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0,
+            },
+        },
+    },
+    ["fire_iron_ft"] = {
+        Source = {"fire_ads_ft"},
+        Time = 0.5,
+        ShellEjectAt = 0,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0,
+            },
+        },
+    },
+    ["reload_ft"] = {
+        Source = "reload_ft",
+        Time = 2,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0,
+            },
+        },
+        EventTable = {
+            {s = "^weapons/arc9/cde_m16/raise.ogg", t = 0},
+            {s = "^weapons/arc9/cde_m16/magout.ogg", t = 0.25},
+            {s = "^weapons/arc9/cde_m16/gear1.ogg", t = 0.35},
+            {s = "^weapons/arc9/cde_m16/magpouch.ogg", t = 0.7},
+            {s = "^weapons/arc9/cde_m16/gear2.ogg", t = 1.0},
+            {s = "^weapons/arc9/cde_m16/magin_fail.ogg", t = 1.17},
+            {s = "^weapons/arc9/cde_m16/magin.ogg", t = 1.3},
+            {s = "^weapons/arc9/cde_m16/grab.ogg", t = 1.45},
+            {s = "^weapons/arc9/cde_m16/gearhit.ogg", t = 1.6}
+        },
+    },
+    ["reload_empty_ft"] = {
+        Source = "reload_empty_ft",
+        Time = 2.5,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0,
+            },
+        },
+        EventTable = {
+            {s = "^weapons/arc9/cde_m16/raise.ogg", t = 0},
+            {s = "^weapons/arc9/cde_m16/magout.ogg", t = 0.25},
+            {s = "^weapons/arc9/cde_m16/gear1.ogg", t = 0.35},
+            {s = "^weapons/arc9/cde_m16/magpouch.ogg", t = 0.7},
+            {s = "^weapons/arc9/cde_m16/gear2.ogg", t = 1.0},
+            {s = "^weapons/arc9/cde_m16/magin_fail.ogg", t = 1.17},
+            {s = "^weapons/arc9/cde_m16/magin.ogg", t = 1.3},
+            {s = "^weapons/arc9/cde_m16/rattle.ogg", t = 1.7},
+            {s = "^weapons/arc9/cde_m16/boltdrop.ogg", t = 1.75},
+            {s = "^weapons/arc9/cde_m16/grab.ogg", t = 1.7},
+            {s = "^weapons/arc9/cde_m16/gearhit.ogg", t = 2.15}
+        },
+    },
+    ["enter_sprint_ft"] = {
+        Source = "sprint_in_ft",
+        Time = 1,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0,
+            },
+        },
+    },
+    ["idle_sprint_ft"] = {
+        Source = "sprint_loop_ft",
+        Time = 30 / 40,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0,
+            },
+        },
+    },
+    ["exit_sprint_ft"] = {
+        Source = "sprint_out_ft",
+        Time = 1,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0,
+            },
+        },
+    },
+
+    -- UBGL IN ANIMS -----------------------------------------------------------------
+
+    ["idle_flamer"] = {
+        Source = "idle_flamer",
+        Time = 1 / 30,
+    },
+    ["enter_ubgl_flamer"] = {
+        Source = "flamer_in",
+        Time = 0.5,
+    },
+    ["exit_ubgl_flamer"] = {
+        Source = "flamer_out",
+        Time = 0.5,
+    },
+    ["fire_flamer"] = {
+        Source = "fire_flamer",
+        Time = 0.7,
+    },
+    ["reload_ubgl_flamer"] = {
+        Source = "reload_flamer",
+        Time = 3.26,
+        EventTable = {
+            {s = "ARC9_BO1.Flamer_Pull", t = 0.125},
+            {s = "ARC9_BO1.Flamer_Remove", t = 1},
+            {s = "ARC9_BO1.Flamer_Drop", t = 1.25},
+            {s = "ARC9_BO1.Flamer_Replace", t = 1.75},
+            {s = "ARC9_BO1.Flamer_Lock", t = 2.4},
+        }
+    },
+    ["enter_sprint_flamer"] = {
+        Source = "sprint_in_flamer",
+        Time = 1,
+    },
+    ["idle_sprint_flamer"] = {
+        Source = "sprint_loop_flamer",
+        Time = 30 / 40
+    },
+    ["exit_sprint_flamer"] = {
+        Source = "sprint_out_flamer",
+        Time = 1,
     },
 }
