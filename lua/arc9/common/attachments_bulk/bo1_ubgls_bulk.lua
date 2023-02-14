@@ -303,7 +303,7 @@ ATT.AimDownSightsTimeMult = 1.1
 ATT.SprintToFireTimeMult = 1.1
 
 ATT.UBGL = true
-ATT.UBGLAmmo = "Uranium"
+ATT.UBGLAmmo = "AR2AltFire"
 ATT.UBGLClipSize = 40
 ATT.UBGLFiremode = -1
 ATT.UBGLFiremodeName = "FLAMER"

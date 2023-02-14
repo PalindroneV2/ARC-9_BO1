@@ -822,13 +822,9 @@ SWEP.HookP_NameChange = function(self, name)
     --A2 VARIANTS
     if attached["a2_top"] then
         alt = "A2-E3"
-        if attached["barrel_10"] then
-            model = "M720"
-            alt = ""
-        end
-        if attached["barrel_11"] then
-            model = "XM"
-            alt = "117E3"
+        if attached["barrel_10"] or attached["barrel_11"] then
+            model = "M"
+            alt = "733"
         end
         if attached["barrel_14"] then
             model = "M"
@@ -837,8 +833,8 @@ SWEP.HookP_NameChange = function(self, name)
         if attached["fcg_bst"] then
             alt = "A2"
             if attached["carbine"] then
-                model = "XM4"
-                alt = ""
+                model = "XM"
+                alt = "4"
             end
         end
     end
@@ -882,19 +878,6 @@ SWEP.HookP_NameChange = function(self, name)
         alt = " SBR"
         if attached["fcg_semi"] then
             model = "AR-15"
-        end
-    end
-
-    if attached["9mm_mag"] then
-        model = "M"
-        alt = "635"
-        if attached["barrel_9mm"] then
-            model = "M"
-            alt = "633"
-        end
-        if attached["a2_top"] or attached["a4_top"] then
-            model = "9mm SMG"
-            alt = ""
         end
     end
 
@@ -942,6 +925,26 @@ SWEP.HookP_NameChange = function(self, name)
         gunname = name .. " " .. sport
     end
 
+    if attached["9mm_mag"] then
+        model = "M"
+        alt = "635"
+        if attached["barrel_9mm"] then
+            model = "M"
+            alt = "633"
+        end
+        if attached["a4_top"] then
+            model = "M"
+            alt = "991"
+            if attached["fcg_burst"] then
+                alt = "992"
+            end
+        end
+        gunname = brand .. model .. alt
+        if attached["fcg_semi"] then
+            gunname = "Colt R6450"
+        end
+    end
+
     if attached["beowulf"] then gunname = "AR-15 .50 Beowulf" end
     if ((model .. alt) == "M16A1") and attached["fcg_semi"] and attached["woodcamo"] then gunname = "Service Rifle"
         if attached["beowulf"] then gunname = "Survivalist's Rifle" end
@@ -964,6 +967,9 @@ SWEP.HookP_NameChange = function(self, name)
         if attached["cde_m203"] then gunname = "Skullcrusher" end
         if attached["carbine"] then gunname = "Predator"
             if attached["a2_top"] then gunname = "Xeno Matter 4000" end
+        end
+        if attached["9mm_mag"] then
+            gunname = "Mo"
         end
         if attached["300blk"] and attached["barrel_7"] then gunname = "MVP Wolverine" end
         if (model .. alt) == "Mk. 12 SPR" then gunname = "Lone Survivor" end

@@ -147,7 +147,7 @@ SWEP.FreeAimRadiusMultSights = 0
 
 SWEP.SwayMultSights = 0
 
-SWEP.Ammo = "Uranium" -- what ammo type the gun uses
+SWEP.Ammo = "AR2AltFire" -- what ammo type the gun uses
 
 SWEP.ShootVolume = 125
 SWEP.ShootPitch = 100
