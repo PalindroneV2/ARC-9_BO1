@@ -12,7 +12,7 @@ Its weight makes handling slower though.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 2
-ATT.MenuCategory = "ARC9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 AK-47 Attachments"
 ATT.Free = false
 
 ATT.Category = {"bo1_ultimate_ak_barrel"}
@@ -75,7 +75,7 @@ A short carbine version of the AK-74 made for helicopter pilots, tank crew membe
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 2
-ATT.MenuCategory = "ARC9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 AK-47 Attachments"
 ATT.Free = false
 
 ATT.Category = {"bo1_ultimate_ak_barrel"}
@@ -119,7 +119,7 @@ ATT.Description = [[Integrally suppressed barrel from the AS Val, a weapon used 
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 2
-ATT.MenuCategory = "ARC9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 AK-47 Attachments"
 ATT.Free = false
 
 ATT.Category = {"bo1_ultimate_ak_barrel"}
@@ -172,7 +172,7 @@ ATT.Description = [[Carbine length barrel made for the 100 series AK variants.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 2
-ATT.MenuCategory = "ARC9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 AK-47 Attachments"
 ATT.Free = false
 
 ATT.Category = {"bo1_ultimate_ak_barrel"}
@@ -210,7 +210,7 @@ Its weight makes handling slightly slower though.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 2
-ATT.MenuCategory = "ARC9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 AK-47 Attachments"
 ATT.Free = false
 
 ATT.Category = {"bo1_ultimate_ak_barrel"}
@@ -249,7 +249,7 @@ Gold plating gives no advantage but the gun is shiny and nice.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 AK-47 Attachments"
 --ATT.Free = true
 
 ATT.Category = {"bo1_ultimate_ak_gold"}
@@ -268,7 +268,7 @@ Improves recoil control at the cost of handling.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 AK-47 Attachments"
 --ATT.Free = true
 
 ATT.Category = {"bo1_ultimate_ak_handg"}
@@ -288,7 +288,7 @@ Lighter than the original wooden furniture improves handling but recoil is incre
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 AK-47 Attachments"
 --ATT.Free = true
 
 ATT.Category = {"bo1_ultimate_ak_handg"}
@@ -309,7 +309,7 @@ You can attach a low magnification optic on the top rail.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 AK-47 Attachments"
 --ATT.Free = true
 
 ATT.Category = {"bo1_ultimate_ak_handg"}
@@ -354,7 +354,7 @@ Reduces handling.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 AK-47 Attachments"
 ATT.Free = false
 
 ATT.Category = {"bo1_ultimate_ak_mag_rpk"}
@@ -375,7 +375,7 @@ Greatly reduces handling.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 AK-47 Attachments"
 ATT.Free = false
 
 ATT.Category = {"bo1_ultimate_ak_mag_rpk"}
@@ -396,7 +396,7 @@ Reduces handling.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 AK-47 Attachments"
 ATT.Free = false
 
 ATT.Category = {"bo1_ultimate_ak_mag"}
@@ -419,7 +419,7 @@ ATT.Description = [[Identical to the base AK-47 receiver in performance. Only co
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 1
-ATT.MenuCategory = "ARC9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 AK-47 Attachments"
 ATT.Free = false
 
 ATT.Category = {"bo1_ultimate_ak_receiver"}
@@ -436,7 +436,7 @@ ATT.Description = [[Updated AKM receiver firing 5.45x39mm rounds.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 2
-ATT.MenuCategory = "ARC9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 AK-47 Attachments"
 ATT.Free = false
 
 ATT.Category = {"bo1_ultimate_ak_receiver"}
@@ -482,7 +482,7 @@ Identical to the base AK-47 receiver in performance. Only cosmetic.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 3
-ATT.MenuCategory = "ARC9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 AK-47 Attachments"
 ATT.Free = false
 
 ATT.Category = {"bo1_ultimate_ak_receiver"}
@@ -522,7 +522,7 @@ ATT.Description = [[Totally legit AK-12 receiver. Fires 5.45x39mm rounds. Identi
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 3
-ATT.MenuCategory = "ARC9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 AK-47 Attachments"
 ATT.Free = false
 
 ATT.Category = {"bo1_ultimate_ak_receiver"}
@@ -580,7 +580,7 @@ Its ability for more efficient sustained fire lets it get an effective cyclic ra
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 4
-ATT.MenuCategory = "ARC9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 AK-47 Attachments"
 ATT.Free = false
 
 ATT.Category = {"bo1_ultimate_ak_receiver"}
@@ -618,7 +618,7 @@ Its ability for more efficient sustained fire lets it get an effective cyclic ra
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 5
-ATT.MenuCategory = "ARC9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 AK-47 Attachments"
 ATT.Free = false
 
 ATT.Category = {"bo1_ultimate_ak_receiver"}
@@ -678,7 +678,7 @@ Identical in performance to the regular RPK-74 receiver.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 6
-ATT.MenuCategory = "ARC9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 AK-47 Attachments"
 ATT.Free = false
 
 ATT.Category = {"bo1_ultimate_ak_receiver"}
@@ -749,7 +749,7 @@ ATT.Description = [[Offers best possible recoil control but handling and mobilit
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 AK-47 Attachments"
 ATT.Free = false
 
 ATT.Category = {"bo1_ultimate_ak_stock"}
@@ -778,7 +778,7 @@ ATT.Description = [[Offers best possible recoil control but handling and mobilit
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 AK-47 Attachments"
 ATT.Free = false
 
 ATT.Category = {"bo1_ultimate_ak_stock"}
@@ -807,7 +807,7 @@ ATT.Description = [[Lightweight stock that doesn't provide as much recoil contro
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 2
-ATT.MenuCategory = "ARC9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 AK-47 Attachments"
 ATT.Free = false
 
 ATT.Category = {"bo1_ultimate_ak_stock"}
@@ -836,7 +836,7 @@ Has excellent handling, but provides weaker recoil control compared to a full st
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 3
-ATT.MenuCategory = "ARC9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 AK-47 Attachments"
 ATT.Free = false
 
 ATT.Category = {"bo1_ultimate_ak_stock"}
@@ -863,7 +863,7 @@ ATT.Description = [[Middle ground in mobility and recoil control.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 1
-ATT.MenuCategory = "ARC9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 AK-47 Attachments"
 ATT.Free = false
 
 ATT.Category = {"bo1_ultimate_ak_stock"}
@@ -893,7 +893,7 @@ Very lightweight and reduces hip fire spread, but barely provides any recoil con
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 4
-ATT.MenuCategory = "ARC9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 AK-47 Attachments"
 ATT.Free = false
 
 ATT.Category = {"bo1_ultimate_ak_stock"}
@@ -925,7 +925,7 @@ ATT.Description = [[Smooth surface rail used to attach optics.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 4
-ATT.MenuCategory = "ARC9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 AK-47 Attachments"
 ATT.Free = false
 ATT.Folder = "AK MOUNT"
 
@@ -956,7 +956,7 @@ ATT.Description = [[Picatinny rail used to attach optics.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 4
-ATT.MenuCategory = "ARC9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 AK-47 Attachments"
 ATT.Free = false
 ATT.Folder = "AK MOUNT"
 
