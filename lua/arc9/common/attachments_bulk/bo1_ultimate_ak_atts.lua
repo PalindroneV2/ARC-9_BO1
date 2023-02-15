@@ -413,7 +413,7 @@ ATT = {}
 
 ATT.PrintName = [[AK-47 Smooth Dust Cover Receiver]]
 ATT.CompactName = [[AK-47]]
-ATT.Icon = Material("entities/bo1_atts/barrel/barrel.png")
+ATT.Icon = Material("entities/bo1_atts/bo1_ak/ak47.png")
 ATT.Description = [[Identical to the base AK-47 receiver in performance. Only cosmetic.]]
 ATT.Pros = {}
 ATT.Cons = {}
@@ -430,7 +430,7 @@ ATT = {}
 
 ATT.PrintName = [[AK-74 Receiver]]
 ATT.CompactName = [[AK-74]]
-ATT.Icon = Material("entities/bo1_atts/barrel/barrel.png")
+ATT.Icon = Material("entities/bo1_atts/bo1_ak/ak74.png")
 ATT.Description = [[Updated AKM receiver firing 5.45x39mm rounds.]]
 ATT.Pros = {}
 ATT.Cons = {}
@@ -449,8 +449,8 @@ ATT.RangeMaxMult = 0.9
 ATT.RangeMinMult = 0.9
 ATT.AimDownSightsTimeMult = 0.975
 ATT.SprintToFireTimeMult = 0.975
-ATT.RecoilMult = 0.9
-ATT.RecoilUpMult = 0.9
+ATT.RecoilMult = 0.8
+ATT.RecoilUpMult = 0.8
 ATT.PenetrationMult = 0.8
 ATT.FirstShootSound = "ARC9_BO1.AK74u_Fire"
 ATT.ShootSound = "ARC9_BO1.AK74u_Fire"
@@ -475,7 +475,7 @@ ATT = {}
 
 ATT.PrintName = [[Pseudo AK-15 Receiver 7.62]]
 ATT.CompactName = [[AK-15]]
-ATT.Icon = Material("entities/bo1_atts/barrel/barrel.png")
+ATT.Icon = Material("entities/bo1_atts/bo1_ak/ak15.png")
 ATT.Description = [[Now the government is really running out of money.
 Identical to the base AK-47 receiver in performance. Only cosmetic.]]
 ATT.Pros = {}
@@ -516,7 +516,7 @@ ATT = {}
 
 ATT.PrintName = [[Pseudo AK-12 Receiver]]
 ATT.CompactName = [[AK-12]]
-ATT.Icon = Material("entities/bo1_atts/barrel/barrel.png")
+ATT.Icon = Material("entities/bo1_atts/bo1_ak/ak12.png")
 ATT.Description = [[Totally legit AK-12 receiver. Fires 5.45x39mm rounds. Identical to the AK-74 receiver.]]
 ATT.Pros = {}
 ATT.Cons = {}
@@ -535,8 +535,8 @@ ATT.RangeMaxMult = 0.9
 ATT.RangeMinMult = 0.9
 ATT.AimDownSightsTimeMult = 0.975
 ATT.SprintToFireTimeMult = 0.975
-ATT.RecoilMult = 0.9
-ATT.RecoilUpMult = 0.9
+ATT.RecoilMult = 0.8
+ATT.RecoilUpMult = 0.8
 ATT.PenetrationMult = 0.8
 ATT.FirstShootSound = "ARC9_BO1.AK74u_Fire"
 ATT.ShootSound = "ARC9_BO1.AK74u_Fire"
@@ -573,7 +573,7 @@ ATT = {}
 
 ATT.PrintName = [[RPK Receiver]]
 ATT.CompactName = [[RPK]]
-ATT.Icon = Material("entities/bo1_atts/barrel/barrel.png")
+ATT.Icon = Material("entities/bo1_atts/bo1_ak/rpkm.png")
 ATT.Description = [[Machine Gun Variant of the AKM.
 Its ability for more efficient sustained fire lets it get an effective cyclic rate of 750 rounds per minute.]]
 ATT.Pros = {}
@@ -611,7 +611,7 @@ ATT = {}
 
 ATT.PrintName = [[RPK-74 Receiver]]
 ATT.CompactName = [[RPK-74]]
-ATT.Icon = Material("entities/bo1_atts/barrel/barrel.png")
+ATT.Icon = Material("entities/bo1_atts/bo1_ak/rpk74.png")
 ATT.Description = [[Updated RPK receiver firing 5.45x39mm rounds.
 Its ability for more efficient sustained fire lets it get an effective cyclic rate of 750 rounds per minute.]]
 ATT.Pros = {}
@@ -670,7 +670,7 @@ ATT = {}
 
 ATT.PrintName = [[RPK-12 Receiver]]
 ATT.CompactName = [[RPK-12]]
-ATT.Icon = Material("entities/bo1_atts/barrel/barrel.png")
+ATT.Icon = Material("entities/bo1_atts/bo1_ak/rpk12.png")
 ATT.Description = [[Even more updated RPK-12 receiver firing 5.45x39mm rounds.
 Its ability for more efficient sustained fire lets it get an effective cyclic rate of 750 rounds per minute.
 Identical in performance to the regular RPK-74 receiver.]]
