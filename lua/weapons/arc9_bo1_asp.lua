@@ -224,8 +224,8 @@ SWEP.AttachmentElements = {
     ["asp"] = {
         Bodygroups = {{1,0},},
         IronSights = {
-            Pos = Vector(-3.15, -1, 1.825),
-            Ang = Angle(0, 0, 0),
+            Pos = Vector(-3.14, -1, 1.825),
+            Ang = Angle(-0.025, 0, 0),
             Magnification = 1.1,
             ViewModelFOV = 60,
         },
@@ -233,8 +233,8 @@ SWEP.AttachmentElements = {
     ["hush"] = {
         Bodygroups = {{1,2},},
         IronSights = {
-            Pos = Vector(-3.065, -1, 1.5),
-            Ang = Angle(0.325, 1, 0),
+            Pos = Vector(-3.075, -3, 1.5),
+            Ang = Angle(0.3, 1, 0),
             Magnification = 1.1,
             ViewModelFOV = 60,
         },
@@ -255,12 +255,6 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     end
 
     vm:SetSkin(camo)
-
-    self.IronSights = {
-        Pos = newpos,
-        Ang = newang,
-        Magnification = 1.1,
-    }
 end
 
 SWEP.HookP_NameChange = function(self, name)
