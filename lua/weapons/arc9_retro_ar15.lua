@@ -167,7 +167,6 @@ SWEP.MuzzleEffectQCA = 3 -- which attachment to put the muzzle on
 SWEP.CaseEffectQCA = 2 -- which attachment to put the case effect on
 SWEP.ProceduralViewQCA = 1
 SWEP.CamQCA = 4
-SWEP.CamCoolView = true
 
 SWEP.BulletBones = {
 }
