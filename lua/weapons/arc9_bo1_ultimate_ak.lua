@@ -867,6 +867,7 @@ SWEP.Attachments = {
     {
         PrintName = "Receiver",
         DefaultName = "AK-47",
+        DefaultIcon = Material("entities/bo1_atts/bo1_ak/akm.png"),
         Bone = "j_gun",
         Pos = Vector(0, 0, 0),
         Icon_Offset = Vector(0, 0, 1),
