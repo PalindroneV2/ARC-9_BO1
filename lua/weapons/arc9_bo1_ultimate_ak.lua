@@ -26,7 +26,8 @@ SWEP.Slot = 2
 SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arc9/c_bo1_ak_ultimate.mdl"
-SWEP.WorldModel = "models/weapons/arc9/c_bo1_ak_ultimate.mdl"
+SWEP.WorldModel = "models/weapons/w_rif_ak47.mdl"
+SWEP.WorldModelMirror = "models/weapons/arc9/c_bo1_ak_ultimate.mdl"
 SWEP.MirrorVMWM = true
 SWEP.NoTPIKVMPos = true
 SWEP.WorldModelOffset = {
@@ -522,6 +523,13 @@ SWEP.AttachmentElements = {
             }
         }
     },
+    ["modernhand3"] = {
+        AttPosMods = {
+            [6] = {
+                Pos = Vector(11, 0, 0),
+            }
+        }
+    },
     ["rpdhand"] = {
         AttPosMods = {
             [6] = {
@@ -568,11 +576,9 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         barrel = 1
         irons = 1
         front = 2
-        hand = 0
     elseif attached["barrel_rpk"] then
         barrel = 2
         front = 4
-        hand = 4
     elseif attached["barrel_102"] then
         barrel = 3
         front = 6
@@ -581,11 +587,10 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         barrel = 4
         irons = 1
         front = 9
-        hand = 9
+        hand = 13
     elseif attached["barrel_rpd"] then
         barrel = 5
         front = 8
-        hand = 0
     end
     if attached["bo1_irons_alt"] then
         irons = 2
@@ -601,26 +606,30 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     --     front = front + 1
     -- end
 
-    if attached["rail_bo1"] then
-        vm:SetBodygroup(10, 1)
-    end
-    if attached["rail_pic"] then
-        vm:SetBodygroup(10, 2)
-    end
-
     if attached["wornhand"] then
-        hand = hand + 1
+        hand = 1
         grip = 1
     elseif attached["modernhand"] then
-        hand = hand + 2
-        if barrel == 2 then hand = 6 end
+        hand = 2
         grip = 2
         if magbg == 0 then
             magbg = 1
         end
+    elseif attached["modernhand3"] then
+        hand = 3
+        grip = 2
+        if magbg == 0 then
+            magbg = 1
+        end
+        vm:SetBodygroup(11, 1)
+        if attached["barrel_rpk"] then
+            vm:SetBodygroup(11,2)
+        end
+        if attached["mw3_tacslot"] then
+            vm:SetBodygroup(11,0)
+        end
     elseif attached["rpdhand"] then
-        hand = hand + 3
-        if barrel == 2 then hand = 7 end
+        hand = 5
         grip = 0
     end
     if attached["stock_vss"] then
@@ -656,13 +665,10 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
             magbg = 1
         end
         irons = 3
-        hand = 10
+        hand = 4
         grip = 2
         if attached["ak12mount"] then
             irons = 4
-        end
-        if barrel == 2 then
-            hand = 11
         end
     end
     if attached["ext_mag"] then
@@ -679,6 +685,18 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     end
     if attached["drum_mag"] then
         magbg = 9
+    end
+    if attached["barrel_rpk"] then
+        hand = hand + 6
+    end
+
+    if attached["rail_bo1"] then
+        vm:SetBodygroup(10, 1)
+        irons = 4
+    end
+    if attached["rail_pic"] then
+        vm:SetBodygroup(10, 2)
+        irons = 4
     end
 
     vm:SetBodygroup(0, aktype)
@@ -880,6 +898,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(13, 0, 2.2),
         Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(-5, 0, 0),
         Category = {"bo1_ultimate_ak_barrel"},
     },
     {
@@ -888,6 +907,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(8, 0, 1.5),
         Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0, 0, -1),
         Category = {"bo1_ultimate_ak_handg"},
         ExcludeElements = {"barrel_asval","ak12","rpk12"},
     },
@@ -897,8 +917,9 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(11, 0, 0.2),
         Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0, 0, -2),
         Category = {"bo1_gp25", "bo1_tishina", "bo1_mk", "cod_grips"},
-        ExcludeElements = {"barrel_rpk", "barrel_asval"},
+        ExcludeElements = {"barrel_asval"},
     },
     {
         PrintName = "Muzzle",
@@ -1089,7 +1110,7 @@ SWEP.Animations = {
                 rhik = 0
             },
             {
-                t = 0.65,
+                t = 0.7,
                 lhik = 1,
                 rhik = 1
             },
@@ -1119,14 +1140,17 @@ SWEP.Animations = {
     ["idle_gp25"] = {
         Source = "idle_gp25",
         Time = 1 / 30,
+        IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
     ["draw_gp25"] = {
         Source = "draw_gp25",
         Time = 1,
+        IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
     ["holster_gp25"] = {
         Source = "holster_gp25",
         Time = 0.75,
+        IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
     ["ready_gp25"] = {
         Source = "first_draw_gp25",
@@ -1134,21 +1158,25 @@ SWEP.Animations = {
         EventTable = {
             {s = "ARC9_BO1.AK_Charge", t = 22 / 35}
         },
+        IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
     ["fire_gp25"] = {
         Source = {"fire_gp25"},
         Time = 0.5,
         ShellEjectAt = 0,
+        IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
     ["fire_iron_gp25"] = {
         Source = {"fire_ads_gp25"},
         Time = 0.5,
         ShellEjectAt = 0,
+        IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
     ["fire_bipod_gp25"] = {
         Source = {"fire_ads_gp25"},
         Time = 0.5,
         ShellEjectAt = 0,
+        IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
     ["reload_gp25"] = {
         Source = "reload_gp25",
@@ -1158,6 +1186,7 @@ SWEP.Animations = {
             {s = "ARC9_BO1.AK_MagOut", t = 21 / 35},
             {s = "ARC9_BO1.AK_MagIn", t = 63 / 35}
         },
+        IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
     ["reload_empty_gp25"] = {
         Source = "reload_empty_gp25",
@@ -1169,18 +1198,22 @@ SWEP.Animations = {
             {s = "ARC9_BO1.AK_BoltBack", t = 85 / 35},
             {s = "ARC9_BO1.AK_BoltFwd", t = 95 / 35},
         },
+        IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
     ["enter_sprint_gp25"] = {
         Source = "sprint_in_gp25",
         Time = 1,
+        IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
     ["idle_sprint_gp25"] = {
         Source = "sprint_loop_gp25",
-        Time = 30 / 40
+        Time = 30 / 40,
+        IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
     ["exit_sprint_gp25"] = {
         Source = "sprint_out_gp25",
         Time = 1,
+        IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
 
 -- UBGL IN ANIMS -----------------------------------------------------------------
@@ -1188,18 +1221,22 @@ SWEP.Animations = {
     ["enter_ubgl_gp25"] = {
         Source = "gp25setup_in",
         Time = 0.5,
+        IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
     ["exit_ubgl_gp25"] = {
         Source = "gp25setup_out",
-        Time = 0.5
+        Time = 0.5,
+        IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
     ["idle_gp25setup"] = {
         Source = "idle_gp25setup",
         Time = 1 / 30,
+        IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
     ["fire_gp25setup"] = {
         Source = "fire_gp25setup",
         Time = 0.7,
+        IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
     ["reload_ubgl_gp25setup"] = {
         Source = "reload_gp25setup",
@@ -1208,28 +1245,23 @@ SWEP.Animations = {
             {s = "ARC9_BO1.M203_40mmOut", t = 18 / 30},
             {s = "ARC9_BO1.M203_40mmIn", t = 60 / 30},
             {s = "ARC9_BO1.M203_Close", t = 70 / 30},
-        }
-    },
-    ["reload_ubgl_gp25setup_soh"] = {
-        Source = "reload_gp25setup",
-        Time = 3 / 2,
-        EventTable = {
-            {s = "ARC9_BO1.M203_40mmOut", t = 18 / 60},
-            {s = "ARC9_BO1.M203_40mmIn", t = 60 / 60},
-            {s = "ARC9_BO1.M203_Close", t = 70 / 60},
-        }
+        },
+        IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
     ["enter_sprint_gp25setup"] = {
         Source = "sprint_in_gp25setup",
         Time = 1,
+        IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
     ["idle_sprint_gp25setup"] = {
         Source = "sprint_loop_gp25setup",
-        Time = 30 / 40
+        Time = 30 / 40,
+        IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
     ["exit_sprint_gp25setup"] = {
         Source = "sprint_out_gp25setup",
         Time = 1,
+        IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
 
     -- TISHINA
@@ -1237,14 +1269,17 @@ SWEP.Animations = {
     ["idle_tishina"] = {
         Source = "idle_tishina",
         Time = 1 / 30,
+        IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
     ["draw_tishina"] = {
         Source = "draw_tishina",
         Time = 1,
+        IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
     ["holster_tishina"] = {
         Source = "holster_tishina",
         Time = 0.75,
+        IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
     ["ready_tishina"] = {
         Source = "first_draw_tishina",
@@ -1252,21 +1287,25 @@ SWEP.Animations = {
         EventTable = {
             {s = "ARC9_BO1.AK_Charge", t = 22 / 35}
         },
+        IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
     ["fire_tishina"] = {
         Source = {"fire_tishina"},
         Time = 0.5,
         ShellEjectAt = 0,
+        IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
     ["fire_iron_tishina"] = {
         Source = {"fire_ads_tishina"},
         Time = 0.5,
         ShellEjectAt = 0,
+        IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
     ["fire_bipod_tishina"] = {
         Source = {"fire_ads_tishina"},
         Time = 0.5,
         ShellEjectAt = 0,
+        IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
     ["reload_tishina"] = {
         Source = "reload_tishina",
@@ -1275,6 +1314,7 @@ SWEP.Animations = {
             {s = "ARC9_BO1.AK_MagOut", t = 21 / 35},
             {s = "ARC9_BO1.AK_MagIn", t = 63 / 35}
         },
+        IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
     ["reload_empty_tishina"] = {
         Source = "reload_empty_tishina",
@@ -1285,18 +1325,22 @@ SWEP.Animations = {
             {s = "ARC9_BO1.AK_BoltBack", t = 85 / 35},
             {s = "ARC9_BO1.AK_BoltFwd", t = 95 / 35},
         },
+        IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
     ["enter_sprint_tishina"] = {
         Source = "sprint_in_tishina",
         Time = 1,
+        IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
     ["idle_sprint_tishina"] = {
         Source = "sprint_loop_tishina",
-        Time = 30 / 40
+        Time = 30 / 40,
+        IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
     ["exit_sprint_tishina"] = {
         Source = "sprint_out_tishina",
         Time = 1,
+        IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
 
 -- UBGL IN ANIMS -----------------------------------------------------------------
@@ -1304,18 +1348,22 @@ SWEP.Animations = {
     ["enter_ubgl_tishina"] = {
         Source = "tishinasetup_in",
         Time = 0.5,
+        IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
     ["exit_ubgl_tishina"] = {
         Source = "tishinasetup_out",
-        Time = 0.5
+        Time = 0.5,
+        IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
     ["idle_tishinasetup"] = {
         Source = "idle_tishinasetup",
         Time = 1 / 30,
+        IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
     ["fire_tishinasetup"] = {
         Source = "fire_tishinasetup",
         Time = 0.7,
+        IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
     ["reload_ubgl_tishinasetup"] = {
         Source = "reload_tishinasetup",
@@ -1324,28 +1372,23 @@ SWEP.Animations = {
             {s = "ARC9_BO1.M203_40mmOut", t = 18 / 30},
             {s = "ARC9_BO1.M203_40mmIn", t = 60 / 30},
             {s = "ARC9_BO1.M203_Close", t = 70 / 30},
-        }
-    },
-    ["reload_ubgl_tishinasetup_soh"] = {
-        Source = "reload_tishinasetup",
-        Time = 3 / 2,
-        EventTable = {
-            {s = "ARC9_BO1.M203_40mmOut", t = 18 / 60},
-            {s = "ARC9_BO1.M203_40mmIn", t = 60 / 60},
-            {s = "ARC9_BO1.M203_Close", t = 70 / 60},
-        }
+        },
+        IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
     ["enter_sprint_tishinasetup"] = {
         Source = "sprint_in_tishinasetup",
         Time = 1,
+        IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
     ["idle_sprint_tishinasetup"] = {
         Source = "sprint_loop_tishinasetup",
-        Time = 30 / 40
+        Time = 30 / 40,
+        IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
     ["exit_sprint_tishinasetup"] = {
         Source = "sprint_out_tishinasetup",
         Time = 1,
+        IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
 
     -- MK DEFAULT ANIMS --
@@ -1353,14 +1396,17 @@ SWEP.Animations = {
     ["idle_mk"] = {
         Source = "idle_mk",
         Time = 1 / 30,
+        IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
     ["draw_mk"] = {
         Source = "draw_mk",
         Time = 1,
+        IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
     ["holster_mk"] = {
         Source = "holster_mk",
         Time = 0.75,
+        IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
     ["ready_mk"] = {
         Source = "first_draw_mk",
@@ -1368,21 +1414,25 @@ SWEP.Animations = {
         EventTable = {
             {s = "ARC9_BO1.AK_Charge", t = 22 / 35}
         },
+        IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
     ["fire_mk"] = {
         Source = {"fire_mk"},
         Time = 0.5,
         ShellEjectAt = 0,
+        IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
     ["fire_iron_mk"] = {
         Source = {"fire_ads_mk"},
         Time = 0.5,
         ShellEjectAt = 0,
+        IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
     ["fire_bipod_mk"] = {
         Source = {"fire_ads_mk"},
         Time = 0.5,
         ShellEjectAt = 0,
+        IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
     ["reload_mk"] = {
         Source = "reload_mk",
@@ -1391,6 +1441,7 @@ SWEP.Animations = {
             {s = "ARC9_BO1.AK_MagOut", t = 21 / 35},
             {s = "ARC9_BO1.AK_MagIn", t = 63 / 35}
         },
+        IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
     ["reload_empty_mk"] = {
         Source = "reload_empty_mk",
@@ -1401,18 +1452,22 @@ SWEP.Animations = {
             {s = "ARC9_BO1.AK_BoltBack", t = 85 / 35},
             {s = "ARC9_BO1.AK_BoltFwd", t = 95 / 35},
         },
+        IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
     ["enter_sprint_mk"] = {
         Source = "sprint_in_mk",
         Time = 1,
+        IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
     ["idle_sprint_mk"] = {
         Source = "sprint_loop_mk",
-        Time = 30 / 40
+        Time = 30 / 40,
+        IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
     ["exit_sprint_mk"] = {
         Source = "sprint_out_mk",
         Time = 1,
+        IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
 
     -- MK IN ANIMS --
@@ -1420,18 +1475,22 @@ SWEP.Animations = {
     ["enter_ubgl_mk"] = {
         Source = "mksetup_in",
         Time = 0.5,
+        IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
     ["exit_ubgl_mk"] = {
         Source = "mksetup_out",
         Time = 0.5,
+        IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
     ["idle_mksetup"] = {
         Source = "idle_mksetup",
         Time = 1 / 30,
+        IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
     ["fire_mksetup"] = {
         Source = "fire_mksetup",
         Time = 0.7,
+        IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
     ["cycle_mksetup"] = {
         Source = "pump_mksetup",
@@ -1439,7 +1498,8 @@ SWEP.Animations = {
         EventTable = {
             {s = "ARC9_BO1.MK_Back", t = 5 / 30 },
             {s = "ARC9_BO1.MK_Fwd", t = 10 / 30 },
-        }
+        },
+        IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
     ["reload_ubgl_start_mksetup"] = {
         Source = "reload_in_mksetup",
@@ -1447,14 +1507,16 @@ SWEP.Animations = {
         RestoreAmmo = 1,
         EventTable = {
             {s = "ARC9_BO1.MK_Shell", t = 22 / 30},
-        }
+        },
+        IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
     ["reload_ubgl_insert_mksetup"] = {
         Source = "reload_loop_mksetup",
         Time = 33 / 30,
         EventTable = {
             {s = "ARC9_BO1.MK_Shell", t = 0 / 30},
-        }
+        },
+        IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
     ["reload_ubgl_finish_mksetup"] = {
         Source = "reload_out_mksetup",
@@ -1463,19 +1525,23 @@ SWEP.Animations = {
             {hide = 2, t = 1 / 30},
             {s = "ARC9_BO1.MK_Back", t = 20 / 30 },
             {s = "ARC9_BO1.MK_Fwd", t = 25 / 30 },
-        }
+        },
+        IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
     ["enter_sprint_mksetup"] = {
         Source = "sprint_in_mksetup",
         Time = 1,
+        IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
     ["idle_sprint_mksetup"] = {
         Source = "sprint_loop_mksetup",
-        Time = 30 / 40
+        Time = 30 / 40,
+        IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
     ["exit_sprint_mksetup"] = {
         Source = "sprint_out_mksetup",
         Time = 1,
+        IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
 
     ["idle_rpk"] = {

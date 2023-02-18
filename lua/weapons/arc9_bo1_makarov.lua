@@ -25,7 +25,7 @@ SWEP.Slot = 1
 SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arc9/c_bo1_makarov.mdl"
-SWEP.WorldModel = "models/weapons/arc9/w_bo1_makarov.mdl"
+SWEP.WorldModel = "models/weapons/w_pist_glock18.mdl"
 SWEP.WorldModelMirror = "models/weapons/arc9/w_bo1_makarov.mdl"
 SWEP.MirrorVMWM = true
 SWEP.NoTPIKVMPos = true

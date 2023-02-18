@@ -21,6 +21,7 @@ ATT.CompactName = "GOLD"
 ATT.Icon = Material("entities/bo1_generic.png")
 ATT.Category = "camo_gold"
 ATT.Description = [[Always believe in your soul.]]
+ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/black_detail"
 ATT.MenuCategory = "ARC9 - Camos"
 ATT.ActivateElements = {"camo_gold"}
 

@@ -26,6 +26,7 @@ SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arc9/c_bo1_ks23.mdl"
 SWEP.WorldModel = "models/weapons/arc9/c_bo1_ks23.mdl"
+SWEP.WorldModelMirror = "models/weapons/arc9/c_bo1_ks23.mdl"
 SWEP.MirrorVMWM = true
 SWEP.NoTPIKVMPos = true
 SWEP.WorldModelOffset = {
@@ -244,6 +245,11 @@ SWEP.AttachmentElements = {
             {2,1}
         },
     },
+    ["doom_ee"] = {
+        Bodygroups = {
+            {2,1}
+        },
+    },
 }
 
 SWEP.Hook_TranslateAnimation = function (self, anim)
@@ -289,9 +295,9 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     end
     vm:SetSkin(camo)
 end
-local newActivePos = Vector(0, 0, -1)
 SWEP.ActivePosHook = function(self)
     local attached = self:GetElements()
+    local newActivePos = Vector(0, 0, -1)
     if attached["doom_ee"] then
         newActivePos = Vector(-2.175, -1, -2)
     end
@@ -305,6 +311,7 @@ SWEP.ActiveAngHook = function(self)
 end
 SWEP.MovingPosHook = function(self)
     local attached = self:GetElements()
+    local newActivePos = Vector(0, 0, -1)
     if attached["doom_ee"] then
         newActivePos = Vector(-2.175, -1, -2)
     end
@@ -318,12 +325,14 @@ SWEP.MovingAngHook = function(self)
 end
 SWEP.MovingMidPointHook = function(self)
     local attached = self:GetElements()
+    local NewMovingMidPoint = {Pos = self.ActivePos,Ang = self.ActiveAng}
     if attached["doom_ee"] then
-        return {Pos = self.ActivePos, Ang = self.ActiveAng}
+        return NewMovingMidPoint
     end
 end
 SWEP.CrouchPosHook = function(self)
     local attached = self:GetElements()
+    local newActivePos = self.CrouchPos
     if attached["doom_ee"] then
         newActivePos = Vector(-2.175, -1, -2)
     end
@@ -337,6 +346,7 @@ SWEP.CrouchAngHook = function(self)
 end
 SWEP.SprintPosHook = function(self)
     local attached = self:GetElements()
+    local newActivePos = Vector(0, 0, -1)
     if attached["doom_ee"] then
         newActivePos = Vector(-2.175, -1, -2)
     end

@@ -4,7 +4,7 @@ local ATT = {}
 
 ATT = {}
 
-ATT.PrintName = [[RPK-74 590mm Barrel]]
+ATT.PrintName = [[RPK 590mm Barrel]]
 ATT.CompactName = [[RPK]]
 ATT.Icon = Material("entities/bo1_atts/barrel/barrel.png")
 ATT.Description = [[The longer and heavier machine gun barrel offers best possible precision and recoil control.
@@ -17,7 +17,7 @@ ATT.Free = false
 
 ATT.Category = {"bo1_ultimate_ak_barrel"}
 ATT.ActivateElements = {"barrel_rpk"}
--- ATT.ExcludeElements = {"ak12"}
+ATT.ExcludeElements = {"bo1_gp25","bo1_mk"}
 
 ATT.SpreadMult = 0.85
 ATT.RecoilMult = 0.85
@@ -53,14 +53,14 @@ ATT.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"bo1_bipod"},
     },
-    {
-        PrintName = "Underbarrel",
-        DefaultCompactName = "None",
-        Bone = "j_gun",
-        Pos = Vector(0, 0, 2),
-        Ang = Angle(0, 0, 0),
-        Category = {"cod_grips"},
-    },
+    -- {
+    --     PrintName = "Underbarrel",
+    --     DefaultCompactName = "None",
+    --     Bone = "j_gun",
+    --     Pos = Vector(2, 0, 2.15),
+    --     Ang = Angle(0, 0, 0),
+    --     Category = {"cod_grips"},
+    -- },
 }
 
 ARC9.LoadAttachment(ATT, "bo1_ultimate_ak_barrel_rpk")
@@ -85,6 +85,7 @@ ATT.SpreadMult = 1.5
 ATT.RecoilMult = 1.25
 ATT.SpreadMultHipFire = 0.7
 ATT.SpreadMultShooting = 1.5
+ATT.RPMAdd = 150
 
 ATT.SpeedMult = 1.025
 ATT.SpeedMultSights = 1.125
@@ -243,13 +244,13 @@ ATT = {}
 ATT.PrintName = "Gold Plating"
 ATT.CompactName = "GOLD"
 ATT.Icon = Material("materials/entities/bo1_generic.png")
-ATT.Description = [[24 karat run of bad luck.
+ATT.Description = [[Pinnacle of proficiency achievement.
 Gold plating gives no advantage but the gun is shiny and nice.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - BO1 AK-47 Attachments"
---ATT.Free = true
+ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/black_detail"
 
 ATT.Category = {"bo1_ultimate_ak_gold"}
 
@@ -337,9 +338,90 @@ ATT.Attachments = {
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 1),
     },
+    {
+        PrintName = "Tactical Right",
+        DefaultCompactName = "TAC R",
+        Bone = "j_gun",
+        Pos = Vector(-4, 0.7, 0.2),
+        Ang = Angle(0, 0, -90),
+        Icon_Offset = Vector(1,1,0),
+        Category =  {"cod_tactical"},
+        InstalledElements = {"mw3_tacslot"},
+    },
+    {
+        PrintName = "Tactical Left",
+        DefaultCompactName = "TAC L",
+        Bone = "j_gun",
+        Pos = Vector(-4, -0.7, 0.2),
+        Ang = Angle(0, 0, 90),
+        Icon_Offset = Vector(1,1,0),
+        Category =  {"cod_tactical"},
+        InstalledElements = {"mw3_tacslot"},
+    },
 }
 
 ARC9.LoadAttachment(ATT, "bo1_ultimate_ak_furniture_modern")
+
+ATT = {}
+
+ATT.PrintName = "Modern Furniture II"
+ATT.CompactName = "MODERN 3"
+ATT.Icon = Material("materials/entities/from_mwc/mw3_generic.png")
+ATT.Description = [[Modern polymer-based furniture featuring picatinny rails..
+Lighter than the original wooden furniture improves handling but recoil is increased slightly.
+You can attach a low magnification optic on the top rail.]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - BO1 AK-47 Attachments"
+--ATT.Free = true
+
+ATT.Category = {"bo1_ultimate_ak_handg"}
+ATT.ActivateElements = {"modernhand3"}
+ATT.RecoilMult = 1.1
+ATT.AimDownSightsTimeMult = 0.9
+
+ATT.Model = "models/weapons/arc9/atts/ik/mw3e_ak_ik.mdl"
+ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/black_detail"
+ATT.Scale = 1
+ATT.ModelOffset = Vector(2, 0.3, -1.25)
+ATT.LHIK = true
+ATT.LHIK_Priority = 0
+
+ATT.AttachmentElements = {
+    ["mw3_magnifier"] = {
+        AttPosMods = {
+            [1] = {
+                Pos = Vector(-4.25, 0, -1.75),
+            }
+        }
+    }
+}
+
+ATT.Attachments = {
+    {
+        PrintName = "Tactical Right",
+        DefaultCompactName = "TAC R",
+        Bone = "j_gun",
+        Pos = Vector(-4, 0.7, 0.4),
+        Ang = Angle(0, 0, -90),
+        Icon_Offset = Vector(1,1,0),
+        Category =  {"cod_tactical"},
+        InstalledElements = {"mw3_tacslot"},
+    },
+    {
+        PrintName = "Tactical Left",
+        DefaultCompactName = "TAC L",
+        Bone = "j_gun",
+        Pos = Vector(-4, -0.7, 0.4),
+        Ang = Angle(0, 0, 90),
+        Icon_Offset = Vector(1,1,0),
+        Category =  {"cod_tactical"},
+        InstalledElements = {"mw3_tacslot"},
+    },
+}
+
+ARC9.LoadAttachment(ATT, "bo1_ultimate_ak_furniture_modern3")
 
 -- MAGAZINES MAGS
 

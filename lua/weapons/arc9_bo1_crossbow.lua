@@ -24,8 +24,8 @@ SWEP.Slot = 4
 SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arc9/c_bo1_crossbow.mdl"
-SWEP.WorldModel = "models/weapons/arc9/c_bo1_crossbow.mdl"
--- SWEP.WorldModelMirror = "models/weapons/arc9/c_bo1_crossbow.mdl"
+SWEP.WorldModel = "models/weapons/w_crossbow.mdl"
+SWEP.WorldModelMirror = "models/weapons/arc9/c_bo1_crossbow.mdl"
 SWEP.MirrorVMWM = true
 SWEP.NoTPIKVMPos = true
 SWEP.WorldModelOffset = {
