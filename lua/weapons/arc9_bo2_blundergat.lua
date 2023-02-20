@@ -24,7 +24,7 @@ SWEP.Slot = 2
 SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arc9/c_bo2_blundergat.mdl"
-SWEP.WorldModel = "models/weapons/arc9/w_bo2_blundergat.mdl"
+SWEP.WorldModel = "models/weapons/w_shot_xm1014.mdl"
 SWEP.MirrorWorldModel = "models/weapons/arc9/w_bo2_blundergat.mdl"
 SWEP.MirrorVMWM = true
 SWEP.NoTPIKVMPos = true

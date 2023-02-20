@@ -25,7 +25,8 @@ SWEP.Slot = 3
 SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arc9/c_waw_dp28.mdl"
-SWEP.WorldModel = "models/weapons/arc9/c_waw_dp28.mdl"
+SWEP.WorldModel = "models/weapons/w_mach_m249para.mdl"
+SWEP.WorldModelMirror = "models/weapons/arc9/c_waw_dp28.mdl"
 SWEP.MirrorVMWM = true
 SWEP.NoTPIKVMPos = true
 SWEP.WorldModelOffset = {

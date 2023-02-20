@@ -24,7 +24,7 @@ SWEP.Slot = 2
 SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arc9/c_bo2_storm.mdl"
-SWEP.WorldModel = "models/weapons/arc9/c_bo2_storm.mdl"
+SWEP.WorldModel = "models/weapons/w_snip_awp.mdl"
 SWEP.WorldModelMirror = "models/weapons/arc9/c_bo2_storm.mdl"
 SWEP.MirrorVMWM = true
 SWEP.NoTPIKVMPos = true

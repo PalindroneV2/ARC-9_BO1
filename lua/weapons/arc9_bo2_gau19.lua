@@ -25,7 +25,7 @@ SWEP.Slot = 4
 SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arc9/c_bo2_gau19.mdl"
-SWEP.WorldModel = "models/weapons/arc9/w_bo2_gau19.mdl"
+SWEP.WorldModel = "models/weapons/w_mach_m249para.mdl"
 SWEP.MirrorVMWM = true
 SWEP.NoTPIKVMPos = true
 SWEP.WorldModelMirror = "models/weapons/arc9/w_bo2_gau19.mdl"
@@ -74,7 +74,8 @@ SWEP.TracerEffect = "ARC9_tracer" -- The effect to use for hitscan tracers
 SWEP.TracerColor = Color(255, 255, 255) -- Color of tracers. Only works if tracer effect supports it. For physical bullets, this is compressed down to 9-bit color.
 
 SWEP.ChamberSize = 0 -- dont fucking change this again.
-SWEP.ClipSize = 500 -- DefaultClip is automatically set.
+SWEP.ClipSize = 1 -- DefaultClip is automatically set.
+SWEP.SupplyLimit = 500 -- Amount of magazines of ammo this gun can take from an ARC9 supply crate.
 SWEP.ReloadTime = 1
 
 SWEP.BottomlessClip = true
@@ -125,7 +126,6 @@ SWEP.AimDownSightsTime = 1
 SWEP.SprintToFireTime = 0.75
 
 SWEP.RPM = 1666
--- SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
         Mode = -1,

@@ -25,8 +25,9 @@ ATT.Attachments = {
         DefaultIcon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m4.png", "mips smooth"),
         Category = {"retro_ar15_handguard_mloks"},
         Bone = "j_gun",
-        Pos = Vector(0, 0, -2),
+        Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(7, 0, 3.75),
         ExcludeElements = {"is_patriot"},
     },
     {
@@ -34,7 +35,7 @@ ATT.Attachments = {
         DefaultCompactName = "None",
         Bone = "j_gun",
         Scale = 0.9,
-        Pos = Vector(-4.9, 0, -0.57),
+        Pos = Vector(-13.15, 0, -2.5125),
         Icon_Offset = Vector(3, 0, 0),
         Ang = Angle(0, 0, 0),
         Category = {"cod_muzzle"},
@@ -45,18 +46,19 @@ ATT.Attachments = {
         DefaultCompactName = "None",
         Bone = "j_gun",
         Scale = 0.9,
-        Pos = Vector(-5.25, 0, -0.57),
+        Pos = Vector(-13.425, 0, -2.5125),
         Icon_Offset = Vector(3, 0, 0),
         Ang = Angle(0, 0, 0),
         Category = {"cod_muzzle_pistol","cod_muzzle_smg"},
         RequireElements = {"9mm_mag"},
         ExcludeElements = {"is_patriot"},
+        RejectAttachments = { ["bo2_muzzle_suppressor_pistol_2025"] = true },
     },
     {
         PrintName = "Underbarrel",
         DefaultCompactName = "UB",
         Bone = "j_gun",
-        Pos = Vector(-2, 0, 0.35),
+        Pos = Vector(-9, 0, 0.35-1.75),
         Ang = Angle(0, 0, 0),
         Category = {"cod_rail_underbarrel"},
         ExcludeElements = {"ar15_ris", "mlok", "is_patriot"}
@@ -170,14 +172,15 @@ ATT.Attachments = {
         DefaultIcon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m4.png", "mips smooth"),
         Category = {"retro_ar15_handguard_carbine", "retro_ar15_handguard_10", "retro_ar15_handguard_commando", "retro_ar15_handguard_mloks"},
         Bone = "j_gun",
-        Pos = Vector(0, 0, -2),
+        Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(7, 0, 3.75),
     },
     {
         PrintName = "Muzzle",
         DefaultCompactName = "Birdcage",
         Bone = "j_gun",
-        Pos = Vector(-7, 0, -0.5),
+        Pos = Vector(-14, 0, -2.25),
         Ang = Angle(0, 0, 0),
         Category = {"cod_muzzle"},
         ExcludeElements = {"is_patriot"},
@@ -185,7 +188,7 @@ ATT.Attachments = {
     {
         PrintName = "Cosmetic II",
         Bone = "j_gun",
-        Pos = Vector(10, 0, -3.5),
+        Pos = Vector(2, 0, -3.5),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_cosmetic_ar15"},
         ExcludeElements = {"nosling"},
@@ -196,7 +199,7 @@ ATT.Attachments = {
         PrintName = "Underbarrel",
         DefaultCompactName = "UB",
         Bone = "j_gun",
-        Pos = Vector(-2, 0, 0.35),
+        Pos = Vector(-9, 0, -1.35), --(-4, 0, -0.4)
         Ang = Angle(0, 0, 0),
         Category = {"cde_m203", "cod_rail_underbarrel"},
         ExcludeElements = {"ar15_ris", "mlok", "is_patriot"}
@@ -205,8 +208,9 @@ ATT.Attachments = {
         PrintName = "Gasblock",
         DefaultCompactName = "G.I.",
         Bone = "j_gun",
-        Pos = Vector(-6, 0, -2.5),
+        Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(13.5, 0, 4.15),
         Category = {"retro_ar15_front_cut"},
         ExcludeElements = {"ar15_ris", "mlok", "handguard_patriot", "handguard_famas"}
     },
@@ -256,21 +260,22 @@ ATT.Attachments = {
         DefaultIcon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m4.png", "mips smooth"),
         Category = {"retro_ar15_handguard_carbine", "retro_ar15_handguard_11","retro_ar15_handguard_commando", "retro_ar15_handguard_mloks"},
         Bone = "j_gun",
-        Pos = Vector(0, 0, -2),
+        Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(7, 0, 3.75),
     },
     {
         PrintName = "Muzzle",
         DefaultCompactName = "Birdcage",
         Bone = "j_gun",
-        Pos = Vector(-8.1, 0, -0.5),
+        Pos = Vector(-15.2, 0, -0.5 - 1.75),
         Ang = Angle(0, 0, 0),
         Category = {"retro_ar15_muzzle", "cod_muzzle"},
     },
     {
         PrintName = "Cosmetic II",
         Bone = "j_gun",
-        Pos = Vector(10, 0, -3.5),
+        Pos = Vector(2, 0, -3.5),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_cosmetic_ar15"},
         ExcludeElements = {"nosling"},
@@ -281,7 +286,7 @@ ATT.Attachments = {
         PrintName = "Underbarrel",
         DefaultCompactName = "UB",
         Bone = "j_gun",
-        Pos = Vector(-2, 0, 0.35),
+        Pos = Vector(-9, 0, -1.35), --(-4, 0, -0.4)
         Ang = Angle(0, 0, 0),
         Category = {"cde_m203", "bo1_mk", "cod_rail_underbarrel"},
         ExcludeElements = {"ar15_ris", "mlok","handguard_flamer"}
@@ -290,8 +295,9 @@ ATT.Attachments = {
         PrintName = "Gasblock",
         DefaultCompactName = "G.I.",
         Bone = "j_gun",
-        Pos = Vector(-6, 0, -2.5),
+        Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(13.5, 0, 4.15),
         Category = {"retro_ar15_front_cut"},
         ExcludeElements = {"ar15_ris", "mlok", "handguard_patriot", "handguard_famas"}
     },
@@ -360,21 +366,22 @@ ATT.Attachments = {
         DefaultIcon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m4.png", "mips smooth"),
         Category = {"retro_ar15_handguard_carbine", "retro_ar15_handguard_14", "retro_ar15_handguard_mloks"},
         Bone = "j_gun",
-        Pos = Vector(0, 0, -2),
+        Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(7, 0, 3.75),
     },
     {
         PrintName = "Muzzle",
         DefaultCompactName = "Birdcage",
         Bone = "j_gun",
-        Pos = Vector(-10.75, 0, -0.5),
+        Pos = Vector(-18, 0, -0.5 - 1.75),
         Ang = Angle(0, 0, 0),
         Category = {"cod_muzzle"},
     },
     {
         PrintName = "Cosmetic II",
         Bone = "j_gun",
-        Pos = Vector(10, 0, -3.5),
+        Pos = Vector(2, 0, -3.5),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_cosmetic_ar15"},
         ExcludeElements = {"nosling"},
@@ -385,7 +392,7 @@ ATT.Attachments = {
         PrintName = "Underbarrel",
         DefaultCompactName = "UB",
         Bone = "j_gun",
-        Pos = Vector(-2, 0, 0.35),
+        Pos = Vector(-9, 0, -1.35), --(-4, 0, -0.4)
         Ang = Angle(0, 0, 0),
         Category = {"cde_m203", "bo1_mk", "cod_rail_underbarrel"},
         ExcludeElements = {"ar15_ris", "mlok", "handguard_flamer"}
@@ -394,8 +401,9 @@ ATT.Attachments = {
         PrintName = "Gasblock",
         DefaultCompactName = "G.I.",
         Bone = "j_gun",
-        Pos = Vector(-6, 0, -2.5),
+        Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(13.5, 0, 4.15),
         Category = {"retro_ar15_front_cut"},
         ExcludeElements = {"ar15_ris", "mlok", "handguard_patriot", "handguard_famas"}
     },
@@ -444,14 +452,15 @@ ATT.Attachments = {
         DefaultIcon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m4.png", "mips smooth"),
         Category = {"retro_ar15_handguard_carbine", "retro_ar15_handguard_20", "retro_ar15_handguard_14", "retro_ar15_handguard_16"},
         Bone = "j_gun",
-        Pos = Vector(0, 0, -2),
+        Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(7, 0, 3.75),
     },
     {
         PrintName = "Muzzle",
         DefaultCompactName = "Birdcage",
         Bone = "j_gun",
-        Pos = Vector(-12.75, 0, -0.5),
+        Pos = Vector(-19.75, 0, -0.5-1.75),
         Ang = Angle(0, 0, 0),
         Category = {"cod_muzzle"},
     },
@@ -459,7 +468,8 @@ ATT.Attachments = {
         PrintName = "Gasblock",
         DefaultCompactName = "G.I.",
         Bone = "j_gun",
-        Pos = Vector(-11.5, 0, -2.5),
+        Pos = Vector(0, 0, 0),
+        Icon_Offset = Vector(19, 0, 4.15),
         Ang = Angle(0, 0, 0),
         Category = {"retro_ar15_front_cut"},
         ExcludeElements = {"ar15_ris", "mlok", "handguard_patriot", "carbine_hg", "handguard_famas"}
@@ -503,6 +513,24 @@ ATT.Category = {"retro_ar15_front_iron"}
 ATT.ActivateElements = {"troy_front"}
 ATT.ExcludeElements = {"mw2_m4_irons"}
 -- ATT.ExcludeElements = {"cod_rail_riser", "mw2_m4_irons"}
+ATT.Model = "models/weapons/arc9/atts/retro_ar15/front_irons.mdl"
+ATT.ModelOffset = Vector(-13.8, 0, -2.75)
+ATT.Bonemerge = true
+
+-- ATT.DrawFunc = function(swep, model, wm)
+--     local attached = swep:GetElements()
+--     local frontval = 0
+--     if attached["carbine"] then
+--         frontval = 1
+--     end
+--     if attached["handguard_mlok_short"] then
+--         frontval = 1
+--     end
+--     if attached["handguard_ris_mw19"] then
+--         frontval = 2
+--     end
+--     model:SetBodygroup(0, frontval)
+-- end
 
 ARC9.LoadAttachment(ATT, "retro_ar15_front_troy")
 
@@ -521,6 +549,10 @@ ATT.Category = {"retro_ar15_front_iron"}
 ATT.ActivateElements = {"matech_front"}
 ATT.ExcludeElements = {"mw2_m4_irons"}
 -- ATT.ExcludeElements = {"cod_rail_riser", "mw2_m4_irons"}
+ATT.Model = "models/weapons/arc9/atts/retro_ar15/front_irons.mdl"
+ATT.ModelOffset = Vector(-13.8, 0, -2.75)
+ATT.ModelBodygroups = "3"
+ATT.Bonemerge = true
 
 ARC9.LoadAttachment(ATT, "retro_ar15_front_matech")
 
@@ -539,6 +571,10 @@ ATT.Category = {"retro_ar15_front_iron"}
 ATT.ActivateElements = {"masada_front"}
 ATT.ExcludeElements = {"mw2_m4_irons"}
 -- ATT.ExcludeElements = {"cod_rail_riser", "mw2_m4_irons"}
+ATT.Model = "models/weapons/arc9/atts/retro_ar15/front_irons.mdl"
+ATT.ModelOffset = Vector(-13.8, 0, -2.75)
+ATT.ModelBodygroups = "6"
+ATT.Bonemerge = true
 
 ARC9.LoadAttachment(ATT, "retro_ar15_front_masada")
 
@@ -658,14 +694,14 @@ ATT.Attachments = {
         ExcludeElements = {"mw2_m4_irons"},
         -- ExcludeElements = {"cod_optic", "cod_rail_riser", "mw2_m4_irons"},
         Bone = "j_gun",
-        Pos = Vector(-11.5, 0, -1),
+        Pos = Vector(-18.5, 0, -4.15),
         Ang = Angle(0, 0, 0),
     },
     {
         PrintName = "Underbarrel",
         DefaultCompactName = "UB",
         Bone = "j_gun",
-        Pos = Vector(-4, 0, 2.4),
+        Pos = Vector(-10.5, 0, -1.3),
         Ang = Angle(0, 0, 0),
         Category = {"cde_m203", "bo1_mk", "cod_grips"},
     },
@@ -673,7 +709,7 @@ ATT.Attachments = {
         PrintName = "Tactical Right",
         DefaultCompactName = "TAC R",
         Bone = "j_gun",
-        Pos = Vector(-8, 0.7, 1.5),
+        Pos = Vector(-15, 0.7, -2.25),
         Ang = Angle(0, 0, -90),
         Category =  {"cod_tactical"}
     },
@@ -681,7 +717,7 @@ ATT.Attachments = {
         PrintName = "Tactical Left",
         DefaultCompactName = "TAC L",
         Bone = "j_gun",
-        Pos = Vector(-8, -0.7, 1.5),
+        Pos = Vector(-15, -0.7, -2.25),
         Ang = Angle(0, 0, 90),
         Category =  {"cod_tactical"}
     },
@@ -689,7 +725,7 @@ ATT.Attachments = {
         PrintName = "Tactical Top",
         DefaultCompactName = "TAC TOP",
         Bone = "j_gun",
-        Pos = Vector(-6, 0, 0.5),
+        Pos = Vector(-13, 0, -3.25),
         Ang = Angle(0, 0, 180),
         Category =  {"cod_tactical_top"},
         ExcludeElements = {"mw2_m4_irons"}
@@ -698,7 +734,7 @@ ATT.Attachments = {
         PrintName = "Tactical Bottom",
         DefaultCompactName = "TAC BOT",
         Bone = "j_gun",
-        Pos = Vector(-8, 0, 2.3),
+        Pos = Vector(-15, 0, 2.3 - 3.75),
         Ang = Angle(0, 0, 0),
         Category = {"cod_tactical", "bo1_bipod"},
         ExcludeElements = {"cde_m203", "bo1_mk"}
@@ -734,14 +770,14 @@ ATT.Attachments = {
         ExcludeElements = {"mw2_m4_irons"},
         -- ExcludeElements = {"cod_optic", "cod_rail_riser", "mw2_m4_irons"},
         Bone = "j_gun",
-        Pos = Vector(-10, 0, -1),
+        Pos = Vector(-18.5, 0, -4.15),
         Ang = Angle(0, 0, 0),
     },
     {
         PrintName = "Underbarrel",
         DefaultCompactName = "UB",
         Bone = "j_gun",
-        Pos = Vector(-4, 0, 2.35),
+        Pos = Vector(-10.5, 0, -1.2),
         Ang = Angle(0, 0, 0),
         Category = {"cde_m203", "bo1_mk", "cod_grips"},
         InstalledElements = {"mlok_rails"},
@@ -750,7 +786,7 @@ ATT.Attachments = {
         PrintName = "Tactical Right",
         DefaultCompactName = "TAC R",
         Bone = "j_gun",
-        Pos = Vector(-9, 0.9, 1.5),
+        Pos = Vector(-15, 0.9, -2.25),
         Ang = Angle(0, 0, -90),
         Category =  {"cod_tactical"},
         InstalledElements = {"mlok_rails"},
@@ -759,7 +795,7 @@ ATT.Attachments = {
         PrintName = "Tactical Left",
         DefaultCompactName = "TAC L",
         Bone = "j_gun",
-        Pos = Vector(-9, -0.9, 1.5),
+        Pos = Vector(-15, -0.9, -2.25),
         Ang = Angle(0, 0, 90),
         Category =  {"cod_tactical"},
         InstalledElements = {"mlok_rails"},
@@ -768,7 +804,7 @@ ATT.Attachments = {
         PrintName = "Tactical Top",
         DefaultCompactName = "TAC TOP",
         Bone = "j_gun",
-        Pos = Vector(-6, 0, 0.5),
+        Pos = Vector(-13, 0, -3.25),
         Ang = Angle(0, 0, 180),
         Category =  {"cod_tactical_top"},
         ExcludeElements = {"mw2_m4_irons"}
@@ -777,7 +813,7 @@ ATT.Attachments = {
         PrintName = "Tactical Bottom",
         DefaultCompactName = "TAC BOT",
         Bone = "j_gun",
-        Pos = Vector(-9, 0, 2.3),
+        Pos = Vector(-15, 0, 2.3 - 3.75),
         Ang = Angle(0, 0, 0),
         Category = {"cod_tactical", "bo1_bipod"},
         ExcludeElements = {"cde_m203", "bo1_mk"},
@@ -787,7 +823,7 @@ ATT.Attachments = {
         PrintName = "Backup Optic Left",
         DefaultCompactName = "BACKUP L",
         Bone = "j_gun",
-        Pos = Vector(-1.75, -0.9, 0.4),
+        Pos = Vector(-8.75, -0.9, -3.35),
         Ang = Angle(0, 0, -37.5),
         Category =  {"cod_optic_lp", "cod_rail_riser"},
         InstalledElements = {"mlok_rails"},
@@ -798,7 +834,7 @@ ATT.Attachments = {
         PrintName = "Backup Optic Right",
         DefaultCompactName = "BACKUP R",
         Bone = "j_gun",
-        Pos = Vector(-1.75, 0.9, 0.4),
+        Pos = Vector(-8.75, 0.9, -3.35),
         Ang = Angle(0, 0, 37.5),
         Category =  {"cod_optic_lp", "cod_rail_riser"},
         InstalledElements = {"mlok_rails"},
@@ -835,15 +871,16 @@ ATT.Attachments = {
         PrintName = "Gasblock",
         DefaultCompactName = "G.I.",
         Bone = "j_gun",
-        Pos = Vector(-6, 0, -0.5),
+        Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(13.5, 0, 4.15),
         Category = {"retro_ar15_front_cut"},
         ExcludeElements = {"ar15_ris", "mlok", "handguard_patriot"}
     },
     {
         PrintName = "Cosmetic II",
         Bone = "j_gun",
-        Pos = Vector(10, 0, -0.5),
+        Pos = Vector(2, 0, -3.5),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_cosmetic_ar15"},
         ExcludeElements = {"nosling"},
@@ -854,7 +891,7 @@ ATT.Attachments = {
         PrintName = "Underbarrel",
         DefaultCompactName = "UB",
         Bone = "j_gun",
-        Pos = Vector(-2, 0, 2.35),
+        Pos = Vector(-9, 0, -1.35), --(-4, 0, -0.4)
         Ang = Angle(0, 0, 0),
         Category = {"cde_m203", "bo1_mk", "cod_rail_underbarrel"},
         ExcludeElements = {"ar15_ris", "mlok"}
@@ -881,8 +918,9 @@ ATT.Attachments = {
         PrintName = "Gasblock",
         DefaultCompactName = "G.I.",
         Bone = "j_gun",
-        Pos = Vector(-6, 0, -0.5),
+        Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(13.5, 0, 4.15),
         Category = {"retro_ar15_front_cut"},
         ExcludeElements = {"ar15_ris", "mlok", "handguard_patriot"}
     },
@@ -890,7 +928,7 @@ ATT.Attachments = {
         PrintName = "Underbarrel",
         DefaultCompactName = "UB",
         Bone = "j_gun",
-        Pos = Vector(-3.5, 0, 2.6),
+        Pos = Vector(-10.5, 0, -1.2), --(-4, 0, -0.4)
         Ang = Angle(0, 0, 0),
         Category = {"cde_m203", "bo1_mk", "bo1_flamer", "cod_rail_underbarrel"},
         ExcludeElements = {"ar15_ris", "mlok"}
@@ -921,17 +959,17 @@ ATT.ActivateElements = {"handguard_607", "no_ubgl", "carbine_hg"}
 ATT.RecoilMult = 1.1
 ATT.AimDownSightsTimeMult = 0.9
 
-ATT.Attachments = {
-    {
-        PrintName = "Gasblock",
-        DefaultCompactName = "G.I.",
-        Bone = "j_gun",
-        Pos = Vector(-6, 0, -0.5),
-        Ang = Angle(0, 0, 0),
-        Category = {"retro_ar15_front_cut"},
-        ExcludeElements = {"ar15_ris", "mlok", "handguard_patriot"}
-    },
-}
+-- ATT.Attachments = {
+--     {
+--         PrintName = "Gasblock",
+--         DefaultCompactName = "G.I.",
+--         Bone = "j_gun",
+--         Pos = Vector(-6, 0, -0.5),
+--         Ang = Angle(0, 0, 0),
+--         Category = {"retro_ar15_front_cut"},
+--         ExcludeElements = {"ar15_ris", "mlok", "handguard_patriot"}
+--     },
+-- }
 
 ARC9.LoadAttachment(ATT, "retro_ar15_handguard_607")
 
@@ -966,9 +1004,18 @@ ATT.Attachments = {
         Category = {"cod_optic_alt"},
         Bone = "j_gun",
         InstalledElements = {"famas_rail"},
-        Pos = Vector(3, 0, -1.9),
+        Pos = Vector(-4, 0, -1.9-3.75),
         Ang = Angle(0, 0, 0),
-    }
+    },
+    {
+        PrintName = "Underbarrel",
+        DefaultCompactName = "UB",
+        Bone = "j_gun",
+        Pos = Vector(-9.5, 0, -1.2), --(-4, 0, -0.4)
+        Ang = Angle(0, 0, 0),
+        Category = {"cde_m203", "bo1_mk", "cod_rail_underbarrel"},
+        RequireElements = {"barrel_16"}
+    },
 }
 
 ATT.RecoilMult = 0.85
@@ -1039,14 +1086,14 @@ ATT.Attachments = {
         ExcludeElements = {"mw2_m4_irons"},
         -- ExcludeElements = {"cod_optic", "cod_rail_riser", "mw2_m4_irons", "cod_tactical"},
         Bone = "j_gun",
-        Pos = Vector(-6, 0, -1),
+        Pos = Vector(-13.375, 0, -4.15),
         Ang = Angle(0, 0, 0),
     },
     {
         PrintName = "Underbarrel",
         DefaultCompactName = "UB",
         Bone = "j_gun",
-        Pos = Vector(-3, 0, 2.45),
+        Pos = Vector(-10.5, 0, -1.3),
         Ang = Angle(0, 0, 0),
         Category = {"cde_m203", "bo1_mk", "cod_grips"},
         InstalledElements = {"allowtac"},
@@ -1055,7 +1102,7 @@ ATT.Attachments = {
         PrintName = "Tactical Right",
         DefaultCompactName = "TAC R",
         Bone = "j_gun",
-        Pos = Vector(-3.5, 0.7, 1.5),
+        Pos = Vector(-10.5, 0.7, -2.25),
         Ang = Angle(0, 0, -90),
         Category =  {"cod_tactical"},
         InstalledElements = {"removecovers"},
@@ -1065,7 +1112,7 @@ ATT.Attachments = {
         PrintName = "Tactical Left",
         DefaultCompactName = "TAC L",
         Bone = "j_gun",
-        Pos = Vector(-3.5, -0.7, 1.5),
+        Pos = Vector(-10.5, -0.7, -2.25),
         Ang = Angle(0, 0, 90),
         Category =  {"cod_tactical"},
         InstalledElements = {"removecovers"},
@@ -1075,10 +1122,10 @@ ATT.Attachments = {
         PrintName = "Tactical Top",
         DefaultCompactName = "TAC TOP",
         Bone = "j_gun",
-        Pos = Vector(-3, 0, 0.5),
+        Pos = Vector(-10.5, 0, 0.5-3.75),
         Ang = Angle(0, 0, 180),
         Category =  {"cod_tactical_top"},
-        RequireElements = {"gasblock_flat"},
+        -- RequireElements = {"gasblock_flat"},
         ExcludeElements = {"mw2_m4_top"}
     },
 }
@@ -1109,14 +1156,14 @@ ATT.Attachments = {
         ExcludeElements = {"mw2_m4_irons"},
         -- ExcludeElements = {"cod_optic", "cod_rail_riser", "mw2_m4_irons", "cod_tactical"},
         Bone = "j_gun",
-        Pos = Vector(-6, 0, -1),
+        Pos = Vector(-15.25, 0, -4.15),
         Ang = Angle(0, 0, 0),
     },
     {
         PrintName = "Underbarrel",
         DefaultCompactName = "UB",
         Bone = "j_gun",
-        Pos = Vector(-4, 0, 2.55),
+        Pos = Vector(-10.5, 0, -1.3),
         Ang = Angle(0, 0, 0),
         Category = {"cde_m203", "bo1_mk", "cod_grips"},
         InstalledElements = {"allowtac","mlok_rails"},
@@ -1125,7 +1172,7 @@ ATT.Attachments = {
         PrintName = "Tactical Right",
         DefaultCompactName = "TAC R",
         Bone = "j_gun",
-        Pos = Vector(-4.5, 0.9, 1.6),
+        Pos = Vector(-11.5, 0.9, 1.6-3.75),
         Ang = Angle(0, 0, -90),
         Category =  {"cod_tactical"},
         InstalledElements = {"removecovers","mlok_rails"},
@@ -1135,7 +1182,7 @@ ATT.Attachments = {
         PrintName = "Tactical Left",
         DefaultCompactName = "TAC L",
         Bone = "j_gun",
-        Pos = Vector(-4.5, -0.9, 1.6),
+        Pos = Vector(-11.5, -0.9, 1.6-3.75),
         Ang = Angle(0, 0, 90),
         Category =  {"cod_tactical"},
         InstalledElements = {"removecovers","mlok_rails"},
@@ -1145,7 +1192,7 @@ ATT.Attachments = {
         PrintName = "Tactical Top",
         DefaultCompactName = "TAC TOP",
         Bone = "j_gun",
-        Pos = Vector(-3, 0, 0.5),
+        Pos = Vector(-10, 0, 0.5-3.75),
         Ang = Angle(0, 0, 180),
         Category =  {"cod_tactical_top"},
         RequireElements = {"gasblock_flat"},
@@ -1155,7 +1202,7 @@ ATT.Attachments = {
         PrintName = "Backup Optic Left",
         DefaultCompactName = "BACKUP L",
         Bone = "j_gun",
-        Pos = Vector(-1.75, -0.9, 0.55),
+        Pos = Vector(-8.75, -0.9, -3.35),
         Ang = Angle(0, 0, -37.5),
         Category =  {"cod_optic_lp", "cod_rail_riser"},
         InstalledElements = {"mlok_rails"},
@@ -1166,7 +1213,7 @@ ATT.Attachments = {
         PrintName = "Backup Optic Right",
         DefaultCompactName = "BACKUP R",
         Bone = "j_gun",
-        Pos = Vector(-1.75, 0.9, 0.55),
+        Pos = Vector(-8.75, 0.9, -3.35),
         Ang = Angle(0, 0, 37.5),
         Category =  {"cod_optic_lp", "cod_rail_riser"},
         InstalledElements = {"mlok_rails"},
@@ -1200,14 +1247,15 @@ ATT.Attachments = {
         InstalledElements = {"gasblock_carbine_cut"},
         ExcludeElements = {"gasblock_flat"},
         Bone = "j_gun",
-        Pos = Vector(-6, 0, -1),
+        Pos = Vector(-15.5, 0, -4.15),
         Ang = Angle(0, 0, 0),
+        -- Icon_Offset = Vector(13.5, 0, 4.15),
     },
     {
         PrintName = "Underbarrel",
         DefaultCompactName = "UB",
         Bone = "j_gun",
-        Pos = Vector(-3, 0, 2.45),
+        Pos = Vector(-10.5, 0, -1.3),
         Ang = Angle(0, 0, 0),
         Category = {"cde_m203", "bo1_mk", "cod_grips"},
         InstalledElements = {"allowtac"},
@@ -1216,7 +1264,7 @@ ATT.Attachments = {
         PrintName = "Tactical Right",
         DefaultCompactName = "TAC R",
         Bone = "j_gun",
-        Pos = Vector(-3.5, 0.7, 1.5),
+        Pos = Vector(-10.5, 0.7, -2.25),
         Ang = Angle(0, 0, -90),
         Category =  {"cod_tactical"},
         InstalledElements = {"removecovers"},
@@ -1226,7 +1274,7 @@ ATT.Attachments = {
         PrintName = "Tactical Left",
         DefaultCompactName = "TAC L",
         Bone = "j_gun",
-        Pos = Vector(-3.5, -0.7, 1.5),
+        Pos = Vector(-10.5, -0.7, -2.25),
         Ang = Angle(0, 0, 90),
         Category =  {"cod_tactical"},
         InstalledElements = {"removecovers"},
@@ -1236,7 +1284,7 @@ ATT.Attachments = {
         PrintName = "Tactical Top",
         DefaultCompactName = "TAC TOP",
         Bone = "j_gun",
-        Pos = Vector(-3.5, 0, 0.5),
+        Pos = Vector(-10.5, 0, 0.5-3.75),
         Ang = Angle(0, 0, 180),
         Category =  {"cod_tactical_top"},
         -- RequireElements = {"gasblock_flat"},

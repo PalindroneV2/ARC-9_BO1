@@ -73,7 +73,8 @@ SWEP.TracerEffect = "ARC9_tracer" -- The effect to use for hitscan tracers
 SWEP.TracerColor = Color(255, 255, 255) -- Color of tracers. Only works if tracer effect supports it. For physical bullets, this is compressed down to 9-bit color.
 
 SWEP.ChamberSize = 0 -- dont fucking change this again.
-SWEP.ClipSize = 500 -- DefaultClip is automatically set.
+SWEP.ClipSize = 1 -- DefaultClip is automatically set.
+SWEP.SupplyLimit = 500 -- Amount of magazines of ammo this gun can take from an ARC9 supply crate.
 SWEP.ReloadTime = 1
 
 SWEP.BottomlessClip = true

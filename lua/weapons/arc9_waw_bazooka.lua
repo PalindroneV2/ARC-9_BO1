@@ -26,7 +26,7 @@ SWEP.Slot = 4
 SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/ARC9/c_waw_bazooka.mdl"
-SWEP.WorldModel = "models/weapons/ARC9/c_waw_bazooka.mdl"
+SWEP.WorldModel = "models/weapons/w_rocket_launcher.mdl"
 SWEP.MirrorWorldModel = "models/weapons/ARC9/c_waw_bazooka.mdl"
 SWEP.MirrorVMWM = true
 SWEP.NoTPIKVMPos = true

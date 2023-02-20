@@ -26,7 +26,8 @@ SWEP.Slot = 2
 SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arc9/c_bo2_r870.mdl"
-SWEP.WorldModel = "models/weapons/arc9/c_bo2_r870.mdl"
+SWEP.WorldModel = "models/weapons/w_shot_m3super90.mdl"
+SWEP.WorldModelMirror = "models/weapons/arc9/c_bo2_r870.mdl"
 SWEP.MirrorVMWM = true
 SWEP.NoTPIKVMPos = true
 SWEP.WorldModelOffset = {
@@ -477,7 +478,7 @@ SWEP.Animations = {
         Source = "reload_in",
         Time = 40 / 30,
         RestoreAmmo = 1,
-        MinProgress = 1,
+        MinProgress = 21 / 30,
         EventTable = {
             {s = "ARC9_BO2.Shotgun_Shell", t = 21 / 30},
         },
@@ -504,8 +505,8 @@ SWEP.Animations = {
     ["reload_start_fast"] = {
         Source = "reload_in_fast",
         Time = 40 / 30,
-        MinProgress = 1,
         RestoreAmmo = 2,
+        MinProgress = 21 / 30,
         EventTable = {
             {s = "ARC9_BO2.Shotgun_Shell", t = 21 / 30},
         },
@@ -513,8 +514,8 @@ SWEP.Animations = {
     ["reload_insert_fast"] = {
         Source = "reload_loop_fast",
         Time = 26 / 30,
-        MinProgress = 15 / 30,
         RestoreAmmo = 1,
+        MinProgress = 15 / 30,
         EventTable = {
             {s = "ARC9_BO2.Shotgun_Shell", t = 10 / 30},
         },
@@ -534,7 +535,7 @@ SWEP.Animations = {
         Source = "reload_in",
         Time = 40 / 30,
         RestoreAmmo = 6,
-        MinProgress = 1,
+        MinProgress = 21 / 30,
         EventTable = {
             {s = "ARC9_BO2.Shotgun_Shell", t = 21 / 30},
         },
@@ -562,8 +563,8 @@ SWEP.Animations = {
     ["reload_start_fast_pap"] = {
         Source = "reload_in_fast",
         Time = 40 / 30,
-        RestoreAmmo = 2,
-        MinProgress = 12,
+        MinProgress = 21 / 30,
+        RestoreAmmo = 12,
         EventTable = {
             {s = "ARC9_BO2.Shotgun_Shell", t = 21 / 30},
         },

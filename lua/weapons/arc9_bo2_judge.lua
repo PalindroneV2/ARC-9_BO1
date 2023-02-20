@@ -24,10 +24,10 @@ SWEP.Slot = 1
 SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arc9/c_bo2_judge.mdl"
-SWEP.WorldModel = "models/weapons/arc9/w_bo2_judge.mdl"
+SWEP.WorldModel = "models/weapons/w_357.mdl"
+SWEP.WorldModelMirror = "models/weapons/arc9/c_bo2_judge.mdl"
 SWEP.MirrorVMWM = true
 SWEP.NoTPIKVMPos = true
-SWEP.WorldModelMirror = "models/weapons/arc9/c_bo2_judge.mdl"
 SWEP.WorldModelOffset = {
     Pos        =    Vector(-8.5, 3.25, -4.5),
     Ang        =    Angle(-10, -3, 180),

@@ -25,7 +25,7 @@ SWEP.Slot = 4
 SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arc9/c_waw_panzerschreck.mdl"
-SWEP.WorldModel = "models/weapons/arc9/w_waw_panzerschreck.mdl"
+SWEP.WorldModel = "models/weapons/w_rocket_launcher.mdl"
 SWEP.MirrorWorldModel = "models/weapons/arc9/w_waw_panzerschreck.mdl"
 SWEP.MirrorVMWM = true
 SWEP.NoTPIKVMPos = true

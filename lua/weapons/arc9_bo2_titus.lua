@@ -25,7 +25,7 @@ SWEP.Slot = 2
 SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arc9/c_bo2_titus.mdl"
-SWEP.WorldModel = "models/weapons/arc9/c_bo2_titus.mdl"
+SWEP.WorldModel = "v"
 SWEP.WorldModelMirror = "models/weapons/arc9/c_bo2_titus.mdl"
 SWEP.MirrorVMWM = true
 SWEP.NoTPIKVMPos = true

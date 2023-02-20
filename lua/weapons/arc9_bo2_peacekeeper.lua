@@ -25,7 +25,7 @@ SWEP.Slot = 2
 SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arc9/c_bo2_peacekeeper.mdl"
-SWEP.WorldModel = "models/weapons/arc9/w_bo2_peacekeeper.mdl"
+SWEP.WorldModel = "models/weapons/w_rif_m4a1.mdl"
 SWEP.WorldModelMirror = "models/weapons/arc9/w_bo2_peacekeeper.mdl"
 SWEP.MirrorVMWM = true
 SWEP.NoTPIKVMPos = true

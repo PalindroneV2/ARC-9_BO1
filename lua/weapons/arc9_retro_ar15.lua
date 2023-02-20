@@ -534,9 +534,9 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         length = 8
         hand = 9
         gasblock = 4
-        frontsight = 10
+        frontsight = 1
         if attached["cod_optic"] then
-            frontsight = 11
+            frontsight = 2
         end
         if attached["mlok"] then
             length = 8
@@ -608,49 +608,11 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     end
 
     if attached["troy_front"] then
-        frontsight = 1
         gasblock = 2
-        if attached["carbine"] then
-            frontsight = 2
-            if hand == 5 then
-                gasblock = 3
-            end
-        end
-        if hand == 3 then
-            frontsight = 1
-            if length < 2 then
-                gasblock = 2
-            end
-            if length == 2 then
-                gasblock = 4
-            end
-        end
-        if hand == 11 then
-            frontsight = 1
-            gasblock = 2
-            if length >= 2 then
-                gasblock = 3
-            end
-        end
-        if hand == 12 then
-            frontsight = 3
+        if attached["handguard_ris"] then
             gasblock = 3
         end
-        if hand == 10 then
-            gasblock = 4
-            frontsight = 3
-        end
-    elseif attached["matech_front"] then
-        frontsight = 4
-        gasblock = 2
-        if attached["carbine"] then
-            frontsight = 5
-            if hand == 5 then
-                gasblock = 3
-            end
-        end
-        if hand == 3 then
-            frontsight = 4
+        if attached["handguard_a4"] then
             if length < 2 then
                 gasblock = 2
             end
@@ -658,32 +620,49 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
                 gasblock = 4
             end
         end
-        if hand == 10 then
-            gasblock = 4
-            frontsight = 6
-        end
-        if hand == 11 then
-            frontsight = 4
+        if attached["handguard_mlok"] then
             gasblock = 2
             if length >= 2 then
                 gasblock = 3
             end
         end
-        if hand == 12 then
-            frontsight = 6
+        if attached["handguard_mlok_short"] then
+            gasblock = 3
+        end
+        if attached["handguard_ris_mw19"] then
+            gasblock = 4
+        end
+    elseif attached["matech_front"] then
+        gasblock = 2
+        if attached["handguard_ris"] then
+            gasblock = 3
+        end
+        if attached["handguard_a4"] then
+            if length < 2 then
+                gasblock = 2
+            end
+            if length == 2 then
+                gasblock = 4
+            end
+        end
+        if attached["handguard_ris_mw19"] then
+            gasblock = 4
+        end
+        if attached["handguard_mlok"] then
+            gasblock = 2
+            if length >= 2 then
+                gasblock = 3
+            end
+        end
+        if attached["handguard_mlok_short"] then
             gasblock = 3
         end
     elseif attached["masada_front"] then
-        frontsight = 7
         gasblock = 2
-        if attached["carbine"] then
-            frontsight = 8
-            if hand == 5 then
-                gasblock = 3
-            end
+        if attached["handguard_ris"] then
+            gasblock = 3
         end
-        if hand == 3 then
-            frontsight = 7
+        if attached["handguard_a4"] then
             if length < 2 then
                 gasblock = 2
             end
@@ -691,27 +670,27 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
                 gasblock = 4
             end
         end
-        if hand == 10 then
+        if attached["handguard_ris_mw19"] then
             gasblock = 4
             frontsight = 9
         end
-        if hand == 11 then
+        if attached["handguard_mlok"] then
             frontsight = 7
             gasblock = 2
             if length >= 2 then
                 gasblock = 3
             end
         end
-        if hand == 12 then
+        if attached["handguard_mlok_short"] then
             frontsight = 9
             gasblock = 3
         end
     elseif attached["gasblock_flat"] then
         gasblock = 2
-        if length == 2 and hand == 3 then
+        if length == 2 and attached["handguard_a4"] then
             gasblock = 4
         end
-        if hand == 5 then
+        if attached["handguard_ris"] then
             gasblock = 3
         end
         if attached["carbine_hg"] then
@@ -1079,8 +1058,9 @@ SWEP.Attachments = {
         DefaultCompactName = "20\" OG",
         DefaultIcon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m16.png", "mips smooth"),
         Bone = "j_gun",
-        Pos = Vector(7, 0, 1.75),
+        Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(7, 0, 1.75),
         Category = {"retro_ar15_barrel"},
     },
     {
@@ -1088,8 +1068,9 @@ SWEP.Attachments = {
         DefaultCompactName = "A1",
         DefaultIcon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m16.png", "mips smooth"),
         Bone = "j_gun",
-        Pos = Vector(7, 0, 3.75),
+        Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(7, 0, 3.75),
         Category = {"retro_ar15_handguard_20"},
         ExcludeElements = {"carbine"}
     },
@@ -1106,7 +1087,8 @@ SWEP.Attachments = {
         PrintName = "Front Sight",
         DefaultCompactName = "G.I.",
         Bone = "j_gun",
-        Pos = Vector(19, 0, 4.15),
+        Pos = Vector(0, 0, 0),
+        Icon_Offset = Vector(19, 0, 4.15),
         Ang = Angle(0, 0, 0),
         Category = {"retro_ar15_front_cut"},
         ExcludeElements = {"ar15_ris", "mlok", "carbine", "handguard_famas"}
