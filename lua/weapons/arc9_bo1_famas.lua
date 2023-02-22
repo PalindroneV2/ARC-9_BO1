@@ -124,6 +124,9 @@ SWEP.Firemodes = {
     {
         Mode = 1,
     },
+    {
+        Mode = 3,
+    },
 }
 SWEP.RunawayBurst = true
 SWEP.PostBurstDelay = 0.1
@@ -416,7 +419,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(2, 0, 0),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_fcg_bst", "bo1_fcg_semi"},
+        Category = {"bo1_fcg_semi"},
     },
     {
         PrintName = "Ammunition",

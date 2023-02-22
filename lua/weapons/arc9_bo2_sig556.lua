@@ -127,6 +127,7 @@ SWEP.Firemodes = {
     },
 }
 SWEP.RunawayBurst = true
+SWEP.PostBurstDelay = 0.2
 SWEP.ARC9WeaponCategory = 4
 SWEP.NPCWeight = 100
 
@@ -286,30 +287,23 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
 
     local suffix = ""
 
-    local empty = ""
-
-    if self:Clip1() <= 0 then
-        empty = "_empty"
+    if attached["bo2_m320"] then
+        suffix = "_m320"
+        if self:GetUBGL() then
+            suffix = "_glsetup"
+        end
     end
-
+    local newanim = anim
     if attached["bo2_fastmag"] then
         if anim == "reload" then
-            return "fast"
+            newanim = "fast"
         end
         if anim == "reload_empty" then
-            return "fast_empty"
+            newanim = "fast_empty"
         end
-        if attached["bo2_m320"] then
-            if anim == "reload" then
-                return "reload_m320_fast"
-            end
-            if anim == "reload_empty" then
-                return "reload_empty_m320_fast"
-            end
-        end
-    else
-        return anim .. suffix .. empty
     end
+
+    return newanim .. suffix
 end
 
 SWEP.Attachments = {
@@ -622,7 +616,6 @@ SWEP.Animations = {
     ["fast"] = {
         Source = "reload_fast",
         Time = 1.79,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         IKTimeLine = {
             {
                 t = 0,
@@ -654,7 +647,6 @@ SWEP.Animations = {
     ["fast_empty"] = {
         Source = "reload_empty_fast",
         Time = 2.3,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         IKTimeLine = {
             {
                 t = 0,
@@ -765,15 +757,15 @@ SWEP.Animations = {
         Source = "holster_gl",
         Time = 0.75,
     },
-    ["idle_m320_empty"] = {
+    ["idle_empty_m320"] = {
         Source = "idle_empty_gl",
         Time = 1 / 30,
     },
-    ["draw_m320_empty"] = {
+    ["draw_empty_m320"] = {
         Source = "draw_empty_gl",
         Time = 1,
     },
-    ["holster_m320_empty"] = {
+    ["holster_empty_m320"] = {
         Source = "holster_empty_gl",
         Time = 0.75,
     },
@@ -800,7 +792,7 @@ SWEP.Animations = {
         Time = 5 / 30,
         ShellEjectAt = 0,
     },
-    ["fire_iron_m320"] = {
+    ["fire_iron_empty_m320"] = {
         Source = {"fire_last_ads_gl"},
         Time = 5 / 30,
         ShellEjectAt = 0,
@@ -808,7 +800,6 @@ SWEP.Animations = {
     ["reload_m320"] = {
         Source = "reload_gl",
         Time = 2.5,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         EventTable = {
             {s = "ARC9_BO2.AR_MagOut", t = 0.6},
             {s = "ARC9_BO2.AR_MagIn", t = 1.25}
@@ -818,7 +809,6 @@ SWEP.Animations = {
     ["reload_empty_m320"] = {
         Source = "reload_empty_gl",
         Time = 3,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         EventTable = {
             {s = "ARC9_BO2.AR_MagOut", t = 0.8},
             {s = "ARC9_BO2.AR_MagIn", t = 1.25},
@@ -827,25 +817,24 @@ SWEP.Animations = {
         },
         MinProgress = 2.0,
     },
-    ["reload_m320_fast"] = {
+    ["fast_m320"] = {
         Source = "reload_gl_fast",
-        Time = 2.5,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        Time = 1.79,
         EventTable = {
             {s = "ARC9_BO2.AR_MagOut", t = 0.6},
-            {s = "ARC9_BO2.AR_MagIn", t = 1.25}
+            {s = "ARC9_BO2.AR_MagIn", t = 1.15}
         },
+        MinProgress = 1.4
     },
-    ["reload_empty_m320_fast"] = {
+    ["fast_empty_m320"] = {
         Source = "reload_empty_gl_fast",
-        Time = 3,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        Time = 2.3,
         EventTable = {
             {s = "ARC9_BO2.AR_MagOut", t = 0.6},
             {s = "ARC9_BO2.AR_MagIn", t = 1.25},
-            {s = "ARC9_BO2.AR_Back", t = 1.8},
             {s = "ARC9_BO2.AR_Fwd", t = 1.9},
         },
+        MinProgress = 2.0,
     },
     ["enter_sprint_m320"] = {
         Source = "sprint_in_gl",
@@ -859,15 +848,15 @@ SWEP.Animations = {
         Source = "sprint_out_gl",
         Time = 1,
     },
-    ["enter_sprint_m320_empty"] = {
+    ["enter_sprint_empty_m320"] = {
         Source = "sprint_in_empty_gl",
         Time = 1,
     },
-    ["idle_sprint_m320_empty"] = {
+    ["idle_sprint_empty_m320"] = {
         Source = "sprint_loop_empty_gl",
         Time = 30 / 40
     },
-    ["exit_sprint_m320_empty"] = {
+    ["exit_sprint_empty_m320"] = {
         Source = "sprint_out_empty_gl",
         Time = 1,
     },

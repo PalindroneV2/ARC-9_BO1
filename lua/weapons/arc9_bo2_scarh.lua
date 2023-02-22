@@ -167,7 +167,7 @@ SWEP.ShellScale = 1.4
 SWEP.MuzzleEffectQCA = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectQCA = 2 -- which attachment to put the case effect on
 SWEP.ProceduralViewQCA = 1
-SWEP.CamQCA = 4
+SWEP.CamQCA = 3
 
 SWEP.BulletBones = {
 }
@@ -232,6 +232,11 @@ SWEP.AttachmentElements = {
             {2,1}
         },
     },
+    ["mount"] = {
+        Bodygroups = {
+            {2,1}
+        },
+    },
     ["stock_m"] = {
         Bodygroups = {
             {4,1}
@@ -245,11 +250,25 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local attached = data.elements
     local CUSTSTATE = self:GetCustomize()
 
+    local iron = 0
+    local mag = 0
     if CUSTSTATE then
         vm:SetBodygroup(0,1)
+        iron = iron + 2
+        mag = 1
     else
         vm:SetBodygroup(0,0)
+        iron = 0
+        mag = 0
     end
+    if attached["bo2_fastmag"] then
+        mag = mag + 2
+    end
+    if attached["mount"] then
+        iron = iron + 1
+    end
+    vm:SetBodygroup(1,mag)
+    vm:SetBodygroup(2,iron)
 
     local camo = 0
     if attached["universal_camo"] then
@@ -279,22 +298,29 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
     local suffix = ""
 
     if attached["bo2_m320"] then
-        suffix = "_m203"
+        suffix = "_m320"
         if self:GetUBGL() then
             suffix = "_glsetup"
         end
-    else
-        suffix = ""
+    end
+    local newanim = anim
+    if attached["bo2_fastmag"] then
+        if anim == "reload" then
+            newanim = "fast"
+        end
+        if anim == "reload_empty" then
+            newanim = "fast_empty"
+        end
     end
 
-    return anim .. suffix
+    return newanim .. suffix
 end
 
 SWEP.Attachments = {
     {
         PrintName = "Optic",
         Bone = "j_gun",
-        Pos = Vector(2, 0.05, 3.175),
+        Pos = Vector(2, 0, 3.175),
         Ang = Angle(0, 0, 0),
         Category = {"cod_optic", "cod_rail_riser"},
         InstalledElements = {"mount"},
@@ -310,7 +336,7 @@ SWEP.Attachments = {
         PrintName = "Underbarrel",
         DefaultCompactName = "UB",
         Bone = "j_gun",
-        Pos = Vector(10, 0.1, 0.6),
+        Pos = Vector(10, 0, 0.6),
         Ang = Angle(0, 0, 0),
         Category = {"bo2_m320", "cod_grips"},
     },
@@ -355,7 +381,7 @@ SWEP.Attachments = {
         Bone = "tag_clip",
         Pos = Vector(0.5, 0, -3),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_mag_ext"},
+        Category = {"bo2_fastmag", "bo2_extmag"},
     },
     {
         PrintName = "Ammunition",
@@ -556,6 +582,69 @@ SWEP.Animations = {
             {s = "ARC9_BO2.AR_Fwd", t = 2.15},
         },
     },
+    ["fast"] = {
+        Source = "fast",
+        Time = 1.8,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.7,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.9,
+                lhik = 1,
+                rhik = 0
+            },
+        },
+        EventTable = {
+            {s = "ARC9_BO2.AR_MagOut", t = 0.2},
+            {s = "ARC9_BO2.AR_MagIn", t = 0.9}
+        },
+        MinProgress = 0.8
+    },
+    ["fast_empty"] = {
+        Source = "fast_empty",
+        Time = 2.3,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.7,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.9,
+                lhik = 1,
+                rhik = 0
+            },
+        },
+        EventTable = {
+            {s = "ARC9_BO2.AR_MagOut", t = 0.6},
+            {s = "ARC9_BO2.AR_MagIn", t = 1.25},
+            {s = "ARC9_BO2.AR_Fwd", t = 1.9},
+        },
+        MinProgress = 2.0,
+    },
     ["enter_sprint"] = {
         Source = "sprint_in",
         Time = 1,
@@ -576,16 +665,10 @@ SWEP.Animations = {
     ["draw_empty"] = {
         Source = "draw_empty",
         Time = 1,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.25,
     },
     ["holster_empty"] = {
         Source = "holster_empty",
         Time = 0.75,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.25,
     },
     ["fire_empty"] = {
         Source = {"fire_last"},
@@ -612,19 +695,27 @@ SWEP.Animations = {
 
 -- UBGL OUT ANIMS ---------------------------------------------------------------
 
-    ["idle_m203"] = {
+    ["idle_m320"] = {
         Source = "idle_gl",
         Time = 1 / 30,
     },
-    ["draw_m203"] = {
+    ["draw_m320"] = {
         Source = "draw_gl",
         Time = 1,
     },
-    ["holster_m203"] = {
+    ["holster_m320"] = {
         Source = "holster_gl",
         Time = 0.75,
     },
-    ["ready_m203"] = {
+    ["draw_empty_m320"] = {
+        Source = "draw_empty_gl",
+        Time = 1,
+    },
+    ["holster_empty_m320"] = {
+        Source = "holster_empty_gl",
+        Time = 0.75,
+    },
+    ["ready_m320"] = {
         Source = "first_draw_gl",
         Time = 1,
         EventTable = {
@@ -632,32 +723,38 @@ SWEP.Animations = {
             {s = "ARC9_BO2.AR_Fwd", t = 0.4}
         }
     },
-    ["fire_m203"] = {
+    ["fire_m320"] = {
         Source = {"fire_gl"},
         Time = 5 / 30,
         ShellEjectAt = 0,
     },
-    ["fire_iron_m203"] = {
+    ["fire_iron_m320"] = {
         Source = {"fire_ads_gl"},
         Time = 5 / 30,
         ShellEjectAt = 0,
     },
-    ["reload_m203"] = {
+    ["fire_empty_m320"] = {
+        Source = {"fire_last_gl"},
+        Time = 5 / 30,
+        ShellEjectAt = 0,
+    },
+    ["fire_empty_iron_m320"] = {
+        Source = {"fire_last_ads_gl"},
+        Time = 5 / 30,
+        ShellEjectAt = 0,
+    },
+    ["reload_m320"] = {
         Source = "reload_gl",
         Time = 2.63,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        LHIK = true,
         EventTable = {
             {s = "ARC9_BO2.AR_MagOut", t = 0.5},
             {s = "ARC9_BO2.AR_MagIn", t = 1.1},
             {s = "ARC9_BO1.M14_Tap", t = 1.5},
         },
     },
-    ["reload_empty_m203"] = {
+    ["reload_empty_m320"] = {
         Source = "reload_empty_gl",
         Time = 3.36,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        LHIK = true,
         EventTable = {
             {s = "ARC9_BO2.AR_MagOut", t = 0.5},
             {s = "ARC9_BO2.AR_MagIn", t = 1.1},
@@ -665,51 +762,70 @@ SWEP.Animations = {
             {s = "ARC9_BO2.AR_Fwd", t = 2.15},
         },
     },
-    ["enter_sprint_m203"] = {
+    ["fast_m320"] = {
+        Source = "fast_gl",
+        Time = 1.8,
+        EventTable = {
+            {s = "ARC9_BO2.AR_MagOut", t = 0.2},
+            {s = "ARC9_BO2.AR_MagIn", t = 0.9}
+        },
+        MinProgress = 0.8
+    },
+    ["fast_empty_m320"] = {
+        Source = "fast_empty_gl",
+        Time = 2.3,
+        EventTable = {
+            {s = "ARC9_BO2.AR_MagOut", t = 0.6},
+            {s = "ARC9_BO2.AR_MagIn", t = 1.25},
+            {s = "ARC9_BO2.AR_Fwd", t = 1.9},
+        },
+        MinProgress = 2.0,
+    },
+    ["enter_sprint_m320"] = {
         Source = "sprint_in_gl",
         Time = 1,
     },
-    ["idle_sprint_m203"] = {
+    ["idle_sprint_m320"] = {
         Source = "sprint_loop_gl",
         Time = 30 / 40
     },
-    ["exit_sprint_m203"] = {
+    ["exit_sprint_m320"] = {
         Source = "sprint_out_gl",
         Time = 1,
     },
 
     --M203 EMPTY--
-    ["idle_empty_m203"] = {
+    ["idle_empty_m320"] = {
         Source = "idle_empty_gl",
         Time = 1 / 30,
     },
-    ["draw_empty_m203"] = {
+    ["draw_empty_m320"] = {
         Source = "draw_empty_gl",
         Time = 1,
     },
-    ["holster_empty_m203"] = {
+    ["holster_empty_m320"] = {
         Source = "holster_empty_gl",
         Time = 0.75,
     },
-    ["fire_empty_m203"] = {
+    ["fire_empty_m320"] = {
         Source = {"fire_last_gl"},
         Time = 5 / 30,
         ShellEjectAt = 0,
     },
-    ["fire_iron_empty_m203"] = {
+    ["fire_iron_empty_m320"] = {
         Source = {"fire_last_ads_gl"},
         Time = 5 / 30,
         ShellEjectAt = 0,
     },
-    ["enter_sprint_m203_empty"] = {
+    ["enter_sprint_m320_empty"] = {
         Source = "sprint_in_empty_gl",
         Time = 1,
     },
-    ["idle_sprint_m203_empty"] = {
+    ["idle_sprint_m320_empty"] = {
         Source = "sprint_loop_empty_gl",
         Time = 30 / 40
     },
-    ["exit_sprint_m203_empty"] = {
+    ["exit_sprint_m320_empty"] = {
         Source = "sprint_out_empty_gl",
         Time = 1,
     },
