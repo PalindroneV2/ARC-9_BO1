@@ -11,7 +11,7 @@ ATT.Cons = {}
 ATT.SortOrder = 4
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
-ATT.Folder = "SCOPE"
+ATT.Folder = "SCOPE/BOCW"
 
 ATT.Category = {"cod_optic", "cod_optic_alt"}
 
@@ -27,6 +27,14 @@ ATT.Sights = {
         ViewModelFOV = 60,
         Magnification = 1,
         IgnoreExtra = true
+    },
+    {
+        Pos = Vector(-0.005, 6.5, -2.125),
+        Ang = Angle(0, 0.25, 0),
+        ViewModelFOV = 60,
+        Magnification = 1.25,
+        IgnoreExtra = false,
+        Disassociate = true
     },
 }
 

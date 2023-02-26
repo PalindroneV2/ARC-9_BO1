@@ -5,8 +5,8 @@
 	$phongexponenttexture	"models/weapons/arc9/bo1/bo1_dragunov/svd_s"
 
 	$detail "models/weapons/arc9/bo1/camos/ak_redwood"
-	$detailblendmode		0
-	$detailblendfactor	1
+	$detailblendmode	4
+	$detailblendfactor	0.5
 	
 	//"$color2" "[ .4 .4 .4 ]"
 	"$blendtintbybasealpha" "1"

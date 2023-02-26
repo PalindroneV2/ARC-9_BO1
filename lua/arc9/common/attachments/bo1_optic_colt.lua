@@ -11,14 +11,24 @@ ATT.Cons = {}
 ATT.SortOrder = 4
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
-ATT.Folder = "SCOPE"
+ATT.Folder = "SCOPE/BO1"
 
 ATT.Category = {"cod_optic", "cod_optic_alt"}
 
 
 ATT.Model = "models/weapons/arc9/atts/bo1_coltscope.mdl"
+ATT.WorldModel = "models/weapons/arc9/atts/bo1_coltscope_w.mdl"
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
+
+ATT.DrawFunc = function(swep, model, wm)
+    local CUSTSTATE = swep:GetCustomize()
+    if CUSTSTATE then
+        model:SetBodygroup(0, 1)
+    else
+        model:SetBodygroup(0, 0)
+    end
+end
 
 ATT.Sights = {
     {
@@ -31,7 +41,7 @@ ATT.Sights = {
 }
 
 ATT.RTScope = true
-ATT.RTScopeSubmatIndex = 2
+ATT.RTScopeSubmatIndex = 3
 ATT.RTScopeFOV = 10
 ATT.RTScopeRes = 512
 ATT.RTScopeSurface = Material("models/weapons/arc9/bo1/bo1_acogs/acog_lens")

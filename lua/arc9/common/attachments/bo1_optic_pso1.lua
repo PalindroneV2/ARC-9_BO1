@@ -11,7 +11,7 @@ ATT.Cons = {}
 ATT.SortOrder = 4
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
--- ATT.Folder = "SCOPE"
+-- ATT.Folder = "SCOPE/BO1"
 
 ATT.Category = {"bo1_svd_scope"}
 ATT.ActivateElements = {"lowsight", "svd_scope"}

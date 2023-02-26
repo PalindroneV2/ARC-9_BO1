@@ -12,7 +12,7 @@ ATT.Cons = {}
 ATT.SortOrder = 4
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
-ATT.Folder = "SCOPE"
+ATT.Folder = "SCOPE/BO2"
 
 ATT.Category = {"bo2_optic_storm"}
 ATT.ActivateElements = {"psr_scope"}

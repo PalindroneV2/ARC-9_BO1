@@ -52,6 +52,10 @@ ATT.Category = {"bo1_asp_barrel"}
 ATT.ActivateElements = {"hush", "newbarrel"}
 ATT.ExcludeElements = {}
 
+ATT.ManualActionChamber = 1 -- How many shots we go between needing to cycle again.
+ATT.ManualAction = true -- Pump/bolt action. Play the "cycle" animation after firing, when the trigger is released.
+ATT.ManualActionNoLastCycle = false -- Do not cycle on the last shot.
+
 ATT.Attachments = {
     {
         PrintName = "Muzzle",
@@ -65,6 +69,31 @@ ATT.Attachments = {
 }
 
 ARC9.LoadAttachment(ATT, "bo1_asp_barrel_hush")
+
+ATT = {}
+
+ATT.PrintName = [[Polymer Grip]]
+ATT.CompactName = [[Polymer]]
+ATT.Icon = Material("entities/bo1_atts/bocw/atts_ak5/barrels/heavy_pro.png", "mips smooth")
+ATT.Description = [[Lightweight polymer grips allow the user to glance at the magazine inside to quickly asses how many shots they have left.
+
+Colorable
+]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
+ATT.Free = false
+
+ATT.ReloadTimeMult = 0.9
+ATT.SprintToFireTimeAdd = 0.05
+
+ATT.Category = {"bo1_asp_grip"}
+ATT.ActivateElements = {"polymer"}
+ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/black_detail"
+ATT.ExcludeElements = {}
+
+ARC9.LoadAttachment(ATT, "bo1_asp_grip_polymer")
 
 ATT = {}
 

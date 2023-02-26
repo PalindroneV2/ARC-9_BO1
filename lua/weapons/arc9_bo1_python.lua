@@ -376,27 +376,28 @@ SWEP.Animations = {
     },
     ["reload_start"] = {
         Source = "reload_in",
-        Time = 52 / 30,
+        Time = 67 / 40,
         RestoreAmmo = 1, -- loads a shell since the first reload has a shell in animation
-        MinProgress = 1.2,
+        MinProgress = 1,
         EventTable = {
-            {s = "ARC9_BO1.Python_Open", t = 20 / 35},
-            {s = "ARC9_BO1.Python_Empty", t = 26 / 35},
+            {s = "ARC9_BO1.Python_Open", t = 20 / 40},
+            {s = "ARC9_BO1.Python_Empty", t = 26 / 40},
+            {s = "ARC9_BO1.Python_Bullet", t = 62 / 40},
         },
     },
     ["reload_insert"] = {
         Source = "reload_loop",
-        Time = 16 / 30,
-        MinProgress = 16 / 30,
+        Time = 31 / 40,
+        MinProgress = 25 / 40,
         EventTable = {
-            {s = "ARC9_BO1.Python_Bullet", t = 13 / 30},
+            {s = "ARC9_BO1.Python_Bullet", t = 25 / 40},
         },
     },
     ["reload_finish"] = {
         Source = "reload_out_snap",
-        Time = 33 / 30,
+        Time = 33 / 40,
         EventTable = {
-            {s = "ARC9_BO1.Python_Close", t = 8 / 30},
+            {s = "ARC9_BO1.Python_Close", t = 8 / 40},
         },
     },
     ["reload"] = {

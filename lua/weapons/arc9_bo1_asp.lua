@@ -245,13 +245,16 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
 
     local vm = data.model
     local attached = data.elements
-    local camo = 4
+    local camo = 2
 
     if attached["asp_grip"] then
         camo = 0
     end
+    if attached["polymer"] then
+        camo = 4
+    end
     if attached["bo1_pap"] then
-        camo = camo + 2
+        camo = camo + 1
     end
 
     vm:SetSkin(camo)
@@ -334,6 +337,16 @@ SWEP.Attachments = {
         Category = "mwc_proficiency",
         ExcludeElements = {"bo1_perkacola"},
     },
+    {
+        PrintName = "Cosmetic",
+        DefaultCompactName = "Standard",
+        Bone = "j_gun",
+        Pos = Vector(-2, 0, -2),
+        Ang = Angle(0, 0, 0),
+        Category = "universal_camo",
+        CosmeticOnly = true,
+        RequireElements = {"polymer"},
+    },
 }
 
 SWEP.HideBones = {
@@ -342,10 +355,6 @@ SWEP.HideBones = {
 SWEP.ReloadHideBoneTables = {
     [1] = {"j_clip_full"},
 }
-
-SWEP.ManualActionChamber = 1 -- How many shots we go between needing to cycle again.
-SWEP.ManualAction = true -- Pump/bolt action. Play the "cycle" animation after firing, when the trigger is released.
-SWEP.ManualActionNoLastCycle = false -- Do not cycle on the last shot.
 
 SWEP.Animations = {
     ["idle"] = {
@@ -387,6 +396,14 @@ SWEP.Animations = {
         EventTable = {
             {s = "ARC9_BO1.ASP_Back", t = 12 / 40},
             {s = "ARC9_BO1.ASP_Fwd", t = 22 / 40}
+        }
+    },
+    ["cycle_empty"] = {
+        Source = "cycle_last",
+        Time = 1,
+        ShellEjectAt = 0.5,
+        EventTable = {
+            {s = "ARC9_BO1.ASP_Back", t = 12 / 40},
         }
     },
     ["fire"] = {

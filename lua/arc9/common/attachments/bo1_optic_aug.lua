@@ -9,7 +9,7 @@ ATT.Cons = {}
 ATT.SortOrder = 4
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
--- ATT.Folder = "SCOPE"
+-- ATT.Folder = "SCOPE/BO1"
 
 ATT.Category = {"cod_optic_aug"}
 ATT.ActivateElements = {"swarovski"}

@@ -71,6 +71,8 @@ SWEP.TracerColor = Color(255, 255, 255) -- Color of tracers. Only works if trace
 
 SWEP.ChamberSize = 0 -- dont fucking change this again.
 SWEP.ClipSize = 30 -- DefaultClip is automatically set.
+SWEP.SupplyLimit = 8
+SWEP.SecondarySupplyLimit = 9
 SWEP.ReloadTime = 1
 
 SWEP.Crosshair = true
@@ -452,7 +454,7 @@ SWEP.Attachments = {
     {
         PrintName = "Muzzle",
         Bone = "j_gun",
-        Pos = Vector(15, 0, 3.15),
+        Pos = Vector(15.5, 0, 3.15),
         Ang = Angle(0, 0, 0),
         Category = {"cod_muzzle"},
         Icon_Offset = Vector(2, 0, 0.35)

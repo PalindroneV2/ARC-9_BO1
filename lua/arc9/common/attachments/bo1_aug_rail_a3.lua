@@ -23,7 +23,7 @@ ATT.Attachments = {
     {
         PrintName = "Rail",
         Bone = "j_gun",
-        Pos = Vector(-4.5, -0.03, -4.375),
+        Pos = Vector(-3.5, -0.03, -4.375),
         Ang = Angle(0, 0, 0),
         Category = {"cod_optic", "cod_rail_riser"},
         InstalledElements = {"a3mount"},
