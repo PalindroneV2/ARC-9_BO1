@@ -351,7 +351,7 @@ ATT.UBGL = true
 ATT.UBGLAmmo = "smg1_grenade"
 ATT.UBGLClipSize = 1
 ATT.UBGLFiremode = 1
-ATT.UBGLFiremodeName = "SMG1 GL"
+ATT.UBGLFiremodeName = "Grenadier"
 ATT.UBGLChamberSize = 0
 ATT.ShootVolumeUBGL = 110
 

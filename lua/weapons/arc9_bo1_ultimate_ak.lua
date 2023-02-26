@@ -218,18 +218,18 @@ SWEP.IronSightsHook = function(self)
         newang = Angle(0.05, 0, 0)
     end
     if attached["ak12"] then
-        newpos = Vector(-2.435, 0, 0.6)
-        newang = Angle(0, 0.5, 0)
+        newpos = Vector(-2.435, 0, 0.675)
+        newang = Angle(0, 0.3, 0)
         if attached["barrel_krinkov"] or attached["barrel_102"] then
-            newpos = Vector(-2.435, 0, 0.5)
-            newang = Angle(0, 1.2, 0)
+            newpos = Vector(-2.435, 0, 0.625)
+            newang = Angle(0, 0.875, 0)
         end
         if attached["bo1_tishina"] then
-            newpos = Vector(-2.42, 0, 0.8)
-            newang = Angle(0, 0.5, 0)
+            newpos = Vector(-2.42, 0, 0.925)
+            newang = Angle(0, 0.3, 0)
             if attached["barrel_krinkov"] or attached["barrel_102"] then
-                newpos = Vector(-2.42, 0, 0.75)
-                newang = Angle(0, 1.2, 0)
+                newpos = Vector(-2.42, 0, 0.875)
+                newang = Angle(0, 0.875, 0)
             end
         end
     end
@@ -249,11 +249,11 @@ SWEP.IronSightsHook = function(self)
             end
         end
         if attached["rpk12"] then
-            newpos = Vector(-2.065, 0, 0.4)
-            newang = Angle(0, 0.45, 0)
+            newpos = Vector(-2.065, 0, 0.5)
+            newang = Angle(0, 0.4, 0)
             if attached["barrel_krinkov"] or attached["barrel_102"] then
-                newpos = Vector(-2.065, 0, 0.335)
-                newang = Angle(0, 1.15, 0)
+                newpos = Vector(-2.065, 0, 0.46)
+                newang = Angle(0, 0.9, 0)
             end
         end
     end
@@ -452,6 +452,11 @@ SWEP.AttachmentElements = {
         Bodygroups = {
             {6,3},
             {8,6},
+        },
+    },
+    ["stock_alpha"] = {
+        Bodygroups = {
+            {8,7},
         },
     },
     ["smooth"] = {
@@ -661,14 +666,19 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
             magbg = 7
         end
         if attached["ak15"] then
-            aktype = 8
+            -- aktype = 8
             magbg = 1
         end
         irons = 3
         hand = 4
-        grip = 2
-        if attached["ak12mount"] then
-            irons = 4
+        grip = 3
+        vm:SetBodygroup(11, 3)
+        -- if attached["ak12mount"] then
+        --     irons = 4
+        -- end
+        if attached["stock_alpha"] then
+            vm:SetBodygroup(11, 0)
+            vm:SetBodygroup(8,8)
         end
     end
     if attached["ext_mag"] then
@@ -939,6 +949,7 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ultimate_ak_stock"},
         Installed = "bo1_ultimate_ak_stock_type2",
+        InstalledElements = {"stockattach"},
     },
     {
         PrintName = "Magazine",
@@ -1011,9 +1022,9 @@ SWEP.StandardPresets = {
     "[RPKM]XQAAAQB9AQAAAAAAAAA9iIIiM7tupQCpjtobRJEkdYYzR6F4P3FJEqy9RUyheUZp1zOtKLbpg01RZUWsivdsVPWjLa0syy9U9GqZ8LmP+q7dbi/IHGgFIVsdt65lGjvaSyhXdk9w2ZQXzi/K84mTbVThEb7Xdn6+XYBjhwVST60bv19b+xyl+RvXzVwjb0DdA7WxNhT2MrS+S24RtazOt9bF9gDO4qC9qGM5Z6tIqoy7kvF8+SQA",
     "[Chinese]XQAAAQAjAQAAAAAAAAA9iIIiM7tupQCpjtobRJEkdevdtSFsYEW0WR7PXlS+8JMBy2yiomGzXKaJCIzfqW4TDPuHlM58exfO53jHmGkL8Ogd2ysWRMV1yAe2z7TJuOs2Y3BZAJP1rvlf3tXsDIwu5e9+UMKpWA6GxlwRfP5EgzrRzuzP6Epa6kjWWXVW+6+rAA==",
     "[Vintorez]XQAAAQB6AQAAAAAAAAA9iIIiM7tupQCpjtobRJEkdZ1fP0HAirxuJaFi++OSkQRS4d7M0DlDU2KQsq5E55bbZFTMSOHmh1B1MTAWaZHHwy0PlDLbXStPNXcKOCsyBKNvP0uns3lCA8q+TPhmIBWpF7+guB5W1X2TwNftbVNwoXbJWZFGolA8izBepNzitqkfV8JfiEOkGa4swNp3o2EsxXYOcg/0DZY3Pvs4MjB2us/3p5OhhUQ/KpFFM2UA",
-    "[AK-12]XQAAAQA6AQAAAAAAAAA9iIIiM7tupQCpjtobRJEkdevdtQyXDt2gZ7eB7mIc4XMJKegyvnhNTihJg3a0etGqnAmzznhXOKJQN6xSxLA9M3wcJphYDhO7cjCPXL4pWm8JZIzz7kgwAR16nmfrXjTKGjBpRr0itYp+4e7cNSVtoDAWhmfe0hrzdOnxhcRUJ5lJqGwemf6gMBaFFNFPdj2LH+IA",
-    "[Future Krinkov]XQAAAQBtAQAAAAAAAAA9iIIiM7tupQCpjtobRJEkdevdtQyXDt2gZ7eB7mIc4XMJKegyvnhNTihJg3a0etGqnAmzznhXOKJQN6xSxLA9M3wexlpJGg+YvbrG0HBlCZkBq4TdignpNHsBNgAqKr0DHBcqoNRlUWPRB6ynpOXgroZ6z3Ry54KpXB1xnFrZULvQOv3MeoMs1m6kHOrD6M/rEQJ45w2Ws/PRe+ShUyClAA==",
-    "[Future RPK]XQAAAQCbAQAAAAAAAAA9iIIiM7hMNz0dhJSTKmZ7v8x6r3nGvlWRICsL5cE/ScSVLRoSCHLpxW/GsmdksyYfo2T8yH4tgf7mSKFsU6aH+speQoIVqzmNpt/mm/CWUFc4F4RYgWMJyha0ySJKZXjZ41e2BqWbwiPqDBOBwoBX4N1vp7M+TRKgR31twAzBAlf/XUYNaHlttXVD2jNZJQcdfrDdexnIjZ83ly2H/AdONaXdXds3yJVvwC5m6l8HTgdqF64klWZiFwA=",
+    "[AK-12]XQAAAQANAQAAAAAAAAA9iIIiM7hMNz0dhIkbkvLjTdErcFqoUCAoqlx+DmvIBUSaCAQGQk9HZjOn1+PewqT5R2ZJrXg09Y0JzNGEXIG4H0ser1yFFP/UtreQjyb6/rHoh3PQGMdi6QuQLuDojoHQbV7/Ex16H2qebkDsFiUpPrgMIbceASs98wKlq4Eywveq2w==",
+    "[Future Krink]XQAAAQAwAQAAAAAAAAA9iIIiM7hMNz0dhIkbkvLjTdErcFqoUCAoqlx+DmvIBUSaCAQGQk9HZjOn1+PewqT5R2ZJrXg09Y0JzNGEXIG4H0ser1yJ3uxGEBL+1GWAoDGZr/HVyIutfHbtjGAB1Hk61zLWmzAym1R4qp0DVcxBLnTfhDJAarN+3mOGwngP60GIOGABVe39bXuCa1Y1+bgA",
+    "[Future RPK]XQAAAQBnAQAAAAAAAAA9iIIiM7hMNz0dhIkbkvLjTdErcFqoUCAoqlx+DmvIBUSaCAQGQk9HZjOn1+PewqT5R2ZJrUsH+ayYBMlmLIZhZepFET4A4usIKtkjPp1TvPVygiLPfc+2wsIhFRAYLoaQNPIGGxMo6iWMus5j/QAVh56hnQ7ZDYKpcO0Nrile/O2AkkqqeJUtAJh9z98BDF4X6QyP+Hd0A/JuajBPi0ZDmGqG3nyMOg==",
 }
 
 SWEP.HideBones = {

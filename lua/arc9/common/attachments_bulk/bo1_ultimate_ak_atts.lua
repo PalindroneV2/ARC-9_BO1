@@ -555,7 +555,7 @@ ARC9.LoadAttachment(ATT, "bo1_ultimate_ak_receiver_ak74")
 
 ATT = {}
 
-ATT.PrintName = [[Pseudo AK-15 Receiver 7.62]]
+ATT.PrintName = [[AK-15 Receiver 7.62]]
 ATT.CompactName = [[AK-15]]
 ATT.Icon = Material("entities/bo1_atts/bo1_ak/ak15.png")
 ATT.Description = [[Now the government is really running out of money.
@@ -568,13 +568,14 @@ ATT.Free = false
 
 ATT.Category = {"bo1_ultimate_ak_receiver"}
 ATT.ActivateElements = {"ak12","ak15"}
+ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/black_detail"
 
 ATT.Attachments = {
     {
         PrintName = "Optic",
         DefaultName = "Irons",
         Bone = "j_gun",
-        Pos = Vector(-2.5, 0, -3.2),
+        Pos = Vector(-3.5, 0, -3.2),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0,0,0),
         Category = {"cod_optic", "cod_rail_riser"},
@@ -596,7 +597,7 @@ ARC9.LoadAttachment(ATT, "bo1_ultimate_ak_receiver_ak12_hybrid")
 
 ATT = {}
 
-ATT.PrintName = [[Pseudo AK-12 Receiver]]
+ATT.PrintName = [[AK-12 Receiver]]
 ATT.CompactName = [[AK-12]]
 ATT.Icon = Material("entities/bo1_atts/bo1_ak/ak12.png")
 ATT.Description = [[Totally legit AK-12 receiver. Fires 5.45x39mm rounds. Identical to the AK-74 receiver.]]
@@ -625,13 +626,14 @@ ATT.ShootSound = "ARC9_BO1.AK74u_Fire"
 ATT.DistantShootSound = "ARC9_BO1.AK74u_Ringoff"
 ATT.Ammo = "smg1"
 ATT.MuzzleParticle = "muzzleflash_ak74"
+ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/black_detail"
 
 ATT.Attachments = {
     {
         PrintName = "Optic",
         DefaultName = "Irons",
         Bone = "j_gun",
-        Pos = Vector(-2.5, 0, -3.2),
+        Pos = Vector(-3.5, 0, -3.2),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0,0,0),
         Category = {"cod_optic", "cod_rail_riser"},
@@ -764,6 +766,7 @@ ATT.Free = false
 
 ATT.Category = {"bo1_ultimate_ak_receiver"}
 ATT.ActivateElements = {"rpk", "rpk12", "no_ubgl"}
+ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/black_detail"
 
 ATT.ClipSize = 45
 ATT.ReloadTimeMult = 1
@@ -789,7 +792,7 @@ ATT.Attachments = {
         PrintName = "Optic",
         DefaultName = "Irons",
         Bone = "j_gun",
-        Pos = Vector(-2.5, 0, -3.2),
+        Pos = Vector(-3.5, 0, -3.2),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0,0,0),
         Category = {"cod_optic", "cod_rail_riser"},
@@ -906,6 +909,34 @@ ATT.SpreadMultHipFire = 0.9
 ATT.SpeedMultShooting = 1.1
 
 ARC9.LoadAttachment(ATT, "bo1_ultimate_ak_stock_sidefolder")
+
+ATT = {}
+
+ATT.PrintName = "Alpha Series Folding Stock"
+ATT.CompactName = "ALPHA"
+ATT.Icon = Material("entities/bo1_atts/other/stock.png")
+ATT.Description = [[Modern Lightweight stock that doesn't provide as much recoil control but helps mobility.]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 3
+ATT.MenuCategory = "ARC9 - BO1 AK-47 Attachments"
+ATT.Free = false
+
+ATT.Category = {"bo1_ultimate_ak_stock"}
+ATT.ActivateElements = {"stock_alpha"}
+
+ATT.RecoilMult = 0.75
+ATT.RecoilUpMult = 0.8
+ATT.RecoilRandomSideMult = 0.8
+ATT.RecoilAutoControlMult = 1.25
+ATT.AimDownSightsTimeMult = 0.97
+ATT.SprintToFireTimeMult = 0.97
+ATT.SpeedMultSights = 1.025
+ATT.SpreadMultHipFire = 0.9
+--ATT.SpreadMultMove = 0.9
+ATT.SpeedMultShooting = 1.1
+
+ARC9.LoadAttachment(ATT, "bo1_ultimate_ak_stock_alpha")
 
 ATT = {}
 

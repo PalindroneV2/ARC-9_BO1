@@ -2,15 +2,18 @@ VertexlitGeneric
 {
 	$basetexture	"models/weapons/arc9/waw/waw_garand/waw_tube"
 	$bumpmap	"models/weapons/arc9/waw/waw_garand/waw_tube_n"
+	$phongexponenttexture	"models/weapons/arc9/waw/waw_garand/waw_tube_s"
+	$envmapmask	"models/weapons/arc9/waw/waw_garand/waw_tube_s"
 
-	$phong                      		1
-//	$phongexponent                      "20"
-	$phongboost                         "0.5"
-	$phongfresnelranges         "[0.1 0.5 0.5]"
-	$phongalbedotint             "1"
-	$normalmapalphaphongmask    	1
+	"$phong" "1"
+	"$phongboost" "1"
+	"$phongalbedotint" "2"
+	"$PhongFresnelRanges" "[ 2 5 4 ]"
+	$normalmapalphaenvmapmask 1
+	"$nocull" "1"
 
-	"$envmap" "env_cubemap"					
-	$envmaptint "[ .01 .01 .01 ]"
+	"$envmap" "env_cubemap"
 	$envmapfresnel "0.01"
+	$envmaptint "[ .01 .01 .01 ]"
+
 }
