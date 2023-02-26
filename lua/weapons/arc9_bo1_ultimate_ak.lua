@@ -200,6 +200,10 @@ SWEP.IronSightsHook = function(self)
     if attached["barrel_krinkov"] or attached["barrel_102"] then
         newpos = Vector(-2.43, -2, 1)
         newang = Angle(0.02, 0, 0)
+        if attached["barrel_102"] then
+            newpos = Vector(-2.43, -2, 0.45)
+            newang = Angle(0.02, 1.2, 0)
+        end
         if attached["bo1_alternate_irons"] then
             newpos = Vector(-2.43, -2, 0.8)
             newang = Angle(0.02, 0.5, 0)
@@ -218,10 +222,10 @@ SWEP.IronSightsHook = function(self)
         newang = Angle(0.05, 0, 0)
     end
     if attached["ak12"] then
-        newpos = Vector(-2.435, 0, 0.675)
+        newpos = Vector(-2.435, 0, 0.665)
         newang = Angle(0, 0.3, 0)
         if attached["barrel_krinkov"] or attached["barrel_102"] then
-            newpos = Vector(-2.435, 0, 0.625)
+            newpos = Vector(-2.435, 0, 0.6125)
             newang = Angle(0, 0.875, 0)
         end
         if attached["bo1_tishina"] then
@@ -638,7 +642,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         grip = 0
     end
     if attached["stock_vss"] then
-        grip = 3
+        grip = 4
     end
     if attached["ak47og"] then
         aktype = 1
@@ -679,6 +683,10 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         if attached["stock_alpha"] then
             vm:SetBodygroup(11, 0)
             vm:SetBodygroup(8,8)
+        end
+        if attached["stock_vss"] then
+            vm:SetBodygroup(11, 0)
+            grip = 4
         end
     end
     if attached["ext_mag"] then

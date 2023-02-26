@@ -838,6 +838,7 @@ ATT.Free = false
 
 ATT.Category = {"bo1_ultimate_ak_stock"}
 ATT.ActivateElements = {"stock_vss", "stock_svd"}
+-- ATT.ExcludeElements = {"ak12","rpk12","ak15"}
 
 ATT.RecoilMult = 0.4
 ATT.RecoilUpMult = 0.5
