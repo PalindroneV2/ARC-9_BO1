@@ -343,6 +343,10 @@ SWEP.ReloadHideBoneTables = {
     [1] = {"j_clip_full"},
 }
 
+SWEP.ManualActionChamber = 1 -- How many shots we go between needing to cycle again.
+SWEP.ManualAction = true -- Pump/bolt action. Play the "cycle" animation after firing, when the trigger is released.
+SWEP.ManualActionNoLastCycle = false -- Do not cycle on the last shot.
+
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
@@ -372,8 +376,17 @@ SWEP.Animations = {
         Source = "first_draw",
         Time = 1,
         EventTable = {
-            {s = "ARC9_BO1.ASP_Back", t = 16 / 30},
-            {s = "ARC9_BO1.ASP_Fwd", t = 21 / 30}
+            {s = "ARC9_BO1.ASP_Back", t = 12 / 40},
+            {s = "ARC9_BO1.ASP_Fwd", t = 22 / 40}
+        }
+    },
+    ["cycle"] = {
+        Source = "first_draw",
+        Time = 1,
+        ShellEjectAt = 0.5,
+        EventTable = {
+            {s = "ARC9_BO1.ASP_Back", t = 12 / 40},
+            {s = "ARC9_BO1.ASP_Fwd", t = 22 / 40}
         }
     },
     ["fire"] = {
