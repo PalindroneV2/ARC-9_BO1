@@ -551,7 +551,7 @@ ATT.ExcludeElements = {"mw2_m4_irons"}
 -- ATT.ExcludeElements = {"cod_rail_riser", "mw2_m4_irons"}
 ATT.Model = "models/weapons/arc9/atts/retro_ar15/front_irons.mdl"
 ATT.ModelOffset = Vector(-13.8, 0, -2.75)
-ATT.ModelBodygroups = "3"
+ATT.ModelBodygroups = "1"
 ATT.Bonemerge = true
 
 ARC9.LoadAttachment(ATT, "retro_ar15_front_matech")
@@ -573,10 +573,32 @@ ATT.ExcludeElements = {"mw2_m4_irons"}
 -- ATT.ExcludeElements = {"cod_rail_riser", "mw2_m4_irons"}
 ATT.Model = "models/weapons/arc9/atts/retro_ar15/front_irons.mdl"
 ATT.ModelOffset = Vector(-13.8, 0, -2.75)
-ATT.ModelBodygroups = "6"
+ATT.ModelBodygroups = "2"
 ATT.Bonemerge = true
 
 ARC9.LoadAttachment(ATT, "retro_ar15_front_masada")
+
+ATT = {}
+
+ATT.PrintName = "TMM-4 S-System Flip-Up Front Sight"
+ATT.CompactName = "TMM-4"
+ATT.Icon = Material("entities/bo1_atts/optics/retro_ar15/matech_side.png")
+ATT.Description = [[Front folding sight produced by Magpul for the Masada rifle.
+Functions identically to other iron sights.]]
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - BO1 AR-15 Attachments"
+ATT.Free = true
+
+ATT.Category = {"retro_ar15_front_iron"}
+ATT.ActivateElements = {"masada_front"}
+ATT.ExcludeElements = {"mw2_m4_irons"}
+-- ATT.ExcludeElements = {"cod_rail_riser", "mw2_m4_irons"}
+ATT.Model = "models/weapons/arc9/atts/retro_ar15/front_irons.mdl"
+ATT.ModelOffset = Vector(-13.8, 0, -2.75)
+ATT.ModelBodygroups = "3"
+ATT.Bonemerge = true
+
+ARC9.LoadAttachment(ATT, "retro_ar15_front_mw2")
 
 ATT = {}
 
@@ -1595,6 +1617,25 @@ ATT.IconOffset = Vector(-5, 0, 0)
 ATT.ActivateElements = {"matech_iron"}
 
 ARC9.LoadAttachment(ATT, "retro_ar15_iron_matech")
+
+ATT = {}
+
+ATT.PrintName = "TMM-4 S-System Flip-Up Rear Sight"
+ATT.CompactName = "TMM-4"
+ATT.Icon = Material("entities/bo1_atts/optics/retro_ar15/matech_side.png")
+ATT.Description = [[United States General Issue rear sight.
+Functions identically to other iron sights.]]
+ATT.SortOrder = 2
+ATT.MenuCategory = "ARC9 - BO1 AR-15 Attachments"
+ATT.Free = true
+ATT.Folder = "AR-15 IRONS"
+
+-- ATT.InvAtt = "retro_ar15_upper_a4"
+ATT.Category = {"retro_ar15_iron"}
+ATT.IconOffset = Vector(-5, 0, 0)
+ATT.ActivateElements = {"mw2_rear"}
+
+ARC9.LoadAttachment(ATT, "retro_ar15_iron_mw2")
 
 -- FIREMODES
 ATT = {}

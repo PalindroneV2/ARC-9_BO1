@@ -412,6 +412,11 @@ SWEP.AttachmentElements = {
             {6,8},
         },
     },
+    ["mw2_rear"] = {
+        Bodygroups = {
+            {6,9},
+        },
+    },
     ["a2_top"] = {
         Bodygroups = {
             {0,1}
@@ -732,7 +737,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         vm:SetBodygroup(8,4)
     end
 
-    if attached["mw2_m4_irons"] then
+    if attached["mw2_m4_irons"] or attached["mw2_rear"] then
         vm:SetBodygroup(10,1)
     end
 
