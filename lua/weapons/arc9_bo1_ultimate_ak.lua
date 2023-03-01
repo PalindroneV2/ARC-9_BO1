@@ -71,6 +71,8 @@ SWEP.TracerColor = Color(255, 255, 255) -- Color of tracers. Only works if trace
 
 SWEP.ChamberSize = 0 -- dont fucking change this again.
 SWEP.ClipSize = 30 -- DefaultClip is automatically set.
+SWEP.SupplyLimit = 9
+SWEP.SecondarySupplyLimit = 9
 SWEP.ReloadTime = 1
 
 SWEP.Crosshair = true
@@ -710,11 +712,11 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
 
     if attached["rail_bo1"] then
         vm:SetBodygroup(10, 1)
-        irons = 4
+        -- irons = 4
     end
     if attached["rail_pic"] then
         vm:SetBodygroup(10, 2)
-        irons = 4
+        -- irons = 4
     end
 
     vm:SetBodygroup(0, aktype)

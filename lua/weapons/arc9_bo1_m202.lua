@@ -80,6 +80,8 @@ SWEP.FancyBullets = true
 SWEP.ChamberSize = 0 -- dont fucking change this again.
 SWEP.ClipSize = 4 -- DefaultClip is automatically set.
 SWEP.ReloadTime = 1
+SWEP.SupplyLimit = 5
+SWEP.SecondarySupplyLimit = 5
 
 SWEP.Crosshair = true
 SWEP.MissileCrosshair = true

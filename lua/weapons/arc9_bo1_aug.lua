@@ -71,7 +71,7 @@ SWEP.TracerColor = Color(255, 255, 255) -- Color of tracers. Only works if trace
 
 SWEP.ChamberSize = 0 -- dont fucking change this again.
 SWEP.ClipSize = 30 -- DefaultClip is automatically set.
-SWEP.SupplyLimit = 8
+SWEP.SupplyLimit = 9
 SWEP.SecondarySupplyLimit = 9
 SWEP.ReloadTime = 1
 

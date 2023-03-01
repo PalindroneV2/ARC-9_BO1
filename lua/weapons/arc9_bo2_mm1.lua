@@ -61,6 +61,8 @@ SWEP.BodyDamageMults = {
 
 SWEP.ChamberSize = 0 -- dont fucking change this again.
 SWEP.ClipSize = 12 -- DefaultClip is automatically set.
+SWEP.SupplyLimit = 3
+SWEP.SecondarySupplyLimit = 3
 SWEP.ReloadTime = 1
 SWEP.ShotgunReload = false
 

@@ -41,6 +41,8 @@ SWEP.BottomlessClip = true
 SWEP.Throwable = true -- Set to true to give this weapon throwing capabilities.
 SWEP.Tossable = false -- When grenade is enabled, right click will toss. Set to false to disable, allowing you to aim down sights.
 SWEP.ThrowSpeed = 1
+SWEP.SupplyLimit = 9
+SWEP.SecondarySupplyLimit = 9
 
 SWEP.FuseTimer = 5 -- Length of time that the grenade will take to explode in your hands. -1 = Won't explode.
 
