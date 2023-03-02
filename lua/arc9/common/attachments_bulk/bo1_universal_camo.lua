@@ -296,6 +296,48 @@ ARC9.LoadAttachment(ATT, "bo1_camo_yellow")
 
 ATT = {}
 
+ATT.PrintName = "Gunmetal Gray"
+ATT.FullColorIcon = true
+ATT.CompactName = "GUN GRAY"
+ATT.Icon = Material("entities/bo1_camos/gunmetal.png")
+ATT.Category = "universal_camo"
+ATT.Description = [[Very boring gray color.]]
+ATT.MenuCategory = "ARC9 - Camos"
+ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/gunmetal"
+ATT.Folder = "COD FLAT"
+
+ARC9.LoadAttachment(ATT, "bo1_camo_gunmetal_gray")
+
+ATT = {}
+
+ATT.PrintName = "Gunmetal Brown"
+ATT.FullColorIcon = true
+ATT.CompactName = "GUN BROWN"
+ATT.Icon = Material("entities/bo1_camos/gunmetal_brown.png")
+ATT.Category = "universal_camo"
+ATT.Description = [[Very boring gray color with a tinge of brown.]]
+ATT.MenuCategory = "ARC9 - Camos"
+ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/gunmetal_brown"
+ATT.Folder = "COD FLAT"
+
+ARC9.LoadAttachment(ATT, "bo1_camo_gunmetal_brown")
+
+ATT = {}
+
+ATT.PrintName = "Gunmetal Blue"
+ATT.FullColorIcon = true
+ATT.CompactName = "GUN BLUE"
+ATT.Icon = Material("entities/bo1_camos/blue_mac.png")
+ATT.Category = "universal_camo"
+ATT.Description = [[Slightly blued greyish color.]]
+ATT.MenuCategory = "ARC9 - Camos"
+ATT.CustomCamoTexture = "models/weapons/arc9/bo1/camos/blue_mac"
+ATT.Folder = "COD FLAT"
+
+ARC9.LoadAttachment(ATT, "bo1_camo_gunmetal_bluemac")
+
+ATT = {}
+
 ATT.PrintName = "Black"
 ATT.FullColorIcon = true
 ATT.CompactName = "BLACK"
