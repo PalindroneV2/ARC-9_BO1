@@ -172,6 +172,7 @@ SWEP.MuzzleEffectQCA = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectQCA = 2 -- which attachment to put the case effect on
 SWEP.ProceduralViewQCA = 1
 SWEP.CamQCA = 4
+SWEP.NoShellEject = true
 
 SWEP.BulletBones = { -- the bone that represents bullets in gun/mag
     [1] = "tag_bullet01",

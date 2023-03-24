@@ -163,20 +163,33 @@ ATT.ShootSoundTail = ""
 
 ARC9.LoadAttachment(ATT, "bo1_minigun_perk_doom")
 
-hook.Add("Move", "ARC9_BO1_DOOM_EE_SPEED", function(ent, mv)
-    if !(ent:IsPlayer() or ent:IsNPC()) then return end
-    local wep = ent:GetActiveWeapon()
-    if !IsValid(wep) or !wep.ARC9 then return end
-    local attached = wep:GetElements()
-    if !attached["doom_ee"] then return end
+-- hook.Add("Move", "ARC9_BO1_DOOM_EE_SPEED", function(ent, mv)
+--     if !(ent:IsPlayer() or ent:IsNPC()) then return end
+--     local wep = ent:GetActiveWeapon()
+--     if !IsValid(wep) or !wep.ARC9 then return end
+--     local attached = wep:GetElements()
+--     if attached["doom_ee"] then
+--         local max = ent:GetMaxSpeed()
+--         local s = 1
 
-    local max = ent:GetMaxSpeed()
-    local s = 1
+--         if ent:Crouching() then s = s * ent:GetCrouchedWalkSpeed() end
 
-    if ent:Crouching() then s = s * ent:GetCrouchedWalkSpeed() end
+--         -- ent:SprintDisable() (apparently doesnt work)
+--         mv:SetMaxSpeed(max * s * 2)
+--         mv:SetMaxClientSpeed(max * s * 2)
+--         ent:SetRunSpeed(max)
+--         print("ecca " .. ent:GetRunSpeed())
+--         print("ficca " .. mv:GetMaxSpeed())
+--     else
+--         local max = ent:GetMaxSpeed()
+--         local s = 1
 
-    -- ent:SprintDisable() (apparently doesnt work)
-    mv:SetMaxSpeed(max * s * 2)
-    mv:SetMaxClientSpeed(max * s * 2)
-    ent:SetRunSpeed(max * s * 1)
-end)
+--         if ent:Crouching() then s = s * ent:GetCrouchedWalkSpeed() end
+
+--         -- ent:SprintDisable() (apparently doesnt work)
+--         mv:SetMaxSpeed(max * s * 1)
+--         mv:SetMaxClientSpeed(max * s * 1)
+--         ent:SetRunSpeed(max)
+--         ent:SetRunSpeed(max * 2)
+--     end
+-- end)
