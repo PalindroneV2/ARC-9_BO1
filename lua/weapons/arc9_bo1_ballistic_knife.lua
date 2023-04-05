@@ -382,7 +382,7 @@ SWEP.Animations = {
     },
     ["idle_sprint"] = {
         Source = "sprint_loop",
-        Time = 30 / 30
+        Time = 20 / 30
     },
     ["exit_sprint"] = {
         Source = "sprint_out",
