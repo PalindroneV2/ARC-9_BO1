@@ -1497,6 +1497,59 @@ ARC9.LoadAttachment(ATT, "retro_ar15_tmm4_riser")
 
 ATT = {}
 
+ATT.PrintName = "Rare Carry Handle Rear Sight"
+ATT.CompactName = "RCarry"
+ATT.Icon = Material("entities/bo1_atts/optics/retro_ar15/carry_side.png")
+ATT.Description = [[Strange futurized carry handle iron sight.
+Functions identically to other iron sights.]]
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - BO1 AR-15 Attachments"
+ATT.Free = true
+ATT.Folder = "AR-15 IRONS"
+
+ATT.InvAtt = "retro_ar15_upper_a4"
+ATT.Category = {"retro_ar15_iron"}
+ATT.IconOffset = Vector(-5, 0, 0)
+ATT.ActivateElements = {"future_carry"}
+
+ATT.Model = "models/weapons/arc9/atts/retro_ar15/bo3_carry.mdl"
+ATT.Scale = Vector(1, 1, 1)
+ATT.ModelOffset = Vector(0,0,0)
+ATT.ModelAngleOffset = Angle(0,0,0)
+ATT.BoneMerge = true
+
+ATT.DrawFunc = function(swep, model, wm)
+    if swep:GetElements()["bo1_pap"] then
+        model:SetSkin(1)
+    else
+        model:SetSkin(0)
+    end
+end
+
+-- ATT.Sights = {
+--     {
+--         Pos = Vector(0, 10, -1.6),
+--         Ang = Angle(0, -0.9, 0),
+--         ViewModelFOV = 60,
+--         IsIronSight = true,
+--     }
+-- }
+
+ATT.Attachments = {
+    {
+        PrintName = "Rail",
+        Bone = "j_gun",
+        Pos = Vector(-0.1, 0, -0.55),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0, 0, 1.5),
+        Category = {"bo1_ar15_toprail"},
+    }
+}
+
+ARC9.LoadAttachment(ATT, "retro_ar15_iron_carry_bo3")
+
+ATT = {}
+
 ATT.PrintName = "Low Profile Flip-Up Iron Sights"
 ATT.CompactName = "LP Irons"
 ATT.Icon = Material("entities/bo1_atts/optics/retro_ar15/carry_side.png")
@@ -2785,6 +2838,60 @@ ATT.Attachments = {
 }
 
 ARC9.LoadAttachment(ATT, "retro_ar15_upper_a4")
+
+ATT = {}
+
+ATT.PrintName = "Futurized Flat Top Upper Receiver"
+ATT.CompactName = "FUTURE TOP"
+ATT.Icon = Material("entities/bo1_atts/optics/retro_ar15/top_future.png")
+ATT.Description = [[Futurized A4-Type AR-15 flat-top upper reciever.
+Allows for attachment of many kinds of optics and alternate iron sights.]]
+ATT.SortOrder = 5
+ATT.MenuCategory = "ARC9 - BO1 AR-15 Attachments"
+
+ATT.Category = {"retro_ar15_upper"}
+ATT.ActivateElements = {"future_top"}
+ATT.ExcludeElements = {"is_patriot"}
+
+ATT.Model = "models/weapons/arc9/atts/retro_ar15/bo3_parts.mdl"
+ATT.Scale = Vector(1, 1, 1)
+ATT.ModelOffset = Vector(0,0,0)
+-- ATT.ModelOffset = Vector(2.125,0,-1.5)
+ATT.ModelAngleOffset = Angle(0,0,0)
+ATT.BoneMerge = true
+
+ATT.DrawFunc = function(swep, model, wm)
+    if swep:GetElements()["bo1_pap"] then
+        model:SetSkin(1)
+    else
+        model:SetSkin(0)
+    end
+end
+
+ATT.Attachments = {
+    {
+        PrintName = "Optic",
+        Category = {"retro_ar15_iron", "cod_optic", "cod_rail_riser", "ar15_rail_riser", "mw3e_deagle_tactical"},
+        ExcludeElements = {"handguard_famas"},
+        Bone = "j_gun",
+        Pos = Vector(-1, 0, -0.42),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(1.5, 0, 1),
+        -- Installed = "retro_ar15_iron_carry",
+        -- Integral = true,
+        MergeSlots = {2},
+    },
+    {
+        Hidden = true,
+        Category = {"bo1_addon_irons_2"},
+        ExcludeElements = {"handguard_famas"},
+        Bone = "j_gun",
+        Pos = Vector(0, 0, 0),
+        Ang = Angle(0, 0, 0),
+    },
+}
+
+ARC9.LoadAttachment(ATT, "retro_ar15_upper_future")
 
 -- UBGL
 ATT = {}

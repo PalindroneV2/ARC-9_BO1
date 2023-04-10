@@ -429,6 +429,20 @@ SWEP.AttachmentElements = {
             {0,2},
         },
     },
+    ["future_top"] = {
+        Bodygroups = {
+            {0,3},
+        },
+    },
+    ["future_carry"] = {
+        IronSights = {
+            Pos = Vector(-2.765, -2, -0.05),
+            Ang = Angle(0, 0.75, 0),
+            Magnification = 1.1,
+            ViewModelFOV = 60,
+            CrosshairInSights = false,
+        },
+    },
     ["classicrail"] = {
         Bodygroups = {
             {6,1},
@@ -742,6 +756,9 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     if attached["mw2_m4_irons"] or attached["mw2_rear"] then
         vm:SetBodygroup(10,1)
     end
+    if attached["future_top"] then
+        vm:SetBodygroup(10,2)
+    end
 
     if attached["bo1_bipod"] and self:GetBipod() then
         vm:SetBodygroup(4,6)
@@ -1038,7 +1055,7 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"cod_optic", "cod_rail_riser"},
         InstalledElements = {"classicrail"},
-        ExcludeElements = {"a4_top", "handguard_famas", "is_patriot"},
+        ExcludeElements = {"a4_top", "future_top", "handguard_famas", "is_patriot"},
     },
     {
         PrintName = "Upper",
