@@ -884,7 +884,31 @@ SWEP.HookP_NameChange = function(self, name)
         end
     end
 
-    local gunname = ""
+    --FUTURIZED VARIANTS
+    if attached["future_top"] then
+        alt = "A3"
+        if attached["barrel_10"] then
+            model = "Mk. 18"
+            alt = " Mod. 0"
+        end
+        if attached["barrel_11"] then
+            model = "M"
+            alt = "933"
+        end
+        if attached["barrel_14"] then
+            model = "M4A1"
+            alt = " Carbine"
+        end
+        if attached["fcg_bst"] then
+            alt = "A4"
+            if attached["carbine"] then
+                model = "M4"
+                alt = " Carbine"
+            end
+        end
+    end
+
+    local gunname = "AR-15"
     gunname = brand .. model .. alt
 
     if attached["fcg_semi"] then
