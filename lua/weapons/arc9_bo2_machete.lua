@@ -71,7 +71,7 @@ SWEP.PrimaryBash = true
 
 SWEP.BashDamage = 70
 SWEP.BashLungeRange = 128
-SWEP.BashRange = 48
+SWEP.BashRange = 64
 SWEP.PreBashTime = 0.25
 SWEP.PostBashTime = 0.5
 SWEP.BashDamageType = DMG_SLASH
@@ -81,7 +81,7 @@ SWEP.SecondaryBash = true
 
 SWEP.Bash2Damage = 100
 SWEP.Bash2LungeRange = 256
-SWEP.Bash2Range = 48
+SWEP.Bash2Range = 72
 SWEP.PreBash2Time = 0.25
 SWEP.PostBash2Time = 0.5
 SWEP.Bash2DamageType = DMG_SLASH
@@ -262,12 +262,12 @@ SWEP.Animations = {
         Time = 0.5,
     },
     ["bash"] = {
-        Source = {"swipe2","swipe3","swipe4","swipe5"},
+        Source = {"swipe2","swipe3","swipe5"},
         Time = 1,
     },
     ["bash2"] = {
-        Source = {"charge"},
-        Time = 0.6,
+        Source = {"swipe4"},
+        Time = 1,
     },
     ["backstab"] = {
         Source = {"charge"},

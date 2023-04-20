@@ -69,28 +69,28 @@ SWEP.ShootWhileSprint = true
 SWEP.Bash = true
 SWEP.PrimaryBash = true
 
-SWEP.BashDamage = 70
+SWEP.BashDamage = 80
 SWEP.BashLungeRange = 128
-SWEP.BashRange = 48
-SWEP.PreBashTime = 0.25
-SWEP.PostBashTime = 0.5
+SWEP.BashRange = 72
+SWEP.PreBashTime = 0.3
+SWEP.PostBashTime = 0.6
 SWEP.BashDamageType = DMG_SLASH
 
 SWEP.Bash2 = true
 SWEP.SecondaryBash = true
 
-SWEP.Bash2Damage = 100
+SWEP.Bash2Damage = 115
 SWEP.Bash2LungeRange = 256
-SWEP.Bash2Range = 48
-SWEP.PreBash2Time = 0.25
-SWEP.PostBash2Time = 0.5
+SWEP.Bash2Range = 80
+SWEP.PreBash2Time = 0.3
+SWEP.PostBash2Time = 0.6
 SWEP.Bash2DamageType = DMG_SLASH
 
 SWEP.Backstab = true
 SWEP.BackstabDamage = 250
-SWEP.BackstabRange = 32
-SWEP.PreBackstabTime = 0.25
-SWEP.PostBackstabTime = 0.5
+SWEP.BackstabRange = 40
+SWEP.PreBackstabTime = 0.3
+SWEP.PostBackstabTime = 0.6
 SWEP.BackstabDamageType = DMG_SLASH
 
 -------------------------- POSITIONS
@@ -261,16 +261,17 @@ SWEP.Animations = {
         Source = "holster",
         Time = 0.5,
     },
+    --swipe2 is shit
     ["bash"] = {
-        Source = {"swipe2","swipe3","swipe4","swipe5"},
+        Source = {"swipe3","swipe5"},
         Time = 1,
     },
     ["bash2"] = {
-        Source = {"charge"},
-        Time = 0.6,
+        Source = {"swipe4"},
+        Time = 1,
     },
     ["backstab"] = {
-        Source = {"charge"},
+        Source = {"swipe"},
         Time = 0.6,
     },
     ["enter_sprint"] = {
