@@ -5,10 +5,6 @@
 	"$phongexponenttexture" "models/weapons/arc9/cde/mw3_mp5/mp5_mw3_s"
 	"$envmapmask" "models/weapons/arc9/cde/mw3_mp5/mp5_mw3_s"
 	$normalmapalphaenvmapmask 1
-
-	$detail "models/weapons/arc9/bo1/black_detail"
-	$detailblendmode 4
-	$detailblendfactor 0.7
 	
 	//"$color2" "[ .4 .4 .4 ]"
 	"$blendtintbybasealpha" "1"
@@ -24,6 +20,8 @@
 	"$nocull" "1"
 
 	$detail "models/weapons/arc9/bo1/black_detail"
+	$detailblendmode 4
+	$detailblendfactor 0.7
 	Proxies {
 		CustomCamo {
 			camoTexture $detail

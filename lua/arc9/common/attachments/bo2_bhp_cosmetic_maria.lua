@@ -12,3 +12,4 @@ ATT.Free = true
 ATT.Category = {"bo2_bhp_cosmetic"}
 ATT.ActivateElements = {"maria"}
 ATT.ShootSound = "ARC9_BO2.FNV_9mm_Fire"
+ATT.InstallSound = "ARC9_BO2.FNV_EE"

@@ -96,6 +96,7 @@ ATT.Cons = {}
 ATT.SortOrder = 5
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
+ATT.AttNotForNPCs = true
 
 ATT.Category = {"bo1_pap_bknife"}
 ATT.ActivateElements = {"bo1_pap"}
