@@ -779,9 +779,9 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local camo = 0
     if attached["universal_camo"] then
         camo = 1
-    end
-    if attached["camo_full"] then
-        camo = 2
+        if attached["camo_full"] then
+            camo = 2
+        end
     end
     if attached["bo1_pap"] then
         camo = camo + 3
@@ -1218,7 +1218,6 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"bo1_camo_full"},
         CosmeticOnly = true,
-        RequireElements = {"unicamo_activate"},
     },
 }
 
