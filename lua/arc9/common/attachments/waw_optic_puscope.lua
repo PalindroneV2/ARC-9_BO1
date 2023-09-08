@@ -24,7 +24,8 @@ ATT.ShotgunReload = true
 
 ATT.Sights = {
     {
-        Pos = Vector(0.486, 10, -2.96),
+        Pos = Vector(0.486, 10, -2.95),
+        -- Pos = Vector(0.365, 10, -3.14),
         Ang = Angle(0, 0, 0),
         ViewModelFOV = 35,
         Magnification = 1,
@@ -33,7 +34,7 @@ ATT.Sights = {
 }
 
 ATT.RTScope = true
-ATT.RTScopeSubmatIndex = 1
+ATT.RTScopeSubmatIndex = 0
 ATT.RTScopeFOV = 9
 ATT.RTScopeRes = 512
 ATT.RTScopeSurface = Material("models/weapons/arc9/bo1/bo1_acogs/acog_lens")

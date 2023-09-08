@@ -37,7 +37,7 @@ SWEP.WorldModelOffset = {
 }
 SWEP.ViewModelFOVBase = 75
 
-SWEP.DefaultBodygroups = "01000000000000"
+SWEP.DefaultBodygroups = "00100000000000"
 
 SWEP.DamageMax = 105
 SWEP.DamageMin = 65 -- damage done at maximum range
@@ -182,17 +182,17 @@ SWEP.CaseBones = {
 }
 
 SWEP.IronSights = {
-    Pos = Vector(-0.95, -6, 3.5),
+    Pos = Vector(-1.075, -1, 1.6),
     Ang = Angle(1.575, 0.2, 0),
     Magnification = 1.5,
-    ViewModelFOV = 60,
+    ViewModelFOV = 50,
     AssociatedSlot = 1,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
 }
 
 SWEP.SightMidPoint = { -- Where the gun should be at the middle of it's irons
-    Pos = Vector(0, -6, 1.5),
+    Pos = Vector(0, -1, 1.5),
     Ang = Angle(0.775, 0.1, -2.5),
 }
 
@@ -227,6 +227,75 @@ SWEP.SprintVerticalOffset = false
 SWEP.SprintPos = SWEP.ActivePos + Vector(9, 1, 1)
 SWEP.SprintAng = SWEP.ActiveAng + Angle(40, 0, 0)
 
+-- local basepos = Vector(1, -6, -1)
+
+-- SWEP.ActivePosHook = function(self)
+--     local attached = self:GetElements()
+--     if attached["mosin_scope"] and self:GetUBGL() then
+--         return basepos + Vector(-1, 0, 0)
+--     end
+-- end
+-- SWEP.ActiveAngHook = function(self)
+--     local attached = self:GetElements()
+--     if attached["mosin_scope"] and self:GetUBGL() then
+--         return Angle(0,0,0)
+--     end
+-- end
+-- SWEP.ReloadPosHook = function(self)
+--     local attached = self:GetElements()
+--     if attached["mosin_scope"] and self:GetUBGL() then
+--         return Vector(0,-3,-1)
+--     end
+-- end
+-- SWEP.ReloadAngHook = function(self)
+--     local attached = self:GetElements()
+--     if attached["mosin_scope"] and self:GetUBGL() then
+--         return Angle(0,0,0)
+--     end
+-- end
+-- SWEP.MovingPosHook = function(self)
+--     local attached = self:GetElements()
+--     if attached["mosin_scope"] and self:GetUBGL() then
+--         return Vector(0,-3,-1)
+--     end
+-- end
+-- SWEP.MovingAngHook = function(self)
+--     local attached = self:GetElements()
+--     if attached["mosin_scope"] and self:GetUBGL() then
+--         return Angle(0,0,0)
+--     end
+-- end
+-- SWEP.MovingMidPointHook = function(self)
+--     local attached = self:GetElements()
+--     if attached["mosin_scope"] and self:GetUBGL() then
+--         return {Pos = self.ActivePos, Ang = self.ActiveAng}
+--     end
+-- end
+-- SWEP.CrouchPosHook = function(self)
+--     local attached = self:GetElements()
+--     if attached["mosin_scope"] and self:GetUBGL() then
+--         return Vector(0,-3,-1)
+--     end
+-- end
+-- SWEP.CrouchAngHook = function(self)
+--     local attached = self:GetElements()
+--     if attached["mosin_scope"] and self:GetUBGL() then
+--         return Angle(0,0,0)
+--     end
+-- end
+-- SWEP.SprintPosHook = function(self)
+--     local attached = self:GetElements()
+--     if attached["mosin_scope"] and self:GetUBGL() then
+--         return Vector(0,-3,-1)
+--     end
+-- end
+-- SWEP.SprintAngHook = function(self)
+--     local attached = self:GetElements()
+--     if attached["mosin_scope"] and self:GetUBGL() then
+--         return Angle(0,0,0)
+--     end
+-- end
+
 SWEP.CustomizePos = Vector(21, 40, 4)
 SWEP.CustomizeAng = Angle(90, 0, 0)
 SWEP.CustomizeSnapshotPos = Vector(0, 10, 0)
@@ -247,7 +316,9 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local CUSTSTATE = self:GetCustomize()
 
     if CUSTSTATE then
-        vm:SetBodygroup(1,0)
+        vm:SetBodygroup(0,1)
+        vm:SetBodygroup(1,1)
+        vm:SetBodygroup(2,0)
     end
 
     local camo = 0
@@ -255,29 +326,20 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         camo = camo + 1
     end
     if attached["waw_bayonet"] then
-        vm:SetBodygroup(2,1)
+        vm:SetBodygroup(3,1)
     end
     if attached["waw_rifgrenade"] then
         if self:GetUBGL() then
-            vm:SetBodygroup(2,2)
+            vm:SetBodygroup(3,2)
         end
         if self:Clip2() == 0 then
-            vm:SetBodygroup(2,0)
+            vm:SetBodygroup(3,0)
         end
     end
-    local newActivePos = Vector(1, -6, 1)
-    local newActiveAng = Angle(0, 0, -5)
     if attached["mosin_scope"] then
-        vm:SetBodygroup(1,2)
-        newActivePos = Vector(1, -6, -3)
+        vm:SetBodygroup(2,2)
     end
     vm:SetSkin(camo)
-    self.ActivePos = newActivePos
-    self.ActiveAng = newActiveAng
-    self.CrouchPos = self.ActivePos
-    self.CrouchAng = self.ActiveAng
-    self.SprintPos = self.ActivePos + Vector(9, 1, 1)
-    self.SprintAng = self.ActiveAng + Angle(40, 0, 0)
 
 end
 
@@ -313,7 +375,7 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
             return anim .. "_empty"
         end
     end
-    if attached["mosin_scope"] then suffix = "_snipe" end
+    if attached["mosin_scope"] then suffix = "_scope" end
 
     return anim .. suffix
 end
@@ -429,7 +491,7 @@ SWEP.Animations = {
         Time = 7 / 30,
         {s = "ARC9_WAW.Mosin_Mech", t = 1 / 30},
     },
-    ["cycle_ads"] = {
+    ["cycle_iron"] = {
         Source = {"cycle_ads"},
         Time = 28 / 30,
         ShellEjectAt = 10 / 30,
@@ -453,28 +515,28 @@ SWEP.Animations = {
         },
     },
 
-    ["idle_snipe"] = {
-        Source = "idle_snipe",
+    ["idle_scope"] = {
+        Source = "idle_scope",
         Time = 1 / 30,
     },
-    ["draw_snipe"] = {
-        Source = "draw_snipe",
+    ["draw_scope"] = {
+        Source = "draw_scope",
     },
-    ["holster_snipe"] = {
-        Source = "holster_snipe",
+    ["holster_scope"] = {
+        Source = "holster_scope",
         Time = 0.5,
     },
-    ["ready_snipe"] = {
-        Source = "first_draw_snipe",
+    ["ready_scope"] = {
+        Source = "first_draw_scope",
         Time = 45 / 30,
     },
-    ["fire_snipe"] = {
-        Source = {"fire_snipe"},
+    ["fire_scope"] = {
+        Source = {"fire_scope"},
         Time = 7 / 30,
         {s = "ARC9_WAW.Mosin_Mech", t = 1 / 30},
     },
-    ["cycle_snipe"] = {
-        Source = {"cycle_snipe"},
+    ["cycle_scope"] = {
+        Source = {"cycle_scope"},
         Time = 30 / 30,
         ShellEjectAt = 10 / 30,
         EventTable = {
@@ -484,15 +546,21 @@ SWEP.Animations = {
             {s = "ARC9_WAW.Mosin_Down", t = 25 / 30},
         },
     },
-    ["fire_iron_snipe"] = {
-        Source = {"fire_snipe"},
+    ["fire_iron_scope"] = {
+        Source = {"fire_scope"},
         Time = 7 / 30,
         {s = "ARC9_WAW.Mosin_Mech", t = 1 / 30},
     },
-    ["cycle_iron_snipe"] = {
-        Source = {"cycle_snipe"},
+    ["cycle_iron_scope"] = {
+        Source = {"cycle_scope"},
         Time = 25 / 30,
         ShellEjectAt = 3 / 30,
+        EventTable = {
+            {s = "ARC9_WAW.Mosin_Up", t = 5 / 30},
+            {s = "ARC9_WAW.Mosin_Back", t = 10 / 30},
+            {s = "ARC9_WAW.Mosin_Fwd", t = 20 / 30},
+            {s = "ARC9_WAW.Mosin_Down", t = 25 / 30},
+        },
     },
     ["reload_start"] = {
         Source = "reload_in",
