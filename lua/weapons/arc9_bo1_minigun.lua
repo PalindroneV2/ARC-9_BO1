@@ -104,7 +104,7 @@ SWEP.SpreadAddMidAir = 0
 -- SWEP.SpreadAddShooting = math.rad(5 / 37.5) -- math.rad(10 / 37.5)
 SWEP.SpreadAddCrouch = math.rad(0 / 37.5)
 
-SWEP.UseVisualRecoil = true
+SWEP.UseVisualRecoil = false
 SWEP.VisualRecoilCenter = Vector(0,0, 0)
 SWEP.VisualRecoilUp = 0.1
 SWEP.VisualRecoilSide = 0.1

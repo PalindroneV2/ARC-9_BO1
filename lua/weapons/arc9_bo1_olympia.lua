@@ -104,7 +104,7 @@ SWEP.PelletSpread = 0.035
 
 SWEP.RecoilPatternDrift = 20
 
-SWEP.UseVisualRecoil = true
+SWEP.UseVisualRecoil = false
 SWEP.VisualRecoilCenter = Vector(0, 0, 0)
 SWEP.VisualRecoilUp = 0.6
 SWEP.VisualRecoilSide = 0.2
