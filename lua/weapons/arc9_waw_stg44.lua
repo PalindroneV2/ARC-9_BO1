@@ -97,12 +97,13 @@ SWEP.SpreadAddMidAir = 0
 
 SWEP.RecoilPatternDrift = 20
 
-SWEP.VisualRecoilUp = 0
-SWEP.VisualRecoilSide = 0
-SWEP.VisualRecoilRoll = 0
+SWEP.UseVisualRecoil = true
 SWEP.VisualRecoilCenter = Vector(0, 0, 0)
-SWEP.VisualRecoilPunch = 0
-SWEP.VisualRecoilMultSights = 0
+SWEP.VisualRecoilUp = 0.1
+SWEP.VisualRecoilSide = 0.1
+SWEP.VisualRecoilRoll = 1
+SWEP.VisualRecoilPunch = 2
+SWEP.VisualRecoilMultSights = 0.2
 
 SWEP.Speed = 0.95
 
@@ -214,8 +215,76 @@ SWEP.SprintAng = SWEP.ActiveAng + Angle(40, 0, 0)
 SWEP.CustomizePos = Vector(20.5, 40, 6)
 SWEP.CustomizeAng = Angle(90, 0, 0)
 
-SWEP.BarrelLength = 0 -- = 25
+local wolfPos = Vector (-1.56, -9, -1)
+local wolfAng = Angle(0.025, 0, 0)
+SWEP.ActivePosHook = function(self)
+    local attached = self:GetElements()
+    if attached["wolf3d"] then
+        return wolfPos
+    end
+end
+SWEP.ActiveAngHook = function(self)
+    local attached = self:GetElements()
+    if attached["wolf3d"] then
+        return wolfAng
+    end
+end
+SWEP.ReloadPosHook = function(self)
+    local attached = self:GetElements()
+    if attached["wolf3d"] then
+        return wolfPos
+    end
+end
+SWEP.ReloadAngHook = function(self)
+    local attached = self:GetElements()
+    if attached["wolf3d"] then
+        return wolfAng
+    end
+end
+SWEP.MovingPosHook = function(self)
+    local attached = self:GetElements()
+    if attached["wolf3d"] then
+        return wolfPos
+    end
+end
+SWEP.MovingAngHook = function(self)
+    local attached = self:GetElements()
+    if attached["wolf3d"] then
+        return wolfAng
+    end
+end
+SWEP.MovingMidPointHook = function(self)
+    local attached = self:GetElements()
+    if attached["wolf3d"] then
+        return {Pos = self.ActivePos, Ang = self.ActiveAng}
+    end
+end
+SWEP.CrouchPosHook = function(self)
+    local attached = self:GetElements()
+    if attached["wolf3d"] then
+        return wolfPos
+    end
+end
+SWEP.CrouchAngHook = function(self)
+    local attached = self:GetElements()
+    if attached["wolf3d"] then
+        return wolfAng
+    end
+end
+SWEP.SprintPosHook = function(self)
+    local attached = self:GetElements()
+    if attached["wolf3d"] then
+        return wolfPos
+    end
+end
+SWEP.SprintAngHook = function(self)
+    local attached = self:GetElements()
+    if attached["wolf3d"] then
+        return wolfAng
+    end
+end
 
+SWEP.BarrelLength = 0 -- = 25
 SWEP.ExtraSightDist = 5
 
 SWEP.AttachmentElements = {
@@ -284,6 +353,7 @@ SWEP.Attachments = {
         Pos = Vector(4.5, -0.01, 3.6),
         Ang = Angle(0, 0, 0),
         Category = {"waw_aperture", "waw_optic_zf4"},
+        ExcludeElements = {"wolf3d"},
     },
     {
         PrintName = "Muzzle",
@@ -293,6 +363,7 @@ SWEP.Attachments = {
         Pos = Vector(21.8, 0, 2),
         Ang = Angle(0, 0, 0),
         Category = {"cod_muzzle"},
+        ExcludeElements = {"wolf3d"},
         -- ExcludeElements = {"newbarrel"},
     },
     {
@@ -301,6 +372,7 @@ SWEP.Attachments = {
         Pos = Vector(11, 0, 1.6),
         Ang = Angle(0, 0, 0),
         Category = {"cod_rail_underbarrel"},
+        ExcludeElements = {"wolf3d"},
     },
     {
         PrintName = "Ammunition",
@@ -309,6 +381,7 @@ SWEP.Attachments = {
         Pos = Vector(6, 0, -3),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ammo", "bo1_pap"},
+        ExcludeElements = {"wolf3d"},
     },
     {
         PrintName = "Perk-a-Cola",
@@ -316,7 +389,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(-2, 0, -5),
         Ang = Angle(0, 0, 0),
-        Category = "bo1_perkacola",
+        Category = {"bo1_perkacola", "waw_perk_stg44"},
         ExcludeElements = {"mwc_perk", "mwc_proficiency"},
     },
     {
@@ -326,7 +399,7 @@ SWEP.Attachments = {
         Pos = Vector(-5, 0, -5),
         Ang = Angle(0, 0, 0),
         Category = "mwc_perk",
-        ExcludeElements = {"bo1_perkacola"},
+        ExcludeElements = {"bo1_perkacola", "wolf3d"},
     },
     {
         PrintName = "Proficiency",
@@ -335,7 +408,7 @@ SWEP.Attachments = {
         Pos = Vector(-8, 0, -5),
         Ang = Angle(0, 0, 0),
         Category = "mwc_proficiency",
-        ExcludeElements = {"bo1_perkacola"},
+        ExcludeElements = {"bo1_perkacola", "wolf3d"},
     },
 }
 

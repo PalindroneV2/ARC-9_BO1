@@ -101,12 +101,13 @@ SWEP.SpreadAddMidAir = 0
 
 SWEP.RecoilPatternDrift = 20
 
-SWEP.VisualRecoilUp = 0
-SWEP.VisualRecoilSide = 0
-SWEP.VisualRecoilRoll = 0
+SWEP.UseVisualRecoil = true
 SWEP.VisualRecoilCenter = Vector(0, 0, 0)
-SWEP.VisualRecoilPunch = 0
-SWEP.VisualRecoilMultSights = 0
+SWEP.VisualRecoilUp = 0.15
+SWEP.VisualRecoilSide = 0.125
+SWEP.VisualRecoilRoll = 1
+SWEP.VisualRecoilPunch = 2.2
+SWEP.VisualRecoilMultSights = 0.5
 
 SWEP.Speed = 1
 
@@ -136,10 +137,9 @@ SWEP.ARC9WeaponCategory = 3
 SWEP.NPCWeight = 100
 
 SWEP.FreeAimRadius = 0 -- In degrees, how much this gun can free aim in hip fire.
-SWEP.Sway = 0 -- How much the gun sways.
-
 SWEP.FreeAimRadiusMultSights = 0
 
+SWEP.Sway = 0 -- How much the gun sways.
 SWEP.SwayMultSights = 0
 
 SWEP.Ammo = "pistol" -- what ammo type the gun uses

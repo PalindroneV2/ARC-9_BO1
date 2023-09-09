@@ -74,7 +74,7 @@ SWEP.TracerEffect = "ARC9_tracer" -- The effect to use for hitscan tracers
 SWEP.TracerColor = Color(255, 255, 255) -- Color of tracers. Only works if tracer effect supports it. For physical bullets, this is compressed down to 9-bit color.
 
 SWEP.ChamberSize = 0 -- dont fucking change this again.
-SWEP.ClipSize = 1 -- DefaultClip is automatically set.
+SWEP.ClipSize = 500 -- DefaultClip is automatically set.
 SWEP.SupplyLimit = 500 -- Amount of magazines of ammo this gun can take from an ARC9 supply crate.
 SWEP.ReloadTime = 1
 
@@ -105,12 +105,13 @@ SWEP.SpreadAddMidAir = 0
 -- SWEP.SpreadAddShooting = math.rad(5 / 37.5) -- math.rad(10 / 37.5)
 SWEP.SpreadAddCrouch = math.rad(0 / 37.5)
 
-SWEP.VisualRecoilUp = 0 -- Vertical tilt for visual recoil.
-SWEP.VisualRecoilSide = 0 -- Horizontal tilt for visual recoil.
-SWEP.VisualRecoilRoll = 0 -- Roll tilt for visual recoil.
-SWEP.VisualRecoilCenter = Vector(0, 0, 0) -- The "axis" of visual recoil. Where your hand is.
-SWEP.VisualRecoilPunch = 0 -- How far back visual recoil moves the gun.
-SWEP.VisualRecoilMultSights = 0 -- Visual recoil multiplier while in sights.
+SWEP.UseVisualRecoil = true
+SWEP.VisualRecoilCenter = Vector(0,0, 0)
+SWEP.VisualRecoilUp = 0.1
+SWEP.VisualRecoilSide = 0.1
+SWEP.VisualRecoilRoll = 1
+SWEP.VisualRecoilPunch = 2
+SWEP.VisualRecoilMultSights = 0.5
 
 SWEP.Speed = 0.6
 SWEP.ShootWhileSprint = true

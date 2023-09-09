@@ -97,12 +97,13 @@ SWEP.SpreadAddMidAir = 0
 
 SWEP.RecoilPatternDrift = 20
 
-SWEP.VisualRecoilUp = 0
-SWEP.VisualRecoilSide = 0
-SWEP.VisualRecoilRoll = 0
+SWEP.UseVisualRecoil = true
 SWEP.VisualRecoilCenter = Vector(0, 0, 0)
-SWEP.VisualRecoilPunch = 0
-SWEP.VisualRecoilMultSights = 0
+SWEP.VisualRecoilUp = 0.1
+SWEP.VisualRecoilSide = 0.05
+SWEP.VisualRecoilRoll = 1
+SWEP.VisualRecoilPunch = 2
+SWEP.VisualRecoilMultSights = 1
 
 SWEP.Speed = 0.95
 
@@ -227,74 +228,75 @@ SWEP.SprintVerticalOffset = false
 SWEP.SprintPos = SWEP.ActivePos + Vector(9, 1, 1)
 SWEP.SprintAng = SWEP.ActiveAng + Angle(40, 0, 0)
 
--- local basepos = Vector(1, -6, -1)
+local basepos = Vector(0, -5, -1)
+local baseang = Angle(-5, 0, -5)
 
--- SWEP.ActivePosHook = function(self)
---     local attached = self:GetElements()
---     if attached["mosin_scope"] and self:GetUBGL() then
---         return basepos + Vector(-1, 0, 0)
---     end
--- end
--- SWEP.ActiveAngHook = function(self)
---     local attached = self:GetElements()
---     if attached["mosin_scope"] and self:GetUBGL() then
---         return Angle(0,0,0)
---     end
--- end
--- SWEP.ReloadPosHook = function(self)
---     local attached = self:GetElements()
---     if attached["mosin_scope"] and self:GetUBGL() then
---         return Vector(0,-3,-1)
---     end
--- end
--- SWEP.ReloadAngHook = function(self)
---     local attached = self:GetElements()
---     if attached["mosin_scope"] and self:GetUBGL() then
---         return Angle(0,0,0)
---     end
--- end
--- SWEP.MovingPosHook = function(self)
---     local attached = self:GetElements()
---     if attached["mosin_scope"] and self:GetUBGL() then
---         return Vector(0,-3,-1)
---     end
--- end
--- SWEP.MovingAngHook = function(self)
---     local attached = self:GetElements()
---     if attached["mosin_scope"] and self:GetUBGL() then
---         return Angle(0,0,0)
---     end
--- end
--- SWEP.MovingMidPointHook = function(self)
---     local attached = self:GetElements()
---     if attached["mosin_scope"] and self:GetUBGL() then
---         return {Pos = self.ActivePos, Ang = self.ActiveAng}
---     end
--- end
--- SWEP.CrouchPosHook = function(self)
---     local attached = self:GetElements()
---     if attached["mosin_scope"] and self:GetUBGL() then
---         return Vector(0,-3,-1)
---     end
--- end
--- SWEP.CrouchAngHook = function(self)
---     local attached = self:GetElements()
---     if attached["mosin_scope"] and self:GetUBGL() then
---         return Angle(0,0,0)
---     end
--- end
--- SWEP.SprintPosHook = function(self)
---     local attached = self:GetElements()
---     if attached["mosin_scope"] and self:GetUBGL() then
---         return Vector(0,-3,-1)
---     end
--- end
--- SWEP.SprintAngHook = function(self)
---     local attached = self:GetElements()
---     if attached["mosin_scope"] and self:GetUBGL() then
---         return Angle(0,0,0)
---     end
--- end
+SWEP.ActivePosHook = function(self)
+    local attached = self:GetElements()
+    if attached["mosin_scope"] then
+        return basepos
+    end
+end
+SWEP.ActiveAngHook = function(self)
+    local attached = self:GetElements()
+    if attached["mosin_scope"] then
+        return baseang
+    end
+end
+SWEP.ReloadPosHook = function(self)
+    local attached = self:GetElements()
+    if attached["mosin_scope"] then
+        return basepos
+    end
+end
+SWEP.ReloadAngHook = function(self)
+    local attached = self:GetElements()
+    if attached["mosin_scope"] then
+        return baseang
+    end
+end
+SWEP.MovingPosHook = function(self)
+    local attached = self:GetElements()
+    if attached["mosin_scope"] then
+        return basepos
+    end
+end
+SWEP.MovingAngHook = function(self)
+    local attached = self:GetElements()
+    if attached["mosin_scope"] then
+        return baseang
+    end
+end
+SWEP.MovingMidPointHook = function(self)
+    local attached = self:GetElements()
+    if attached["mosin_scope"] then
+        return {Pos = basepos, Ang = baseang}
+    end
+end
+SWEP.CrouchPosHook = function(self)
+    local attached = self:GetElements()
+    if attached["mosin_scope"] then
+        return basepos
+    end
+end
+SWEP.CrouchAngHook = function(self)
+    local attached = self:GetElements()
+    if attached["mosin_scope"] then
+        return baseang
+    end
+end
+SWEP.SprintPosHook = function(self)
+    local attached = self:GetElements()
+    if attached["mosin_scope"] then
+        return basepos
+    end
+end
+SWEP.SprintAngHook = function(self)
+    local attached = self:GetElements()
+    if attached["mosin_scope"] then
+        return baseang
+    end
+end
 
 SWEP.CustomizePos = Vector(21, 40, 4)
 SWEP.CustomizeAng = Angle(90, 0, 0)

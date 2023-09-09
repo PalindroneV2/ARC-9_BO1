@@ -163,6 +163,113 @@ ATT.ShootSoundTail = ""
 
 ARC9.LoadAttachment(ATT, "bo1_minigun_perk_doom")
 
+ATT = {}
+
+ATT.PrintName = [[You got the Pistol!]]
+ATT.CompactName = [[Pistol]]
+ATT.Icon = Material("entities/bo1_atts/perks/doom_ee.png", "mips smooth")
+ATT.Description = [[You killed a guard for this.]]
+
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - WAW  Attachments"
+ATT.Free = false
+
+ATT.Category = {"waw_perk_pistol"}
+ATT.ActivateElements = {"wolf3d"}
+
+ATT.Speed = 2
+ATT.SpeedMultShooting = 1
+ATT.SpreadMult = 0.5
+ATT.SpreadMultHipFire = 0
+--ATT.SpreadMultMove = 0
+ATT.RecoilMult = 0
+ATT.RecoilUpMult = 0
+ATT.RecoilSideMult = 0
+ATT.RecoilKick = 0
+ATT.HasSights = false
+ATT.Crosshair = false
+ATT.BottomlessClip = true
+
+ATT.AimDownSightsTimeMult = 0
+ATT.SprintToFireTimeMult = 0
+
+-- ATT.FirstShootSound = "PAP_Effect"
+ATT.ShootSound = "ARC9_BO1.Chaingun_Fire"
+ATT.ShootSoundSilenced = ""
+ATT.DistantShootSound = ""
+
+ARC9.LoadAttachment(ATT, "waw_p38_wolf3d_ee")
+
+ATT = {}
+
+ATT.PrintName = [[You got the Submachine Gun!]]
+ATT.CompactName = [[SMG]]
+ATT.Icon = Material("entities/bo1_atts/perks/doom_ee.png", "mips smooth")
+ATT.Description = [[A nazi screamed for dear life when you took this.]]
+
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - WAW  Attachments"
+ATT.Free = false
+
+ATT.Category = {"waw_perk_mp40"}
+ATT.ActivateElements = {"wolf3d"}
+
+ATT.Speed = 2
+ATT.SpeedMultShooting = 1
+ATT.SpreadMult = 0.5
+ATT.SpreadMultHipFire = 0
+--ATT.SpreadMultMove = 0
+ATT.RecoilMult = 0
+ATT.RecoilUpMult = 0
+ATT.RecoilSideMult = 0
+ATT.RecoilKick = 0
+ATT.HasSights = false
+ATT.Crosshair = false
+ATT.BottomlessClip = true
+ATT.RPM = 600
+
+-- ATT.FirstShootSound = "PAP_Effect"
+ATT.ShootSound = "ARC9_BO1.Chaingun_Fire"
+ATT.ShootSoundSilenced = ""
+ATT.DistantShootSound = ""
+
+ARC9.LoadAttachment(ATT, "waw_mp40_wolf3d_ee")
+
+ATT = {}
+
+ATT.PrintName = [[You got the Assault Rifle!]]
+ATT.CompactName = [[Assault Rifle]]
+ATT.Icon = Material("entities/bo1_atts/perks/doom_ee.png", "mips smooth")
+ATT.Description = [[A nazi screamed for dear life when you took this.]]
+
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - WAW  Attachments"
+ATT.Free = false
+
+ATT.Category = {"waw_perk_stg44"}
+ATT.ActivateElements = {"wolf3d"}
+
+ATT.Speed = 2
+ATT.SpeedMultShooting = 1
+ATT.SpreadMult = 0.5
+ATT.SpreadMultHipFire = 0
+--ATT.SpreadMultMove = 0
+ATT.RecoilMult = 0
+ATT.RecoilUpMult = 0
+ATT.RecoilSideMult = 0
+ATT.RecoilKick = 0
+ATT.HasSights = false
+ATT.Crosshair = false
+ATT.BottomlessClip = true
+ATT.RPM = 525
+
+-- ATT.FirstShootSound = "PAP_Effect"
+ATT.ShootSound = "ARC9_BO1.Chaingun_Fire"
+ATT.ShootSoundSilenced = ""
+ATT.DistantShootSound = ""
+
+ARC9.LoadAttachment(ATT, "waw_stg44_wolf3d_ee")
+
 -- hook.Add("Move", "ARC9_BO1_DOOM_EE_SPEED", function(ent, mv)
 --     if !(ent:IsPlayer() or ent:IsNPC()) then return end
 --     local wep = ent:GetActiveWeapon()

@@ -100,11 +100,12 @@ SWEP.SpreadAddMidAir = 0
 
 SWEP.RecoilPatternDrift = 20
 
-SWEP.VisualRecoilUp = 0
-SWEP.VisualRecoilSide = 0
-SWEP.VisualRecoilRoll = 0
+SWEP.UseVisualRecoil = true
 SWEP.VisualRecoilCenter = Vector(0, 0, 0)
-SWEP.VisualRecoilPunch = 0
+SWEP.VisualRecoilUp = 0.025
+SWEP.VisualRecoilSide = 0.05
+SWEP.VisualRecoilRoll = 1
+SWEP.VisualRecoilPunch = 3
 SWEP.VisualRecoilMultSights = 0
 
 SWEP.Speed = 0.75
@@ -166,7 +167,7 @@ SWEP.ShellScale = 1.4
 SWEP.MuzzleEffectQCA = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectQCA = 2 -- which attachment to put the case effect on
 SWEP.ProceduralViewQCA = 1
-SWEP.CamQCA = 4
+SWEP.CamQCA = 3
 
 SWEP.BulletBones = {
     [1] = "ammo01_jnt",
