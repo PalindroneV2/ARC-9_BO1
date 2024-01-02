@@ -191,18 +191,18 @@ SWEP.HoldTypeSights = "ar2"
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 SWEP.NonTPIKAnimReload = ACT_HL2MP_GESTURE_RELOAD_AR2
 
-SWEP.ActivePos = Vector(0, -2, -1)
+SWEP.ActivePos = Vector(0.5, -2, -1)
 SWEP.ActiveAng = Angle(0, 0, -5)
 
-SWEP.MovingPos = SWEP.ActivePos
-SWEP.MovingAng = SWEP.ActiveAng
+SWEP.MovingPos = Vector(0, -1, -1)
+SWEP.MovingAng = Angle(0, 0, 0)
 
 SWEP.MovingMidPoint = {
-    Pos = SWEP.ActivePos,
-    Ang = SWEP.ActiveAng
+    Pos = Vector(0, -0.5, -0.5),
+    Ang = Angle(0, 0, 0)
 }
 
-SWEP.CrouchPos = SWEP.ActivePos + Vector(-1, 0, -1)
+SWEP.CrouchPos =  Vector(-1, -0.5, -1)
 SWEP.CrouchAng = SWEP.ActiveAng
 
 SWEP.RestPos = SWEP.ActivePos
@@ -244,7 +244,7 @@ end
 SWEP.MovingPosHook = function(self)
     local attached = self:GetElements()
     if attached["wolf3d"] then
-        return wolfPos
+        return Vector(0,0,0)
     end
 end
 SWEP.MovingAngHook = function(self)

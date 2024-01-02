@@ -202,15 +202,15 @@ SWEP.NonTPIKAnimReload = ACT_HL2MP_GESTURE_RELOAD_SMG1
 SWEP.ActivePos = Vector(0, 0, -1)
 SWEP.ActiveAng = Angle(0, 0, -5)
 
-SWEP.MovingPos = SWEP.ActivePos
-SWEP.MovingAng = SWEP.ActiveAng
+SWEP.MovingPos = Vector(0, -1, -1)
+SWEP.MovingAng = Angle(0, 0, 0)
 
 SWEP.MovingMidPoint = {
-    Pos = SWEP.ActivePos,
-    Ang = SWEP.ActiveAng
+    Pos = Vector(0, -0.5, -0.5),
+    Ang = Angle(0, 0, 0)
 }
 
-SWEP.CrouchPos = SWEP.ActivePos + Vector(-1, 0, -1)
+SWEP.CrouchPos =  Vector(0, -0.5, -1)
 SWEP.CrouchAng = SWEP.ActiveAng
 
 SWEP.RestPos = SWEP.ActivePos
@@ -220,7 +220,7 @@ SWEP.SprintVerticalOffset = false
 SWEP.SprintPos = SWEP.ActivePos
 SWEP.SprintAng = SWEP.ActiveAng
 
-SWEP.CustomizePos = Vector(12.5, 25, 6)
+SWEP.CustomizePos = Vector(15, 30, 4)
 SWEP.CustomizeAng = Angle(90, 0, 0)
 
 SWEP.BarrelLength = 0 -- = 25

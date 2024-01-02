@@ -208,15 +208,15 @@ SWEP.ActiveAng = Angle(0, 0, -5)
 SWEP.ReloadPos = SWEP.ActivePos
 SWEP.ReloadAng = SWEP.ActiveAng
 
-SWEP.MovingPos = SWEP.ActivePos
-SWEP.MovingAng = SWEP.ActiveAng
+SWEP.MovingPos = Vector(0, -1, -1)
+SWEP.MovingAng = Angle(0, 0, 0)
 
 SWEP.MovingMidPoint = {
-    Pos = SWEP.ActivePos,
-    Ang = SWEP.ActiveAng
+    Pos = Vector(0, -0.5, -0.5),
+    Ang = Angle(0, 0, 0)
 }
 
-SWEP.CrouchPos = SWEP.ActivePos + Vector(-1, 0, -1)
+SWEP.CrouchPos =  Vector(0, -0.5, -1)
 SWEP.CrouchAng = SWEP.ActiveAng
 
 SWEP.RestPos = SWEP.ActivePos
@@ -244,7 +244,7 @@ end
 SWEP.ReloadPosHook = function(self)
     local attached = self:GetElements()
     if attached["bo1_mk"] and self:GetUBGL() then
-        return Vector(0,-3,-1)
+        return Vector(0,-1,-1)
     end
 end
 SWEP.ReloadAngHook = function(self)
@@ -268,7 +268,7 @@ end
 SWEP.MovingMidPointHook = function(self)
     local attached = self:GetElements()
     if attached["bo1_mk"] and self:GetUBGL() then
-        return {Pos = self.ActivePos, Ang = self.ActiveAng}
+        return {Pos = Vector(0,0.5,0.5), Ang = self.ActiveAng}
     end
 end
 SWEP.CrouchPosHook = function(self)
