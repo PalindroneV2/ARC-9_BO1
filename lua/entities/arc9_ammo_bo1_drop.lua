@@ -5,6 +5,13 @@ ENT.PrintName                 = "Vulture Aid"
 ENT.Spawnable                 = false
 ENT.Model                     = "models/weapons/arc9/item/bo1_scavenger_pack.mdl"
 
+ENT.InfiniteUse = false
+ENT.OpeningAnim = false
+ENT.NextUse = 0
+ENT.Open = false
+
+ENT.Supply = 1
+
 function ENT:Initialize()
     if engine.ActiveGamemode() == "terrortown" and ARC9.TTTReplaceTable then
         self.AmmoType = ARC9.TTTReplaceTable[self.AmmoType] or self.AmmoType
