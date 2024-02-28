@@ -250,7 +250,7 @@ end
 SWEP.MovingPosHook = function(self)
     local attached = self:GetElements()
     if attached["ssg"] then
-        return Vector(-2.6, -12, -1)
+        return Vector(0, 0, 0)
     end
 end
 SWEP.MovingAngHook = function(self)
@@ -262,13 +262,13 @@ end
 SWEP.MovingMidPointHook = function(self)
     local attached = self:GetElements()
     if attached["ssg"] then
-        return {Pos = self.ActivePos, Ang = self.ActiveAng}
+        return {Pos = Vector(0,0,0), Ang = Angle(0,0,0)}
     end
 end
 SWEP.CrouchPosHook = function(self)
     local attached = self:GetElements()
     if attached["ssg"] then
-        return Vector(-2.6, -12, -1)
+        return Vector(0,0,0)
     end
 end
 SWEP.CrouchAngHook = function(self)

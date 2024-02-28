@@ -228,7 +228,6 @@ local snd_mech = "ARC9_WAW.M1911_Mech"
 local snd_mechlast = "ARC9_WAW.M1911_MechLast"
 local snd_magin = "ARC9_BO1.M1911_In"
 local snd_magout = "ARC9_BO1.M1911_Out"
-local snd_slideback = "ARC9_BO1.M1911_Slide_Back"
 local snd_slidefwd = "ARC9_BO1.M1911_Slide_Fwd"
 
 SWEP.Hook_ModifyBodygroups = function(self, data)
@@ -370,12 +369,8 @@ SWEP.Animations = {
         Time = 0.5,
     },
     ["ready"] = {
-        Source = "first_draw",
-        Time = 1,
-        EventTable = {
-            {s = snd_slideback, t = 0.2},
-            {s = snd_slidefwd, t = 0.8}
-        },
+        Source = "draw_empty",
+        Time = 0.5,
     },
     ["fire"] = {
         Source = {"fire"},
