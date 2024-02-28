@@ -369,7 +369,7 @@ SWEP.Animations = {
         Time = 0.5,
     },
     ["ready"] = {
-        Source = "draw_empty",
+        Source = "draw",
         Time = 0.5,
     },
     ["fire"] = {
