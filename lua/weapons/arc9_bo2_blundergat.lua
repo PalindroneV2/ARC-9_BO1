@@ -25,7 +25,7 @@ SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arc9/c_bo2_blundergat.mdl"
 SWEP.WorldModel = "models/weapons/w_shot_xm1014.mdl"
-SWEP.MirrorWorldModel = "models/weapons/arc9/w_bo2_blundergat.mdl"
+SWEP.WorldModelMirror = "models/weapons/arc9/w_bo2_blundergat.mdl"
 SWEP.MirrorVMWM = true
 SWEP.NoTPIKVMPos = true
 SWEP.WorldModelOffset = {
@@ -237,21 +237,26 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local vm = data.model
     local attached = data.elements
     local CUSTSTATE = self:GetCustomize()
+    local Papart = 0
 
     if attached["bo1_pap"] then
-        vm:SetBodygroup(2,1)
-        if CUSTSTATE then
-            vm:SetBodygroup(2,2)
-        else
-            vm:SetBodygroup(2,1)
-        end
-    else
-        vm:SetBodygroup(2,0)
+        Papart = Papart + 1
+    --     vm:SetBodygroup(2,1)
+    --     if CUSTSTATE then
+    --         vm:SetBodygroup(2,2)
+    --     else
+    --         vm:SetBodygroup(2,1)
+    --     end
+    -- else
+    --     vm:SetBodygroup(2,0)
     end
 
     if CUSTSTATE then
         vm:SetBodygroup(0,1)
         vm:SetBodygroup(1,1)
+        if attached["bo1_pap"] then
+            Papart = Papart + 1
+        end
         if attached["acidkit"] then
             vm:SetBodygroup(1,3)
         end
@@ -266,6 +271,8 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     if attached["acidkit"] then
         vm:SetSkin(1)
     end
+
+    vm:SetBodygroup(2,Papart)
 
 end
 

@@ -249,6 +249,7 @@ ATT.SortOrder = 5
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
 ATT.AttNotForNPCs = true
+ATT.AdminOnly = true
 
 ATT.Category = {"bo1_pap_launcher"}
 ATT.ActivateElements = {"bo1_pap"}
@@ -290,6 +291,7 @@ ATT.SortOrder = 5
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
 ATT.AttNotForNPCs = true
+ATT.AdminOnly = true
 
 ATT.Category = {"bo1_pap"}
 ATT.ActivateElements = {"bo1_pap"}
@@ -327,6 +329,7 @@ ATT.SortOrder = 5
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
 ATT.AttNotForNPCs = true
+ATT.AdminOnly = true
 
 ATT.Category = {"bo2_mk2_pap"}
 ATT.ActivateElements = {"bo1_pap"}
@@ -365,6 +368,7 @@ ATT.SortOrder = 5
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
 ATT.AttNotForNPCs = true
+ATT.AdminOnly = true
 
 ATT.Category = {"bo1_raygun_pap"}
 ATT.ActivateElements = {"bo1_pap"}
@@ -402,6 +406,8 @@ ATT.Cons = {}
 ATT.SortOrder = 6
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
+ATT.AttNotForNPCs = true
+ATT.AdminOnly = true
 
 ATT.Category = {"bo1_pap_1911"}
 ATT.ActivateElements = {"bo1_pap","sally"}
@@ -434,6 +440,8 @@ ATT.Cons = {}
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
+ATT.AttNotForNPCs = true
+ATT.AdminOnly = true
 
 ATT.Category = {"bo2_blundergat_kit"}
 ATT.ActivateElements = {"acidkit"}
