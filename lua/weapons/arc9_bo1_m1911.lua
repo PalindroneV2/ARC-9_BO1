@@ -329,6 +329,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     end
     vm:SetBodygroup(2,irons)
     vm:SetSkin(finish)
+    -- vm:SetSubMaterial(1,"models/weapons/arc9/pap/pap_cosmic")
 end
 
 SWEP.HookP_NameChange = function(self, name)
