@@ -38,7 +38,7 @@ SWEP.WorldModelOffset = {
 }
 SWEP.ViewModelFOVBase = 75
 
-SWEP.CustomCamoTexture = "models/weapons/arc9/bo1/od_green"
+SWEP.CustomCamoTexture = "models/weapons/arc9/bo1/black_detail"
 SWEP.CustomCamoScale = 1
 SWEP.CustomBlendFactor = 1
 
@@ -78,7 +78,7 @@ SWEP.ReloadTime = 1
 SWEP.Crosshair = true
 SWEP.CanBlindFire = false
 
-SWEP.Recoil = 0.7
+SWEP.Recoil = 0.325
 SWEP.RecoilSide = 0.3
 SWEP.RecoilUp = 0.4
 
@@ -102,12 +102,12 @@ SWEP.SpreadAddMidAir = 0
 
 SWEP.RecoilPatternDrift = 20
 
-SWEP.UseVisualRecoil = false
+SWEP.UseVisualRecoil = true
 SWEP.VisualRecoilCenter = Vector(0, 0, 0)
-SWEP.VisualRecoilUp = 0.2
-SWEP.VisualRecoilSide = 0.15
+SWEP.VisualRecoilUp = 0.215
+SWEP.VisualRecoilSide = 0.2
 SWEP.VisualRecoilRoll = 1
-SWEP.VisualRecoilPunch = 2.15
+SWEP.VisualRecoilPunch = 1.4
 SWEP.VisualRecoilMultSights = 0.5
 
 SWEP.Speed = 0.9
@@ -344,6 +344,22 @@ SWEP.AttachmentElements = {
             [3] = {
                 Pos = Vector(18, 0, 3.15),
             }
+        }
+    },
+    ["extrairon" and "aug_a2"] = {
+        IronSights = {
+            Pos = Vector(-2.735, -6, 0.1),
+            Ang = Angle(-0, 0, 0),
+            ViewModelFOV = 60,
+            Magnification = 1.1,
+        }
+    },
+    ["extrairon" and "aug_a3"] = {
+        IronSights = {
+            Pos = Vector(-2.735, -6, 0.65),
+            Ang = Angle(-0, 0, 0),
+            ViewModelFOV = 60,
+            Magnification = 1.1,
         }
     },
 }

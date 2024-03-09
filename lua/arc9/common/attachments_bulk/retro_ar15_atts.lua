@@ -497,109 +497,6 @@ ATT.PhysBulletMuzzleVelocityMult = 0.95
 
 ARC9.LoadAttachment(ATT, "retro_ar15_barrel_16")
 
--- FRONT SIGHTS
-ATT = {}
-
-ATT.PrintName = "Troy Flip-Up Front Battle Sight"
-ATT.CompactName = "Troy"
-ATT.Icon = Material("entities/bo1_atts/optics/retro_ar15/troy_side.png")
-ATT.Description = [[Aftermarket Troy flip-up front sight.
-Functions identically to other iron sights.]]
-ATT.SortOrder = 0
-ATT.MenuCategory = "ARC9 - BO1 AR-15 Attachments"
-ATT.Free = true
-
-ATT.Category = {"retro_ar15_front_iron"}
-ATT.ActivateElements = {"troy_front"}
-ATT.ExcludeElements = {"mw2_m4_irons"}
--- ATT.ExcludeElements = {"cod_rail_riser", "mw2_m4_irons"}
-ATT.Model = "models/weapons/arc9/atts/retro_ar15/front_irons.mdl"
-ATT.ModelOffset = Vector(-13.8, 0, -2.75)
-ATT.Bonemerge = true
-
--- ATT.DrawFunc = function(swep, model, wm)
---     local attached = swep:GetElements()
---     local frontval = 0
---     if attached["carbine"] then
---         frontval = 1
---     end
---     if attached["handguard_mlok_short"] then
---         frontval = 1
---     end
---     if attached["handguard_ris_mw19"] then
---         frontval = 2
---     end
---     model:SetBodygroup(0, frontval)
--- end
-
-ARC9.LoadAttachment(ATT, "retro_ar15_front_troy")
-
-ATT = {}
-
-ATT.PrintName = "MaTech Flip-Up Front Sight"
-ATT.CompactName = "MaTech"
-ATT.Icon = Material("entities/bo1_atts/optics/retro_ar15/matech_side.png")
-ATT.Description = [[United States General Issue front sight.
-Functions identically to other iron sights.]]
-ATT.SortOrder = 0
-ATT.MenuCategory = "ARC9 - BO1 AR-15 Attachments"
-ATT.Free = true
-
-ATT.Category = {"retro_ar15_front_iron"}
-ATT.ActivateElements = {"matech_front"}
-ATT.ExcludeElements = {"mw2_m4_irons"}
--- ATT.ExcludeElements = {"cod_rail_riser", "mw2_m4_irons"}
-ATT.Model = "models/weapons/arc9/atts/retro_ar15/front_irons.mdl"
-ATT.ModelOffset = Vector(-13.8, 0, -2.75)
-ATT.ModelBodygroups = "1"
-ATT.Bonemerge = true
-
-ARC9.LoadAttachment(ATT, "retro_ar15_front_matech")
-
-ATT = {}
-
-ATT.PrintName = "Magpul Masada Flip-Up Front Sight"
-ATT.CompactName = "Masada"
-ATT.Icon = Material("entities/bo1_atts/optics/retro_ar15/matech_side.png")
-ATT.Description = [[Front folding sight produced by Magpul for the Masada rifle.
-Functions identically to other iron sights.]]
-ATT.SortOrder = 0
-ATT.MenuCategory = "ARC9 - BO1 AR-15 Attachments"
-ATT.Free = true
-
-ATT.Category = {"retro_ar15_front_iron"}
-ATT.ActivateElements = {"masada_front"}
-ATT.ExcludeElements = {"mw2_m4_irons"}
--- ATT.ExcludeElements = {"cod_rail_riser", "mw2_m4_irons"}
-ATT.Model = "models/weapons/arc9/atts/retro_ar15/front_irons.mdl"
-ATT.ModelOffset = Vector(-13.8, 0, -2.75)
-ATT.ModelBodygroups = "2"
-ATT.Bonemerge = true
-
-ARC9.LoadAttachment(ATT, "retro_ar15_front_masada")
-
-ATT = {}
-
-ATT.PrintName = "TMM-4 S-System Flip-Up Front Sight"
-ATT.CompactName = "TMM-4"
-ATT.Icon = Material("entities/bo1_atts/optics/retro_ar15/matech_side.png")
-ATT.Description = [[Front folding sight produced by Magpul for the Masada rifle.
-Functions identically to other iron sights.]]
-ATT.SortOrder = 0
-ATT.MenuCategory = "ARC9 - BO1 AR-15 Attachments"
-ATT.Free = true
-
-ATT.Category = {"retro_ar15_front_iron"}
-ATT.ActivateElements = {"masada_front"}
-ATT.ExcludeElements = {"mw2_m4_irons"}
--- ATT.ExcludeElements = {"cod_rail_riser", "mw2_m4_irons"}
-ATT.Model = "models/weapons/arc9/atts/retro_ar15/front_irons.mdl"
-ATT.ModelOffset = Vector(-13.8, 0, -2.75)
-ATT.ModelBodygroups = "3"
-ATT.Bonemerge = true
-
-ARC9.LoadAttachment(ATT, "retro_ar15_front_mw2")
-
 ATT = {}
 
 ATT.PrintName = "Flattened cut-down Gasblock"
@@ -711,12 +608,12 @@ ATT.ActivateElements = {"handguard_a4", "nosling", "no_ub_rail", "ar15_ris", "no
 ATT.Attachments = {
     {
         PrintName = "Front",
-        Category = {"retro_ar15_front_iron", "retro_ar15_front_cut"},
+        Category = {"cod_extrairons_front", "retro_ar15_front_cut"},
         InstalledElements = {"gasblock_cut"},
         ExcludeElements = {"mw2_m4_irons"},
         -- ExcludeElements = {"cod_optic", "cod_rail_riser", "mw2_m4_irons"},
         Bone = "j_gun",
-        Pos = Vector(-18.5, 0, -4.15),
+        Pos = Vector(-16.65, 0, -3.3),
         Ang = Angle(0, 0, 0),
     },
     {
@@ -787,12 +684,12 @@ ATT.ActivateElements = {"handguard_mlok", "mlok", "nosling", "no_tac_rail"}
 ATT.Attachments = {
     {
         PrintName = "Front",
-        Category = {"retro_ar15_front_iron"},
+        Category = {"cod_extrairons_front"},
         InstalledElements = {"gasblock_cut"},
         ExcludeElements = {"mw2_m4_irons"},
         -- ExcludeElements = {"cod_optic", "cod_rail_riser", "mw2_m4_irons"},
         Bone = "j_gun",
-        Pos = Vector(-18.5, 0, -4.15),
+        Pos = Vector(-16.65, 0, -3.3),
         Ang = Angle(0, 0, 0),
     },
     {
@@ -1102,13 +999,13 @@ ATT.ActivateElements = {"nosling", "ar15_ris", "no_ub_rail", "ris_carbine", "han
 ATT.Attachments = {
     {
         PrintName = "Front",
-        Category = {"retro_ar15_front_iron", "retro_ar15_front_cut"},
+        Category = {"cod_extrairons_front", "retro_ar15_front_cut"},
         UnInstalledElements = {"gasblock_carbine"},
         InstalledElements = {"gasblock_carbine_cut"},
         ExcludeElements = {"mw2_m4_irons"},
         -- ExcludeElements = {"cod_optic", "cod_rail_riser", "mw2_m4_irons", "cod_tactical"},
         Bone = "j_gun",
-        Pos = Vector(-13.375, 0, -4.15),
+        Pos = Vector(-11.5, 0, -3.3),
         Ang = Angle(0, 0, 0),
     },
     {
@@ -1172,13 +1069,13 @@ ATT.ActivateElements = {"nosling", "mlok", "handguard_mlok_short", "carbine_hg"}
 ATT.Attachments = {
     {
         PrintName = "Front",
-        Category = {"retro_ar15_front_iron"},
+        Category = {"cod_extrairons_front"},
         UnInstalledElements = {"gasblock_carbine"},
         InstalledElements = {"gasblock_carbine_cut"},
         ExcludeElements = {"mw2_m4_irons"},
         -- ExcludeElements = {"cod_optic", "cod_rail_riser", "mw2_m4_irons", "cod_tactical"},
         Bone = "j_gun",
-        Pos = Vector(-15.25, 0, -4.15),
+        Pos = Vector(-13.25, 0, -3.3),
         Ang = Angle(0, 0, 0),
     },
     {
@@ -1264,12 +1161,12 @@ ATT.ExcludeElements = {"mw2_m4_irons"}
 ATT.Attachments = {
     {
         PrintName = "Front",
-        Category = "retro_ar15_front_iron",
+        Category = "cod_extrairons_front",
         UnInstalledElements = {"gasblock_carbine"},
         InstalledElements = {"gasblock_carbine_cut"},
         ExcludeElements = {"gasblock_flat"},
         Bone = "j_gun",
-        Pos = Vector(-15.5, 0, -4.15),
+        Pos = Vector(-13.5, 0, -3.3),
         Ang = Angle(0, 0, 0),
         -- Icon_Offset = Vector(13.5, 0, 4.15),
     },
@@ -1413,8 +1310,9 @@ ATT = {}
 ATT.PrintName = [[TMM-4 S-System Rail]]
 ATT.CompactName = [[S-SYSTEM]]
 ATT.Icon = Material("entities/bo1_atts/optics/retro_ar15/carry_side.png")
-ATT.Description = [[Picatinny rail system for the top of the weapon that goes from the top receiver to the end of the handguard.]]
-ATT.SortOrder = 5
+ATT.Description = [[Picatinny rail system for the top of the weapon that goes from the top receiver to the end of the handguard.
+Includes A.R.M.S. 40L flip up sights.]]
+ATT.SortOrder = 6
 ATT.MenuCategory = "ARC9 - MWC Attachments"
 ATT.Free = false
 ATT.Folder = "AR-15 IRONS"
@@ -1514,7 +1412,7 @@ ATT.ActivateElements = {"future_carry"}
 
 ATT.Model = "models/weapons/arc9/atts/retro_ar15/bo3_carry.mdl"
 ATT.Scale = Vector(1, 1, 1)
-ATT.ModelOffset = Vector(0,0,0)
+ATT.ModelOffset = Vector(2,0,0)
 ATT.ModelAngleOffset = Angle(0,0,0)
 ATT.BoneMerge = true
 
@@ -1579,12 +1477,13 @@ end
 
 ATT.Model = "models/weapons/arc9/item/mw3_m4_irons.mdl"
 ATT.Scale = Vector(1, 1, 1)
-ATT.ModelOffset = Vector(0.75,0,0)
+ATT.ModelOffset = Vector(1.25,0,-2.15)
 ATT.ModelAngleOffset = Angle(0,0,0)
+ATT.BoneMerge = true
 
 ATT.Sights = {
     {
-        Pos = Vector(0, 10, -1.2),
+        Pos = Vector(0, 10, -2.8),
         Ang = Angle(0, -0.1, 0),
         ViewModelFOV = 60,
         IsIronSight = true,
@@ -1592,103 +1491,6 @@ ATT.Sights = {
 }
 
 ARC9.LoadAttachment(ATT, "retro_ar15_iron_mw3")
-
-ATT = {}
-
-ATT.PrintName = "Troy Flip-Up Rear Battle Sight"
-ATT.CompactName = "Troy"
-ATT.Icon = Material("entities/bo1_atts/optics/retro_ar15/troy_side.png")
-ATT.Description = [[Aftermarket Troy flip-up rear sight.
-Functions identically to other iron sights.]]
-ATT.SortOrder = 3
-ATT.MenuCategory = "ARC9 - BO1 AR-15 Attachments"
-ATT.Free = true
-ATT.Folder = "AR-15 IRONS"
-
--- ATT.InvAtt = "retro_ar15_upper_a4"
-ATT.Category = {"retro_ar15_iron"}
-ATT.IconOffset = Vector(-5, 0, 0)
-ATT.ActivateElements = {"troy_iron"}
-
-ARC9.LoadAttachment(ATT, "retro_ar15_iron_troy")
-
-ATT = {}
-
-ATT.PrintName = "Magpul Masada Rear Folding Sight"
-ATT.CompactName = "Masada"
-ATT.Icon = Material("entities/bo1_atts/optics/retro_ar15/3arc_side.png")
-ATT.Description = [[Rear folding sight produced by Magpul for the Masada rifle.
-Functions identically to other iron sights.]]
-ATT.SortOrder = 4
-ATT.MenuCategory = "ARC9 - BO1 AR-15 Attachments"
-ATT.Free = true
-ATT.Folder = "AR-15 IRONS"
-
--- ATT.InvAtt = "retro_ar15_upper_a4"
-ATT.Category = {"retro_ar15_iron"}
-ATT.IconOffset = Vector(-5, 0, 0)
-ATT.ActivateElements = {"masada_iron"}
-
-ARC9.LoadAttachment(ATT, "retro_ar15_iron_masada")
-
-ATT = {}
-
-ATT.PrintName = "III-ARC MP Folding Sight"
-ATT.CompactName = "III-ARC"
-ATT.Icon = Material("entities/bo1_atts/optics/retro_ar15/3arc_side.png")
-ATT.Description = [["Aftermarket MP flip-up rear si- Wait...
-Is that just a Troy sight put on backwards?"
-
-Functions identically to other iron sights.]]
-ATT.SortOrder = 4
-ATT.MenuCategory = "ARC9 - BO1 AR-15 Attachments"
-ATT.Free = true
-ATT.Folder = "AR-15 IRONS"
-
--- ATT.InvAtt = "retro_ar15_upper_a4"
-ATT.Category = {"retro_ar15_iron"}
-ATT.IconOffset = Vector(-5, 0, 0)
-ATT.ActivateElements = {"3arc_iron"}
-
-ARC9.LoadAttachment(ATT, "retro_ar15_iron_3arc")
-
-ATT = {}
-
-ATT.PrintName = "MaTech Flip-Up Rear Sight"
-ATT.CompactName = "MaTech"
-ATT.Icon = Material("entities/bo1_atts/optics/retro_ar15/matech_side.png")
-ATT.Description = [[United States General Issue rear sight.
-Functions identically to other iron sights.]]
-ATT.SortOrder = 2
-ATT.MenuCategory = "ARC9 - BO1 AR-15 Attachments"
-ATT.Free = true
-ATT.Folder = "AR-15 IRONS"
-
--- ATT.InvAtt = "retro_ar15_upper_a4"
-ATT.Category = {"retro_ar15_iron"}
-ATT.IconOffset = Vector(-5, 0, 0)
-ATT.ActivateElements = {"matech_iron"}
-
-ARC9.LoadAttachment(ATT, "retro_ar15_iron_matech")
-
-ATT = {}
-
-ATT.PrintName = "TMM-4 S-System Flip-Up Rear Sight"
-ATT.CompactName = "TMM-4"
-ATT.Icon = Material("entities/bo1_atts/optics/retro_ar15/matech_side.png")
-ATT.Description = [[United States General Issue rear sight.
-Functions identically to other iron sights.]]
-ATT.SortOrder = 2
-ATT.MenuCategory = "ARC9 - BO1 AR-15 Attachments"
-ATT.Free = true
-ATT.Folder = "AR-15 IRONS"
-
--- ATT.InvAtt = "retro_ar15_upper_a4"
-ATT.Category = {"retro_ar15_iron"}
-ATT.IconOffset = Vector(-5, 0, 0)
-ATT.ActivateElements = {"mw2_rear"}
-
-ARC9.LoadAttachment(ATT, "retro_ar15_iron_mw2")
 
 -- FIREMODES
 ATT = {}
@@ -2817,7 +2619,7 @@ ATT.ExcludeElements = {"is_patriot"}
 ATT.Attachments = {
     {
         PrintName = "Optic",
-        Category = {"retro_ar15_iron", "cod_optic", "cod_rail_riser", "ar15_rail_riser", "mw3e_deagle_tactical"},
+        Category = {"retro_ar15_iron", "cod_optic", "cod_rail_riser", "ar15_rail_riser", "mw3e_deagle_tactical","bo1_addon_irons_2"},
         ExcludeElements = {"handguard_famas"},
         Bone = "j_gun",
         Pos = Vector(-1, 0, -0.52),
@@ -2827,12 +2629,20 @@ ATT.Attachments = {
         -- Integral = true,
         MergeSlots = {2},
     },
+    -- {
+    --     Hidden = true,
+    --     Category = {""},
+    --     ExcludeElements = {"handguard_famas"},
+    --     Bone = "j_gun",
+    --     Pos = Vector(0, 0, 0),
+    --     Ang = Angle(0, 0, 0),
+    -- },
     {
         Hidden = true,
-        Category = {"bo1_addon_irons_2"},
+        Category = {"cod_extrairons_rear"},
         ExcludeElements = {"handguard_famas"},
         Bone = "j_gun",
-        Pos = Vector(0, 0, 0),
+        Pos = Vector(2.5, 0, -0.295),
         Ang = Angle(0, 0, 0),
     },
 }
@@ -2863,6 +2673,7 @@ ATT.BoneMerge = true
 ATT.DrawFunc = function(swep, model, wm)
     if swep:GetElements()["bo1_pap"] then
         model:SetSkin(1)
+        model:SetSubMaterial(2,"models/weapons/arc9/pap/pap_crystal.vmt")
     else
         model:SetSkin(0)
     end
@@ -2871,7 +2682,7 @@ end
 ATT.Attachments = {
     {
         PrintName = "Optic",
-        Category = {"retro_ar15_iron", "cod_optic", "cod_rail_riser", "ar15_rail_riser", "mw3e_deagle_tactical"},
+        Category = {"retro_ar15_iron", "cod_optic", "cod_rail_riser", "ar15_rail_riser", "mw3e_deagle_tactical","bo1_addon_irons_2"},
         ExcludeElements = {"handguard_famas"},
         Bone = "j_gun",
         Pos = Vector(-1, 0, -0.42),
@@ -2881,12 +2692,20 @@ ATT.Attachments = {
         -- Integral = true,
         MergeSlots = {2},
     },
+    -- {
+    --     Hidden = true,
+    --     Category = {"bo1_addon_irons_2"},
+    --     ExcludeElements = {"handguard_famas"},
+    --     Bone = "j_gun",
+    --     Pos = Vector(0, 0, 0),
+    --     Ang = Angle(0, 0, 0),
+    -- },
     {
         Hidden = true,
-        Category = {"bo1_addon_irons_2"},
+        Category = {"cod_extrairons_rear"},
         ExcludeElements = {"handguard_famas"},
         Bone = "j_gun",
-        Pos = Vector(0, 0, 0),
+        Pos = Vector(2.5, 0, -0.295),
         Ang = Angle(0, 0, 0),
     },
 }

@@ -76,7 +76,7 @@ SWEP.ReloadTime = 1
 SWEP.Crosshair = true
 SWEP.CanBlindFire = false
 
-SWEP.Recoil = 0.6
+SWEP.Recoil = 0.67
 SWEP.RecoilSide = 0.5
 SWEP.RecoilUp = 0.5
 
@@ -100,10 +100,10 @@ SWEP.SpreadAddMidAir = 0
 
 SWEP.RecoilPatternDrift = 20
 
-SWEP.UseVisualRecoil = false
+SWEP.UseVisualRecoil = true
 SWEP.VisualRecoilCenter = Vector(0, 0, 0)
-SWEP.VisualRecoilUp = 0.15
-SWEP.VisualRecoilSide = 0.125
+SWEP.VisualRecoilUp = 0.22
+SWEP.VisualRecoilSide = 0.25
 SWEP.VisualRecoilRoll = 1
 SWEP.VisualRecoilPunch = 1.7
 SWEP.VisualRecoilMultSights = 0.5
@@ -586,7 +586,7 @@ SWEP.Animations = {
     },
     ["ready"] = {
         Source = "first_draw",
-        Time = 1.5,
+        Time = 1,
         /*EventTable = {
             {s = "ARC9_BO1.Galil_Charge", t = 22 / 35}
         },*/

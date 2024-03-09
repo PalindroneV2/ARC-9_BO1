@@ -79,12 +79,12 @@ SWEP.ReloadTime = 1
 SWEP.Crosshair = true
 SWEP.CanBlindFire = false
 
-SWEP.Recoil = 0.5
-SWEP.RecoilSide = 0.7
-SWEP.RecoilUp = 1
+SWEP.Recoil = 0.675
+SWEP.RecoilSide = 0.75
+SWEP.RecoilUp = 1.25
 
-SWEP.RecoilRandomUp = 0.2
-SWEP.RecoilRandomSide = 0.6
+SWEP.RecoilRandomUp = 0.35
+SWEP.RecoilRandomSide = 0.35
 
 SWEP.RecoilDissipationRate = 40 -- How much recoil dissipates per second.
 SWEP.RecoilResetTime = 0.01 -- How long the gun must go before the recoil pattern starts to reset.
@@ -102,12 +102,12 @@ SWEP.SpreadMultSights = 0.1
 
 SWEP.RecoilPatternDrift = 20
 
-SWEP.UseVisualRecoil = false
+SWEP.UseVisualRecoil = true
 SWEP.VisualRecoilCenter = Vector(0,0, 0)
-SWEP.VisualRecoilUp = 0.15
-SWEP.VisualRecoilSide = 0.15
+SWEP.VisualRecoilUp = 0.2
+SWEP.VisualRecoilSide = 0.2
 SWEP.VisualRecoilRoll = 1
-SWEP.VisualRecoilPunch = 1.5
+SWEP.VisualRecoilPunch = 1.75
 SWEP.VisualRecoilMultSights = 0.5
 
 SWEP.Speed = 0.95
@@ -121,8 +121,8 @@ SWEP.SpeedMultMelee = 1
 SWEP.SpeedMultCrouch = 1
 SWEP.SpeedMultBlindFire = 1
 
-SWEP.AimDownSightsTime = 0.15
-SWEP.SprintToFireTime = 0.33
+SWEP.AimDownSightsTime = 0.190
+SWEP.SprintToFireTime = 0.3
 
 SWEP.RPM = 900
 SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
@@ -313,14 +313,14 @@ SWEP.StandardPresets = {
     "[F- Commando]XQAAAQC9AQAAAAAAAAA9iIIiM7hMNz0dhIkbkvJZHs6N4cERAS1EIUwLaB+vDp8XCL0VyBP1c786RpKeImE3pliuYxXDMiQfLWpzMPpXZT8zqVNh9Y8eNrLjZVJChXEMDGmzN/SYnR8FNxEvJk1L8uSiUsIp+fDSUYyTx/HIoNTdQVTTtxIx+I+M4QZJ5QXVvHPGPohix/zBbrImgrRy7ynhxy/q+mslgsalZSFlYqzBA3jeHrwljT1ePJHoh38qAkR6qMbQwLCOgbc3RKTbSwA=",
     "[G- M4A1]XQAAAQALAgAAAAAAAAA9iIIiM7hMNz0dhIkbkvJZHs6N4cERAS1EIUwLaB+vDp8XCL0VyBP1c786RpKeImE3ppvtZ9VSH6D2vEJ/lZpKWa/NUZkYq9phPLY4qGpT2mVHcf8TR6rlZYODdokPL1FVMQEwE/R5bQoggoqDARHx7ym6yMPiP9YS4F0zWx8PaFNBmuvzGoCm2uUyFuGxc+sDIlMuXvVeL9QyrVg57h1fZPbI74GAiM5NIRG//Bt7nakC6YJYnMQtUYmSZBTH0Vu9VVYG0g==",
     "[H- Ranger]XQAAAQAXAgAAAAAAAAA9iIIiM7hMNz0dhIkbkvJZHs6N4cERAS1EIUwLaB+vDp8XCL0VyBP1c786RpKnotsRDta8QJXNzP58z/MSJlIAy8NWdhCydvVMjMxuoxQOXXYRcUtBu1IJMr5mC8TlQPIQmEih4SEl29N+L3Ynjjv7fxFSHYgOJrgtNNk3zNH0xjsbR7Je8L3kM1mgnWcOIpS6uffJFc884sPJK6+eFa1dnOgL8HoO+lKAuc5pbn2qmiq4RupimPNiyQoYjID+aUN4wV3fd8G6M2BkoLsA",
-    "[I- Delta]XQAAAQD/AQAAAAAAAAA9iIIiM7hMNz0dhIkbkvJZHs6N4cERAS1EIUwLaB+vDp8XCL0VyBP1c785T278jfAs/SblA5daRFdlaFrx4ILwkKrzza1UejrxUVgZcXivyuYi81sybqQwqg1F8SCtMo3ngJ4D3GxNAFyyDcp0JBZGwKPbUiCaXlqlwWCTDt5WAdqjmhHfF/XG508z3Mupl+ZN1hZDpgUc0qdEsbKFp+kMbWZBSFHS84VjQ0j2Nki3jw0qVV+0mvgw7tktuznuKIg2AA==",
-    "[J- Bravo]XQAAAQAmAgAAAAAAAAA9iIIiM7hMNz0dhIkbkvJZHs6N4cERAS1EIUwLaB+vDp8XCL0VyBP1c786RpKeImE3pqqAdaHCBGeqBO07MrJqW1dI3FkrF3xrkZwh9hGrY6pZ3Uhk0EBt3IjlaOSTzIP3Q6yEDOq1pxTsIrEtkhdvUa8eNRROicf7B2woMqrolmmHAK1INpH9IZp8/00PrdlJDcScXMAebeF4BgcRPT3w8ZUIvqne4DQukG5G4LMYvtxHUlbrO99nYj9ciLKqsldyaN/ExNXjmUGhEgWa",
-    "[K- Vaquero]XQAAAQAnAgAAAAAAAAA9iIIiM7hMNz0dhIkbkvJZHs6N4cERAS1EIUwLaB+vDp8XCL0VyBP1c786RpKeImE3pqqAdaHCBGeqBO07MrJqW1dI3FkrF3xrlvhx0ZcyitXkDj3zN1FHkYdmNqWloihXjHW9A8DdPgjHq0E7xFuuDirkg6vnM+Ms2yL/7U90f6dVgoZ/wSnAfTC8M7CcqLQ880mlBqfM9kLI8KREpQ3j086X5v7qyNA2oSC8cLz4OjqZORBpVdlUJByPbXE7b8zRztdIi5KXfTrISMFFb2HrVuyoJpvafA==",
+    "[I- Delta]XQAAAQD4AQAAAAAAAAA9iIIiM7hMNz0dhIkbkvJZHs6N4cERAS1EIUwLaB+vDp8XCL0VyBP1c786RpKeImE3pqqj45mG+Y6r6Ec0S13gSrs9miXl0cecbSnlU/wFKsYC6L3Z7wY3iLL4A5GkP+hMoqlCjh8wcpfI7HAeyr7JhmRn62y8hoBM88xv5+RIhiKd2fkd0SroUC23VkUiiKOU6SgUPk9k7bhFXVoG30J0xuDhY3BVXSGHtu6qcieHB6CY6hBYP5Nt+PliCHto",
+    "[J- Bravo]XQAAAQA+AgAAAAAAAAA9iIIiM7hMNz0dhIkbkvJZHs6N4cERAS1EIUwLaB+vDp8XCL0VyBP1c785T278jfAs/SblA3tKlrHcqgcdAvFEHbJdWOqnB2T7oAGrUKA3Tx1a7qROfwUh2Uscokn2CSTNdlO8DtYL7fmru31QfNh4WncjBypkxzC/rh6NuZqpsZwUCClYvNXPrFdWMHjULhh+dbYC3XrXMXfJxsVl4nTmIo2zOONLhZvAibx/YDWWiM3Di4OAAYhCJh4uOnFzeqBvVWHX4nYUL2m86TIaCtDMZPpvbBcuvifgpkrjbWemAA==",
+    "[K- Vaquero]XQAAAQBQAgAAAAAAAAA9iIIiM7hMNz0dhIkbkvJZHs6N4cERAS1EIUwLaB+vDp8XCL0VyBP1c785T278jfAs/SblA3tKlrHcqgcdAvFEHbJdWOqnB2T7oAGrUKA3Tx1a7qROfwUh2Uscokn2CSTNdlO8DtYL7fmru31QfNh4WncjBpdfqgDJ/cDRP0eVc/ioj/oxBcizPTbGDSRnDzFn9GL9L1PYYSONTfhEoZOp/t3JvJXchTQW1aQNinzi7+PDLA8vy2hLCA78j4TJirChbBx3GOWont5MLh3aSTc6i4h8npVsf3NDw+zBM3fhYajcVgA=",
     "[L- My Little Friend]XQAAAQBVAQAAAAAAAAA9iIIiM7hMNz0dhIkbkvLjTdErcFqoUCHbZojaPfcTkj3fjKehjdIOVIZDiA9j6hAHtIkFF9mmvuZ/ps6S9y5RgcWy7YEFyMUg+QkeHhQ9AbZx0Bj4yJnpU5zdmsaDsi+9bRPOJcanY0b/oO7Z/AHhda+DH4XPoa8ormMUAdU36gfa1X8L4b96VF/0cNX4s1D2IwA=",
     "[M- HECU]XQAAAQCgAQAAAAAAAAA9iIIiM7hMNz0dhIkbkvJZHs6N4cERAS1EIUwLaB+vDp8XCL30711xZT7xm2o2gbH+qJxZwTXZOPAsSZpNr/SP1fX8cuf/cxv8JsjJIRZKbIZaZ+UFdauwIORHueQcgh38RqmwIxICdM5KpArJYhEek0W9hi1W7ivbS7gk0WU8wrFXT51FGjhSb91tGEP2VsY3yIIet8sBMSGVz4l+7cJ2AQA=",
     "[N- SOPMOD]XQAAAQA+AgAAAAAAAAA9iIIiM7hMNz0dhIkbkvJZHs6N4cERAS1EIUwLaB+vDp8XCL0VyBP1c786BrvuOw3g56kujvgRv1Ta7qdRsNGN4/CsGx5IF1icsfmAw4fJea2x9NEj9G22nfFipswM0jCfOye9DCbkwwJAisE/Q0KHTz1Kf/USqNzV1B/ltjhrdP54rBpKQnZS6Km8iDJrH97wYfKLHDc4z4hSsN9vTdNWBAwIfJT0qlUxLTVujTS+w4fw5oicwh3mK94+SCWyx4wN6LNX0yndd3iQ+nPTOx5bnh7bX8eXeQ73/E+hM/CIuh7aNKUA",
     "[O- FPW]XQAAAQDZAQAAAAAAAAA9iIIiM7hMNz0dhIkbkvLjTdErcFqoUCAoqlx+DzP3J38q3lk9/nuJTGYJWHvTnJBAN06vkv+QsGXSNnbFj9XP7Ljgt8sizNhRP102VM7mAivurlLolzUfuiLxPROwH1qmOxUiFcdOYUv+bRQ0rlZcy0B3NjeM44kpN5plD/aHbWPx8KjiJT9Qv15CFM1MBrh4kQRfueu7kUKOk/1STCx1r4/iSSPAb/XpYlkF9g1BdV7oBXslybGOmU9H/F50wKvsbXMRBrw9t4mPRSlHKmGB",
-    "[P- Badger]XQAAAQCJAgAAAAAAAAA9iIIiM7tupQCpjtobRJEkdZ1fP0HAq7Xz8GpJsupILQ1kv/+ICb3XCqHPv8CMZ8qGfyYV/GlQ9xDGTfWY3Fo1JF4jBiKD1G3vKToaF8awuIkHYa5OIvXFNQB3d2Cw1WGGa/m0Itk7I+RVtXvkue9W4spYAqOrGP3+TJoUzUI9itqnOoCF0Xpsus1lvY6M898BThU3xqQf4+4nAHxctJt/M2K333ZRfWwGJkyRq2qAA1XKLLAXhtsHxhs1Z6FzpmNyXS9aTbbAVv3FZ5emBPe7MnxLQ+CBNJRaIsikRjkL/+fuGZweoes3Zin1m+V+mwA=",
+    "[P- Badger]XQAAAQBsAgAAAAAAAAA9iIIiM7hMNz0dhIkbkvJZHs6N4cERAS1EIUwLaB+vDp8W6xVUOfFy+FlCjGuGO3lI+3RbQ7IOpNImYgnuvgvqS7qgfmJlZkxZDFv6ksKRom9nHKR/h2Z2F8sckaeiCfXO340NSx08l1zYtH4rZOxmvQtaB9RjKaqaV2jIBwgkPXCaHN/blUXzK0+dQZdEevf0UR/5bUfh2ejfgXM+gl9awInAHdv3vJDeSuLoGC01jxKxeoCBtlzj9aKUngKYD/TiaIwh6sJMkOHo1sTLH4MuwaJpNfwbXW+VHZrHTCgNlxWohI1hUQVqfvnOmcJsvC+cqr4btwA=",
 }
 
 SWEP.AttachmentElements = {
@@ -629,7 +629,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         end
     end
 
-    if attached["troy_front"] then
+    if attached["extrafront"] then
         gasblock = 2
         if attached["handguard_ris"] then
             gasblock = 3
@@ -654,32 +654,32 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         if attached["handguard_ris_mw19"] then
             gasblock = 4
         end
-    elseif attached["matech_front"] then
-        gasblock = 2
-        if attached["handguard_ris"] then
-            gasblock = 3
-        end
-        if attached["handguard_a4"] then
-            if length < 2 then
-                gasblock = 2
-            end
-            if length == 2 then
-                gasblock = 4
-            end
-        end
-        if attached["handguard_ris_mw19"] then
-            gasblock = 4
-        end
-        if attached["handguard_mlok"] then
-            gasblock = 2
-            if length >= 2 then
-                gasblock = 3
-            end
-        end
-        if attached["handguard_mlok_short"] then
-            gasblock = 3
-        end
-    elseif attached["masada_front"] then
+    -- elseif attached["matech_front"] then
+    --     gasblock = 2
+    --     if attached["handguard_ris"] then
+    --         gasblock = 3
+    --     end
+    --     if attached["handguard_a4"] then
+    --         if length < 2 then
+    --             gasblock = 2
+    --         end
+    --         if length == 2 then
+    --             gasblock = 4
+    --         end
+    --     end
+    --     if attached["handguard_ris_mw19"] then
+    --         gasblock = 4
+    --     end
+    --     if attached["handguard_mlok"] then
+    --         gasblock = 2
+    --         if length >= 2 then
+    --             gasblock = 3
+    --         end
+    --     end
+    --     if attached["handguard_mlok_short"] then
+    --         gasblock = 3
+    --     end
+    -- elseif attached["masada_front"] then
         gasblock = 2
         if attached["handguard_ris"] then
             gasblock = 3
@@ -1008,7 +1008,16 @@ end
 
 SWEP.HookP_DescriptionChange = function(self, desc)
     local attached = self:GetElements()
-    if attached["300blk"] and attached["barrel_7"] then
+    desc = [[The AR-15 is a family of rifles originally created by Arma-Lite, subsquently picked up by Colt and the standard United States infantry rifle since the 60s.
+    Despite its poor start, this rifle has a long carreer of excellent and reliable performance and its versatility as a weapons platform has kept it in service for over 50 years.]]
+
+    if attached["a4_top"] and attached["fcg_bst"] then --DOE SMG
+        desc = "Upgrade to the M16A2. A flat-top with a picatinny rail for mounting optics and retaining the 3-round burst from the A2 receiver."
+    end
+    if attached["9mm_mag"] and attached["barrel_7"] then --DOE SMG
+        desc = "Sub-compact AR-15 variant produced for the Department of Energy's security forces."
+    end
+    if attached["300blk"] and attached["barrel_7"] then -- HONEY BADGER
         desc = "Sub-compact AR-15 variant produced by AAC and chambered in the sub-sonic .300 Blackout. Often times with a suppressor included."
     end
     return desc
@@ -1100,7 +1109,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(0.15, 0, 1.1),
         Ang = Angle(0, 0, 0),
-        Category = {"retro_ar15_lower"},
+        Category = {"retro_ar15_lower","bo1_fcg"},
     },
     {
         PrintName = "Barrel",

@@ -96,6 +96,34 @@ ARC9.LoadAttachment(ATT, "bo1_fcg_rapidfire")
 
 ATT = {}
 
+ATT.PrintName = "Throttle"
+ATT.CompactName = "SLOW"
+ATT.Icon = Material("entities/bo1_atts/other/rapid_fire.png")
+ATT.Description = [[Fire Control Group modification that slows down the cyclic rate of a weapon.
+Improves recoil control.]]
+ATT.Pros = {}
+ATT.Cons = {
+}
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
+ATT.Free = true
+
+ATT.Category = {"bo1_fcg"}
+ATT.ActivateElements = {"rapid"}
+
+ATT.RangeMaxMult = 1.25
+ATT.SpreadMult = 0.875
+ATT.SpreadMultShooting = 0.875
+ATT.RecoilMult = 0.9
+ATT.RecoilUpMult = 0.9
+ATT.RecoilSideMult = 0.9
+
+ATT.RPMMult = 0.75
+
+ARC9.LoadAttachment(ATT, "bo1_fcg_slowfire")
+
+ATT = {}
+
 ATT.PrintName = "Sporting FCG"
 ATT.CompactName = "SEMI"
 ATT.Icon = Material("entities/bo1_atts/other/select_fire.png")
@@ -221,9 +249,6 @@ ATT.ActivateElements = {"auto"}
 ATT.FiremodesOverride = {
     {
         Mode = -1,
-    },
-    {
-        Mode = 1,
     },
 }
 

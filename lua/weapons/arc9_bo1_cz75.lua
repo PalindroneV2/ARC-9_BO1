@@ -80,7 +80,7 @@ SWEP.RecoilSide = 0.4
 SWEP.RecoilUp = 0.4
 
 SWEP.RecoilRandomUp = 0.4
-SWEP.RecoilRandomSide = 0.2
+SWEP.RecoilRandomSide = 0.3
 
 SWEP.RecoilDissipationRate = 40 -- How much recoil dissipates per second.
 SWEP.RecoilResetTime = 0.01 -- How long the gun must go before the recoil pattern starts to reset.
@@ -100,12 +100,12 @@ SWEP.SpreadAddMidAir = 0
 
 SWEP.RecoilPatternDrift = 20
 
-SWEP.UseVisualRecoil = false
+SWEP.UseVisualRecoil = true
 SWEP.VisualRecoilCenter = Vector(0, 0, 0)
-SWEP.VisualRecoilUp = 0.4
-SWEP.VisualRecoilSide = 0.13
+SWEP.VisualRecoilUp = 0.3
+SWEP.VisualRecoilSide = 0.2
 SWEP.VisualRecoilRoll = 1
-SWEP.VisualRecoilPunch = 2
+SWEP.VisualRecoilPunch = 1.25
 SWEP.VisualRecoilMultSights = 0.5
 
 SWEP.Speed = 1

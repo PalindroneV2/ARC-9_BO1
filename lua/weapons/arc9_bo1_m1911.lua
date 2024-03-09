@@ -98,13 +98,13 @@ SWEP.SpreadAddMidAir = 0
 
 SWEP.RecoilPatternDrift = 20
 
-SWEP.UseVisualRecoil = false
+SWEP.UseVisualRecoil = true
 SWEP.VisualRecoilCenter = Vector(0, 0, 0)
-SWEP.VisualRecoilUp = 0.1
-SWEP.VisualRecoilSide = 0.05
+SWEP.VisualRecoilUp = 0.3
+SWEP.VisualRecoilSide = 0.1
 SWEP.VisualRecoilRoll = 1
 SWEP.VisualRecoilPunch = 3
-SWEP.VisualRecoilMultSights = 0.1
+SWEP.VisualRecoilMultSights = 0.3
 
 SWEP.Speed = 1
 
@@ -259,7 +259,17 @@ SWEP.AttachmentElements = {
             {4,1},
         },
     },
+    ["hammer_2025"] = {
+        Bodygroups = {
+            {4,2},
+        },
+    },
     ["newtrigger"] = {
+        Bodygroups = {
+            {3,1},
+        },
+    },
+    ["trigger_2025"] = {
         Bodygroups = {
             {3,2},
         },
@@ -267,6 +277,16 @@ SWEP.AttachmentElements = {
     ["irons_novak"] = {
         IronSights = {
             Pos = Vector(-2.44, -1, 0.625),
+            Ang = Angle(-0.1, 0.05, 0),
+            Magnification = 1.1,
+            ViewModelFOV = 60,
+            CrosshairInSights = false,
+            SwitchToSound = "", -- sound that plays when switching to this sight
+        }
+    },
+    ["irons_2025"] = {
+        IronSights = {
+            Pos = Vector(-2.44, -1, 0.55),
             Ang = Angle(-0.1, 0.05, 0),
             Magnification = 1.1,
             ViewModelFOV = 60,
@@ -301,6 +321,9 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     end
     if attached["irons_novak"] then
         irons = irons + 6
+    end
+    if attached["irons_2025"] then
+        irons = irons + 9
     end
 
     if attached["bo1_pap"] then

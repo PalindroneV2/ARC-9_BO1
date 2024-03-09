@@ -76,7 +76,7 @@ SWEP.ReloadTime = 1
 SWEP.Crosshair = true
 SWEP.CanBlindFire = false
 
-SWEP.Recoil = 1.15
+SWEP.Recoil = 1.5
 SWEP.RecoilSide = 0.5
 SWEP.RecoilUp = 2.1
 
@@ -103,7 +103,7 @@ SWEP.PelletSpread = 0.25
 
 SWEP.RecoilPatternDrift = 20
 
-SWEP.UseVisualRecoil = false
+SWEP.UseVisualRecoil = true
 SWEP.VisualRecoilCenter = Vector(0, 0, 0)
 SWEP.VisualRecoilUp = 1
 SWEP.VisualRecoilSide = 0.25
@@ -223,11 +223,9 @@ SWEP.BarrelLength = 0 -- = 25
 SWEP.ExtraSightDist = 5
 
 SWEP.AttachmentElements = {
-    -- ["bo1_pap"] = {
-    --     ShootSoundOverride = "ARC9_BO2.Blundergat_Fire",
-    --     ShootSoundSilenced = "ARC9_BO1.M16_Sil",
-    --     DistantShootSound = {"^weapons/arc9/bo2_generic_shotgun/dist/0.wav", "^weapons/arc9/bo2_generic_shotgun/dist/1.wav"},
-    -- },
+    ["bo1_pap" and "acidkit"] = {
+        ClipSizeMult = 0.5,
+    },
 }
 
 SWEP.DefaultBodygroups = "100000000"
