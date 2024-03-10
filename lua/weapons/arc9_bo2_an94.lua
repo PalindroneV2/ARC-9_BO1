@@ -107,7 +107,7 @@ SWEP.VisualRecoilUp = 0.267
 SWEP.VisualRecoilSide = 0.216
 SWEP.VisualRecoilRoll = 1
 SWEP.VisualRecoilPunch = 2.5
-SWEP.VisualRecoilMultSights = 0.6
+SWEP.VisualRecoilSights = 0.35
 
 SWEP.Speed = 0.95
 
@@ -120,8 +120,8 @@ SWEP.SpeedMultMelee = 1
 SWEP.SpeedMultCrouch = 1
 SWEP.SpeedMultBlindFire = 1
 
-SWEP.AimDownSightsTime = 0.11
-SWEP.SprintToFireTime = 0.14
+SWEP.AimDownSightsTime = 0.2
+SWEP.SprintToFireTime = 0.2
 
 SWEP.RPM = 600
 SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
