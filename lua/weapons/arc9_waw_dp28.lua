@@ -103,8 +103,8 @@ SWEP.RecoilPatternDrift = 20
 
 SWEP.UseVisualRecoil = true
 SWEP.VisualRecoilCenter = Vector(0,-5, 0)
-SWEP.VisualRecoilUp = 0.175
-SWEP.VisualRecoilSide = 0.075
+SWEP.VisualRecoilUp = 0.3
+SWEP.VisualRecoilSide = 0.24
 SWEP.VisualRecoilRoll = 1
 SWEP.VisualRecoilPunch = 3
 SWEP.VisualRecoilSights = 0.2
@@ -151,7 +151,7 @@ SWEP.ShootPitchVariation = 0
 
 SWEP.ShootSound = "ARC9_WAW.DP28_Fire"
 SWEP.ShootSoundSilenced = "ARC9_WAW.G43_Sil"
-SWEP.DistantShootSound = "ARC9_WAW.SVT_RingOff"
+SWEP.DistantShootSound = ""--"ARC9_WAW.SVT_RingOff"
 
 SWEP.UBGLIntegralReload = true -- The UBGL uses reload animations that are baked into the gun.
 SWEP.DoFireAnimationUBGL = true
@@ -182,7 +182,7 @@ SWEP.IronSights = {
     Pos = Vector(-1.59, -5, 0.85),
     Ang = Angle(-0.13, -1.25, 0),
     Magnification = 1.5,
-    ViewModelFOV = 60,
+    ViewModelFOV = 50,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
 }

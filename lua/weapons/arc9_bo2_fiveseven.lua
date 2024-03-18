@@ -275,7 +275,7 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
 end
 
 SWEP.AttachmentElements = {
-    ["cod4_peq6"] = {
+    ["cod4_hklam"] = {
         AttPosMods = {
             [3] = {
                 Pos = Vector(3.5,0,0.25),

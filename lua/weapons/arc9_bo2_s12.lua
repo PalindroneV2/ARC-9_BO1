@@ -107,8 +107,8 @@ SWEP.RecoilPatternDrift = 20
 
 SWEP.UseVisualRecoil = true
 SWEP.VisualRecoilCenter = Vector(1,0, 0)
-SWEP.VisualRecoilUp = 0.2
-SWEP.VisualRecoilSide = 0.1
+SWEP.VisualRecoilUp = 0.3
+SWEP.VisualRecoilSide = 0.15
 SWEP.VisualRecoilRoll = 1
 SWEP.VisualRecoilPunch = 4
 SWEP.VisualRecoilSights = 0.25

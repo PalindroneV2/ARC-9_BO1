@@ -78,11 +78,11 @@ SWEP.ReloadTime = 1
 SWEP.Crosshair = true
 SWEP.CanBlindFire = false
 
-SWEP.Recoil = 0.75
-SWEP.RecoilSide = 0.7
-SWEP.RecoilUp = 1.1
+SWEP.Recoil = 0.6
+SWEP.RecoilSide = 0.4
+SWEP.RecoilUp = 0.6
 
-SWEP.RecoilRandomUp = 0.6
+SWEP.RecoilRandomUp = 0.5
 SWEP.RecoilRandomSide = 0.5
 
 SWEP.RecoilDissipationRate = 40 -- How much recoil dissipates per second.
@@ -99,11 +99,11 @@ SWEP.SpreadAddMidAir = 0
 
 SWEP.UseVisualRecoil = true
 SWEP.VisualRecoilCenter = Vector(0, 0, 0)
-SWEP.VisualRecoilUp = 0.2
+SWEP.VisualRecoilUp = 0.23
 SWEP.VisualRecoilSide = 0.3
 SWEP.VisualRecoilRoll = 1
-SWEP.VisualRecoilPunch = 2.5
-SWEP.VisualRecoilSights = 0.2
+SWEP.VisualRecoilPunch = 1.5
+SWEP.VisualRecoilSights = 0.5
 
 SWEP.Speed = 0.9
 SWEP.ShootWhileSprint = true
@@ -713,9 +713,9 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         vm:SetBodygroup(10, 1)
         -- irons = 4
     end
-    if attached["rail_pic"] then
+    if attached["rail_pic"] and attached["barrel_krinkov"] then
         vm:SetBodygroup(10, 2)
-        -- irons = 4
+        irons = 4
     end
 
     vm:SetBodygroup(0, aktype)

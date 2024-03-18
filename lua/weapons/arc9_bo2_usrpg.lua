@@ -203,8 +203,8 @@ SWEP.HoldTypeSights = "rpg"
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_RPG
 SWEP.NonTPIKAnimReload = ACT_HL2MP_GESTURE_RELOAD_RPG
 
-SWEP.ActivePos = Vector(0, 0, 0)
-SWEP.ActiveAng = Angle(0, 0, 0)
+SWEP.ActivePos = Vector(1.25, -1, 0)
+SWEP.ActiveAng = Angle(-5, 10, 0)
 
 SWEP.MovingPos = Vector(0, -1, -1)
 SWEP.MovingAng = Angle(0, 0, 0)
@@ -316,11 +316,11 @@ SWEP.Attachments = {
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
-        Time = 1 / 35,
+        Time = 5,
     },
     ["idle_empty"] = {
         Source = "idle_empty",
-        Time = 1 / 35,
+        Time = 5,
     },
     ["draw"] = {
         Source = "draw",
@@ -346,7 +346,7 @@ SWEP.Animations = {
     },
     ["idle_iron"] = {
         Source = {"idle_ads"},
-        Time = 1 / 35,
+        Time = 5,
     },
     ["exit_sights"] = {
         Source = "ads_down",

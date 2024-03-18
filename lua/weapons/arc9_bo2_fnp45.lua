@@ -218,7 +218,7 @@ SWEP.BarrelLength = 0 -- = 9
 SWEP.ExtraSightDist = 15
 
 SWEP.AttachmentElements = {
-    ["cod4_peq6"] = {
+    ["cod4_hklam"] = {
         AttPosMods = {
             [3] = {
                 Pos = Vector(3.6, 0, 0),

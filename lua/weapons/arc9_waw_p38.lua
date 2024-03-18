@@ -75,7 +75,7 @@ SWEP.ReloadTime = 1
 SWEP.Crosshair = true
 SWEP.CanBlindFire = false
 
-SWEP.Recoil = 0.3
+SWEP.Recoil = 0.4
 SWEP.RecoilSide = 0.4
 SWEP.RecoilUp = 0.4
 
@@ -99,12 +99,13 @@ SWEP.SpreadAddMidAir = 0
 
 SWEP.RecoilPatternDrift = 20
 
-SWEP.VisualRecoilUp = 0
-SWEP.VisualRecoilSide = 0
-SWEP.VisualRecoilRoll = 0
+SWEP.UseVisualRecoil = true
 SWEP.VisualRecoilCenter = Vector(0, 0, 0)
-SWEP.VisualRecoilPunch = 0
-SWEP.VisualRecoilSights = 0
+SWEP.VisualRecoilUp = 0.2
+SWEP.VisualRecoilSide = 0.2
+SWEP.VisualRecoilRoll = 1
+SWEP.VisualRecoilPunch = 1
+SWEP.VisualRecoilSights = 0.4
 
 SWEP.Speed = 1
 

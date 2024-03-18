@@ -1,5 +1,5 @@
-ATT.PrintName = "WLP Laser Pointer"
-ATT.CompactName = [[WLP]]
+ATT.PrintName = "AN/PEQ6 Laser Pointer"
+ATT.CompactName = [[PEQ6]]
 ATT.Icon = Material("entities/bo1_atts/tactical/bo2_laser.png", "mips smooth")
 ATT.Description = [[Tacical laser pointer.
 Tighter aim when firing from hip, less dispersion when moving.]]

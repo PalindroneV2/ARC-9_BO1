@@ -77,11 +77,11 @@ SWEP.ReloadTime = 1
 SWEP.Crosshair = true
 SWEP.CanBlindFire = false
 
-SWEP.Recoil = 0.65
+SWEP.Recoil = 0.675
 SWEP.RecoilSide = 0.55
 SWEP.RecoilUp = 0.7
 
-SWEP.RecoilRandomUp = 0.3
+SWEP.RecoilRandomUp = 0.5
 SWEP.RecoilRandomSide = 0.5
 
 SWEP.RecoilDissipationRate = 40 -- How much recoil dissipates per second.
@@ -103,8 +103,8 @@ SWEP.RecoilPatternDrift = 20
 
 SWEP.UseVisualRecoil = true
 SWEP.VisualRecoilCenter = Vector(0, 0, 0)
-SWEP.VisualRecoilUp = 0.2
-SWEP.VisualRecoilSide = 0.1
+SWEP.VisualRecoilUp = 0.3
+SWEP.VisualRecoilSide = 0.265
 SWEP.VisualRecoilRoll = 1
 SWEP.VisualRecoilPunch = 3
 SWEP.VisualRecoilSights = 0.3

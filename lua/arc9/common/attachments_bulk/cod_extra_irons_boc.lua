@@ -138,6 +138,52 @@ ATT.ModelBodygroups = "4"
 
 ARC9.LoadAttachment(ATT, "cod_extra_ironrear_mbus")
 
+ATT = {}
+
+ATT.PrintName = "KAC Folding  Rear Sight"
+ATT.CompactName = "KAC"
+ATT.Icon = Material("entities/bo1_atts/optics/retro_ar15/3arc_side.png")
+ATT.Description = [[Rear folding sight produced by KAC.
+Functions identically to other iron sights.]]
+ATT.SortOrder = 6
+ATT.MenuCategory = "ARC9 - COD Classic Attachments"
+ATT.Free = true
+ATT.Folder = "R IRONS"
+ATT.Category = {"cod_extrairons_rear"}
+ATT.IconOffset = Vector(0, 0, 0)
+ATT.ActivateElements = {"mbus_rear", "extrairon","extrarear"}
+
+ATT.Model = "models/weapons/arc9/atts/cod_extra/rear_irons.mdl"
+ATT.Scale = Vector(1, 1, 1)
+ATT.ModelOffset = Vector(0,0,0)
+ATT.ModelAngleOffset = Angle(0,0,0)
+ATT.ModelBodygroups = "6"
+
+ARC9.LoadAttachment(ATT, "cod_extra_ironrear_kacfolding")
+
+ATT = {}
+
+ATT.PrintName = "FN Ballista  Rear Sight"
+ATT.CompactName = "Ballista"
+ATT.Icon = Material("entities/bo1_atts/optics/retro_ar15/3arc_side.png")
+ATT.Description = [[Rear folding sight produced by FN for the Ballista.
+Functions identically to other iron sights.]]
+ATT.SortOrder = 7
+ATT.MenuCategory = "ARC9 - COD Classic Attachments"
+ATT.Free = true
+ATT.Folder = "R IRONS"
+ATT.Category = {"cod_extrairons_rear"}
+ATT.IconOffset = Vector(0, 0, 0)
+ATT.ActivateElements = {"mbus_rear", "extrairon","extrarear"}
+
+ATT.Model = "models/weapons/arc9/atts/cod_extra/rear_irons.mdl"
+ATT.Scale = Vector(1, 1, 1)
+ATT.ModelOffset = Vector(0,0,0)
+ATT.ModelAngleOffset = Angle(0,0,0)
+ATT.ModelBodygroups = "7"
+
+ARC9.LoadAttachment(ATT, "cod_extra_ironrear_fnballista")
+
 -----//FRONT SIGHTS
 
 ATT = {}

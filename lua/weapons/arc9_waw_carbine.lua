@@ -75,10 +75,10 @@ SWEP.CanBlindFire = false
 
 SWEP.Recoil = 0.5
 SWEP.RecoilSide = 0.3
-SWEP.RecoilUp = 0.3
+SWEP.RecoilUp = 0.4
 
-SWEP.RecoilRandomUp = 0.2
-SWEP.RecoilRandomSide = 0.6
+SWEP.RecoilRandomUp = 0.4
+SWEP.RecoilRandomSide = 0.2
 
 SWEP.RecoilDissipationRate = 40 -- How much recoil dissipates per second.
 SWEP.RecoilResetTime = 0.01 -- How long the gun must go before the recoil pattern starts to reset.
@@ -99,8 +99,8 @@ SWEP.RecoilPatternDrift = 20
 
 SWEP.UseVisualRecoil = true
 SWEP.VisualRecoilCenter = Vector(0,-5, 0)
-SWEP.VisualRecoilUp = 0.15
-SWEP.VisualRecoilSide = 0.1
+SWEP.VisualRecoilUp = 0.2
+SWEP.VisualRecoilSide = 0.15
 SWEP.VisualRecoilRoll = 1
 SWEP.VisualRecoilPunch = 1.5
 SWEP.VisualRecoilSights = 0.3
@@ -116,8 +116,8 @@ SWEP.SpeedMultMelee = 1
 SWEP.SpeedMultCrouch = 1
 SWEP.SpeedMultBlindFire = 1
 
-SWEP.AimDownSightsTime = 0.11
-SWEP.SprintToFireTime = 0.333
+SWEP.AimDownSightsTime = 0.25
+SWEP.SprintToFireTime = 0.3
 
 SWEP.RPM = 500
 SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.

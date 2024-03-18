@@ -99,10 +99,10 @@ SWEP.RecoilPatternDrift = 20
 
 SWEP.UseVisualRecoil = true
 SWEP.VisualRecoilCenter = Vector(0, 0, 0)
-SWEP.VisualRecoilUp = 0.1
-SWEP.VisualRecoilSide = 0.05
+SWEP.VisualRecoilUp = 0.35
+SWEP.VisualRecoilSide = 0.125
 SWEP.VisualRecoilRoll = 1
-SWEP.VisualRecoilPunch = 2
+SWEP.VisualRecoilPunch = 4
 SWEP.VisualRecoilSights = 1
 
 SWEP.Speed = 0.95
@@ -258,43 +258,43 @@ end
 SWEP.MovingPosHook = function(self)
     local attached = self:GetElements()
     if attached["mosin_scope"] then
-        return basepos
+        return Vector(0,-1,-1)
     end
 end
 SWEP.MovingAngHook = function(self)
     local attached = self:GetElements()
     if attached["mosin_scope"] then
-        return baseang
+        return Angle(0,0,0)
     end
 end
 SWEP.MovingMidPointHook = function(self)
     local attached = self:GetElements()
     if attached["mosin_scope"] then
-        return {Pos = basepos, Ang = baseang}
+        return {Pos = Vector(0,0,0), Ang = Angle(0,0,0)}
     end
 end
 SWEP.CrouchPosHook = function(self)
     local attached = self:GetElements()
     if attached["mosin_scope"] then
-        return basepos
+        return Vector(0,-1,-1)
     end
 end
 SWEP.CrouchAngHook = function(self)
     local attached = self:GetElements()
     if attached["mosin_scope"] then
-        return baseang
+        return Angle(0,0,0)
     end
 end
 SWEP.SprintPosHook = function(self)
     local attached = self:GetElements()
     if attached["mosin_scope"] then
-        return basepos
+        return basepos + Vector(5, 1, 1)
     end
 end
 SWEP.SprintAngHook = function(self)
     local attached = self:GetElements()
     if attached["mosin_scope"] then
-        return baseang
+        return baseang + Angle(40, 0, 0)
     end
 end
 

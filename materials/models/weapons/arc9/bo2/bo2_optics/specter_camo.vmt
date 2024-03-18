@@ -16,12 +16,12 @@
 	$envmaptint "[ .01 .01 .01 ]"
 
     $detailblendmode 4
+	$detailscale 0.5
     $detailblendfactor 1
 	$detail "models/weapons/arc9/bo1/black_detail"
 	Proxies {
 		CustomCamo {
 			camoTexture $detail
-			camoScale $detailscale
             blend $detailblendfactor
 		}
 	}
