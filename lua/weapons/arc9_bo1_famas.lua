@@ -303,16 +303,38 @@ SWEP.AttachmentElements = {
             [1] = {
                 Pos = Vector(2, 0.1, 6.4)
             },
-        },
-        IronSights = {
-            Pos = Vector(-2.895, -3, 0.3),
-            Ang = Angle(0.025, 0.25, 0),
-            Magnification = 1.1,
-            ViewModelFOV = 60,
-            CrosshairInSights = false,
+            [7] = {
+                Pos = Vector(0.25, 0.1, 6.3)
+            },
+            [8] = {
+                Pos = Vector(9.75, 0.1, 6.3)
+            },
         },
     },
 }
+
+SWEP.IronSightsHook = function(self)
+    local attached = self:GetElements()
+    local newpos = Vector(-2.895, -5, 0.3)
+    local newang = Angle(0.025, -0.15, 0)
+
+    if attached["extrairon"] then
+        newpos = Vector(-2.895, -5, 0)
+        newang = Angle(0.025, -0.15, 0)
+    end
+
+    if attached["famas_f1"] then
+        newpos = Vector(-2.895, -3, 0.3)
+        newang = Angle(0.025, 0.25, 0)
+        if attached["extrairon"] then
+            newpos = Vector(-2.895, -5, -1.45)
+            newang = Angle(0.025, 0.05, 0)
+        end
+    end
+
+    return {Pos = newpos, Ang = newang, Magnification = 1.1, ViewModelFOV = 60, CrosshairInSights = false,}
+
+end
 
 SWEP.Hook_ModifyBodygroups = function(self, data)
 
@@ -400,6 +422,7 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"cod_optic", "cod_rail_riser"},
         InstalledElements = {"mount"},
+        MergeSlots = {7},
     },
     {
         PrintName = "Muzzle",
@@ -440,6 +463,23 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"bo1_famas_receiver"},
         CosmeticOnly = true,
+    },
+    {
+        Hidden = true,
+        Bone = "j_gun",
+        Pos = Vector(0.25, 0.1, 4.9),
+        Ang = Angle(0, 0, 0),
+        Category = {"cod_extrairons_rear"},
+        InstalledElements = {"mount"},
+    },
+    {
+        Hidden = false,
+        RequireElements = {"extrarear"},
+        PrintName = "Front Sight",
+        Bone = "j_gun",
+        Pos = Vector(6, 0.1, 4.9),
+        Ang = Angle(0, 0, 0),
+        Category = {"cod_extrairons_front"},
     },
     {
         PrintName = "Cosmetic",

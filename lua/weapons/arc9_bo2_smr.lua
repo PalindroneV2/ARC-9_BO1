@@ -261,6 +261,19 @@ SWEP.AttachmentElements = {
     --         },
     --     },
     -- },
+    ["extrarear"] = {
+        Bodygroups = {
+            {2,2}
+        },
+        IronSights = {
+            Pos = Vector(-2.43, -2, 0),
+            Ang = Angle(0, 0.03, 0),
+            Magnification = 1.1,
+            CrosshairInSights = false,
+            SwitchToSound = "",
+            ViewModelFOV = 60,
+        }
+    },
 }
 
 SWEP.Hook_ModifyBodygroups = function(self, data)
@@ -273,6 +286,10 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         vm:SetBodygroup(0, 1)
     else
         vm:SetBodygroup(0, 0)
+    end
+
+    if attached["extrarear"] then
+        vm:SetBodygroup(2, 2)
     end
 
     local camo = 0
@@ -341,6 +358,8 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"cod_optic", "cod_rail_riser"},
         InstalledElements = {"mount"},
+        Icon_Offset = Vector(0,0,1),
+        MergeSlots = {9},
     },
     {
         PrintName = "Muzzle",
@@ -399,6 +418,24 @@ SWEP.Attachments = {
         Pos = Vector(-8, 0, -6),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ammo", "bo1_pap"},
+    },
+    {
+        Hidden = true,
+        Bone = "j_gun",
+        Pos = Vector(-2, 0, 2.8),
+        Ang = Angle(0, 0, 0),
+        Category = {"cod_extrairons_rear"},
+        InstalledElements = {"mount"},
+    },
+    {
+        Hidden = false,
+        RequireElements = {"extrarear"},
+        PrintName = "Front Sight",
+        Bone = "j_gun",
+        Pos = Vector(13.15, 0, 2.8),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0,0,1),
+        Category = {"cod_extrairons_front"},
     },
     {
         PrintName = "Perk-a-Cola",

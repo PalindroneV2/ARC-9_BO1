@@ -248,6 +248,19 @@ SWEP.AttachmentElements = {
             {5,1},
         },
     },
+    ["extrarear"] = {
+        Bodygroups = {
+            {6,1},
+        },
+        IronSights = {
+            Pos = Vector(-3.555, -3, 0.4),
+            Ang = Angle(-0.05, 0, 0),
+            Magnification = 1.1,
+            ViewModelFOV = 60,
+            CrosshairInSights = false,
+            SwitchToSound = "", -- sound that plays when switching to this sight
+        }
+    },
 }
 
 SWEP.Hook_ModifyBodygroups = function(self, data)
@@ -313,8 +326,9 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(1.5, 0, 2.6),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(0, 0, 1.25),
+        Icon_Offset = Vector(-3, 0, 1.25),
         Category = {"cod_optic", "cod_rail_riser"},
+        MergeSlots = {10},
     },
     {
         PrintName = "Muzzle",
@@ -387,6 +401,24 @@ SWEP.Attachments = {
         Pos = Vector(1, 0, -2),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ammo", "bo1_pap"},
+    },
+    {
+        Hidden = true,
+        Bone = "j_gun",
+        Pos = Vector(-3, 0, 2.4),
+        Ang = Angle(0, 0, 0),
+        Category = {"cod_extrairons_rear"},
+        InstalledElements = {"mount"},
+    },
+    {
+        Hidden = false,
+        RequireElements = {"extrarear"},
+        PrintName = "Front Sight",
+        Bone = "j_gun",
+        Pos = Vector(7, 0, 2.4),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0,0,1),
+        Category = {"cod_extrairons_front"},
     },
     {
         PrintName = "Perk-a-Cola",

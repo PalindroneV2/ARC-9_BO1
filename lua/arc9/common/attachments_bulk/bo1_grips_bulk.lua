@@ -191,7 +191,7 @@ ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Category = {"cod_grips"}
-ATT.ActivateElements = {"griplamp"}
+ATT.ActivateElements = {"griplamp","taclightgrip"}
 
 ATT.Model = "models/weapons/arc9/atts/bo2_taclight_grip.mdl"
 ATT.Scale = 1

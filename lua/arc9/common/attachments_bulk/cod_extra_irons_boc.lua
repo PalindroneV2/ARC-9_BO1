@@ -65,7 +65,7 @@ ATT.Model = "models/weapons/arc9/atts/cod_extra/rear_irons.mdl"
 ATT.Scale = Vector(1, 1, 1)
 ATT.ModelOffset = Vector(0,0,0)
 ATT.ModelAngleOffset = Angle(0,0,0)
-ATT.ModelBodygroups = "3c"
+ATT.ModelBodygroups = "3"
 
 ARC9.LoadAttachment(ATT, "cod_extra_ironrear_arms40l")
 
@@ -135,6 +135,12 @@ ATT.Scale = Vector(1, 1, 1)
 ATT.ModelOffset = Vector(0,0,0)
 ATT.ModelAngleOffset = Angle(0,0,0)
 ATT.ModelBodygroups = "4"
+
+ATT.DrawFunc = function(swep, model, wm)
+    if swep:GetElements()["camo_full"] then
+        model:SetMaterial("models/weapons/arc9/cde/kali_ar15/ghosts/magpul_sights_camo.vmt")
+    end
+end
 
 ARC9.LoadAttachment(ATT, "cod_extra_ironrear_mbus")
 
@@ -293,5 +299,11 @@ ATT.ExcludeElements = {"mw2_m4_irons"}
 ATT.Model = "models/weapons/arc9/atts/cod_extra/front_irons.mdl"
 ATT.ModelOffset = Vector(0,0,0)
 ATT.ModelBodygroups = "4"
+
+ATT.DrawFunc = function(swep, model, wm)
+    if swep:GetElements()["camo_full"] then
+        model:SetMaterial("models/weapons/arc9/cde/kali_ar15/ghosts/magpul_sights_camo.vmt")
+    end
+end
 
 ARC9.LoadAttachment(ATT, "cod_extra_iron_rear_mbus")

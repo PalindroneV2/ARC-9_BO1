@@ -12,12 +12,12 @@ ATT.Category = {"bo1_aug_top"}
 ATT.ActivateElements = {"aug_a3"}
 ATT.ExcludeElements = {}
 
-ATT.IronSights = {
-    Pos = Vector(-2.77, -5, 0.7),
-    Ang = Angle(-0.025, -0.1, -0.5),
-    ViewModelFOV = 60,
-    Magnification = 1.1,
-}
+-- ATT.IronSights = {
+--     Pos = Vector(-2.77, -5, 0.7),
+--     Ang = Angle(-0.025, -0.1, -0.5),
+--     ViewModelFOV = 60,
+--     Magnification = 1.1,
+-- }
 
 ATT.Attachments = {
     {

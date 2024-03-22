@@ -15,4 +15,15 @@
 	"$basemapalphaenvmapmask" "1"
 	"$envmapfresnel" "0.01"
 	"$envmaptint" "[ .01 .01 .01 ]"
+
+	$detailblendmode 4
+	$detailblendfactor 0.7
+	$detail "models/weapons/arc9/bo1/black_detail"
+	Proxies {
+		CustomCamo {
+			camoTexture $detail
+			camoScale $detailscale
+            blend $detailblendfactor
+		}
+	}
 }

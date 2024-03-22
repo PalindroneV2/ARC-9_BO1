@@ -235,6 +235,16 @@ SWEP.BarrelLength = 0 -- = 25
 SWEP.ExtraSightDist = 5
 
 SWEP.AttachmentElements = {
+    ["extrarear"] = {
+        IronSights = {
+            Pos = Vector(-2.82, -1.5, 0.15),
+            Ang = Angle(0, 0.05, 0),
+            Magnification = 1.1,
+            CrosshairInSights = false,
+            SwitchToSound = "",
+            ViewModelFOV = 60,
+        }
+    },
     ["extmag"] = {
         Bodygroups = {
             {1,1},
@@ -282,10 +292,20 @@ SWEP.AttachmentElements = {
     },
     ["griplamp"] = {
         AttPosMods = {
-            [5] = {
-                Pos = Vector(8, 0, 1.35),
+            [3] = {
+                Pos = Vector(9, 0.105, 1.35),
             },
         },
+    },
+    ["g36_iron"] = {
+        IronSights = {
+            Pos = Vector(-2.825, -1.5, -0.1),
+            Ang = Angle(0, 0.1, 0),
+            Magnification = 1.1,
+            CrosshairInSights = false,
+            SwitchToSound = "",
+            ViewModelFOV = 60,
+        }
     },
 }
 
@@ -294,37 +314,24 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local vm = data.model
     local attached = data.elements
 
-    local newpos = Vector(-2.825, -1.5, 0.1)
-    local newang = Angle(0.025, 0.8, 0)
+    -- local newpos = Vector(-2.825, -1.5, 0.1)
+    -- local newang = Angle(0.025, 0.8, 0)
 
-    if attached["cod_optic"] then
+    if attached["cod_optic"] or attached["extrarear"] then
         vm:SetBodygroup(2,4)
     end
 
     if attached["g36_iron"] then
         vm:SetBodygroup(2,1)
-        newpos = Vector(-2.825, -1.5, -0.1)
-        newang = Angle(0.025, 0.1, 0)
     end
 
-    if attached["matech_iron"] then
-        vm:SetBodygroup(2,2)
-        newpos = Vector(-2.825, -1.5, 0.4)
-        newang = Angle(0.03, -0.9, 0)
-    end
+    -- if attached["matech_iron"] then
+    --     vm:SetBodygroup(2,2)
+    -- end
 
-    if attached["acr_iron"] then
-        vm:SetBodygroup(2,3)
-        newpos = Vector(-2.825, -1.5, 0.1)
-        newang = Angle(0.03, 0, 0)
-    end
-
-    self.IronSights = {
-        Pos = newpos,
-        Ang = newang,
-        Magnification = 1.1,
-        CrosshairInSights = false,
-    }
+    -- if attached["acr_iron"] then
+    --     vm:SetBodygroup(2,3)
+    -- end
 
     -- COSMETICS
     -- CAMO
@@ -391,7 +398,9 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(2.25, 0.105, 3.75),
         Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0,0,1),
         Category = {"cod_optic", "cod_rail_riser", "bo2_m27_irons"},
+        MergeSlots = {9},
     },
     {
         PrintName = "Barrel",
@@ -399,6 +408,7 @@ SWEP.Attachments = {
         DefaultIcon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m16.png", "mips smooth"),
         Bone = "j_gun",
         Pos = Vector(12, 0.105, 3.2),
+        Icon_Offset = Vector(-6.5, 0, -1),
         Ang = Angle(0, 0, 0),
         Category = {"bo2_m27_barrel"},
     },
@@ -449,6 +459,24 @@ SWEP.Attachments = {
         Pos = Vector(1, 0, -4.25),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ammo", "bo1_pap"},
+    },
+    {
+        Hidden = true,
+        Bone = "j_gun",
+        Pos = Vector(0.2, 0.105, 3.55),
+        Ang = Angle(0, 0, 0),
+        Category = {"cod_extrairons_rear"},
+        InstalledElements = {"mount"},
+    },
+    {
+        Hidden = false,
+        RequireElements = {"extrarear"},
+        PrintName = "Front Sight",
+        Bone = "j_gun",
+        Pos = Vector(12, 0.105, 3.55),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0,0,1),
+        Category = {"cod_extrairons_front"},
     },
     {
         PrintName = "Perk-a-Cola",

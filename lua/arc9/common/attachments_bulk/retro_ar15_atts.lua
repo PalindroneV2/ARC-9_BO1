@@ -2671,6 +2671,10 @@ ATT.ModelAngleOffset = Angle(0,0,0)
 ATT.BoneMerge = true
 
 ATT.DrawFunc = function(swep, model, wm)
+    if swep:GetElements()["camo_full"] then
+        model:SetSubMaterial(2,"models/weapons/arc9/cde/kali_ar15/bo3/loot_upper_camo.vmt")
+        model:SetSubMaterial(3,"models/weapons/arc9/cde/kali_ar15/bo3/lower_base_camo.vmt")
+    end
     if swep:GetElements()["bo1_pap"] then
         model:SetSkin(1)
         model:SetSubMaterial(2,"models/weapons/arc9/pap/pap_crystal.vmt")

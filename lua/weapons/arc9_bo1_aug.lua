@@ -334,7 +334,7 @@ SWEP.AttachmentElements = {
             [3] = {
                 Pos = Vector(12, 0, 3.15),
             }
-        }
+        },
     },
     ["barrel_long"] = {
         Bodygroups = {
@@ -344,25 +344,32 @@ SWEP.AttachmentElements = {
             [3] = {
                 Pos = Vector(18, 0, 3.15),
             }
-        }
-    },
-    ["extrairon" and "aug_a2"] = {
-        IronSights = {
-            Pos = Vector(-2.735, -6, 0.1),
-            Ang = Angle(-0, 0, 0),
-            ViewModelFOV = 60,
-            Magnification = 1.1,
-        }
-    },
-    ["extrairon" and "aug_a3"] = {
-        IronSights = {
-            Pos = Vector(-2.735, -6, 0.65),
-            Ang = Angle(-0, 0, 0),
-            ViewModelFOV = 60,
-            Magnification = 1.1,
-        }
+        },
     },
 }
+
+SWEP.IronSightsHook = function(self)
+    local attached = self:GetElements()
+    local newpos = Vector(-2.77, -5, 0.235)
+    local newang = Angle(-0.025, -0.1, -0.5)
+
+    if attached["extrairon"] then
+        newpos = Vector(-2.735, -6, 0.1)
+        newang = Angle(-0, 0, 0)
+    end
+
+    if attached["aug_a3"] then
+        newpos = Vector(-2.77, -5, 0.7)
+        newang = Angle(-0.025, -0.1, -0.5)
+        if attached["extrairon"] then
+            newpos = Vector(-2.735, -6, 0.65)
+            newang = Angle(-0, 0, 0)
+        end
+    end
+
+    return {Pos = newpos, Ang = newang, Magnification = 1.1, ViewModelFOV = 60, CrosshairInSights = false,}
+
+end
 
 SWEP.Hook_ModifyBodygroups = function(self, data)
 

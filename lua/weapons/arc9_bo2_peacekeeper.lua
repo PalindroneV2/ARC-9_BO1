@@ -232,10 +232,31 @@ SWEP.AttachmentElements = {
             {1,1},
         },
     },
-    ["mount"] = {
+    ["bo1_alt_irons"] = {
         Bodygroups = {
             {2,1},
         },
+        IronSights = {
+            Pos = Vector(-2.825, -3, 1.04),
+            Ang = Angle(0.04, 0, 0),
+            Magnification = 1.1,
+            ViewModelFOV = 60,
+            CrosshairInSights = false,
+            SwitchToSound = "", -- sound that plays when switching to this sight
+        }
+    },
+    ["extrarear"] = {
+        Bodygroups = {
+            {2,2},
+        },
+        IronSights = {
+            Pos = Vector(-2.825, -1.25, 0.26),
+            Ang = Angle(0.025, 0, 0),
+            Magnification = 1.1,
+            ViewModelFOV = 60,
+            CrosshairInSights = false,
+            SwitchToSound = "", -- sound that plays when switching to this sight
+        }
     },
 }
 
@@ -266,19 +287,6 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         camo = camo + 2
     end
     vm:SetSkin(camo)
-
-    local newpos = Vector(-2.825, -3, 0.425)
-    local newang = Angle(0.04, 0, 0)
-    if attached["bo1_alt_irons"] then
-        newpos = Vector(-2.825, -3, 1.04)
-        newang = Angle(0.04, 0, 0)
-    end
-
-    self.IronSights = {
-        Pos = newpos,
-        Ang = newang,
-        Magnification = 1.1,
-    }
 
 end
 
@@ -318,8 +326,10 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(3, 0, 3.65),
         Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(-3.5, 0, 0.8),
         Category = {"cod_optic", "cod_rail_riser", "bo1_alt_irons"},
         InstalledElements = {"mount"},
+        MergeSlots = {8},
     },
     {
         PrintName = "Muzzle",
@@ -370,6 +380,24 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = "bo1_perkacola",
         ExcludeElements = {"mwc_perk", "mwc_proficiency"},
+    },
+    {
+        Hidden = true,
+        Bone = "j_gun",
+        Pos = Vector(-1, 0, 3.45),
+        Ang = Angle(0, 0, 0),
+        Category = {"cod_extrairons_rear"},
+        InstalledElements = {"mount"},
+    },
+    {
+        Hidden = false,
+        RequireElements = {"extrarear"},
+        PrintName = "Front Sight",
+        Bone = "j_gun",
+        Pos = Vector(9.3, 0, 3.45),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0,0,1),
+        Category = {"cod_extrairons_front"},
     },
     {
         PrintName = "Perk",
