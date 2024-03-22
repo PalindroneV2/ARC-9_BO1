@@ -236,6 +236,7 @@ SWEP.Attachments = {
         Pos = Vector(0, 2.5, 2.5),
         Ang = Angle(0, 0, 0),
         Category = "mwc_perk",
+        ExcludeElements = {"bo1_perkacola"},
     },
     {
         PrintName = "Proficiency",
@@ -244,6 +245,7 @@ SWEP.Attachments = {
         Pos = Vector(0, -2.5, 2.5),
         Ang = Angle(0, 0, 0),
         Category = "mwc_proficiency",
+        ExcludeElements = {"bo1_perkacola"},
     },
     {
         PrintName = "Cosmetic",
