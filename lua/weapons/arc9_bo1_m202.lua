@@ -30,10 +30,10 @@ SWEP.WorldModelMirror = "models/weapons/arc9/w_bo1_m202.mdl"
 SWEP.MirrorVMWM = true
 SWEP.NoTPIKVMPos = true
 SWEP.WorldModelOffset = {
-    Pos        =    Vector(-20, 5.75, -6.5),
-    Ang        =    Angle(-10, -2, 180),
+    Pos     =    Vector(-20, 5.75, -6.5),
+    Ang     =    Angle(-10, -2, 180),
     Bone    =    "ValveBiped.Bip01_R_Hand",
-    Scale = 1,
+    Scale   = 1,
 }
 SWEP.ViewModelFOVBase = 75
 
@@ -185,7 +185,7 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(0, 0, 0),
+    Pos = Vector(0.015, 0, 0),
     Ang = Angle(0, 0, 0),
     Magnification = 1.25,
     ViewModelFOV = 60,

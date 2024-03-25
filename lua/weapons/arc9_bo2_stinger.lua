@@ -33,10 +33,10 @@ SWEP.NoTPIKVMPos = true
 SWEP.WorldModelOffset = {
     Pos        =    Vector(-6, 4.5, -6.2),
     Ang        =    Angle(-15, 20, 220),
-    TPIKPos        =    Vector(-6, 4.5, -6.2),
-    TPIKAng        =    Angle(-15, 20, 220),
-    Bone    =    "ValveBiped.Bip01_R_Hand",
-    Scale = 1.1,
+    TPIKPos    =    Vector(-6, 4.5, -6.2),
+    TPIKAng    =    Angle(-15, 20, 220),
+    Bone       =    "ValveBiped.Bip01_R_Hand",
+    Scale      = 1.1,
 }
 SWEP.ViewModelFOVBase = 75
 
@@ -314,7 +314,7 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(0, 0, 0),
+    Pos = Vector(0.025, 0, 0),
     Ang = Angle(0, 0, 0),
     Magnification = 1.25,
     ViewModelFOV = 60,
