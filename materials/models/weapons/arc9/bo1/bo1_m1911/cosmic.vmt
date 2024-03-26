@@ -1,36 +1,25 @@
-"VertexlitGeneric"
+VertexlitGeneric
 {
-	"$basetexture" "models/weapons/arc9/bo1/bo1_m1911/1911_c"
-	"$bumpmap" "models/weapons/arc9/bo1/bo1_m1911/1911_n"
-	"$phongexponenttexture" "models/weapons/arc9/bo1/bo1_m1911/1911_s"
-	"$envmapmask" "models/weapons/arc9/bo1/bo1_m1911/1911_s"
-	$normalmapalphaenvmapmask 1
-
-	"$blendtintbybasealpha" "1"
-	"$phong" "1"
-	"$phongboost" "1"
-	"$phongalbedotint" "2"
-	"$PhongFresnelRanges" "[ 2 5 4 ]"
-	"$envmap" "env_cubemap"
-	$envmapfresnel "0.01"
-	$envmaptint "[ .01 .01 .01 ]"
+	"$basetexture" "models/weapons/arc9/bo1/camos/black_detail"
+	"$basetexturetransform" "center .5 .5 scale 5 5 rotate 0 translate 0 0"
+	$bumpmap	"models/weapons/arc9/pap/pap_wp115_n"
+	"$bumptransform" "center .5 .5 scale 5 5 rotate 0 translate 0 0"
+	$color2	"[0 1 1]"
+    
+	$detail	"models/weapons/arc9/pap/pap_wp115_color"
+	$detailscale 2
+	$detailblendmode 1
+	"$selfillum" "1"
+	$selfillummask "models/weapons/arc9/pap/pap_wp115"
 	
-	"$nocull" "1"
-
-	$detail	"models/weapons/arc9/pap/pap_cosmic"
-	$detailscale 4
-	$detailblendmode 2
-	$detailblendfactor 1
-	$selfillum 1
-	$selfillummask "models/weapons/arc9/pap/pap_cosmic_s"
 	Proxies
 	{
 		TextureScroll
 		{
 			texturescrollvar $detailtexturetransform
-			texturescrollrate .05
-			texturescrollangle 210
+			texturescrollrate .01
+			texturescrollangle 30
 		}
 	}
+	"$nocull" "1"	
 }
-// CREDIT TO GAMER BARNEY 

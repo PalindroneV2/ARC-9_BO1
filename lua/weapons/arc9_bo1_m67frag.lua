@@ -177,15 +177,15 @@ SWEP.NonTPIKAnimReload = ACT_HL2MP_GESTURE_RELOAD_GRENADE
 SWEP.ActivePos = Vector(0, 0, 0)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
-SWEP.MovingPos = Vector(0, -1, -1)
+SWEP.MovingPos = Vector(0, 0, 0)
 SWEP.MovingAng = Angle(0, 0, 0)
 
 SWEP.MovingMidPoint = {
-    Pos = Vector(0, -0.5, -0.5),
+    Pos = Vector(0, 0, 0),
     Ang = Angle(0, 0, 0)
 }
 
-SWEP.CrouchPos =  Vector(0, -0.5, -1)
+SWEP.CrouchPos =  Vector(0, 0, 0)
 SWEP.CrouchAng = SWEP.ActiveAng
 
 SWEP.RestPos = SWEP.ActivePos
@@ -225,6 +225,9 @@ SWEP.Animations = {
         Source = "idle"
     },
     ["draw"] = {
+        Source = "idle",
+    },
+    ["holster"] = {
         Source = "idle",
     },
     ["pullpin"] = {

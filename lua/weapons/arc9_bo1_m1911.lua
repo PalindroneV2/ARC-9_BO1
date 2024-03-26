@@ -341,9 +341,6 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
             finish = 6
         end
     end
-    if attached["sally"] then
-        finish = 4
-    end
     if attached["gold"] then
         finish = 3
         if attached["bo1_pap"] then
@@ -352,7 +349,6 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     end
     vm:SetBodygroup(2,irons)
     vm:SetSkin(finish)
-    -- vm:SetSubMaterial(1,"models/weapons/arc9/pap/pap_cosmic")
 end
 
 SWEP.HookP_NameChange = function(self, name)

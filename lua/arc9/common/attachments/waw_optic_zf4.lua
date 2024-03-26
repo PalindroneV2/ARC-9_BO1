@@ -31,7 +31,7 @@ end
 
 ATT.Sights = {
     {
-        Pos = Vector(-0.0025, 4, -3.2875),
+        Pos = Vector(-0.0025, 4, -3.28),
         Ang = Angle(0, 0, 0),
         ViewModelFOV = 60,
         Magnification = 1,
@@ -44,7 +44,7 @@ ATT.RTScopeSubmatIndex = 1
 ATT.RTScopeFOV = 9
 ATT.RTScopeRes = 512
 ATT.RTScopeSurface = Material("models/weapons/arc9/bo1/bo1_acogs/acog_lens")
-ATT.RTScopeReticle = Material("hud/arc9_bo1/scopes/waw_telescopic.png", "mips smooth")
+ATT.RTScopeReticle = Material("hud/arc9_bo1/scopes/waw_scope_ger.png", "mips smooth")
 ATT.RTScopeReticleScale = 1.15
 ATT.RTScopeShadowIntensity = 1.5
 ATT.RTScopeNoPP = false
