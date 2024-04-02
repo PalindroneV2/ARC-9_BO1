@@ -173,6 +173,8 @@ SWEP.MuzzleEffectQCA = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectQCA = 2 -- which attachment to put the case effect on
 SWEP.ProceduralViewQCA = 1
 SWEP.CamQCA = 3
+SWEP.NoShellEject = true
+SWEP.NoShellEjectManualAction = true
 
 SWEP.BulletBones = {
 }
@@ -401,7 +403,7 @@ SWEP.Animations = {
             "pump",
         },
         Time = 35 / 35,
-        ShellEjectAt = 8 / 35,
+        EjectAt = 8 / 35,
         MinProgress = 0.75,
         EventTable = {
             {s = "ARC9_WAW.TrenchGun_Pull", t = 8 / 35},
@@ -413,7 +415,7 @@ SWEP.Animations = {
             "pump",
         },
         Time = 35 / 35,
-        ShellEjectAt = 8 / 35,
+        EjectAt = 8 / 35,
         MinProgress = 0.75,
         EventTable = {
             {s = "ARC9_WAW.TrenchGun_Pull", t = 8 / 35},

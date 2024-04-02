@@ -157,12 +157,12 @@ SWEP.MuzzleParticle = nil --"muzzleflash_shotgun"
 -- SWEP.ShellScale = 1.5
 -- SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556_steel"
 
-SWEP.NoShellEject = true
-
 SWEP.MuzzleEffectQCA = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectQCA = nil -- which attachment to put the case effect on
 SWEP.ProceduralViewQCA = 1
 SWEP.CamQCA = 2
+SWEP.NoShellEject = true
+SWEP.NoShellEjectManualAction = true
 
 SWEP.BulletBones = {
 }

@@ -166,6 +166,7 @@ SWEP.ShootSoundSilenced = "ARC9_BO1.MP5_Sil"
 SWEP.MuzzleParticle = "muzzleflash_m79" -- Used for some muzzle effects.
 
 SWEP.NoShellEject = true
+SWEP.NoShellEjectManualAction = true
 SWEP.ShellModel = "models/shells/shell_12gauge.mdl"
 SWEP.ShellScale = 1.5
 SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556_steel"

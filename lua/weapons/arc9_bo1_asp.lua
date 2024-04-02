@@ -159,6 +159,8 @@ SWEP.MuzzleEffectQCA = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectQCA = 2 -- which attachment to put the case effect on
 SWEP.ProceduralViewQCA = 1
 SWEP.CamQCA = 3
+SWEP.NoShellEject = true
+SWEP.NoShellEjectManualAction = true
 
 SWEP.BulletBones = {
 }
@@ -288,6 +290,18 @@ SWEP.HookP_NameChange = function(self, name)
     return gunname
 end
 
+SWEP.Hook_TranslateAnimation = function (self, anim)
+    local attached = self:GetElements()
+
+    local suffix = ""
+
+    if attached["hush"] then
+        suffix = "_hush"
+    end
+
+    return anim .. suffix
+end
+
 SWEP.Attachments = {
     {
         PrintName = "Barrel",
@@ -395,7 +409,7 @@ SWEP.Animations = {
     ["cycle"] = {
         Source = "first_draw",
         Time = 1,
-        ShellEjectAt = 0.5,
+        EjectAt = 0.5,
         EventTable = {
             {s = "ARC9_BO1.ASP_Back", t = 12 / 40},
             {s = "ARC9_BO1.ASP_Fwd", t = 22 / 40}
@@ -404,7 +418,7 @@ SWEP.Animations = {
     ["cycle_empty"] = {
         Source = "cycle_last",
         Time = 1,
-        ShellEjectAt = 0.5,
+        EjectAt = 0.5,
         EventTable = {
             {s = "ARC9_BO1.ASP_Back", t = 12 / 40},
         }
@@ -412,22 +426,37 @@ SWEP.Animations = {
     ["fire"] = {
         Source = {"fire"},
         Time = 7 / 35,
-        ShellEjectAt = 0,
+        EjectAt = 0,
     },
     ["fire_empty"] = {
         Source = "fire_last",
         Time = 7 / 35,
-        ShellEjectAt = 0,
+        EjectAt = 0,
     },
     ["fire_iron"] = {
         Source = "fire_ads",
         Time = 7 / 35,
-        ShellEjectAt = 0,
+        EjectAt = 0,
+    },
+    ["fire_hush"] = {
+        Source = {"fire"},
+        Time = 7 / 35,
+        EjectAt = nil,
+    },
+    ["fire_empty_hush"] = {
+        Source = "fire_last",
+        Time = 7 / 35,
+        EjectAt = nil,
+    },
+    ["fire_iron_hush"] = {
+        Source = "fire_ads",
+        Time = 7 / 35,
+        EjectAt = nil,
     },
     ["fire_iron_empty"] = {
         Source = "fire_last",
         Time = 7 / 35,
-        ShellEjectAt = 0,
+        EjectAt = 0,
     },
     ["reload"] = {
         Source = "reload",

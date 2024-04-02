@@ -168,6 +168,8 @@ SWEP.MuzzleEffectQCA = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectQCA = 2 -- which attachment to put the case effect on
 SWEP.ProceduralViewQCA = 1
 SWEP.CamQCA = 3
+SWEP.NoShellEject = true
+SWEP.NoShellEjectManualAction = true
 
 SWEP.BulletBones = {
     [1] = "ammo01_jnt",
@@ -403,42 +405,27 @@ SWEP.Animations = {
     ["draw"] = {
         Source = "draw",
         Time = 0.75,
-        LHIK = true,
-        LHIKIn = 0.25,
-        LHIKOut = 0.25,
     },
     ["draw_empty"] = {
         Source = "draw_empty",
         Time = 0.5,
-        LHIK = true,
-        LHIKIn = 0.25,
-        LHIKOut = 0.25,
     },
     ["holster"] = {
         Source = "holster",
         Time = 0.5,
-        LHIK = true,
-        LHIKIn = 0.25,
-        LHIKOut = 0.25,
     },
     ["holster_empty"] = {
         Source = "holster_empty",
         Time = 0.5,
-        LHIK = true,
-        LHIKIn = 0.25,
-        LHIKOut = 0.25,
     },
     ["ready"] = {
         Source = "draw",
         Time = 1,
-        LHIK = true,
-        LHIKIn = 0,
-        LHIKOut = 0.25,
     },
     ["fire"] = {
         Source = {"fire"},
         Time = 7 / 30,
-        ShellEjectAt = 0,
+        EjectAt = 0,
         EventTable = {
             {s = "ARC9_WAW.M1919_Mech", t = 1 / 35},
         }
@@ -446,7 +433,7 @@ SWEP.Animations = {
     ["fire_iron"] = {
         Source = {"fire_ads"},
         Time = 7 / 30,
-        ShellEjectAt = 0,
+        EjectAt = 0,
         EventTable = {
             {s = "ARC9_WAW.M1919_Mech", t = 1 / 35},
         }
@@ -454,12 +441,12 @@ SWEP.Animations = {
     ["fire_bipod"] = {
         Source = {"fire_ads"},
         Time = 7 / 30,
-        ShellEjectAt = 0,
+        EjectAt = 0,
     },
     ["fire_empty"] = {
         Source = {"fire_last"},
         Time = 7 / 30,
-        ShellEjectAt = 0,
+        EjectAt = 0,
         EventTable = {
             {s = "ARC9_WAW.M1919_Mech", t = 1 / 35},
         }
@@ -467,7 +454,7 @@ SWEP.Animations = {
     ["fire_iron_empty"] = {
         Source = {"fire_ads_last"},
         Time = 7 / 30,
-        ShellEjectAt = 0,
+        EjectAt = 0,
         EventTable = {
             {s = "ARC9_WAW.M1919_Mech", t = 1 / 35},
         }

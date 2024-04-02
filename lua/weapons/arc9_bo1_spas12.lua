@@ -141,7 +141,8 @@ SWEP.Firemodes = {
         PrintName = "PUMP",
         EjectDelay = 0.2,
         SpreadMult = 0.8,
-        PhysBulletMuzzleVelocityMult = 1.15
+        PhysBulletMuzzleVelocityMult = 1.15,
+        ActivateElements = "pumpy"
     }
 }
 SWEP.ARC9WeaponCategory = 2
@@ -175,6 +176,8 @@ SWEP.MuzzleEffectQCA = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectQCA = 2 -- which attachment to put the case effect on
 SWEP.ProceduralViewQCA = nil
 SWEP.CamQCA = 4
+SWEP.NoShellEject = true
+SWEP.NoShellEjectManualAction = true
 
 SWEP.BulletBones = {
 }
@@ -386,8 +389,14 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
     local attached = self:GetElements()
 
     local suffix = ""
+    local firemodename = self:GetFiremodeName()
+
     if attached["bo1_pap"] then
         suffix = "_pap"
+    end
+
+    if firemodename == "PUMP" then
+        suffix = "_pumpy"
     end
 
     return anim .. suffix
@@ -455,14 +464,28 @@ SWEP.Animations = {
             "fire",
         },
         Time = 9 / 35,
-        ShellEjectAt = 0.1,
+        EjectAt = 0.01,
     },
     ["fire_iron"] = {
         Source = {
             "fire_ads",
         },
         Time = 9 / 35,
-        ShellEjectAt = 0.1,
+        EjectAt = 0.01,
+    },
+    ["fire_pumpy"] = {
+        Source = {
+            "fire",
+        },
+        Time = 9 / 35,
+        EjectAt = nil,
+    },
+    ["fire_iron_pumpy"] = {
+        Source = {
+            "fire_ads",
+        },
+        Time = 9 / 35,
+        EjectAt = nil,
     },
     ["cycle"] = {
         Source = "pump",
@@ -470,7 +493,8 @@ SWEP.Animations = {
             {s = "ARC9_BO1.SPAS_Back", t = 0.15},
             {s = "ARC9_BO1.SPAS_Fwd", t = 0.4}
         },
-        MinProgress = 0.75
+        MinProgress = 0.75,
+        EjectAt = 0.2,
     },
     ["cycle_iron"] = {
         Source = "pump_ads",
@@ -478,7 +502,8 @@ SWEP.Animations = {
             {s = "ARC9_BO1.SPAS_Back", t = 0.15},
             {s = "ARC9_BO1.SPAS_Fwd", t = 0.4}
         },
-        MinProgress = 0.6
+        MinProgress = 0.6,
+        EjectAt = 0.2,
     },
     ["reload_start"] = {
         Source = "reload_in",

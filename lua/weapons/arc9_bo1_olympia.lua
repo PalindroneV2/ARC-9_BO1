@@ -161,6 +161,7 @@ SWEP.MuzzleParticle = "muzzleflash_shotgun" -- Used for some muzzle effects.
 -- SWEP.ShellPitch = 90
 -- SWEP.ShellScale = 1.5
 SWEP.NoShellEject = true
+SWEP.NoShellEjectManualAction = true
 
 SWEP.MuzzleEffectQCA = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectQCA = 2 -- which attachment to put the case effect on

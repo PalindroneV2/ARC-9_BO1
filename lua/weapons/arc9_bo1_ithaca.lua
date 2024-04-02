@@ -178,6 +178,8 @@ SWEP.MuzzleEffectQCA = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectQCA = 2 -- which attachment to put the case effect on
 SWEP.ProceduralViewQCA = 4
 SWEP.CamQCA = 4
+SWEP.NoShellEject = true
+SWEP.NoShellEjectManualAction = true
 
 SWEP.BulletBones = {
 }
@@ -421,21 +423,21 @@ SWEP.Animations = {
             "fire",
         },
         Time = 9 / 10,
-        ShellEjectAt = 0.15,
+        EjectAt = 0,
     },
     ["fire_iron"] = {
         Source = {
             "fire_ads",
         },
         Time = 9 / 10,
-        ShellEjectAt = 0.15,
+        EjectAt = 0,
     },
     ["cycle"] = {
         Source = {
             "pump",
         },
         Time = 30 / 35,
-        ShellEjectAt = 0.3,
+        EjectAt = 0.3,
         MinProgress = 22 / 35,
         EventTable = {
             {s = "ARC9_BO1.MK_Back", t = 5 / 30},
@@ -447,7 +449,7 @@ SWEP.Animations = {
             "pump_ads",
         },
         Time = 20 / 25,
-        ShellEjectAt = 0.3,
+        EjectAt = 0.3,
         MinProgress = 22 / 35,
         EventTable = {
             {s = "ARC9_BO1.MK_Back", t = 2 / 25},
@@ -459,7 +461,7 @@ SWEP.Animations = {
             "pump_ads",
         },
         Time = 20 / 25,
-        ShellEjectAt = 0.3,
+        EjectAt = 0.3,
         MinProgress = 22 / 35,
         EventTable = {
             {s = "ARC9_BO1.MK_Back", t = 2 / 25},
@@ -569,7 +571,7 @@ SWEP.Animations = {
             "pump_grip",
         },
         Time = 30 / 35,
-        ShellEjectAt = 10 / 35,
+        EjectAt = 10 / 35,
         MinProgress = 22 / 35,
         EventTable = {
             {s = "ARC9_BO1.MK_Back", t = 5 / 30},
@@ -581,7 +583,7 @@ SWEP.Animations = {
             "pump_ads_grip",
         },
         Time = 20 / 25,
-        ShellEjectAt = 5 / 35,
+        EjectAt = 5 / 35,
         MinProgress = 22 / 35,
         EventTable = {
             {s = "ARC9_BO1.MK_Back", t = 2 / 25},
@@ -593,7 +595,7 @@ SWEP.Animations = {
             "pump_ads_grip",
         },
         Time = 20 / 25,
-        ShellEjectAt = 5 / 35,
+        EjectAt = 5 / 35,
         MinProgress = 22 / 35,
         EventTable = {
             {s = "ARC9_BO1.MK_Back", t = 2 / 25},

@@ -167,6 +167,8 @@ SWEP.MuzzleEffectQCA = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectQCA = 0 -- which attachment to put the case effect on
 SWEP.ProceduralViewQCA = 1
 SWEP.CamQCA = 2
+SWEP.NoShellEject = true
+SWEP.NoShellEjectManualAction = true
 
 SWEP.BulletBones = {
 }
@@ -194,7 +196,6 @@ SWEP.PreBashTime = 5 / 35
 SWEP.PostBashTime = 25 / 35
 
 SWEP.HasSights = false
-SWEP.NoShellEject = true
 
 SWEP.HoldTypeHolstered = "passive"
 SWEP.HoldType = "fist"

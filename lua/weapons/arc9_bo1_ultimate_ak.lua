@@ -165,6 +165,8 @@ SWEP.MuzzleEffectQCA = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectQCA = 2 -- which attachment to put the case effect on
 SWEP.ProceduralViewQCA = 4
 SWEP.CamQCA = 4
+SWEP.NoShellEject = true
+SWEP.NoShellEjectManualAction = true
 
 SWEP.BulletBones = {
 }
@@ -1068,17 +1070,17 @@ SWEP.Animations = {
     ["fire"] = {
         Source = {"fire"},
         Time = 0.16,
-        ShellEjectAt = 0,
+        EjectAt = 0,
     },
     ["fire_iron"] = {
         Source = {"fire_ads"},
         Time = 0.16,
-        ShellEjectAt = 0,
+        EjectAt = 0,
     },
     ["fire_bipod"] = {
         Source = {"fire_ads"},
         Time = 0.16,
-        ShellEjectAt = 0,
+        EjectAt = 0,
     },
     ["reload"] = {
         Source = "reload",
@@ -1183,19 +1185,19 @@ SWEP.Animations = {
     ["fire_gp25"] = {
         Source = {"fire_gp25"},
         Time = 0.5,
-        ShellEjectAt = 0,
+        EjectAt = 0,
         IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
     ["fire_iron_gp25"] = {
         Source = {"fire_ads_gp25"},
         Time = 0.5,
-        ShellEjectAt = 0,
+        EjectAt = 0,
         IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
     ["fire_bipod_gp25"] = {
         Source = {"fire_ads_gp25"},
         Time = 0.5,
-        ShellEjectAt = 0,
+        EjectAt = 0,
         IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
     ["reload_gp25"] = {
@@ -1312,19 +1314,19 @@ SWEP.Animations = {
     ["fire_tishina"] = {
         Source = {"fire_tishina"},
         Time = 0.5,
-        ShellEjectAt = 0,
+        EjectAt = 0,
         IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
     ["fire_iron_tishina"] = {
         Source = {"fire_ads_tishina"},
         Time = 0.5,
-        ShellEjectAt = 0,
+        EjectAt = 0,
         IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
     ["fire_bipod_tishina"] = {
         Source = {"fire_ads_tishina"},
         Time = 0.5,
-        ShellEjectAt = 0,
+        EjectAt = 0,
         IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
     ["reload_tishina"] = {
@@ -1439,19 +1441,19 @@ SWEP.Animations = {
     ["fire_mk"] = {
         Source = {"fire_mk"},
         Time = 0.5,
-        ShellEjectAt = 0,
+        EjectAt = 0,
         IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
     ["fire_iron_mk"] = {
         Source = {"fire_ads_mk"},
         Time = 0.5,
-        ShellEjectAt = 0,
+        EjectAt = 0,
         IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
     ["fire_bipod_mk"] = {
         Source = {"fire_ads_mk"},
         Time = 0.5,
-        ShellEjectAt = 0,
+        EjectAt = 0,
         IKTimeLine = {{t = 0,lhik = 0,rhik = 1},{t = 1,lhik = 0,rhik = 1},},
     },
     ["reload_mk"] = {
@@ -1583,17 +1585,17 @@ SWEP.Animations = {
     ["fire_rpk"] = {
         Source = {"fire_rpk"},
         Time = 10 / 35,
-        ShellEjectAt = 0,
+        EjectAt = 0,
     },
     ["fire_iron_rpk"] = {
         Source = {"fire_ads_rpk"},
         Time = 10 / 35,
-        ShellEjectAt = 0,
+        EjectAt = 0,
     },
     ["fire_bipod_rpk"] = {
         Source = {"fire_ads_rpk"},
         Time = 10 / 35,
-        ShellEjectAt = 0,
+        EjectAt = 0,
     },
     ["reload_rpk"] = {
         Source = "reload_rpk",

@@ -185,6 +185,7 @@ SWEP.ProceduralViewQCA = 1
 SWEP.CamQCA = 3
 
 SWEP.NoShellEject = true
+SWEP.NoShellEjectManualAction = true
 
 SWEP.BulletBones = {
 }

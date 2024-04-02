@@ -161,6 +161,8 @@ SWEP.MuzzleEffectQCA = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectQCA = 2 -- which attachment to put the case effect on
 SWEP.ProceduralViewQCA = 1
 SWEP.CamQCA = 3
+SWEP.NoShellEject = true
+SWEP.NoShellEjectManualAction = true
 
 SWEP.BulletBones = {
 }
@@ -450,7 +452,7 @@ SWEP.Animations = {
     ["fire"] = {
         Source = {"fire"},
         Time = 6 / 30,
-        ShellEjectAt = 0,
+        EjectAt = 0,
         EventTable = {
             {s = "ARC9_WAW.STG44_Mech", t = 1 / 35},
         },
@@ -458,7 +460,7 @@ SWEP.Animations = {
     ["fire_iron"] = {
         Source = {"fire_ads"},
         Time = 6 / 30,
-        ShellEjectAt = 0,
+        EjectAt = 0,
         EventTable = {
             {s = "ARC9_WAW.STG44_Mech", t = 1 / 35},
         },
@@ -466,7 +468,7 @@ SWEP.Animations = {
     ["fire_empty"] = {
         Source = {"fire_last"},
         Time = 6 / 30,
-        ShellEjectAt = 0,
+        EjectAt = 0,
         EventTable = {
             {s = "ARC9_WAW.STG44_Mech", t = 1 / 35},
         },
@@ -474,7 +476,7 @@ SWEP.Animations = {
     ["fire_iron_empty"] = {
         Source = {"fire_last"},
         Time = 6 / 30,
-        ShellEjectAt = 0,
+        EjectAt = 0,
         EventTable = {
             {s = "ARC9_WAW.STG44_Mech", t = 1 / 35},
         },
@@ -548,21 +550,21 @@ SWEP.Animations = {
     ["nomech_fire"] = {
         Source = {"fire"},
         Time = 6 / 30,
-        ShellEjectAt = 0,
+        EjectAt = 0,
     },
     ["nomech_fire_iron"] = {
         Source = {"fire_ads"},
         Time = 6 / 30,
-        ShellEjectAt = 0,
+        EjectAt = 0,
     },
     ["nomech_fire_empty"] = {
         Source = {"fire_last"},
         Time = 6 / 30,
-        ShellEjectAt = 0,
+        EjectAt = 0,
     },
     ["nomech_fire_iron_empty"] = {
         Source = {"fire_last"},
         Time = 6 / 30,
-        ShellEjectAt = 0,
+        EjectAt = 0,
     },
 }

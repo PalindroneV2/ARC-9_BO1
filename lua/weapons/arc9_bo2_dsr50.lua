@@ -166,6 +166,8 @@ SWEP.MuzzleEffectQCA = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectQCA = 2 -- which attachment to put the case effect on
 SWEP.ProceduralViewQCA = 1
 SWEP.CamQCA = 4
+SWEP.NoShellEject = true
+SWEP.NoShellEjectManualAction = true
 
 SWEP.BulletBones = {
 }
@@ -193,6 +195,7 @@ SWEP.HoldTypeHolstered = "passive"
 SWEP.HoldType = "ar2"
 SWEP.HoldTypeSights = "ar2"
 
+SWEP.NoTPIKAnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 SWEP.NonTPIKAnimReload = ACT_HL2MP_GESTURE_RELOAD_AR2
 
@@ -441,7 +444,7 @@ SWEP.Animations = {
     ["cycle"] = {
         Source = "cycle",
         Time = 35 / 30, -- 45 / 30 ; 30 / 30
-        ShellEjectAt = 0.5,
+        EjectAt = 14 / 30,
         EventTable = {
             {s = "ARC9_BO2.Sniper_BoltUp", t = 6 / 30}, -- 9 / 30 ; 6 / 30
             {s = "ARC9_BO2.Sniper_BoltBack", t = 10 / 30}, -- 15 / 30 ; 10 / 30
@@ -459,7 +462,7 @@ SWEP.Animations = {
     ["cycle_iron"] = {
         Source = "cycle_ads",
         Time = 35 / 30, -- 45 / 30 ; 30 / 30
-        ShellEjectAt = 0.5,
+        EjectAt = 14 / 30,
         EventTable = {
             {s = "ARC9_BO2.Sniper_BoltUp", t = 6 / 30}, -- 9 / 30 ; 6 / 30
             {s = "ARC9_BO2.Sniper_BoltBack", t = 10 / 30}, -- 15 / 30 ; 10 / 30

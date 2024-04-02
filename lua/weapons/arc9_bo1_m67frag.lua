@@ -166,6 +166,7 @@ SWEP.IronSights = {
 }
 
 SWEP.NoShellEject = true
+SWEP.NoShellEjectManualAction = true
 
 SWEP.HoldTypeHolstered = "passive"
 SWEP.HoldType = "slam"

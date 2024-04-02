@@ -171,6 +171,8 @@ SWEP.MuzzleEffectQCA = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectQCA = 2 -- which attachment to put the case effect on
 SWEP.ProceduralViewQCA = nil
 SWEP.CamQCA = 4
+SWEP.NoShellEject = true
+SWEP.NoShellEjectManualAction = true
 
 SWEP.BulletBones = {
 }
@@ -431,12 +433,11 @@ SWEP.Animations = {
             "pump",
         },
         Time = 20 / 35,
-        --ShellEjectAt = 0.3,
+        EjectAt = 3 / 35,
         EventTable = {
             {s = "ARC9_BO2.Shotgun_Back", t = 2 / 30},
             {s = "ARC9_BO2.Shotgun_Fwd", t = 9 / 30},
         },
-        ShellEjectAt = 0.15,
     },
     ["cycle_iron"] = {
         Source = {
@@ -444,7 +445,7 @@ SWEP.Animations = {
             "pump_ads_2",
         },
         Time = 20 / 35,
-        ShellEjectAt = 0.15,
+        EjectAt = 3 / 35,
         EventTable = {
             {s = "ARC9_BO2.Shotgun_Back", t = 2 / 30},
             {s = "ARC9_BO2.Shotgun_Fwd", t = 9 / 30},
@@ -801,12 +802,12 @@ SWEP.Animations = {
             "pump",
         },
         Time = 20 / 35,
-        --ShellEjectAt = 0.3,
+        --EjectAt = 0.3,
         EventTable = {
             {s = "ARC9_MW3E.KSG_Back", t = 2 / 30},
             {s = "ARC9_MW3E.KSG_Fwd", t = 9 / 30},
         },
-        ShellEjectAt = 0.15,
+        EjectAt = 0.15,
     },
     ["cycle_iron_mw3"] = {
         Source = {
@@ -814,7 +815,7 @@ SWEP.Animations = {
             "pump_ads_2",
         },
         Time = 20 / 35,
-        ShellEjectAt = 0.15,
+        EjectAt = 0.15,
         EventTable = {
             {s = "ARC9_MW3E.KSG_Back", t = 2 / 30},
             {s = "ARC9_MW3E.KSG_Fwd", t = 9 / 30},

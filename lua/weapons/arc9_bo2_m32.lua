@@ -178,6 +178,7 @@ SWEP.SightMidPoint = { -- Where the gun should be at the middle of it's irons
 }
 
 SWEP.NoShellEject = true
+SWEP.NoShellEjectManualAction = true
 
 SWEP.HoldTypeHolstered = "passive"
 SWEP.HoldType = "smg"

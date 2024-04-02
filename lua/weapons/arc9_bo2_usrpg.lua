@@ -163,7 +163,6 @@ SWEP.ShootSoundSilenced = "ARC9_BO1.MP5_Sil"
 
 SWEP.MuzzleParticle = "muzzleflash_m79" -- Used for some muzzle effects.
 
-SWEP.NoShellEject = true
 SWEP.ShellModel = "models/shells/shell_12gauge.mdl"
 SWEP.ShellScale = 1.5
 SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556_steel"
@@ -172,6 +171,8 @@ SWEP.MuzzleEffectQCA = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectQCA = 2 -- which attachment to put the case effect on
 SWEP.ProceduralViewQCA = 1
 SWEP.CamQCA = 2
+SWEP.NoShellEject = true
+SWEP.NoShellEjectManualAction = true
 
 -- SWEP.BulletBones = {
 --     [1] = "tag_clip"

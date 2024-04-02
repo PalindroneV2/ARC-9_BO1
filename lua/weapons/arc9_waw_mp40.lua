@@ -414,7 +414,7 @@ SWEP.Animations = {
     ["fire"] = {
         Source = {"fire"},
         Time = 7 / 30,
-        ShellEjectAt = 0,
+        EjectAt = 0,
         EventTable = {
             {s = "ARC9_WAW.MP40_Mech", t = 1 / 30},
         },
@@ -422,7 +422,7 @@ SWEP.Animations = {
     ["fire_iron"] = {
         Source = {"fire"},
         Time = 7 / 30,
-        ShellEjectAt = 0,
+        EjectAt = 0,
         EventTable = {
             {s = "ARC9_WAW.MP40_Mech", t = 1 / 30},
         },
@@ -430,7 +430,7 @@ SWEP.Animations = {
     ["fire_empty"] = {
         Source = {"fire_empty"},
         Time = 7 / 30,
-        ShellEjectAt = 0,
+        EjectAt = 0,
         EventTable = {
             {s = "ARC9_WAW.MP40_Mech", t = 1 / 30},
         },
@@ -438,7 +438,7 @@ SWEP.Animations = {
     ["fire_iron_empty"] = {
         Source = {"fire_empty"},
         Time = 7 / 30,
-        ShellEjectAt = 0,
+        EjectAt = 0,
         EventTable = {
             {s = "ARC9_WAW.MP40_Mech", t = 1 / 30},
         },
@@ -446,7 +446,7 @@ SWEP.Animations = {
     ["wolf_fire"] = {
         Source = {"fire"},
         Time = 7 / 30,
-        ShellEjectAt = 0,
+        EjectAt = 0,
     },
     ["reload"] = {
         Source = "reload",

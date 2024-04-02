@@ -573,17 +573,17 @@ SWEP.Animations = {
     ["fire"] = {
         Source = {"fire"},
         Time = 7 / 30,
-        ShellEjectAt = 0,
+        EjectAt = 0,
     },
     ["fire_iron"] = {
         Source = {"fire_ads"},
         Time = 7 / 30,
-        ShellEjectAt = 0,
+        EjectAt = 0,
     },
     ["fire_bipod"] = {
         Source = {"fire_ads"},
         Time = 7 / 30,
-        ShellEjectAt = 0,
+        EjectAt = 0,
     },
     ["reload"] = {
         Source = "reload",
@@ -685,17 +685,17 @@ SWEP.Animations = {
     ["fire_m203"] = {
         Source = {"fire_gl"},
         Time = 7 / 30,
-        ShellEjectAt = 0,
+        EjectAt = 0,
     },
     ["fire_iron_m203"] = {
         Source = {"fire_ads_gl"},
         Time = 7 / 30,
-        ShellEjectAt = 0,
+        EjectAt = 0,
     },
     ["fire_bipod_m203"] = {
         Source = {"fire_ads_gl"},
         Time = 7 / 30,
-        ShellEjectAt = 0,
+        EjectAt = 0,
     },
     ["reload_m203"] = {
         Source = "reload_gl",
@@ -812,17 +812,17 @@ SWEP.Animations = {
     ["fire_mk"] = {
         Source = {"fire_mk"},
         Time = 7 / 30,
-        ShellEjectAt = 0,
+        EjectAt = 0,
     },
     ["fire_iron_mk"] = {
         Source = {"fire_ads_mk"},
         Time = 7 / 30,
-        ShellEjectAt = 0,
+        EjectAt = 0,
     },
     ["fire_bipod_mk"] = {
         Source = {"fire_ads_mk"},
         Time = 7 / 30,
-        ShellEjectAt = 0,
+        EjectAt = 0,
     },
     ["reload_mk"] = {
         Source = "reload_mk",

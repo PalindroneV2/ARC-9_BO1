@@ -170,6 +170,8 @@ SWEP.MuzzleEffectQCA = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectQCA = 2 -- which attachment to put the case effect on
 SWEP.ProceduralViewQCA = 1
 SWEP.CamQCA = 4
+SWEP.NoShellEject = true
+SWEP.NoShellEjectManualAction = true
 
 SWEP.BulletBones = {
 }
@@ -594,17 +596,17 @@ SWEP.Animations = {
     ["fire"] = {
         Source = "fire",
         Time = 6 / 30,
-        ShellEjectAt = 0,
+        EjectAt = 0,
     },
     ["fire_iron"] = {
         Source = {"fire_ads"},
         Time = 6 / 30,
-        ShellEjectAt = 0,
+        EjectAt = 0,
     },
     ["fire_bipod"] = {
         Source = {"fire_ads"},
         Time = 6 / 30,
-        ShellEjectAt = 0,
+        EjectAt = 0,
     },
     ["reload"] = {
         Source = "reload",
@@ -705,17 +707,17 @@ SWEP.Animations = {
     ["fire_m203"] = {
         Source = {"fire_gl"},
         Time = 0.5,
-        ShellEjectAt = 0,
+        EjectAt = 0,
     },
     ["fire_iron_m203"] = {
         Source = {"fire_ads_gl"},
         Time = 0.5,
-        ShellEjectAt = 0,
+        EjectAt = 0,
     },
     ["fire_bipod_m203"] = {
         Source = {"fire_ads_gl"},
         Time = 0.5,
-        ShellEjectAt = 0,
+        EjectAt = 0,
     },
     ["reload_m203"] = {
         Source = "reload_gl",
@@ -820,17 +822,17 @@ SWEP.Animations = {
     ["fire_mk"] = {
         Source = {"fire_mk"},
         Time = 0.5,
-        ShellEjectAt = 0,
+        EjectAt = 0,
     },
     ["fire_iron_mk"] = {
         Source = {"fire_ads_mk"},
         Time = 0.5,
-        ShellEjectAt = 0,
+        EjectAt = 0,
     },
     ["fire_bipod_mk"] = {
         Source = {"fire_ads_mk"},
         Time = 0.5,
-        ShellEjectAt = 0,
+        EjectAt = 0,
     },
     ["reload_mk"] = {
         Source = "reload_mk",
