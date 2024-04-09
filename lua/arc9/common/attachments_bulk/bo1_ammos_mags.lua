@@ -412,6 +412,7 @@ ATT.AdminOnly = true
 ATT.Category = {"bo1_pap_1911"}
 ATT.ActivateElements = {"bo1_pap","sally"}
 ATT.ClipSize = 6
+ATT.InstallSound = "ARC9_BO1.RayGun_Obtain"
 
 ATT.PhysBulletMuzzleVelocityMult = 1.75
 ATT.FirstShootSound = "ARC9_COD.PAP_Fire"

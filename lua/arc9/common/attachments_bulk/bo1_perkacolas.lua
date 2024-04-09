@@ -15,6 +15,7 @@ ATT.Free = false
 ATT.Category = {"bo1_perkacola"}
 ATT.ActivateElements = {"speedcola"}
 ATT.ReloadTimeMult = 0.5
+ATT.InstallSound = "ARC9_BO1.Perk_SpeedCola"
 
 ARC9.LoadAttachment(ATT, "bo1_perkacola_speedcola")
 
@@ -33,6 +34,7 @@ ATT.Free = false
 ATT.Category = {"bo1_perkacola"}
 ATT.ActivateElements = {"staminup"}
 ATT.SpeedMult = 1.1
+ATT.InstallSound = "ARC9_BO1.Perk_StaminUp"
 
 ARC9.LoadAttachment(ATT, "bo1_perkacola_staminup")
 
@@ -52,6 +54,7 @@ ATT.Category = {"bo1_perkacola"}
 ATT.ActivateElements = {"doubletap1"}
 ATT.RPMMult = 4 / 3
 ATT.CycleTimeMult = 2 / 3
+ATT.InstallSound = "ARC9_BO1.Perk_DoubleTap"
 
 ARC9.LoadAttachment(ATT, "bo1_perkacola_doubletap1")
 
@@ -71,6 +74,7 @@ ATT.Category = {"bo1_perkacola"}
 ATT.ActivateElements = {"doubletap1"}
 -- ATT.RPMMult = 1.33
 ATT.NumMult = 2
+ATT.InstallSound = "ARC9_BO1.Perk_DoubleTap"
 
 ARC9.LoadAttachment(ATT, "bo1_perkacola_doubletap2")
 
@@ -93,6 +97,7 @@ ATT.SpreadMultHipFire = 0.7
 ATT.SpreadMultShooting = 0.7
 ATT.SwayMult = 0
 ATT.SwayMultSights = 0
+ATT.InstallSound = "ARC9_BO1.Perk_Deadshot"
 
 ARC9.LoadAttachment(ATT, "bo1_perkacola_deadshot")
 
@@ -112,6 +117,7 @@ ATT.Free = false
 
 ATT.Category = {"bo1_perkacola"}
 ATT.ActivateElements = {"juggernog"}
+ATT.InstallSound = "ARC9_BO1.Perk_Juggernog"
 
 ARC9.LoadAttachment(ATT, "bo1_perkacola_juggernog")
 
@@ -132,6 +138,7 @@ ATT.Free = false
 
 ATT.Category = {"bo1_perkacola"}
 ATT.ActivateElements = {"phd_flopper"}
+ATT.InstallSound = "ARC9_BO1.Perk_PHDFlopper"
 
 ARC9.LoadAttachment(ATT, "bo1_perkacola_phdflopper")
 
@@ -151,6 +158,7 @@ ATT.Free = false
 
 ATT.Category = {"bo1_perkacola"}
 ATT.ActivateElements = {"vulture_aid"}
+ATT.InstallSound = "ARC9_BO1.Perk_VultureAid"
 
 ARC9.LoadAttachment(ATT, "bo1_perkacola_vulture")
 

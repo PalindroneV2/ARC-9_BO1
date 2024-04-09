@@ -18,8 +18,9 @@ ATT.ModelOffset = Vector(0, 0, 0)
 
 ATT.Category = {"cod_muzzle_pistol"}
 ATT.MuzzleDevice = true
-ATT.Silencer = true
+ATT.MuzzleDevice_Priority = 5
 ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.Silencer = true
 ATT.DistantShootSoundOverride = ""
 ATT.FirstDistantShootSoundOverride = ""
 
@@ -57,8 +58,9 @@ ATT.ModelOffset = Vector(0.4, 0, 0)
 
 ATT.Category = {"cod_muzzle"}
 ATT.MuzzleDevice = true
-ATT.Silencer = true
+ATT.MuzzleDevice_Priority = 5
 ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.Silencer = true
 ATT.DistantShootSoundOverride = ""
 ATT.FirstDistantShootSoundOverride = ""
 
@@ -96,8 +98,9 @@ ATT.ModelOffset = Vector(0.4, 0, 0.025)
 
 ATT.Category = {"cod_muzzle"}
 ATT.MuzzleDevice = true
-ATT.Silencer = true
+ATT.MuzzleDevice_Priority = 5
 ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.Silencer = true
 ATT.DistantShootSoundOverride = ""
 ATT.FirstDistantShootSoundOverride = ""
 
@@ -135,8 +138,9 @@ ATT.ModelOffset = Vector(-0.25, 0, 0)
 
 ATT.Category = {"cod_muzzle_pistol"}
 ATT.MuzzleDevice = true
-ATT.Silencer = true
+ATT.MuzzleDevice_Priority = 5
 ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.Silencer = true
 ATT.DistantShootSoundOverride = ""
 ATT.FirstDistantShootSoundOverride = ""
 
@@ -174,8 +178,9 @@ ATT.ModelOffset = Vector(-0.25, 0, 0)
 
 ATT.Category = {"cod_muzzle_pistol"}
 ATT.MuzzleDevice = true
-ATT.Silencer = true
+ATT.MuzzleDevice_Priority = 5
 ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.Silencer = true
 ATT.DistantShootSoundOverride = ""
 ATT.FirstDistantShootSoundOverride = ""
 
@@ -212,8 +217,9 @@ ATT.Scale = Vector(1, 0.9, 0.9)
 
 ATT.Category = {"cod_muzzle"}
 ATT.MuzzleDevice = true
-ATT.Silencer = true
+ATT.MuzzleDevice_Priority = 5
 ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.Silencer = true
 ATT.DistantShootSoundOverride = ""
 ATT.FirstDistantShootSoundOverride = ""
 
@@ -250,8 +256,9 @@ ATT.Scale = Vector(1, 0.9, 0.9)
 
 ATT.Category = {"cod_muzzle"}
 ATT.MuzzleDevice = true
-ATT.Silencer = true
+ATT.MuzzleDevice_Priority = 5
 ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.Silencer = true
 ATT.DistantShootSoundOverride = ""
 ATT.FirstDistantShootSoundOverride = ""
 
@@ -288,8 +295,9 @@ ATT.Scale = Vector(1, 0.8, 0.8)
 
 ATT.Category = {"cod_muzzle"}
 ATT.MuzzleDevice = true
-ATT.Silencer = true
+ATT.MuzzleDevice_Priority = 5
 ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.Silencer = true
 ATT.DistantShootSoundOverride = ""
 ATT.FirstDistantShootSoundOverride = ""
 
@@ -326,8 +334,9 @@ ATT.Scale = Vector(1, 0.8, 0.8)
 
 ATT.Category = {"cod_muzzle"}
 ATT.MuzzleDevice = true
-ATT.Silencer = true
+ATT.MuzzleDevice_Priority = 5
 ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.Silencer = true
 ATT.DistantShootSoundOverride = ""
 ATT.FirstDistantShootSoundOverride = ""
 
@@ -364,8 +373,9 @@ ATT.Scale = Vector(1, 0.8, 0.8)
 
 ATT.Category = {"cod_muzzle"}
 ATT.MuzzleDevice = true
-ATT.Silencer = true
+ATT.MuzzleDevice_Priority = 5
 ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.Silencer = true
 ATT.DistantShootSoundOverride = ""
 ATT.FirstDistantShootSoundOverride = ""
 
@@ -402,8 +412,9 @@ ATT.Scale = Vector(1, 0.9, 0.9)
 
 ATT.Category = {"cod_muzzle"}
 ATT.MuzzleDevice = true
-ATT.Silencer = true
+ATT.MuzzleDevice_Priority = 5
 ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.Silencer = true
 ATT.DistantShootSoundOverride = ""
 ATT.FirstDistantShootSoundOverride = ""
 
@@ -440,8 +451,9 @@ ATT.Scale = Vector(1, 1, 1)
 
 ATT.Category = {"cod_muzzle_shotty"}
 ATT.MuzzleDevice = true
-ATT.Silencer = true
+ATT.MuzzleDevice_Priority = 5
 ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.Silencer = true
 ATT.DistantShootSoundOverride = ""
 ATT.FirstDistantShootSoundOverride = ""
 
@@ -479,8 +491,9 @@ ATT.ModelOffset = Vector(-0.28, 0, 0)
 
 ATT.Category = {"cod_muzzle_pistol", "cod_muzzle_smg"}
 ATT.MuzzleDevice = true
-ATT.Silencer = true
+ATT.MuzzleDevice_Priority = 5
 ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.Silencer = true
 ATT.DistantShootSoundOverride = ""
 ATT.FirstDistantShootSoundOverride = ""
 
@@ -520,6 +533,7 @@ ATT.Category = {"waw_p38_muzzle"}
 ATT.ActivateElements = {"destron_flash"}
 ATT.MuzzleDevice = true
 ATT.Silencer = false
+ATT.MuzzleDevice_Priority = 5
 ATT.MuzzleParticle = "megatron_flash"
 ATT.DistantShootSoundOverride = ""
 ATT.FirstDistantShootSoundOverride = ""
@@ -558,8 +572,9 @@ ATT.Scale = Vector(1, 1, 1)
 
 ATT.Category = {"cod_muzzle_sniper"}
 ATT.MuzzleDevice = true
-ATT.Silencer = true
+ATT.MuzzleDevice_Priority = 5
 ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.Silencer = true
 ATT.DistantShootSoundOverride = ""
 ATT.FirstDistantShootSoundOverride = ""
 
@@ -596,8 +611,9 @@ ATT.Scale = Vector(1, 1, 1)
 
 ATT.Category = {"cod_muzzle_sniper"}
 ATT.MuzzleDevice = true
-ATT.Silencer = true
+ATT.MuzzleDevice_Priority = 5
 ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.Silencer = true
 ATT.DistantShootSoundOverride = ""
 ATT.FirstDistantShootSoundOverride = ""
 
@@ -634,8 +650,9 @@ ATT.Scale = Vector(1 / 1.35, 1 / 1.15, 1 / 1.15)
 
 ATT.Category = {"cod_muzzle_svu"}
 ATT.MuzzleDevice = true
-ATT.Silencer = true
+ATT.MuzzleDevice_Priority = 5
 ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.Silencer = true
 ATT.DistantShootSoundOverride = ""
 ATT.FirstDistantShootSoundOverride = ""
 
