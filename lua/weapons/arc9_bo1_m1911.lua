@@ -462,7 +462,21 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
             sfx = "_cod4"
         end
     end
-    return anim .. ak .. sfx
+    local newanim = anim .. ak .. sfx
+    if self:Clip1() == 1 and attached["akimbo"] then
+        if anim == "fire_right" then
+            newanim =  "fire_empty_right"
+        end
+        if anim == "idle" then
+            newanim =  "idle_empty_right"
+        end
+    end
+    if self:Clip1() == 0 and attached["akimbo"] then
+        if anim == "fire_left" then
+            newanim =  "fire_empty_left"
+        end
+    end
+    return newanim
 end
 
 SWEP.Attachments = {
@@ -881,7 +895,7 @@ SWEP.Animations = {
         }
     },
     ["fire_empty_left"] = {
-        Source = "fire_last_al",
+        Source = "fire_last_al2",
         Time = 8 / 30,
         EjectAt = 1 / 30,
         EventTable = {
@@ -1140,6 +1154,10 @@ SWEP.Animations = {
 
 function SWEP:SecondaryAttack()
     if self:GetProcessedValue("Akimbo", true) then
+
+        local currentFiremode = self:GetCurrentFiremode()
+        local burstCount = self:GetBurstCount()
+        if currentFiremode > 0 and burstCount >= currentFiremode then return end
         return self:DoPrimaryAttack()
     end
 end
