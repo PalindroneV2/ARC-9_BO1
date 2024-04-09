@@ -1152,12 +1152,12 @@ SWEP.Animations = {
     },
 }
 
-function SWEP:SecondaryAttack()
-    if self:GetProcessedValue("Akimbo", true) then
+-- function SWEP:SecondaryAttack()
+--     if self:GetProcessedValue("Akimbo", true) then
 
-        local currentFiremode = self:GetCurrentFiremode()
-        local burstCount = self:GetBurstCount()
-        if currentFiremode > 0 and burstCount >= currentFiremode then return end
-        return self:DoPrimaryAttack()
-    end
-end
+--         local currentFiremode = self:GetCurrentFiremode()
+--         local burstCount = self:GetBurstCount()
+--         if currentFiremode > 0 and burstCount >= currentFiremode then return end
+--         return self:DoPrimaryAttack()
+--     end
+-- end
