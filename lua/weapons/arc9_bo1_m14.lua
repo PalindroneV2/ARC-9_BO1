@@ -116,8 +116,8 @@ SWEP.SpeedMultMelee = 1
 SWEP.SpeedMultCrouch = 1
 SWEP.SpeedMultBlindFire = 1
 
-SWEP.AimDownSightsTime = 0.35
-SWEP.SprintToFireTime = 0.35
+SWEP.AimDownSightsTime = 0.2
+SWEP.SprintToFireTime = 0.2
 
 SWEP.RPM = 750
 SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
@@ -317,7 +317,7 @@ SWEP.AttachmentElements = {
     },
     ["bo1_m203"] = {
         Bodygroups = {
-            {3,1},
+            {3,3},
             {4,3},
         },
     },
@@ -333,24 +333,76 @@ SWEP.AttachmentElements = {
     },
     ["stock_m"] = {
         Bodygroups = {
-            {6,3}
+            {3,2},
+            {6,2},
+            {7,1},
         },
+        AttPosMods = {
+            [2] = {
+                Pos = Vector(28, 0.15, 0.75),
+            },
+        }
+    },
+    ["stock_pro"] = {
+        Bodygroups = {
+            {0,1},
+            -- {2,0},
+            {3,0},
+            {4,5},
+            {6,3},
+            {7,2},
+        },
+        AttPosMods = {
+            [2] = {
+                Pos = Vector(26.2, 0.15, 0.8),
+            },
+            [5] = {
+                Pos = Vector(16, -0.3, 0.35),
+            },
+            [6] = {
+                Pos = Vector(16, 0.75, 0.35),
+            },
+        }
     },
     ["stock_h"] = {
         Bodygroups = {
-            {6,2}
+            {3,1},
+            {6,1},
+            {7,1},
         },
+        AttPosMods = {
+            [2] = {
+                Pos = Vector(28, 0.15, 0.75),
+            },
+        }
+    },
+    ["mwc_rail_ub"] = {
+        AttPosMods = {
+            [3] = {
+                Pos = Vector(11, 0.1, -0.8),
+            },
+        }
+    },
+    ["mwc_rail_tac"] = {
+        AttPosMods = {
+            [5] = {
+                Pos = Vector(15, -0.55, 0.25),
+            },
+            [6] = {
+                Pos = Vector(15, 0.8, 0.25),
+            },
+        }
     },
     ["mw3_magnifier"] = {
         AttPosMods = {
-            [4] = {
+            [1] = {
                 Pos = Vector(5.65, 0.125, 1.85),
             },
         }
     },
     ["mw3_psrscope"] = {
         AttPosMods = {
-            [4] = {
+            [1] = {
                 Pos = Vector(5.5, 0.125, 1.85),
             },
         }
@@ -362,6 +414,23 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local vm = data.model
     -- local CUSTSTATE = self:GetCustomize()
     local attached = data.elements
+    if (attached["stock_m"] or attached["stock_h"]) and (attached["bo1_m203"] or attached["bo1_mk"]) then
+        vm:SetBodygroup(3,4)
+    end
+
+    if attached["mk14_ubs"] then
+        vm:SetBodygroup(4,0)
+        if attached["bo1_m203"] then
+            vm:SetBodygroup(3,0)
+            vm:SetBodygroup(4,3)
+        end
+        if attached["bo1_mk"] then
+            vm:SetBodygroup(4,4)
+        end
+    end
+    if attached["mk14_leupold"] then
+        vm:SetBodygroup(2,1)
+    end
 
     -- COSMETICS
     -- CAMO
@@ -375,12 +444,17 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     end
     vm:SetSkin(camo)
 
+    local bipodstate = 0
     if attached["bo1_bipod"] then
-        vm:SetBodygroup(5,1)
+        bipodstate = 1
+        if attached["stock_m"] or attached["stock_h"] or attached["stock_pro"] then
+            bipodstate = 3
+        end
         if self:GetBipod() then
-            vm:SetBodygroup(5,2)
+            bipodstate = bipodstate + 1
         end
     end
+    vm:SetBodygroup(5,bipodstate)
 
 end
 
@@ -388,7 +462,19 @@ SWEP.HookP_NameChange = function(self, name)
 
     local attached = self:GetElements()
 
-    local gunname = "M14E2"
+    local gunname = "M14"
+
+    if attached["stock_l"] then
+        gunname = gunname .. "E2"
+    end
+
+    if attached["stock_m"] then
+        gunname = "M1A"
+    end
+
+    if attached["stock_pro"] then
+        gunname = "Mk.14 EBR"
+    end
 
     if attached["bo1_pap"] then
         gunname = "Mnesia"
@@ -436,6 +522,7 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"cod_optic", "cod_rail_riser"},
         InstalledElements = {"mount"},
+        ExcludeElements = {"stock_pro"},
     },
     {
         PrintName = "Muzzle",
@@ -452,6 +539,7 @@ SWEP.Attachments = {
         Pos = Vector(11, 0.1, -0.5),
         Ang = Angle(0, 0, 0),
         Category = {"cod_rail_underbarrel", "bo1_m203", "bo1_mk", "bo1_igrip"},
+        ExcludeElements = {"stock_pro"},
     },
     {
         PrintName = "Bipod",
@@ -461,7 +549,7 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = "bo1_bipod",
         ExcludeElements = {"bo1_m203", "bo1_mk"},
-        Installed = "bo1_bipod_integrated"
+        -- Installed = "bo1_bipod_integrated"
     },
     {
         PrintName = "Tactical Left",
@@ -482,10 +570,11 @@ SWEP.Attachments = {
     {
         PrintName = "Stock",
         Bone = "j_gun",
-        Pos = Vector(-3, 0, 0),
+        Pos = Vector(-2.26, 0.25, -1.5),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_stock_mh"},
-        Installed = "bo1_stock_heavy",
+        Category = {"bo1_m14_stocks"},
+        Integral = true,
+        Installed = "bo1_m14_stock_full",
     },
     {
         PrintName = "Ammunition",
@@ -546,14 +635,26 @@ SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
         Time = 1 / 30,
+        IKTimeLine = {
+            {t = 0, lhik = 1, rhik = 1},
+            {t = 1, lhik = 1, rhik = 1},
+        },
     },
     ["draw"] = {
         Source = "draw",
         Time = 1,
+        IKTimeLine = {
+            {t = 0, lhik = 1, rhik = 1},
+            {t = 1, lhik = 1, rhik = 1},
+        },
     },
     ["holster"] = {
         Source = "holster",
         Time = 0.75,
+        IKTimeLine = {
+            {t = 0, lhik = 1, rhik = 1},
+            {t = 1, lhik = 1, rhik = 1},
+        },
     },
     ["ready"] = {
         Source = "first_draw",
@@ -562,21 +663,37 @@ SWEP.Animations = {
             {s = "ARC9_BO1.M14_BoltBack", t = 0},
             {s = "ARC9_BO1.M14_BoltFwd", t = 0.25}
         },
+        IKTimeLine = {
+            {t = 0, lhik = 1, rhik = 1},
+            {t = 1, lhik = 1, rhik = 1},
+        },
     },
     ["fire"] = {
         Source = {"fire"},
         Time = 7 / 30,
         EjectAt = 0,
+        IKTimeLine = {
+            {t = 0, lhik = 1, rhik = 1},
+            {t = 1, lhik = 1, rhik = 1},
+        },
     },
     ["fire_iron"] = {
         Source = {"fire_ads"},
         Time = 7 / 30,
         EjectAt = 0,
+        IKTimeLine = {
+            {t = 0, lhik = 1, rhik = 1},
+            {t = 1, lhik = 1, rhik = 1},
+        },
     },
     ["fire_bipod"] = {
         Source = {"fire_ads"},
         Time = 7 / 30,
         EjectAt = 0,
+        IKTimeLine = {
+            {t = 0, lhik = 1, rhik = 1},
+            {t = 1, lhik = 1, rhik = 1},
+        },
     },
     ["reload"] = {
         Source = "reload",
@@ -590,12 +707,12 @@ SWEP.Animations = {
             {
                 t = 0.2,
                 lhik = 0,
-                rhik = 0
+                rhik = 1
             },
             {
                 t = 0.85,
                 lhik = 0,
-                rhik = 0
+                rhik = 1
             },
             {
                 t = 0.95,
@@ -623,15 +740,25 @@ SWEP.Animations = {
             {
                 t = 0.2,
                 lhik = 0,
-                rhik = 0
+                rhik = 1
             },
             {
                 t = 0.55,
                 lhik = 0,
-                rhik = 0
+                rhik = 1
             },
             {
                 t = 0.65,
+                lhik = 1,
+                rhik = 1
+            },
+            {
+                t = 0.8,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.95,
                 lhik = 1,
                 rhik = 1
             },
@@ -649,14 +776,26 @@ SWEP.Animations = {
     ["enter_sprint"] = {
         Source = "sprint_in",
         Time = 1,
+        IKTimeLine = {
+            {t = 0, lhik = 1, rhik = 1},
+            {t = 1, lhik = 1, rhik = 1},
+        },
     },
     ["idle_sprint"] = {
         Source = "sprint_loop",
-        Time = 30 / 40
+        Time = 30 / 40,
+        IKTimeLine = {
+            {t = 0, lhik = 1, rhik = 1},
+            {t = 1, lhik = 1, rhik = 1},
+        },
     },
     ["exit_sprint"] = {
         Source = "sprint_out",
         Time = 1,
+        IKTimeLine = {
+            {t = 0, lhik = 1, rhik = 1},
+            {t = 1, lhik = 1, rhik = 1},
+        },
     },
 
 -- FOREGRIP ANIMS ---------------------------------------------------------------
@@ -664,14 +803,26 @@ SWEP.Animations = {
     ["idle_grip"] = {
         Source = "idle_grip",
         Time = 1 / 30,
+        IKTimeLine = {
+            {t = 0, lhik = 0, rhik = 1},
+            {t = 1, lhik = 0, rhik = 1},
+        },
     },
     ["draw_grip"] = {
         Source = "pullout_grip",
         Time = 1,
+        IKTimeLine = {
+            {t = 0, lhik = 0, rhik = 1},
+            {t = 1, lhik = 0, rhik = 1},
+        },
     },
     ["holster_grip"] = {
         Source = "holster_grip",
         Time = 0.75,
+        IKTimeLine = {
+            {t = 0, lhik = 0, rhik = 1},
+            {t = 1, lhik = 0, rhik = 1},
+        },
     },
     ["ready_grip"] = {
         Source = "first_draw_grip",
@@ -680,21 +831,37 @@ SWEP.Animations = {
             {s = "ARC9_BO1.M14_BoltBack", t = 0},
             {s = "ARC9_BO1.M14_BoltFwd", t = 0.25}
         },
+        IKTimeLine = {
+            {t = 0, lhik = 0, rhik = 1},
+            {t = 1, lhik = 0, rhik = 1},
+        },
     },
     ["fire_grip"] = {
         Source = {"fire_grip"},
         Time = 7 / 30,
         EjectAt = 0,
+        IKTimeLine = {
+            {t = 0, lhik = 0, rhik = 1},
+            {t = 1, lhik = 0, rhik = 1},
+        },
     },
     ["fire_iron_grip"] = {
         Source = {"fire_ads_grip"},
         Time = 7 / 30,
         EjectAt = 0,
+        IKTimeLine = {
+            {t = 0, lhik = 0, rhik = 1},
+            {t = 1, lhik = 0, rhik = 1},
+        },
     },
     ["fire_bipod_grip"] = {
         Source = {"fire_ads_grip"},
         Time = 7 / 30,
         EjectAt = 0,
+        IKTimeLine = {
+            {t = 0, lhik = 0, rhik = 1},
+            {t = 1, lhik = 0, rhik = 1},
+        },
     },
     ["reload_grip"] = {
         Source = "reload_grip",
@@ -705,6 +872,28 @@ SWEP.Animations = {
             {s = "ARC9_BO1.M14_Futz", t = 1.5},
             {s = "ARC9_BO1.M14_MagIn", t = 1.75},
             {s = "ARC9_BO1.M14_Tap", t = 1.85},
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.95,
+                lhik = 0,
+                rhik = 1
+            },
         },
     },
     ["reload_empty_grip"] = {
@@ -719,18 +908,34 @@ SWEP.Animations = {
             {s = "ARC9_BO1.M14_BoltBack", t = 2.25},
             {s = "ARC9_BO1.M14_BoltFwd", t = 2.4},
         },
+        IKTimeLine = {
+            {t = 0, lhik = 0, rhik = 1},
+            {t = 1, lhik = 0, rhik = 1},
+        },
     },
     ["enter_sprint_grip"] = {
         Source = "sprint_in_grip",
         Time = 1,
+        IKTimeLine = {
+            {t = 0, lhik = 0, rhik = 1},
+            {t = 1, lhik = 0, rhik = 1},
+        },
     },
     ["idle_sprint_grip"] = {
         Source = "sprint_loop_grip",
-        Time = 30 / 40
+        Time = 30 / 40,
+        IKTimeLine = {
+            {t = 0, lhik = 0, rhik = 1},
+            {t = 1, lhik = 0, rhik = 1},
+        },
     },
     ["exit_sprint_grip"] = {
         Source = "sprint_out_grip",
         Time = 1,
+        IKTimeLine = {
+            {t = 0, lhik = 0, rhik = 1},
+            {t = 1, lhik = 0, rhik = 1},
+        },
     },
 
     -- UBGL OUT--
@@ -738,14 +943,26 @@ SWEP.Animations = {
     ["idle_gl"] = {
         Source = "idle_gl",
         Time = 1 / 30,
+        IKTimeLine = {
+            {t = 0, lhik = 0, rhik = 1},
+            {t = 1, lhik = 0, rhik = 1},
+        },
     },
     ["draw_gl"] = {
         Source = "draw_gl",
         Time = 1,
+        IKTimeLine = {
+            {t = 0, lhik = 0, rhik = 1},
+            {t = 1, lhik = 0, rhik = 1},
+        },
     },
     ["holster_gl"] = {
         Source = "holster_gl",
         Time = 0.75,
+        IKTimeLine = {
+            {t = 0, lhik = 0, rhik = 1},
+            {t = 1, lhik = 0, rhik = 1},
+        },
     },
     ["ready_gl"] = {
         Source = "first_draw_gl",
@@ -754,21 +971,37 @@ SWEP.Animations = {
             {s = "ARC9_BO1.M14_BoltBack", t = 0},
             {s = "ARC9_BO1.M14_BoltFwd", t = 0.25}
         },
+        IKTimeLine = {
+            {t = 0, lhik = 0, rhik = 1},
+            {t = 1, lhik = 0, rhik = 1},
+        },
     },
     ["fire_gl"] = {
         Source = {"fire_gl"},
         Time = 7 / 30,
         EjectAt = 0,
+        IKTimeLine = {
+            {t = 0, lhik = 0, rhik = 1},
+            {t = 1, lhik = 0, rhik = 1},
+        },
     },
     ["fire_iron_gl"] = {
         Source = {"fire_ads_gl"},
         Time = 7 / 30,
         EjectAt = 0,
+        IKTimeLine = {
+            {t = 0, lhik = 0, rhik = 1},
+            {t = 1, lhik = 0, rhik = 1},
+        },
     },
     ["fire_bipod_gl"] = {
         Source = {"fire_ads_gl"},
         Time = 7 / 30,
         EjectAt = 0,
+        IKTimeLine = {
+            {t = 0, lhik = 0, rhik = 1},
+            {t = 1, lhik = 0, rhik = 1},
+        },
     },
     ["reload_gl"] = {
         Source = "reload_gl",
@@ -779,6 +1012,28 @@ SWEP.Animations = {
             {s = "ARC9_BO1.M14_Futz", t = 1.5},
             {s = "ARC9_BO1.M14_MagIn", t = 1.75},
             {s = "ARC9_BO1.M14_Tap", t = 1.85},
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.95,
+                lhik = 0,
+                rhik = 1
+            },
         },
     },
     ["reload_empty_gl"] = {
@@ -793,18 +1048,52 @@ SWEP.Animations = {
             {s = "ARC9_BO1.M14_BoltBack", t = 2.25},
             {s = "ARC9_BO1.M14_BoltFwd", t = 2.4},
         },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.95,
+                lhik = 0,
+                rhik = 1
+            },
+        },
     },
     ["enter_sprint_gl"] = {
         Source = "sprint_in_gl",
         Time = 1,
+        IKTimeLine = {
+            {t = 0, lhik = 0, rhik = 1},
+            {t = 1, lhik = 0, rhik = 1},
+        },
     },
     ["idle_sprint_gl"] = {
         Source = "sprint_loop_gl",
-        Time = 30 / 40
+        Time = 30 / 40,
+        IKTimeLine = {
+            {t = 0, lhik = 0, rhik = 1},
+            {t = 1, lhik = 0, rhik = 1},
+        },
     },
     ["exit_sprint_gl"] = {
         Source = "sprint_out_gl",
         Time = 1,
+        IKTimeLine = {
+            {t = 0, lhik = 0, rhik = 1},
+            {t = 1, lhik = 0, rhik = 1},
+        },
     },
 
     -- MK OUT ANIMS ---
@@ -812,14 +1101,26 @@ SWEP.Animations = {
     ["idle_mk"] = {
         Source = "idle_mk",
         Time = 1 / 30,
+        IKTimeLine = {
+            {t = 0, lhik = 0, rhik = 1},
+            {t = 1, lhik = 0, rhik = 1},
+        },
     },
     ["draw_mk"] = {
         Source = "draw_mk",
         Time = 1,
+        IKTimeLine = {
+            {t = 0, lhik = 0, rhik = 1},
+            {t = 1, lhik = 0, rhik = 1},
+        },
     },
     ["holster_mk"] = {
         Source = "holster_mk",
         Time = 0.75,
+        IKTimeLine = {
+            {t = 0, lhik = 0, rhik = 1},
+            {t = 1, lhik = 0, rhik = 1},
+        },
     },
     ["ready_mk"] = {
         Source = "first_draw_mk",
@@ -828,21 +1129,37 @@ SWEP.Animations = {
             {s = "ARC9_BO1.M14_BoltBack", t = 0},
             {s = "ARC9_BO1.M14_BoltFwd", t = 0.25}
         },
+        IKTimeLine = {
+            {t = 0, lhik = 0, rhik = 1},
+            {t = 1, lhik = 0, rhik = 1},
+        },
     },
     ["fire_mk"] = {
         Source = {"fire_mk"},
         Time = 7 / 30,
         EjectAt = 0,
+        IKTimeLine = {
+            {t = 0, lhik = 0, rhik = 1},
+            {t = 1, lhik = 0, rhik = 1},
+        },
     },
     ["fire_iron_mk"] = {
         Source = {"fire_ads_mk"},
         Time = 7 / 30,
         EjectAt = 0,
+        IKTimeLine = {
+            {t = 0, lhik = 0, rhik = 1},
+            {t = 1, lhik = 0, rhik = 1},
+        },
     },
     ["fire_bipod_mk"] = {
         Source = {"fire_ads_mk"},
         Time = 7 / 30,
         EjectAt = 0,
+        IKTimeLine = {
+            {t = 0, lhik = 0, rhik = 1},
+            {t = 1, lhik = 0, rhik = 1},
+        },
     },
     ["reload_mk"] = {
         Source = "reload_mk",
@@ -853,6 +1170,28 @@ SWEP.Animations = {
             {s = "ARC9_BO1.M14_Futz", t = 1.5},
             {s = "ARC9_BO1.M14_MagIn", t = 1.75},
             {s = "ARC9_BO1.M14_Tap", t = 1.85},
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.95,
+                lhik = 0,
+                rhik = 1
+            },
         },
     },
     ["reload_empty_mk"] = {
@@ -867,14 +1206,44 @@ SWEP.Animations = {
             {s = "ARC9_BO1.M14_BoltBack", t = 2.25},
             {s = "ARC9_BO1.M14_BoltFwd", t = 2.4},
         },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.95,
+                lhik = 0,
+                rhik = 1
+            },
+        },
     },
     ["enter_sprint_mk"] = {
         Source = "sprint_in_mk",
         Time = 1,
+        IKTimeLine = {
+            {t = 0, lhik = 0, rhik = 1},
+            {t = 1, lhik = 0, rhik = 1},
+        },
     },
     ["idle_sprint_mk"] = {
         Source = "sprint_loop_mk",
-        Time = 30 / 40
+        Time = 30 / 40,
+        IKTimeLine = {
+            {t = 0, lhik = 0, rhik = 1},
+            {t = 1, lhik = 0, rhik = 1},
+        },
     },
     ["exit_sprint_mk"] = {
         Source = "sprint_out_mk",
@@ -886,26 +1255,50 @@ SWEP.Animations = {
     ["idle_glsetup"] = {
         Source = "idle_glsetup",
         Time = 1 / 30,
+        IKTimeLine = {
+            {t = 0, lhik = 0, rhik = 1},
+            {t = 1, lhik = 0, rhik = 1},
+        },
     },
     ["enter_ubgl"] = {
         Source = "glsetup_in",
         Time = 0.5,
+        IKTimeLine = {
+            {t = 0, lhik = 0, rhik = 1},
+            {t = 1, lhik = 0, rhik = 1},
+        },
     },
     ["exit_ubgl"] = {
         Source = "glsetup_out",
         Time = 0.5,
+        IKTimeLine = {
+            {t = 0, lhik = 0, rhik = 1},
+            {t = 1, lhik = 0, rhik = 1},
+        },
     },
     ["draw_glsetup"] = {
         Source = "draw_gl",
         Time = 0.5,
+        IKTimeLine = {
+            {t = 0, lhik = 0, rhik = 1},
+            {t = 1, lhik = 0, rhik = 1},
+        },
     },
     ["holster_glsetup"] = {
         Source = "holster_gl",
         Time = 0.75,
+        IKTimeLine = {
+            {t = 0, lhik = 0, rhik = 1},
+            {t = 1, lhik = 0, rhik = 1},
+        },
     },
     ["fire_glsetup"] = {
         Source = "fire_glsetup",
         Time = 0.7,
+        IKTimeLine = {
+            {t = 0, lhik = 0, rhik = 1},
+            {t = 1, lhik = 0, rhik = 1},
+        },
     },
     ["reload_ubgl_glsetup"] = {
         Source = "reload_glsetup",
@@ -915,45 +1308,85 @@ SWEP.Animations = {
             {s = "ARC9_BO1.M203_40mmOut", t = 0.175},
             {s = "ARC9_BO1.M203_40mmIn", t = 1.5},
             {s = "ARC9_BO1.M203_Close", t = 2.25},
-        }
+        },
+        IKTimeLine = {
+            {t = 0, lhik = 0, rhik = 1},
+            {t = 1, lhik = 0, rhik = 1},
+        },
     },
     ["enter_sprint_glsetup"] = {
         Source = "sprint_in_glsetup",
         Time = 1,
+        IKTimeLine = {
+            {t = 0, lhik = 0, rhik = 1},
+            {t = 1, lhik = 0, rhik = 1},
+        },
     },
     ["idle_sprint_glsetup"] = {
         Source = "sprint_loop_glsetup",
-        Time = 30 / 40
+        Time = 30 / 40,
+        IKTimeLine = {
+            {t = 0, lhik = 0, rhik = 1},
+            {t = 1, lhik = 0, rhik = 1},
+        },
     },
     ["exit_sprint_glsetup"] = {
         Source = "sprint_out_glsetup",
         Time = 1,
+        IKTimeLine = {
+            {t = 0, lhik = 0, rhik = 1},
+            {t = 1, lhik = 0, rhik = 1},
+        },
     },
     -- MK IN ANIMS --
 
     ["idle_mksetup"] = {
         Source = "idle_mksetup",
         Time = 1 / 30,
+        IKTimeLine = {
+            {t = 0, lhik = 0, rhik = 1},
+            {t = 1, lhik = 0, rhik = 1},
+        },
     },
     ["enter_ubgl_mksetup"] = {
         Source = "mksetup_in",
         Time = 0.5,
+        IKTimeLine = {
+            {t = 0, lhik = 0, rhik = 1},
+            {t = 1, lhik = 0, rhik = 1},
+        },
     },
     ["exit_ubgl_mksetup"] = {
         Source = "mksetup_out",
         Time = 0.5,
+        IKTimeLine = {
+            {t = 0, lhik = 0, rhik = 1},
+            {t = 1, lhik = 0, rhik = 1},
+        },
     },
     ["draw_mksetup"] = {
         Source = "draw_mk",
         Time = 0.5,
+        IKTimeLine = {
+            {t = 0, lhik = 0, rhik = 1},
+            {t = 1, lhik = 0, rhik = 1},
+        },
     },
     ["holster_mksetup"] = {
         Source = "holster_mk",
         Time = 0.75,
+        IKTimeLine = {
+            {t = 0, lhik = 0, rhik = 1},
+            {t = 1, lhik = 0, rhik = 1},
+        },
     },
     ["fire_mksetup"] = {
         Source = "fire_mksetup",
         Time = 0.7,
+        IKTimeLine = {
+            {t = 0, lhik = 0, rhik = 1},
+            {t = 1, lhik = 0, rhik = 1},
+        },
     },
     ["cycle_mksetup"] = {
         Source = "pump_mksetup",
@@ -961,19 +1394,31 @@ SWEP.Animations = {
         EventTable = {
             {s = "ARC9_BO1.MK_Back", t = 5 / 30 },
             {s = "ARC9_BO1.MK_Fwd", t = 10 / 30 },
-        }
+        },
+        IKTimeLine = {
+            {t = 0, lhik = 0, rhik = 1},
+            {t = 1, lhik = 0, rhik = 1},
+        },
     },
     ["reload_ubgl_start_mksetup"] = {
         Source = "reload_in_mksetup",
         Time = 35 / 30,
         RestoreAmmo = 1,
+        IKTimeLine = {
+            {t = 0, lhik = 0, rhik = 1},
+            {t = 1, lhik = 0, rhik = 1},
+        },
     },
     ["reload_ubgl_insert_mksetup"] = {
         Source = "reload_loop_mksetup",
         Time = 33 / 30,
         EventTable = {
             {s = "ARC9_BO1.MK_Shell", t = 0 / 30},
-        }
+        },
+        IKTimeLine = {
+            {t = 0, lhik = 0, rhik = 1},
+            {t = 1, lhik = 0, rhik = 1},
+        },
     },
     ["reload_ubgl_finish_mksetup"] = {
         Source = "reload_out_mksetup",
@@ -981,18 +1426,34 @@ SWEP.Animations = {
         EventTable = {
             {s = "ARC9_BO1.MK_Back", t = 20 / 30 },
             {s = "ARC9_BO1.MK_Fwd", t = 25 / 30 },
-        }
+        },
+        IKTimeLine = {
+            {t = 0, lhik = 0, rhik = 1},
+            {t = 1, lhik = 0, rhik = 1},
+        },
     },
     ["enter_sprint_mksetup"] = {
         Source = "sprint_in_mksetup",
         Time = 1,
+        IKTimeLine = {
+            {t = 0, lhik = 0, rhik = 1},
+            {t = 1, lhik = 0, rhik = 1},
+        },
     },
     ["idle_sprint_mksetup"] = {
         Source = "sprint_loop_mksetup",
-        Time = 30 / 40
+        Time = 30 / 40,
+        IKTimeLine = {
+            {t = 0, lhik = 0, rhik = 1},
+            {t = 1, lhik = 0, rhik = 1},
+        },
     },
     ["exit_sprint_mksetup"] = {
         Source = "sprint_out_mksetup",
         Time = 1,
+        IKTimeLine = {
+            {t = 0, lhik = 0, rhik = 1},
+            {t = 1, lhik = 0, rhik = 1},
+        },
     },
 }

@@ -471,10 +471,8 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
             newanim =  "idle_empty_right"
         end
     end
-    if self:Clip1() == 0 and attached["akimbo"] then
-        if anim == "fire_left" then
-            newanim =  "fire_empty_left"
-        end
+    if self:Clip1() == 0 and attached["akimbo"] and anim == "fire_left" then
+        newanim =  "fire_empty_left"
     end
     return newanim
 end

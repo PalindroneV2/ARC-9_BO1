@@ -91,9 +91,8 @@ SWEP.RecoilResetTime = 0.01 -- How long the gun must go before the recoil patter
 SWEP.RecoilAutoControl = 0.5
 SWEP.RecoilKick = 2
 
-SWEP.Spread = 0.02
-SWEP.SpreadMultShooting = 1.25
-
+SWEP.Spread = math.rad(35 / 37.5)
+SWEP.SpreadMultShooting = 1
 SWEP.SpreadMultSights = 2
 SWEP.SpreadAddHipFire = math.rad(150 / 37.5)
 SWEP.SpreadAddMove = math.rad(0 / 37.5)
@@ -190,8 +189,8 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(-2.195, 0, 1.35),
-    Ang = Angle(0, 0.2, 0),
+    Pos = Vector(-2.17, 0, 1.35),
+    Ang = Angle(0, 0.1, 0),
     Magnification = 1.1,
     ViewModelFOV = 60,
     SwitchToSound = "", -- sound that plays when switching to this sight
@@ -230,7 +229,7 @@ SWEP.SprintVerticalOffset = false
 SWEP.SprintPos = SWEP.ActivePos
 SWEP.SprintAng = SWEP.ActiveAng
 
-SWEP.CustomizePos = Vector(12.5, 40, 4)
+SWEP.CustomizePos = Vector(9, 40, 4)
 SWEP.CustomizeAng = Angle(90, 0, 0)
 
 SWEP.BarrelLength = 0 -- = 25
@@ -247,17 +246,41 @@ SWEP.ReloadHideBoneTables = {
 SWEP.AttachmentElements = {
     ["bo1_igrip"] = {
         Bodygroups = {
-            {1,1}
+            {5,3}
+        },
+    },
+    ["ithaca_pump_wrap"] = {
+        Bodygroups = {
+            {5,1}
         },
     },
     ["stock_l"] = {
         Bodygroups = {
-            {5,2}
+            {2,0}
         },
     },
     ["stock_m"] = {
         Bodygroups = {
-            {5,2}
+            {2,1}
+        },
+    },
+    ["stock_h"] = {
+        Bodygroups = {
+            {2,1}
+        },
+    },
+    ["barrel_stakeout"] = {
+        AttPosMods = {
+            [4] = {
+                Pos = Vector(15.3, 0, 0.84),
+            }
+        }
+    },
+    ["barrel_mid"] = {
+        AttPosMods = {
+            [4] = {
+                Pos = Vector(17, 0, 0.84),
+            }
         },
     },
 }
@@ -266,14 +289,25 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
 
     local vm = data.model
     local attached = data.elements
-    if attached["cod_rail_optic"] then
+    local barrel = 0
+    if attached["barrel_full"] then
+        barrel = 2
+    end
+    if attached["barrel_mid"] then
+        barrel = 4
+    end
+    if attached["barrel_stakeout"] then
+        barrel = 6
+    end
+    if attached["bo1_alt_irons"] then
+        barrel = barrel + 1
+    end
+    vm:SetBodygroup(1,barrel)
+    if attached["strap"] then
         vm:SetBodygroup(4,1)
     end
-    if attached["strap"] then
-        vm:SetBodygroup(3,1)
-    end
     if attached["cheese_grater"] then
-        vm:SetBodygroup(2,1)
+        vm:SetBodygroup(3,1)
     end
 
     local camo = 0
@@ -291,65 +325,101 @@ SWEP.HookP_NameChange = function(self, name)
 
     local attached = self:GetElements()
 
-    local gunname = "Ithaca M37 \"Stakeout\""
+    local gunname = "Ithaca M37"
+
+    if attached["stock_l"] and attached["cheese_grater"] and attached["barrel_stakeout"] then
+        gunname = gunname .. " \"Stakeout\""
+    end
 
     if attached["bo1_pap"] then
-        gunname = "Raid"
+        if gunname == "Ithaca M37 \"Stakeout\"" then
+             gunname = "Raid"
+        else
+            gunname = "Orion 777"
+        end
     end
 
     return gunname
 end
 
-SWEP.Hook_TranslateAnimation = function (self, anim)
-    local attached = self:GetElements()
-    local animla = anim
-    if attached["bo1_igrip"] then
-        animla = anim .. "_grip"
-    end
-    return animla
-end
+-- SWEP.Hook_TranslateAnimation = function (self, anim)
+--     local attached = self:GetElements()
+--     local animla = anim
+--     if attached["bo1_igrip"] then
+--         animla = anim .. "_grip"
+--     end
+--     return animla
+-- end
 
 SWEP.Attachments = {
     {
         PrintName = "Optic Rail",
         Bone = "j_gun",
-        Pos = Vector(-1.5, 0.075, 1.25),
+        Pos = Vector(-1.5, -0.025, 1.25),
         Ang = Angle(0, 0, 0),
-        Category = {"cod_rail_optic"},
-        Icon_Offset = Vector(0, 0, 0)
+        Category = {"cod_rail_optic", "bo1_alt_irons"},
+        Icon_Offset = Vector(0, 0, 0),
+        -- InstalledElements = {"mount"},
     },
     {
         PrintName = "Stock",
         Bone = "j_gun",
-        Pos = Vector(-7.5, 0, 0),
+        Pos = Vector(-8.25, 0.2, -1),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_stock_m"},
-        -- Installed = "bo1_stock_light",
+        Category = "bo1_ithaca_stocks",
+        Integral = true,
+        Installed = "bo1_ithaca_stock_full",
     },
     {
         PrintName = "Barrel",
         DefaultCompactName = "Standard",
         Bone = "j_gun",
-        Pos = Vector(10, 0, 1),
+        Pos = Vector(2.5, 0, 1),
         Ang = Angle(0, 0, 0),
         Category = "bo1_ithaca_barrel",
-        Installed = "bo1_ithaca_barrel",
+        -- Installed = "bo1_ithaca_barrel",
+    },
+    {
+        PrintName = "Muzzle",
+        Bone = "j_gun",
+        Scale = Vector(1,1,1),
+        Pos = Vector(21.25, 0, 0.84),
+        Ang = Angle(0, 0, 0),
+        Category = {"cod_muzzle_shotty"},
+    },
+    {
+        PrintName = "Pump",
+        Bone = "j_pump",
+        Pos = Vector(-1, 0, -0.5),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_ithaca_pump","bo1_ithaca_igrip"},
     },
     {
         PrintName = "Underbarrel",
         Bone = "j_pump",
         Pos = Vector(-1, 0, -0.5),
         Ang = Angle(0, 0, 0),
-        Category = {"cod_grips", "bo1_igrip"},
+        Icon_Offset = Vector(0,0,-3),
+        Category = {"cod_grips"},
+        ExcludeElements = {"bo1_igrip", "ithaca_pump_wrap"}
+    },
+    {
+        PrintName = "Heatshield",
+        DefaultCompactName = "None",
+        Bone = "j_gun",
+        Pos = Vector(10, 0, 1),
+        Ang = Angle(0, 0, 0),
+        Category = "bo1_ithaca_heatshield",
+        -- Installed = "bo1_ithaca_heatshield",
     },
     {
         PrintName = "Strap",
-        DefaultCompactName = "NO STRAP",
+        DefaultCompactName = "None",
         Bone = "j_gun",
         Pos = Vector(-4, 0, 0.5),
         Ang = Angle(0, 0, 0),
         Category = "bo1_ithaca_strap",
-        Installed = "bo1_ithaca_strap",
+        -- Installed = "bo1_ithaca_strap",
     },
     {
         PrintName = "Ammunition",
@@ -397,18 +467,38 @@ SWEP.Attachments = {
     },
 }
 
+SWEP.StandardPresets = {
+    "[Stakeout]XQAAAQBGAQAAAAAAAAA9iIIiM7tuo1AtTygaX+szqhQwSLB77XWRbfcl7Hq+GAONtiFsftYaOonYIGke+/M6ZJSD50msbHFfypfi86wo9qQnRbPttJbjrqO1+6XRjSG3MjruJAst/sR1S+a3fobPriaUXNg+8PyzliNTLGoJDoIIVn+9aF1aDQ3AvBLFDn5umz976BbKTYSV5H2edtIG7uNX9l1oAA==",
+}
+
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
         Time = 1 / 35,
+        IKTimeLine = {
+            {t = 0, lhik = 1, rhik = 1},
+            {t = 1, lhik = 1, rhik = 1},
+        },
     },
     ["draw"] = {
         Source = "draw",
         Time = 1,
+        IKTimeLine = {
+            {t = 0, lhik = 0, rhik = 1},
+            {t = 0.125, lhik = 0, rhik = 1},
+            {t = 0.85, lhik = 1, rhik = 1},
+            {t = 1, lhik = 1, rhik = 1},
+        },
     },
     ["holster"] = {
         Source = "holster",
         Time = 0.75,
+        IKTimeLine = {
+            {t = 0, lhik = 1, rhik = 1},
+            {t = 0.25, lhik = 1, rhik = 1},
+            {t = 0.85, lhik = 0, rhik = 1},
+            {t = 1, lhik = 0, rhik = 1},
+        },
     },
     ["ready"] = {
         Source = "first_draw",
@@ -417,20 +507,32 @@ SWEP.Animations = {
             {s = "ARC9_BO1.MK_Back", t = 15 / 30},
             {s = "ARC9_BO1.MK_Fwd", t = 21 / 30}
         },
+        IKTimeLine = {
+            {t = 0, lhik = 1, rhik = 1},
+            {t = 1, lhik = 1, rhik = 1},
+        },
     },
     ["fire"] = {
         Source = {
             "fire",
         },
         Time = 9 / 10,
-        EjectAt = 0,
+        EjectAt = nil,
+        IKTimeLine = {
+            {t = 0, lhik = 1, rhik = 1},
+            {t = 1, lhik = 1, rhik = 1},
+        },
     },
     ["fire_iron"] = {
         Source = {
             "fire_ads",
         },
         Time = 9 / 10,
-        EjectAt = 0,
+        EjectAt = nil,
+        IKTimeLine = {
+            {t = 0, lhik = 1, rhik = 1},
+            {t = 1, lhik = 1, rhik = 1},
+        },
     },
     ["cycle"] = {
         Source = {
@@ -442,6 +544,10 @@ SWEP.Animations = {
         EventTable = {
             {s = "ARC9_BO1.MK_Back", t = 5 / 30},
             {s = "ARC9_BO1.MK_Fwd", t = 10 / 30},
+        },
+        IKTimeLine = {
+            {t = 0, lhik = 1, rhik = 1},
+            {t = 1, lhik = 1, rhik = 1},
         },
     },
     ["cycle_iron"] = {
@@ -455,6 +561,10 @@ SWEP.Animations = {
             {s = "ARC9_BO1.MK_Back", t = 2 / 25},
             {s = "ARC9_BO1.MK_Fwd", t = 9 / 25},
         },
+        IKTimeLine = {
+            {t = 0, lhik = 1, rhik = 1},
+            {t = 1, lhik = 1, rhik = 1},
+        },
     },
     ["cycle_slam"] = {
         Source = {
@@ -467,9 +577,13 @@ SWEP.Animations = {
             {s = "ARC9_BO1.MK_Back", t = 2 / 25},
             {s = "ARC9_BO1.MK_Fwd", t = 9 / 25},
         },
+        IKTimeLine = {
+            {t = 0, lhik = 1, rhik = 1},
+            {t = 1, lhik = 1, rhik = 1},
+        },
     },
     ["reload_start"] = {
-        Source = "reload_in_empty",
+        Source = "reload_start",
         Time = 30 / 30,
         EventTable = {
             {s = "ARC9_BO1.MK_Shell", t = 21 / 30},
@@ -482,9 +596,19 @@ SWEP.Animations = {
                 rhik = 1
             },
             {
+                t = 0.1,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.5,
+                lhik = 1,
+                rhik = 0
+            },
+            {
                 t = 1,
                 lhik = 1,
-                rhik = 1
+                rhik = 0
             },
         },
     },
@@ -498,17 +622,17 @@ SWEP.Animations = {
             {
                 t = 0,
                 lhik = 1,
-                rhik = 1
+                rhik = 0
             },
             {
                 t = 1,
                 lhik = 1,
-                rhik = 1
+                rhik = 0
             },
         },
     },
     ["reload_finish"] = {
-        Source = "reload_out",
+        Source = "reload_end",
         Time = 22 / 30,
         EventTable = {
             {s = "ARC9_BO1.MK_Back", t = 8 / 30},
@@ -517,6 +641,16 @@ SWEP.Animations = {
         IKTimeLine = {
             {
                 t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.1,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.75,
                 lhik = 1,
                 rhik = 1
             },
@@ -530,14 +664,26 @@ SWEP.Animations = {
     ["enter_sprint"] = {
         Source = "sprint_in",
         Time = 1,
+        IKTimeLine = {
+            {t = 0, lhik = 1, rhik = 1},
+            {t = 1, lhik = 1, rhik = 1},
+        },
     },
     ["idle_sprint"] = {
         Source = "sprint_loop",
-        Time = 30 / 30
+        Time = 30 / 30,
+        IKTimeLine = {
+            {t = 0, lhik = 1, rhik = 1},
+            {t = 1, lhik = 1, rhik = 1},
+        },
     },
     ["exit_sprint"] = {
         Source = "sprint_out",
         Time = 1,
+        IKTimeLine = {
+            {t = 0, lhik = 1, rhik = 1},
+            {t = 1, lhik = 1, rhik = 1},
+        },
     },
 
     --GRIP--

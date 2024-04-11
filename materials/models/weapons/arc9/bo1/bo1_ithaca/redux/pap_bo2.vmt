@@ -1,0 +1,25 @@
+VertexlitGeneric
+{
+	"$basetexture" "models/weapons/arc9/bo1/camos/black_detail"
+	"$basetexturetransform" "center .5 .5 scale 5 5 rotate 0 translate 0 0"
+	$bumpmap	"models/weapons/arc9/pap/pap_wp115_n"
+	"$bumptransform" "center .5 .5 scale 5 5 rotate 0 translate 0 0"
+	$color2	"[0.5 1 0.5]"
+    
+	$detail	"models/weapons/arc9/pap/pap_wp115_color"
+	$detailscale 2
+	$detailblendmode 1
+	"$selfillum" "1"
+	$selfillummask "models/weapons/arc9/pap/pap_wp115"
+	
+	Proxies
+	{
+		TextureScroll
+		{
+			texturescrollvar $detailtexturetransform
+			texturescrollrate .01
+			texturescrollangle 30
+		}
+	}
+	"$nocull" "1"	
+}
