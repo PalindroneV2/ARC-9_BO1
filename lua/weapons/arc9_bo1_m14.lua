@@ -522,7 +522,7 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"cod_optic", "cod_rail_riser"},
         InstalledElements = {"mount"},
-        ExcludeElements = {"stock_pro"},
+        ExcludeElements = {"stock_pro","m1a_mount"},
     },
     {
         PrintName = "Muzzle",

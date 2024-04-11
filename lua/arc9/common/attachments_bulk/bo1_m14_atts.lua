@@ -97,6 +97,21 @@ ATT.IconOffset = Vector(0, 0, 0)
 ATT.RHIK = true
 ATT.RHIK_Priority = 1
 
+ATT.Attachments = {
+    {
+        PrintName = "Optic",
+        DefaultName = "Irons",
+        Bone = "j_gun",
+        Pos = Vector(-11.5, 0.125, -1.85) + Vector(-2.26, -0.25, -1.5),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0,0,0),
+        Category = {"cod_optic", "cod_rail_riser"},
+        InstalledElements = {"m1a_mount"},
+        -- MergeSlots = {2},
+        ExcludeElements = {"mount","bo1_m203","bo1_mk"},
+    },
+}
+
 ARC9.LoadAttachment(ATT, "bo1_m14_stock_full_synth")
 
 ATT = {}
