@@ -252,6 +252,8 @@ ATT.FiremodesOverride = {
     },
 }
 
+ATT.MuzzleEffectQCA = 2
+
 ATT.RPM = 1000
 
 ATT.SpreadMultShooting = 1.25

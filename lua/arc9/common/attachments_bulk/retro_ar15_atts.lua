@@ -199,7 +199,7 @@ ATT.Attachments = {
         PrintName = "Underbarrel",
         DefaultCompactName = "UB",
         Bone = "j_gun",
-        Pos = Vector(-9, 0, -1.35), --(-4, 0, -0.4)
+        Pos = Vector(-9, 0, -1.2), --(-4, 0, -0.4)
         Ang = Angle(0, 0, 0),
         Category = {"cde_m203", "cod_rail_underbarrel"},
         ExcludeElements = {"ar15_ris", "mlok", "is_patriot"}
@@ -286,7 +286,7 @@ ATT.Attachments = {
         PrintName = "Underbarrel",
         DefaultCompactName = "UB",
         Bone = "j_gun",
-        Pos = Vector(-9, 0, -1.35), --(-4, 0, -0.4)
+        Pos = Vector(-9, 0, -1.2), --(-4, 0, -0.4)
         Ang = Angle(0, 0, 0),
         Category = {"cde_m203", "bo1_mk", "cod_rail_underbarrel"},
         ExcludeElements = {"ar15_ris", "mlok","handguard_flamer"}
@@ -392,7 +392,7 @@ ATT.Attachments = {
         PrintName = "Underbarrel",
         DefaultCompactName = "UB",
         Bone = "j_gun",
-        Pos = Vector(-9, 0, -1.35), --(-4, 0, -0.4)
+        Pos = Vector(-9, 0, -1.2), --(-4, 0, -0.4)
         Ang = Angle(0, 0, 0),
         Category = {"cde_m203", "bo1_mk", "cod_rail_underbarrel"},
         ExcludeElements = {"ar15_ris", "mlok", "handguard_flamer"}
@@ -810,7 +810,7 @@ ATT.Attachments = {
         PrintName = "Underbarrel",
         DefaultCompactName = "UB",
         Bone = "j_gun",
-        Pos = Vector(-9, 0, -1.35), --(-4, 0, -0.4)
+        Pos = Vector(-9, 0, -1.2), --(-4, 0, -0.4)
         Ang = Angle(0, 0, 0),
         Category = {"cde_m203", "bo1_mk", "cod_rail_underbarrel"},
         ExcludeElements = {"ar15_ris", "mlok"}
@@ -2648,6 +2648,59 @@ ATT.Attachments = {
 }
 
 ARC9.LoadAttachment(ATT, "retro_ar15_upper_a4")
+
+ATT = {}
+
+ATT.PrintName = "M653 Cut Upper Receiver"
+ATT.CompactName = "CAR-15 TOP"
+ATT.Icon = Material("entities/bo1_atts/other/select_fire.png")
+ATT.Description = [[Early custom made AR-15 flat-top upper reciever.
+Allows for attachment of many kinds of optics and alternate iron sights.]]
+ATT.SortOrder = 5
+ATT.MenuCategory = "ARC9 - BO1 AR-15 Attachments"
+
+ATT.Category = {"retro_ar15_upper"}
+ATT.ActivateElements = {"a4_top","commando_top"}
+ATT.ExcludeElements = {"is_patriot"}
+
+ATT.RPMOverride = 700
+ATT.FirstShootSound = "ARC9_BO1.M16_Fire"
+ATT.ShootSound = "ARC9_BO1.M16_Fire"
+ATT.ShootSoundSilenced = "ARC9_BO1.M16_Sil"
+ATT.DistantShootSound = "ARC9_BO1.M16_RingOff"
+
+ATT.Attachments = {
+    {
+        PrintName = "Optic",
+        Category = {"retro_ar15_iron", "cod_optic", "cod_rail_riser", "ar15_rail_riser", "mw3e_deagle_tactical","bo1_addon_irons_2"},
+        ExcludeElements = {"handguard_famas"},
+        Bone = "j_gun",
+        Pos = Vector(-1, 0, -0.52),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(1.5, 0, 1),
+        -- Installed = "retro_ar15_iron_carry",
+        -- Integral = true,
+        MergeSlots = {2},
+    },
+    -- {
+    --     Hidden = true,
+    --     Category = {""},
+    --     ExcludeElements = {"handguard_famas"},
+    --     Bone = "j_gun",
+    --     Pos = Vector(0, 0, 0),
+    --     Ang = Angle(0, 0, 0),
+    -- },
+    {
+        Hidden = true,
+        Category = {"cod_extrairons_rear"},
+        ExcludeElements = {"handguard_famas"},
+        Bone = "j_gun",
+        Pos = Vector(2.5, 0, -0.295),
+        Ang = Angle(0, 0, 0),
+    },
+}
+
+ARC9.LoadAttachment(ATT, "retro_ar15_upper_commando")
 
 ATT = {}
 

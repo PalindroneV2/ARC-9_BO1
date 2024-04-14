@@ -157,11 +157,14 @@ SWEP.ShellScale = 1.25
 SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556_steel"
 
 SWEP.MuzzleEffectQCA = 1 -- which attachment to put the muzzle on
-SWEP.CaseEffectQCA = 2 -- which attachment to put the case effect on
+SWEP.CaseEffectQCA = 3 -- which attachment to put the case effect on
 SWEP.ProceduralViewQCA = 1
-SWEP.CamQCA = 3
+SWEP.CamQCA = 7
 SWEP.NoShellEject = true
 SWEP.NoShellEjectManualAction = true
+SWEP.MuzzleEffectQCAEvenShot = nil
+SWEP.CaseEffectQCAEvenShot = nil
+SWEP.AfterShotQCAEvenShot = nil
 
 SWEP.BulletBones = {
 }
@@ -211,7 +214,7 @@ SWEP.RestAng = SWEP.ActiveAng
 
 SWEP.SprintVerticalOffset = false
 SWEP.SprintPos = SWEP.ActivePos
-SWEP.SprintAng = SWEP.ActiveAng
+SWEP.SprintAng = Angle(0, 0, 0)
 
 SWEP.CustomizePos = Vector(15, 27.5, 3.5)
 SWEP.CustomizeAng = Angle(90, 0, -1.5)
@@ -224,20 +227,37 @@ SWEP.CustomizePosHook = function(self)
     end
 end
 
+SWEP.ActiveAngHook = function(self)
+    local attached = self:GetElements()
+    if attached["akimbo"] then
+        return Angle(0,0,0)
+    end
+end
+
+SWEP.Hook_Think = ARC9.CODBOC.BlendEmpty
+
 SWEP.BarrelLength = 0 -- = 9
 
 SWEP.ExtraSightDist = 15
 
 SWEP.AttachmentElements = {
     ["extmag"] = {
-        Bodygroups = {{2,1},},
+        Bodygroups = {{1,1},},
         ClipSizeOverride = 17.5,
     },
-    ["auto"] = {
+    ["newirons"] = {
         Bodygroups = {{3,1},},
     },
-    ["newirons"] = {
-        Bodygroups = {{4,1},},
+    ["akimbo"] = {
+        MuzzleEffectQCAEvenShot = 4,
+        CaseEffectQCAEvenShot = 6,
+        AfterShotQCAEvenShot = 4,
+    },
+    ["auto"] = {
+        Bodygroups = {{2,1},},
+        MuzzleEffectQCA = 2,
+        -- MuzzleEffectQCAEvenShot = 5,
+        -- AfterShotQCAEvenShot = 5,
     },
 }
 
@@ -245,8 +265,32 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local vm = data.model
     local attached = data.elements
     local camo = 0
+    local rmag = 0
+    local rbarrel = 0
+    local rirons = 0
+
     if attached["bo1_pap"] then
         camo = camo + 2
+    end
+    if attached["extmag"] then
+        rmag = 1
+    end
+    if attached["auto"] then
+        rbarrel = 1
+    end
+    if attached["newirons"] then
+        rirons = 1
+    end
+
+    vm:SetBodygroup(0,0)
+    vm:SetBodygroup(1,rmag)
+    vm:SetBodygroup(2,rbarrel)
+    vm:SetBodygroup(3,rirons)
+    if attached["akimbo"] then
+        vm:SetBodygroup(4, 1)
+        vm:SetBodygroup(5,rmag + 1)
+        vm:SetBodygroup(6,rbarrel + 1)
+        vm:SetBodygroup(7,rirons + 1)
     end
     vm:SetSkin(camo)
 end
@@ -257,13 +301,13 @@ SWEP.HookP_NameChange = function(self, name)
 
     local gunname = "CZ 75"
 
-    if attached["bo1_pap"] then
-        gunname = "Calamity"
-    end
     if attached["auto"] then
         gunname = "CZ 75 Auto"
-        if attached["bo1_pap"] then
-            gunname = "Calamity Jane"
+    end
+    if attached["bo1_pap"] then
+        gunname = "Calamity"
+        if attached["akimbo"] then
+            gunname = "Calamity & Jane"
         end
     end
 
@@ -278,8 +322,22 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
     if attached["extmag"] then
         suffix = "_ext"
     end
-
-    return anim .. suffix
+    if attached["akimbo"] then
+        suffix = "_akimbo"
+    end
+    local newanim = anim .. suffix
+    if self:Clip1() == 1 and attached["akimbo"] then
+        if anim == "fire_right" then
+            newanim =  "fire_empty_right"
+        end
+        if anim == "idle" then
+            newanim =  "idle_empty_right"
+        end
+    end
+    if self:Clip1() == 0 and attached["akimbo"] and anim == "fire_left" then
+        newanim =  "fire_empty_left"
+    end
+    return newanim
 end
 
 SWEP.Attachments = {
@@ -299,6 +357,12 @@ SWEP.Attachments = {
         Pos = Vector(4.85, 0.1, 0.875),
         Ang = Angle(0, 0, 0),
         Category = {"cod_muzzle_pistol"},
+        DuplicateModels = {
+            {
+                Bone = "j_gun1",
+                RequireElements = "akimbo",
+            }
+        },
     },
     {
         PrintName = "Fire Control Group",
@@ -351,6 +415,14 @@ SWEP.Attachments = {
         Category = "mwc_proficiency",
         ExcludeElements = {"bo1_perkacola"},
     },
+    {
+        PrintName = "Wielding",
+        DefaultCompactName = "Single",
+        Bone = "j_gun",
+        Pos = Vector(0, 0, 0),
+        Ang = Angle(0, 0, 0),
+        Category = "bo1_akimbo",
+    },
 }
 
 SWEP.HideBones = {
@@ -369,21 +441,21 @@ SWEP.Animations = {
         Source = "idle_empty",
         Time = 1 / 30,
     },
-    ["draw_empty"] = {
-        Source = "draw_empty",
-        Time = 1,
-    },
     ["draw"] = {
         Source = "draw",
-        Time = 1,
+        Time = 0.5,
+    },
+    ["draw_empty"] = {
+        Source = "draw_empty",
+        Time = 0.5,
     },
     ["holster_empty"] = {
         Source = "holster_empty",
-        Time = 1,
+        Time = 0.5,
     },
     ["holster"] = {
         Source = "holster",
-        Time = 1,
+        Time = 0.5,
     },
     ["ready"] = {
         Source = "first_draw",
@@ -453,6 +525,14 @@ SWEP.Animations = {
             {s = "ARC9_BO1.CZ75_Fwd", t = 45 / 35}
         },
     },
+    ["enter_sprint"] = {
+        Source = "holster",
+        Time = 1,
+    },
+    ["enter_sprint_empty"] = {
+        Source = "holster_empty",
+        Time = 1,
+    },
     ["idle_sprint"] = {
         Source = "sprint_loop",
         Time = 30 / 40
@@ -460,5 +540,175 @@ SWEP.Animations = {
     ["idle_sprint_empty"] = {
         Source = "sprint_loop_empty",
         Time = 30 / 40
+    },
+    ["exit_sprint"] = {
+        Source = "draw",
+        Time = 0.5,
+    },
+    ["exit_sprint_empty"] = {
+        Source = "draw_empty",
+        Time = 0.5,
+    },
+
+    --AKIMBO
+    ["idle_akimbo"] = {
+        Source = "idle_a",
+        -- Time = 1 / 30,
+    },
+    ["idle_empty_akimbo"] = {
+        Source = "idle_empty_ab",
+        -- Time = 1 / 30,
+    },
+    ["idle_empty_right"] = {
+        Source = "idle_empty_ar",
+        -- Time = 1 / 30,
+    },
+    ["idle_empty_left"] = {
+        Source = "idle_empty_al",
+        -- Time = 1 / 30,
+    },
+    ["draw_empty_akimbo"] = {
+        Source = "draw_empty_a",
+        Time = 0.5,
+    },
+    ["draw_akimbo"] = {
+        Source = "draw_a",
+        Time = 0.5,
+    },
+    ["holster_akimbo"] = {
+        Source = "holster_a",
+        Time = 0.5,
+    },
+    ["holster_empty_akimbo"] = {
+        Source = "holster_empty_a",
+        Time = 0.5,
+    },
+    ["ready_akimbo"] = {
+        Source = "first_draw_a",
+        Time = 1,
+        EventTable = {
+            {s = "ARC9_BO1.CZ75_Fwd", t = 0.2},
+            {s = "ARC9_BO1.CZ75_Fwd", t = 0.8},
+        }
+    },
+    ["fire_right"] = {
+        Source = {"fire_ar"},
+        Time = 6 / 30,
+        EjectAt = 1 / 30,
+    },
+    ["fire_left"] = {
+        Source = {"fire_al"},
+        Time = 6 / 30,
+        EjectAt = 1 / 30,
+    },
+    ["fire_akimbo"] = {
+        Source = {"fire_ab"},
+        Time = 6 / 30,
+        EjectAt = 1 / 30,
+    },
+    ["fire_empty_right"] = {
+        Source = "fire_last_ar",
+        Time = 6 / 30,
+        EjectAt = 1 / 30,
+    },
+    ["fire_empty_left"] = {
+        Source = "fire_last_al2",
+        Time = 6 / 30,
+        EjectAt = 1 / 30,
+    },
+    ["fire_empty_akimbo"] = {
+        Source = "fire_last_ab",
+        Time = 6 / 30,
+        EjectAt = 1 / 30,
+    },
+    ["reload_right"] = {
+        Source = "reload_empty_ar",
+        Time = 75 / 35,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
+        EventTable = {
+            {s = "ARC9_BO1.CZ75_Out", t = 13 / 35},
+            {s = "ARC9_BO1.CZ75_Futz", t = 28 / 35},
+            {s = "ARC9_BO1.CZ75_In", t = 33 / 35},
+            {s = "ARC9_BO1.CZ75_Fwd", t = 60 / 35}
+        },
+    },
+    ["reload_left"] = {
+        Source = "reload_empty_al",
+        Time = 75 / 35,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
+        EventTable = {
+            {s = "ARC9_BO1.CZ75_Out", t = 13 / 35},
+            {s = "ARC9_BO1.CZ75_Futz", t = 28 / 35},
+            {s = "ARC9_BO1.CZ75_In", t = 33 / 35},
+            {s = "ARC9_BO1.CZ75_Fwd", t = 60 / 35}
+        },
+    },
+    ["reload_akimbo"] = {
+        Source = "reload_empty_ab",
+        Time = 75 / 35,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
+        EventTable = {
+            {s = "ARC9_BO1.CZ75_Out", t = 13 / 35},
+            {s = "ARC9_BO1.CZ75_Futz", t = 28 / 35},
+            {s = "ARC9_BO1.CZ75_In", t = 33 / 35},
+            {s = "ARC9_BO1.CZ75_Fwd", t = 60 / 35}
+        },
+    },
+    ["reload_empty_right"] = {
+        Source = "reload_empty_ar",
+        Time = 75 / 35,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
+        EventTable = {
+            {s = "ARC9_BO1.CZ75_Out", t = 13 / 35},
+            {s = "ARC9_BO1.CZ75_Futz", t = 28 / 35},
+            {s = "ARC9_BO1.CZ75_In", t = 33 / 35},
+            {s = "ARC9_BO1.CZ75_Fwd", t = 60 / 35}
+        },
+    },
+    ["reload_empty_left"] = {
+        Source = "reload_empty_al",
+        Time = 75 / 35,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
+        EventTable = {
+            {s = "ARC9_BO1.CZ75_Out", t = 13 / 35},
+            {s = "ARC9_BO1.CZ75_Futz", t = 28 / 35},
+            {s = "ARC9_BO1.CZ75_In", t = 33 / 35},
+            {s = "ARC9_BO1.CZ75_Fwd", t = 60 / 35}
+        },
+    },
+    ["reload_empty_akimbo"] = {
+        Source = "reload_empty_ab",
+        Time = 75 / 35,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
+        EventTable = {
+            {s = "ARC9_BO1.CZ75_Out", t = 13 / 35},
+            {s = "ARC9_BO1.CZ75_Futz", t = 28 / 35},
+            {s = "ARC9_BO1.CZ75_In", t = 33 / 35},
+            {s = "ARC9_BO1.CZ75_Fwd", t = 60 / 35}
+        },
+    },
+    ["enter_sprint_akimbo"] = {
+        Source = "sprint_in_a",
+        Time = 1,
+    },
+    ["idle_sprint_akimbo"] = {
+        Source = "sprint_loop_a",
+        Time = 30 / 40
+    },
+    ["exit_sprint_akimbo"] = {
+        Source = "sprint_out_a",
+        Time = 1,
+    },
+    ["enter_sprint_empty_akimbo"] = {
+        Source = "sprint_in_empty_a",
+        Time = 1,
+    },
+    ["idle_sprint_empty_akimbo"] = {
+        Source = "sprint_loop_empty_a",
+        Time = 30 / 40
+    },
+    ["exit_sprint_empty_akimbo"] = {
+        Source = "sprint_out_empty_a",
+        Time = 1,
     },
 }

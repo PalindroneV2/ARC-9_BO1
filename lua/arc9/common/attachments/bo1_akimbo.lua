@@ -10,9 +10,9 @@ ATT.Free = false
 
 ATT.Category = {"bo1_akimbo"}
 ATT.ActivateElements = {"akimbo"}
-ATT.MuzzleEffectQCAEvenShot = 4
-ATT.CaseEffectQCAEvenShot = 5
-ATT.AfterShotQCAEvenShot = 4
+-- ATT.MuzzleEffectQCAEvenShot = 4
+-- ATT.CaseEffectQCAEvenShot = 5
+-- ATT.AfterShotQCAEvenShot = 4
 
 -- ATT.Num = 2
 ATT.ClipSizeMult = 2

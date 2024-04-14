@@ -2,7 +2,7 @@ VertexlitGeneric
 {
 	$basetexture	"models/weapons/arc9/bo1/bo1_suppressor/suppressor_c"
 	$bumpmap	"models/weapons/arc9/bo1/bo1_suppressor/suppressor_n"
-
+	$phongexponenttexture	"models/weapons/arc9/bo1/bo1_suppressor/suppressor_s"
 	
 	//"$color2" "[ .4 .4 .4 ]"
 	"$blendtintbybasealpha" "1"
@@ -13,5 +13,5 @@ VertexlitGeneric
 	"$envmap" "env_cubemap"
 //	"$basemapalphaenvmapmask" "1"
 	$envmapfresnel "0.01"
-	$envmaptint "[ .01 .01 .01 ]"
+	$envmaptint "[ .005 .005 .005 ]"
 }

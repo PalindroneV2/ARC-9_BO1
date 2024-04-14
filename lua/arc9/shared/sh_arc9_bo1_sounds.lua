@@ -78,6 +78,14 @@ sound.Add( {
         "^weapons/arc9/bo1_m16/m16_futz.wav",
     }
 } )
+sound.Add( {
+    name = "ARC9_BO1.M16_RingOff",
+    channel = CHAN_WEAPON,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {"^weapons/arc9/bo1_m16/ringoff_f.wav",}
+} )
 
 --- AUG Main ---
 

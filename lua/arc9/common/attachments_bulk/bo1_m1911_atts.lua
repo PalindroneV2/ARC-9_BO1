@@ -70,6 +70,26 @@ ARC9.LoadAttachment(ATT, "bo1_m1911_cosmetic_nickel")
 
 ATT = {}
 
+ATT.PrintName = "Unpolished steel"
+ATT.CompactName = "STEEL"
+ATT.Icon = Material("materials/entities/bo1_generic.png")
+ATT.Description = [[Right out of the factory with no bells or whistles.]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
+ATT.Free = true
+
+ATT.Category = {"bo1_m1911_cosmetics"}
+ATT.ActivateElements = {"nickel"}
+
+ATT.SubMaterial12 = "models/weapons/arc9/bo1/bo1_m1911/fullsteel.vmt"
+ATT.SubMaterial13 = "models/weapons/arc9/bo1/bo1_m1911/fullsteel.vmt"
+
+ARC9.LoadAttachment(ATT, "bo1_m1911_cosmetic_steel")
+
+ATT = {}
+
 ATT.PrintName = "Battle Worn"
 ATT.CompactName = "Worn"
 ATT.Icon = Material("materials/entities/bo1_generic.png")

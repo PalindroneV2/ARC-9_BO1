@@ -451,10 +451,10 @@ SWEP.Animations = {
     },
     ["reload"] = {
         Source = "reload",
-        Time = 120 / 30,
+        Time = 120 / 40,
         EventTable = {
-            {s = "ARC9_BO1.L96_ClipOut", t = 27 / 30},
-            {s = "ARC9_BO1.L96_ClipIn", t = 88 / 30},
+            {s = "ARC9_BO1.L96_ClipOut", t = 27 / 40},
+            {s = "ARC9_BO1.L96_ClipIn", t = 88 / 40},
         },
         IKTimeLine = {
             {
@@ -481,14 +481,14 @@ SWEP.Animations = {
     },
     ["reload_empty"] = {
         Source = "reload_empty",
-        Time = 173 / 30,
+        Time = 173 / 40,
         EventTable = {
-            {s = "ARC9_BO1.L96_BoltUp", t = 9 / 30},
-            {s = "ARC9_BO1.L96_BoltBack", t = 13 / 30},
-            {s = "ARC9_BO1.L96_ClipOut", t = 60 / 30},
-            {s = "ARC9_BO1.L96_ClipIn", t = 121 / 30},
-            {s = "ARC9_BO1.L96_BoltFwd", t = 155 / 30},
-            {s = "ARC9_BO1.L96_BoltDown", t = 159 / 30},
+            {s = "ARC9_BO1.L96_BoltUp", t = 9 / 40},
+            {s = "ARC9_BO1.L96_BoltBack", t = 13 / 40},
+            {s = "ARC9_BO1.L96_ClipOut", t = 60 / 40},
+            {s = "ARC9_BO1.L96_ClipIn", t = 121 / 40},
+            {s = "ARC9_BO1.L96_BoltFwd", t = 155 / 40},
+            {s = "ARC9_BO1.L96_BoltDown", t = 159 / 40},
         },
         IKTimeLine = {
             {
@@ -515,10 +515,10 @@ SWEP.Animations = {
     },
     ["reload_ext"] = {
         Source = "reload_ext",
-        Time = 120 / 30,
+        Time = 120 / 40,
         EventTable = {
-            {s = "ARC9_BO1.L96_ClipOut", t = 27 / 30},
-            {s = "ARC9_BO1.L96_ClipIn", t = 88 / 30},
+            {s = "ARC9_BO1.L96_ClipOut", t = 27 / 40},
+            {s = "ARC9_BO1.L96_ClipIn", t = 88 / 40},
         },
         IKTimeLine = {
             {
@@ -545,14 +545,14 @@ SWEP.Animations = {
     },
     ["reload_empty_ext"] = {
         Source = "reload_empty_ext",
-        Time = 173 / 30,
+        Time = 173 / 40,
         EventTable = {
-            {s = "ARC9_BO1.L96_BoltUp", t = 9 / 30},
-            {s = "ARC9_BO1.L96_BoltBack", t = 13 / 30},
-            {s = "ARC9_BO1.L96_ClipOut", t = 60 / 30},
-            {s = "ARC9_BO1.L96_ClipIn", t = 121 / 30},
-            {s = "ARC9_BO1.L96_BoltFwd", t = 155 / 30},
-            {s = "ARC9_BO1.L96_BoltDown", t = 159 / 30},
+            {s = "ARC9_BO1.L96_BoltUp", t = 9 / 40},
+            {s = "ARC9_BO1.L96_BoltBack", t = 13 / 40},
+            {s = "ARC9_BO1.L96_ClipOut", t = 60 / 40},
+            {s = "ARC9_BO1.L96_ClipIn", t = 121 / 40},
+            {s = "ARC9_BO1.L96_BoltFwd", t = 155 / 40},
+            {s = "ARC9_BO1.L96_BoltDown", t = 159 / 40},
         },
         IKTimeLine = {
             {

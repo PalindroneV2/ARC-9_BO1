@@ -161,9 +161,9 @@ SWEP.ProceduralViewQCA = 1
 SWEP.CamQCA = 3
 SWEP.NoShellEject = true
 SWEP.NoShellEjectManualAction = true
--- SWEP.MuzzleEffectQCAEvenShot = 4
--- SWEP.CaseEffectQCAEvenShot = 5
--- SWEP.AfterShotQCAEvenShot = 4
+SWEP.MuzzleEffectQCAEvenShot = nil
+SWEP.CaseEffectQCAEvenShot = nil
+SWEP.AfterShotQCAEvenShot = nil
 
 SWEP.BulletBones = {
 }
@@ -214,12 +214,19 @@ SWEP.RestAng = SWEP.ActiveAng
 
 SWEP.SprintVerticalOffset = false
 SWEP.SprintPos = SWEP.ActivePos
-SWEP.SprintAng = SWEP.ActiveAng
+SWEP.SprintAng = Angle(0, 0, 0)
 
 SWEP.CustomizePos = Vector(15, 25, 4)
 SWEP.CustomizeAng = Angle(90, 0, 0)
 SWEP.CustomizeSnapshotPos = Vector(2.5, -10, 0)
 SWEP.CustomizeSnapshotAng = Angle(0, 0, 0)
+
+SWEP.ActiveAngHook = function(self)
+    local attached = self:GetElements()
+    if attached["akimbo"] then
+        return Angle(0,0,0)
+    end
+end
 
 SWEP.BarrelLength = 0 -- = 9
 
@@ -300,6 +307,11 @@ SWEP.AttachmentElements = {
             SwitchToSound = "", -- sound that plays when switching to this sight
         }
     },
+    ["akimbo"] = {
+        MuzzleEffectQCAEvenShot = 4,
+        CaseEffectQCAEvenShot = 5,
+        AfterShotQCAEvenShot = 4,
+    }
 }
 
 local snd_mech = ""
@@ -320,12 +332,6 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local rhhammer = 0
     local mag = 0
     local finish = 0
-    local lhframe  = 0
-    local lhslide = 0
-    local lhsights = 0
-    local lhtrigger = 0
-    local lhhammer = 0
-    local lhmag = 0
 
 
     if attached["1911_frame_modern"] then
@@ -362,15 +368,6 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         irons = irons + 9
     end
 
-    if attached["akimbo"] then
-        lhframe = frame + 1
-        lhslide = slide + 1
-        lhsights = irons + 1
-        lhtrigger =  trigger + 1
-        lhhammer = rhhammer + 1
-        lhmag = mag + 1
-    end
-
     if attached["bo1_pap"] then
         finish = 4
     end
@@ -399,12 +396,14 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     vm:SetBodygroup(3,trigger)
     vm:SetBodygroup(4, rhhammer)
     vm:SetBodygroup(5,mag)
-    vm:SetBodygroup(6,lhframe)
-    vm:SetBodygroup(7,lhslide)
-    vm:SetBodygroup(8, lhsights)
-    vm:SetBodygroup(9,lhtrigger)
-    vm:SetBodygroup(10,lhhammer)
-    vm:SetBodygroup(11,lhmag)
+    if attached["akimbo"] then
+        vm:SetBodygroup(6,frame + 1)
+        vm:SetBodygroup(7,slide + 1)
+        vm:SetBodygroup(8, irons + 1)
+        vm:SetBodygroup(9, trigger + 1)
+        vm:SetBodygroup(10, rhhammer + 1)
+        vm:SetBodygroup(11, mag + 1)
+    end
     vm:SetSkin(finish)
 end
 
@@ -443,6 +442,8 @@ SWEP.HookP_NameChange = function(self, name)
 
     return gunname
 end
+
+SWEP.Hook_Think = ARC9.CODBOC.BlendEmpty
 
 SWEP.Hook_TranslateAnimation = function (self, anim)
     local attached = self:GetElements()
