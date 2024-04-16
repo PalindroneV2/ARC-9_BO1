@@ -757,7 +757,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     if attached["carbine_hg"] and attached["cde_m203"] and !(attached["handguard_flamer"] or attached["ar15_ris"] or attached["handguard_famas"] or attached["mlok"]) then
         vm:SetBodygroup(3,14)
     end
-    if attached["carbine_hg"] and attached["bo1_mk"] then
+    if attached["carbine_hg"] and attached["bo1_mk"] and length >= 2 then
         vm:SetBodygroup(4, 3)
     end
     if hand == 8 then -- FAMAS

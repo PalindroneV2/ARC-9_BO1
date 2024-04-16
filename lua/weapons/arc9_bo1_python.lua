@@ -37,7 +37,7 @@ SWEP.WorldModelOffset = {
 }
 SWEP.ViewModelFOVBase = 75
 
-SWEP.DefaultBodygroups = "00010000000000"
+SWEP.DefaultBodygroups = "00000000000000"
 
 SWEP.DamageMax = 60
 SWEP.DamageMin = 25 -- damage done at maximum range
@@ -159,9 +159,8 @@ SWEP.NoShellEject = true
 SWEP.NoShellEjectManualAction = true
 
 SWEP.MuzzleEffectQCA = 1 -- which attachment to put the muzzle on
-SWEP.CaseEffectQCA = 1 -- which attachment to put the case effect on
-SWEP.ProceduralViewQCA = 2
-SWEP.CamQCA = 2
+SWEP.ProceduralViewQCA = 3
+SWEP.CamQCA = 3
 
 SWEP.BulletBones = {
 }
@@ -213,6 +212,13 @@ SWEP.SprintVerticalOffset = false
 SWEP.SprintPos = SWEP.ActivePos
 SWEP.SprintAng = SWEP.ActiveAng
 
+SWEP.ActiveAngHook = function(self)
+    local attached = self:GetElements()
+    if attached["akimbo"] then
+        return Angle(0,0,0)
+    end
+end
+
 SWEP.CustomizePos = Vector(17.5, 25, 4.25)
 SWEP.CustomizeAng = Angle(90, 0, 0)
 
@@ -228,6 +234,12 @@ SWEP.AttachmentElements = {
             },
         },
     },
+    ["akimbo"] = {
+        MuzzleEffectQCAEvenShot = 2,
+        AfterShotQCAEvenShot = 2,
+        ShotgunReload = false,
+        HybridReload = false,
+    },
 }
 
 SWEP.Hook_ModifyBodygroups = function(self, data)
@@ -235,9 +247,19 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local vm = data.model
     local attached = data.elements
     local finish = 0
+    local python = 0
+    local snub = 0
+    local casings = 0
 
     if attached["snubnose"] then
-        vm:SetBodygroup(1,1)
+        snub = 1
+    end
+    vm:SetBodygroup(1,snub)
+    if attached["akimbo"] then
+        vm:SetBodygroup(3, 1)
+        vm:SetBodygroup(4,python + 1)
+        vm:SetBodygroup(5,snub + 1)
+        vm:SetBodygroup(6, casings + 1)
     end
     if attached["bo1_pap"] then
         finish = finish + 2
@@ -260,7 +282,27 @@ SWEP.HookP_NameChange = function(self, name)
 end
 
 SWEP.Hook_TranslateAnimation = function (self, anim)
-    -- local attached = self:GetElements()
+    local attached = self:GetElements()
+
+    local suff = ""
+    local cyl = 6
+    if attached["akimbo"] then
+        suff = "_akimbo"
+        cyl = cyl * 2
+    end
+    if attached["bo1_pap"] then
+        cyl = cyl * 2
+    end
+    if anim == "reload" and attached["akimbo"] then
+        if (self:Clip1() == cyl -1) then
+            return "reload_akimbo_r"
+        end
+        return "reload_akimbo"
+    end
+    if anim == "reload_empty" and attached["akimbo"] then
+        return "reload_akimbo"
+    end
+    return anim .. suff
 end
 
 --TEST 3
@@ -275,6 +317,12 @@ SWEP.Attachments = {
         Category = {"cod_optic"},
         Icon_Offset = Vector(0, 0, 1),
         CorrectiveAng = Angle(0, 0.25, 0),
+        DuplicateModels = {
+            {
+                Bone = "j_gun1",
+                RequireElements = "akimbo",
+            }
+        },
     },
     {
         PrintName = "Barrel",
@@ -293,7 +341,13 @@ SWEP.Attachments = {
         Pos = Vector(9, 0.075, 1.5),
         Ang = Angle(0, 0, 0),
         Category = {"cod_tactical_revolver"},
-        ExcludeElements = {"snubnose"}
+        ExcludeElements = {"snubnose"},
+        DuplicateModels = {
+            {
+                Bone = "j_gun1",
+                RequireElements = "akimbo",
+            }
+        },
     },
     {
         PrintName = "Cylinder",
@@ -302,6 +356,7 @@ SWEP.Attachments = {
         Pos = Vector(2, 0, 2),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_cylinder"},
+        ExcludeElements = {"akimbo"},
     },
     {
         PrintName = "Ammunition",
@@ -338,6 +393,14 @@ SWEP.Attachments = {
         Category = "mwc_proficiency",
         ExcludeElements = {"bo1_perkacola"},
     },
+    {
+        PrintName = "Wielding",
+        DefaultCompactName = "Single",
+        Bone = "j_gun",
+        Pos = Vector(0, 0, 0),
+        Ang = Angle(0, 0, 0),
+        Category = "bo1_akimbo",
+    },
 }
 
 SWEP.HideBones = {
@@ -352,7 +415,7 @@ SWEP.ReloadHideBoneTables = {
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
-        Time = 1 / 30,
+        Time = 300 / 30,
     },
     ["draw"] = {
         Source = "draw",
@@ -425,21 +488,84 @@ SWEP.Animations = {
         },
     },
     ["enter_sprint"] = {
-        Source = "idle",
-        Time = 3 / 30,
-        LHIK = true,
-        LHIKIn = 0.85,
-        LHIKOut = 0.25,
+        Source = "holster",
+        Time = 30 / 30,
     },
     ["idle_sprint"] = {
         Source = "sprint_loop",
         Time = 30 / 30,
-        LHIK = true,
-        LHIKIn = 1,
-        LHIKOut = 0.4,
     },
     ["exit_sprint"] = {
-        Source = "idle",
-        Time = 3 / 30
+        Source = "draw",
+        Time = 30 / 30
+    },
+
+    --akimbo
+
+    ["idle_akimbo"] = {
+        Source = "idle_a",
+        Time = 1 / 30,
+    },
+    ["draw_akimbo"] = {
+        Source = "draw_a",
+        Time = 30 / 30,
+    },
+    ["holster_akimbo"] = {
+        Source = "holster_a",
+        Time = 24 / 30,
+    },
+    ["ready_akimbo"] = {
+        Source = "first_draw_a",
+        Time = 60 / 30,
+        EventTable = {
+            {s = "ARC9_BO1.Python_Spin", t = 16 / 30},
+            {s = "ARC9_BO1.Python_Close", t = 40 / 30}, -- im keeping this because i think it looks cool
+        }
+    },
+    ["fire_left"] = {
+        Source = {"fire_left"},
+        Time = 12 / 35,
+    },
+    ["fire_right"] = {
+        Source = "fire_right",
+        Time = 12 / 35,
+    },
+    ["fire_akimbo"] = {
+        Source = "fire_ab",
+        Time = 12 / 35,
+    },
+    ["reload_akimbo"] = {
+        Source = "reload_ab",
+        Time = 92 / 35,
+        EventTable = {
+            {s = "ARC9_BO1.Python_Open", t = 21 / 35},
+            {s = "ARC9_BO1.Python_Empty", t = 27 / 35},
+            {s = "ARC9_BO1.Python_Load", t = 51 / 35},
+            {s = "ARC9_BO1.Python_Close", t = 73 / 35},
+        },
+    },
+    ["reload_akimbo_r"] = {
+        Source = "reload_ar",
+        Time = 92 / 35,
+        MinProgress = 51 / 35,
+        EventTable = {
+            {s = "ARC9_BO1.Python_Open", t = 21 / 35},
+            {s = "ARC9_BO1.Python_Empty", t = 27 / 35},
+            {s = "ARC9_BO1.Python_Load", t = 51 / 35},
+            {s = "ARC9_BO1.Python_Close", t = 73 / 35},
+        },
+    },
+
+    ["enter_sprint"] = {
+        Source = "sprint_in_a",
+        Time = 30 / 30,
+    },
+    ["idle_sprint"] = {
+        Source = "sprint_loop_a",
+        Time = 30 / 30,
+    },
+    ["exit_sprint"] = {
+        Source = "sprint_out_a",
+        Time = 30 / 30
     },
 }

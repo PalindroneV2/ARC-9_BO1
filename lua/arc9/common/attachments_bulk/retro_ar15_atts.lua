@@ -588,8 +588,8 @@ ARC9.LoadAttachment(ATT, "retro_ar15_handguard_a2")
 
 ATT = {}
 
-ATT.PrintName = [[A4 Handguard]]
-ATT.CompactName = [[A4]]
+ATT.PrintName = [[KAC M5 RAS Handguard]]
+ATT.CompactName = [[M5 RAS]]
 ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m16.png", "mips smooth")
 ATT.Description = [[A long handguard with quad-rail RIS mounts. While usually used for 20" barrels, it can fit a 14.5" barrel with a low profile gas block.
 Allows for the attachment of alternative front sights and tactical attachments on all of the 4 rails.
@@ -984,8 +984,8 @@ ARC9.LoadAttachment(ATT, "retro_ar15_handguard_patriot")
 
 ATT = {}
 
-ATT.PrintName = [[Carbine RIS Handguard]]
-ATT.CompactName = [[RIS]]
+ATT.PrintName = [[KAC M4 RAS Handguard]]
+ATT.CompactName = [[M4 RAS]]
 ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m4.png", "mips smooth")
 ATT.Description = [[RIS Quad-Rail Handguard fitting a carbine barrel, common in modern AR-15s.
 Allows for the attachment of alternative front sights and a low profile laser pointer on top, but is otherwise identical to a regular handguard.]]

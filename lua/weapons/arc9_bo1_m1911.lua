@@ -311,7 +311,7 @@ SWEP.AttachmentElements = {
         MuzzleEffectQCAEvenShot = 4,
         CaseEffectQCAEvenShot = 5,
         AfterShotQCAEvenShot = 4,
-    }
+    },
 }
 
 local snd_mech = ""
