@@ -2488,7 +2488,7 @@ ATT.MenuCategory = "ARC9 - BO1 AR-15 Attachments"
 ATT.Free = false
 
 ATT.Category = {"retro_ar15_stock"}
-ATT.ActivateElements = {"stock_magpul", "yessling"}
+-- ATT.ActivateElements = {"stock_magpul", "yessling"}
 
 ATT.RecoilMult = 0.8
 ATT.RecoilUpMult = 0.5
@@ -2501,6 +2501,20 @@ ATT.SpeedMult = 0.97
 ATT.AimDownSightsTimeAdd = 0.09
 ATT.SprintToFireTimeAdd = 0.12
 ATT.SpeedAddSights = -0.12
+
+ATT.Model = "models/weapons/arc9/atts/retro_ar15/stock_moe.mdl"
+ATT.Scale = Vector(1, 1, 1)
+-- ATT.ModelOffset = Vector(2,0,0)
+-- ATT.ModelAngleOffset = Angle(0,0,0)
+ATT.BoneMerge = true
+
+ATT.DrawFunc = function(swep, model, wm)
+    if swep:GetElements()["universal_camo"] then
+        model:SetSkin(1)
+    else
+        model:SetSkin(0)
+    end
+end
 
 ARC9.LoadAttachment(ATT, "retro_ar15_stock_moe")
 
