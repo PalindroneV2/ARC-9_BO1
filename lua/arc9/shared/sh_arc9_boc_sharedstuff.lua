@@ -36,6 +36,8 @@ PrecacheParticleSystem("pap_muzzle_sparks")
 PrecacheParticleSystem("pap_trail")
 
 PrecacheParticleSystem("vortigaunt_beam_charge")
+-- PrecacheParticleSystem("arc9_waw_tracer_dg2")
+-- PrecacheParticleSystem("arc9_waw_tracer_dg2")
 PrecacheParticleSystem("dg2_flash")
 PrecacheParticleSystem("dg3_flash")
 PrecacheParticleSystem("megatron_flash")

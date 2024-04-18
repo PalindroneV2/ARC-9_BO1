@@ -1,0 +1,29 @@
+VertexlitGeneric
+{
+	$basetexture	"models/weapons/arc9/waw/waw_wunderwaffe/waffe"
+	$bumpmap	"models/weapons/arc9/waw/waw_wunderwaffe/waffe_n"
+	$phongexponenttexture	"models/weapons/arc9/waw/waw_wunderwaffe/waffe_s"
+	
+	$detail		"models/weapons/arc9/bo1/gold_c"
+	"$detailscale" "1"
+	$detailblendmode 0
+	$detailblendfactor 1
+		
+	$phong "1"
+	// $phongexponent	"100"
+	$phongboost "1"
+	$phongfresnelranges "[2 5 4]"
+	$phongtint "[2 1.25 .4]"
+	$phongalbedotint "1"
+	
+	$envmap "env_cubemap"
+	$envmaptint "[0.5 .375 .125]"
+	$envmapfresnel "0.05"
+
+	"$rimlight" "1"
+	"$rimlightexponent" "1"
+	"$rimlightboost"	"1"
+	"$rimmask" "1"
+
+	"$nocull" "1"
+}

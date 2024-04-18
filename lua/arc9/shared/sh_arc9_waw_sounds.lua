@@ -1889,7 +1889,7 @@ sound.Add( {
 -- WUNDERWAFFE DG2 --
 
 sound.Add({
-    name = "ARC9_BO1.DG2_Fire",
+    name = "ARC9_WAW.DG2_Fire",
     channel = CHAN_STATIC,
     volume = 1.0,
     level = 100,
@@ -1897,58 +1897,137 @@ sound.Add({
     sound = "^weapons/arc9/waw_dg2/fire.wav"
 })
 sound.Add({
-    name = "ARC9_BO1.DG2_Last",
+    name = "ARC9_WAW.DG2_Last",
     channel = CHAN_STATIC,
     level = 80,
     sound = "^weapons/arc9/waw_dg2/last.wav"
 })
+
 sound.Add({
-    name = "ARC9_BO1.DG2_In",
-    channel = CHAN_ITEM,
+    name = "ARC9_WAW.DG2_In",
+    channel = CHAN_AUTO,
     level = 70,
     sound = "^weapons/arc9/waw_dg2/in.wav"
 })
 
 sound.Add({
-    name = "ARC9_BO1.DG2_Out",
-    channel = CHAN_ITEM,
+    name = "ARC9_WAW.DG2_Out",
+    channel = CHAN_AUTO,
     level = 70,
     sound = "^weapons/arc9/waw_dg2/out.wav"
 })
 
 sound.Add({
-    name = "ARC9_BO1.DG2_Back",
-    channel = CHAN_ITEM,
+    name = "ARC9_WAW.DG2_Back",
+    channel = CHAN_AUTO,
     level = 70,
     sound = "^weapons/arc9/waw_dg2/bback.wav"
 })
 
 sound.Add({
-    name = "ARC9_BO1.DG2_Fwd",
-    channel = CHAN_ITEM,
+    name = "ARC9_WAW.DG2_Fwd",
+    channel = CHAN_AUTO,
     level = 70,
     sound = "^weapons/arc9/waw_dg2/bfwd.wav"
 })
 
 sound.Add({
-    name = "ARC9_BO1.DG2_On",
-    channel = CHAN_ITEM,
+    name = "ARC9_WAW.DG2_On",
+    channel = CHAN_AUTO,
     level = 70,
     sound = "^weapons/arc9/waw_dg2/on.wav"
 })
 
 sound.Add({
-    name = "ARC9_BO1.DG2_Off",
-    channel = CHAN_ITEM,
+    name = "ARC9_WAW.DG2_Off",
+    channel = CHAN_AUTO,
     level = 70,
     sound = "^weapons/arc9/waw_dg2/off.wav"
 })
 
 sound.Add({
-    name = "ARC9_BO1.DG2_Impact",
-    channel = CHAN_USER_BASE + 5,
+    name = "ARC9_WAW.DG2_BoltImpact",
+    channel = CHAN_AUTO,
     level = 70,
-    sound = "^weapons/arc9/waw_dg2/splash.wav"
+    sound = "^weapons/arc9/waw_dg2/bolt_impact.wav"
+})
+sound.Add({
+    name = "ARC9_WAW.DG2_BoltImpactWater",
+    channel = CHAN_AUTO,
+    level = 70,
+    sound = "^weapons/arc9/waw_dg2/bolt_impact_water.wav"
+})
+sound.Add({
+    name = "ARC9_WAW.DG2_BoltLoop",
+    channel = CHAN_AUTO,
+    level = 70,
+    sound = "^weapons/arc9/waw_dg2/bolt_loop.wav"
+})
+sound.Add({
+    name = "ARC9_WAW.DG2_Bolt",
+    channel = CHAN_AUTO,
+    level = 70,
+    sound = "^weapons/arc9/waw_dg2/bolt_loop.wav"
+})
+sound.Add({
+    name = "ARC9_WAW.DG2_BoltBounce",
+    channel = CHAN_AUTO,
+    level = 70,
+    sound = {
+        "^weapons/arc9/waw_dg2/bounce/bounce_00.wav",
+        "^weapons/arc9/waw_dg2/bounce/bounce_01.wav",
+    }
+})
+sound.Add({
+    name = "ARC9_WAW.DG2_Arc",
+    channel = CHAN_AUTO,
+    level = 70,
+    sound = {
+        "^weapons/arc9/waw_dg2/arc/arc_00.wav",
+        "^weapons/arc9/waw_dg2/arc/arc_01.wav",
+    }
+})
+sound.Add({
+    name = "ARC9_WAW.DG2_Effects",
+    channel = CHAN_AUTO,
+    level = 70,
+    sound = {
+        "^weapons/arc9/waw_dg2/effects/effects_00.wav",
+        "^weapons/arc9/waw_dg2/effects/effects_01.wav",
+        "^weapons/arc9/waw_dg2/effects/effects_02.wav",
+    }
+})
+sound.Add({
+    name = "ARC9_WAW.DG2_Flux",
+    channel = CHAN_AUTO,
+    level = 70,
+    sound = {
+        "^weapons/arc9/waw_dg2/flux/wpn_tesla_flux_l.wav",
+        "^weapons/arc9/waw_dg2/flux/wpn_tesla_flux_r.wav",
+    }
+})
+sound.Add({
+    name = "ARC9_WAW.DG2_Happy",
+    channel = CHAN_AUTO,
+    level = 70,
+    sound = {
+        "^weapons/arc9/waw_dg2/happy/happy_00.wav",
+        "^weapons/arc9/waw_dg2/happy/happy_01.wav",
+        "^weapons/arc9/waw_dg2/happy/happy_02.wav",
+        "^weapons/arc9/waw_dg2/happy/happy_03.wav",
+    }
+})
+sound.Add({
+    name = "ARC9_WAW.DG2_Idle",
+    channel = CHAN_AUTO,
+    level = 70,
+    sound = {
+        "^weapons/arc9/waw_dg2/idle/idle_00.wav",
+        "^weapons/arc9/waw_dg2/idle/idle_01.wav",
+        "^weapons/arc9/waw_dg2/idle/idle_02.wav",
+        "^weapons/arc9/waw_dg2/idle/idle_03.wav",
+        "^weapons/arc9/waw_dg2/idle/idle_04.wav",
+    }
 })
 
 --- WAW ZOMBIE --

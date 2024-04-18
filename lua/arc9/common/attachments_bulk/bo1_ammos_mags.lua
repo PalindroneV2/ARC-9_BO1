@@ -397,6 +397,29 @@ ARC9.LoadAttachment(ATT, "bo1_ammo_rayun_pap")
 
 ATT = {}
 
+ATT.PrintName = [[Pack-A-Punched]]
+ATT.CompactName = [[PAP]]
+ATT.Icon = Material("entities/bo1_atts/ammo/pack_a_punch.png", "mips smooth")
+ATT.Description = [[Putting your weapon through a strange machine infuses it with the power of element 115.]]
+ATT.Pros = {}
+ATT.Cons = {}
+ATT.SortOrder = 5
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
+ATT.Free = false
+ATT.AttNotForNPCs = true
+ATT.AdminOnly = true
+ATT.PAPAmmo = true
+
+ATT.Category = {"bo1_wunderwaffe_pap"}
+ATT.ActivateElements = {"bo1_pap"}
+ATT.ClipSizeMult = 2
+
+ATT.ShootEnt = "arc9_bo1_dg2_bolt_pap"
+
+ARC9.LoadAttachment(ATT, "bo1_ammo_wunderwaffe_pap")
+
+ATT = {}
+
 ATT.PrintName = [[Sally's Revenge]]
 ATT.CompactName = [[Sally]]
 ATT.Icon = Material("entities/bo1_atts/ammo/pack_a_punch.png", "mips smooth")
