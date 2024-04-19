@@ -530,7 +530,8 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         if attached["handguard_mlok_short"] then
             gasblock = 3
         end
-    elseif attached["barrel_14"] then
+    end
+    if attached["barrel_14"] then
         length = 2
         hand = 4
         gasblock = 1
@@ -538,7 +539,8 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         if attached["mlok"] then
             gasblock = 3
         end
-    elseif attached["barrel_11"] then
+    end
+    if attached["barrel_11"] then
         length = 3
         hand = 4
         gasblock = 1
@@ -546,7 +548,8 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         if attached["mlok"] then
             gasblock = 3
         end
-    elseif attached["barrel_10"] then
+    end
+    if attached["barrel_10"] then
         length = 4
         hand = 4
         gasblock = 1
@@ -554,7 +557,8 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         if attached["mlok"] then
             gasblock = 3
         end
-    elseif attached["barrel_9mm"] then
+    end
+    if attached["barrel_9mm"] then
         length = 8
         hand = 9
         gasblock = 4
@@ -620,6 +624,10 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     elseif attached["handguard_flamer"] then
         gasblock = 1
         hand = 13
+    elseif attached["handguard_hk416"] then
+        gasblock = 3
+        hand = 15
+        covers = 1
     end
     if attached["removecovers"] then covers = 0 end
     if attached["mlok_rails"] then
@@ -656,33 +664,9 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         if attached["handguard_ris_mw19"] then
             gasblock = 4
         end
-    -- elseif attached["matech_front"] then
-    --     gasblock = 2
-    --     if attached["handguard_ris"] then
-    --         gasblock = 3
-    --     end
-    --     if attached["handguard_a4"] then
-    --         if length < 2 then
-    --             gasblock = 2
-    --         end
-    --         if length == 2 then
-    --             gasblock = 4
-    --         end
-    --     end
-    --     if attached["handguard_ris_mw19"] then
-    --         gasblock = 4
-    --     end
-    --     if attached["handguard_mlok"] then
-    --         gasblock = 2
-    --         if length >= 2 then
-    --             gasblock = 3
-    --         end
-    --     end
-    --     if attached["handguard_mlok_short"] then
-    --         gasblock = 3
-    --     end
-    -- elseif attached["masada_front"] then
-        gasblock = 2
+        if attached["handguard_hk416"] then
+            gasblock = 3
+        end
         if attached["handguard_ris"] then
             gasblock = 3
         end
@@ -696,17 +680,14 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         end
         if attached["handguard_ris_mw19"] then
             gasblock = 4
-            frontsight = 9
         end
         if attached["handguard_mlok"] then
-            frontsight = 7
             gasblock = 2
             if length >= 2 then
                 gasblock = 3
             end
         end
         if attached["handguard_mlok_short"] then
-            frontsight = 9
             gasblock = 3
         end
     elseif attached["gasblock_flat"] then
@@ -722,7 +703,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
             if length == 1 then gasblock = 3 end
         end
         if hand >= 11 then
-            gasblock = 4
+            gasblock = 3
         end
     end
     if attached["barrel_9mm"] then

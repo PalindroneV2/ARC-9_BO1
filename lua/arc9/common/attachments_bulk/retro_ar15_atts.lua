@@ -1213,6 +1213,96 @@ ATT.Attachments = {
 
 ARC9.LoadAttachment(ATT, "retro_ar15_handguard_ris_mw19")
 
+ATT = {}
+
+ATT.PrintName = [[HK 416 9" Hanguard]]
+ATT.CompactName = [[HK416]]
+ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m4.png", "mips smooth")
+ATT.Description = [[RIS quad-rail handguard fitting a carbine barrels with low profile gas systems, common in modern AR-15s.
+Allows for the attachment of alternative front sights and a low profile laser pointer on top, also identical to a regular handguard.]]
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - BO1 AR-15 Attachments"
+ATT.Free = false
+
+ATT.Category = {"retro_ar15_handguard_carbine"}
+ATT.ActivateElements = {"nosling", "ar15_ris", "no_ub_rail", "ris_carbine", "handguard_hk416", "carbine_hg"}
+ATT.ExcludeElements = {"mw2_m4_irons"}
+
+ATT.Attachments = {
+    {
+        PrintName = "Front",
+        Category = "cod_extrairons_front",
+        UnInstalledElements = {"gasblock_carbine"},
+        InstalledElements = {"gasblock_carbine_cut"},
+        ExcludeElements = {"gasblock_flat"},
+        Bone = "j_gun",
+        Pos = Vector(-11.5, 0, -3.3),
+        Ang = Angle(0, 0, 0),
+        -- Icon_Offset = Vector(13.5, 0, 4.15),
+    },
+    {
+        PrintName = "Underbarrel",
+        DefaultCompactName = "UB",
+        Bone = "j_gun",
+        Pos = Vector(-10.5, 0, -1.3),
+        Ang = Angle(0, 0, 0),
+        Category = {"cde_m203", "bo1_mk", "cod_grips"},
+        InstalledElements = {"allowtac"},
+    },
+    {
+        PrintName = "Tactical Right",
+        DefaultCompactName = "TAC R",
+        Bone = "j_gun",
+        Pos = Vector(-10.5, 0.7, -2.25),
+        Ang = Angle(0, 0, -90),
+        Category =  {"cod_tactical"},
+        InstalledElements = {"removecovers"},
+        RequireElements = {"allowtac"},
+    },
+    {
+        PrintName = "Tactical Left",
+        DefaultCompactName = "TAC L",
+        Bone = "j_gun",
+        Pos = Vector(-10.5, -0.7, -2.25),
+        Ang = Angle(0, 0, 90),
+        Category =  {"cod_tactical"},
+        InstalledElements = {"removecovers"},
+        RequireElements = {"allowtac"},
+    },
+    {
+        PrintName = "Tactical Top",
+        DefaultCompactName = "TAC TOP",
+        Bone = "j_gun",
+        Pos = Vector(-8.5, 0, -3.15),
+        Ang = Angle(0, 0, 180),
+        Category =  {"cod_tactical_top"},
+        -- RequireElements = {"gasblock_flat"},
+        ExcludeElements = {"mw2_m4_top"}
+    },
+}
+
+ATT.Model = "models/weapons/arc9/atts/retro_ar15/handguard_hk416.mdl"
+ATT.Scale = Vector(1, 1, 1)
+-- ATT.ModelOffset = Vector(2,0,0)
+-- ATT.ModelAngleOffset = Angle(0,0,0)
+ATT.BoneMerge = true
+
+ATT.DrawFunc = function(swep, model, wm)
+    if swep:GetElements()["universal_camo"] then
+        model:SetSkin(1)
+    else
+        model:SetSkin(0)
+    end
+    local CUSTSTATE = swep:GetCustomize()
+    if CUSTSTATE then
+        model:SetBodygroup(0, 1)
+    else
+        model:SetBodygroup(0, 0)
+    end
+end
+
+ARC9.LoadAttachment(ATT, "retro_ar15_handguard_hk416")
+
 -- REAR SIGHTS
 ATT = {}
 
