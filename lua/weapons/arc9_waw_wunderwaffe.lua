@@ -245,7 +245,8 @@ SWEP.ShootSound = "ARC9_WAW.DG2_Fire"
 --     "^weapons/ARC9/bo2_generic_smg/dist3.wav"
 -- }
 
-SWEP.MuzzleParticle = "arc9_waw_tracer_dg2" -- Used for some muzzle effects.
+-- SWEP.MuzzleParticle = "tesla_mflash"
+SWEP.MuzzleParticle = "arc9_waw_tracer_dg2"
 SWEP.MuzzleEffect = "arc9_waw_tracer_dg2"
 
 SWEP.ImpactEffect = "TeslaZap"

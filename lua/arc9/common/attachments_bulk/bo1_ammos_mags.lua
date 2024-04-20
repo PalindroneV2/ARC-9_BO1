@@ -413,6 +413,7 @@ ATT.PAPAmmo = true
 ATT.Category = {"bo1_wunderwaffe_pap"}
 ATT.ActivateElements = {"bo1_pap"}
 ATT.ClipSizeMult = 2
+ATT.MuzzleParticle = "tesla_mflash_pap"
 
 ATT.ShootEnt = "arc9_bo1_dg2_bolt_pap"
 

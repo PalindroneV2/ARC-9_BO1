@@ -533,13 +533,13 @@ ATT.Category = {"retro_ar15_handguard_20"}
 ATT.ActivateElements = {"handguard_m203"}
 -- ATT.ExcludeElements = {"cde_m203", "bo1_mk"}
 
--- ATT.Model = "models/weapons/arc9/atts/cde_mp5k_nogrip.mdl"
-ATT.Scale = 0.375
-ATT.ModelOffset = Vector(5, 0, -1.5)
+ATT.Model = "models/weapons/arc9/atts/bo2_osw_lhik.mdl"
+ATT.Scale = 1
+ATT.ModelOffset = Vector(-10, -2.4, 5)
 ATT.IconOffset = Vector(0, 0, 0)
 
--- ATT.LHIK = true
--- ATT.LHIK_Priority = 0
+ATT.LHIK = true
+ATT.LHIK_Priority = 0
 
 ATT.Attachments = {
     {
@@ -680,6 +680,14 @@ ATT.SprintToFireTimeMult = 1.15
 
 ATT.Category = {"retro_ar15_handguard_20", "retro_ar15_handguard_mloks"}
 ATT.ActivateElements = {"handguard_mlok", "mlok", "nosling", "no_tac_rail"}
+
+ATT.Model = "models/weapons/arc9/atts/bo2_osw_lhik.mdl"
+ATT.Scale = 1
+ATT.ModelOffset = Vector(-10, -2.4, 5)
+ATT.IconOffset = Vector(0, 0, 0)
+
+ATT.LHIK = true
+ATT.LHIK_Priority = 0
 
 ATT.Attachments = {
     {
@@ -854,6 +862,14 @@ ATT.Attachments = {
     },
 }
 
+ATT.Model = "models/weapons/arc9/atts/bo2_osw_lhik.mdl"
+ATT.Scale = 1
+ATT.ModelOffset = Vector(-10, -2.4, 5)
+ATT.IconOffset = Vector(0, 0, 0)
+
+ATT.LHIK = true
+ATT.LHIK_Priority = 0
+
 ARC9.LoadAttachment(ATT, "retro_ar15_handguard_flamer")
 
 
@@ -967,7 +983,7 @@ ATT.Scale = 1
 ATT.ModelOffset = Vector(3, 0, -1.5)
 ATT.IconOffset = Vector(0, 0, 0)
 
-ATT.LHIK = true
+ATT.LHIK = false
 ATT.LHIK_Priority = 0
 
 ATT.Category = {"retro_ar15_handguard_10"}
@@ -1065,6 +1081,14 @@ ATT.Free = false
 
 ATT.Category = {"retro_ar15_handguard_carbine", "retro_ar15_handguard_mloks"}
 ATT.ActivateElements = {"nosling", "mlok", "handguard_mlok_short", "carbine_hg"}
+
+ATT.Model = "models/weapons/arc9/atts/bo2_osw_lhik.mdl"
+ATT.Scale = 1
+ATT.ModelOffset = Vector(-11, -2.5, 5)
+ATT.IconOffset = Vector(0, 0, 0)
+
+ATT.LHIK = true
+ATT.LHIK_Priority = 0
 
 ATT.Attachments = {
     {
@@ -1288,7 +1312,7 @@ ATT.Scale = Vector(1, 1, 1)
 ATT.BoneMerge = true
 
 ATT.DrawFunc = function(swep, model, wm)
-    if swep:GetElements()["universal_camo"] then
+    if swep:GetElements()["universal_camo"] and swep:GetElements()["camo_full"] then
         model:SetSkin(1)
     else
         model:SetSkin(0)
@@ -2767,11 +2791,35 @@ ATT.Category = {"retro_ar15_upper"}
 ATT.ActivateElements = {"a4_top","commando_top"}
 ATT.ExcludeElements = {"is_patriot"}
 
-ATT.RPMOverride = 700
+ATT.RPMOverride = 750
 ATT.FirstShootSound = "ARC9_BO1.M16_Fire"
 ATT.ShootSound = "ARC9_BO1.M16_Fire"
 ATT.ShootSoundSilenced = "ARC9_BO1.M16_Sil"
 ATT.DistantShootSound = "ARC9_BO1.M16_RingOff"
+
+ATT.Model = "models/weapons/arc9/atts/retro_ar15/receiver_commando.mdl"
+ATT.Scale = Vector(1, 1, 1)
+ATT.BoneMerge = true
+
+ATT.DrawFunc = function(swep, model, wm)
+    local camo = 0
+    if swep:GetElements()["universal_camo"] then
+        camo = 1
+        if swep:GetElements()["camo_full"] then
+            camo = 2
+        end
+    end
+    if swep:GetElements()["bo1_pap"] then
+        camo = camo + 3
+    end
+    model:SetSkin(camo)
+    local CUSTSTATE = swep:GetCustomize()
+    if CUSTSTATE then
+        model:SetBodygroup(0, 1)
+    else
+        model:SetBodygroup(0, 0)
+    end
+end
 
 ATT.Attachments = {
     {

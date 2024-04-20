@@ -183,8 +183,8 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(-2.765, -2, 0.285),
-    Ang = Angle(0, 0, 0),
+    Pos = Vector(-2.76, -2, 0.3),
+    Ang = Angle(0.025, -0.1, 0),
     Magnification = 1.1,
     ViewModelFOV = 60,
     CrosshairInSights = false,
@@ -506,6 +506,15 @@ SWEP.AttachmentElements = {
             {5,9}
         },
     },
+    ["extrafront"] = {
+        IronSights = {
+            Pos = Vector(-2.76, -2, 0.315),
+            Ang = Angle(0.025, -0.225, 0),
+            Magnification = 1.1,
+            ViewModelFOV = 60,
+            CrosshairInSights = false,
+        },
+    },
 }
 
 SWEP.Hook_ModifyBodygroups = function(self, data)
@@ -719,13 +728,9 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         end
     end
 
-    local CUSTSTATE = self:GetCustomize()
+    -- local CUSTSTATE = self:GetCustomize()
     if attached["commando_top"] then
-        local commandotop = 3
-        if CUSTSTATE then
-            commandotop = 4
-        end
-        vm:SetBodygroup(0,commandotop)
+        vm:SetBodygroup(0,3)
     end
     vm:SetBodygroup(2, length)
     vm:SetBodygroup(3, hand)
