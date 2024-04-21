@@ -20,63 +20,63 @@ if CLIENT then
     killicon.Add( "arc9_bo1_dg2_bolt", "arc9/weaponicons/arc9_waw_wunderwaffe", Color( 255, 255, 255, 255 ) )
 end
 
--- function ENT:Initialize()
--- 	ParticleEffectAttach("tesla_beam", PATTACH_ABSORIGIN_FOLLOW, self, 0 )
+function ENT:Initialize()
+	ParticleEffectAttach("tesla_beam", PATTACH_ABSORIGIN_FOLLOW, self, 0 )
 
--- 	self:SetModel("models/props_phx/gibs/flakgib1.mdl")
--- 	self:SetNoDraw(true)
--- 	self:PhysicsInit( SOLID_VPHYSICS )
--- 	self:SetMoveType( MOVETYPE_VPHYSICS )
--- 	--self:SetSolid( SOLID_VPHYSICS )
--- 	self:SetSolidFlags(FSOLID_NOT_STANDABLE)
--- 	--self:SetTrigger(true)
--- 	self:DrawShadow(false)
--- 	self:GetPhysicsObject():EnableGravity(false)
+	self:SetModel("models/props_phx/gibs/flakgib1.mdl")
+	self:SetNoDraw(true)
+	self:PhysicsInit( SOLID_VPHYSICS )
+	self:SetMoveType( MOVETYPE_VPHYSICS )
+	--self:SetSolid( SOLID_VPHYSICS )
+	self:SetSolidFlags(FSOLID_NOT_STANDABLE)
+	--self:SetTrigger(true)
+	self:DrawShadow(false)
+	self:GetPhysicsObject():EnableGravity(false)
 
--- 	self:EmitSound("ARC9_WAW.DG2_BoltLoop")
+	self:EmitSound("ARC9_WAW.DG2_BoltLoop")
 
--- 	self.dmginfo = DamageInfo()
--- 	self.dmginfo:SetDamageType(DMG_SHOCK + DMG_DISSOLVE)
--- 	self.dmginfo:SetAttacker(self:GetOwner())
--- 	self.dmginfo:SetInflictor(self)
--- 	self.dmginfo:SetDamageForce(Vector(2,2,8))
--- 	self.dmginfo:SetDamage(50)
--- end
-
-if SERVER then
-	function ENT:Initialize()
-
-		self:SetHealth(1)
-		self:SetModel("models/props_phx/gibs/flakgib1.mdl")
-		self:SetNoDraw( true )
-
-		self:SetSolid( SOLID_VPHYSICS )
-		self:PhysicsInit( SOLID_VPHYSICS )
-		self:SetMoveType( MOVETYPE_VPHYSICS )
-		self:DrawShadow(false)
-		self:GetPhysicsObject():EnableGravity(false)
-
-		if (self:GetPhysicsObject():IsValid()) then
-			self:GetPhysicsObject():Wake()
-		end
-
-		util.SpriteTrail(self, 0, Color(50 , 255 , 255), false, math.Rand(5,20), math.Rand(45,60), 0.1, 1, "effects/tool_tracer")
-
-		timer.Simple(0.1, function()
-			if !IsValid(self) then return end
-			self:SetCollisionGroup(COLLISION_GROUP_PROJECTILE)
-		end)
-
-		self:EmitSound("ARC9_WAW.DG2_BoltLoop")
-
-		self.dmginfo = DamageInfo()
-		self.dmginfo:SetDamageType(DMG_SHOCK + DMG_DISSOLVE)
-		self.dmginfo:SetAttacker(self:GetOwner())
-		self.dmginfo:SetInflictor(self)
-		self.dmginfo:SetDamageForce(Vector(2,2,8))
-		self.dmginfo:SetDamage(50)
-	end
+	self.dmginfo = DamageInfo()
+	self.dmginfo:SetDamageType(DMG_SHOCK)
+	self.dmginfo:SetAttacker(self:GetOwner())
+	self.dmginfo:SetInflictor(self)
+	self.dmginfo:SetDamageForce(Vector(2,2,8))
+	self.dmginfo:SetDamage(50)
 end
+
+-- if SERVER then
+-- 	function ENT:Initialize()
+
+-- 		self:SetHealth(1)
+-- 		self:SetModel("models/props_phx/gibs/flakgib1.mdl")
+-- 		self:SetNoDraw( true )
+
+-- 		self:SetSolid( SOLID_VPHYSICS )
+-- 		self:PhysicsInit( SOLID_VPHYSICS )
+-- 		self:SetMoveType( MOVETYPE_VPHYSICS )
+-- 		self:DrawShadow(false)
+-- 		self:GetPhysicsObject():EnableGravity(false)
+
+-- 		if (self:GetPhysicsObject():IsValid()) then
+-- 			self:GetPhysicsObject():Wake()
+-- 		end
+
+-- 		util.SpriteTrail(self, 0, Color(50 , 255 , 255), false, math.Rand(5,20), math.Rand(45,60), 0.1, 1, "effects/tool_tracer")
+
+-- 		timer.Simple(0.1, function()
+-- 			if !IsValid(self) then return end
+-- 			self:SetCollisionGroup(COLLISION_GROUP_PROJECTILE)
+-- 		end)
+
+-- 		self:EmitSound("ARC9_WAW.DG2_BoltLoop")
+
+-- 		self.dmginfo = DamageInfo()
+-- 		self.dmginfo:SetDamageType(DMG_SHOCK + DMG_DISSOLVE)
+-- 		self.dmginfo:SetAttacker(self:GetOwner())
+-- 		self.dmginfo:SetInflictor(self)
+-- 		self.dmginfo:SetDamageForce(Vector(2,2,8))
+-- 		self.dmginfo:SetDamage(50)
+-- 	end
+-- end
 
 function ENT:StartTouch(ent)
 	if !(ent:IsNPC() or ent:IsNextBot() or ent:IsPlayer()) then return end
@@ -167,12 +167,12 @@ function ENT:WunderWaffeArc(lastTargetPos, target)
 	else
 		att = target:GetPos() + target:OBBCenter()
 	end
-	-- util.ParticleTracerEx( "tesla_jump", lastTargetPos, att, true, 1, 1 )
+	util.ParticleTracerEx( "tesla_jump", lastTargetPos, att, true, 1, 1 )
 
-	-- ParticleEffectAttach( "tesla_electrocute", PATTACH_POINT_FOLLOW, target, 2)
-	-- if target:OnGround() then
-	-- 	ParticleEffectAttach( "tesla_electrocute1", PATTACH_ABSORIGIN_FOLLOW, target, 0)
-	-- end
+	ParticleEffectAttach( "tesla_electrocute", PATTACH_POINT_FOLLOW, target, 2)
+	if target:OnGround() then
+		ParticleEffectAttach( "tesla_electrocute1", PATTACH_ABSORIGIN_FOLLOW, target, 0)
+	end
 
 	target:EmitSound("ARC9_WAW.DG2_BoltBounce")
 	target:EmitSound("ARC9_WAW.DG2_Arc")

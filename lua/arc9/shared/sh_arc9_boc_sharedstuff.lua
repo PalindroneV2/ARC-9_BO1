@@ -18,6 +18,9 @@ ARC9.CODBOC.BlendEmpty = function(wep)
     end
 end
 
+--CREDIT TO TFA WONDER WEAPONS DEVS: Moon, Hidden, Matsilagi, Deika, Roach, Flaming Fox, Dj_Nathan_, Galaxy
+-- https://steamcommunity.com/sharedfiles/filedetails/?id=1420540808&searchtext=tfa+wonder+weapons
+
 --Category Icons
 list.Set("ContentCategoryIcons", "ARC9 - Black Ops", "entities/bo1_generic.png")
 list.Set("ContentCategoryIcons", "ARC9 - Black Ops II", "entities/bo2_generic.png")

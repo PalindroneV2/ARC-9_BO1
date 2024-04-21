@@ -1,8 +1,25 @@
 SWEP.Base = "arc9_base"
-SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ARC9 - World at War" -- edit this if you like
 SWEP.SubCategory = "Wonder Weapons"
 SWEP.AdminOnly = false
+SWEP.Spawnable = false
+
+
+local addons = engine.GetAddons()
+for _, addon in pairs(addons) do
+    if addon.wsid == "1420540808" and addon.mounted then
+        SWEP.Spawnable = true
+    end
+end
+
+-- SWEP.Hook_PostReload = function(self)
+--     local addons = engine.GetAddons()
+--     for _, addon in pairs(addons) do
+--         if addon.wsid == "1420540808" and addon.mounted then
+--             print("Addon Mounted")
+--         end
+--     end
+-- end
 
 SWEP.PrintName = "Wunderwaffe DG-2"
 SWEP.Class = "Wonder Weapon"
@@ -245,8 +262,8 @@ SWEP.ShootSound = "ARC9_WAW.DG2_Fire"
 --     "^weapons/ARC9/bo2_generic_smg/dist3.wav"
 -- }
 
--- SWEP.MuzzleParticle = "tesla_mflash"
-SWEP.MuzzleParticle = "arc9_waw_tracer_dg2"
+SWEP.MuzzleParticle = "tesla_mflash"
+-- SWEP.MuzzleParticle = "arc9_waw_tracer_dg2"
 SWEP.MuzzleEffect = "arc9_waw_tracer_dg2"
 
 SWEP.ImpactEffect = "TeslaZap"
