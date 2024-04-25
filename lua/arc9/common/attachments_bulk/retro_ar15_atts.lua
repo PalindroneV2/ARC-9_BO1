@@ -35,7 +35,7 @@ ATT.Attachments = {
         DefaultCompactName = "None",
         Bone = "j_gun",
         Scale = 0.9,
-        Pos = Vector(-13.15, 0, -2.5125),
+        Pos = Vector(-13.15, 0, -2.45),
         Icon_Offset = Vector(3, 0, 0),
         Ang = Angle(0, 0, 0),
         Category = {"cod_muzzle"},
@@ -46,7 +46,7 @@ ATT.Attachments = {
         DefaultCompactName = "None",
         Bone = "j_gun",
         Scale = 0.9,
-        Pos = Vector(-13.425, 0, -2.5125),
+        Pos = Vector(-13.425, 0, -2.45),
         Icon_Offset = Vector(3, 0, 0),
         Ang = Angle(0, 0, 0),
         Category = {"cod_muzzle_pistol","cod_muzzle_smg"},
@@ -180,7 +180,7 @@ ATT.Attachments = {
         PrintName = "Muzzle",
         DefaultCompactName = "Birdcage",
         Bone = "j_gun",
-        Pos = Vector(-14, 0, -2.25),
+        Pos = Vector(-14, 0, -0.5 - 1.675),
         Ang = Angle(0, 0, 0),
         Category = {"cod_muzzle"},
         ExcludeElements = {"is_patriot"},
@@ -212,7 +212,7 @@ ATT.Attachments = {
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(13.5, 0, 4.15),
         Category = {"retro_ar15_front_cut"},
-        ExcludeElements = {"ar15_ris", "mlok", "handguard_patriot", "handguard_famas"}
+        ExcludeElements = {"ar15_ris", "mlok", "handguard_patriot", "handguard_famas","handguard_607","handguard_flamer"}
     },
 }
 
@@ -268,7 +268,7 @@ ATT.Attachments = {
         PrintName = "Muzzle",
         DefaultCompactName = "Birdcage",
         Bone = "j_gun",
-        Pos = Vector(-15.2, 0, -0.5 - 1.75),
+        Pos = Vector(-15.2, 0, -0.5 - 1.675),
         Ang = Angle(0, 0, 0),
         Category = {"retro_ar15_muzzle", "cod_muzzle"},
     },
@@ -299,7 +299,7 @@ ATT.Attachments = {
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(13.5, 0, 4.15),
         Category = {"retro_ar15_front_cut"},
-        ExcludeElements = {"ar15_ris", "mlok", "handguard_patriot", "handguard_famas"}
+        ExcludeElements = {"ar15_ris", "mlok", "handguard_patriot", "handguard_famas", "handguard_607","handguard_flamer"}
     },
 }
 
@@ -374,7 +374,7 @@ ATT.Attachments = {
         PrintName = "Muzzle",
         DefaultCompactName = "Birdcage",
         Bone = "j_gun",
-        Pos = Vector(-18, 0, -0.5 - 1.75),
+        Pos = Vector(-18, 0, -0.5 - 1.675),
         Ang = Angle(0, 0, 0),
         Category = {"cod_muzzle"},
     },
@@ -405,7 +405,7 @@ ATT.Attachments = {
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(13.5, 0, 4.15),
         Category = {"retro_ar15_front_cut"},
-        ExcludeElements = {"ar15_ris", "mlok", "handguard_patriot", "handguard_famas"}
+        ExcludeElements = {"ar15_ris", "mlok", "handguard_patriot", "handguard_famas", "handguard_607","handguard_flamer"}
     },
 }
 
@@ -460,7 +460,7 @@ ATT.Attachments = {
         PrintName = "Muzzle",
         DefaultCompactName = "Birdcage",
         Bone = "j_gun",
-        Pos = Vector(-19.75, 0, -0.5-1.75),
+        Pos = Vector(-19.75, 0, -0.5-1.675),
         Ang = Angle(0, 0, 0),
         Category = {"cod_muzzle"},
     },
@@ -472,7 +472,7 @@ ATT.Attachments = {
         Icon_Offset = Vector(19, 0, 4.15),
         Ang = Angle(0, 0, 0),
         Category = {"retro_ar15_front_cut"},
-        ExcludeElements = {"ar15_ris", "mlok", "handguard_patriot", "carbine_hg", "handguard_famas"}
+        ExcludeElements = {"ar15_ris", "mlok", "handguard_patriot", "carbine_hg", "handguard_famas", "handguard_607","handguard_flamer"}
     },
 }
 
@@ -841,16 +841,16 @@ ATT.Category = {"retro_ar15_handguard_11","retro_ar15_handguard_14","retro_ar15_
 ATT.ActivateElements = {"handguard_flamer", "carbine_hg", "nosling"}
 
 ATT.Attachments = {
-    {
-        PrintName = "Gasblock",
-        DefaultCompactName = "G.I.",
-        Bone = "j_gun",
-        Pos = Vector(0, 0, 0),
-        Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(13.5, 0, 4.15),
-        Category = {"retro_ar15_front_cut"},
-        ExcludeElements = {"ar15_ris", "mlok", "handguard_patriot"}
-    },
+    -- {
+    --     PrintName = "Gasblock",
+    --     DefaultCompactName = "G.I.",
+    --     Bone = "j_gun",
+    --     Pos = Vector(0, 0, 0),
+    --     Ang = Angle(0, 0, 0),
+    --     Icon_Offset = Vector(13.5, 0, 4.15),
+    --     Category = {"retro_ar15_front_cut"},
+    --     ExcludeElements = {"ar15_ris", "mlok", "handguard_patriot"}
+    -- },
     {
         PrintName = "Underbarrel",
         DefaultCompactName = "UB",
@@ -894,17 +894,18 @@ ATT.ActivateElements = {"handguard_607", "no_ubgl", "carbine_hg"}
 ATT.RecoilMult = 1.1
 ATT.AimDownSightsTimeMult = 0.9
 
--- ATT.Attachments = {
---     {
---         PrintName = "Gasblock",
---         DefaultCompactName = "G.I.",
---         Bone = "j_gun",
---         Pos = Vector(-6, 0, -0.5),
---         Ang = Angle(0, 0, 0),
---         Category = {"retro_ar15_front_cut"},
---         ExcludeElements = {"ar15_ris", "mlok", "handguard_patriot"}
---     },
--- }
+ATT.Attachments = {
+    {
+        PrintName = "Gasblock",
+        DefaultCompactName = "G.I.",
+        Bone = "j_gun",
+        Pos = Vector(0, 0, 0),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(13.5, 0, 4.15),
+        Category = {"retro_ar15_front_cut"},
+        ExcludeElements = {"ar15_ris", "mlok", "handguard_patriot", "handguard_famas"}
+    },
+}
 
 ARC9.LoadAttachment(ATT, "retro_ar15_handguard_607")
 

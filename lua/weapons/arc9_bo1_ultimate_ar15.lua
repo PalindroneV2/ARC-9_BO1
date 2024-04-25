@@ -434,7 +434,7 @@ SWEP.AttachmentElements = {
     },
     ["future_top"] = {
         Bodygroups = {
-            {0,5},
+            {0,3},
         },
     },
     ["future_carry"] = {
@@ -729,9 +729,6 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     end
 
     -- local CUSTSTATE = self:GetCustomize()
-    if attached["commando_top"] then
-        vm:SetBodygroup(0,3)
-    end
     vm:SetBodygroup(2, length)
     vm:SetBodygroup(3, hand)
     vm:SetBodygroup(8, gasblock)
@@ -758,6 +755,10 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     end
     if attached["future_top"] then
         vm:SetBodygroup(10,2)
+        vm:SetBodygroup(0,3)
+    end
+    if attached["commando_top"] then
+        vm:SetBodygroup(0,3)
     end
 
     if attached["bo1_bipod"] and self:GetBipod() then
