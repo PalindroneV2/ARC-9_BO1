@@ -3,11 +3,11 @@ ATT.CompactName = [[HAMR 3.5x]]
 ATT.Icon = Material("entities/bo1_atts/optics/bo2_hamr.png", "mips smooth")
 ATT.Description = [[Medium range combat scope for improved precision at longer ranges. Combined with a no maginification red dot sight on top.
 Belongs to Black Ops II.]]
-ATT.Pros = {
+ATT.CustomPros = {
     "+ 3x Zoom",
     "+ Clearer sight picture"
 }
-ATT.Cons = {}
+ATT.CustomCons = {}
 ATT.SortOrder = 4
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false

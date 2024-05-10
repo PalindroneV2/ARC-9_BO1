@@ -7,8 +7,8 @@ ATT.CompactName = [[ASP]]
 ATT.Icon = Material("entities/bo1_atts/bocw/atts_ak5/barrels/heavy_pro.png", "mips smooth")
 ATT.Description = [[Much more compact barrel custom made by Paris Theodore for better conceal carry.
 Sports unique gutternsipe irons that become narrower from back to front and painted in bright yellow for faster target aquisition.]]
-ATT.Pros = {}
-ATT.Cons = {}
+ATT.CustomPros = {}
+ATT.CustomCons = {}
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
@@ -36,8 +36,8 @@ ATT.Description = [[
     Custom made for the Mk 22 Mod 0 "Hush Puppy".
     Featuring a threaded barrel, taller iron sights to clear a suppressor and a slide lock for less noise production.
 ]]
-ATT.Pros = {}
-ATT.Cons = {}
+ATT.CustomPros = {}
+ATT.CustomCons = {}
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
@@ -79,8 +79,8 @@ ATT.Description = [[Lightweight polymer grips allow the user to glance at the ma
 
 Colorable
 ]]
-ATT.Pros = {}
-ATT.Cons = {}
+ATT.CustomPros = {}
+ATT.CustomCons = {}
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
@@ -102,8 +102,8 @@ ATT.CompactName = [[ASP]]
 ATT.Icon = Material("entities/bo1_atts/bocw/atts_ak5/barrels/heavy_pro.png", "mips smooth")
 ATT.Description = [[Lightweight translucent polymer grips allow the user to glance at the magazine inside to quickly asses how many shots they have left.
 ]]
-ATT.Pros = {}
-ATT.Cons = {}
+ATT.CustomPros = {}
+ATT.CustomCons = {}
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false

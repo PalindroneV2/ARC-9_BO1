@@ -3,11 +3,11 @@ ATT.CompactName = [[ZF4 4x]]
 ATT.Icon = Material("entities/bo1_atts/optics/waw_mosin.png", "mips smooth")
 ATT.Description = [[Medium range combat scope for improved precision at longer ranges.
 Belongs to World at War.]]
-ATT.Pros = {
+ATT.CustomPros = {
     "+ 4x Zoom",
     "+ Clearer sight picture"
 }
-ATT.Cons = {}
+ATT.CustomCons = {}
 ATT.SortOrder = 4
 ATT.MenuCategory = "ARC9 - WAW Attachments"
 ATT.Free = false

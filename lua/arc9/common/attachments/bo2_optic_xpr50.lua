@@ -3,11 +3,11 @@ ATT.CompactName = [[XPR-50]]
 ATT.Icon = Material("entities/bo1_atts/optics/bo1_vzoom.png", "mips smooth")
 ATT.Description = [[High-Powered Sniper Scope for the XPR-50.
 Belongs to Black Ops II.]]
-ATT.Pros = {
+ATT.CustomPros = {
     "+ 3x Zoom",
     "+ Clearer sight picture"
 }
-ATT.Cons = {}
+ATT.CustomCons = {}
 ATT.SortOrder = 4
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false

@@ -3,11 +3,11 @@ ATT.CompactName = [[WA2000]]
 ATT.Icon = Material("entities/bo1_atts/optics/bo1_vzoom.png", "mips smooth")
 ATT.Description = [[Long range combat scope with variable zoom.
 Belongs to Black Ops.]]
-ATT.Pros = {
+ATT.CustomPros = {
     "+ Variable Zoom",
     "+ Clearer sight picture"
 }
-ATT.Cons = {}
+ATT.CustomCons = {}
 ATT.SortOrder = 4
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false

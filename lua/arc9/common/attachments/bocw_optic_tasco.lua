@@ -3,10 +3,10 @@ ATT.CompactName = [[TASCO CW]]
 ATT.Icon = Material("entities/bo1_atts/optics/bo1_reflex.png", "mips smooth")
 ATT.Description = [[Provides a small electronic dot reticle which speeds up target acquisition by eliminating the need to line up irons.
 Belongs to Black Ops Cold War.]]
-ATT.Pros = {
+ATT.CustomPros = {
     "+ Clearer sight picture"
 }
-ATT.Cons = {}
+ATT.CustomCons = {}
 ATT.SortOrder = 1
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false

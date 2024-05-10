@@ -3,11 +3,11 @@ ATT.CompactName = [[ELCAN 2x]]
 ATT.Icon = Material("entities/bo1_atts/optics/bocw_elcan.png", "mips smooth")
 ATT.Description = [[Medium range combat scope for improved precision at longer ranges.
 Belongs to Black Ops.]]
-ATT.Pros = {
+ATT.CustomPros = {
     "+ 2x Zoom",
     "+ Clearer sight picture"
 }
-ATT.Cons = {}
+ATT.CustomCons = {}
 ATT.SortOrder = 4
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false

@@ -2,10 +2,10 @@ ATT.PrintName = "SUSAT Scope (2-4x)"
 ATT.CompactName = [[SUSAT 4x]]
 ATT.Icon = Material("entities/bo1_atts/optics/bo1_coltscope.png", "mips smooth")
 ATT.Description = [[Medium range combat scope for improved precision at longer ranges.]]
-ATT.Pros = {
+ATT.CustomPros = {
     "3x Zoom",
 }
-ATT.Cons = {}
+ATT.CustomCons = {}
 ATT.SortOrder = 4
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false

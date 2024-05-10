@@ -3,12 +3,12 @@ ATT.CompactName = [[Dual-Band]]
 ATT.Icon = Material("entities/bo1_atts/optics/bo2_dual_band.png", "mips smooth")
 ATT.Description = [[Black Ops II Thermal Sight.
 Magnified optical sight that highlights enemies in yellow in a green background.]]
-ATT.Pros = {
+ATT.CustomPros = {
     "+ 2x Zoom",
     "+ Clearer sight picture",
     "+ Marks targets"
 }
-ATT.Cons = {}
+ATT.CustomCons = {}
 ATT.SortOrder = 4
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false

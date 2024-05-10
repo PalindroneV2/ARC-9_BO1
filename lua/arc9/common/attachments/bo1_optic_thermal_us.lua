@@ -3,12 +3,12 @@ ATT.CompactName = [[IR Scope]]
 ATT.Icon = Material("entities/bo1_atts/optics/bo1_thermal.png", "mips smooth")
 ATT.Description = [[Black Ops Thermal Sight.
 Low magnification optical sight that highlights enemies in white in a blue background.]]
-ATT.Pros = {
+ATT.CustomPros = {
     "+ 2x Zoom",
     "+ Clearer sight picture",
     "+ Marks targets"
 }
-ATT.Cons = {}
+ATT.CustomCons = {}
 ATT.SortOrder = 4
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false

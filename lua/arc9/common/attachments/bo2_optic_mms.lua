@@ -3,12 +3,12 @@ ATT.CompactName = [[MMS]]
 ATT.Icon = Material("entities/bo1_atts/optics/bo2_mms.png", "mips smooth")
 ATT.Description = [[Black Ops II Electronic Sight.
 Provides an electronic crosshair for the user as well as highlighting targets in red.]]
-ATT.Pros = {
+ATT.CustomPros = {
     "+ 2x Zoom",
     "+ Clearer sight picture",
     "+ Marks targets"
 }
-ATT.Cons = {}
+ATT.CustomCons = {}
 ATT.SortOrder = 4
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false

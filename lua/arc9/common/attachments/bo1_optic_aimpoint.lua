@@ -3,10 +3,10 @@ ATT.CompactName = [[REFLEX]]
 ATT.Icon = Material("entities/bo1_atts/optics/bo1_reflex.png", "mips smooth")
 ATT.Description = [[Small, tube-based optic. Provides a small electronic dot reticle which speeds up target acquisition by eliminating the need to line up irons.
 Belongs to Black Ops.]]
-ATT.Pros = {
+ATT.CustomPros = {
     "+ Clearer sight picture"
 }
-ATT.Cons = {
+ATT.CustomCons = {
     "- Low profile. Front sights might block it."
 }
 ATT.SortOrder = 1

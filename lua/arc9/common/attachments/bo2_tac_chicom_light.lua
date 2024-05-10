@@ -3,9 +3,9 @@ ATT.CompactName = [[CHICOM]]
 ATT.Icon = Material("entities/bo1_atts/tactical/bo2_laser.png", "mips smooth")
 ATT.Description = [[Tacical flashlight that goes under the carry handle.
 Slightly tightens aim when firing from hip.]]
-ATT.Pros = {
+ATT.CustomPros = {
 }
-ATT.Cons = {}
+ATT.CustomCons = {}
 ATT.SortOrder = 1
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false

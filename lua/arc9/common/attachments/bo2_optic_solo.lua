@@ -3,10 +3,10 @@ ATT.CompactName = [[RDS II]]
 ATT.Icon = Material("entities/bo1_atts/optics/bo2_rds.png", "mips smooth")
 ATT.Description = [[Typical red dot sight which uses a holographic reticle for faster sight aqusition.
 Belongs to Black Ops II.]]
-ATT.Pros = {
+ATT.CustomPros = {
     "+ Clearer sight picture"
 }
-ATT.Cons = {}
+ATT.CustomCons = {}
 ATT.SortOrder = 1
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false

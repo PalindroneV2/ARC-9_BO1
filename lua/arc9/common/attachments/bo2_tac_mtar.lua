@@ -3,8 +3,8 @@ ATT.CompactName = [[MTAR]]
 ATT.Icon = Material("entities/bo1_atts/tactical/bo2_laser.png", "mips smooth")
 ATT.Description = [[Tacical laser pointer. Tighter aim when firing from hip, less dispersion when moving.
 Belongs to Black Ops II.]]
-ATT.Pros = {}
-ATT.Cons = {}
+ATT.CustomPros = {}
+ATT.CustomCons = {}
 ATT.SortOrder = 1
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false

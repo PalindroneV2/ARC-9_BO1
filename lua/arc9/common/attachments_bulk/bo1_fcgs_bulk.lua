@@ -7,8 +7,8 @@ ATT.CompactName = "AUTO"
 ATT.Icon = Material("entities/bo1_atts/other/select_fire.png")
 ATT.Description = [[Fully Automatic fire control group.
 Recoil control and spread increases.]]
-ATT.Pros = {}
-ATT.Cons = {
+ATT.CustomPros = {}
+ATT.CustomCons = {
 }
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
@@ -41,8 +41,8 @@ ATT.CompactName = "BURST"
 ATT.Icon = Material("entities/bo1_atts/other/select_fire.png")
 ATT.Description = [[Standard 3-round burst fire control group.
 Greatly improves recoil control and reduces spread.]]
-ATT.Pros = {}
-ATT.Cons = {
+ATT.CustomPros = {}
+ATT.CustomCons = {
 }
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
@@ -77,8 +77,8 @@ ATT.CompactName = "RAPID"
 ATT.Icon = Material("entities/bo1_atts/other/rapid_fire.png")
 ATT.Description = [[Fire Control Group modification that allows for faster rate of fire.
 Improves rate of fire but recoil control suffers.]]
-ATT.Pros = {}
-ATT.Cons = {
+ATT.CustomPros = {}
+ATT.CustomCons = {
 }
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
@@ -101,8 +101,8 @@ ATT.CompactName = "SLOW"
 ATT.Icon = Material("entities/bo1_atts/other/rapid_fire.png")
 ATT.Description = [[Fire Control Group modification that slows down the cyclic rate of a weapon.
 Improves recoil control.]]
-ATT.Pros = {}
-ATT.Cons = {
+ATT.CustomPros = {}
+ATT.CustomCons = {
 }
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
@@ -129,8 +129,8 @@ ATT.CompactName = "SEMI"
 ATT.Icon = Material("entities/bo1_atts/other/select_fire.png")
 ATT.Description = [[Competition grade semi-automatic fire group.
 It's high quality, finely machined parts make this the best option for marksmanship.]]
-ATT.Pros = {}
-ATT.Cons = {
+ATT.CustomPros = {}
+ATT.CustomCons = {
 }
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
@@ -163,8 +163,8 @@ ATT.CompactName = "LC10"
 ATT.Icon = Material("entities/bo1_atts/other/rapid_fire.png")
 ATT.Description = [[Heavy modification for the MPL that gives it a significantly higher rate of fire.
 Spread is drastically increased.]]
-ATT.Pros = {}
-ATT.Cons = {
+ATT.CustomPros = {}
+ATT.CustomCons = {
 }
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
@@ -188,8 +188,8 @@ ATT.CompactName = "STINGER"
 ATT.Icon = Material("entities/bo1_atts/other/rapid_fire.png")
 ATT.Description = [[Built from the remains of an aircraft machine gun, an M1 Garand and a BAR. Storm the beaches of Iwo Jima in style.
 However now that it isn't airborne, sustained fire may heat up the weapon too much.]]
-ATT.Pros = {}
-ATT.Cons = {
+ATT.CustomPros = {}
+ATT.CustomCons = {
 }
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
@@ -212,8 +212,8 @@ ATT.CompactName = "G935"
 ATT.Icon = Material("entities/bo1_atts/other/rapid_fire.png")
 ATT.Description = [[Group 935 has learned much from the manipulation of matter through element 115.
 This modification allows the MG-08 to fire 50% faster than base RPM.]]
-ATT.Pros = {}
-ATT.Cons = {
+ATT.CustomPros = {}
+ATT.CustomCons = {
 }
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
@@ -236,8 +236,8 @@ ATT.CompactName = "AUTO"
 ATT.Icon = Material("entities/bo1_atts/other/select_fire.png")
 ATT.Description = [[Select-fire variant made for police and military use. Features an extended compensated barrel and an attachment point for magazine in front.
 Fire rate is dramatically increased, but so is weapon spread and recoil.]]
-ATT.Pros = {}
-ATT.Cons = {
+ATT.CustomPros = {}
+ATT.CustomCons = {
 }
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - BO1 Attachments"

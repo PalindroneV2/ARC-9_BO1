@@ -3,8 +3,8 @@ ATT.CompactName = [[BCPU]]
 ATT.Icon = Material("entities/bo1_atts/optics/bo2_bcpu.png", "mips smooth")
 ATT.Description = [[Electronic ballistics computer that assists user's shot placement.
 Belongs to Black Ops II.]]
-ATT.Pros = {}
-ATT.Cons = {}
+ATT.CustomPros = {}
+ATT.CustomCons = {}
 ATT.SortOrder = 4
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
