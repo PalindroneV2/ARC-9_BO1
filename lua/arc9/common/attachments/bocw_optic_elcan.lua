@@ -4,8 +4,8 @@ ATT.Icon = Material("entities/bo1_atts/optics/bocw_elcan.png", "mips smooth")
 ATT.Description = [[Medium range combat scope for improved precision at longer ranges.
 Belongs to Black Ops.]]
 ATT.CustomPros = {
-    "+ 2x Zoom",
-    "+ Clearer sight picture"
+    ["Zoom Level"] = "2x",
+    ["Backup Irons"] = "True"
 }
 ATT.CustomCons = {}
 ATT.SortOrder = 4

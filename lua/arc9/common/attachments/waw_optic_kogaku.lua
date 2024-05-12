@@ -4,8 +4,7 @@ ATT.Icon = Material("entities/bo1_atts/optics/waw_mosin.png", "mips smooth")
 ATT.Description = [[Medium range combat scope for improved precision at longer ranges.
 Belongs to World at War.]]
 ATT.CustomPros = {
-    "+ 4x Zoom",
-    "+ Clearer sight picture"
+    ["Zoom Level"] = "4x",
 }
 ATT.CustomCons = {}
 ATT.SortOrder = 4

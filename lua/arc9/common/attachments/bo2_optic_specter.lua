@@ -4,8 +4,8 @@ ATT.Icon = Material("entities/bo1_atts/optics/bo2_specter.png", "mips smooth")
 ATT.Description = [[Medium range combat scope for improved precision at longer ranges.
 Belongs to Black Ops.]]
 ATT.CustomPros = {
-    "+ 2x Zoom",
-    "+ Clearer sight picture"
+    ["Zoom Level"] = "1-4x",
+    ["Backup Irons"] = "True"
 }
 ATT.CustomCons = {}
 ATT.SortOrder = 4

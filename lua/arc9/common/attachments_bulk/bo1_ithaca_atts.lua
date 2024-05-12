@@ -223,8 +223,7 @@ ATT.PrintName = "Stakeout Foregrip"
 ATT.CompactName = [[Synth-Foregrip]]
 ATT.Icon = Material("entities/bo1_atts/ubs/bo1_foregrip.png", "mips smooth")
 ATT.Description = [[Integral foregrip modeled into the synthetic pump under the weapon.]]
-ATT.CustomPros = {
-}
+ATT.CustomPros = {}
 ATT.CustomCons = {}
 ATT.SortOrder = 4
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
@@ -254,8 +253,7 @@ ATT.PrintName = "Sling-Wrapped Synthetic Pump"
 ATT.CompactName = [[Sling-Synth]]
 ATT.Icon = Material("entities/bo1_atts/ubs/bo1_foregrip.png", "mips smooth")
 ATT.Description = [[Lightweight synthetic pump wrapped in a sling to prevent slipping when cycling.]]
-ATT.CustomPros = {
-}
+ATT.CustomPros = {}
 ATT.CustomCons = {}
 ATT.SortOrder = 4
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
@@ -279,8 +277,7 @@ ATT.PrintName = "Sling-Wrapped  Pump"
 ATT.CompactName = [[Sling]]
 ATT.Icon = Material("entities/bo1_atts/ubs/bo1_foregrip.png", "mips smooth")
 ATT.Description = [[Traditional wooden pump wrapped in a sling to prevent slipping when cycling.]]
-ATT.CustomPros = {
-}
+ATT.CustomPros = {}
 ATT.CustomCons = {}
 ATT.SortOrder = 4
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
@@ -301,8 +298,7 @@ ATT.PrintName = "Synthetic Pump"
 ATT.CompactName = [[Synth]]
 ATT.Icon = Material("entities/bo1_atts/ubs/bo1_foregrip.png", "mips smooth")
 ATT.Description = [[Lightweight synthetic pump.]]
-ATT.CustomPros = {
-}
+ATT.CustomPros = {}
 ATT.CustomCons = {}
 ATT.SortOrder = 4
 ATT.MenuCategory = "ARC9 - BO1 Attachments"

@@ -3,7 +3,8 @@ ATT.CompactName = [[SUSAT 4x]]
 ATT.Icon = Material("entities/bo1_atts/optics/bo1_coltscope.png", "mips smooth")
 ATT.Description = [[Medium range combat scope for improved precision at longer ranges.]]
 ATT.CustomPros = {
-    "3x Zoom",
+    ["Zoom Level"] = "2-4x",
+    ["Backup Irons"] = "True"
 }
 ATT.CustomCons = {}
 ATT.SortOrder = 4

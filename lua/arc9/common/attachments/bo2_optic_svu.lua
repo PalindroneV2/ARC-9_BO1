@@ -4,8 +4,7 @@ ATT.Icon = Material("entities/bo1_atts/optics/bo1_vzoom.png", "mips smooth")
 ATT.Description = [[High-Powered Sniper Scope for the SVU-AS.
 Belongs to Black Ops II.]]
 ATT.CustomPros = {
-    "+ 3x Zoom",
-    "+ Clearer sight picture"
+    ["Zoom Level"] = "12x",
 }
 ATT.CustomCons = {}
 ATT.SortOrder = 4

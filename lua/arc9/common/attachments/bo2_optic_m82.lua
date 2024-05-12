@@ -4,8 +4,7 @@ ATT.Icon = Material("entities/bo1_atts/optics/bo1_vzoom.png", "mips smooth")
 ATT.Description = [[American high powered scope for the Barret M82.
 Belongs to Black Ops II.]]
 ATT.CustomPros = {
-    "+ 3x Zoom",
-    "+ Clearer sight picture"
+    ["Zoom Level"] = "12x",
 }
 ATT.CustomCons = {}
 ATT.SortOrder = 4

@@ -397,8 +397,7 @@ ATT.PrintName = "No Foregrip"
 ATT.CompactName = [[BARE]]
 ATT.Icon = Material("entities/bo1_atts/ubs/bo2_foregrip.png", "mips smooth")
 ATT.Description = [[Handguard with no foregrip. Increases mobility slightly.]]
-ATT.CustomPros = {
-}
+ATT.CustomPros = {}
 ATT.CustomCons = {}
 ATT.SortOrder = 4
 ATT.MenuCategory = "ARC9 - BO1 Attachments"

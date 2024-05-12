@@ -4,7 +4,7 @@ ATT.Icon = Material("entities/bo1_atts/optics/bo2_holo.png", "mips smooth")
 ATT.Description = [[Typical holograpic sight which uses a holographic reticle for faster sight aqusition.
 Belongs to Black Ops II.]]
 ATT.CustomPros = {
-    "+ Clearer sight picture"
+    ["Clearer sight picture"] = "",
 }
 ATT.CustomCons = {}
 ATT.SortOrder = 2

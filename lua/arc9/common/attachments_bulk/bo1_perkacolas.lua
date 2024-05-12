@@ -108,7 +108,7 @@ ATT.CompactName = [[JUG]]
 ATT.Icon = Material("entities/bo1_atts/perkacola/juggernog.png")
 ATT.Description = [[Gain 60% resistance to damage.]]
 ATT.CustomPros = {
-    "+ 60% Resistance to all damage."
+    ["Damage Resistance"] = "+60%"
 }
 ATT.CustomCons = {}
 ATT.SortOrder = 0
@@ -129,7 +129,7 @@ ATT.Icon = Material("entities/bo1_atts/perkacola/phd_flopper.png")
 ATT.Description = [[Gain complete resistance to explosives and fall damage.
 Falling from any height that would damage the player triggers an explosion.]]
 ATT.CustomPros = {
-    "+ Immunity to explosive damage."
+    ["Explosive Damage Immunity"] = "True"
 }
 ATT.CustomCons = {}
 ATT.SortOrder = 0
@@ -148,9 +148,7 @@ ATT.PrintName = [[Vulture Aid]]
 ATT.CompactName = [[VULTURE]]
 ATT.Icon = Material("entities/bo1_atts/perkacola/vulture_aid.png")
 ATT.Description = [[Enemies drop ammo pack on death.]]
-ATT.CustomPros = {
-    "+ Immunity to explosive damage."
-}
+ATT.CustomPros = {}
 ATT.CustomCons = {}
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - BO1 Attachments"

@@ -7,7 +7,9 @@ ATT.CompactName = [[BOWIE]]
 ATT.Icon = Material("entities/bo1_atts/ubs/bowie_knife.png")
 ATT.Description = [[Large fuck-off knife specialized in slicing up meat-bags and maggot-addicts.]]
 ATT.CustomPros = {}
-ATT.CustomCons = {}
+ATT.CustomCons = {
+    ["Post Melee Recovery Speed"] = "-50%"
+}
 ATT.SortOrder = 5
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false

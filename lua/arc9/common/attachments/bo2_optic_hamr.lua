@@ -4,8 +4,8 @@ ATT.Icon = Material("entities/bo1_atts/optics/bo2_hamr.png", "mips smooth")
 ATT.Description = [[Medium range combat scope for improved precision at longer ranges. Combined with a no maginification red dot sight on top.
 Belongs to Black Ops II.]]
 ATT.CustomPros = {
-    "+ 3x Zoom",
-    "+ Clearer sight picture"
+    ["Zoom Level"] = "3.5x",
+    ["Backup Optic"] = "True"
 }
 ATT.CustomCons = {}
 ATT.SortOrder = 4

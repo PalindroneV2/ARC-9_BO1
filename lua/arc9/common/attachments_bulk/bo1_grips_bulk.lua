@@ -7,8 +7,7 @@ ATT.CompactName = [[I. GRIP]]
 ATT.Icon = Material("entities/bo1_atts/ubs/bo1_foregrip.png", "mips smooth")
 ATT.Description = [[Vertical foregrip that goes under the weapon's handguard.
 Belongs to Black Ops.]]
-ATT.CustomPros = {
-}
+ATT.CustomPros = {}
 ATT.CustomCons = {}
 ATT.SortOrder = 4
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
@@ -29,8 +28,7 @@ ATT.CompactName = [[VERT]]
 ATT.Icon = Material("entities/bo1_atts/ubs/bo1_foregrip.png", "mips smooth")
 ATT.Description = [[Vertical foregrip that goes under the weapon's handguard.
 Belongs to Black Ops.]]
-ATT.CustomPros = {
-}
+ATT.CustomPros = {}
 ATT.CustomCons = {}
 ATT.SortOrder = 4
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
@@ -58,8 +56,7 @@ ATT.Description = [[Vertical foregrip that goes under the weapon's handguard.
 Belongs to Black Ops II.]]
 
 ATT.Folder = "BO2"
-ATT.CustomPros = {
-}
+ATT.CustomPros = {}
 ATT.CustomCons = {}
 ATT.SortOrder = 4
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
@@ -88,8 +85,7 @@ ATT.Description = [[Vertical foregrip with all around goodd ergonomics provides 
 Belongs to Black Ops II.]]
 
 ATT.Folder = "BO2"
-ATT.CustomPros = {
-}
+ATT.CustomPros = {}
 ATT.CustomCons = {}
 ATT.SortOrder = 4
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
@@ -120,8 +116,7 @@ ATT.Description = [[Vertical foregrip that goes under the weapon's handguard.
 Belongs to Black Ops II.]]
 
 ATT.Folder = "BO2"
-ATT.CustomPros = {
-}
+ATT.CustomPros = {}
 ATT.CustomCons = {}
 ATT.SortOrder = 4
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
@@ -152,8 +147,7 @@ ATT.Description = [[Short foregrip that provides better mobility.
 Belongs to Black Ops II.]]
 
 ATT.Folder = "BO2"
-ATT.CustomPros = {
-}
+ATT.CustomPros = {}
 ATT.CustomCons = {}
 ATT.SortOrder = 4
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
@@ -183,8 +177,7 @@ ATT.Description = [[Vertical foregrip that goes under the weapons handguard.
 Belongs to Black Ops II.]]
 
 ATT.Folder = "BO2"
-ATT.CustomPros = {
-}
+ATT.CustomPros = {}
 ATT.CustomCons = {}
 ATT.SortOrder = 4
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
@@ -215,8 +208,7 @@ ATT.Description = [[Vertical foregrip that goes under the weapon's handguard.
 Belongs to Black Ops Cold War.]]
 
 ATT.Folder = "BOCW/NATO"
-ATT.CustomPros = {
-}
+ATT.CustomPros = {}
 ATT.CustomCons = {}
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
@@ -244,8 +236,7 @@ ATT.Description = [[Vertical foregrip that goes under the weapon's handguard.
 Belongs to Black Ops Cold War.]]
 
 ATT.Folder = "BOCW/NATO"
-ATT.CustomPros = {
-}
+ATT.CustomPros = {}
 ATT.CustomCons = {}
 ATT.SortOrder = 6
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
@@ -275,8 +266,7 @@ ATT.Description = [[Short foregrip that provides minor mobility bonuses.
 Belongs to Black Ops Cold War.]]
 
 ATT.Folder = "BOCW/NATO"
-ATT.CustomPros = {
-}
+ATT.CustomPros = {}
 ATT.CustomCons = {}
 ATT.SortOrder = 2
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
@@ -305,8 +295,7 @@ ATT.Description = [[Vertical foregrip that goes under the weapon's handguard.
 Belongs to Black Ops Cold War.]]
 
 ATT.Folder = "BOCW/NATO"
-ATT.CustomPros = {
-}
+ATT.CustomPros = {}
 ATT.CustomCons = {}
 ATT.SortOrder = 8
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
@@ -337,8 +326,7 @@ ATT.Description = [[Short foregrip that provides minor mobility bonuses.
 Belongs to Black Ops Cold War.]]
 
 ATT.Folder = "BOCW/NATO"
-ATT.CustomPros = {
-}
+ATT.CustomPros = {}
 ATT.CustomCons = {}
 ATT.SortOrder = 4
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
@@ -369,8 +357,7 @@ ATT.Description = [[Short foregrip that provides minor mobility bonuses.
 Belongs to Black Ops Cold War.]]
 
 ATT.Folder = "BOCW/NATO"
-ATT.CustomPros = {
-}
+ATT.CustomPros = {}
 ATT.CustomCons = {}
 ATT.SortOrder = 10
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
@@ -402,8 +389,7 @@ ATT.Description = [[Vertical foregrip that goes under the weapon's handguard.
 Belongs to Black Ops Cold War.]]
 
 ATT.Folder = "BOCW/WARSAW"
-ATT.CustomPros = {
-}
+ATT.CustomPros = {}
 ATT.CustomCons = {}
 ATT.SortOrder = 1
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
@@ -431,8 +417,7 @@ ATT.Description = [[Vertical foregrip that goes under the weapon's handguard.
 Belongs to Black Ops Cold War.]]
 
 ATT.Folder = "BOCW/WARSAW"
-ATT.CustomPros = {
-}
+ATT.CustomPros = {}
 ATT.CustomCons = {}
 ATT.SortOrder = 7
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
@@ -462,8 +447,7 @@ ATT.Description = [[Short foregrip that provides minor mobility bonuses.
 Belongs to Black Ops Cold War.]]
 
 ATT.Folder = "BOCW/WARSAW"
-ATT.CustomPros = {
-}
+ATT.CustomPros = {}
 ATT.CustomCons = {}
 ATT.SortOrder = 3
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
@@ -492,8 +476,7 @@ ATT.Description = [[Vertical foregrip that goes under the weapon's handguard.
 Belongs to Black Ops Cold War.]]
 
 ATT.Folder = "BOCW/WARSAW"
-ATT.CustomPros = {
-}
+ATT.CustomPros = {}
 ATT.CustomCons = {}
 ATT.SortOrder = 9
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
@@ -524,8 +507,7 @@ ATT.Description = [[Short foregrip that provides minor mobility bonuses.
 Belongs to Black Ops Cold War.]]
 
 ATT.Folder = "BOCW/WARSAW"
-ATT.CustomPros = {
-}
+ATT.CustomPros = {}
 ATT.CustomCons = {}
 ATT.SortOrder = 5
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
@@ -556,8 +538,7 @@ ATT.Description = [[Short foregrip that provides minor mobility bonuses.
 Belongs to Black Ops Cold War.]]
 
 ATT.Folder = "BOCW/WARSAW"
-ATT.CustomPros = {
-}
+ATT.CustomPros = {}
 ATT.CustomCons = {}
 ATT.SortOrder = 11
 ATT.MenuCategory = "ARC9 - BO1 Attachments"

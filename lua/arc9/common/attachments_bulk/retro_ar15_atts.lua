@@ -883,7 +883,7 @@ The M607a was a very early carbine version of the M16 marketed as an SMG, not fo
 Ergonomics aren't the best and it makes controlling the weapon's recoil a bit harder, though it is lighter than the ribbed handguard.]]
 ATT.CustomPros = {}
 ATT.CustomCons = {
-    "-Cannot attach UBGLs",
+    ["Cannot attach UBGLs"] = ""
 }
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - BO1 AR-15 Attachments"
@@ -969,11 +969,11 @@ ATT.Description = [[Rare Vietnam-era parts for an M231 that fit an 11.5" Barrel.
 The M321 FPW was a special made M16 variant, which as the name implies, was used for the firing ports of armored vehicles. as such it lacks a front sight.
 Because the handguard is smooth it's not as easy to hold on to as the ribbed or traingular, but it's lighter than either.]]
 ATT.CustomPros = {
-    "+Improves sight picture of low profile optics.",
+    ["Improves sight picture of low profile optics"] = ""
 }
 ATT.CustomCons = {
-    "-Cannot attach UBGLs",
-    "-No Front Sight.",
+    ["Cannot attach UBGLs"] = "",
+    ["No Front Sight"] = "",
 }
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - BO1 AR-15 Attachments"
@@ -1616,8 +1616,7 @@ ATT.Icon = Material("entities/bo1_atts/other/select_fire.png")
 ATT.Description = [[Standard 3-round burst fire control group used since 1983 for the M16 in all branches of the US military. Except for the Navy, of course.
 Greatly improves recoil control and reduces spread.]]
 ATT.CustomPros = {}
-ATT.CustomCons = {
-}
+ATT.CustomCons = {}
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - BO1 AR-15 Attachments"
 ATT.Free = true
@@ -1653,8 +1652,7 @@ ATT.Icon = Material("entities/bo1_atts/other/select_fire.png")
 ATT.Description = [[Competition grade semi-automatic fire group.
 Its high quality, finely machined parts make this the best option for marksmanship.]]
 ATT.CustomPros = {}
-ATT.CustomCons = {
-}
+ATT.CustomCons = {}
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - BO1 AR-15 Attachments"
 ATT.Free = true
@@ -1688,8 +1686,7 @@ ATT.Icon = Material("entities/bo1_atts/other/select_fire.png")
 ATT.Description = [[6-round burst fire control group obtained through means unknown.
 Improves recoil control and reduces spread.]]
 ATT.CustomPros = {}
-ATT.CustomCons = {
-}
+ATT.CustomCons = {}
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - BO1 AR-15 Attachments"
 ATT.Free = true
@@ -1726,8 +1723,7 @@ ATT.CompactName = "FPW"
 ATT.Icon = Material("entities/bo1_atts/other/select_fire.png")
 ATT.Description = [[Increased rate of fire for vehicle Firing Port Weapons.]]
 ATT.CustomPros = {}
-ATT.CustomCons = {
-}
+ATT.CustomCons = {}
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - BO1 AR-15 Attachments"
 ATT.Free = true
@@ -2342,7 +2338,7 @@ ATT.Icon = Material("entities/bo1_atts/ammo/drum.png")
 ATT.Description = [[It gives you infinite ammo because the internal feeding mechanism is shaped like an infinity symbol.]]
 ATT.CustomPros = {}
 ATT.CustomCons = {
-"Disables Most Attachments"
+    ["Disables Most Attachments"] = ""
 }
 ATT.SortOrder = 6
 ATT.MenuCategory = "ARC9 - BO1 AR-15 Attachments"

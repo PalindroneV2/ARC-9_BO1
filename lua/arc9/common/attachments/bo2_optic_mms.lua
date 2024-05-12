@@ -4,9 +4,9 @@ ATT.Icon = Material("entities/bo1_atts/optics/bo2_mms.png", "mips smooth")
 ATT.Description = [[Black Ops II Electronic Sight.
 Provides an electronic crosshair for the user as well as highlighting targets in red.]]
 ATT.CustomPros = {
-    "+ 2x Zoom",
-    "+ Clearer sight picture",
-    "+ Marks targets"
+    ["Zoom Level"] = "2x",
+    ["Clearer sight picture"] = "",
+    ["Threat Identification"] = "True"
 }
 ATT.CustomCons = {}
 ATT.SortOrder = 4

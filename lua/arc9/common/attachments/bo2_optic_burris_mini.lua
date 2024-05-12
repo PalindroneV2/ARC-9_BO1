@@ -4,10 +4,10 @@ ATT.Icon = Material("entities/bo1_atts/optics/bo2_rds.png", "mips smooth")
 ATT.Description = [[Small, low profile optic mainly used by pistols. Provides a small electronic dot reticle which speeds up target acquisition by eliminating the need to line up irons.
 Belongs to Black Ops II.]]
 ATT.CustomPros = {
-    "+ Clearer sight picture"
+    ["Clearer sight picture"] = ""
 }
 ATT.CustomCons = {
-    "- Low profile. Front sights might block it."
+    ["Low profile. Front sights might block it."] = ""
 }
 ATT.SortOrder = 1
 ATT.MenuCategory = "ARC9 - BO1 Attachments"

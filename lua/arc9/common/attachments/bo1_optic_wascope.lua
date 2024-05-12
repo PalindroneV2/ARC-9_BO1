@@ -4,8 +4,7 @@ ATT.Icon = Material("entities/bo1_atts/optics/bo1_vzoom.png", "mips smooth")
 ATT.Description = [[Long range combat scope with variable zoom.
 Belongs to Black Ops.]]
 ATT.CustomPros = {
-    "+ Variable Zoom",
-    "+ Clearer sight picture"
+    ["Variable Zoom"] = "",
 }
 ATT.CustomCons = {}
 ATT.SortOrder = 4

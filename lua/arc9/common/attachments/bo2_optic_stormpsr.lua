@@ -4,9 +4,8 @@ ATT.Icon = Material("entities/bo1_atts/optics/bo2_dual_band.png", "mips smooth")
 ATT.Description = [[Black Ops II Thermal Sight.
 High magnification optical sight that highlights enemies in white in a blue background.]]
 ATT.CustomPros = {
-    "+ 2x Zoom",
-    "+ Clearer sight picture",
-    "+ Marks targets"
+    ["Zoom Level"] = "2x",
+    ["Threat Identification"] = "True"
 }
 ATT.CustomCons = {}
 ATT.SortOrder = 4

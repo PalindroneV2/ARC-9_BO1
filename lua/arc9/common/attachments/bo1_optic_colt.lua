@@ -4,8 +4,7 @@ ATT.Icon = Material("entities/bo1_atts/optics/bo1_coltscope.png", "mips smooth")
 ATT.Description = [[Medium range combat scope for improved precision at longer ranges.
 Belongs to Black Ops.]]
 ATT.CustomPros = {
-    "+ 3x Zoom",
-    "+ Clearer sight picture"
+    ["Zoom Level"] = "3x",
 }
 ATT.CustomCons = {}
 ATT.SortOrder = 4
