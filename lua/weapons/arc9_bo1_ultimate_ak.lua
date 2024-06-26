@@ -537,35 +537,35 @@ SWEP.AttachmentElements = {
     },
     ["modernhand3"] = {
         AttPosMods = {
-            [6] = {
+            [7] = {
                 Pos = Vector(11, 0, 0),
             }
         }
     },
     ["rpdhand"] = {
         AttPosMods = {
-            [6] = {
+            [7] = {
                 Pos = Vector(11.5, 0, 0.5),
             }
         }
     },
     ["barrel_rpk"] = {
         AttPosMods = {
-            [7] = {
-                Pos = Vector(30.7, 0, 1),
+            [8] = {
+                Pos = Vector(31.25, 0, 1),
             }
         }
     },
     ["barrel_102"] = {
         AttPosMods = {
-            [7] = {
+            [8] = {
                 Pos = Vector(16.5, 0, 1.025),
             }
         }
     },
     ["barrel_krinkov"] = {
         AttPosMods = {
-            [7] = {
+            [8] = {
                 Pos = Vector(15, 0, 1.025),
             }
         }
@@ -584,6 +584,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local hand = 0
     local grip = 0
     local aktype = 0
+    local rail = 0
     if attached["barrel_krinkov"] then
         barrel = 1
         irons = 1
@@ -712,12 +713,14 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     end
 
     if attached["rail_bo1"] then
-        vm:SetBodygroup(10, 1)
+        rail = 1
         -- irons = 4
     end
-    if attached["rail_pic"] and attached["barrel_krinkov"] then
-        vm:SetBodygroup(10, 2)
-        irons = 4
+    if attached["rail_pic"] then
+        rail = 2
+        if attached["barrel_krinkov"] then
+            irons = 4
+        end
     end
 
     vm:SetBodygroup(0, aktype)
@@ -727,6 +730,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     vm:SetBodygroup(4, barrel)
     vm:SetBodygroup(5, hand)
     vm:SetBodygroup(6, grip)
+    vm:SetBodygroup(10, rail)
 
     local camo = 0
     if attached["bo1_ultimate_ak_gold"] then
@@ -886,7 +890,7 @@ end
 SWEP.Attachments = {
     {
         PrintName = "Optic",
-        DefaultName = "Irons",
+        DefaultName = "No Optic",
         Bone = "j_gun",
         Pos = Vector(2.25, 0.005, 2.175),
         Ang = Angle(0, 0, 0),
@@ -900,8 +904,17 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(1.5, 0, 2.6),
         Ang = Angle(0, 0, 0),
-        Category = {"cod_optic_ak", "bo1_alt_irons", "bo1_svd_scope"},
+        Category = {"cod_optic_ak", "bo1_svd_scope"},
         InstalledElements = {"mount"},
+    },
+    {
+        PrintName = "Irons",
+        DefaultName = "AKM",
+        Bone = "j_gun",
+        Pos = Vector(-2.25, 0.005, 2.175),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_alt_irons"},
+        ExcludeElements = {"ak12", "rpk12"}
     },
     {
         PrintName = "Receiver",
@@ -938,7 +951,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(11, 0, 0.2),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(0, 0, -2),
+        Icon_Offset = Vector(-2, 0, -2),
         Category = {"bo1_gp25", "bo1_tishina", "bo1_mk", "cod_grips"},
         ExcludeElements = {"barrel_asval"},
     },
@@ -1023,19 +1036,18 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"universal_camo"},
         CosmeticOnly = true,
-    },
+    }
 }
 
 SWEP.StandardPresets = {
-    "[AKS-74u]XQAAAQAxAQAAAAAAAAA9iIIiM7tupQCpjtobRJEkdYYzR6F4P3FJEqy9RUyheUZp1zOtKLbpg01RZUWsivdsVPWjLZFxwYEsO8zw3m0uMO55ITN9vhmlE+VBG5c430Rq8O9peitsaybRdNj8JHbIS2Bj84AAAapez9U7gHNWnVLmJ0KywWtf2kmg1+D3gifRM+zVnGdqU0aXnb6wLMhicw==",
-    "[Modern]XQAAAQA4AQAAAAAAAAA9iIIiM7tuo1AtTygaX+tE5owxGjnImCY2npSaEHAbihOm7vWqDCE4uXCzOHSP3sZlCCizujfBISP+i3ftcyEAMNB0yiG+zUvRhsVpe/z54c5yAb++cwcz7mEcWEr03+YTQPaUOKIJwghdLYXDCazJhSkjsXarLXz9H9Tpa0FxoVrr0chb77et1Y14NcRvns7Yn4mL",
-    "[RPK-74]XQAAAQCbAQAAAAAAAAA9iIIiM7tupQCpjtobRJEkdevdtQyXDt2gZ7eB7mIc4XMJKegyvnhNTihJg3a0etGqiqvgl/lQBcL3fbDjHnCq2jxpdECQPZfgozHIRXfOF+icYmvDKnXC2IzKDSstL0XQdLbc+/TyTFHU5BDcNCJzi0GC0IQgbWizWdwk4SZUnWo24immrbv9odw1piq9UipXk/TqtAEYmjLFL/Ukzr2nwaypNHBd2caYAwsQO9+iBRgE",
-    "[RPKM]XQAAAQB9AQAAAAAAAAA9iIIiM7tupQCpjtobRJEkdYYzR6F4P3FJEqy9RUyheUZp1zOtKLbpg01RZUWsivdsVPWjLa0syy9U9GqZ8LmP+q7dbi/IHGgFIVsdt65lGjvaSyhXdk9w2ZQXzi/K84mTbVThEb7Xdn6+XYBjhwVST60bv19b+xyl+RvXzVwjb0DdA7WxNhT2MrS+S24RtazOt9bF9gDO4qC9qGM5Z6tIqoy7kvF8+SQA",
-    "[Chinese]XQAAAQAjAQAAAAAAAAA9iIIiM7tupQCpjtobRJEkdevdtSFsYEW0WR7PXlS+8JMBy2yiomGzXKaJCIzfqW4TDPuHlM58exfO53jHmGkL8Ogd2ysWRMV1yAe2z7TJuOs2Y3BZAJP1rvlf3tXsDIwu5e9+UMKpWA6GxlwRfP5EgzrRzuzP6Epa6kjWWXVW+6+rAA==",
-    "[Vintorez]XQAAAQB6AQAAAAAAAAA9iIIiM7tupQCpjtobRJEkdZ1fP0HAirxuJaFi++OSkQRS4d7M0DlDU2KQsq5E55bbZFTMSOHmh1B1MTAWaZHHwy0PlDLbXStPNXcKOCsyBKNvP0uns3lCA8q+TPhmIBWpF7+guB5W1X2TwNftbVNwoXbJWZFGolA8izBepNzitqkfV8JfiEOkGa4swNp3o2EsxXYOcg/0DZY3Pvs4MjB2us/3p5OhhUQ/KpFFM2UA",
-    "[AK-12]XQAAAQANAQAAAAAAAAA9iIIiM7hMNz0dhIkbkvLjTdErcFqoUCAoqlx+DmvIBUSaCAQGQk9HZjOn1+PewqT5R2ZJrXg09Y0JzNGEXIG4H0ser1yFFP/UtreQjyb6/rHoh3PQGMdi6QuQLuDojoHQbV7/Ex16H2qebkDsFiUpPrgMIbceASs98wKlq4Eywveq2w==",
-    "[Future Krink]XQAAAQAwAQAAAAAAAAA9iIIiM7hMNz0dhIkbkvLjTdErcFqoUCAoqlx+DmvIBUSaCAQGQk9HZjOn1+PewqT5R2ZJrXg09Y0JzNGEXIG4H0ser1yJ3uxGEBL+1GWAoDGZr/HVyIutfHbtjGAB1Hk61zLWmzAym1R4qp0DVcxBLnTfhDJAarN+3mOGwngP60GIOGABVe39bXuCa1Y1+bgA",
-    "[Future RPK]XQAAAQBnAQAAAAAAAAA9iIIiM7hMNz0dhIkbkvLjTdErcFqoUCAoqlx+DmvIBUSaCAQGQk9HZjOn1+PewqT5R2ZJrUsH+ayYBMlmLIZhZepFET4A4usIKtkjPp1TvPVygiLPfc+2wsIhFRAYLoaQNPIGGxMo6iWMus5j/QAVh56hnQ7ZDYKpcO0Nrile/O2AkkqqeJUtAJh9z98BDF4X6QyP+Hd0A/JuajBPi0ZDmGqG3nyMOg==",
+    "[AKS-74u]XQAAAQAtAQAAAAAAAAA9iIIiM7tupQCpjtobRJEkdevdtSFsYEW0WR7PXlS+8JMBy2yiomGzXKaJClhCyAwb7sUB/J5vaoenPfmMlyR0DWv781CwGfQYS23C0xZXFruzFAqx9ERJRatP3pFjgLOma/I2RsJIJU4WUQeyteiDgACI+KkBbbdk7PTapMzY0aRKEf82qQaPAA==",
+    "[RPK-74]XQAAAQCPAQAAAAAAAAA9iIIiM7tupQCpjtobRJEkdevdtSFsYEW0WR7PXlS+8JMBy2yiomGzXKaJClhCyAwb7sT8j9/ooT1faQpFkNxlX9mkL5JYagNoC3uQnsIliOmTgKfIHnZhbHEegnACqpUR6noY1nwgDbpKN8pEQEd86NzyK+VhdhPZikLDyHlu85VhX1ydHIvPX/fLRei9HdVkEzI8rwyw3CFy5Fab4na8pqQUvB4A",
+    "[Modern]XQAAAQBtAQAAAAAAAAA9iIIiM7tuo1AtTygaX+tE5owxGjnImCY2npSaEHAbihOm7vWqDCE4uXCzOHSP3sZlCCizujfBISP+i3vvn2c69G7mxEkzQETJ3IjXhVQj5lZAH/fEUJ+LO81227SywV5C2xmHcOBFSd20Tsy4NWb3J/nDqw8piplN7HPNK0x6+KFew4BWM1aPvlFC/9hdIKKSv1u7ECgQpho=",
+    "[Chinese]XQAAAQBAAQAAAAAAAAA9iIIiM7tupQCpjtobRJEkdevdtSFsZg6DrcS+cJkX9bjEUtdPYptz0ZihMf+r1g99cxKH1nWO5zFZ0hXCapEpKQgBs+mkHQURBPb8of7z6z4XDNNGuArlg17QymHPZWhY64Reg5EvTxnvMHapXoESoPmOoCNhmPiJjY1AYN/l+0dSaTBX",
+    "[Vintorez]XQAAAQCvAQAAAAAAAAA9iIIiM7tupQCpjtobRJEkdZ1fP0HAirxuJaFi++OSkQRS4d7M0DlDU2KQsq5E55bbZDH4+EI1NtEmA1u4E90CwYZpT03SpDWmMizcb4aXWSc+iengkvrH+d5b12yJ7ASKOq9Pr8463F9EIz0FOxnS/m9UbPbDko2dMARY1uHoPBPpWzkMUTr7Tnl++1BAVbPQ29ICnQqRMbNvWSwfRxNcxPy5GMNpWxcA",
+    "[AK-12]XQAAAQAqAQAAAAAAAAA9iIIiM7tupQCpjtobRJEkdevdtSFsYEW0WR7PXlS+8JMBy2yiomGzXKaJClhCyAwb7sUB/IyxfgQWZgotsb7yDp9bfUChPbfr+0aTDe/N1WwnAaydyRkjYRF1/BnhPgN/7H2/dySf0PCqJcak20DhzO9CcqxpXj+B3R5jXdei5oE5AA==",
+    "[Future Krink]XQAAAQBNAQAAAAAAAAA9iIIiM7tupQCpjtobRJEkdevdtSFsYEW0WR7PXlS+8JMBy2yiomGzXKaJClhCyAwb7sUB/IyxfgQWZgotsb7yDp9bfUCiEropvXmasYv/sp2C65lgCH82j4B7hA6dJUoIDmqut3A4BHuqnPAV1GVReJFuEeMf+wevMKVx86RkfMtxHFt5InWD5UO0kxMOBtgA",
+    "[Future RPK]XQAAAQCkAQAAAAAAAAA9iIIiM7tupQCpjtobRJEkdevdtSFsYEW0WR7PXlS+8JMBy2yiomGzXKaJClhCyAwb7sT8j9/oxlWCVM4X6YsZHA4JG1jgTWrhPXa2bnC1NwblEPqGGSY1XN33lzGC9iPAyWWhlX6ivdaOv/2D4Zz5Vnlf25mXR0Kxuf+vwRzf5QdMUZBaALWW6mG9yXZ+YRt37LwDOsLNbqacGtF/ttgFWRrtwpWDBo9XoLWS4bH7tQ=="
 }
 
 SWEP.HideBones = {
@@ -1051,20 +1063,27 @@ SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
         Time = 1 / 30,
+        IKTimeLine = {{t = 0,lhik = 1,rhik = 1},{t = 1,lhik = 1,rhik = 1},},
     },
     ["draw"] = {
         Source = "draw",
         Time = 1,
+        IKTimeLine = {{t = 0,lhik = 1,rhik = 1},{t = 1,lhik = 1,rhik = 1},},
     },
     ["holster"] = {
         Source = "holster",
         Time = 0.75,
+        IKTimeLine = {{t = 0,lhik = 1,rhik = 1},{t = 1,lhik = 1,rhik = 1},},
     },
     ["ready"] = {
         Source = "first_draw",
         Time = 1.5,
         EventTable = {
             {s = "ARC9_BO1.AK_Charge", t = 22 / 35}
+        },
+        IKTimeLine = {
+            {t = 0,lhik = 1,rhik = 0},
+            {t = 1,lhik = 1,rhik = 1},
         },
     },
     ["fire"] = {
