@@ -1859,7 +1859,21 @@ sound.Add( {
     volume = 1.0,
     level = 100,
     --pitch = {95, 110},
-    sound = {"^weapons/arc9/bo1_makarov/fire.wav"}
+    sound = {
+        "^weapons/arc9/bo1_makarov/fire1.wav",
+        "^weapons/arc9/bo1_makarov/fire2.wav",
+        "^weapons/arc9/bo1_makarov/fire3.wav",
+        "^weapons/arc9/bo1_makarov/fire4.wav",
+        "^weapons/arc9/bo1_makarov/fire5.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_BO1.Makarov_RingOff",
+    channel = CHAN_WEAPON,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {"^weapons/arc9/bo1_makarov/ringoff.wav"}
 } )
 sound.Add( {
     name = "ARC9_BO1.Makarov_In",
@@ -1867,7 +1881,15 @@ sound.Add( {
     volume = 1.0,
     level = 100,
     --pitch = {95, 110},
-    sound = {"^weapons/arc9/bo1_makarov/makarov_in.wav"}
+    sound = {"^weapons/arc9/bo1_makarov/magin.wav"}
+} )
+sound.Add( {
+    name = "ARC9_BO1.Makarov_Futz",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {"^weapons/arc9/bo1_makarov/futz.wav"}
 } )
 sound.Add( {
     name = "ARC9_BO1.Makarov_Out",
@@ -1875,7 +1897,7 @@ sound.Add( {
     volume = 1.0,
     level = 100,
     --pitch = {95, 110},
-    sound = {"^weapons/arc9/bo1_makarov/makarov_out.wav"}
+    sound = {"^weapons/arc9/bo1_makarov/magout.wav"}
 } )
 sound.Add( {
     name = "ARC9_BO1.Makarov_Slide_Back",
@@ -1883,7 +1905,7 @@ sound.Add( {
     volume = 1.0,
     level = 100,
     --pitch = {95, 110},
-    sound = {"^weapons/arc9/bo1_makarov/makarov_slideb.wav"}
+    sound = {"^weapons/arc9/bo1_makarov/slideback.wav"}
 } )
 sound.Add( {
     name = "ARC9_BO1.Makarov_Slide_Fwd",
@@ -1891,7 +1913,15 @@ sound.Add( {
     volume = 1.0,
     level = 100,
     --pitch = {95, 110},
-    sound = {"^weapons/arc9/bo1_makarov/makarov_slidef.wav"}
+    sound = {"^weapons/arc9/bo1_makarov/slidefwd.wav"}
+} )
+sound.Add( {
+    name = "ARC9_BO1.Makarov_Slide_Fwd2",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {"^weapons/arc9/bo1_makarov/slidefwd2.wav"}
 } )
 
 -- CZ75 BO1 --

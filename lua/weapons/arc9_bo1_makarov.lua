@@ -254,7 +254,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local rirons = 0
 
     if attached["bo1_pap"] then
-        camo = camo + 2
+        camo = camo + 3
     end
     if attached["extmag"] then
         rmag = 1
@@ -281,7 +281,10 @@ SWEP.HookP_NameChange = function(self, name)
     local gunname = "Makarov PM"
 
     if attached["bo1_pap"] then
-        gunname = "Sergei's Sidekick"
+        gunname = "Perestroika"
+        if attached["akimbo"] then
+            gunname = "Perestroika & Glasnost"
+        end
     end
 
     return gunname
@@ -382,6 +385,9 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
         if anim == "idle" then
             newanim =  "idle_empty_right"
         end
+        if anim == "reload" then
+            newanim =  "reload_empty_right"
+        end
     end
     if self:Clip1() == 0 and attached["akimbo"] and anim == "fire_left" then
         newanim =  "fire_empty_left"
@@ -389,7 +395,56 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
     return newanim
 end
 
-SWEP.Hook_Think = ARC9.CODBOC.BlendEmpty
+SWEP.Hook_Think	= function(self)
+    if CLIENT then
+        local ent = IsValid(self:GetVM()) and self:GetVM(), IsValid(self:GetWM()) and self:GetWM()
+        local owner = self:GetOwner()
+        local attached = self:GetElements()
+        if !owner:IsPlayer() then return end
+        if self:Clip1() == 0 then
+            ent:SetPoseParameter("empty_r", 1)
+            -- print ("Gun is empty");
+        else
+            ent:SetPoseParameter("empty_r", 0)
+            -- print ("Gun is full");
+        end
+        if attached["akimbo"] then
+            if self:Clip1() == 1 then
+                ent:SetPoseParameter("empty_r", 1)
+                ent:SetPoseParameter("empty_l", 0)
+                -- print ("Right Gun is empty");
+            elseif self:Clip1() == 0 then
+                ent:SetPoseParameter("empty_r", 1)
+                ent:SetPoseParameter("empty_l", 1)
+                -- print ("Both guns empty");
+            end
+        end
+    end
+end
+
+SWEP.CustomPoseParamsHandler = function(self)
+    if CLIENT then
+        local ent = IsValid(self:GetVM()) and self:GetVM(), IsValid(self:GetWM()) and self:GetWM()
+        local owner = self:GetOwner()
+        local attached = self:GetElements()
+        if !owner:IsPlayer() then return end
+        if self:Clip1() == 0 then
+            ent:SetPoseParameter("empty_r", 1)
+        else
+            ent:SetPoseParameter("empty_r", 0)
+        end
+        if attached["akimbo"] then
+            if self:Clip1() == 1 then
+                ent:SetPoseParameter("empty_r", 1)
+                ent:SetPoseParameter("empty_l", 0)
+            elseif self:Clip1() == 0 then
+                ent:SetPoseParameter("empty_r", 1)
+                ent:SetPoseParameter("empty_l", 1)
+            end
+        end
+    end
+end
+
 
 SWEP.Animations = {
     ["idle"] = {
@@ -448,34 +503,38 @@ SWEP.Animations = {
         Source = "reload",
         Time = 1.5,
         EventTable = {
-            {s = "ARC9_BO1.Makarov_Out", t = 16 / 30},
-            {s = "ARC9_BO1.Makarov_In", t = 29 / 30}
+            {s = "ARC9_BO1.Makarov_Out", t = 5 / 30},
+            {s = "ARC9_BO1.Makarov_Futz", t = 15 / 30},
+            {s = "ARC9_BO1.Makarov_In", t = 25 / 30},
         },
     },
     ["reload_empty"] = {
         Source = "reload_empty",
         Time = 2,
         EventTable = {
-            {s = "ARC9_BO1.Makarov_Out", t = 16 / 30},
+            {s = "ARC9_BO1.Makarov_Out", t = 5 / 30},
+            {s = "ARC9_BO1.Makarov_Futz", t = 20 / 30},
             {s = "ARC9_BO1.Makarov_In", t = 29 / 30},
-            {s = "ARC9_BO1.Makarov_Slide_Fwd", t = 45 / 30}
+            {s = "ARC9_BO1.Makarov_Slide_Fwd", t = 45 / 30},
         },
     },
     ["reload_ext"] = {
         Source = "reload_ext",
         Time = 1.5,
         EventTable = {
-            {s = "ARC9_BO1.Makarov_Out", t = 16 / 30},
-            {s = "ARC9_BO1.Makarov_In", t = 29 / 30}
+            {s = "ARC9_BO1.Makarov_Out", t = 5 / 30},
+            {s = "ARC9_BO1.Makarov_Futz", t = 15 / 30},
+            {s = "ARC9_BO1.Makarov_In", t = 25 / 30},
         },
     },
     ["reload_empty_ext"] = {
         Source = "reload_empty_ext",
         Time = 2,
         EventTable = {
-            {s = "ARC9_BO1.Makarov_Out", t = 16 / 30},
+            {s = "ARC9_BO1.Makarov_Out", t = 5 / 30},
+            {s = "ARC9_BO1.Makarov_Futz", t = 20 / 30},
             {s = "ARC9_BO1.Makarov_In", t = 29 / 30},
-            {s = "ARC9_BO1.Makarov_Slide_Fwd", t = 45 / 30}
+            {s = "ARC9_BO1.Makarov_Slide_Fwd", t = 45 / 30},
         },
     },
     ["enter_sprint"] = {
@@ -509,11 +568,11 @@ SWEP.Animations = {
         -- Time = 1 / 30,
     },
     ["idle_empty_akimbo"] = {
-        Source = "idle_empty_ab",
+        Source = "idle_a",
         -- Time = 1 / 30,
     },
     ["idle_empty_right"] = {
-        Source = "idle_empty_ar",
+        Source = "idle_a",
         -- Time = 1 / 30,
     },
     ["draw_akimbo"] = {
@@ -570,61 +629,60 @@ SWEP.Animations = {
         Time = 6 / 30,
         EjectAt = 1 / 30,
     },
-    ["reload_right"] = {
-        Source = "reload_empty_ar",
-        Time = 75 / 35,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
-        EventTable = {
-            {s = "ARC9_BO1.Makarov_Out", t = 13 / 35},
-            {s = "ARC9_BO1.Makarov_Futz", t = 28 / 35},
-            {s = "ARC9_BO1.Makarov_In", t = 33 / 35},
-            {s = "ARC9_BO1.Makarov_Slide_Fwd", t = 60 / 35}
-        },
-    },
-    ["reload_left"] = {
-        Source = "reload_empty_al",
-        Time = 75 / 35,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
-        EventTable = {
-            {s = "ARC9_BO1.Makarov_Out", t = 13 / 35},
-            {s = "ARC9_BO1.Makarov_Futz", t = 28 / 35},
-            {s = "ARC9_BO1.Makarov_In", t = 33 / 35},
-            {s = "ARC9_BO1.Makarov_Slide_Fwd", t = 60 / 35}
-        },
-    },
+    -- ["reload_right"] = {
+    --     Source = "reload_empty_ar",
+    --     Time = 75 / 35,
+    --     TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
+    --     EventTable = {
+    --         {s = "ARC9_BO1.Makarov_Out", t = 13 / 35},
+    --         {s = "ARC9_BO1.Makarov_Futz", t = 28 / 35},
+    --         {s = "ARC9_BO1.Makarov_In", t = 33 / 35},
+    --         {s = "ARC9_BO1.Makarov_Slide_Fwd", t = 60 / 35}
+    --     },
+    -- },
+    -- ["reload_left"] = {
+    --     Source = "reload_empty_al",
+    --     Time = 75 / 35,
+    --     TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
+    --     EventTable = {
+    --         {s = "ARC9_BO1.Makarov_Out", t = 13 / 35},
+    --         {s = "ARC9_BO1.Makarov_Futz", t = 28 / 35},
+    --         {s = "ARC9_BO1.Makarov_In", t = 33 / 35},
+    --         {s = "ARC9_BO1.Makarov_Slide_Fwd", t = 60 / 35}
+    --     },
+    -- },
     ["reload_akimbo"] = {
-        Source = "reload_empty_ab",
-        Time = 75 / 35,
+        Source = "reload_ab",
+        Time = 70 / 35,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         EventTable = {
             {s = "ARC9_BO1.Makarov_Out", t = 13 / 35},
             {s = "ARC9_BO1.Makarov_Futz", t = 28 / 35},
             {s = "ARC9_BO1.Makarov_In", t = 33 / 35},
-            {s = "ARC9_BO1.Makarov_Slide_Fwd", t = 60 / 35}
         },
     },
     ["reload_empty_right"] = {
-        Source = "reload_empty_ar",
+        Source = "reload_empty_ar2",
         Time = 75 / 35,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         EventTable = {
             {s = "ARC9_BO1.Makarov_Out", t = 13 / 35},
             {s = "ARC9_BO1.Makarov_Futz", t = 28 / 35},
             {s = "ARC9_BO1.Makarov_In", t = 33 / 35},
-            {s = "ARC9_BO1.Makarov_Slide_Fwd", t = 60 / 35}
+            {s = "ARC9_BO1.Makarov_Slide_Fwd", t = 60 / 35},
         },
     },
-    ["reload_empty_left"] = {
-        Source = "reload_empty_al",
-        Time = 75 / 35,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
-        EventTable = {
-            {s = "ARC9_BO1.Makarov_Out", t = 13 / 35},
-            {s = "ARC9_BO1.Makarov_Futz", t = 28 / 35},
-            {s = "ARC9_BO1.Makarov_In", t = 33 / 35},
-            {s = "ARC9_BO1.Makarov_Slide_Fwd", t = 60 / 35}
-        },
-    },
+    -- ["reload_empty_left"] = {
+    --     Source = "reload_empty_al",
+    --     Time = 75 / 35,
+    --     TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
+    --     EventTable = {
+    --         {s = "ARC9_BO1.Makarov_Out", t = 13 / 35},
+    --         {s = "ARC9_BO1.Makarov_Futz", t = 28 / 35},
+    --         {s = "ARC9_BO1.Makarov_In", t = 33 / 35},
+    --         {s = "ARC9_BO1.Makarov_Slide_Fwd", t = 60 / 35}
+    --     },
+    -- },
     ["reload_empty_akimbo"] = {
         Source = "reload_empty_ab",
         Time = 75 / 35,
@@ -633,7 +691,8 @@ SWEP.Animations = {
             {s = "ARC9_BO1.Makarov_Out", t = 13 / 35},
             {s = "ARC9_BO1.Makarov_Futz", t = 28 / 35},
             {s = "ARC9_BO1.Makarov_In", t = 33 / 35},
-            {s = "ARC9_BO1.Makarov_Slide_Fwd", t = 60 / 35}
+            {s = "ARC9_BO1.Makarov_Slide_Fwd2", t = 60 / 35},
+            {s = "", t = 60 / 35},
         },
     },
     ["enter_sprint_akimbo"] = {
