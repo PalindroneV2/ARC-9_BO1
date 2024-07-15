@@ -338,6 +338,7 @@ ATT.Free = false
 
 ATT.Category = {"bo1_mp5k_mw2_rail"}
 ATT.ActivateElements = {"mp5k_mw2"}
+ATT.ExcludeElements = {"top_g36c"}
 
 ATT.Model = "models/weapons/arc9/atts/mw2e_mp5k_rail.mdl"
 ATT.RecoilMult = 1.1
@@ -390,6 +391,43 @@ ATT.LHIK = true
 ATT.LHIK_Priority = 1
 
 ARC9.LoadAttachment(ATT, "bo1_mp5k_rail_ris")
+
+ATT = {}
+
+ATT.PrintName = [[G36/C Top Rail]]
+ATT.CompactName = [[G36]]
+ATT.Icon = Material("entities/mw2_generic.png")
+ATT.Description = [[Top picatinny rail for attaching optics belonging to a G36 platform rifle.
+]]
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
+ATT.Free = false
+
+ATT.Category = {"bo1_mp5rail"}
+ATT.ActivateElements = {"top_g36c"}
+ATT.ExcludeElements = {"mp5k_mw2"}
+
+-- ATT.Model = "models/weapons/arc9/atts/mw2e_mp5k_rail.mdl"
+-- ATT.RecoilMult = 1.1
+-- ATT.RecoilUpMult = 1.15
+-- ATT.ModelOffset = Vector(-3.1, 0.1, -2)
+
+ATT.Attachments = {
+    {
+        PrintName = "Optic",
+        Bone = "j_gun",
+        Pos = Vector(0, 0, -0.1),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0, 0, 1.5),
+        Category = {"cod_optic", "cod_rail_riser"},
+        InstalledElements = {"mount"},
+    },
+}
+
+-- ATT.LHIK = true
+-- ATT.LHIK_Priority = 1
+
+ARC9.LoadAttachment(ATT, "bo1_top_rail_g36c")
 
 ATT = {}
 

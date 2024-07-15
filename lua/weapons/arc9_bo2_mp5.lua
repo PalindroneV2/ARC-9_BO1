@@ -273,18 +273,41 @@ SWEP.AttachmentElements = {
             {0,1},
             {1,3},
             {2,3},
-            {3,2},
+            {3,3},
             {6,1},
         },
-        IronSights = {
-            Pos = Vector(-3.175, -3, 0.85),
-            Ang = Angle(0.025, 0.1, 0),
-            Magnification = 1.1,
-            ViewModelFOV = 60,
-            CrosshairInSights = false,
-        }
+        -- IronSights = {
+        --     Pos = Vector(-3.175, -3, 0.85),
+        --     Ang = Angle(0.025, 0.1, 0),
+        --     Magnification = 1.1,
+        --     ViewModelFOV = 60,
+        --     CrosshairInSights = false,
+        -- }
     },
 }
+
+SWEP.IronSightsHook = function(self)
+    local attached = self:GetElements()
+    local newpos = Vector(-3.2, -3, 1.1)
+    local newang = Angle(0, -0.2, 0)
+
+    if attached["top_g36c"] then
+        newpos = Vector(-3.2325, -3, 0.3)
+        newang = Angle(0, -0.0, 0)
+    end
+
+    if attached["mp5k"] then
+        newpos = Vector(-3.175, -3, 0.85)
+        newang = Angle(0.025, 0.1, 0)
+        if attached["top_g36c"] then
+            newpos = Vector(-3.225, -3, 0.3)
+            newang = Angle(0, -0.0, 0)
+        end
+    end
+
+    return {Pos = newpos, Ang = newang, Magnification = 1.1, ViewModelFOV = 60, CrosshairInSights = false,}
+
+end
 
 SWEP.Hook_ModifyBodygroups = function(self, data)
 
@@ -300,6 +323,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     elseif attached["bo1_stock_medium"] then stock = 2
     elseif attached["bo1_stock_heavy"] then stock = 3
     elseif attached["bo1_mp5_stock_pdw"] then stock = 4
+    elseif attached["stock_pro"] then stock = 5
     end
     vm:SetBodygroup(4,stock)
 
@@ -316,7 +340,19 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
                 vm:SetBodygroup(3,0)
             end
         end
-        vm:SetBodygroup(4,stock + 5)
+        vm:SetBodygroup(4,stock + 6)
+    end
+
+    if attached["top_g36c"] then
+        vm:SetBodygroup(3,2)
+        vm:SetBodygroup(7,1)
+        if attached["mp5k"] then
+            vm:SetBodygroup(3,5)
+            vm:SetBodygroup(7,2)
+        end
+        if attached["cod_optic"] then
+            vm:SetBodygroup(7,0)
+        end
     end
 
     if attached["mp5k_nogrip"] then
@@ -426,7 +462,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(-3.5, 0.1, 3.35),
         Ang = Angle(0, 0, 0),
-        Category = {"cod_optic", "cod_rail_riser"},
+        Category = {"cod_optic", "cod_rail_riser","bo1_mp5rail"},
         InstalledElements = {"mount"},
         ExcludeElements = {"mp5k_mw2_ris"},
     },
@@ -470,7 +506,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(-11, 0, 0.75),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_stocks","bo1_mp5_stock"},
+        Category = {"bo1_stocks","bo1_mp5_stock", "bo1_stock_pro"},
         Installed = "bo1_stock_light",
     },
     {
