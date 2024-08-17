@@ -221,7 +221,7 @@ SWEP.MovingMidPoint = {
     Ang = Angle(0, 0, 0)
 }
 
-SWEP.CrouchPos =  Vector(0, -0.5, -1)
+SWEP.CrouchPos = Vector(0, -0.5, -1)
 SWEP.CrouchAng = SWEP.ActiveAng
 
 SWEP.RestPos = SWEP.ActivePos
@@ -234,37 +234,37 @@ SWEP.SprintAng = SWEP.ActiveAng
 SWEP.ActivePosHook = function(self)
     local attached = self:GetElements()
     if attached["bo1_mk"] and self:GetUBGL() then
-        return Vector(0,-3,-1)
+        return Vector(0, -3, -1)
     end
 end
 SWEP.ActiveAngHook = function(self)
     local attached = self:GetElements()
     if attached["bo1_mk"] and self:GetUBGL() then
-        return Angle(0,0,0)
+        return Angle(0, 0, 0)
     end
 end
 SWEP.ReloadPosHook = function(self)
     local attached = self:GetElements()
     if attached["bo1_mk"] and self:GetUBGL() then
-        return Vector(0,-3,-1)
+        return Vector(0, -3, -1)
     end
 end
 SWEP.ReloadAngHook = function(self)
     local attached = self:GetElements()
     if attached["bo1_mk"] and self:GetUBGL() then
-        return Angle(0,0,0)
+        return Angle(0, 0, 0)
     end
 end
 SWEP.MovingPosHook = function(self)
     local attached = self:GetElements()
     if attached["bo1_mk"] and self:GetUBGL() then
-        return Vector(0,-1,-1)
+        return Vector(0, -1, -1)
     end
 end
 SWEP.MovingAngHook = function(self)
     local attached = self:GetElements()
     if attached["bo1_mk"] and self:GetUBGL() then
-        return Angle(0,0,0)
+        return Angle(0, 0, 0)
     end
 end
 SWEP.MovingMidPointHook = function(self)
@@ -279,29 +279,29 @@ end
 SWEP.CrouchPosHook = function(self)
     local attached = self:GetElements()
     if attached["bo1_mk"] and self:GetUBGL() then
-        return Vector(0,-3,-1)
+        return Vector(0, -3, -1)
     end
 end
 SWEP.CrouchAngHook = function(self)
     local attached = self:GetElements()
     if attached["bo1_mk"] and self:GetUBGL() then
-        return Angle(0,0,0)
+        return Angle(0, 0, 0)
     end
 end
 SWEP.SprintPosHook = function(self)
     local attached = self:GetElements()
     if attached["bo1_mk"] and self:GetUBGL() then
-        return Vector(0,-3,-1)
+        return Vector(0, -3, -1)
     end
 end
 SWEP.SprintAngHook = function(self)
     local attached = self:GetElements()
     if attached["bo1_mk"] and self:GetUBGL() then
-        return Angle(0,0,0)
+        return Angle(0, 0, 0)
     end
 end
 
-SWEP.CustomizePos = Vector(12.5, 40, 4)
+SWEP.CustomizePos = Vector(15, 30, 3.5)
 SWEP.CustomizeAng = Angle(90, 0, 0)
 SWEP.CustomizeSnapshotPos = Vector(2.5, 5, 0)
 SWEP.CustomizeSnapshotAng = Angle(0, 0, 0)
@@ -469,7 +469,7 @@ SWEP.Attachments = {
         PrintName = "Barrel",
         DefaultCompactName = "533mm",
         Bone = "j_gun",
-        Pos = Vector(8, 0.1, 3),
+        Pos = Vector(7, 0.1, 2.75),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_fal_barrel"},
     },
@@ -493,7 +493,7 @@ SWEP.Attachments = {
     {
         PrintName = "Stock",
         Bone = "j_gun",
-        Pos = Vector(-3, 0, 2.65),
+        Pos = Vector(-3.8, 0, 2.25),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_stocks"},
         Installed = "bo1_stock_heavy",
@@ -502,7 +502,7 @@ SWEP.Attachments = {
         PrintName = "Ammunition",
         DefaultCompactName = "AMMO",
         Bone = "j_gun",
-        Pos = Vector(4.5, 0, -2),
+        Pos = Vector(4.15, 0, -3.25),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ammo", "bo1_pap"},
     },
@@ -510,7 +510,7 @@ SWEP.Attachments = {
         PrintName = "Perk-a-Cola",
         DefaultCompactName = "COLA",
         Bone = "j_gun",
-        Pos = Vector(-4, 0, -5),
+        Pos = Vector(-3, 0, -3.25),
         Ang = Angle(0, 0, 0),
         Category = "bo1_perkacola",
         ExcludeElements = {"mwc_perk", "mwc_proficiency"},
@@ -519,7 +519,7 @@ SWEP.Attachments = {
         PrintName = "Perk",
         DefaultCompactName = "PERK",
         Bone = "j_gun",
-        Pos = Vector(-7, 0, -5),
+        Pos = Vector(-5, 0, -3.25),
         Ang = Angle(0, 0, 0),
         Category = "mwc_perk",
         ExcludeElements = {"bo1_perkacola"},
@@ -528,7 +528,7 @@ SWEP.Attachments = {
         PrintName = "Proficiency",
         DefaultCompactName = "PRO",
         Bone = "j_gun",
-        Pos = Vector(-10, 0, -5),
+        Pos = Vector(-7, 0, -3.25),
         Ang = Angle(0, 0, 0),
         Category = "mwc_proficiency",
         ExcludeElements = {"bo1_perkacola"},

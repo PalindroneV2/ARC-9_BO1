@@ -218,7 +218,7 @@ SWEP.SprintVerticalOffset = false
 SWEP.SprintPos = SWEP.ActivePos + Vector(5, 1, 0)
 SWEP.SprintAng = SWEP.ActiveAng + Angle(40, 0, 0)
 
-SWEP.CustomizePos = Vector(20.5, 40, 6)
+SWEP.CustomizePos = Vector(12, 30, 5)
 SWEP.CustomizeAng = Angle(90, 0, 0)
 
 SWEP.BarrelLength = 0 -- = 25
@@ -268,7 +268,7 @@ SWEP.Attachments = {
         PrintName = "Firing Group",
         DefaultCompactName = "S-1-F",
         Bone = "j_gun",
-        Pos = Vector(-4.5, 0, 1),
+        Pos = Vector(-6, 0, 0),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_fcg"},
     },
@@ -276,7 +276,7 @@ SWEP.Attachments = {
         PrintName = "Magazine",
         DefaultCompactName = "MAG",
         Bone = "j_gun",
-        Pos = Vector(2, 0, 1),
+        Pos = Vector(2, 0, 1.5),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_mag_ext"},
     },
@@ -284,7 +284,7 @@ SWEP.Attachments = {
         PrintName = "Ammunition",
         DefaultCompactName = "AMMO",
         Bone = "j_gun",
-        Pos = Vector(2, 0, -2),
+        Pos = Vector(7, -7.25, 1.5),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ammo", "bo1_pap"},
     },
@@ -292,7 +292,7 @@ SWEP.Attachments = {
         PrintName = "Perk-a-Cola",
         DefaultCompactName = "COLA",
         Bone = "j_gun",
-        Pos = Vector(-4, 0, -3),
+        Pos = Vector(0, 0, -2),
         Ang = Angle(0, 0, 0),
         Category = "bo1_perkacola",
         ExcludeElements = {"mwc_perk", "mwc_proficiency"},
@@ -301,7 +301,7 @@ SWEP.Attachments = {
         PrintName = "Perk",
         DefaultCompactName = "PERK",
         Bone = "j_gun",
-        Pos = Vector(-7, 0, -3),
+        Pos = Vector(-2, 0, -2),
         Ang = Angle(0, 0, 0),
         Category = "mwc_perk",
         ExcludeElements = {"bo1_perkacola"},
@@ -310,7 +310,7 @@ SWEP.Attachments = {
         PrintName = "Proficiency",
         DefaultCompactName = "PRO",
         Bone = "j_gun",
-        Pos = Vector(-10, 0, -3),
+        Pos = Vector(-4, 0, -2),
         Ang = Angle(0, 0, 0),
         Category = "mwc_proficiency",
         ExcludeElements = {"bo1_perkacola"},

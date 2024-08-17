@@ -234,7 +234,7 @@ SWEP.SprintAng = SWEP.ActiveAng
 SWEP.BipodPos = Vector(-3.45, -3, -2.5)
 SWEP.BipodAng = Angle(0.03, -0.25, 0)
 
-SWEP.CustomizePos = Vector(17, 50, 4)
+SWEP.CustomizePos = Vector(17, 35, 6)
 SWEP.CustomizeAng = Angle(90, 0, 0)
 
 SWEP.BarrelLength = 0 -- = 25
@@ -324,7 +324,7 @@ SWEP.Attachments = {
         PrintName = "Ammunition",
         DefaultCompactName = "AMMO",
         Bone = "j_gun",
-        Pos = Vector(4.5, 0, -2),
+        Pos = Vector(4.5, 0, -1),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ammo", "bo1_pap"},
     },

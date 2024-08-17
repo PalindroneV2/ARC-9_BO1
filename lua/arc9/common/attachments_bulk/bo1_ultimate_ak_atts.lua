@@ -49,7 +49,7 @@ ATT.Attachments = {
         PrintName = "Bipod",
         DefaultCompactName = "None",
         Bone = "j_gun",
-        Pos = Vector(-13.5, 0, 1.2),
+        Pos = Vector(-16, 0, 1.2),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_bipod"},
     },
@@ -155,7 +155,7 @@ ATT.Attachments = {
         PrintName = "Underbarrel",
         DefaultName = "None",
         Bone = "j_gun",
-        Pos = Vector(3.5, 0, 1.9),
+        Pos = Vector(3.5, 0, 0.7),
         Ang = Angle(0, 0, 0),
         Category = {"cod_rail_underbarrel"},
     },
@@ -336,7 +336,7 @@ ATT.Attachments = {
         InstalledElements = {"nobacksight"},
         Pos = Vector(-3.75, 0, -1.75),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(0, 0, 1),
+        -- Icon_Offset = Vector(0, 0, 1),
     },
     {
         PrintName = "Tactical Right",
@@ -344,7 +344,7 @@ ATT.Attachments = {
         Bone = "j_gun",
         Pos = Vector(-4, 0.7, 0.2),
         Ang = Angle(0, 0, -90),
-        Icon_Offset = Vector(1,1,0),
+        Icon_Offset = Vector(1, 0.5, 0),
         Category =  {"cod_tactical"},
         InstalledElements = {"mw3_tacslot"},
     },
@@ -354,7 +354,7 @@ ATT.Attachments = {
         Bone = "j_gun",
         Pos = Vector(-4, -0.7, 0.2),
         Ang = Angle(0, 0, 90),
-        Icon_Offset = Vector(1,1,0),
+        Icon_Offset = Vector(1, 0.5, 0),
         Category =  {"cod_tactical"},
         InstalledElements = {"mw3_tacslot"},
     },
@@ -405,7 +405,7 @@ ATT.Attachments = {
         Bone = "j_gun",
         Pos = Vector(-4, 0.7, 0.4),
         Ang = Angle(0, 0, -90),
-        Icon_Offset = Vector(1,1,0),
+        Icon_Offset = Vector(1, 0.5, 0),
         Category =  {"cod_tactical"},
         InstalledElements = {"mw3_tacslot"},
     },
@@ -415,7 +415,7 @@ ATT.Attachments = {
         Bone = "j_gun",
         Pos = Vector(-4, -0.7, 0.4),
         Ang = Angle(0, 0, 90),
-        Icon_Offset = Vector(1,1,0),
+        Icon_Offset = Vector(1, 0.5, 0),
         Category =  {"cod_tactical"},
         InstalledElements = {"mw3_tacslot"},
     },
@@ -520,6 +520,17 @@ ATT.SortOrder = 2
 ATT.MenuCategory = "ARC9 - BO1 AK-47 Attachments"
 ATT.Free = false
 
+ATT.Attachments = {
+    {
+        PrintName = "Ammunition",
+        DefaultCompactName = "AMMO",
+        Bone = "tag_clip",
+        Pos = Vector(-6.25, 0, 5.75),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_ammo", "bo1_pap"},
+    },
+}
+
 ATT.Category = {"bo1_ultimate_ak_receiver"}
 ATT.ActivateElements = {"ak74"}
 
@@ -582,6 +593,14 @@ ATT.Attachments = {
         InstalledElements = {"ak12mount"}
         -- ExcludeElements = {"nobacksight"},
     },
+    {
+        PrintName = "Ammunition",
+        DefaultCompactName = "AMMO",
+        Bone = "tag_clip",
+        Pos = Vector(-7.25, 0, 6),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_ammo", "bo1_pap"},
+    },
 }
 
 ATT.Trivia = {
@@ -640,6 +659,14 @@ ATT.Attachments = {
         InstalledElements = {"ak12mount"}
         -- ExcludeElements = {"nobacksight"},
     },
+    {
+        PrintName = "Ammunition",
+        DefaultCompactName = "AMMO",
+        Bone = "tag_clip",
+        Pos = Vector(-6, 0, 6),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_ammo", "bo1_pap"},
+    },
 }
 
 ATT.Trivia = {
@@ -684,8 +711,16 @@ ATT.Attachments = {
         DefaultCompactName = "45 RND",
         Category = "bo1_ultimate_ak_mag_rpk",
         Bone = "tag_rpk_clip",
-        Pos = Vector(-5, 0, 2),
+        Pos = Vector(-4.25, 0, 0.5),
         Ang = Angle(0, 0, 0),
+    },
+    {
+        PrintName = "Ammunition",
+        DefaultCompactName = "AMMO",
+        Bone = "tag_clip",
+        Pos = Vector(-10, 0, 7.6),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_ammo", "bo1_pap"},
     },
 }
 
@@ -732,8 +767,16 @@ ATT.Attachments = {
         DefaultCompactName = "45 RND",
         Category = "bo1_ultimate_ak_mag_rpk",
         Bone = "tag_rpk_clip",
-        Pos = Vector(-5, 0, 2),
+        Pos = Vector(-4.25, 0, 0.5),
         Ang = Angle(0, 0, 0),
+    },
+    {
+        PrintName = "Ammunition",
+        DefaultCompactName = "AMMO",
+        Bone = "tag_clip",
+        Pos = Vector(-8.5, 0, 8.5),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_ammo", "bo1_pap"},
     },
 }
 
@@ -792,9 +835,9 @@ ATT.Attachments = {
         PrintName = "Optic",
         DefaultName = "Irons",
         Bone = "j_gun",
-        Pos = Vector(-3.5, 0, -3.2) + Vector(-2.26, 0.25, -1.5),
+        Pos = Vector(-3.5, 0, -3.2),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(0,0,0),
+        -- Icon_Offset = Vector(0, 0, 0),
         Category = {"cod_optic", "cod_rail_riser"},
         InstalledElements = {"ak12mount"}
         -- ExcludeElements = {"nobacksight"},
@@ -804,8 +847,16 @@ ATT.Attachments = {
         DefaultCompactName = "45 RND",
         Category = "bo1_ultimate_ak_mag_rpk",
         Bone = "tag_rpk_clip",
-        Pos = Vector(-5, 0, 2),
+        Pos = Vector(-4.25, 0, 0.5),
         Ang = Angle(0, 0, 0),
+    },
+    {
+        PrintName = "Ammunition",
+        DefaultCompactName = "AMMO",
+        Bone = "tag_clip",
+        Pos = Vector(-8.5, 0, 8.5),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_ammo", "bo1_pap"},
     },
 }
 

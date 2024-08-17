@@ -27,7 +27,7 @@ ATT.Attachments = {
         Bone = "j_gun",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(7, 0, 3.75),
+        Icon_Offset = Vector(7.5, 0, 2.25),
         ExcludeElements = {"is_patriot"},
     },
     {
@@ -174,7 +174,7 @@ ATT.Attachments = {
         Bone = "j_gun",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(7, 0, 3.75),
+        Icon_Offset = Vector(7.75, 0, 2.25),
     },
     {
         PrintName = "Muzzle",
@@ -262,7 +262,7 @@ ATT.Attachments = {
         Bone = "j_gun",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(7, 0, 3.75),
+        Icon_Offset = Vector(7.75, 0, 2.25),
     },
     {
         PrintName = "Muzzle",
@@ -368,7 +368,7 @@ ATT.Attachments = {
         Bone = "j_gun",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(7, 0, 3.75),
+        Icon_Offset = Vector(7.75, 0, 2.25),
     },
     {
         PrintName = "Muzzle",
@@ -454,7 +454,7 @@ ATT.Attachments = {
         Bone = "j_gun",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(7, 0, 3.75),
+        Icon_Offset = Vector(8.75, 0, 2.25),
     },
     {
         PrintName = "Muzzle",

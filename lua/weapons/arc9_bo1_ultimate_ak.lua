@@ -388,7 +388,7 @@ SWEP.BipodPosHook = function(self)
     return NewBipodPos
 end
 
-SWEP.CustomizePos = Vector(12.5, 40, 4)
+SWEP.CustomizePos = Vector(12.5, 32.5, 5.25)
 SWEP.CustomizeAng = Angle(90, 0, 0)
 SWEP.CustomizeSnapshotPos = Vector(0, 5, 0)
 SWEP.CustomizeSnapshotAng = Angle(0, 0, 0)
@@ -400,10 +400,10 @@ SWEP.CustomizePosHook = function(self)
         newCustPose = newCustPose + Vector(2.5, 0, 0)
     end
     if attached["barrel_rpk"] then
-        newCustPose = newCustPose + Vector(9, 10, 0.5)
+        newCustPose = newCustPose + Vector(90, 10, 0.5)
     end
     self.CustomizeSnapshotPos = newCustPose
-    return Vector(12.5, 40, 4)
+    return Vector(12.5, 32.5, 5.25)
 end
 
 -- SWEP.CustomizeSnapshotPosHook = function(self)
@@ -930,7 +930,7 @@ SWEP.Attachments = {
         PrintName = "Barrel",
         DefaultName = "AK-47 Barrel",
         Bone = "j_gun",
-        Pos = Vector(13, 0, 2.2),
+        Pos = Vector(13.25, 0, 1),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(-5, 0, 0),
         Category = {"bo1_ultimate_ak_barrel"},
@@ -941,7 +941,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(8, 0, 1.5),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(0, 0, -1),
+        Icon_Offset = Vector(3, 0, 0.25),
         Category = {"bo1_ultimate_ak_handg"},
         ExcludeElements = {"barrel_asval","ak12","rpk12"},
     },
@@ -949,9 +949,9 @@ SWEP.Attachments = {
         PrintName = "Underbarrel",
         DefaultName = "None",
         Bone = "j_gun",
-        Pos = Vector(11, 0, 0.2),
+        Pos = Vector(11, 0, 0),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(-2, 0, -2),
+        -- Icon_Offset = Vector(-2, 0, -2),
         Category = {"bo1_gp25", "bo1_tishina", "bo1_mk", "cod_grips"},
         ExcludeElements = {"barrel_asval"},
     },
@@ -969,7 +969,7 @@ SWEP.Attachments = {
         PrintName = "Stock",
         DefaultCompactName = "No Stock",
         Bone = "j_gun",
-        Pos = Vector(-5, 0, 1),
+        Pos = Vector(-4, 0, 1),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ultimate_ak_stock"},
         Installed = "bo1_ultimate_ak_stock_type2",
@@ -979,7 +979,7 @@ SWEP.Attachments = {
         PrintName = "Magazine",
         DefaultCompactName = "30rnd",
         Bone = "tag_clip",
-        Pos = Vector(0, 0, -2),
+        Pos = Vector(0, 0, -1),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ultimate_ak_mag"},
         ExcludeElements = {"rpk"}
@@ -988,15 +988,16 @@ SWEP.Attachments = {
         PrintName = "Ammunition",
         DefaultCompactName = "AMMO",
         Bone = "tag_clip",
-        Pos = Vector(2, 0, -4),
+        Pos = Vector(3, 0, -6),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ammo", "bo1_pap"},
+        ExcludeElements = {"rpk", "ak12", "ak74"}
     },
     {
         PrintName = "Perk-a-Cola",
         DefaultCompactName = "COLA",
         Bone = "j_gun",
-        Pos = Vector(-2, 0, -5),
+        Pos = Vector(-4, 0, -4),
         Ang = Angle(0, 0, 0),
         Category = "bo1_perkacola",
         ExcludeElements = {"mwc_perk", "mwc_proficiency"},
@@ -1005,7 +1006,7 @@ SWEP.Attachments = {
         PrintName = "Perk",
         DefaultCompactName = "PERK",
         Bone = "j_gun",
-        Pos = Vector(-5, 0, -5),
+        Pos = Vector(-6, 0, -4),
         Ang = Angle(0, 0, 0),
         Category = "mwc_perk",
         ExcludeElements = {"bo1_perkacola"},
@@ -1014,7 +1015,7 @@ SWEP.Attachments = {
         PrintName = "Proficiency",
         DefaultCompactName = "PRO",
         Bone = "j_gun",
-        Pos = Vector(-8, 0, -5),
+        Pos = Vector(-8, 0, -4),
         Ang = Angle(0, 0, 0),
         Category = "mwc_proficiency",
         ExcludeElements = {"bo1_perkacola"},

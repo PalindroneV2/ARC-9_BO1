@@ -50,7 +50,7 @@ SWEP.CanLean = false
 SWEP.Ammo = "" -- What ammo type this gun uses.
 
 SWEP.ChamberSize = 0 -- The amount of rounds this gun can chamber.
-SWEP.ClipSize = 0 -- Self-explanatory.
+SWEP.ClipSize = -1 -- Self-explanatory.
 SWEP.SupplyLimit = 0 -- Amount of magazines of ammo this gun can take from an ARC9 supply crate.
 SWEP.SecondarySupplyLimit = 0 -- Amount of reserve UBGL magazines you can take.
 
@@ -172,8 +172,8 @@ SWEP.SprintVerticalOffset = false
 SWEP.SprintPos = SWEP.ActivePos
 SWEP.SprintAng = SWEP.ActiveAng
 
-SWEP.CustomizePos = Vector(6, 40, 15)
-SWEP.CustomizeAng = Angle(90, 0, -90)
+SWEP.CustomizePos = Vector(0.5, 20, 15)
+SWEP.CustomizeAng = Angle(90, -20, -87.5)
 SWEP.CustomizeSnapshotPos = Vector(0, 0, 0)
 SWEP.CustomizeSnapshotAng = Angle(0, 0, 0)
 SWEP.CustomizeNoRotate = true

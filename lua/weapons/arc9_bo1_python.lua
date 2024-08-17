@@ -30,9 +30,9 @@ SWEP.MirrorVMWM = true
 SWEP.NoTPIKVMPos = true
 SWEP.WorldModelMirror = "models/weapons/arc9/w_bo1_python.mdl"
 SWEP.WorldModelOffset = {
-    Pos        =    Vector(-9, 3, -4.75),
-    Ang        =    Angle(-6, 0, 180),
-    Bone    =    "ValveBiped.Bip01_R_Hand",
+    Pos   =    Vector(-9, 3, -4.75),
+    Ang   =    Angle(-6, 0, 180),
+    Bone  =    "ValveBiped.Bip01_R_Hand",
     Scale = 1.05,
 }
 SWEP.ViewModelFOVBase = 75
@@ -219,7 +219,7 @@ SWEP.ActiveAngHook = function(self)
     end
 end
 
-SWEP.CustomizePos = Vector(17.5, 25, 4.25)
+SWEP.CustomizePos = Vector(17.5, 25, 3)
 SWEP.CustomizeAng = Angle(90, 0, 0)
 
 SWEP.BarrelLength = 0 -- = 9
@@ -312,10 +312,10 @@ SWEP.Attachments = {
         PrintName = "Optics",
         DefaultCompactName = "Irons",
         Bone = "j_gun",
-        Pos = Vector(3, 0.1, 3),
+        Pos = Vector(3, 0, 3),
         Ang = Angle(0, 0, 0),
         Category = {"cod_optic"},
-        Icon_Offset = Vector(0, 0, 1),
+        -- Icon_Offset = Vector(0, 0, 1),
         CorrectiveAng = Angle(0, 0.25, 0),
         DuplicateModels = {
             {
@@ -353,7 +353,7 @@ SWEP.Attachments = {
         PrintName = "Cylinder",
         DefaultCompactName = "None",
         Bone = "j_gun",
-        Pos = Vector(2, 0, 2),
+        Pos = Vector(0, 0, 1.5),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_cylinder"},
         ExcludeElements = {"akimbo"},
@@ -362,7 +362,7 @@ SWEP.Attachments = {
         PrintName = "Ammunition",
         DefaultCompactName = "AMMO",
         Bone = "j_gun",
-        Pos = Vector(4, 0, 0),
+        Pos = Vector(2, 0, 1.5),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ammo", "bo1_pap"},
     },
@@ -370,7 +370,7 @@ SWEP.Attachments = {
         PrintName = "Perk-a-Cola",
         DefaultCompactName = "COLA",
         Bone = "j_gun",
-        Pos = Vector(5, 0, -3),
+        Pos = Vector(-5, 0, 3),
         Ang = Angle(0, 0, 0),
         Category = "bo1_perkacola",
         ExcludeElements = {"mwc_perk", "mwc_proficiency"},
@@ -379,7 +379,7 @@ SWEP.Attachments = {
         PrintName = "Perk",
         DefaultCompactName = "PERK",
         Bone = "j_gun",
-        Pos = Vector(2, 0, -3),
+        Pos = Vector(-5, 0, 1),
         Ang = Angle(0, 0, 0),
         Category = "mwc_perk",
         ExcludeElements = {"bo1_perkacola"},
@@ -388,7 +388,7 @@ SWEP.Attachments = {
         PrintName = "Proficiency",
         DefaultCompactName = "PRO",
         Bone = "j_gun",
-        Pos = Vector(-1, 0, -3),
+        Pos = Vector(-5, 0, -1),
         Ang = Angle(0, 0, 0),
         Category = "mwc_proficiency",
         ExcludeElements = {"bo1_perkacola"},
@@ -397,7 +397,7 @@ SWEP.Attachments = {
         PrintName = "Wielding",
         DefaultCompactName = "Single",
         Bone = "j_gun",
-        Pos = Vector(0, 0, 0),
+        Pos = Vector(-5, 0, -3),
         Ang = Angle(0, 0, 0),
         Category = "bo1_akimbo",
     },

@@ -298,7 +298,7 @@ SWEP.SprintAngHook = function(self)
     end
 end
 
-SWEP.CustomizePos = Vector(12.5, 40, 4)
+SWEP.CustomizePos = Vector(12.5, 30, 5)
 SWEP.CustomizeAng = Angle(90, 0, 0)
 
 SWEP.BarrelLength = 0 -- = 25
@@ -518,7 +518,7 @@ SWEP.Attachments = {
     {
         PrintName = "Barrel",
         Bone = "j_gun",
-        Pos = Vector(10, 0, 3.15),
+        Pos = Vector(9.5, 0, 3.1),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_aug_barrels"},
     },
@@ -528,13 +528,13 @@ SWEP.Attachments = {
         Pos = Vector(14.9, 0, 3.1),
         Ang = Angle(0, 0, 0),
         Category = {"cod_muzzle"},
-        Icon_Offset = Vector(2, 0, 0.35)
+        -- Icon_Offset = Vector(2, 0, 0.35)
     },
     {
         PrintName = "Underbarrel",
         DefaultCompactName = "UB",
         Bone = "j_gun",
-        Pos = Vector(10, 0, -1),
+        Pos = Vector(10, 0, 0),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_m203", "bo1_mk","bo1_flamer"},
         ExcludeElements = {"barrel_mid", "barrel_short"}
@@ -551,7 +551,7 @@ SWEP.Attachments = {
         PrintName = "Magazine",
         DefaultCompactName = "STD",
         Bone = "tag_clip",
-        Pos = Vector(0.5, 0, 0),
+        Pos = Vector(-0.15, 0, -0.33),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_fastmag", "bo2_extmag"},
     },
@@ -559,7 +559,7 @@ SWEP.Attachments = {
         PrintName = "Ammunition",
         DefaultCompactName = "AMMO",
         Bone = "tag_clip",
-        Pos = Vector(.5, 0, -2),
+        Pos = Vector(0.5, 0, -4),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ammo", "bo1_pap"},
     },
@@ -576,7 +576,7 @@ SWEP.Attachments = {
         PrintName = "Perk-a-Cola",
         DefaultCompactName = "COLA",
         Bone = "j_gun",
-        Pos = Vector(-2, 0, -5),
+        Pos = Vector(-7, 0, -3),
         Ang = Angle(0, 0, 0),
         Category = "bo1_perkacola",
         ExcludeElements = {"mwc_perk", "mwc_proficiency"},
@@ -585,7 +585,7 @@ SWEP.Attachments = {
         PrintName = "Perk",
         DefaultCompactName = "PERK",
         Bone = "j_gun",
-        Pos = Vector(-5, 0, -5),
+        Pos = Vector(-9, 0, -3),
         Ang = Angle(0, 0, 0),
         Category = "mwc_perk",
         ExcludeElements = {"bo1_perkacola"},
@@ -594,7 +594,7 @@ SWEP.Attachments = {
         PrintName = "Proficiency",
         DefaultCompactName = "PRO",
         Bone = "j_gun",
-        Pos = Vector(-8, 0, -5),
+        Pos = Vector(-11, 0, -3),
         Ang = Angle(0, 0, 0),
         Category = "mwc_proficiency",
         ExcludeElements = {"bo1_perkacola"},

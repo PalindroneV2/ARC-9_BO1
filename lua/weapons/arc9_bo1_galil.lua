@@ -298,7 +298,7 @@ SWEP.SprintAngHook = function(self)
     end
 end
 
-SWEP.CustomizePos = Vector(12.5, 40, 4)
+SWEP.CustomizePos = Vector(12.5, 30, 4.5)
 SWEP.CustomizeAng = Angle(90, 0, 0)
 SWEP.CustomizeSnapshotPos = Vector(2.5,5,2)
 
@@ -465,7 +465,7 @@ SWEP.Attachments = {
         PrintName = "Barrel",
         DefaultCompactName = "Standard",
         Bone = "j_gun",
-        Pos = Vector(11, 0, 2.25),
+        Pos = Vector(13, 0, 1.5),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_galil_barrel"},
     },
@@ -498,7 +498,7 @@ SWEP.Attachments = {
         PrintName = "Fire Control Group",
         DefaultCompactName = "AUTO",
         Bone = "j_gun",
-        Pos = Vector(0, 0, 1),
+        Pos = Vector(-1.33, 0, -0.65),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_fcg"},
     },
@@ -514,7 +514,7 @@ SWEP.Attachments = {
         PrintName = "Magazine",
         DefaultCompactName = "MAG",
         Bone = "tag_clip",
-        Pos = Vector(0.25, 0, -2),
+        Pos = Vector(-0.25, 0, -1),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_mag_ext"},
     },
@@ -522,7 +522,7 @@ SWEP.Attachments = {
         PrintName = "Ammunition",
         DefaultCompactName = "AMMO",
         Bone = "tag_clip",
-        Pos = Vector(1, 0, -5),
+        Pos = Vector(1.25, 0, -6.5),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ammo", "bo1_pap"},
     },
@@ -530,7 +530,7 @@ SWEP.Attachments = {
         PrintName = "Perk-a-Cola",
         DefaultCompactName = "COLA",
         Bone = "j_gun",
-        Pos = Vector(-3, 0, -5),
+        Pos = Vector(-4, 0, -5),
         Ang = Angle(0, 0, 0),
         Category = "bo1_perkacola",
         ExcludeElements = {"mwc_perk", "mwc_proficiency"},
@@ -548,7 +548,7 @@ SWEP.Attachments = {
         PrintName = "Proficiency",
         DefaultCompactName = "PRO",
         Bone = "j_gun",
-        Pos = Vector(-9, 0, -5),
+        Pos = Vector(-8, 0, -5),
         Ang = Angle(0, 0, 0),
         Category = "mwc_proficiency",
         ExcludeElements = {"bo1_perkacola"},
