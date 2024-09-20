@@ -565,6 +565,29 @@ ATT.ShootEnt = "arc9_bo1_40mm_pipe"
 
 ARC9.LoadAttachment(ATT, "bo1_glammo_pipe")
 
+local ATT = {}
+
+ATT = {}
+
+ATT.PrintName = [[40mm Pipe Impact Grenade]]
+ATT.CompactName = [[IMPACT PIPE]]
+ATT.Icon = Material("entities/bo1_atts/ammo/FMJ.png")
+ATT.Description = [[Home-made explosives only drunk demolitions men dare to use.
+Has a timed fuse, but will only detonate from a direct hit on an enemy.]]
+ATT.CustomPros = {}
+ATT.CustomCons = {}
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
+ATT.Free = false
+
+ATT.ShootEntForceOverride = 2000
+
+ATT.Category = {"bo1_glammo"}
+ATT.ActivateElements = {"bo1_gl_piped"}
+ATT.ShootEnt = "arc9_bo1_40mm_pipe_impact"
+
+ARC9.LoadAttachment(ATT, "bo1_glammo_pipe_impact")
+
 ATT = {}
 
 ATT.PrintName = [[Hollow Point Rounds]]
