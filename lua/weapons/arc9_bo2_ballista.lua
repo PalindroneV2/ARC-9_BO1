@@ -392,6 +392,10 @@ SWEP.Attachments = {
 --     ["bo1_cosmetic_black"] = true,
 -- }
 
+SWEP.StandardPresets = {
+    -- "[Test]XQAAAQDUAAAAAAAAAAA9iIIiM7hMNz0dhIkbkvJZHs4/7g0n+ZTb+t5gadDJblrhrr8euPI4ekY8M382Xk+OWFaORKeyTu1Tj1PH/9d2xhBfChREmG795V2cS3S+C5plQfGjzh9QtBOQyGfkDWnv3ATnF338XCK47fmTM3DA9r5c5wA=",
+}
+
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",

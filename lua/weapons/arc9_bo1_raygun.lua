@@ -232,6 +232,11 @@ SWEP.SightMidPoint = { -- Where the gun should be at the middle of it's irons
     Ang = Angle(-0.0625, -0.3, -2.5),
 }
 
+SWEP.CantPeek = false
+-- SWEP.PeekPos = Vector(3.24, 5, -6.75)
+-- SWEP.PeekAng = Angle(0, 0, -90)
+-- SWEP.NoPeekCrosshair = true -- The Funny:tm:
+
 SWEP.HoldTypeHolstered = "passive"
 SWEP.HoldType = "pistol"
 SWEP.HoldTypeSights = "pistol"

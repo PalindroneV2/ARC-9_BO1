@@ -329,8 +329,9 @@ SWEP.Attachments = {
         PrintName = "Underbarrel",
         DefaultCompactName = "UB",
         Bone = "j_gun",
-        Pos = Vector(5, 0, 0.2),
+        Pos = Vector(4.25, 0, 0.2),
         Ang = Angle(0, 0, 0),
+        Scale = 1,
         Category = "cod_rail_underbarrel",
     },
     {
@@ -411,6 +412,10 @@ SWEP.Attachments = {
         Category = "mwc_proficiency",
         ExcludeElements = {"bo1_perkacola"},
     },
+}
+
+SWEP.StandardPresets = {
+    -- "[IMI Uzi]XQAAAQCUAAAAAAAAAAA9iIIiM7hMNz0dhIkbkvLjTdErcFqoUCCiwDl4XYw7hsKMAG1VN7Nsfy6OUAUqoCvVurlDUsuD6F1uDOSeQZp5H5Ox82ATzld0UjYWT5who7bs7fnaQWA=",
 }
 
 SWEP.Animations = {

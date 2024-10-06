@@ -469,6 +469,7 @@ SWEP.Attachments = {
 
 SWEP.StandardPresets = {
     "[Stakeout]XQAAAQBGAQAAAAAAAAA9iIIiM7tuo1AtTygaX+szqhQwSLB77XWRbfcl7Hq+GAONtiFsftYaOonYIGke+/M6ZJSD50msbHFfypfi86wo9qQnRbPttJbjrqO1+6XRjSG3MjruJAst/sR1S+a3fobPriaUXNg+8PyzliNTLGoJDoIIVn+9aF1aDQ3AvBLFDn5umz976BbKTYSV5H2edtIG7uNX9l1oAA==",
+    -- "[Ithaca M37]XQAAAQDYAAAAAAAAAAA9iIIiM7tupQCpjtobRJEkdZ1fP0HAirxuJaBzYzDhXs5/wQu15HkSP1mmb+zUSw0+srENRosvQDbDg/86E5ILzOnPMxAZk8bBrN2VcE2XJ3AcTqMoJgRzusfhh9YA",
 }
 
 SWEP.Animations = {
