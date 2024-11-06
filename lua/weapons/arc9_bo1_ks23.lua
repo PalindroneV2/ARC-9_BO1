@@ -318,7 +318,7 @@ SWEP.MovingPosHook = function(self)
     local attached = self:GetElements()
     local newActivePos = Vector(0, 0, -1)
     if attached["doom_ee"] then
-        newActivePos = Vector(-2.175, -1, -2)
+        newActivePos = Vector(0, 0, 0)
     end
     return newActivePos
 end
@@ -339,7 +339,7 @@ SWEP.CrouchPosHook = function(self)
     local attached = self:GetElements()
     local newActivePos = self.CrouchPos
     if attached["doom_ee"] then
-        newActivePos = Vector(-2.175, -1, -2)
+        newActivePos = Vector(0, 0, -1)
     end
     return newActivePos
 end

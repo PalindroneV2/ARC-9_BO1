@@ -227,6 +227,11 @@ SWEP.BarrelLength = 0 -- = 25
 
 SWEP.ExtraSightDist = 5
 
+SWEP.StandardPresets = {
+    "[MP5SD3]XQAAAQAAAQAAAAAAAAA9iIIiM7tupQCpjtobRJEkdevdtQyXDt2gZ7eB7fmxjCp8m5w8LUVZLSBm93okaoz7/ac/BLwKsZmrFq2g6aJV/bJ4fOt9Koc0M0cs8YQO0c4J4TZvmW88Av07/f19Vo5lJH/nKVNWag0FZpsbn+3Q60AjovVNKos6GqMTAA==",
+    "[MP5K PDW]XQAAAQD/AAAAAAAAAAA9iIIiM7tupQCpjtobRJEkdevdtQyXDt2gZ7eB7fmxjCp8m5w8LUVZK1SKZPMH0mlP5cyg4r1k5Z327H2l/o/E1z2UPyTCU+/Pcw0D4MbJV/uf/xQIFA16dysQfVLPBZJzyl6ARMNfWwfNfCZw5+7NHf6KAA=="
+}
+
 SWEP.AttachmentElements = {
     ["bo1_fastmag"] = {
         Bodygroups = {

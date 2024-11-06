@@ -465,6 +465,17 @@ ATT.ClipSize = 80
 ATT.AimDownSightsTimeMult = 1.25
 ATT.SprintToFireTimeMult = 1.25
 
+ATT.Attachments = {
+    {
+        PrintName = "Ammunition",
+        DefaultCompactName = "AMMO",
+        Bone = "tag_clip",
+        Pos = Vector(-2.25, 0, 4.5),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_ammo", "bo1_pap"},
+    },
+}
+
 ARC9.LoadAttachment(ATT, "bo1_ultimate_ak_mag_rpk_drum")
 
 ATT = {}
@@ -597,7 +608,7 @@ ATT.Attachments = {
         PrintName = "Ammunition",
         DefaultCompactName = "AMMO",
         Bone = "tag_clip",
-        Pos = Vector(-7.25, 0, 6),
+        Pos = Vector(-7, 0, 5.75),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ammo", "bo1_pap"},
     },
@@ -663,7 +674,7 @@ ATT.Attachments = {
         PrintName = "Ammunition",
         DefaultCompactName = "AMMO",
         Bone = "tag_clip",
-        Pos = Vector(-6, 0, 6),
+        Pos = Vector(-6.25, 0, 5.75),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ammo", "bo1_pap"},
     },
@@ -721,6 +732,7 @@ ATT.Attachments = {
         Pos = Vector(-10, 0, 7.6),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ammo", "bo1_pap"},
+        ExcludeElements = {"drum_mag"},
     },
 }
 
@@ -777,6 +789,7 @@ ATT.Attachments = {
         Pos = Vector(-8.5, 0, 8.5),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ammo", "bo1_pap"},
+        ExcludeElements = {"drum_mag"},
     },
 }
 
@@ -857,6 +870,7 @@ ATT.Attachments = {
         Pos = Vector(-8.5, 0, 8.5),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ammo", "bo1_pap"},
+        ExcludeElements = {"drum_mag"},
     },
 }
 

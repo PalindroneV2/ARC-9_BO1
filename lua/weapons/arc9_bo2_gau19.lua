@@ -174,13 +174,13 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(0,0,0),
+    Pos = Vector(0, 0, 0),
     Ang = Angle(0, 0, 0),
     Magnification = 1.1,
 }
 
 SWEP.SightMidPoint = { -- Where the gun should be at the middle of it's irons
-    Pos = Vector(0,0,0),
+    Pos = Vector(0, 0, 0),
     Ang = Angle(0, 0, 0),
 }
 SWEP.HasSights = false
@@ -213,29 +213,29 @@ SWEP.SprintVerticalOffset = false
 SWEP.SprintPos = SWEP.ActivePos
 SWEP.SprintAng = SWEP.ActiveAng
 
---Vector(-5.75, -17.5, 0)
+--Vector(-5.75, -15, 0)
 SWEP.ActivePosHook = function(self)
     local attached = self:GetElements()
     if attached["doom_ee"] then
-        return Vector(-5.75, -17.5, 0)
+        return Vector(-5.75, -15, 0)
     end
 end
 SWEP.ActiveAngHook = function(self)
     local attached = self:GetElements()
     if attached["doom_ee"] then
-        return Angle(0,0,0)
+        return Angle(0, 0, 0)
     end
 end
 SWEP.MovingPosHook = function(self)
     local attached = self:GetElements()
     if attached["doom_ee"] then
-        return Vector(-5.75, -17.5, 0)
+        return Vector(0, 0, 0)
     end
 end
 SWEP.MovingAngHook = function(self)
     local attached = self:GetElements()
     if attached["doom_ee"] then
-        return Angle(0,0,0)
+        return Angle(0, 0, 0)
     end
 end
 SWEP.MovingMidPointHook = function(self)
@@ -247,25 +247,25 @@ end
 SWEP.CrouchPosHook = function(self)
     local attached = self:GetElements()
     if attached["doom_ee"] then
-        return Vector(-5.75, -17.5, 0)
+        return Vector(0, 0, 0)
     end
 end
 SWEP.CrouchAngHook = function(self)
     local attached = self:GetElements()
     if attached["doom_ee"] then
-        return Angle(0,0,0)
+        return Angle(0, 0, 0)
     end
 end
 SWEP.SprintPosHook = function(self)
     local attached = self:GetElements()
     if attached["doom_ee"] then
-        return Vector(-5.75, -17.5, 0)
+        return Vector(-5.75, -15, 0)
     end
 end
 SWEP.SprintAngHook = function(self)
     local attached = self:GetElements()
     if attached["doom_ee"] then
-        return Angle(0,0,0)
+        return Angle(0, 0, 0)
     end
 end
 
@@ -359,7 +359,7 @@ SWEP.Attachments = {
         Pos = Vector(-4, 0, -5),
         Ang = Angle(0, 0, 0),
         Category = "mwc_perk",
-        ExcludeElements = {"bo1_perkacola"},
+        ExcludeElements = {"bo1_perkacola", "doom_ee"},
     },
     {
         PrintName = "Proficiency",
@@ -368,7 +368,7 @@ SWEP.Attachments = {
         Pos = Vector(-6, 0, -5),
         Ang = Angle(0, 0, 0),
         Category = "mwc_proficiency",
-        ExcludeElements = {"bo1_perkacola"},
+        ExcludeElements = {"bo1_perkacola", "doom_ee"},
     },
     {
         PrintName = "Cosmetic",

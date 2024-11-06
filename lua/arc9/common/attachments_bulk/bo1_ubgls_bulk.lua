@@ -95,7 +95,7 @@ ATT = {}
 ATT.PrintName = [[Tishina Grenade Launcher]]
 ATT.CompactName = [[Tishina]]
 ATT.Icon = Material("materials/entities/bo1_atts/ubs/gp25.png")
-ATT.Description = [[Underbarrel grenade launcher that fires 40mm High Explosive rounds.
+ATT.Description = [[Underbarrel grenade launcher that fires 30mm High Explosive rounds.
 Reduced handling.]]
 ATT.CustomPros = {}
 ATT.CustomCons = {}
@@ -185,7 +185,7 @@ ATT = {}
 ATT.PrintName = [[Combine SMG Grenade Launcher]]
 ATT.CompactName = [[COMBINE]]
 ATT.Icon = Material("materials/entities/bo1_atts/ubs/m320.png")
-ATT.Description = [[Modern modular underbarrel grenade launcher that fires 40mm High Explosive rounds.
+ATT.Description = [[Modern modular underbarrel grenade launcher that fires 25mm High Explosive rounds.
 Reduced handling.]]
 ATT.CustomPros = {}
 ATT.CustomCons = {}

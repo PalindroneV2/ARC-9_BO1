@@ -255,7 +255,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     if attached["doom_ee"] then
         vm:SetBodygroup(1,0)
         vm:SetBodygroup(2,1)
-        newactpos = Vector(0, 0, -1)
+        newactpos = Vector(-0.5, 0, -1)
         newactang = Angle(0, 0, 0)
     end
     self.ActivePos = newactpos
@@ -318,7 +318,7 @@ SWEP.Attachments = {
         Pos = Vector(-6, 0, 2.25),
         Ang = Angle(0, 0, 0),
         Category = "mwc_perk",
-        ExcludeElements = {"bo1_perkacola"},
+        ExcludeElements = {"bo1_perkacola", "doom_ee"},
     },
     {
         PrintName = "Proficiency",
@@ -327,7 +327,7 @@ SWEP.Attachments = {
         Pos = Vector(-8, 0, 2.25),
         Ang = Angle(0, 0, 0),
         Category = "mwc_proficiency",
-        ExcludeElements = {"bo1_perkacola"},
+        ExcludeElements = {"bo1_perkacola", "doom_ee"},
     },
 }
 

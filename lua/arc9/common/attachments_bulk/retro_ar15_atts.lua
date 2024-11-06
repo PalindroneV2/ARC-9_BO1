@@ -14,7 +14,7 @@ ATT.MenuCategory = "ARC9 - BO1 AR-15 Attachments"
 ATT.Free = false
 
 ATT.Category = {"retro_ar15_barrel"}
-ATT.ActivateElements = {"carbine","barrel_9mm", "barrel_7", "carbine_hg"}
+ATT.ActivateElements = {"carbine", "barrel_9mm", "barrel_7", "carbine_hg"}
 -- ATT.RequireElements = {"9mm_mag"}
 -- ATT.ExcludeElements = {"bo1_mk"}
 
@@ -39,7 +39,7 @@ ATT.Attachments = {
         Icon_Offset = Vector(3, 0, 0),
         Ang = Angle(0, 0, 0),
         Category = {"cod_muzzle"},
-        ExcludeElements = {"is_patriot","9mm_mag"},
+        ExcludeElements = {"is_patriot", "9mm_mag"},
     },
     {
         PrintName = "Muzzle",
@@ -49,7 +49,7 @@ ATT.Attachments = {
         Pos = Vector(-13.425, 0, -2.45),
         Icon_Offset = Vector(3, 0, 0),
         Ang = Angle(0, 0, 0),
-        Category = {"cod_muzzle_pistol","cod_muzzle_smg"},
+        Category = {"cod_muzzle_pistol", "cod_muzzle_smg"},
         RequireElements = {"9mm_mag"},
         ExcludeElements = {"is_patriot"},
         RejectAttachments = { ["bo2_muzzle_suppressor_pistol_2025"] = true },
@@ -162,7 +162,7 @@ ATT.MenuCategory = "ARC9 - BO1 AR-15 Attachments"
 ATT.Free = false
 
 ATT.Category = {"retro_ar15_barrel"}
-ATT.ActivateElements = {"carbine","barrel_10", "carbine_hg"}
+ATT.ActivateElements = {"carbine", "barrel_10", "carbine_hg"}
 -- ATT.ExcludeElements = {"bo1_mk"}
 
 ATT.Attachments = {
@@ -212,7 +212,7 @@ ATT.Attachments = {
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(13.5, 0, 4.15),
         Category = {"retro_ar15_front_cut"},
-        ExcludeElements = {"ar15_ris", "mlok", "handguard_patriot", "handguard_famas","handguard_607","handguard_flamer"}
+        ExcludeElements = {"ar15_ris", "mlok", "handguard_patriot", "handguard_famas", "handguard_607", "handguard_flamer"}
     },
 }
 
@@ -258,7 +258,7 @@ ATT.Attachments = {
         PrintName = "Handguard",
         DefaultCompactName = "CAR-15",
         DefaultIcon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m4.png", "mips smooth"),
-        Category = {"retro_ar15_handguard_carbine", "retro_ar15_handguard_11","retro_ar15_handguard_commando", "retro_ar15_handguard_mloks"},
+        Category = {"retro_ar15_handguard_carbine", "retro_ar15_handguard_11", "retro_ar15_handguard_commando", "retro_ar15_handguard_mloks"},
         Bone = "j_gun",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
@@ -289,7 +289,7 @@ ATT.Attachments = {
         Pos = Vector(-9, 0, -1.2), --(-4, 0, -0.4)
         Ang = Angle(0, 0, 0),
         Category = {"cde_m203", "bo1_mk", "cod_rail_underbarrel"},
-        ExcludeElements = {"ar15_ris", "mlok","handguard_flamer"}
+        ExcludeElements = {"ar15_ris", "mlok", "handguard_flamer"}
     },
     {
         PrintName = "Gasblock",
@@ -299,7 +299,7 @@ ATT.Attachments = {
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(13.5, 0, 4.15),
         Category = {"retro_ar15_front_cut"},
-        ExcludeElements = {"ar15_ris", "mlok", "handguard_patriot", "handguard_famas", "handguard_607","handguard_flamer"}
+        ExcludeElements = {"ar15_ris", "mlok", "handguard_patriot", "handguard_famas", "handguard_607", "handguard_flamer"}
     },
 }
 
@@ -405,7 +405,7 @@ ATT.Attachments = {
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(13.5, 0, 4.15),
         Category = {"retro_ar15_front_cut"},
-        ExcludeElements = {"ar15_ris", "mlok", "handguard_patriot", "handguard_famas", "handguard_607","handguard_flamer"}
+        ExcludeElements = {"ar15_ris", "mlok", "handguard_patriot", "handguard_famas", "handguard_607", "handguard_flamer"}
     },
 }
 
@@ -472,7 +472,7 @@ ATT.Attachments = {
         Icon_Offset = Vector(19, 0, 4.15),
         Ang = Angle(0, 0, 0),
         Category = {"retro_ar15_front_cut"},
-        ExcludeElements = {"ar15_ris", "mlok", "handguard_patriot", "carbine_hg", "handguard_famas", "handguard_607","handguard_flamer"}
+        ExcludeElements = {"ar15_ris", "mlok", "handguard_patriot", "carbine_hg", "handguard_famas", "handguard_607", "handguard_flamer"}
     },
 }
 
@@ -549,7 +549,7 @@ ATT.Attachments = {
         Pos = Vector(-9.5, 0, 2.4),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_bipod"},
-        ExcludeElements = {"cde_m203", "bo1_mk"}
+        ExcludeElements = {"cde_m203", "bo1_mk", "bo1_flamer"}
     },
 }
 
@@ -837,7 +837,7 @@ ATT.SortOrder = 1
 ATT.MenuCategory = "ARC9 - BO1 AR-15 Attachments"
 ATT.Free = false
 
-ATT.Category = {"retro_ar15_handguard_11","retro_ar15_handguard_14","retro_ar15_handguard_16"}
+ATT.Category = {"retro_ar15_handguard_11", "retro_ar15_handguard_14", "retro_ar15_handguard_16"}
 ATT.ActivateElements = {"handguard_flamer", "carbine_hg", "nosling"}
 
 ATT.Attachments = {
@@ -1110,7 +1110,7 @@ ATT.Attachments = {
         Pos = Vector(-10.5, 0, -1.3),
         Ang = Angle(0, 0, 0),
         Category = {"cde_m203", "bo1_mk", "cod_grips"},
-        InstalledElements = {"allowtac","mlok_rails"},
+        InstalledElements = {"allowtac", "mlok_rails"},
     },
     {
         PrintName = "Tactical Right",
@@ -1119,7 +1119,7 @@ ATT.Attachments = {
         Pos = Vector(-11.5, 0.9, 1.6-3.75),
         Ang = Angle(0, 0, -90),
         Category =  {"cod_tactical"},
-        InstalledElements = {"removecovers","mlok_rails"},
+        InstalledElements = {"removecovers", "mlok_rails"},
         RequireElements = {"allowtac"},
     },
     {
@@ -1129,7 +1129,7 @@ ATT.Attachments = {
         Pos = Vector(-11.5, -0.9, 1.6-3.75),
         Ang = Angle(0, 0, 90),
         Category =  {"cod_tactical"},
-        InstalledElements = {"removecovers","mlok_rails"},
+        InstalledElements = {"removecovers", "mlok_rails"},
         RequireElements = {"allowtac"},
     },
     {
@@ -1402,7 +1402,7 @@ ATT.Folder = "AR-15 IRONS"
 ATT.Ingore = true
 
 ATT.Category = {"retro_ar15_iron_scar"}
--- ATT.ActivateElements = {"cod_rail_riser","mw2_m4_top", "mw2_m4_irons"}
+-- ATT.ActivateElements = {"cod_rail_riser", "mw2_m4_top", "mw2_m4_irons"}
 ATT.Model = "models/weapons/arc9/atts/bo2_scariron.mdl"
 -- ATT.Scale = Vector(0.375, 0.375, 0.375)
 ATT.ModelOffset = Vector(-3.5, 0, -0.1)
@@ -1433,7 +1433,7 @@ ATT.Free = false
 ATT.Folder = "AR-15 IRONS"
 
 ATT.Category = {"ar15_rail_riser"}
-ATT.ActivateElements = {"cod_rail_riser","mw2_m4_top", "mw2_m4_irons"}
+ATT.ActivateElements = {"cod_rail_riser", "mw2_m4_top", "mw2_m4_irons"}
 ATT.Model = "models/weapons/arc9/item/mw2_m4_top.mdl"
 ATT.Scale = Vector(0.375, 0.375, 0.375)
 ATT.ModelOffset = Vector(1.5 , 0, -0.35)
@@ -1576,7 +1576,7 @@ ATT.Folder = "AR-15 IRONS"
 
 ATT.Category = {"bo1_addon_irons_2"}
 ATT.ActivateElements = {"mw2_m4_irons"}
-ATT.ExcludeElements = {"handguard_patriot", "barrel_9mm", "handguard_ris_mw19","handguard_flamer"}
+ATT.ExcludeElements = {"handguard_patriot", "barrel_9mm", "handguard_ris_mw19", "handguard_flamer"}
 ATT.DrawFunc = function(swep, model, wm)
     if swep:GetElements()["carbine_hg"] then
         model:SetBodygroup(0,1)
@@ -2744,12 +2744,12 @@ ATT.ExcludeElements = {"is_patriot"}
 ATT.Attachments = {
     {
         PrintName = "Optic",
-        Category = {"retro_ar15_iron", "cod_optic", "cod_rail_riser", "ar15_rail_riser", "mw3e_deagle_tactical","bo1_addon_irons_2"},
+        Category = {"retro_ar15_iron", "cod_optic", "cod_rail_riser", "ar15_rail_riser", "mw3e_deagle_tactical", "bo1_addon_irons_2"},
         ExcludeElements = {"handguard_famas"},
         Bone = "j_gun",
         Pos = Vector(-1, 0, -0.52),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(1.5, 0, 1),
+        -- Icon_Offset = Vector(1.5, 0, 1),
         -- Installed = "retro_ar15_iron_carry",
         -- Integral = true,
         MergeSlots = {2},
@@ -2785,7 +2785,7 @@ ATT.SortOrder = 5
 ATT.MenuCategory = "ARC9 - BO1 AR-15 Attachments"
 
 ATT.Category = {"retro_ar15_upper"}
-ATT.ActivateElements = {"a4_top","commando_top"}
+ATT.ActivateElements = {"a4_top", "commando_top"}
 ATT.ExcludeElements = {"is_patriot"}
 
 ATT.RPMOverride = 750
@@ -2821,12 +2821,12 @@ end
 ATT.Attachments = {
     {
         PrintName = "Optic",
-        Category = {"retro_ar15_iron", "cod_optic", "cod_rail_riser", "ar15_rail_riser", "mw3e_deagle_tactical","bo1_addon_irons_2"},
+        Category = {"retro_ar15_iron", "cod_optic", "cod_rail_riser", "ar15_rail_riser", "mw3e_deagle_tactical", "bo1_addon_irons_2"},
         ExcludeElements = {"handguard_famas"},
         Bone = "j_gun",
         Pos = Vector(-1, 0, -0.52),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(1.5, 0, 1),
+        -- Icon_Offset = Vector(1.5, 0, 1),
         -- Installed = "retro_ar15_iron_carry",
         -- Integral = true,
         MergeSlots = {2},
@@ -2888,12 +2888,12 @@ end
 ATT.Attachments = {
     {
         PrintName = "Optic",
-        Category = {"retro_ar15_iron", "cod_optic", "cod_rail_riser", "ar15_rail_riser", "mw3e_deagle_tactical","bo1_addon_irons_2"},
+        Category = {"retro_ar15_iron", "cod_optic", "cod_rail_riser", "ar15_rail_riser", "mw3e_deagle_tactical", "bo1_addon_irons_2"},
         ExcludeElements = {"handguard_famas"},
         Bone = "j_gun",
-        Pos = Vector(-1, 0, -0.42),
+        Pos = Vector(-1, 0, -0.52),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(1.5, 0, 1),
+        -- Icon_Offset = Vector(1.5, 0, 1),
         -- Installed = "retro_ar15_iron_carry",
         -- Integral = true,
         MergeSlots = {2},
@@ -2934,7 +2934,7 @@ ATT.Free = false
 
 ATT.Category = {"cde_m203"}
 ATT.ActivateElements = {"cde_m203"}
-ATT.ExcludeElements = {"no_ubgl","bo1_fastmag"}
+ATT.ExcludeElements = {"no_ubgl", "bo1_fastmag"}
 
 ATT.AimDownSightsTimeMult = 1.1
 ATT.SprintToFireTimeMult = 1.1

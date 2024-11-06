@@ -103,7 +103,7 @@ SWEP.SpreadAddMidAir = 0
 SWEP.SpreadAddCrouch = math.rad(0 / 37.5)
 
 SWEP.UseVisualRecoil = true
-SWEP.VisualRecoilCenter = Vector(0,0, 0)
+SWEP.VisualRecoilCenter = Vector(0, 0, 0)
 SWEP.VisualRecoilUp = 0.1
 SWEP.VisualRecoilSide = 0.1
 SWEP.VisualRecoilRoll = 1
@@ -175,7 +175,7 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(0,0,0),
+    Pos = Vector(0, 0, 0),
     Ang = Angle(0, 0, 0),
     Midpoint = { -- Where the gun should be at the middle of it's irons
         Pos = Vector(0, 0, 0),
@@ -230,7 +230,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local attached = data.elements
 
     if CUSTSTATE then
-        vm:SetBodygroup(0,0)
+        vm:SetBodygroup(0, 0)
     else
         vm:SetBodygroup(0,1)
     end
@@ -245,19 +245,23 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     -- local newSprintAng = Angle(0, -10, 0)
 
     if attached["doom_ee"] then
-        vm:SetBodygroup(0,0)
+        vm:SetBodygroup(0, 0)
         newActivePos = Vector(-8.25, -17.5, 0)
         newActiveAng = Angle(0, 5, 0)
         -- newSprintPos = Vector(-8.25, -17.5, 0)
         -- newSprintAng = Angle(0, 5, 0)
+        newMovingPos = Vector(0, 0, 0)
+        newMovingAng = Angle(0, 0, 0)
+        newCrouchPos =  Vector(0, 0, 0)
+        newCrouchAng = Vector(0, 0, 0)
     end
 
     self.ActivePos = newActivePos
     self.ActiveAng = newActiveAng
-    self.MovingPos = newActivePos
-    self.MovingAng = newActiveAng
-    self.CrouchPos = newActivePos
-    self.CrouchAng = newActiveAng
+    -- self.MovingPos = newActivePos
+    -- self.MovingAng = newActiveAng
+    -- self.CrouchPos = newActivePos
+    -- self.CrouchAng = newActiveAng
     self.SprintPos = newActivePos
     self.SprintAng = newActiveAng
 end
@@ -305,7 +309,7 @@ SWEP.Attachments = {
         Pos = Vector(4, 0, -3),
         Ang = Angle(0, 0, 0),
         Category = "mwc_perk",
-        ExcludeElements = {"bo1_perkacola"},
+        ExcludeElements = {"bo1_perkacola", "doom_ee"},
     },
     {
         PrintName = "Proficiency",
@@ -314,7 +318,7 @@ SWEP.Attachments = {
         Pos = Vector(2, 0, -3),
         Ang = Angle(0, 0, 0),
         Category = "mwc_proficiency",
-        ExcludeElements = {"bo1_perkacola"},
+        ExcludeElements = {"bo1_perkacola", "doom_ee"},
     },
 }
 
