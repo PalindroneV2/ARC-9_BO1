@@ -252,8 +252,8 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         -- newSprintAng = Angle(0, 5, 0)
         newMovingPos = Vector(0, 0, 0)
         newMovingAng = Angle(0, 0, 0)
-        newCrouchPos =  Vector(0, 0, 0)
-        newCrouchAng = Vector(0, 0, 0)
+        newCrouchPos = Vector(0, 0, 0)
+        newCrouchAng = Angle(0, 0, 0)
     end
 
     self.ActivePos = newActivePos

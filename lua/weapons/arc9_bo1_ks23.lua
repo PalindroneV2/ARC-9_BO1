@@ -311,7 +311,7 @@ end
 SWEP.ActiveAngHook = function(self)
     local attached = self:GetElements()
     if attached["doom_ee"] then
-        return Angle(0,0,0)
+        return Angle(0, 0, 0)
     end
 end
 SWEP.MovingPosHook = function(self)
@@ -325,7 +325,7 @@ end
 SWEP.MovingAngHook = function(self)
     local attached = self:GetElements()
     if attached["doom_ee"] then
-        return Angle(0,0,0)
+        return Angle(0, 0, 0)
     end
 end
 SWEP.MovingMidPointHook = function(self)
@@ -339,14 +339,14 @@ SWEP.CrouchPosHook = function(self)
     local attached = self:GetElements()
     local newActivePos = self.CrouchPos
     if attached["doom_ee"] then
-        newActivePos = Vector(0, 0, -1)
+        newActivePos = Vector(0, 0, 0)
     end
     return newActivePos
 end
 SWEP.CrouchAngHook = function(self)
     local attached = self:GetElements()
     if attached["doom_ee"] then
-        return Angle(0,0,0)
+        return Angle(0, 0, 0)
     end
 end
 SWEP.SprintPosHook = function(self)
@@ -360,7 +360,7 @@ end
 SWEP.SprintAngHook = function(self)
     local attached = self:GetElements()
     if attached["doom_ee"] then
-        return Angle(0,0,0)
+        return Angle(0, 0, 0)
     end
 end
 
@@ -410,7 +410,7 @@ SWEP.Attachments = {
         Pos = Vector(-6, 0, -3),
         Ang = Angle(0, 0, 0),
         Category = "mwc_perk",
-        ExcludeElements = {"bo1_perkacola"},
+        ExcludeElements = {"bo1_perkacola", "doom_ee"},
     },
     {
         PrintName = "Proficiency",
@@ -419,7 +419,7 @@ SWEP.Attachments = {
         Pos = Vector(-8, 0, -3),
         Ang = Angle(0, 0, 0),
         Category = "mwc_proficiency",
-        ExcludeElements = {"bo1_perkacola"},
+        ExcludeElements = {"bo1_perkacola", "doom_ee"},
     },
     {
         PrintName = "Cosmetic",
