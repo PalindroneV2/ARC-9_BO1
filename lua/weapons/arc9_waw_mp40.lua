@@ -104,7 +104,7 @@ SWEP.SpreadAddMidAir = 0
 SWEP.RecoilPatternDrift = 20
 
 SWEP.UseVisualRecoil = true
-SWEP.VisualRecoilCenter = Vector(0,0, 0)
+SWEP.VisualRecoilCenter = Vector(0, 0, 0)
 SWEP.VisualRecoilUp = 0.3
 SWEP.VisualRecoilSide = 0.25
 SWEP.VisualRecoilRoll = 1
@@ -253,13 +253,13 @@ end
 SWEP.MovingPosHook = function(self)
     local attached = self:GetElements()
     if attached["wolf3d"] then
-        return wolfPos
+        return Vector(0, 0, 0)
     end
 end
 SWEP.MovingAngHook = function(self)
     local attached = self:GetElements()
     if attached["wolf3d"] then
-        return wolfAng
+        return Angle(0, 0, 0)
     end
 end
 SWEP.MovingMidPointHook = function(self)
@@ -271,13 +271,13 @@ end
 SWEP.CrouchPosHook = function(self)
     local attached = self:GetElements()
     if attached["wolf3d"] then
-        return wolfPos
+        return Vector(0, 0, 0)
     end
 end
 SWEP.CrouchAngHook = function(self)
     local attached = self:GetElements()
     if attached["wolf3d"] then
-        return wolfAng
+        return Angle(0, 0, 0)
     end
 end
 SWEP.SprintPosHook = function(self)
@@ -296,7 +296,7 @@ end
 SWEP.AttachmentElements = {
     ["stock_l"] = {
         Bodygroups = {
-            {3,1}
+            {3, 1}
         },
     },
 }

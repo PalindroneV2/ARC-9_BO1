@@ -189,6 +189,13 @@ ATT.RecoilKick = 0
 ATT.HasSights = false
 ATT.Crosshair = false
 ATT.BottomlessClip = true
+ATT.RPM = 150
+
+-- ATT.FiremodesOverride = {
+--     {
+--         Mode = -1,
+--     },
+-- }
 
 ATT.AimDownSightsTimeMult = 0
 ATT.SprintToFireTimeMult = 0

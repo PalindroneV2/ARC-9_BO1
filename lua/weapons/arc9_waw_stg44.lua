@@ -247,7 +247,7 @@ end
 SWEP.MovingPosHook = function(self)
     local attached = self:GetElements()
     if attached["wolf3d"] then
-        return Vector(0,0,0)
+        return Vector(0, 0, 0)
     end
 end
 SWEP.MovingAngHook = function(self)
@@ -265,7 +265,7 @@ end
 SWEP.CrouchPosHook = function(self)
     local attached = self:GetElements()
     if attached["wolf3d"] then
-        return wolfPos
+        return Vector(0, 0, 0)
     end
 end
 SWEP.CrouchAngHook = function(self)
