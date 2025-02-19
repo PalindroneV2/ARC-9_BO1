@@ -202,7 +202,7 @@ ATT.Attachments = {
         Pos = Vector(-9, 0, -1.2), --(-4, 0, -0.4)
         Ang = Angle(0, 0, 0),
         Category = {"cde_m203", "cod_rail_underbarrel"},
-        ExcludeElements = {"ar15_ris", "mlok", "is_patriot"}
+        ExcludeElements = {"ar15_ris", "mlok", "is_patriot","handguard_patriot"}
     },
     {
         PrintName = "Gasblock",
@@ -991,6 +991,17 @@ ATT.Category = {"retro_ar15_handguard_10"}
 ATT.ActivateElements = {"handguard_patriot", "no_gasblock", "nosling", "noubgl"}
 ATT.ExcludeElements = {"cde_m203", "bo1_mk"}
 
+ATT.Attachments = {
+    {
+        PrintName = "Underbarrel",
+        DefaultCompactName = "UB",
+        Bone = "j_gun",
+        Pos = Vector(-9, 0, -1.35), --(-4, 0, -0.4)
+        Ang = Angle(0, 0, 0),
+        Category = {"cde_m203", "cod_rail_underbarrel"},
+        ExcludeElements = {"ar15_ris", "mlok", "is_patriot"}
+    },
+}
 
 ATT.RecoilMult = 1.15
 ATT.SpeedMultSights = 1.2
