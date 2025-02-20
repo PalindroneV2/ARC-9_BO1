@@ -1,9 +1,9 @@
 VertexlitGeneric
 {
-	$basetexture	"models/weapons/arc9/cde/kali_ar15/ghosts/magpuls"
-	$bumpmap	"models/weapons/arc9/cde/kali_ar15/ghosts/magpuls_n"
-	$phongexponenttexture "models/weapons/arc9/cde/kali_ar15/ghosts/magpuls_s"
-	$envmapmask "models/weapons/arc9/cde/kali_ar15/ghosts/magpuls_s"
+	$basetexture	"models/weapons/arc9/cde/kali_ar15/ghosts/mbus"
+	$bumpmap	"models/weapons/arc9/cde/kali_ar15/ghosts/mbus_n"
+	$phongexponenttexture "models/weapons/arc9/cde/kali_ar15/ghosts/mbus_s"
+	$envmapmask "models/weapons/arc9/cde/kali_ar15/ghosts/mbus_s"
 	$normalmapalphaenvmapmask 1
 	
 	"$blendtintbybasealpha" "1"
