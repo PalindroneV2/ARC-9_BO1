@@ -41,7 +41,7 @@ SWEP.CustomCamoTexture = "models/weapons/arc9/bo1/camos/black_detail"
 SWEP.CustomCamoScale = 2
 SWEP.CustomBlendFactor = 1
 
-SWEP.DefaultBodygroups = "002000000"
+SWEP.DefaultBodygroups = "00000000000000"
 
 SWEP.DamageMax = 35
 SWEP.DamageMin = 8 -- damage done at maximum range
@@ -165,7 +165,7 @@ SWEP.ShellScale = 1.5
 SWEP.MuzzleEffectQCA = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectQCA = 2 -- which attachment to put the case effect on
 SWEP.ProceduralViewQCA = nil
-SWEP.CamQCA = 4
+SWEP.CamQCA = 3
 SWEP.NoShellEject = true
 SWEP.NoShellEjectManualAction = true
 
@@ -226,17 +226,39 @@ SWEP.BarrelLength = 0 -- = 25
 SWEP.ExtraSightDist = 5
 
 SWEP.AttachmentElements = {
-    ["mount"] = {
-        Bodygroups = {
-            {1,1},
-        },
+    ["akimbo"] = {
+        MuzzleEffectQCAEvenShot = 4,
+        CaseEffectQCAEvenShot = 5,
+        AfterShotQCAEvenShot = 4,
+        ShotgunReload = false,
     },
 }
+
+SWEP.ActivePosHook = function(self)
+    local attached = self:GetElements()
+    if attached["akimbo"] then
+        return Vector(0, -3, 0)
+    end
+end
+SWEP.ActiveAngHook = function(self)
+    local attached = self:GetElements()
+    if attached["akimbo"] then
+        return Angle(0,0,0)
+    end
+end
+SWEP.CrouchAngHook = function(self)
+    local attached = self:GetElements()
+    if attached["akimbo"] then
+        return Angle(0,0,0)
+    end
+end
 
 SWEP.Hook_ModifyBodygroups = function(self, data)
 
     local vm = data.model
     local attached = data.elements
+    local bod = 0
+    local rirons = 0
 
     local camo = 0
     if attached["universal_camo"] then
@@ -244,6 +266,16 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     end
     if attached["bo1_pap"] then
         camo = camo + 2
+    end
+    if attached["mount"] then
+        rirons = 1
+    end
+
+    vm:SetBodygroup(0,bod)
+    vm:SetBodygroup(1,rirons)
+    if attached["akimbo"] then
+        vm:SetBodygroup(2, bod + 1)
+        vm:SetBodygroup(3,rirons + 1)
     end
     vm:SetSkin(camo)
 
@@ -256,7 +288,10 @@ SWEP.HookP_NameChange = function(self, name)
     local gunname = "HS-10"
 
     if attached["bo1_pap"] then
-        gunname = "Typhoid Mary"
+        gunname = "Typhoid"
+        if attached["akimbo"] then
+        gunname = "Typhoid & Mary"
+        end
     end
 
     return gunname
@@ -266,10 +301,17 @@ SWEP.Attachments = {
     {
         PrintName = "Optic Rail",
         Bone = "j_gun",
-        Pos = Vector(-3.5, 0.075, 1.7),
+        Pos = Vector(-3.5, 0.075, 1.6),
         Ang = Angle(0, 0, 0),
         Category = {"cod_rail_optic"},
         InstalledElements = {"mount"},
+        ExcludeElements = {"akimbo"},
+        DuplicateModels = {
+            {
+                Bone = "j_gun1",
+                RequireElements = "akimbo",
+            }
+        },
     },
     {
         PrintName = "Muzzle",
@@ -278,6 +320,12 @@ SWEP.Attachments = {
         Pos = Vector(6.7, 0.075, 0.75),
         Ang = Angle(0, 0, 0),
         Category = {"cod_muzzle_shotty"},
+        DuplicateModels = {
+            {
+                Bone = "j_gun1",
+                RequireElements = "akimbo",
+            }
+        },
     },
     {
         PrintName = "Underbarrel",
@@ -285,6 +333,13 @@ SWEP.Attachments = {
         Pos = Vector(2.25, 0.075, -1.5),
         Ang = Angle(0, 0, 0),
         Category = {"cod_grips"},
+        ExcludeElements = {"akimbo"},
+        DuplicateModels = {
+            {
+                Bone = "j_gun1",
+                RequireElements = "akimbo",
+            }
+        },
     },
     {
         PrintName = "Firing Group",
@@ -338,6 +393,14 @@ SWEP.Attachments = {
         Category = "universal_camo",
         CosmeticOnly = true,
     },
+    {
+        PrintName = "Wielding",
+        DefaultCompactName = "Single",
+        Bone = "j_gun",
+        Pos = Vector(-20, 0, -2),
+        Ang = Angle(0, 0, 0),
+        Category = "bo1_akimbo",
+    },
 }
 
 SWEP.Hook_TranslateAnimation = function (self, anim)
@@ -346,6 +409,9 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
     local suffix = ""
     if attached["bo1_pap"] then
         suffix = "_pap"
+    end
+    if attached["akimbo"] then
+        suffix = "_akimbo"
     end
 
     return anim .. suffix
@@ -575,6 +641,117 @@ SWEP.Animations = {
     },
     ["exit_sprint"] = {
         Source = "sprint_out",
+        Time = 1,
+    },
+
+    --AKIMBO
+    ["idle_akimbo"] = {
+        Source = "idle_a",
+        -- Time = 1 / 30,
+    },
+    ["draw_akimbo"] = {
+        Source = "draw_a",
+        Time = 0.5,
+    },
+    ["holster_akimbo"] = {
+        Source = "holster_a",
+        Time = 0.5,
+    },
+    ["ready_akimbo"] = {
+        Source = "draw_a",
+        Time = 0.5,
+    },
+    ["fire_right"] = {
+        Source = {"fire_ar"},
+        Time = 6 / 30,
+        EjectAt = 1 / 30,
+    },
+    ["fire_left"] = {
+        Source = {"fire_al"},
+        Time = 6 / 30,
+        EjectAt = 1 / 30,
+    },
+    ["fire_akimbo"] = {
+        Source = {"fire_ab"},
+        Time = 6 / 30,
+        EjectAt = 1 / 30,
+    },
+    ["reload_right"] = {
+        Source = "reload_empty_ar",
+        Time = 4 * 0.85,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
+        EventTable = {
+            {s = "ARC9_BO1.MK_Shell", t = 1},
+            {s = "ARC9_BO1.MK_Shell", t = 1.5},
+            {s = "ARC9_BO1.MK_Shell", t = 2},
+            {s = "ARC9_BO1.HS10_Charge", t = 2.5},
+        },
+    },
+    ["reload_left"] = {
+        Source = "reload_empty_al",
+        Time = 4 * 0.85,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
+        EventTable = {
+            {s = "ARC9_BO1.MK_Shell", t = 1},
+            {s = "ARC9_BO1.MK_Shell", t = 1.5},
+            {s = "ARC9_BO1.MK_Shell", t = 2},
+            {s = "ARC9_BO1.HS10_Charge", t = 2.5},
+        },
+    },
+    ["reload_akimbo"] = {
+        Source = "reload_empty_ab",
+        Time = 4 * 0.85,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
+        EventTable = {
+            {s = "ARC9_BO1.MK_Shell", t = 1},
+            {s = "ARC9_BO1.MK_Shell", t = 1.5},
+            {s = "ARC9_BO1.MK_Shell", t = 2},
+            {s = "ARC9_BO1.HS10_Charge", t = 2.5},
+        },
+    },
+    ["reload_empty_right"] = {
+        Source = "reload_empty_ar",
+        Time = 5 * 0.85,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
+        EventTable = {
+            {s = "ARC9_BO1.MK_Shell", t = 1},
+            {s = "ARC9_BO1.MK_Shell", t = 1.5},
+            {s = "ARC9_BO1.MK_Shell", t = 2},
+            {s = "ARC9_BO1.HS10_Charge", t = 2.5},
+        },
+    },
+    ["reload_empty_left"] = {
+        Source = "reload_empty_al",
+        Time = 5 * 0.85,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
+        EventTable = {
+            {s = "ARC9_BO1.MK_Shell", t = 1},
+            {s = "ARC9_BO1.MK_Shell", t = 1.5},
+            {s = "ARC9_BO1.MK_Shell", t = 2},
+            {s = "ARC9_BO1.HS10_Charge", t = 2.5},
+        },
+    },
+    ["reload_empty_akimbo"] = {
+        Source = "reload_empty_ab",
+        Time = 5 * 0.85,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
+        EventTable = {
+            {s = "ARC9_BO1.MK_Shell", t = 1},
+            {s = "ARC9_BO1.MK_Shell", t = 1.5},
+            {s = "ARC9_BO1.MK_Shell", t = 2},
+            {s = "ARC9_BO1.HS10_Charge", t = 2.5},
+        },
+    },
+    ["enter_sprint_akimbo"] = {
+        Source = "sprint_in_a",
+        Time = 1,
+    },
+    ["idle_sprint_akimbo"] = {
+        Source = "sprint_loop_a",
+        Time = 30 / 40
+    },
+    ["exit_sprint_akimbo"] = {
+        Source = "sprint_out_a",
         Time = 1,
     },
 }

@@ -220,6 +220,25 @@ SWEP.CustomizePos = Vector(14.5, 30, 5)
 SWEP.CustomizeAng = Angle(90, 0, 0)
 SWEP.CustomizeSnapshotPos = Vector(0,0,0)
 
+SWEP.ActivePosHook = function(self)
+    local attached = self:GetElements()
+    if attached["akimbo"] then
+        return Vector(0, -1, 0)
+    end
+end
+SWEP.ActiveAngHook = function(self)
+    local attached = self:GetElements()
+    if attached["akimbo"] then
+        return Angle(0,0,0)
+    end
+end
+SWEP.CrouchAngHook = function(self)
+    local attached = self:GetElements()
+    if attached["akimbo"] then
+        return Angle(0,0,0)
+    end
+end
+
 SWEP.BarrelLength = 0 -- = 25
 
 SWEP.ExtraSightDist = 5
@@ -245,11 +264,19 @@ SWEP.AttachmentElements = {
             {2,1}
         },
     },
+    ["akimbo"] = {
+        MuzzleEffectQCAEvenShot = 5,
+        CaseEffectQCAEvenShot = 6,
+        AfterShotQCAEvenShot = 5,
+    },
 }
 
 SWEP.Hook_ModifyBodygroups = function(self, data)
     local vm = data.model
     local attached = data.elements
+    local rmag = 0
+    local rirons = 0
+    local rstock = 0
 
     local camo = 0
     if attached["universal_camo"] then
@@ -257,6 +284,26 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     end
     if attached["bo1_pap"] then
         camo = camo + 2
+    end
+    if attached["extmag"] then
+        rmag = 1
+    end
+    if attached["mount"] then
+        rirons = 1
+    end
+    if attached["stock_l"] then
+        rstock = 1
+    end
+
+    vm:SetBodygroup(0,0)
+    vm:SetBodygroup(1,rmag)
+    vm:SetBodygroup(2,rirons)
+    vm:SetBodygroup(3,rstock)
+    if attached["akimbo"] then
+        vm:SetBodygroup(4, 1)
+        vm:SetBodygroup(5,rmag + 1)
+        vm:SetBodygroup(6,rirons + 1)
+        vm:SetBodygroup(7,rstock + 1)
     end
     vm:SetSkin(camo)
 end
@@ -268,7 +315,10 @@ SWEP.HookP_NameChange = function(self, name)
     local gunname = "OTS-02 Kiparis"
 
     if attached["bo1_pap"] then
-        gunname = "Die Breaker"
+        gunname = "Tunguska"
+        if attached["akimbo"] then
+            gunname = gunname .. " & Chelyabinsk"
+        end
     end
 
     return gunname
@@ -276,12 +326,12 @@ end
 
 SWEP.Hook_TranslateAnimation = function (self, anim)
     local attached = self:GetElements()
+    local suffix = ""
 
-    -- if attached["stock_l"] and anim == "ready" then
-    --     return anim .. "_stock"
-    -- end
-
-    if attached["bo1_mag_ext"] then
+    if attached["akimbo"] then
+        suffix = "_akimbo"
+    end
+    if attached["bo1_mag_ext"] and !attached["akimbo"] then
         if anim == "reload" then
             return "ext"
         end
@@ -289,6 +339,7 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
             return "ext_empty"
         end
     end
+    return anim .. suffix
 end
 
 --TEST 3
@@ -302,6 +353,13 @@ SWEP.Attachments = {
         Category = {"cod_optic_lp", "cod_rail_riser"},
         -- CorrectiveAng = Angle(0.025, 0.05, 0),
         InstalledElements = {"mount"},
+        ExcludeElements = {"akimbo"},
+        DuplicateModels = {
+            {
+                Bone = "j_gun1",
+                RequireElements = "akimbo",
+            }
+        },
     },
     {
         PrintName = "Muzzle",
@@ -310,6 +368,12 @@ SWEP.Attachments = {
         Pos = Vector(11, 0.075, 1.9),
         Ang = Angle(0, 0, 0),
         Category = {"cod_muzzle_smg", "cod_muzzle_pistol"},
+        DuplicateModels = {
+            {
+                Bone = "j_gun1",
+                RequireElements = "akimbo",
+            }
+        },
     },
     {
         PrintName = "Firing Group",
@@ -377,6 +441,14 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = "universal_camo",
         CosmeticOnly = true,
+    },
+    {
+        PrintName = "Wielding",
+        DefaultCompactName = "Single",
+        Bone = "j_gun",
+        Pos = Vector(-20, 0, -2),
+        Ang = Angle(0, 0, 0),
+        Category = "bo1_akimbo",
     },
 }
 
@@ -467,6 +539,108 @@ SWEP.Animations = {
     },
     ["exit_sprint"] = {
         Source = "sprint_out",
+        Time = 1,
+    },
+
+    --AKIMBO
+    ["idle_akimbo"] = {
+        Source = "idle_a",
+        -- Time = 1 / 30,
+    },
+    ["draw_akimbo"] = {
+        Source = "draw_a",
+        Time = 0.5,
+    },
+    ["holster_akimbo"] = {
+        Source = "holster_a",
+        Time = 0.5,
+    },
+    ["ready_akimbo"] = {
+        Source = "draw_a",
+        Time = 0.5,
+    },
+    ["fire_right"] = {
+        Source = {"fire_ar"},
+        Time = 6 / 30,
+        EjectAt = 1 / 30,
+    },
+    ["fire_left"] = {
+        Source = {"fire_al"},
+        Time = 6 / 30,
+        EjectAt = 1 / 30,
+    },
+    ["fire_akimbo"] = {
+        Source = {"fire_ab"},
+        Time = 6 / 30,
+        EjectAt = 1 / 30,
+    },
+    ["reload_right"] = {
+        Source = "reload_empty_ar",
+        Time = 3 * 0.85,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
+        EventTable = {
+            {s = "ARC9_BO1.Kiparis_MagOut", t = 10 / 40},
+            {s = "ARC9_BO1.Kiparis_MagIn", t = 50 / 40},
+        },
+    },
+    ["reload_left"] = {
+        Source = "reload_empty_al",
+        Time = 3 * 0.85,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
+        EventTable = {
+            {s = "ARC9_BO1.Kiparis_MagOut", t = 10 / 40},
+            {s = "ARC9_BO1.Kiparis_MagIn", t = 50 / 40},
+        },
+    },
+    ["reload_akimbo"] = {
+        Source = "reload_empty_ab",
+        Time = 3 * 0.85,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
+        EventTable = {
+            {s = "ARC9_BO1.Kiparis_MagOut", t = 10 / 40},
+            {s = "ARC9_BO1.Kiparis_MagIn", t = 50 / 40},
+        },
+    },
+    ["reload_empty_right"] = {
+        Source = "reload_empty_ar",
+        Time = 3.6 * 0.85,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
+        EventTable = {
+            {s = "ARC9_BO1.Kiparis_MagOut", t = 10 / 40},
+            {s = "ARC9_BO1.Kiparis_MagIn", t = 50 / 40},
+            {s = "ARC9_BO1.Kiparis_Bolt", t = 79 / 40},
+        },
+    },
+    ["reload_empty_left"] = {
+        Source = "reload_empty_al",
+        Time = 3.6 * 0.85,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
+        EventTable = {
+            {s = "ARC9_BO1.Kiparis_MagOut", t = 10 / 40},
+            {s = "ARC9_BO1.Kiparis_MagIn", t = 50 / 40},
+            {s = "ARC9_BO1.Kiparis_Bolt", t = 79 / 40},
+        },
+    },
+    ["reload_empty_akimbo"] = {
+        Source = "reload_empty_ab",
+        Time = 3.6 * 0.85,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
+        EventTable = {
+            {s = "ARC9_BO1.Kiparis_MagOut", t = 10 / 40},
+            {s = "ARC9_BO1.Kiparis_MagIn", t = 50 / 40},
+            {s = "ARC9_BO1.Kiparis_Bolt", t = 79 / 40},
+        },
+    },
+    ["enter_sprint_akimbo"] = {
+        Source = "sprint_in_a",
+        Time = 1,
+    },
+    ["idle_sprint_akimbo"] = {
+        Source = "sprint_loop_a",
+        Time = 30 / 40
+    },
+    ["exit_sprint_akimbo"] = {
+        Source = "sprint_out_a",
         Time = 1,
     },
 }

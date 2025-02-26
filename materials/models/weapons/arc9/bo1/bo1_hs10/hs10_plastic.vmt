@@ -4,7 +4,6 @@ VertexlitGeneric
 	//$color2 "[0.75 0.75 0.75]"
 	$bumpmap	"models/weapons/arc9/bo1/bo1_hs10/hs10_n"
 	
-	
 	//"$color2" "[ .4 .4 .4 ]"
 	"$blendtintbybasealpha" "1"
 	"$phong" "1"
@@ -15,4 +14,5 @@ VertexlitGeneric
 //	"$basemapalphaenvmapmask" "1"
 	$envmapfresnel "0.01"
 	$envmaptint "[ .01 .01 .01 ]"
+
 }
