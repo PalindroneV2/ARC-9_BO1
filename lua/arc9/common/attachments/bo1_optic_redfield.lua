@@ -1,7 +1,8 @@
 ATT.PrintName = "Redfield Variable Zoom Scope"
 ATT.CompactName = [[VZOOM]]
 ATT.Icon = Material("entities/bo1_atts/optics/bo1_vzoom.png", "mips smooth")
-ATT.Description = [[Long range combat scope with variable zoom.
+ATT.Description = [[High-quality variable zoom scope offering a magnification range from 3x to 9x, designed for versatile medium to long-range engagements.
+Features fully multicoated optics for enhanced light transmission and a 40mm objective lens for a wide field of view.
 Belongs to Black Ops.]]
 ATT.CustomPros = {
     ["Zoom Level"] = "8x",
@@ -23,7 +24,7 @@ ATT.Sights = {
     {
         Pos = Vector(-0.0025, 6.5, -1.13),
         Ang = Angle(0, 0, 0),
-        ViewModelFOV = 60,
+        ViewModelFOV = 50,
         Magnification = 1,
         IgnoreExtra = true
     },

@@ -1,8 +1,9 @@
 ATT.PrintName = "Dual-Band Thermal Scope"
 ATT.CompactName = [[Dual-Band]]
 ATT.Icon = Material("entities/bo1_atts/optics/bo2_dual_band.png", "mips smooth")
-ATT.Description = [[Black Ops II Thermal Sight.
-Magnified optical sight that highlights enemies in yellow in a green background.]]
+ATT.Description = [[Advanced optical sight combining thermal and night vision capabilities.
+Highlights enemies in yellow against a green background, enhancing target acquisition in low-light and obscured environments.
+]]
 ATT.CustomPros = {
     ["Zoom Level"] = "2x",
     ["Threat Identification"] = "True"

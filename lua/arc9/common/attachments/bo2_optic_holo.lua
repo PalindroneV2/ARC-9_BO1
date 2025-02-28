@@ -1,7 +1,10 @@
-ATT.PrintName = "EOTech EXPS3"
-ATT.CompactName = [[HOLO]]
+ATT.PrintName = "EOTech EXPS3 Holographic Sight"
+ATT.CompactName = [[HOLO BO2]]
 ATT.Icon = Material("entities/bo1_atts/optics/bo2_holo.png", "mips smooth")
-ATT.Description = [[Typical holograpic sight which uses a holographic reticle for faster sight aqusition.
+ATT.Description = [[Advanced holographic sight offering rapid target acquisition with a 68 MOA ring and 1 MOA dot reticle.
+Features night vision compatibility, allowing use with Gen 1-3 night vision devices.
+The quick-detach lever and side buttons provide easy adjustments and mounting.
+Designed for both close-quarters and mid-range engagements.
 Belongs to Black Ops II.]]
 ATT.CustomPros = {
     ["Clearer sight picture"] = "",
@@ -22,7 +25,7 @@ ATT.Sights = {
     {
         Pos = Vector(0, 8, -1.35),
         Ang = Angle(0.05, 0, 0),
-        ViewModelFOV = 60,
+        ViewModelFOV = 50,
         Magnification = 1.25,
         IgnoreExtra = false
     },

@@ -1,7 +1,7 @@
 ATT.PrintName = [[Short Barrel]]
 ATT.CompactName = [[SHORT]]
 ATT.Icon = Material("entities/bo1_atts/bocw/atts_ak5/barrels/mix_pro.png", "mips smooth")
-ATT.Description = [[Short frame tube for the AUG.]]
+ATT.Description = [[Compact barrel that improves handling and mobility at the cost of range and recoil control.]]
 ATT.CustomPros = {}
 ATT.CustomCons = {}
 ATT.SortOrder = 0

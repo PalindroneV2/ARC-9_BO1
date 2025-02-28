@@ -1,7 +1,8 @@
 ATT.PrintName = "PK-AV (4x)"
 ATT.CompactName = [[PK-AV (4x)]]
 ATT.Icon = Material("entities/bo1_atts/optics/bo1_coltscope.png", "mips smooth")
-ATT.Description = [[Medium range combat scope for improved precision at longer ranges.
+ATT.Description = [[Russian-made 4x magnification scope designed for medium-range engagements
+ Features a clear reticle and robust construction, suitable for various combat scenarios.
 Belongs to Black Ops.]]
 ATT.CustomPros = {
     ["Zoom Level"] = "4x",
@@ -23,7 +24,7 @@ ATT.Sights = {
     {
         Pos = Vector(0, 6.5, -1.3),
         Ang = Angle(0, 0, 0),
-        ViewModelFOV = 60,
+        ViewModelFOV = 50,
         Magnification = 1,
         IgnoreExtra = true
     },

@@ -1,7 +1,7 @@
 ATT.PrintName = [[Medium Barrel]]
 ATT.CompactName = [[MID]]
 ATT.Icon = Material("entities/bo1_atts/bocw/atts_ak5/barrels/heavy_pro.png", "mips smooth")
-ATT.Description = [[Medium frame tube for the AUG.]]
+ATT.Description = [[Balanced barrel offering a mix of improved range and recoil control without heavily compromising handling speed.]]
 ATT.CustomPros = {}
 ATT.CustomCons = {}
 ATT.SortOrder = 0

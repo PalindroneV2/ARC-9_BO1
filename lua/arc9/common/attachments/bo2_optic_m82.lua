@@ -1,7 +1,9 @@
-ATT.PrintName = "Barrett Scope"
-ATT.CompactName = [[BARRETT]]
+ATT.PrintName = "Leupold Mark 4 4.5–14×50mm Scope"
+ATT.CompactName = [[Leupold]]
 ATT.Icon = Material("entities/bo1_atts/optics/bo1_vzoom.png", "mips smooth")
-ATT.Description = [[American high powered scope for the Barret M82.
+ATT.Description = [[High-precision American-made optic designed for the Barrett M82A1
+ Features a 4.5 to 14× magnification range and a 50mm objective lens, providing exceptional clarity and target acquisition at extended ranges
+ The robust construction ensures reliability under the heavy recoil of .50 BMG rounds.
 Belongs to Black Ops II.]]
 ATT.CustomPros = {
     ["Zoom Level"] = "12x",
@@ -44,7 +46,7 @@ ATT.Sights = {
     {
         Pos = Vector(-0.116, 8, -1.41),
         Ang = Angle(0, 0, 0),
-        ViewModelFOV = 60,
+        ViewModelFOV = 50,
         Magnification = 1,
         IgnoreExtra = true
     },

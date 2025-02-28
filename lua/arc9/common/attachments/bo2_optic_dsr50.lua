@@ -1,7 +1,7 @@
-ATT.PrintName = "DSR-50 Scope"
+ATT.PrintName = "DSR-50 Precision Scope"
 ATT.CompactName = [[DSR-50]]
 ATT.Icon = Material("entities/bo1_atts/optics/bo1_vzoom.png", "mips smooth")
-ATT.Description = [[Long range combat scope with variable zoom.
+ATT.Description = [[High-magnification scope designed for the DSR-50 sniper rifle, featuring a variable zoom range to accommodate various engagement distances.
 Belongs to Black Ops II.]]
 ATT.CustomPros = {
     ["Zoom Level"] = "12x",

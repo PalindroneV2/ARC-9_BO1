@@ -1,7 +1,8 @@
-ATT.PrintName = "Burris Mini"
+ATT.PrintName = "MaxTech Reflex Mini"
 ATT.CompactName = [[RDS BO2LP]]
 ATT.Icon = Material("entities/bo1_atts/optics/bo2_rds.png", "mips smooth")
-ATT.Description = [[Small, low profile optic mainly used by pistols. Provides a small electronic dot reticle which speeds up target acquisition by eliminating the need to line up irons.
+ATT.Description = [[Compact, low-profile reflex sight designed for quick target acquisition.
+Features a 3 MOA red dot reticle, enhancing precision without obstructing the target view. Ideal for pistols and compact firearms.
 Belongs to Black Ops II.]]
 ATT.CustomPros = {
     ["Clearer sight picture"] = ""
@@ -24,7 +25,7 @@ ATT.Sights = {
     {
         Pos = Vector(0, 8.5, -0.7),
         Ang = Angle(0, 0.05, 0),
-        ViewModelFOV = 60,
+        ViewModelFOV = 50,
         Magnification = 1,
         IgnoreExtra = false
     },

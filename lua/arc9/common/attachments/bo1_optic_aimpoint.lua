@@ -1,5 +1,5 @@
 ATT.PrintName = "Aimpoint Mk II"
-ATT.CompactName = [[REFLEX]]
+ATT.CompactName = [[AIMPOINT MK2]]
 ATT.Icon = Material("entities/bo1_atts/optics/bo1_reflex.png", "mips smooth")
 ATT.Description = [[Small, tube-based optic. Provides a small electronic dot reticle which speeds up target acquisition by eliminating the need to line up irons.
 Belongs to Black Ops.]]
@@ -34,7 +34,7 @@ ATT.Sights = {
     {
         Pos = Vector(-0.0125, 10, -0.95),
         Ang = Angle(0, 0, 0),
-        ViewModelFOV = 60,
+        ViewModelFOV = 50,
         Magnification = 1,
         IgnoreExtra = false
     },

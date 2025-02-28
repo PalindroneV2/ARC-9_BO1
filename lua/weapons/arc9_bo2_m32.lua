@@ -256,7 +256,7 @@ SWEP.Attachments = {
         PrintName = "Optic",
         DefaultCompactName = "None",
         Bone = "j_reload",
-        Pos = Vector(4.5, 0, 0.45),
+        Pos = Vector(4.5, 0, 0.725),
         Ang = Angle(0, 0, 0),
         Category = {"cod_optic", "bo2_m32_optic"},
     },

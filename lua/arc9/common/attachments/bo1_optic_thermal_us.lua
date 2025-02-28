@@ -1,8 +1,9 @@
 ATT.PrintName = "AN/PVS-3A Night Vision Sight"
 ATT.CompactName = [[IR Scope]]
 ATT.Icon = Material("entities/bo1_atts/optics/bo1_thermal.png", "mips smooth")
-ATT.Description = [[Black Ops Thermal Sight.
-Low magnification optical sight that highlights enemies in white in a blue background.]]
+ATT.Description = [[Early-generation night vision sight designed for low-light conditions.
+Features a green-tinted image with a 1x magnification, suitable for close-range engagements.
+]]
 ATT.CustomPros = {
     ["Zoom Level"] = "2x",
     ["Threat Identification"] = "True"
@@ -24,7 +25,7 @@ ATT.Sights = {
     {
         Pos = Vector(0, 7, -1.42),
         Ang = Angle(0, 0.1, 0),
-        ViewModelFOV = 60,
+        ViewModelFOV = 50,
         Magnification = 1.25,
         IgnoreExtra = true
     },

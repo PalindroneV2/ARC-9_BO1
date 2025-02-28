@@ -1,7 +1,8 @@
-ATT.PrintName = "Trijicon ACOG 6x48 (6x)"
+ATT.PrintName = "Trijicon ACOG 6x48 Scope"
 ATT.CompactName = [[ACOG 6x]]
 ATT.Icon = Material("entities/bo1_atts/optics/bo2_acog.png", "mips smooth")
-ATT.Description = [[Medium range combat scope for improved precision at longer ranges.
+ATT.Description = [[High-quality 6x magnification scope designed for medium to long-range engagements
+ Features a red chevron aiming point and a bullet drop compensator (BDC) with additional aiming points, enhancing target acquisition and accuracy at extended distances.
 Belongs to Black Ops II.]]
 ATT.CustomPros = {
     ["Zoom Level"] = "3x",
@@ -23,7 +24,7 @@ ATT.Sights = {
     {
         Pos = Vector(0, 5, -1.1525),
         Ang = Angle(0, 0, 0),
-        ViewModelFOV = 60,
+        ViewModelFOV = 50,
         Magnification = 1,
         IgnoreExtra = true
     },

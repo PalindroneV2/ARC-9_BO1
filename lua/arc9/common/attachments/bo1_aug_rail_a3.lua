@@ -1,7 +1,7 @@
 ATT.PrintName = [[AUG A3 Rail]]
 ATT.CompactName = [[A3]]
 ATT.Icon = Material("entities/bo1_atts/bocw/atts_ak5/barrels/long_pro.png", "mips smooth")
-ATT.Description = [[AUG A3.]]
+ATT.Description = [[Modernized full-length Picatinny rail for the AUG A3, offering enhanced compatibility with a wide range of optics and accessories.]]
 ATT.CustomPros = {}
 ATT.CustomCons = {}
 ATT.SortOrder = 0

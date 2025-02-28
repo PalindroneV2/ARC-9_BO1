@@ -1,7 +1,8 @@
 ATT.PrintName = "Kobra EKP-1S-03"
 ATT.CompactName = [[RDS USSR]]
 ATT.Icon = Material("entities/bo1_atts/optics/bo1_rds.png", "mips smooth")
-ATT.Description = [[Provides a small electronic dot reticle which speeds up target acquisition by eliminating the need to line up irons.
+ATT.Description = [[Russian-made red dot sight featuring a 1.8 MOA dot reticle, designed for rapid target acquisition.
+Offers 16 brightness settings and four reticle types to suit various combat scenarios.
 Belongs to Black Ops.]]
 ATT.CustomPros = {
     ["Clearer sight picture"] = ""
@@ -23,7 +24,7 @@ ATT.Sights = {
     {
         Pos = Vector(0, 10, -1.45),
         Ang = Angle(0, 0, 0),
-        ViewModelFOV = 60,
+        ViewModelFOV = 50,
         Magnification = 1,
         IgnoreExtra = false
     },

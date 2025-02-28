@@ -1,7 +1,9 @@
-ATT.PrintName = "M32 Rangefinder Optic"
-ATT.CompactName = [[M32 RF]]
+ATT.PrintName = "M2A1 Reflex Sight"
+ATT.CompactName = [[M2A1 M32]]
 ATT.Icon = Material("entities/bo1_atts/optics/bo2_tfinder.png", "mips smooth")
-ATT.Description = [[Typical holograpic sight which uses a holographic reticle for faster sight aqusition.
+ATT.Description = [[Specialized reflex sight designed to compensate for the natural drift of 40mm grenades
+ Features a built-in light sensor that adjusts reticle brightness for optimal visibility in varying light conditions.
+ Enhances accuracy and target acquisition for grenade launchers.
 Belongs to Black Ops II.]]
 ATT.CustomPros = {
 }
@@ -13,15 +15,15 @@ ATT.Folder = "HOLO"
 
 ATT.Category = {"bo2_m32_optic"}
 
-ATT.Model = "models/weapons/arc9/atts/bo2_m32_scope.mdl"
+ATT.Model = "models/weapons/arc9/atts/bo2_optic_m32.mdl"
 ATT.Scale = 1
-ATT.ModelOffset = Vector(-6.5, 0, -4.5)
+ATT.ModelOffset = Vector(0, 0, -0.08)
 
 ATT.Sights = {
     {
-        Pos = Vector(-0.0125, -2, -5.875),
+        Pos = Vector(-0.0125, 4, -1.2105),
         Ang = Angle(0, 0, 0),
-        ViewModelFOV = 60,
+        ViewModelFOV = 50,
         Magnification = 1.25,
         IgnoreExtra = false
     },
@@ -29,13 +31,13 @@ ATT.Sights = {
 
 ATT.HoloSight = true
 ATT.HoloSightReticle = Material("hud/arc9_bo1/reticles/bo2_m32_reticle.png", "mips smooth")
-ATT.HoloSightSize = 750
+ATT.HoloSightSize = 650
 ATT.HoloSightColorable = true
 
 if CLIENT then
     surface.CreateFont("bo2_font", {
         font = "Agency FB",
-        size = 25,
+        size = 20,
         weight = 625,
         antialias = true,
         extended = true

@@ -1,7 +1,8 @@
-ATT.PrintName = "SUSAT Scope (2-4x)"
+ATT.PrintName = "SUSAT 4x Scope"
 ATT.CompactName = [[SUSAT 4x]]
 ATT.Icon = Material("entities/bo1_atts/optics/bo1_coltscope.png", "mips smooth")
-ATT.Description = [[Medium range combat scope for improved precision at longer ranges.]]
+ATT.Description = [[British-made 4x magnification scope designed for medium-range engagements.
+Features a unique post reticle and tritium-powered illumination for low-light conditions.]]
 ATT.CustomPros = {
     ["Zoom Level"] = "2-4x",
     ["Backup Irons"] = "True"
@@ -22,14 +23,14 @@ ATT.Sights = {
     {
         Pos = Vector(0, 6.5, -1.895),
         Ang = Angle(-0.01, 0, 0),
-        ViewModelFOV = 60,
+        ViewModelFOV = 50,
         Magnification = 1,
         IgnoreExtra = true
     },
     {
         Pos = Vector(-0.005, 6.5, -2.7125),
         Ang = Angle(0, 0.8, 0),
-        ViewModelFOV = 60,
+        ViewModelFOV = 50,
         Magnification = 1.25,
         IgnoreExtra = false,
         Disassociate = true

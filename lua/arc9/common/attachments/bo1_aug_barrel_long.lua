@@ -1,7 +1,7 @@
 ATT.PrintName = [[Long Barrel]]
 ATT.CompactName = [[LONG]]
 ATT.Icon = Material("entities/bo1_atts/bocw/atts_ak5/barrels/long_pro.png", "mips smooth")
-ATT.Description = [[Long frame tube for the AUG.]]
+ATT.Description = [[Extended barrel designed to improve range and bullet velocity at the cost of handling speed.]]
 ATT.CustomPros = {}
 ATT.CustomCons = {}
 ATT.SortOrder = 0

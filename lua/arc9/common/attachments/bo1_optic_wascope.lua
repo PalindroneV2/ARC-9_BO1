@@ -1,5 +1,5 @@
-ATT.PrintName = "Schmidt & Bender 2.5–10× Scope"
-ATT.CompactName = [[WA2000]]
+ATT.PrintName = "Schmidt & Bender 2.5–10×56 Scope"
+ATT.CompactName = [[S&B 2.5–10×56]]
 ATT.Icon = Material("entities/bo1_atts/optics/bo1_vzoom.png", "mips smooth")
 ATT.Description = [[Long range combat scope with variable zoom.
 Belongs to Black Ops.]]
@@ -32,7 +32,7 @@ ATT.Sights = {
     {
         Pos = Vector(-0.1525, 7.75, -0.9),
         Ang = Angle(0, 0, 0),
-        ViewModelFOV = 60,
+        ViewModelFOV = 50,
         Magnification = 1,
         IgnoreExtra = true
     },

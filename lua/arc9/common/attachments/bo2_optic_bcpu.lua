@@ -1,7 +1,8 @@
 ATT.PrintName = "Barret Optical Ranging System"
 ATT.CompactName = [[BCPU]]
 ATT.Icon = Material("entities/bo1_atts/optics/bo2_bcpu.png", "mips smooth")
-ATT.Description = [[Electronic ballistics computer that assists user's shot placement.
+ATT.Description = [[Integrated ballistic computer that mounts directly onto the riflescope, coupling with the elevation knob
+ It automatically calculates the ballistic solution by accounting for factors such as temperature, barometric pressure, and angle cosine, allowing for precise long-range shooting without manual adjustments.
 Belongs to Black Ops II.]]
 ATT.CustomPros = {}
 ATT.CustomCons = {}

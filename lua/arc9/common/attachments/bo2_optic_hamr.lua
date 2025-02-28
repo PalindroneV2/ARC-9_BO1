@@ -1,7 +1,9 @@
 ATT.PrintName = "Leupold Mk 4 HAMR (3.5x)"
 ATT.CompactName = [[HAMR 3.5x]]
 ATT.Icon = Material("entities/bo1_atts/optics/bo2_hamr.png", "mips smooth")
-ATT.Description = [[Medium range combat scope for improved precision at longer ranges. Combined with a no maginification red dot sight on top.
+ATT.Description = [[Versatile medium-range combat scope featuring a 3.5x magnification for enhanced precision at extended distances.
+Integrated with a non-magnified red dot sight on top, facilitating rapid target acquisition in close-quarters combat.
+Designed for adaptability across various combat scenarios.
 Belongs to Black Ops II.]]
 ATT.CustomPros = {
     ["Zoom Level"] = "3.5x",
@@ -24,14 +26,14 @@ ATT.Sights = {
     {
         Pos = Vector(0.011, 6, -1.035),
         Ang = Angle(0, 0, 0),
-        ViewModelFOV = 60,
+        ViewModelFOV = 50,
         Magnification = 1,
         IgnoreExtra = true
     },
     {
         Pos = Vector(0, 8, -2.175),
         Ang = Angle(0, 0, 0),
-        ViewModelFOV = 60,
+        ViewModelFOV = 50,
         Magnification = 1,
         IgnoreExtra = true,
         Disassociate = true

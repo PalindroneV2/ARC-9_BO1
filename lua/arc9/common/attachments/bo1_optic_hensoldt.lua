@@ -1,7 +1,7 @@
-ATT.PrintName = "Hensoldt Sniper Scope"
+ATT.PrintName = "Hensoldt ZF 6x42 scope"
 ATT.CompactName = [[PSG-1]]
 ATT.Icon = Material("entities/bo1_atts/optics/bo1_vzoom.png", "mips smooth")
-ATT.Description = [[Long range combat scope with variable zoom.
+ATT.Description = [[High-quality 6x magnification sniper scope designed for precision shooting. Features a clear reticle and robust construction.
 Belongs to Black Ops.]]
 ATT.CustomPros = {
     ["Zoom Level"] = "8x",

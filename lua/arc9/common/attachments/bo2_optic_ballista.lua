@@ -1,7 +1,8 @@
 ATT.PrintName = "FN Ballista Scope"
 ATT.CompactName = [[BALLISTA]]
 ATT.Icon = Material("entities/bo1_atts/optics/bo1_vzoom.png", "mips smooth")
-ATT.Description = [[Long range combat scope with variable zoom.
+ATT.Description = [[High-quality 6x magnification scope designed for precision shooting with the FN Ballista sniper rifle.
+Features a clear reticle and robust construction, enhancing target acquisition and accuracy at extended ranges.
 Belongs to Black Ops II.]]
 ATT.CustomPros = {
     ["Zoom Level"] = "12x",
@@ -31,7 +32,7 @@ ATT.Sights = {
     {
         Pos = Vector(0, 8, -0.135),
         Ang = Angle(0, 0, 0),
-        ViewModelFOV = 60,
+        ViewModelFOV = 50,
         Magnification = 1,
         IgnoreExtra = true
     },

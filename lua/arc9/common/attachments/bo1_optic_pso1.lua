@@ -1,7 +1,8 @@
 ATT.PrintName = "PSO-1 Sniper Scope"
 ATT.CompactName = [[PSO-1]]
 ATT.Icon = Material("entities/bo1_atts/optics/bo1_vzoom.png", "mips smooth")
-ATT.Description = [[Medium range combat scope for improved precision at longer ranges.
+ATT.Description = [[Russian-made 4x magnification sniper scope designed for precision shooting.
+Features a clear reticle with bullet drop compensation and rangefinding capabilities, originally paired with the Dragunov sniper rifle.
 Belongs to Black Ops.]]
 ATT.CustomPros = {
     ["Zoom Level"] = "6x",
@@ -23,7 +24,7 @@ ATT.Sights = {
     {
         Pos = Vector(-0.0125, 8, -1.27),
         Ang = Angle(0, 0, 0),
-        ViewModelFOV = 60,
+        ViewModelFOV = 50,
         Magnification = 1,
         IgnoreExtra = true,
     },

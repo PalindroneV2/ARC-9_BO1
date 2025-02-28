@@ -1,7 +1,7 @@
-ATT.PrintName = [[Long Barrel]]
+ATT.PrintName = [[M27 Long Barrel]]
 ATT.CompactName = [[LONG]]
 ATT.Icon = Material("entities/bo1_atts/bocw/atts_ak5/barrels/long_pro.png", "mips smooth")
-ATT.Description = [[Long frame tube for the M27.]]
+ATT.Description = [[Extended barrel designed to enhance muzzle velocity and effective range, improving performance in long-range engagements.]]
 ATT.CustomPros = {}
 ATT.CustomCons = {}
 ATT.SortOrder = 0

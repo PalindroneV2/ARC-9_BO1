@@ -1,7 +1,7 @@
 ATT.PrintName = "G11 Optic (4x)"
 ATT.CompactName = [[G11 Scope]]
 ATT.Icon = Material("entities/bo1_atts/optics/bo1_g11scope.png", "mips smooth")
-ATT.Description = [[Medium range combat scope for improved precision at longer ranges.
+ATT.Description = [[4x optic designed for medium-range engagements, enhancing accuracy and precision for distant targets, exclusive to the G11.
 Belongs to Black Ops.]]
 ATT.CustomPros = {
     ["Zoom Level"] = "4x",
@@ -31,7 +31,7 @@ ATT.Sights = {
     {
         Pos = Vector(0.02, 6.5, -1.35),
         Ang = Angle(0, 0.1, 0),
-        ViewModelFOV = 60,
+        ViewModelFOV = 50,
         Magnification = 1,
         IgnoreExtra = true
     },

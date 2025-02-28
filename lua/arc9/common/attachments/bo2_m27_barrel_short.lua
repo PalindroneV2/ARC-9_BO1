@@ -1,7 +1,7 @@
-ATT.PrintName = [[Short Barrel]]
+ATT.PrintName = [[D10RS Short Barrel]]
 ATT.CompactName = [[SHORT]]
 ATT.Icon = Material("entities/bo1_atts/bocw/atts_ak5/barrels/long_pro.png", "mips smooth")
-ATT.Description = [[Short frame tube for the M27.]]
+ATT.Description = [[Shortened barrel designed to enhance maneuverability and reduce overall weapon weight, ideal for close-quarters combat scenarios.]]
 ATT.CustomPros = {}
 ATT.CustomCons = {}
 ATT.SortOrder = 0
