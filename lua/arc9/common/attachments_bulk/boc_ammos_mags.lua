@@ -565,8 +565,6 @@ ATT.ShootEnt = "arc9_bo1_40mm_pipe"
 
 ARC9.LoadAttachment(ATT, "bo1_glammo_pipe")
 
-local ATT = {}
-
 ATT = {}
 
 ATT.PrintName = [[40mm Pipe Impact Grenade]]
