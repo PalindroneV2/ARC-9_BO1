@@ -335,7 +335,7 @@ SWEP.HookP_NameChange = function(self, name)
         if gunname == "Ithaca M37 \"Stakeout\"" then
              gunname = "Raid"
         else
-            gunname = "Orion 777"
+            gunname = "The Shoulder of Orion"
         end
     end
 

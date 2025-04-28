@@ -277,7 +277,7 @@ SWEP.HookP_NameChange = function(self, name)
     if attached["asp"] then
         gunname = "ASP Pistol"
         if attached["bo1_pap"] then
-            gunname = "Atom Spliting Proton"
+            gunname = "Atom-Spliting Proton"
         end
     end
     if attached["hush"] then
