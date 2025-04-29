@@ -75,9 +75,9 @@ SWEP.ReloadTime = 1
 SWEP.Crosshair = true
 SWEP.CanBlindFire = false
 
-SWEP.Recoil = 0.65
+SWEP.Recoil = 0.75
 SWEP.RecoilSide = 0.45
-SWEP.RecoilUp = 0.45
+SWEP.RecoilUp = 0.60
 
 SWEP.RecoilRandomUp = 0.6
 SWEP.RecoilRandomSide = 0.5
@@ -121,7 +121,7 @@ SWEP.SpeedMultBlindFire = 1
 SWEP.AimDownSightsTime = 0.11
 SWEP.SprintToFireTime = 0.333
 
-SWEP.RPM = 588
+SWEP.RPM = 585
 SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
