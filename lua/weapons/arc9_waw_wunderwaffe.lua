@@ -2,24 +2,30 @@ SWEP.Base = "arc9_base"
 SWEP.Category = "ARC9 - World at War" -- edit this if you like
 SWEP.SubCategory = "Wonder Weapons"
 SWEP.AdminOnly = false
-SWEP.Spawnable = false
 
-
-local addons = engine.GetAddons()
-for _, addon in pairs(addons) do
-    if addon.wsid == "1420540808" and addon.mounted then
-        SWEP.Spawnable = true
+local targetWSID = "1420540808"
+local isMounted = false
+for _, addon in ipairs(engine.GetAddons()) do
+    if addon.wsid == targetWSID and addon.mounted then
+        isMounted = true
+        break
     end
 end
+SWEP.Spawnable = isMounted
 
--- SWEP.Hook_PostReload = function(self)
---     local addons = engine.GetAddons()
---     for _, addon in pairs(addons) do
---         if addon.wsid == "1420540808" and addon.mounted then
---             print("Addon Mounted")
---         end
---     end
--- end
+if not isMounted then
+    -- Delay the message slightly to ensure it shows properly
+    if SERVER then
+        hook.Add("PlayerInitialSpawn", "NotifyMissingAddon_" .. targetWSID, function(ply)
+            timer.Simple(5, function()
+                if IsValid(ply) then
+                    ply:ChatPrint("Install/Enable TFA : CoD Zombies Wonder Weapon SWEPs to Spawn the [ARC9] Wunderwaffe DG-2.")
+                end
+            end)
+        end)
+    end
+    print("[WARNING] TFA : CoD Zombies Wonder Weapon SWEPs is not installed or mounted. The [ARC9] Wunderwaffe DG-2 will not be spawnable.")
+end
 
 SWEP.PrintName = "Wunderwaffe DG-2"
 SWEP.Class = "Wonder Weapon"
@@ -313,11 +319,12 @@ SWEP.NonTPIKAnimReload = ACT_HL2MP_GESTURE_RELOAD_AR2
 SWEP.ActivePos = Vector(0, 0, 0)
 SWEP.ActiveAng = Angle(0, 0, -5)
 
-SWEP.MovingPos = Vector(0, -1, -1)
+local movingoffset = Vector(0, -0.25, -0.25)
+SWEP.MovingPos = movingoffset
 SWEP.MovingAng = Angle(0, 0, 0)
 
 SWEP.MovingMidPoint = {
-    Pos = Vector(0, -0.5, -0.5),
+    Pos = movingoffset / 2,
     Ang = Angle(0, 0, 0)
 }
 

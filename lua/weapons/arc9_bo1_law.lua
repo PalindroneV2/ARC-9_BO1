@@ -212,11 +212,12 @@ SWEP.NonTPIKAnimReload = ACT_HL2MP_GESTURE_RELOAD_RPG
 SWEP.ActivePos = Vector(1.5, 3, -6)
 SWEP.ActiveAng = Angle(0, 15, 0)
 
-SWEP.MovingPos = Vector(0, -1, -1)
+local movingoffset = Vector(0, -0.25, -0.25)
+SWEP.MovingPos = movingoffset
 SWEP.MovingAng = Angle(0, 0, 0)
 
 SWEP.MovingMidPoint = {
-    Pos = Vector(0, -0.5, -0.5),
+    Pos = movingoffset / 2,
     Ang = Angle(0, 0, 0)
 }
 

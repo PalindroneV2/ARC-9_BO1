@@ -210,7 +210,8 @@
 -- SWEP.ReloadPos = SWEP.ActivePos
 -- SWEP.ReloadAng = SWEP.ActiveAng
 
--- SWEP.MovingPos = Vector(0, -1, -1)
+-- local movingoffset = Vector(0, -0.25, -0.25)
+SWEP.MovingPos = movingoffset
 -- SWEP.MovingAng = Angle(0, 0, 0)
 
 -- SWEP.MovingMidPoint = {
