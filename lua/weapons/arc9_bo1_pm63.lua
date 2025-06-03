@@ -323,8 +323,13 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
 
     local suffix = ""
 
-    if attached["extmag"] then
-        suffix = "_ext"
+     if attached["extmag"] and !attached["akimbo"] then
+        if anim == "reload" then
+            anim = "ext"
+        end
+        if anim == "reload_empty" and !attached["akimbo"] then
+            anim = "ext_empty"
+        end
     end
     if attached["akimbo"] then
         suffix = "_akimbo"

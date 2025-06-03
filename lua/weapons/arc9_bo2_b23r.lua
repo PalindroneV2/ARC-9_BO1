@@ -197,7 +197,7 @@ SWEP.HoldTypeSights = "revolver"
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_PISTOL
 SWEP.NonTPIKAnimReload = ACT_HL2MP_GESTURE_RELOAD_PISTOL
 
-SWEP.ActivePos = Vector(0, 0, -1)
+SWEP.ActivePos = Vector(0, -1.5, -1)
 SWEP.ActiveAng = Angle(0, 0, -5)
 
 local movingoffset = Vector(0, -0.25, -0.25)

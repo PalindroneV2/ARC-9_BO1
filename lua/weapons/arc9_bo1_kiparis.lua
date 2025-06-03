@@ -327,20 +327,22 @@ end
 
 SWEP.Hook_TranslateAnimation = function (self, anim)
     local attached = self:GetElements()
+
     local suffix = ""
 
+     if attached["extmag"] then
+        if anim == "reload" then
+            anim = "ext"
+        end
+        if anim == "reload_empty" then
+            anim = "ext_empty"
+        end
+    end
     if attached["akimbo"] then
         suffix = "_akimbo"
     end
-    if attached["bo1_mag_ext"] and !attached["akimbo"] then
-        if anim == "reload" then
-            return "ext"
-        end
-        if anim == "reload_empty" then
-            return "ext_empty"
-        end
-    end
-    return anim .. suffix
+    local newanim = anim .. suffix
+    return newanim
 end
 
 --TEST 3
@@ -514,7 +516,7 @@ SWEP.Animations = {
         },
     },
     ["ext"] = {
-        Source = "reload_ext",
+        Source = "ext",
         Time = 90 / 40,
         EventTable = {
             {s = "ARC9_BO1.Kiparis_MagOut", t = 10 / 40},
@@ -522,7 +524,7 @@ SWEP.Animations = {
         },
     },
     ["ext_empty"] = {
-        Source = "reload_empty_ext",
+        Source = "ext_empty",
         Time = 120 / 40,
         EventTable = {
             {s = "ARC9_BO1.Kiparis_MagOut", t = 10 / 40},
