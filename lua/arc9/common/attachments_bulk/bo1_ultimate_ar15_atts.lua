@@ -499,6 +499,41 @@ ARC9.LoadAttachment(ATT, "retro_ar15_barrel_16")
 
 ATT = {}
 
+ATT.PrintName = [[20" Heavy Barrel]]
+ATT.CompactName = [[20" Heavy]]
+ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m4.png", "mips smooth")
+ATT.Description = [[The A2 Upgrade for the M16 included a thicker heavy barrel for the purposes of minimizing recoil, improving accuracy and barrel durability.]]
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - BO1 AR-15 Attachments"
+ATT.Free = false
+
+ATT.Category = {"retro_ar15_barrel"}
+ATT.ActivateElements = {"barrel_a2"}
+
+
+-- ATT.MuzzleEffectQCA = 1
+
+ATT.SpreadMult = 0.95
+ATT.RecoilMult = 0.95
+ATT.RecoilKickMult = 0.95
+ATT.SpreadMultHipFire = 0.95
+-- ATT.SpreadAddShooting = math.rad(10 / 37.5)
+ATT.SpreadMultShooting = 0.95
+
+ATT.SpeedMult = 1.075
+ATT.SpeedMultSights = 1.075
+
+ATT.AimDownSightsTimeMult = 1.05
+ATT.SprintToFireTimeMult = 1.05
+
+ATT.RangeMaxMult = 1.05
+ATT.RangeMinMult = 1.05
+ATT.PhysBulletMuzzleVelocityMult = 1.05
+
+ARC9.LoadAttachment(ATT, "retro_ar15_barrel_a2")
+
+ATT = {}
+
 ATT.PrintName = "Flattened cut-down Gasblock"
 ATT.CompactName = "FLAT"
 ATT.Icon = Material("entities/bo1_atts/optics/retro_ar15/troy_side.png")

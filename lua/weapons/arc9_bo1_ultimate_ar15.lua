@@ -585,6 +585,9 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     if attached["barrel_11_sog"] then
         length = 9
     end
+    if attached["barrel_a2"] then
+        length = 10
+    end
 
     self.CustomizeSnapshotPos = newCustPose
     self.CustomizeSnapshotAng = newCustAng
