@@ -513,15 +513,15 @@ ATT.ActivateElements = {"barrel_a2"}
 
 -- ATT.MuzzleEffectQCA = 1
 
-ATT.SpreadMult = 0.95
-ATT.RecoilMult = 0.95
-ATT.RecoilKickMult = 0.95
-ATT.SpreadMultHipFire = 0.95
+ATT.SpreadMult = 0.925
+ATT.RecoilMult = 0.925
+ATT.RecoilKickMult = 0.925
+ATT.SpreadMultHipFire = 0.925
 -- ATT.SpreadAddShooting = math.rad(10 / 37.5)
-ATT.SpreadMultShooting = 0.95
+ATT.SpreadMultShooting = 0.925
 
-ATT.SpeedMult = 1.075
-ATT.SpeedMultSights = 1.075
+ATT.SpeedMult = 0.925
+ATT.SpeedMultSights = 0.925
 
 ATT.AimDownSightsTimeMult = 1.05
 ATT.SprintToFireTimeMult = 1.05
@@ -605,9 +605,9 @@ ATT.Free = false
 
 ATT.Category = {"retro_ar15_handguard_20"}
 ATT.ActivateElements = {"handguard_a2" , "no_tac_rail"}
-ATT.RecoilMult = 0.9
-ATT.AimDownSightsTimeMult = 1.1
-ATT.SprintToFireTimeMult = 1.1
+ATT.RecoilMult = 0.975
+ATT.AimDownSightsTimeMult = 1.025
+ATT.SprintToFireTimeMult = 1.025
 
 -- ATT.Attachments = {
 --     {
@@ -627,15 +627,15 @@ ATT.PrintName = [[KAC M5 RAS Handguard]]
 ATT.CompactName = [[M5 RAS]]
 ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m16.png", "mips smooth")
 ATT.Description = [[A long handguard with quad-rail RIS mounts. While usually used for 20" barrels, it can fit a 14.5" barrel with a low profile gas block.
-Allows for the attachment of alternative front sights and tactical attachments on all of the 4 rails.
-Stats identical to other handguards.]]
+Allows for the attachment of alternative front sights and tactical attachments on all of the 4 rails
+Its robust steel construction adds weight.]]
 ATT.SortOrder = 2
 ATT.MenuCategory = "ARC9 - BO1 AR-15 Attachments"
 ATT.Free = false
 
-ATT.RecoilMult = 0.9
-ATT.AimDownSightsTimeMult = 1.15
-ATT.SprintToFireTimeMult = 1.15
+ATT.RecoilMult = 0.95
+ATT.AimDownSightsTimeMult = 1.05
+ATT.SprintToFireTimeMult = 1.05
 
 ATT.Category = {"retro_ar15_handguard_20", "retro_ar15_handguard_14"}
 ATT.ActivateElements = {"handguard_a4", "nosling", "no_ub_rail", "ar15_ris", "no_tac_rail"}
@@ -1468,8 +1468,8 @@ ARC9.LoadAttachment(ATT, "retro_ar15_scar_iron")
 
 ATT = {}
 
-ATT.PrintName = [[TMM-4 S-System Rail]]
-ATT.CompactName = [[S-SYSTEM]]
+ATT.PrintName = [[A.R.M.S. #50C-TR S.I.R.]]
+ATT.CompactName = [[ARMS #50C]]
 ATT.Icon = Material("entities/bo1_atts/optics/retro_ar15/carry_side.png")
 ATT.Description = [[Picatinny rail system for the top of the weapon that goes from the top receiver to the end of the handguard.
 Includes A.R.M.S. 40L flip up sights.]]

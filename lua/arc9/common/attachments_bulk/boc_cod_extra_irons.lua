@@ -49,7 +49,7 @@ ARC9.LoadAttachment(ATT, "cod_extra_ironrear_matech")
 ATT = {}
 
 ATT.PrintName = "A.R.M.S. 40L Rear Sight"
-ATT.CompactName = "ARMS 40L"
+ATT.CompactName = "ARMS #40L"
 ATT.Icon = Material("entities/bo1_atts/optics/retro_ar15/3arc_side.png")
 ATT.Description = [[Rear folding sight produced by Magpul.
 Functions identically to other iron sights.]]

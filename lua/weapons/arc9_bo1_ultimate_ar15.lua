@@ -39,7 +39,7 @@ SWEP.WorldModelOffset = {
 }
 SWEP.ViewModelFOVBase = 75
 
-SWEP.CustomCamoTexture = "models/weapons/arc9/bo1/gunmetal"
+SWEP.CustomCamoTexture = "models/weapons/arc9/bo1/black_detail"
 SWEP.CustomCamoScale = 1
 SWEP.CustomBlendFactor = 1
 
@@ -308,8 +308,8 @@ SWEP.BarrelLength = 0 -- = 25
 SWEP.ExtraSightDist = 5
 
 SWEP.StandardPresets = {
-    "[A- M16A2]XQAAAQBFAQAAAAAAAAA9iIIiM7hMNz0dhIkbkvJZHs6N4cERAS1EIUwLaB+vDp8XCL30711xZT7xm2o2gbIC/0oJ21+4dnvvBkhco+ofeBf3qlqSkNTpqDQz0Nf8iESWMw90kXgZGRIQCbg95KbrAF1eaUOpemDRncYCN6aSebl+crzv0/1B+FXbhAQe0qLEKC53/jHHkEMA",
-    "[B- M16A4]XQAAAQDNAQAAAAAAAAA9iIIiM7hMNz0dhIkbkvJZHs6N4cERAS1EIUwLaB+vDp8XCL0VyBP1c786RpKeImE3ppvtZ9VSH6D2vEJ/lZpKWa/NUZkYq9pj0f6i80BrKcP/5yQtdQoo7F04Gzlf7a00GDLvS5ylx7B5qQL0YRu8nbmja654VEWMBPB7VewvZBLkyYctLizEQz6K4YoYGtyG2w1NiqdP/Wt7B8Xe80Ka3R1vOt4eXb/OfA==",
+    "[A- M16A2]XQAAAQDRAQAAAAAAAAA9iIIiM7tupQCpjrtF9qJbeNZaSCEX4Y6O26HmkmevSb+hQGSKcSq18KVOhUGIBYBGLhg+HzT/6Q8KhPJfMUHbWRkUoUgn6P0YaKi5F5BUAMCUUd+BpuZlRLISq/JWY/t2c64l7lKrU0GrIUCboGK1Ml2Xd4IuLbYQw/NevL2Vc3dJvShj2iNAH+mrnNKasWfGUdpPXtB6/SlJO61DAA==",
+    "[B- M16A4]XQAAAQDFAgAAAAAAAAA9iIIiM7tupQCpjrtF9qJbeNZaSCEX4Y6O26HmkmevSb+hQGSKcSq18KVOhUGIBYBGLhgBcBfjyzKihHgEHUFvcR1QZGA+bYu1sZGR3LC94n+b1ez9/8dQhWasRGIutSwp1+FVscbpixioKvolwHMBOhcCEJvkzESs9APTqAtQ8JjeNf0u6u+Ma0VWZBPRM6OarNYKSdmWSt6pgh8WmTqS45QMOWDx1A0P1xCu4vzDMOmNgpqaB53nKa9BxiXsxun8ea9oQg==",
     "[C- M607a]XQAAAQBrAQAAAAAAAAA9iIIiM7hMNz0dhIkbkvLjTdErcFqoUCHbZoheMDsp+rQZLEf6L7Ry2kYDhnMROXx2buSpLLEaSYVmj35kqGIct333a/2YEZy4+jTdwsJ50mXem+JmDgKoS6HIWt6q3BcJY3HCENu4G3jh5F4GvbdNBrIncwe9+X47yG8wUFCHcntbkDvVR+7X9xlV/XwLUpxtNjxMAkw=",
     "[D- MACV-SOG]XQAAAQBqAQAAAAAAAAA9iIIiM7hMNz0dhIkbkvLjTdErcFqoUCHbZoheMDsp+rQZLEf6L7Ry2kYDhnMROXx2bwPv0AD7jf16tWNayFi91rHo6DItEyJwAAEs1YW4UBPbsLXz+4Cp1SI1SzcHafOSt7ft8GL1Sqefjmdll/YbPwAT298zEs6R//LdVW14/yVcHuw8CSO96Nbh0YIyacBoS1NqKiLv1quTcxYQS4dJDg==",
     "[E- XM4]XQAAAQB6AQAAAAAAAAA9iIIiM7hMNz0dhIkbkvJZHs6N4cERAS1EIUwLaB+vDp8XCL30711xZT7xm2o2gbIC/0oJ21+4dnvvBkhco+oguG2bmVG9YZJILdGSw6o5t6nYpSFEZMkSl0dMD4T4fzUw9EtGWvlzmWgGNO84gugDTCoHQ75NB8vONyfKju/z1zX4jVOn29bFf5mSW2NVfSQ5+ZF5VgA=",
@@ -1000,8 +1000,8 @@ SWEP.HookP_NameChange = function(self, name)
         if attached["carbine"] then gunname = "Predator"
             if attached["a2_top"] then gunname = "Xeno Matter 4000" end
         end
-        if attached["9mm_mag"] then
-            gunname = "Mo"
+        if attached["9mm_mag"] and attached["barrel_9mm"] then
+            gunname = "Nuclear Trooper"
         end
         if attached["300blk"] and attached["barrel_7"] then gunname = "MVP Wolverine" end
         if (model .. alt) == "Mk. 12 SPR" then gunname = "Lone Survivor" end
