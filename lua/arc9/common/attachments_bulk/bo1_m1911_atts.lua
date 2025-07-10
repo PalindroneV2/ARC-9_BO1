@@ -56,7 +56,7 @@ ATT = {}
 ATT.PrintName = "Nickel Finish"
 ATT.CompactName = "NICKEL"
 ATT.Icon = Material("materials/entities/bo1_generic.png")
-ATT.Description = [[Fancy and shiny nickel finish for your weapon. Gives you no tactical advantage whatsoever.]]
+ATT.Description = [[Fancy and shiny nickel finish for your weapon. Gives you no tactical advantage whatsoever.]] --BO1 MP Texture
 ATT.CustomPros = {}
 ATT.CustomCons = {}
 ATT.SortOrder = 0
@@ -73,7 +73,7 @@ ATT = {}
 ATT.PrintName = "Unpolished steel"
 ATT.CompactName = "STEEL"
 ATT.Icon = Material("materials/entities/bo1_generic.png")
-ATT.Description = [[Right out of the factory with no bells or whistles.]]
+ATT.Description = [[Right out of the factory with no bells or whistles.]] -- BO1 MP TEXTURE NO GLOSS
 ATT.CustomPros = {}
 ATT.CustomCons = {}
 ATT.SortOrder = 0
@@ -93,7 +93,7 @@ ATT = {}
 ATT.PrintName = "Battle Worn"
 ATT.CompactName = "Worn"
 ATT.Icon = Material("materials/entities/bo1_generic.png")
-ATT.Description = [[The blued finish of your weapon has been worn down by years of combat.]]
+ATT.Description = [[The blued finish of your weapon has been worn down by years of combat.]] --BO1 CAMPAIGN TEXTURE
 ATT.CustomPros = {}
 ATT.CustomCons = {}
 ATT.SortOrder = 0
@@ -106,24 +106,6 @@ ATT.ActivateElements = {"worn"}
 ARC9.LoadAttachment(ATT, "bo1_m1911_cosmetic_worn")
 
 -- FRAMES HAMMERS TRIGGERS
-
-ATT = {}
-
-ATT.PrintName = "HD Frame"
-ATT.CompactName = "HD G.I."
-ATT.Icon = Material("materials/entities/bo1_atts/cosmetic/bo3_1911.png")
-ATT.Description = [[M1911 assets from Black Ops Cold War.]]
-ATT.CustomPros = {}
-ATT.CustomCons = {}
-ATT.SortOrder = 0
-ATT.MenuCategory = "ARC9 - BO1 Attachments"
-ATT.Free = true
-ATT.Ignore = true
-
-ATT.Category = {"bo1_m1911_frames"}
-ATT.ActivateElements = {"1911_frame_hd"}
-
-ARC9.LoadAttachment(ATT, "bo1_m1911_frames_hd")
 
 ATT = {}
 
@@ -184,7 +166,26 @@ ATT = {}
 ATT.PrintName = "Ring Hammer"
 ATT.CompactName = "Ring"
 ATT.Icon = Material("materials/entities/bo1_atts/cosmetic/bo3_1911.png")
-ATT.Description = [[Notched Ring Hammer that improves grip by increasing friction.]]
+ATT.Description = [[Notched Ring Hammer that improves grip by increasing friction, It's smaller size helps prevent hammer bite on shorter beaver tails.]]
+ATT.CustomPros = {}
+ATT.CustomCons = {}
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
+ATT.Free = true
+
+ATT.Category = {"bo1_m1911_hammer"}
+ATT.ActivateElements = {"ringhammer"}
+ATT.RangeMaxMult = 1.05
+ATT.PhysBulletMuzzleVelocityMult = 1.05
+
+ARC9.LoadAttachment(ATT, "bo1_m1911_hammer_ring")
+
+ATT = {}
+
+ATT.PrintName = "Delta Hammer"
+ATT.CompactName = "Delta"
+ATT.Icon = Material("materials/entities/bo1_atts/cosmetic/bo3_1911.png")
+ATT.Description = [[Notched Delta Hammer that improves grip by increasing friction.]]
 ATT.CustomPros = {}
 ATT.CustomCons = {}
 ATT.SortOrder = 0
@@ -196,7 +197,7 @@ ATT.ActivateElements = {"newhammer"}
 ATT.RangeMaxMult = 1.05
 ATT.PhysBulletMuzzleVelocityMult = 1.05
 
-ARC9.LoadAttachment(ATT, "bo1_m1911_hammer_ring")
+ARC9.LoadAttachment(ATT, "bo1_m1911_hammer_delta")
 
 ATT = {}
 
@@ -255,10 +256,12 @@ ATT.RPMMult = 1.1
 
 ARC9.LoadAttachment(ATT, "bo1_m1911_trigger_long")
 
+--SLIDES
+
 ATT = {}
 
 ATT.PrintName = "Commander Short Slide"
-ATT.CompactName = "4.25\" G.I."
+ATT.CompactName = "4.25\" Commander"
 ATT.Icon = Material("materials/entities/bo1_atts/cosmetic/bo2_1911.png")
 ATT.Description = [[Compact 1911 slide with that improves handling and sprint times but reduces muzzle velocity and worsens recoil.]]
 ATT.CustomPros = {}
@@ -343,8 +346,8 @@ ATT.ActivateElements = {"bo2_sound"}
 
 ARC9.LoadAttachment(ATT, "bo1_m1911_sounds_bo2")
 
+-- FRAME
 
---OBSOLETE
 ATT = {}
 
 ATT.PrintName = "Springfield Armory Modern Frame"
@@ -362,77 +365,3 @@ ATT.Category = {"bo1_m1911_frames"}
 ATT.ActivateElements = {"1911_frame_modern"}
 
 ARC9.LoadAttachment(ATT, "bo1_m1911_frames_modern")
-
--- SLIDES
-
-ATT = {}
-
-ATT.PrintName = "Springfield Armory Modern Slide"
-ATT.CompactName = "5\" S.A."
-ATT.Icon = Material("materials/entities/bo1_atts/cosmetic/bo3_1911.png")
-ATT.Description = [[Modern M1911 platform slide with angled serrations and replaceable Novak iron sights with tritium.]]
-ATT.CustomPros = {}
-ATT.CustomCons = {}
-ATT.SortOrder = 0
-ATT.MenuCategory = "ARC9 - BO1 Attachments"
-ATT.Free = true
-ATT.Ignore = true
-
-ATT.Category = {"bo1_m1911_slides"}
-ATT.ActivateElements = {"1911_slide_modern"}
-
-ARC9.LoadAttachment(ATT, "bo1_m1911_slides_modern")
-
-ATT = {}
-
-ATT.PrintName = "Springfield Armory Commander Slide"
-ATT.CompactName = "4.25\" S.A."
-ATT.Icon = Material("materials/entities/bo1_atts/cosmetic/bo3_1911.png")
-ATT.Description = [[Compact 1911 slide with that improves handling and sprint times but reduces muzzle velocity and worsens recoil.]]
-ATT.CustomPros = {}
-ATT.CustomCons = {}
-ATT.SortOrder = 1
-ATT.Ignore = true
-
-ATT.RangeMaxMult = 0.75
-ATT.PhysBulletMuzzleVelocityMult = 0.9
-ATT.RecoilKickMult = 1.15
-ATT.SpreadAdd = math.rad(3 / 37.5)
-
-ATT.SpreadAddHipFire = -math.rad(30 / 37.5)
-ATT.SpreadAddMove = -math.rad(15 / 37.5)
-
-ATT.MenuCategory = "ARC9 - BO1 Attachments"
-
-ATT.InvAtt = "bo1_m1911_slides_short"
-ATT.Category = {"bo1_m1911_slides"}
-ATT.ActivateElements = {"1911_slide_short_modern", "shortbarrel"}
-
-ARC9.LoadAttachment(ATT, "bo1_m1911_slides_short_modern")
-
-ATT = {}
-
-ATT.PrintName = "Springfield Armory Modern Longslide"
-ATT.CompactName = "7\" S.A."
-ATT.Icon = Material("materials/entities/bo1_atts/cosmetic/bo3_1911.png")
-ATT.Description = [[Modern M1911 platform slide with angled serrations and replaceable Novak iron sights with tritium.
-Longer barrel that improves range andd muzzle velocity.]]
-ATT.CustomPros = {}
-ATT.CustomCons = {}
-ATT.SortOrder = 2
-ATT.MenuCategory = "ARC9 - BO1 Attachments"
-ATT.Ignore = true
-
-ATT.RangeMaxMult = 1.25
-ATT.PhysBulletMuzzleVelocityMult = 1.15
-ATT.RecoilKickMult = 0.85
-ATT.SpreadAdd = -math.rad(1.5 / 37.5)
-
-ATT.SpreadAddHipFire = math.rad(20 / 37.5)
-ATT.SpreadAddMove = math.rad(10 / 37.5)
-
-ATT.InvAtt = "bo1_m1911_slides_hardballer"
-ATT.Category = {"bo1_m1911_slides"}
-ATT.ActivateElements = {"1911_slide_baller_modern", "longbarrel"}
-
-ARC9.LoadAttachment(ATT, "bo1_m1911_slides_hardballer_modern")

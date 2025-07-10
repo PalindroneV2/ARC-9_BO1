@@ -12,6 +12,7 @@ ATT.CustomCons = {}
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
+ATT.Ignore = true
 
 ATT.Category = {"bo1_aug_barrels"}
 ATT.ActivateElements = {"barrel_stub", "newbarrel"}

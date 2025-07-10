@@ -278,6 +278,11 @@ SWEP.AttachmentElements = {
             {4,2},
         },
     },
+    ["ringhammer"] = {
+        Bodygroups = {
+            {4,3},
+        },
+    },
     ["newtrigger"] = {
         Bodygroups = {
             {3,1},
@@ -349,6 +354,9 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     end
     if attached["hammer_2025"] then
         rhhammer = 2
+    end
+    if attached["ringhammer"] then
+        rhhammer = 3
     end
 
     if attached["shortbarrel"] then

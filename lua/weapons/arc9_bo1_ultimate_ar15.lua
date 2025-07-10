@@ -447,6 +447,15 @@ SWEP.AttachmentElements = {
             CrosshairInSights = false,
         },
     },
+    ["cod_extrairons_rear"] = {
+        IronSights = {
+            Pos = Vector(-2.76, -2, 0.35),
+            Ang = Angle(0.025, -0.2, 0),
+            Magnification = 1.1,
+            ViewModelFOV = 60,
+            CrosshairInSights = false,
+        },
+    },
     ["classicrail"] = {
         Bodygroups = {
             {6,1},

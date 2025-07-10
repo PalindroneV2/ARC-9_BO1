@@ -1545,7 +1545,7 @@ ATT.Attachments = {
 
 ATT.Sights = {
     {
-        Pos = Vector(0, 12, -1.6),
+        Pos = Vector(0, 12, -1.65),
         Ang = Angle(0, 0.1, 0),
         ViewModelFOV = 60,
         IsIronSight = true,
@@ -2793,7 +2793,7 @@ ATT.Attachments = {
         Category = {"retro_ar15_iron", "cod_optic", "cod_rail_riser", "ar15_rail_riser", "mw3e_deagle_tactical", "bo1_addon_irons_2"},
         ExcludeElements = {"handguard_famas"},
         Bone = "j_gun",
-        Pos = Vector(-1, 0, -0.52),
+        Pos = Vector(-1, 0, -0.45),
         Ang = Angle(0, 0, 0),
         -- Icon_Offset = Vector(1.5, 0, 1),
         -- Installed = "retro_ar15_iron_carry",
@@ -2813,7 +2813,7 @@ ATT.Attachments = {
         Category = {"cod_extrairons_rear"},
         ExcludeElements = {"handguard_famas"},
         Bone = "j_gun",
-        Pos = Vector(2.5, 0, -0.295),
+        Pos = Vector(2.5, 0, -0.25),
         Ang = Angle(0, 0, 0),
     },
 }
@@ -2870,7 +2870,7 @@ ATT.Attachments = {
         Category = {"retro_ar15_iron", "cod_optic", "cod_rail_riser", "ar15_rail_riser", "mw3e_deagle_tactical", "bo1_addon_irons_2"},
         ExcludeElements = {"handguard_famas"},
         Bone = "j_gun",
-        Pos = Vector(-1, 0, -0.52),
+        Pos = Vector(-1, 0, -0.45),
         Ang = Angle(0, 0, 0),
         -- Icon_Offset = Vector(1.5, 0, 1),
         -- Installed = "retro_ar15_iron_carry",
@@ -2890,7 +2890,7 @@ ATT.Attachments = {
         Category = {"cod_extrairons_rear"},
         ExcludeElements = {"handguard_famas"},
         Bone = "j_gun",
-        Pos = Vector(2.5, 0, -0.295),
+        Pos = Vector(2.5, 0, -0.25),
         Ang = Angle(0, 0, 0),
     },
 }
