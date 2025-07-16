@@ -229,8 +229,9 @@ SWEP.BarrelLength = 0 -- = 25
 SWEP.ExtraSightDist = 5
 
 SWEP.StandardPresets = {
-    "[MP5SD3]XQAAAQAAAQAAAAAAAAA9iIIiM7tupQCpjtobRJEkdevdtQyXDt2gZ7eB7fmxjCp8m5w8LUVZLSBm93okaoz7/ac/BLwKsZmrFq2g6aJV/bJ4fOt9Koc0M0cs8YQO0c4J4TZvmW88Av07/f19Vo5lJH/nKVNWag0FZpsbn+3Q60AjovVNKos6GqMTAA==",
-    "[MP5K PDW]XQAAAQD/AAAAAAAAAAA9iIIiM7tupQCpjtobRJEkdevdtQyXDt2gZ7eB7fmxjCp8m5w8LUVZK1SKZPMH0mlP5cyg4r1k5Z327H2l/o/E1z2UPyTCU+/Pcw0D4MbJV/uf/xQIFA16dysQfVLPBZJzyl6ARMNfWwfNfCZw5+7NHf6KAA=="
+    "[MP5SD3]XQAAAQDnAAAAAAAAAAA9iIIiM7hMNz0dhIkbkvJZHs4/7gvJbLaf352LD+uk3FySieulVfD7VtlfDZsuICVrZVO2pzTnx+Hbp7BYLle8UUmd1hAd7Fau+8IXSItZRZKyAdigbfH9qxDwjyfo4ESLWqBOTp7gLTsjpVHgbbSmvZdpjBsLAA==",
+    "[MP5K PDW]XQAAAQAaAQAAAAAAAAA9iIIiM7hMNz0dhIkbkvJZHs4/7gvJbLaf352LD+uk3FySdRkUGXnnfd3A2TD9KiYL6ea4XD0r3meEqYpSfKkOjWDo2JNIIBv56iac/39u7cdNtWkHghJJZKt+O4voUyg/kZq0Icj0ESEdxG0zKOj90CGhEc+TkVNaBQ324DvpAA==",
+    "[MP5A2]XQAAAQBdAQAAAAAAAAA9iIIiM7tuo1AtTygaX+tEC4m1uxvqzP3w5yzX0nK0PbsjLgze4ZBT7F7jGkL0tEJ1a/pUU8YkYwGveyZCxackuGkTpVr5UX0OrbvxUnS0dBFs7LY/6JrItP9Sqf8tyGQnUcXVKFWaRxOicqsACVjx6yJvh2LHXBcM8ghLTGGX845QzGguFraj1ORBDHKqlgA=",
 }
 
 SWEP.AttachmentElements = {
@@ -277,11 +278,18 @@ SWEP.AttachmentElements = {
     ["mp5k"] = {
         Bodygroups = {
             {0,1},
-            {1,3},
+            {1,2},
             {2,3},
             {3,3},
-            {6,1},
         },
+        AttPosMods = {
+            [1] = {
+                Pos = Vector(-2.75, 0.01, 3.1),
+            },
+            [3] = {
+                Pos = Vector(5.95, 0.15, 0.875),
+            },
+        }
         -- IronSights = {
         --     Pos = Vector(-3.175, -3, 0.85),
         --     Ang = Angle(0.025, 0.1, 0),
@@ -294,20 +302,20 @@ SWEP.AttachmentElements = {
 
 SWEP.IronSightsHook = function(self)
     local attached = self:GetElements()
-    local newpos = Vector(-3.2, -3, 1.1)
+    local newpos = Vector(-3.17, -3, 1.1)
     local newang = Angle(0, -0.2, 0)
 
     if attached["top_g36c"] then
-        newpos = Vector(-3.2325, -3, 0.3)
+        newpos = Vector(-3.17, -3, 0.2)
         newang = Angle(0, -0.0, 0)
     end
 
     if attached["mp5k"] then
-        newpos = Vector(-3.175, -3, 0.85)
-        newang = Angle(0.025, 0.1, 0)
+        newpos = Vector(-2.2, -3, 0.7)
+        newang = Angle(0.025, -0.1, 0)
         if attached["top_g36c"] then
-            newpos = Vector(-3.225, -3, 0.3)
-            newang = Angle(0, -0.0, 0)
+            newpos = Vector(-2.2, -3, 0.075)
+            newang = Angle(0.025, -0.1, 0)
         end
     end
 
@@ -322,49 +330,69 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
 
     if attached["mount"] or attached["cod_optic"] then
         vm:SetBodygroup(3,1)
+        vm:SetBodygroup(6,1)
     end
 
+    local receiver = 0
+    local magazine = 0
+    local handguard = 0
+    local irons = 0
     local stock = 0
-    if attached["bo1_stock_light"] then stock = 1
-    elseif attached["bo1_stock_medium"] then stock = 2
-    elseif attached["bo1_stock_heavy"] then stock = 3
-    elseif attached["bo1_mp5_stock_pdw"] then stock = 4
+    local suppressor = 0
+    local railpiece = 0
+
+    if attached["stock_l"] then stock = 1
+    elseif attached["stock_m"] then stock = 2
+    elseif attached["stock_h"] then stock = 3
+    elseif attached["stock_pdw"] then stock = 4
     elseif attached["stock_pro"] then stock = 5
     end
-    vm:SetBodygroup(4,stock)
 
     if attached["25rnd"] then
-        vm:SetBodygroup(1,3)
+        magazine = 2
     elseif attached["45rnd"] then
-        vm:SetBodygroup(1,4)
-    end
-
-    if attached["bo1_mp5_barrel_kurz"] then
-        if attached["mount"] or attached["cod_optic"] then
-            vm:SetBodygroup(3,3)
-            if attached["mp5k_mw2"] then
-                vm:SetBodygroup(3,0)
-            end
-        end
-        vm:SetBodygroup(4,stock + 6)
+        magazine = 3
     end
 
     if attached["top_g36c"] then
-        vm:SetBodygroup(3,2)
-        vm:SetBodygroup(7,1)
-        if attached["mp5k"] then
-            vm:SetBodygroup(3,5)
-            vm:SetBodygroup(7,2)
-        end
+        irons = 2
+        railpiece = 3
+    end
+    if attached["mw3_picrail"] then
+        vm:SetBodygroup(3,0)
         if attached["cod_optic"] then
-            vm:SetBodygroup(7,0)
+            vm:SetBodygroup(3,1)
+        end
+        vm:SetBodygroup(6,2)
+        if attached["mp5k"] then
+            vm:SetBodygroup(3,3)
+            if attached["cod_optic"] then
+                vm:SetBodygroup(3,4)
+            end
+            vm:SetBodygroup(6,5)
         end
     end
 
-    if attached["mp5k_nogrip"] then
-        vm:SetBodygroup(6,0)
+    if attached["mp5ksd"] then
+        vm:SetBodygroup(2,4)
+        if attached["mp5sd_suppressor"] then
+            vm:SetBodygroup(5,2)
+        end
     end
 
+    if attached["mp5k"] then
+        irons = irons + 3
+        railpiece = railpiece + 3
+        stock = stock + 6
+    end
+
+    vm:SetBodygroup(0,receiver)
+    vm:SetBodygroup(1,magazine)
+    vm:SetBodygroup(2,handguard)
+    vm:SetBodygroup(3,irons)
+    vm:SetBodygroup(4,stock)
+    vm:SetBodygroup(5,suppressor)
+    vm:SetBodygroup(6,railpiece)
     local camo = 0
     if attached["universal_camo"] then
         camo = 1
@@ -391,6 +419,9 @@ SWEP.HookP_NameChange = function(self, name)
     end
     if attached["mp5k"] then
         barrel = "K"
+        if attached["mp5sd_suppressor"] then
+            barrel = "KSD"
+        end
         stock = ""
         if attached["stock_pdw"] then
             stock = " PDW"
@@ -417,47 +448,26 @@ end
 SWEP.Hook_TranslateAnimation = function (self, anim)
     local attached = self:GetElements()
 
-    local stock = attached["bo1_stock_medium"]
-    local dual = attached["bo1_fastmag"]
-
-    local hand = 0
-    if attached["bo1_mp5_barrel_sd"] or attached["bo1_mp5_barrel_sdhand"] or attached["bo1_mp5_barrel_ris"] then hand = 1
-    elseif attached["bo1_mp5_barrel_kurz"] then hand = 2
+    local hand = ""
+    local stock = ""
+    if attached["bo1_mp5_barrel_sd"] or attached["bo1_mp5_barrel_sdhand"] or attached["bo1_mp5_barrel_ris"] then
+        hand = "_sd"
+    elseif attached["bo1_mp5_barrel_kurz"] then
+        hand = "_grip"
     end
-
-    local final = ""
-
-    for k = hand, hand do
-        if attached["bo1_ubgl_m203"] then
-            final = "_gl"
+    if attached["stock_m"] then
+        stock = "_stock"
+    end
+    if attached["fastmag"] then
+        if anim == "reload" then
+            anim = "fast"
         end
-        if stock then
-            final = "_stock"
-        end
-        if dual then
-            final = "_quick"
-        end
-        if stock and dual then
-            final = "_stock_quick"
-        end
-        if hand == 1 then
-            final = "_sil"
-            if stock then
-                final = "_stock_sil"
-            end
-            if dual then
-                final = "_sil_quick"
-            end
-            if stock and dual then
-                final = "_stock_sil_quick"
-            end
-        end
-        if hand == 2 then
-            final = "_grip"
+        if anim == "reload_empty" then
+            anim = "fast_empty"
         end
     end
 
-    return anim .. final
+    return anim .. hand .. stock
 end
 
 --TEST 3
@@ -466,28 +476,28 @@ SWEP.Attachments = {
     {
         PrintName = "Optic",
         Bone = "j_gun",
-        Pos = Vector(-3.5, 0.1, 3.35),
+        Pos = Vector(-3.5, 0.01, 3.3),
         Ang = Angle(0, 0, 0),
         Category = {"cod_optic", "cod_rail_riser","bo1_mp5rail"},
         InstalledElements = {"mount"},
-        ExcludeElements = {"mp5k_mw2_ris"},
+        ExcludeElements = {"mp5k_mw2_ris","mp5k_ics"},
+    },
+    {
+        PrintName = "Barrel",
+        Bone = "j_gun",
+        Pos = Vector(2.5, 0, 1.2),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_mp5_barrel"},
+        Icon_Offset = Vector(-2.5, 0, -0.2),
     },
     {
         PrintName = "Muzzle",
         Bone = "j_gun",
         Scale = Vector(1,1,1),
-        Pos = Vector(10, 0.15, 0.95),
+        Pos = Vector(10.7, 0, 0.95),
         Ang = Angle(0, 0, 0),
-        Category = {"cod_muzzle_smg", "cod_muzzle_pistol"},
-        ExcludeElements = {"mp5k", "mp5sd"},
-    },
-    {
-        PrintName = "Barrel",
-        Bone = "j_gun",
-        Pos = Vector(6, 0, 3),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_mp5_barrel"},
-        Icon_Offset = Vector(-6, 0, -2),
+        Category = {"cod_muzzle_smg", "cod_muzzle_pistol","bo1_mp5_sd"},
+        ExcludeElements = {"mp5bogus"}
     },
     {
         PrintName = "Underbarrel",
@@ -497,13 +507,13 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         -- Category = {"cod_rail_underbarrel","bo1_uni_gls"},
         Category = {"cod_rail_underbarrel"},
-        ExcludeElements = {"mp5k", "mp5_ris", "mp5sd"},
+        ExcludeElements = {"mp5k_ics","mp5k","mp5_ris"}
     },
     {
         PrintName = "Firing Group",
         DefaultCompactName = "S-1-3-F",
         Bone = "j_gun",
-        Pos = Vector(-3.5, 0, -2),
+        Pos = Vector(-5, 0, 0),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_fcg"},
     },
@@ -753,12 +763,12 @@ SWEP.Animations = {
 
     --MP5 SIL--
 
-    ["idle_sil"] = {
-        Source = "idle_sil",
+    ["idle_sd"] = {
+        Source = "idle_sd",
         Time = 1 / 30,
     },
-    ["draw_sil"] = {
-        Source = "draw_sil",
+    ["draw_sd"] = {
+        Source = "draw_sd",
         Time = 1,
         IKTimeLine = {
             {
@@ -773,8 +783,8 @@ SWEP.Animations = {
             },
         },
     },
-    ["holster_sil"] = {
-        Source = "holster_sil",
+    ["holster_sd"] = {
+        Source = "holster_sd",
         Time = 1,
         IKTimeLine = {
             {
@@ -789,8 +799,8 @@ SWEP.Animations = {
             },
         },
     },
-    ["ready_sil"] = {
-        Source = "first_draw_sil",
+    ["ready_sd"] = {
+        Source = "first_draw_sd",
         Time = 1,
         /* EventTable = {
             {s = "ARC9_BO1.MP5_BoltFwd", t = 19 / 30}
@@ -818,18 +828,18 @@ SWEP.Animations = {
             },
         },
     },
-    ["fire_sil"] = {
-        Source = {"fire_sil"},
+    ["fire_sd"] = {
+        Source = {"fire_sd"},
         Time = 7 / 30,
         EjectAt = 0,
     },
-    ["fire_iron_sil"] = {
-        Source = {"fire_ads_sil"},
+    ["fire_iron_sd"] = {
+        Source = {"fire_ads_sd"},
         Time = 7 / 30,
         EjectAt = 0,
     },
-    ["reload_sil"] = {
-        Source = "reload_sil",
+    ["reload_sd"] = {
+        Source = "reload_sd",
         Time = 77 / 35,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         EventTable = {
@@ -859,8 +869,8 @@ SWEP.Animations = {
             },
         },
     },
-    ["reload_empty_sil"] = {
-        Source = "reload_empty_sil",
+    ["reload_empty_sd"] = {
+        Source = "reload_empty_sd",
         Time = 93 / 35,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         EventTable = {
@@ -892,25 +902,25 @@ SWEP.Animations = {
             },
         },
     },
-    ["enter_sprint_sil"] = {
-        Source = "sprint_in_sil",
+    ["enter_sprint_sd"] = {
+        Source = "sprint_in_sd",
         Time = 1
     },
-    ["idle_sprint_sil"] = {
-        Source = "sprint_loop_sil",
+    ["idle_sprint_sd"] = {
+        Source = "sprint_loop_sd",
         Time = 30 / 40
     },
-    ["exit_sprint_sil"] = {
-        Source = "sprint_out_sil",
+    ["exit_sprint_sd"] = {
+        Source = "sprint_out_sd",
         Time = 1
     },
     --MP5 STOCK SIL--
-    ["idle_stock_sil"] = {
-        Source = "idle_sil",
+    ["idle_stock_sd"] = {
+        Source = "idle_sd",
         Time = 1 / 30,
     },
-    ["draw_stock_sil"] = {
-        Source = "first_draw_sil_stock",
+    ["draw_stock_sd"] = {
+        Source = "first_draw_sd_stock",
         Time = 30 / 30,
         EventTable = {
             {s = "ARC9_BO1.MP5_BoltFwd", t = 10 / 30},
@@ -923,8 +933,8 @@ SWEP.Animations = {
             },
         },
     },
-    ["holster_stock_sil"] = {
-        Source = "holster_sil",
+    ["holster_stock_sd"] = {
+        Source = "holster_sd",
         Time = 30 / 30,
         IKTimeLine = {
             {
@@ -939,8 +949,8 @@ SWEP.Animations = {
             },
         },
     },
-    ["ready_stock_sil"] = {
-        Source = "first_draw_sil_stock",
+    ["ready_stock_sd"] = {
+        Source = "first_draw_sd_stock",
         Time = 1.5,
         EventTable = {
             {s = "ARC9_BO1.MP5_BoltFwd", t = 19 / 30}
@@ -953,18 +963,18 @@ SWEP.Animations = {
             },
         },
     },
-    ["fire_stock_sil"] = {
-        Source = {"fire_sil"},
+    ["fire_stock_sd"] = {
+        Source = {"fire_sd"},
         Time = 7 / 30,
         EjectAt = 0,
     },
-    ["fire_iron_stock_sil"] = {
-        Source = {"fire_ads_sil"},
+    ["fire_iron_stock_sd"] = {
+        Source = {"fire_ads_sd"},
         Time = 7 / 30,
         EjectAt = 0,
     },
-    ["reload_stock_sil"] = {
-        Source = "reload_sil",
+    ["reload_stock_sd"] = {
+        Source = "reload_sd",
         Time = 77 / 35,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         EventTable = {
@@ -994,8 +1004,8 @@ SWEP.Animations = {
             },
         },
     },
-    ["reload_empty_stock_sil"] = {
-        Source = "reload_empty_sil",
+    ["reload_empty_stock_sd"] = {
+        Source = "reload_empty_sd",
         Time = 93 / 35,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         EventTable = {
@@ -1027,23 +1037,23 @@ SWEP.Animations = {
             },
         },
     },
-    ["enter_sprint_stock_sil"] = {
-        Source = "sprint_in_sil",
+    ["enter_sprint_stock_sd"] = {
+        Source = "sprint_in_sd",
         Time = 1
     },
-    ["idle_sprint_stock_sil"] = {
-        Source = "sprint_loop_sil",
+    ["idle_sprint_stock_sd"] = {
+        Source = "sprint_loop_sd",
         Time = 30 / 40
     },
-    ["exit_sprint_stock_sil"] = {
-        Source = "sprint_out_sil",
+    ["exit_sprint_stock_sd"] = {
+        Source = "sprint_out_sd",
         Time = 1
     },
 
     -- QUICK RELOADS--
 
-    ["reload_quick"] = {
-        Source = "reload_fast",
+    ["fast"] = {
+        Source = "fast",
         Time = 70 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         EventTable = {
@@ -1073,8 +1083,8 @@ SWEP.Animations = {
             },
         },
     },
-    ["reload_empty_quick"] = {
-        Source = "reload_empty_fast",
+    ["fast_empty"] = {
+        Source = "fast_empty",
         Time = 91 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         EventTable = {
@@ -1206,12 +1216,12 @@ SWEP.Animations = {
 
     -- QUICK SIL --
 
-    ["idle_sil_quick"] = {
-        Source = "idle_sil",
+    ["idle_sd_quick"] = {
+        Source = "idle_sd",
         Time = 1 / 30,
     },
-    ["draw_sil_quick"] = {
-        Source = "draw_sil",
+    ["draw_sd_quick"] = {
+        Source = "draw_sd",
         Time = 1,
         EventTable = {
             {s = "ARC9_BO1.MP5_BoltFwd", t = 10 / 30},
@@ -1229,8 +1239,8 @@ SWEP.Animations = {
             },
         },
     },
-    ["holster_sil_quick"] = {
-        Source = "holster_sil",
+    ["holster_sd_quick"] = {
+        Source = "holster_sd",
         Time = 1,
         IKTimeLine = {
             {
@@ -1245,8 +1255,8 @@ SWEP.Animations = {
             },
         },
     },
-    ["ready_sil_quick"] = {
-        Source = "first_draw_sil",
+    ["ready_sd_quick"] = {
+        Source = "first_draw_sd",
         Time = 1.5,
         EventTable = {
             {s = "ARC9_BO1.MP5_BoltFwd", t = 19 / 30}
@@ -1264,18 +1274,18 @@ SWEP.Animations = {
             },
         },
     },
-    ["fire_sil_quick"] = {
-        Source = {"fire_sil"},
+    ["fire_sd_quick"] = {
+        Source = {"fire_sd"},
         Time = 7 / 30,
         EjectAt = 0,
     },
-    ["fire_iron_sil_quick"] = {
-        Source = {"fire_ads_sil"},
+    ["fire_iron_sd_quick"] = {
+        Source = {"fire_ads_sd"},
         Time = 7 / 30,
         EjectAt = 0,
     },
-    ["reload_sil_quick"] = {
-        Source = "reload_sil_fast",
+    ["fast_sd"] = {
+        Source = "fast_sd",
         Time = 70 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         EventTable = {
@@ -1305,8 +1315,8 @@ SWEP.Animations = {
             },
         },
     },
-    ["reload_empty_sil_quick"] = {
-        Source = "reload_empty_sil_fast",
+    ["fast_empty_sd"] = {
+        Source = "fast_empty_sd",
         Time = 91 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         EventTable = {
@@ -1338,26 +1348,26 @@ SWEP.Animations = {
             },
         },
     },
-    ["enter_sprint_sil_quick"] = {
-        Source = "sprint_in_sil",
+    ["enter_sprint_sd_quick"] = {
+        Source = "sprint_in_sd",
         Time = 1
     },
-    ["idle_sprint_sil_quick"] = {
-        Source = "sprint_loop_sil",
+    ["idle_sprint_sd_quick"] = {
+        Source = "sprint_loop_sd",
         Time = 30 / 40
     },
-    ["exit_sprint_sil_quick"] = {
-        Source = "sprint_out_sil",
+    ["exit_sprint_sd_quick"] = {
+        Source = "sprint_out_sd",
         Time = 1
     },
 
     --MP5 STOCK SIL QUICK--
-    ["idle_stock_sil_quick"] = {
-        Source = "idle_sil",
+    ["idle_stock_sd_quick"] = {
+        Source = "idle_sd",
         Time = 1 / 30,
     },
-    ["draw_stock_sil_quick"] = {
-        Source = "first_draw_sil_stock",
+    ["draw_stock_sd_quick"] = {
+        Source = "first_draw_sd_stock",
         Time = 1,
         EventTable = {
             {s = "ARC9_BO1.MP5_BoltFwd", t = 10 / 30},
@@ -1370,8 +1380,8 @@ SWEP.Animations = {
             },
         },
     },
-    ["holster_stock_sil_quick"] = {
-        Source = "holster_sil",
+    ["holster_stock_sd_quick"] = {
+        Source = "holster_sd",
         Time = 1,
         EventTable = {
             {s = "ARC9_BO1.MP5_BoltFwd", t = 15 / 30},
@@ -1389,8 +1399,8 @@ SWEP.Animations = {
             },
         },
     },
-    ["ready_stock_sil_quick"] = {
-        Source = "first_draw_sil_stock",
+    ["ready_stock_sd_quick"] = {
+        Source = "first_draw_sd_stock",
         Time = 1.5,
         EventTable = {
             {s = "ARC9_BO1.MP5_BoltFwd", t = 19 / 30}
@@ -1408,18 +1418,18 @@ SWEP.Animations = {
             },
         },
     },
-    ["fire_stock_sil_quick"] = {
-        Source = {"fire_sil"},
+    ["fire_stock_sd_quick"] = {
+        Source = {"fire_sd"},
         Time = 7 / 30,
         EjectAt = 0,
     },
-    ["fire_iron_stock_sil_quick"] = {
-        Source = {"fire_ads_sil"},
+    ["fire_iron_stock_sd_quick"] = {
+        Source = {"fire_ads_sd"},
         Time = 7 / 30,
         EjectAt = 0,
     },
-    ["reload_stock_sil_quick"] = {
-        Source = "reload_sil_fast",
+    ["reload_stock_sd_quick"] = {
+        Source = "reload_sd_fast",
         Time = 70 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         EventTable = {
@@ -1449,8 +1459,8 @@ SWEP.Animations = {
             },
         },
     },
-    ["reload_empty_stock_sil_quick"] = {
-        Source = "reload_empty_sil_fast",
+    ["reload_empty_stock_sd_quick"] = {
+        Source = "reload_empty_sd_fast",
         Time = 91 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         EventTable = {
@@ -1482,16 +1492,16 @@ SWEP.Animations = {
             },
         },
     },
-    ["enter_sprint_stock_sil_quick"] = {
-        Source = "sprint_in_sil",
+    ["enter_sprint_stock_sd_quick"] = {
+        Source = "sprint_in_sd",
         Time = 1
     },
-    ["idle_sprint_stock_sil_quick"] = {
-        Source = "sprint_loop_sil",
+    ["idle_sprint_stock_sd_quick"] = {
+        Source = "sprint_loop_sd",
         Time = 30 / 40
     },
-    ["exit_sprint_stock_sil_quick"] = {
-        Source = "sprint_out_sil",
+    ["exit_sprint_stock_sd_quick"] = {
+        Source = "sprint_out_sd",
         Time = 1
     },
 
