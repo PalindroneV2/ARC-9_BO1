@@ -21,7 +21,7 @@ ATT.Attachments = {
         PrintName = "Magazine",
         DefaultCompactName = "25rnd",
         Bone = "tag_clip",
-        Pos = Vector(6.25, 0, 4),
+        Pos = Vector(3.25, 0, 2),
         Ang = Angle(0, 0, 0),
         Category = "bo1_mp5k_mag",
     },

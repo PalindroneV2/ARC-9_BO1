@@ -264,6 +264,11 @@ SWEP.AttachmentElements = {
         Bodygroups = {
             {2,1}
         },
+        AttPosMods = {
+            [4] = {
+                Pos = Vector(7.5, 0.2, -0.075),
+            },
+        },
     },
     ["mp5sd_suppressor"] = {
         Bodygroups = {
@@ -284,7 +289,8 @@ SWEP.AttachmentElements = {
         },
         AttPosMods = {
             [1] = {
-                Pos = Vector(-2.75, 0.01, 3.1),
+                Pos = Vector(-2.75, 0.01, 3.15),
+                -- Pos = Vector(-3.5, 0.01, 3.3),
             },
             [3] = {
                 Pos = Vector(5.95, 0.15, 0.875),
@@ -328,11 +334,6 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local vm = data.model
     local attached = data.elements
 
-    if attached["mount"] or attached["cod_optic"] then
-        vm:SetBodygroup(3,1)
-        vm:SetBodygroup(6,1)
-    end
-
     local receiver = 0
     local magazine = 0
     local handguard = 0
@@ -340,6 +341,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local stock = 0
     local suppressor = 0
     local railpiece = 0
+    local sightson = attached["cod_rail_riser"] or attached["cod_optic"]
 
     if attached["stock_l"] then stock = 1
     elseif attached["stock_m"] then stock = 2
@@ -348,42 +350,72 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     elseif attached["stock_pro"] then stock = 5
     end
 
+    if attached["mp5sd"] then
+        handguard = 1
+    end
+    if attached["mp5sd_suppressor"] then
+        suppressor = suppressor + 1
+    end
+    if attached["mp5_ris"] then
+        handguard = 2
+    end
+
+    if attached["mp5k"] then
+        receiver = 1
+        magazine = 2
+        handguard = 3
+        irons = irons + 3
+        stock = stock + 6
+    end
+    if attached["mp5k_ics"] then
+        handguard = 5
+    end
+
+    if sightson then
+        irons = 1
+        railpiece = 1
+        if attached["mp5k"] then
+            irons = irons + 3
+            railpiece = railpiece + 3
+        end
+        if attached["mp5k_ics"] then
+            railpiece = 0
+        end
+    end
+
+    if attached["fastmag"] then
+        magazine = 1
+    end
     if attached["25rnd"] then
         magazine = 2
-    elseif attached["45rnd"] then
+    end
+    if attached["45rnd"] then
         magazine = 3
     end
 
     if attached["top_g36c"] then
         irons = 2
         railpiece = 3
+        if attached["mp5k"] then
+            irons = irons + 3
+            railpiece = railpiece + 3
+        end
+        if sightson then
+            irons = 6
+        end
     end
     if attached["mw3_picrail"] then
-        vm:SetBodygroup(3,0)
-        if attached["cod_optic"] then
-            vm:SetBodygroup(3,1)
-        end
-        vm:SetBodygroup(6,2)
+        railpiece = 2
         if attached["mp5k"] then
-            vm:SetBodygroup(3,3)
-            if attached["cod_optic"] then
-                vm:SetBodygroup(3,4)
-            end
-            vm:SetBodygroup(6,5)
+            railpiece = railpiece + 3
         end
     end
 
     if attached["mp5ksd"] then
-        vm:SetBodygroup(2,4)
+        handguard = 4
         if attached["mp5sd_suppressor"] then
-            vm:SetBodygroup(5,2)
+            suppressor = suppressor + 1
         end
-    end
-
-    if attached["mp5k"] then
-        irons = irons + 3
-        railpiece = railpiece + 3
-        stock = stock + 6
     end
 
     vm:SetBodygroup(0,receiver)
@@ -450,7 +482,7 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
 
     local hand = ""
     local stock = ""
-    if attached["bo1_mp5_barrel_sd"] or attached["bo1_mp5_barrel_sdhand"] or attached["bo1_mp5_barrel_ris"] then
+    if attached["mp5sd"] or attached["mp5_ris"] then
         hand = "_sd"
     elseif attached["bo1_mp5_barrel_kurz"] then
         hand = "_grip"
@@ -503,7 +535,7 @@ SWEP.Attachments = {
         PrintName = "Underbarrel",
         Bone = "j_gun",
         Scale = Vector(1,1,1),
-        Pos = Vector(6, 0.2, 0.5),
+        Pos = Vector(6.5, 0.2, 0.5),
         Ang = Angle(0, 0, 0),
         -- Category = {"cod_rail_underbarrel","bo1_uni_gls"},
         Category = {"cod_rail_underbarrel"},
