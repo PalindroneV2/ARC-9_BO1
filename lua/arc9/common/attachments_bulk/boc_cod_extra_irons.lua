@@ -2,10 +2,10 @@ local ATT = {}
 
 ATT = {}
 
-ATT.PrintName = "Troy Folding Rear Sight"
+ATT.PrintName = "Troy Battle Folding Rear Sight"
 ATT.CompactName = "Troy"
 ATT.Icon = Material("entities/bo1_atts/optics/retro_ar15/3arc_side.png")
-ATT.Description = [[Rear folding sight produced by Magpul.
+ATT.Description = [[Rear folding sight produced by Troy.
 Functions identically to other iron sights.]]
 ATT.SortOrder = 1
 ATT.MenuCategory = "ARC9 - COD Classic Attachments"
@@ -21,14 +21,14 @@ ATT.ModelOffset = Vector(0,0,0)
 ATT.ModelAngleOffset = Angle(0,0,0)
 ATT.ModelBodygroups = "0"
 
-ARC9.LoadAttachment(ATT, "cod_extra_ironrear_troy")
+ARC9.LoadAttachment(ATT, "cod_extra_iron_rear_troy")
 
 ATT = {}
 
-ATT.PrintName = "Matech Folding Rear Sight"
-ATT.CompactName = "Matech"
+ATT.PrintName = "MaTech Folding Rear Sight"
+ATT.CompactName = "MaTech"
 ATT.Icon = Material("entities/bo1_atts/optics/retro_ar15/3arc_side.png")
-ATT.Description = [[Rear folding sight produced by Magpul.
+ATT.Description = [[Rear folding sight produced by MaTech.
 Functions identically to other iron sights.]]
 ATT.SortOrder = 2
 ATT.MenuCategory = "ARC9 - COD Classic Attachments"
@@ -44,14 +44,14 @@ ATT.ModelOffset = Vector(0,0,0)
 ATT.ModelAngleOffset = Angle(0,0,0)
 ATT.ModelBodygroups = "1"
 
-ARC9.LoadAttachment(ATT, "cod_extra_ironrear_matech")
+ARC9.LoadAttachment(ATT, "cod_extra_iron_rear_matech")
 
 ATT = {}
 
-ATT.PrintName = "A.R.M.S. 40L Rear Sight"
+ATT.PrintName = "A.R.M.S. 40L Rear Flip-UP Sight"
 ATT.CompactName = "ARMS #40L"
 ATT.Icon = Material("entities/bo1_atts/optics/retro_ar15/3arc_side.png")
-ATT.Description = [[Rear folding sight produced by Magpul.
+ATT.Description = [[Rear folding sight produced by A.R.M.S. Corporation.
 Functions identically to other iron sights.]]
 ATT.SortOrder = 3
 ATT.MenuCategory = "ARC9 - COD Classic Attachments"
@@ -67,14 +67,14 @@ ATT.ModelOffset = Vector(0,0,0)
 ATT.ModelAngleOffset = Angle(0,0,0)
 ATT.ModelBodygroups = "3"
 
-ARC9.LoadAttachment(ATT, "cod_extra_ironrear_arms40l")
+ARC9.LoadAttachment(ATT, "cod_extra_iron_rear_arms40l")
 
 ATT = {}
 
 ATT.PrintName = "III-ARC Battle Rear Sight"
 ATT.CompactName = "III-ARC"
 ATT.Icon = Material("entities/bo1_atts/optics/retro_ar15/3arc_side.png")
-ATT.Description = [[Rear folding sight produced by Magpul.
+ATT.Description = [[Rear folding sight produced by Troy, modified by III-ARC.
 Functions identically to other iron sights.]]
 ATT.SortOrder = 3
 ATT.MenuCategory = "ARC9 - COD Classic Attachments"
@@ -90,7 +90,7 @@ ATT.ModelOffset = Vector(0,0,0)
 ATT.ModelAngleOffset = Angle(0,0,0)
 ATT.ModelBodygroups = "5"
 
-ARC9.LoadAttachment(ATT, "cod_extra_ironrear_3arc")
+ARC9.LoadAttachment(ATT, "cod_extra_iron_rear_3arc")
 
 ATT = {}
 
@@ -113,7 +113,7 @@ ATT.ModelOffset = Vector(0,0,0)
 ATT.ModelAngleOffset = Angle(0,0,0)
 ATT.ModelBodygroups = "2"
 
-ARC9.LoadAttachment(ATT, "cod_extra_ironrear_masada")
+ARC9.LoadAttachment(ATT, "cod_extra_iron_rear_masada")
 
 ATT = {}
 
@@ -142,7 +142,7 @@ ATT.DrawFunc = function(swep, model, wm)
     end
 end
 
-ARC9.LoadAttachment(ATT, "cod_extra_ironrear_mbus")
+ARC9.LoadAttachment(ATT, "cod_extra_iron_rear_mbus")
 
 ATT = {}
 
@@ -165,7 +165,7 @@ ATT.ModelOffset = Vector(0,0,0)
 ATT.ModelAngleOffset = Angle(0,0,0)
 ATT.ModelBodygroups = "6"
 
-ARC9.LoadAttachment(ATT, "cod_extra_ironrear_kacfolding")
+ARC9.LoadAttachment(ATT, "cod_extra_iron_rear_kacfolding")
 
 ATT = {}
 
@@ -188,7 +188,7 @@ ATT.ModelOffset = Vector(0,0,0)
 ATT.ModelAngleOffset = Angle(0,0,0)
 ATT.ModelBodygroups = "7"
 
-ARC9.LoadAttachment(ATT, "cod_extra_ironrear_fnballista")
+ARC9.LoadAttachment(ATT, "cod_extra_iron_rear_fnballista")
 
 -----//FRONT SIGHTS
 
@@ -197,7 +197,7 @@ ATT = {}
 ATT.PrintName = "Troy Flip-Up Front Sight"
 ATT.CompactName = "Troy"
 ATT.Icon = Material("entities/bo1_atts/optics/retro_ar15/3arc_side.png")
-ATT.Description = [[Front folding sight produced by Magpul.
+ATT.Description = [[Front folding sight produced by Troy.
 Functions identically to other iron sights.]]
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - COD Classic Attachments"
@@ -212,14 +212,14 @@ ATT.Model = "models/weapons/arc9/atts/cod_extra/front_irons.mdl"
 ATT.ModelOffset = Vector(0,0,0)
 ATT.ModelBodygroups = "0"
 
-ARC9.LoadAttachment(ATT, "cod_extra_iron_rear_troy")
+ARC9.LoadAttachment(ATT, "cod_extra_iron_front_troy")
 
 ATT = {}
 
-ATT.PrintName = "Matech Flip-Up Front Sight"
-ATT.CompactName = "Matech"
+ATT.PrintName = "MaTech USGI Flip-Up Front Sight"
+ATT.CompactName = "MaTech"
 ATT.Icon = Material("entities/bo1_atts/optics/retro_ar15/3arc_side.png")
-ATT.Description = [[Front folding sight produced by Magpul.
+ATT.Description = [[Front folding sight produced by MaTech.
 Functions identically to other iron sights.]]
 ATT.SortOrder = 1
 ATT.MenuCategory = "ARC9 - COD Classic Attachments"
@@ -234,14 +234,14 @@ ATT.Model = "models/weapons/arc9/atts/cod_extra/front_irons.mdl"
 ATT.ModelOffset = Vector(0,0,0)
 ATT.ModelBodygroups = "1"
 
-ARC9.LoadAttachment(ATT, "cod_extra_iron_rear_matech")
+ARC9.LoadAttachment(ATT, "cod_extra_iron_front_matech")
 
 ATT = {}
 
-ATT.PrintName = "A.R.M.S. 40L Flip-Up Front Sight"
-ATT.CompactName = "ARMS 40L"
+ATT.PrintName = "Precision Reflex Inc. Rail-Mounted Flip-Up Front Sight"
+ATT.CompactName = "PRI"
 ATT.Icon = Material("entities/bo1_atts/optics/retro_ar15/3arc_side.png")
-ATT.Description = [[Front folding sight produced by Magpul.
+ATT.Description = [[Front folding sight produced by Precision Reflex Inc.
 Functions identically to other iron sights.]]
 ATT.SortOrder = 1
 ATT.MenuCategory = "ARC9 - COD Classic Attachments"
@@ -256,7 +256,7 @@ ATT.Model = "models/weapons/arc9/atts/cod_extra/front_irons.mdl"
 ATT.ModelOffset = Vector(0,0,0)
 ATT.ModelBodygroups = "3"
 
-ARC9.LoadAttachment(ATT, "cod_extra_iron_rear_arms40l")
+ARC9.LoadAttachment(ATT, "cod_extra_iron_front_arms40l")
 
 ATT = {}
 
@@ -278,7 +278,7 @@ ATT.Model = "models/weapons/arc9/atts/cod_extra/front_irons.mdl"
 ATT.ModelOffset = Vector(0,0,0)
 ATT.ModelBodygroups = "2"
 
-ARC9.LoadAttachment(ATT, "cod_extra_iron_rear_masada")
+ARC9.LoadAttachment(ATT, "cod_extra_iron_front_masada")
 
 ATT = {}
 
@@ -306,4 +306,4 @@ ATT.DrawFunc = function(swep, model, wm)
     end
 end
 
-ARC9.LoadAttachment(ATT, "cod_extra_iron_rear_mbus")
+ARC9.LoadAttachment(ATT, "cod_extra_iron_front_mbus")

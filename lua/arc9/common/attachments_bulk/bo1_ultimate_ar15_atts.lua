@@ -874,6 +874,7 @@ ATT.Free = false
 
 ATT.Category = {"retro_ar15_handguard_11", "retro_ar15_handguard_14", "retro_ar15_handguard_16"}
 ATT.ActivateElements = {"handguard_flamer", "carbine_hg", "nosling"}
+ATT.ExcludeElements = {"mw2_m4_top","mw3_lpirons"}
 
 ATT.Attachments = {
     -- {
@@ -960,6 +961,7 @@ ATT.Free = false
 ATT.Category = {"retro_ar15_handguard_20", "retro_ar15_handguard_carbine"}
 ATT.ActivateElements = {"handguard_famas", "no_gasblock", "nosling", "carbine_hg"}
 ATT.RequireElements = {"a4_top"}
+ATT.ExcludeElements = {"mw2_m4_irons"}
 
 ATT.IronSights = {
     Pos = Vector(-2.74, -2, -0.4),
@@ -1128,6 +1130,7 @@ ATT.Free = false
 
 ATT.Category = {"retro_ar15_handguard_carbine", "retro_ar15_handguard_mloks"}
 ATT.ActivateElements = {"nosling", "mlok", "handguard_mlok_short", "carbine_hg"}
+ATT.ExcludeElements = {"mw2_m4_top","mw3_lpirons"}
 
 ATT.Model = "models/weapons/arc9/atts/bo2_osw_lhik.mdl"
 ATT.Scale = 1
@@ -1216,8 +1219,8 @@ ARC9.LoadAttachment(ATT, "retro_ar15_handguard_mlok_short")
 
 ATT = {}
 
-ATT.PrintName = [[FSS 9" RIS Hanguard]]
-ATT.CompactName = [[FSS 9"]]
+ATT.PrintName = [[Daniel Defense RIS II 9" Hanguard]]
+ATT.CompactName = [[RIS II]]
 ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m4.png", "mips smooth")
 ATT.Description = [[RIS quad-rail handguard fitting a carbine barrels with low profile gas systems, common in modern AR-15s.
 Allows for the attachment of alternative front sights and a low profile laser pointer on top, also identical to a regular handguard.]]
@@ -1297,7 +1300,7 @@ ATT.Free = false
 
 ATT.Category = {"retro_ar15_handguard_carbine"}
 ATT.ActivateElements = {"nosling", "ar15_ris", "no_ub_rail", "ris_carbine", "handguard_hk416", "carbine_hg"}
-ATT.ExcludeElements = {"mw2_m4_irons"}
+-- ATT.ExcludeElements = {"mw2_m4_irons"}
 
 ATT.Attachments = {
     {
@@ -1470,7 +1473,7 @@ ATT = {}
 
 ATT.PrintName = [[A.R.M.S. #50C-TR S.I.R.]]
 ATT.CompactName = [[ARMS #50C]]
-ATT.Icon = Material("entities/bo1_atts/optics/retro_ar15/carry_side.png")
+ATT.Icon = Material("entities/bo1_atts/optics/retro_ar15/ranger.png")
 ATT.Description = [[Picatinny rail system for the top of the weapon that goes from the top receiver to the end of the handguard.
 Includes A.R.M.S. 40L flip up sights.]]
 ATT.SortOrder = 6
@@ -1484,11 +1487,12 @@ ATT.Model = "models/weapons/arc9/item/mw2_m4_top.mdl"
 ATT.Scale = Vector(0.375, 0.375, 0.375)
 ATT.ModelOffset = Vector(1.5 , 0, -0.35)
 ATT.ModelAngleOffset = Angle(0,0,0)
-ATT.RequireElements = {"ar15_ris" and "a4_top"}
-ATT.ExcludeElements = {"barrel_9mm", "handguard_ris_mw19", "handguard_flamer"}
+ATT.RequireElements = {"ar15_flattop"}
+ATT.ExcludeElements = {"barrel_9mm", "handguard_ris_mw19", "handguard_flamer","handguard_mlok_short"}
 
 ATT.DrawFunc = function(swep, model, wm)
-    if swep:GetElements()["carbine_hg"] and !swep:GetElements()["handguard_a4"] then
+    local longorshort = swep:GetElements()["handguard_a4"] or swep:GetElements()["handguard_mlok"]
+    if swep:GetElements()["carbine_hg"] and !longorshort then
         model:SetBodygroup(0,1)
         model:SetBodygroup(1,2)
         if swep:GetElements()["tmm4_mount"] then
@@ -1611,7 +1615,7 @@ ATT = {}
 
 ATT.PrintName = "Low Profile Flip-Up Iron Sights"
 ATT.CompactName = "LP Irons"
-ATT.Icon = Material("entities/bo1_atts/optics/retro_ar15/carry_side.png")
+ATT.Icon = Material("entities/bo1_atts/optics/retro_ar15/deltaforce.png")
 ATT.Description = [["You will aim with sights of iron and you will like it."
 
 Functions identically to other iron sights.]]
@@ -1621,24 +1625,30 @@ ATT.Free = true
 ATT.Folder = "AR-15 IRONS"
 
 ATT.Category = {"bo1_addon_irons_2"}
-ATT.ActivateElements = {"mw2_m4_irons"}
-ATT.ExcludeElements = {"handguard_patriot", "barrel_9mm", "handguard_ris_mw19", "handguard_flamer"}
+ATT.ActivateElements = {"mw2_m4_irons","mw3_lpirons"}
+ATT.ExcludeElements = {"handguard_patriot", "barrel_9mm", "handguard_ris_mw19", "handguard_flamer","handguard_mlok_short","handguard_famas"}
 ATT.DrawFunc = function(swep, model, wm)
+    local mw3ironbg = 0
     if swep:GetElements()["carbine_hg"] then
-        model:SetBodygroup(0,1)
-        if swep:GetElements()["handguard_a4"] then
-            model:SetBodygroup(0,2)
+        mw3ironbg = 0
+        if swep:GetElements()["handguard_a4"] or swep:GetElements()["handguard_mlok"] then
+            mw3ironbg = 3
         else
-            model:SetBodygroup(0,1)
+            mw3ironbg = 1
         end
     else
-        model:SetBodygroup(0,0)
+        mw3ironbg = 0
     end
+    if swep:GetElements()["mw3mount"] then
+        mw3ironbg = mw3ironbg + 2
+    end
+    model:SetBodygroup(0,mw3ironbg)
 end
 
 ATT.Model = "models/weapons/arc9/item/mw3_m4_irons.mdl"
 ATT.Scale = Vector(1, 1, 1)
 ATT.ModelOffset = Vector(1.25,0,-2.15)
+ATT.IconOffset = Vector(-3.75,0,0)
 ATT.ModelAngleOffset = Angle(0,0,0)
 ATT.BoneMerge = true
 
@@ -1649,6 +1659,18 @@ ATT.Sights = {
         ViewModelFOV = 60,
         IsIronSight = true,
     }
+}
+
+ATT.Attachments = {
+    {
+        PrintName = "Optic",
+        Bone = "j_gun",
+        Pos = Vector(0, 0, 0),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(-1, 0, 1),
+        Category = {"cod_optic", "cod_rail_riser", "mw3e_deagle_tactical"},
+        InstalledElements = {"mw3mount"},
+    },
 }
 
 ARC9.LoadAttachment(ATT, "retro_ar15_iron_mw3")
@@ -2784,7 +2806,7 @@ ATT.SortOrder = 5
 ATT.MenuCategory = "ARC9 - BO1 AR-15 Attachments"
 
 ATT.Category = {"retro_ar15_upper"}
-ATT.ActivateElements = {"a4_top"}
+ATT.ActivateElements = {"a4_top","ar15_flattop"}
 ATT.ExcludeElements = {"is_patriot"}
 
 ATT.Attachments = {
@@ -2831,7 +2853,7 @@ ATT.SortOrder = 5
 ATT.MenuCategory = "ARC9 - BO1 AR-15 Attachments"
 
 ATT.Category = {"retro_ar15_upper"}
-ATT.ActivateElements = {"a4_top", "commando_top"}
+ATT.ActivateElements = {"a4_top", "commando_top","ar15_flattop"}
 ATT.ExcludeElements = {"is_patriot"}
 
 ATT.RPMOverride = 750
@@ -2908,7 +2930,7 @@ ATT.SortOrder = 5
 ATT.MenuCategory = "ARC9 - BO1 AR-15 Attachments"
 
 ATT.Category = {"retro_ar15_upper"}
-ATT.ActivateElements = {"future_top"}
+ATT.ActivateElements = {"future_top","ar15_flattop"}
 ATT.ExcludeElements = {"is_patriot"}
 
 ATT.Model = "models/weapons/arc9/atts/retro_ar15/bo3_parts.mdl"
@@ -2937,7 +2959,7 @@ ATT.Attachments = {
         Category = {"retro_ar15_iron", "cod_optic", "cod_rail_riser", "ar15_rail_riser", "mw3e_deagle_tactical", "bo1_addon_irons_2"},
         ExcludeElements = {"handguard_famas"},
         Bone = "j_gun",
-        Pos = Vector(-1, 0, -0.52),
+        Pos = Vector(-1, 0, -0.42),
         Ang = Angle(0, 0, 0),
         -- Icon_Offset = Vector(1.5, 0, 1),
         -- Installed = "retro_ar15_iron_carry",
