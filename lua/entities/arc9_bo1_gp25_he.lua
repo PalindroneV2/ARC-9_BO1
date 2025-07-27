@@ -11,7 +11,7 @@ ENT.DragCoefficient = 0.15
 ENT.Radius = 300
 ENT.DamageOverride = 200
 ENT.ImpactDamage = 0
-ENT.FuseTime = 0.05
+ENT.FuseTime = 0.0325
 
 if CLIENT then
     killicon.Add( "arc9_bo1_gp25_he", "arc9/weaponicons/ubs/gp25", Color( 255, 255, 255, 255 ) )

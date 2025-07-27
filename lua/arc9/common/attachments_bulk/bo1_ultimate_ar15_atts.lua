@@ -1049,8 +1049,8 @@ ARC9.LoadAttachment(ATT, "retro_ar15_handguard_patriot")
 
 ATT = {}
 
-ATT.PrintName = [[KAC M4 RAS Handguard]]
-ATT.CompactName = [[M4 RAS]]
+ATT.PrintName = [[KAC M4 RIS Handguard]]
+ATT.CompactName = [[M4 RIS]]
 ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m4.png", "mips smooth")
 ATT.Description = [[RIS Quad-Rail Handguard fitting a carbine barrel, common in modern AR-15s.
 Allows for the attachment of alternative front sights and a low profile laser pointer on top, but is otherwise identical to a regular handguard.]]
@@ -1149,7 +1149,7 @@ ATT.Attachments = {
         ExcludeElements = {"mw2_m4_irons"},
         -- ExcludeElements = {"cod_optic", "cod_rail_riser", "mw2_m4_irons", "cod_tactical"},
         Bone = "j_gun",
-        Pos = Vector(-13.25, 0, -3.3),
+        Pos = Vector(-13, 0, -3.3),
         Ang = Angle(0, 0, 0),
     },
     {
@@ -1185,10 +1185,9 @@ ATT.Attachments = {
         PrintName = "Tactical Top",
         DefaultCompactName = "TAC TOP",
         Bone = "j_gun",
-        Pos = Vector(-10, 0, 0.5-3.75),
+        Pos = Vector(-9.875, 0, -3.25),
         Ang = Angle(0, 0, 180),
         Category =  {"cod_tactical_top"},
-        RequireElements = {"gasblock_flat"},
         ExcludeElements = {"mw2_m4_top"}
     },
     {
@@ -1240,7 +1239,7 @@ ATT.Attachments = {
         InstalledElements = {"gasblock_carbine_cut"},
         ExcludeElements = {"gasblock_flat"},
         Bone = "j_gun",
-        Pos = Vector(-13.5, 0, -3.3),
+        Pos = Vector(-13.125, 0, -3.3),
         Ang = Angle(0, 0, 0),
         -- Icon_Offset = Vector(13.5, 0, 4.15),
     },
@@ -1277,7 +1276,7 @@ ATT.Attachments = {
         PrintName = "Tactical Top",
         DefaultCompactName = "TAC TOP",
         Bone = "j_gun",
-        Pos = Vector(-10.5, 0, 0.5-3.75),
+        Pos = Vector(-10.125, 0, 0.5-3.7),
         Ang = Angle(0, 0, 180),
         Category =  {"cod_tactical_top"},
         -- RequireElements = {"gasblock_flat"},
@@ -1289,8 +1288,8 @@ ARC9.LoadAttachment(ATT, "retro_ar15_handguard_ris_mw19")
 
 ATT = {}
 
-ATT.PrintName = [[HK 416 9" Hanguard]]
-ATT.CompactName = [[HK416]]
+ATT.PrintName = [[Geissele SMR 9" Handguard]]
+ATT.CompactName = [[SMR 9"]]
 ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m4.png", "mips smooth")
 ATT.Description = [[RIS quad-rail handguard fitting a carbine barrels with low profile gas systems, common in modern AR-15s.
 Allows for the attachment of alternative front sights and a low profile laser pointer on top, also identical to a regular handguard.]]
@@ -1299,7 +1298,8 @@ ATT.MenuCategory = "ARC9 - BO1 AR-15 Attachments"
 ATT.Free = false
 
 ATT.Category = {"retro_ar15_handguard_carbine"}
-ATT.ActivateElements = {"nosling", "ar15_ris", "no_ub_rail", "ris_carbine", "handguard_hk416", "carbine_hg"}
+ATT.ActivateElements = {"nosling", "ar15_ris", "no_ub_rail", "ris_carbine", "handguard_hk416", "carbine_hg",
+"additionalhandguard","416gas"}
 -- ATT.ExcludeElements = {"mw2_m4_irons"}
 
 ATT.Attachments = {
@@ -1362,7 +1362,7 @@ ATT.Scale = Vector(1, 1, 1)
 ATT.BoneMerge = true
 
 ATT.DrawFunc = function(swep, model, wm)
-    if swep:GetElements()["universal_camo"] and swep:GetElements()["camo_full"] then
+    if swep:GetElements()["universal_camo"] then
         model:SetSkin(1)
     else
         model:SetSkin(0)
@@ -1370,12 +1370,207 @@ ATT.DrawFunc = function(swep, model, wm)
     local CUSTSTATE = swep:GetCustomize()
     if CUSTSTATE then
         model:SetBodygroup(0, 1)
+        model:SetBodygroup(1, 2)
     else
         model:SetBodygroup(0, 0)
+        model:SetBodygroup(1, 1)
     end
 end
 
 ARC9.LoadAttachment(ATT, "retro_ar15_handguard_hk416")
+
+ATT = {}
+
+ATT.PrintName = [[Geissele SMR 10.5" Handguard]]
+ATT.CompactName = [[SMR 10.5"]]
+ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m4.png", "mips smooth")
+ATT.Description = [[Geissele's Super Modular Rail (SMR) is a lightweight, free-floating handguard featuring a sleek, continuous top rail and modular M-LOK attachment points for enhanced accessory mounting.
+Its rigid aluminum construction improves accuracy while reducing weight, making it a top-tier choice for modern AR-15 builds.
+Compatible with low-profile gas systems and allows for the attachment of iron sights and laser devices.]]
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - BO1 AR-15 Attachments"
+ATT.Free = false
+
+ATT.Category = {"retro_ar15_handguard_commando"}
+ATT.ActivateElements = {"nosling", "ar15_ris", "no_ub_rail", "ris_carbine", "handguard_geiselle", "carbine_hg",
+"additionalhandguard","416gas"}
+ATT.ExcludeElements = {"mw2_m4_irons"}
+
+ATT.Attachments = {
+    {
+        PrintName = "Front",
+        Category = "cod_extrairons_front",
+        UnInstalledElements = {"gasblock_carbine"},
+        InstalledElements = {"gasblock_carbine_cut"},
+        ExcludeElements = {"gasblock_flat"},
+        Bone = "j_gun",
+        Pos = Vector(-13.125, 0, -3.3),
+        Ang = Angle(0, 0, 0),
+        -- Icon_Offset = Vector(13.5, 0, 4.15),
+    },
+    {
+        PrintName = "Underbarrel",
+        DefaultCompactName = "UB",
+        Bone = "j_gun",
+        Pos = Vector(-10.5, 0, -1.3),
+        Ang = Angle(0, 0, 0),
+        Category = {"cde_m203", "bo1_mk", "cod_grips"},
+        InstalledElements = {"allowtac"},
+    },
+    {
+        PrintName = "Tactical Right",
+        DefaultCompactName = "TAC R",
+        Bone = "j_gun",
+        Pos = Vector(-11.75, 0.7, -2.25),
+        Ang = Angle(0, 0, -90),
+        Category =  {"cod_tactical"},
+        InstalledElements = {"removecovers"},
+        -- RequireElements = {"allowtac"},
+    },
+    {
+        PrintName = "Tactical Left",
+        DefaultCompactName = "TAC L",
+        Bone = "j_gun",
+        Pos = Vector(-11.75, -0.7, -2.25),
+        Ang = Angle(0, 0, 90),
+        Category =  {"cod_tactical"},
+        InstalledElements = {"removecovers"},
+        -- RequireElements = {"allowtac"},
+    },
+    {
+        PrintName = "Tactical Top",
+        DefaultCompactName = "TAC TOP",
+        Bone = "j_gun",
+        Pos = Vector(-10.5, 0, 0.5-3.75),
+        Ang = Angle(0, 0, 180),
+        Category =  {"cod_tactical_top"},
+        -- RequireElements = {"gasblock_flat"},
+        ExcludeElements = {"mw2_m4_top"}
+    },
+}
+
+ATT.Model = "models/weapons/arc9/atts/retro_ar15/handguard_hk416.mdl"
+ATT.Scale = Vector(1, 1, 1)
+-- ATT.ModelOffset = Vector(2,0,0)
+-- ATT.ModelAngleOffset = Angle(0,0,0)
+ATT.BoneMerge = true
+
+ATT.DrawFunc = function(swep, model, wm)
+    if swep:GetElements()["universal_camo"] then
+        model:SetSkin(1)
+    else
+        model:SetSkin(0)
+    end
+    local CUSTSTATE = swep:GetCustomize()
+    if CUSTSTATE then
+        model:SetBodygroup(0, 3)
+        model:SetBodygroup(1, 4)
+    else
+        model:SetBodygroup(0, 2)
+        model:SetBodygroup(1, 3)
+    end
+end
+
+ARC9.LoadAttachment(ATT, "retro_ar15_handguard_geissele")
+
+ATT = {}
+
+ATT.PrintName = [[Geissele SMR 12" Handguard]]
+ATT.CompactName = [[SMR 12"]]
+ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m16.png", "mips smooth")
+ATT.Description = [[A long handguard with quad-rail RIS mounts. While usually used for 20" barrels, it can fit a 14.5" barrel with a low profile gas block.
+Allows for the attachment of alternative front sights and tactical attachments on all of the 4 rails
+Its robust steel construction adds weight.]]
+ATT.SortOrder = 2
+ATT.MenuCategory = "ARC9 - BO1 AR-15 Attachments"
+ATT.Free = false
+
+ATT.RecoilMult = 0.95
+ATT.AimDownSightsTimeMult = 1.05
+ATT.SprintToFireTimeMult = 1.05
+
+ATT.Category = {"retro_ar15_handguard_20", "retro_ar15_handguard_14"}
+ATT.ActivateElements = {"handguard_geiselle_long", "nosling", "no_ub_rail", "ar15_ris", "no_tac_rail",
+"additionalhandguard","416gas"}
+
+ATT.Attachments = {
+    {
+        PrintName = "Front",
+        Category = {"cod_extrairons_front"},
+        InstalledElements = {"gasblock_cut"},
+        ExcludeElements = {"mw2_m4_irons"},
+        -- ExcludeElements = {"cod_optic", "cod_rail_riser", "mw2_m4_irons"},
+        Bone = "j_gun",
+        Pos = Vector(-16.65, 0, -3.3),
+        Ang = Angle(0, 0, 0),
+    },
+    {
+        PrintName = "Underbarrel",
+        DefaultCompactName = "UB",
+        Bone = "j_gun",
+        Pos = Vector(-10.5, 0, -1.3),
+        Ang = Angle(0, 0, 0),
+        Category = {"cde_m203", "bo1_mk", "cod_grips"},
+    },
+    {
+        PrintName = "Tactical Right",
+        DefaultCompactName = "TAC R",
+        Bone = "j_gun",
+        Pos = Vector(-15.5, 0.7, -2.25),
+        Ang = Angle(0, 0, -90),
+        Category =  {"cod_tactical"}
+    },
+    {
+        PrintName = "Tactical Left",
+        DefaultCompactName = "TAC L",
+        Bone = "j_gun",
+        Pos = Vector(-15.5, -0.7, -2.25),
+        Ang = Angle(0, 0, 90),
+        Category =  {"cod_tactical"}
+    },
+    {
+        PrintName = "Tactical Top",
+        DefaultCompactName = "TAC TOP",
+        Bone = "j_gun",
+        Pos = Vector(-13, 0, -3.25),
+        Ang = Angle(0, 0, 180),
+        Category =  {"cod_tactical_top"},
+        ExcludeElements = {"mw2_m4_irons"}
+    },
+    {
+        PrintName = "Tactical Bottom",
+        DefaultCompactName = "TAC BOT",
+        Bone = "j_gun",
+        Pos = Vector(-15, 0, 2.3 - 3.75),
+        Ang = Angle(0, 0, 0),
+        Category = {"cod_tactical", "bo1_bipod"},
+        ExcludeElements = {"cde_m203", "bo1_mk"}
+    },
+}
+
+ATT.Model = "models/weapons/arc9/atts/retro_ar15/handguard_hk416.mdl"
+ATT.Scale = Vector(1, 1, 1)
+-- ATT.ModelOffset = Vector(2,0,0)
+-- ATT.ModelAngleOffset = Angle(0,0,0)
+ATT.BoneMerge = true
+
+ATT.DrawFunc = function(swep, model, wm)
+    if swep:GetElements()["universal_camo"] then
+        model:SetSkin(1)
+    else
+        model:SetSkin(0)
+    end
+    local CUSTSTATE = swep:GetCustomize()
+    if CUSTSTATE then
+        model:SetBodygroup(0, 5)
+        model:SetBodygroup(1, 6)
+    else
+        model:SetBodygroup(0, 4)
+        model:SetBodygroup(1, 5)
+    end
+end
+
+ARC9.LoadAttachment(ATT, "retro_ar15_handguard_geissele_long")
 
 -- REAR SIGHTS
 ATT = {}
@@ -1702,7 +1897,7 @@ ATT.FiremodesOverride = {
     },
 }
 ATT.RunawayBurstOverride = true
-ATT.PostBurstDelayOverride = 0.2
+ATT.PostBurstDelayOverride = 0.15
 
 ATT.SpreadMult = 0.9
 ATT.SpreadMultShooting = 0.8
@@ -1773,7 +1968,7 @@ ATT.FiremodesOverride = {
     },
 }
 ATT.RunawayBurstOverride = true
-ATT.PostBurstDelayOverride = 0.2
+ATT.PostBurstDelayOverride = 0.15
 
 ATT.RPMMult = 1.1
 ATT.SpreadMult = 0.95
@@ -1814,6 +2009,32 @@ ATT.RecoilUpMult = 1.05
 ATT.RecoilSideMult = 1.05
 
 ARC9.LoadAttachment(ATT, "retro_ar15_lower_fpw")
+
+ATT = {}
+
+ATT.PrintName = "Bad Latch Quick Load System"
+ATT.CompactName = "Bad Latch"
+ATT.Icon = Material("entities/bo1_atts/other/select_fire.png")
+ATT.Description = [[Quick load system for the AR-15s.]]
+ATT.CustomPros = {}
+ATT.CustomCons = {}
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - BO1 AR-15 Attachments"
+ATT.Free = true
+
+ATT.Category = {"retro_ar15_lower"}
+-- ATT.RequireElements = {"handguard_patriot"}
+ATT.ActivateElements = {"fcg_latch"}
+
+ATT.Model = "models/weapons/arc9/atts/retro_ar15/bolt_416.mdl"
+ATT.Scale = Vector(1, 1, 1)
+-- ATT.ModelOffset = Vector(2,0,0)
+-- ATT.ModelAngleOffset = Angle(0,0,0)
+ATT.BoneMerge = true
+
+ATT.ReloadTimeMult = 0.9
+
+ARC9.LoadAttachment(ATT, "retro_ar15_lower_badlatch")
 
 --MAGAZINES
 
@@ -2591,6 +2812,49 @@ ARC9.LoadAttachment(ATT, "retro_ar15_stock_bravo")
 
 ATT = {}
 
+ATT.PrintName = "HK416 E1 Crane Stock"
+ATT.CompactName = "HK416 E1"
+ATT.Icon = Material("entities/bo1_atts/other/stock.png")
+ATT.Description = [[Modern retractible six-position stock made for with improved ergonomics and surface area.
+Has excellent handling, but provides weaker recoil control compared to a full stock.]]
+ATT.CustomPros = {}
+ATT.CustomCons = {}
+ATT.SortOrder = 3
+ATT.MenuCategory = "ARC9 - BO1 AR-15 Attachments"
+ATT.Free = false
+
+ATT.Category = {"retro_ar15_stock"}
+ATT.ActivateElements = {"stock_416"}
+
+ATT.RecoilMult = 0.8
+ATT.RecoilKickMult = 0.85
+ATT.RecoilUpMult = 0.5
+ATT.RecoilRandomSideMult = 0.6
+ATT.RecoilAutoControlMult = 1.75
+ATT.SpreadMultShooting = 0.75
+
+ATT.SpeedMult = 0.97
+ATT.AimDownSightsTimeAdd = 0.09
+ATT.SprintToFireTimeAdd = 0.12
+ATT.SpeedAddSights = -0.12
+
+ATT.Model = "models/weapons/arc9/atts/retro_ar15/stock_416.mdl"
+ATT.ModelOffset = Vector(0,0,0)
+ATT.ModelBodygroups = "0"
+ATT.BoneMerge = true
+
+ATT.DrawFunc = function(swep, model, wm)
+    local camo = 0
+    if swep:GetElements()["universal_camo"] then
+        camo = 1
+    end
+    model:SetSkin(camo)
+end
+
+ARC9.LoadAttachment(ATT, "retro_ar15_stock_416")
+
+ATT = {}
+
 ATT.PrintName = "Wire Stock"
 ATT.CompactName = "WIRE"
 ATT.Icon = Material("entities/bo1_atts/other/stock.png")
@@ -3042,3 +3306,65 @@ ATT.Attachments = {
 }
 
 ARC9.LoadAttachment(ATT, "retro_ar15_ubgl_m203")
+
+ATT = {}
+
+ATT.PrintName = [[M203A1 Grenade Launcher]]
+ATT.CompactName = [[M203A1]]
+ATT.Icon = Material("materials/entities/bo1_atts/ubs/m203.png")
+ATT.Description = [[Underbarrel grenade launcher that fires 40mm High Explosive rounds.
+Reduced handling.]]
+ATT.CustomPros = {}
+ATT.CustomCons = {}
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - BO1 AR-15 Attachments"
+ATT.Free = false
+
+ATT.Category = {"cde_m203"}
+ATT.ActivateElements = {"notbg"}
+ATT.ExcludeElements = {"no_ubgl", "bo1_fastmag"}
+
+ATT.AimDownSightsTimeMult = 1.1
+ATT.SprintToFireTimeMult = 1.1
+
+ATT.UBGL = true
+ATT.UBGLAmmo = "smg1_grenade"
+ATT.UBGLClipSize = 1
+ATT.UBGLFiremode = 1
+ATT.UBGLFiremodeName = "M203"
+ATT.UBGLChamberSize = 0
+ATT.ShootVolumeUBGL = 110
+
+ATT.SpreadUBGL = -0.2
+
+ATT.FirstShootSoundUBGL = false
+ATT.ShootSoundUBGL = "ARC9_CDE.M203_Fire"
+ATT.DistantShootSoundUBGL = "ARC9_CDE.M203_Dist"
+ATT.HasSightsUBGL = false
+
+ATT.EnterUBGLSound = "ARC9_CDE.M203_Open"
+ATT.ExitUBGLSound = "ARC9_CDE.M203_Close"
+
+ATT.ShootEntUBGL = "arc9_bo1_m203_he"
+ATT.ShootEntForceUBGL = 15000
+
+ATT.MuzzleParticleUBGL = "muzzleflash_m79"
+
+ATT.Model = "models/weapons/arc9/atts/retro_ar15/mwc_m203.mdl"
+ATT.Scale = Vector(0,0,0)
+ATT.ModelOffset = Vector(0,0,0)
+ATT.ModelAngleOffset = Angle(0,0,0)
+ATT.BoneMerge = true
+
+ATT.Attachments = {
+    {
+        PrintName = "Payload",
+        DefaultCompactName = "HE",
+        Bone = "j_gun",
+        Pos = Vector(0, 0, 3),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_ubgl_40mm"},
+    },
+}
+
+ARC9.LoadAttachment(ATT, "retro_ar15_ubgl_mw203")

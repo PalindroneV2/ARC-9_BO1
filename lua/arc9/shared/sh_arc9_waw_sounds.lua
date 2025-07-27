@@ -101,7 +101,7 @@ sound.Add( {
 } )
 sound.Add( {
     name = "ARC9_WAW.Garand_Ping",
-    channel = CHAN_USER_BASE + 1,
+    channel = CHAN_AUTO,
     volume = 1.0,
     level = 100,
     --pitch = {95, 110},

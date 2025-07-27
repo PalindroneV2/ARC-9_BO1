@@ -4,10 +4,6 @@ VertexlitGeneric
 	$bumpmap	"models/weapons/arc9/bo1/bo1_m14/kally/M14_Chassis_EBR_N"
 	$phongexponenttexture	"models/weapons/arc9/bo1/bo1_m14/kally/M14_Chassis_EBR_Exp"
 
-	// $detail "models/weapons/arc9/bo1/black_detail"
-	// $detailblendmode	0
-	// $detailblendfactor 1
-
 	//"$color2" "[ .4 .4 .4 ]"
 	"$blendtintbybasealpha" "1"
 	"$phong" "1"

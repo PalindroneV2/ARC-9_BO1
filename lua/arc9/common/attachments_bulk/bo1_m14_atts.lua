@@ -148,9 +148,9 @@ ATT.Attachments = {
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0,0,0),
         Category = {"cod_optic", "cod_rail_riser"},
-        InstalledElements = {"mk14_mount"},
+        InstalledElements = {"mk14_mount","mk14_newmount"},
         MergeSlots = {2},
-        -- ExcludeElements = {"nobacksight"},
+        ExcludeElements = {"originalmount"},
     },
     {
         -- PrintName = "Optic",
@@ -174,3 +174,32 @@ ATT.Attachments = {
 }
 
 ARC9.LoadAttachment(ATT, "bo1_m14_stock_ebr_chassis")
+
+ATT = {}
+
+ATT.PrintName = "All Ghillied Up"
+ATT.CompactName = "GHILLIE"
+ATT.Icon = Material("materials/entities/from_mwc/cod4_generic.png")
+ATT.Description = [[Woodland camouflage covered with ghillie.
+Apply only to an M21.]]
+ATT.CustomPros = {}
+ATT.CustomCons = {}
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - MWC Attachments"
+ATT.Free = true
+
+ATT.ActivateElements = {"ghillie", "woodland"}
+
+ATT.Model = "models/weapons/arc9/atts/cod4_m14_ghillie.mdl"
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0,0,0)
+ATT.BoneMerge = true
+
+ATT.RequireElements = {"m21_scope"}
+
+ATT.Category = {
+    "bo1_m14_cosmetic",
+}
+ATT.InstallSound = "weapons/arc9/cod_ui_boc/mw_motif_short.wav"
+
+ARC9.LoadAttachment(ATT, "bo1_m14_cosmetic_ghillie")

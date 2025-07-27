@@ -6,9 +6,11 @@ ENT.PrintName 			= "40mm HE"
 
 ENT.Model = "models/weapons/arc9/item/bo1_40mm.mdl"
 
+ENT.DragCoefficient = 0.15
+
 -- Generic grenade used by grenade launcher weapons (hence no damage)
 ENT.Radius = 250
-ENT.FuseTime = 0.05
+ENT.FuseTime = 0.0325
 ENT.ImpactDamage = 0
 
 if CLIENT then

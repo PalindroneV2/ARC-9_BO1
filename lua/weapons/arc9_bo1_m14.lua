@@ -124,11 +124,14 @@ SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
         Mode = 1,
+        RPMAdd = -250
     },
     {
         Mode = -1,
         DamageMaxMult = 0.75,
         DamageMinMult = 0.85,
+        SpreadMult = 1.15,
+        RecoilMult = 1.15
     },
 }
 SWEP.ARC9WeaponCategory = 4
@@ -196,7 +199,7 @@ SWEP.HoldTypeHolstered = "passive"
 SWEP.HoldType = "ar2"
 SWEP.HoldTypeSights = "ar2"
 
-SWEP.CustomCamoTexture = "models/weapons/arc9/bo1/m14_wood"
+SWEP.CustomCamoTexture = "models/weapons/arc9/bo1/black_detail"
 SWEP.CustomCamoScale = 1
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
@@ -408,6 +411,13 @@ SWEP.AttachmentElements = {
             },
         }
     },
+    ["m21_scope"] = {
+        AttPosMods = {
+            [1] = {
+                Pos = Vector(0, 0.125, 0.125),
+            },
+        }
+    },
 }
 
 SWEP.Hook_ModifyBodygroups = function(self, data)
@@ -479,6 +489,9 @@ SWEP.HookP_NameChange = function(self, name)
 
     if attached["bo1_pap"] then
         gunname = "Mnesia"
+        if attached["stock_pro"] then
+            gunname = "Alzheimers"
+        end
     end
 
     return gunname
@@ -521,9 +534,9 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(5.25, 0.125, 1.85),
         Ang = Angle(0, 0, 0),
-        Category = {"cod_optic", "cod_rail_riser"},
-        InstalledElements = {"mount"},
-        ExcludeElements = {"stock_pro","m1a_mount"},
+        Category = {"cod_optic", "cod_rail_riser","mwc_m21_scope"},
+        InstalledElements = {"mount","bo1m14_leupold_cod4","originalmount"},
+        ExcludeElements = {"m1a_mount","mk14_newmount"},
     },
     {
         PrintName = "Muzzle",
@@ -619,6 +632,16 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"universal_camo"},
         CosmeticOnly = true,
+        -- Installed = "bo1_cosmetic_wood"
+    },
+    {
+        PrintName = "Cosmetic II",
+        Bone = "j_gun",
+        Pos = Vector(0, 0, 0),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_m14_cosmetic"},
+        CosmeticOnly = true,
+        Icon_Offset = Vector(-7, 0, -2)
         -- Installed = "bo1_cosmetic_wood"
     },
 }

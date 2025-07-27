@@ -318,7 +318,7 @@ SWEP.StandardPresets = {
     "[H- Ranger]XQAAAQAXAgAAAAAAAAA9iIIiM7hMNz0dhIkbkvJZHs6N4cERAS1EIUwLaB+vDp8XCL0VyBP1c786RpKnotsRDta8QJXNzP58z/MSJlIAy8NWdhCydvVMjMxuoxQOXXYRcUtBu1IJMr5mC8TlQPIQmEih4SEl29N+L3Ynjjv7fxFSHYgOJrgtNNk3zNH0xjsbR7Je8L3kM1mgnWcOIpS6uffJFc884sPJK6+eFa1dnOgL8HoO+lKAuc5pbn2qmiq4RupimPNiyQoYjID+aUN4wV3fd8G6M2BkoLsA",
     "[I- Delta]XQAAAQD4AQAAAAAAAAA9iIIiM7hMNz0dhIkbkvJZHs6N4cERAS1EIUwLaB+vDp8XCL0VyBP1c786RpKeImE3pqqj45mG+Y6r6Ec0S13gSrs9miXl0cecbSnlU/wFKsYC6L3Z7wY3iLL4A5GkP+hMoqlCjh8wcpfI7HAeyr7JhmRn62y8hoBM88xv5+RIhiKd2fkd0SroUC23VkUiiKOU6SgUPk9k7bhFXVoG30J0xuDhY3BVXSGHtu6qcieHB6CY6hBYP5Nt+PliCHto",
     "[J- Bravo]XQAAAQByAwAAAAAAAAA9iIIiM7tupQCpjrtF9qJbeNZaSCEX4Y6O26HmkmevSb+hQGSKcSq18KVOhUGIBYBGLhgBcBfjyzKihUeLwrDFRcn7kwxDnhq/6iQYAjheia3i7AddFsAsAkOnRNQOIQf+J+SSA6+IjHpf9ZYi4g2y9bM3G1wpS/69+Cc9YBC5OG3AjKOU+kh5r9wku71SwFSeBDlQhfIRQbj3fX+Lw4sRdi/Nj7Vddqmfhm0viHR/Rajkcyl2jlOdYcKtr2ndFyWgtU1Cuqh4fVST2WRUHYyzgbSdDbEsRLExinugaJgXI8qokL5SesyJpk2O3mB/Oy8bwCAO6JnbZQFVBBOW",
-   "[K- Vaquero]XQAAAQCaAwAAAAAAAAA9iIIiM7tupQCpjrtF9qJbeNZaSCEX4Y6O26HmkmevSb+hQGSKcSq18KVOhUGIBYBGLhgBcBfjyzKihUeLwrDFRcn7kwxDnhq/6iQYAjheia4Ru8LueX5KHUp4ynVg3kHFhLO+Q+SrNY9a36z3Kkd4XIOU6p7qIwGWbUJr6QevcnxFk2DO95YxyRZyAoENo2hlmP09dRNiiXnBZ3BDBHAxx/8r/zJGWa/YesCbjBC12bBL4b+DvRJFEcGBT54mbLoMBEV7nrV9NDE1k5JrVKSk47FaBxwdhwjA4mOWBe7eU9e+dOAi1JogMOHOBT/MQS0LGP3K",
+    "[K- Vaquero]XQAAAQAzAwAAAAAAAAA9iIIiM7hMNz0dhIkbkvJZHs6N4cERAS1EIUwLaB+vDp8XCL0VyBP1c785T278jfAs+hk6H2ORubZdyMTMTpYDdNhfgX1seMBQLD+0HrhqKOFfemGHWjKBmyQIlhDdj8xnONMSgtKgb0tOgBzyREVdv/FxG6ozdwxEtT7KyW5XH8T4eRMBDLZY6lhR7X6ZKRIltLV8REt39fumEFjG67JVsnjyixGFpOuWUyp+2SWAdDaCEib+zwYG+HAbdDfXd+3geDa8A7gGOQ1pAPFdi/YbH4VoKsHZXbWS9RwqHjZTvyMSptHVTJelTuMDWqRgpyDHBDUA",
     "[L- My Little Friend]XQAAAQBVAQAAAAAAAAA9iIIiM7hMNz0dhIkbkvLjTdErcFqoUCHbZojaPfcTkj3fjKehjdIOVIZDiA9j6hAHtIkFF9mmvuZ/ps6S9y5RgcWy7YEFyMUg+QkeHhQ9AbZx0Bj4yJnpU5zdmsaDsi+9bRPOJcanY0b/oO7Z/AHhda+DH4XPoa8ormMUAdU36gfa1X8L4b96VF/0cNX4s1D2IwA=",
     "[M- HECU]XQAAAQCgAQAAAAAAAAA9iIIiM7hMNz0dhIkbkvJZHs6N4cERAS1EIUwLaB+vDp8XCL30711xZT7xm2o2gbH+qJxZwTXZOPAsSZpNr/SP1fX8cuf/cxv8JsjJIRZKbIZaZ+UFdauwIORHueQcgh38RqmwIxICdM5KpArJYhEek0W9hi1W7ivbS7gk0WU8wrFXT51FGjhSb91tGEP2VsY3yIIet8sBMSGVz4l+7cJ2AQA=",
     "[N- SOPMOD]XQAAAQA+AgAAAAAAAAA9iIIiM7hMNz0dhIkbkvJZHs6N4cERAS1EIUwLaB+vDp8XCL0VyBP1c786BrvuOw3g56kujvgRv1Ta7qdRsNGN4/CsGx5IF1icsfmAw4fJea2x9NEj9G22nfFipswM0jCfOye9DCbkwwJAisE/Q0KHTz1Kf/USqNzV1B/ltjhrdP54rBpKQnZS6Km8iDJrH97wYfKLHDc4z4hSsN9vTdNWBAwIfJT0qlUxLTVujTS+w4fw5oicwh3mK94+SCWyx4wN6LNX0yndd3iQ+nPTOx5bnh7bX8eXeQ73/E+hM/CIuh7aNKUA",
@@ -647,10 +647,10 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     elseif attached["handguard_flamer"] then
         gasblock = 1
         hand = 13
-    elseif attached["handguard_hk416"] then
+    elseif attached["additionalhandguard"] then
         gasblock = 3
         hand = 15
-        covers = 1
+        covers = 0
     end
     if attached["removecovers"] then covers = 0 end
     if attached["mlok_rails"] then
@@ -686,9 +686,6 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         end
         if attached["handguard_ris_mw19"] then
             gasblock = 4
-        end
-        if attached["handguard_hk416"] then
-            gasblock = 3
         end
         if attached["handguard_ris"] then
             gasblock = 3
@@ -732,6 +729,9 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     if attached["barrel_9mm"] then
         gasblock = 4
     end
+    if attached["416gas"] then
+        gasblock = 4
+    end
     self.BipodPos = NewBipodPos
     self.BipodAng = NewBipodAng
 
@@ -757,6 +757,9 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     if attached["carbine_hg"] and attached["bo1_mk"] and length >= 2 then
         vm:SetBodygroup(4, 3)
     end
+    if attached["notbg"] then
+        vm:SetBodygroup(4, 0)
+    end
     if hand == 8 then -- FAMAS
         vm:SetBodygroup(0, 2) --FORCES UPPER TO FLAT
     end
@@ -766,6 +769,9 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
 
     if attached["mw2_m4_irons"] or attached["mw2_rear"] then
         vm:SetBodygroup(10,1)
+    end
+    if attached["fcg_latch"] then
+        vm:SetBodygroup(10,2)
     end
     if attached["future_top"] then
         vm:SetBodygroup(10,2)
